@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import { grades, getGradeBySlug } from "@/data/grades";
 import { subjects } from "@/data/subjects";
 import { buildMetadata } from "@/lib/metadata";
+import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
@@ -19,10 +20,13 @@ export async function generateMetadata(props: PageProps<"/grade/[slug]">) {
   const grade = getGradeBySlug(slug);
   if (!grade) return {};
 
+  const { index } = getIndexability("grade");
+
   return buildMetadata({
     title: `${grade.label} 과외 | 학년별 1:1 맞춤 수업`,
     description: `${grade.description}. ${grade.label}에게 맞는 1:1 과외를 상담해보세요.`,
     path: `/grade/${grade.slug}`,
+    robots: { index, follow: true },
   });
 }
 

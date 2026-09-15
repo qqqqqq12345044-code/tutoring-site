@@ -5,9 +5,11 @@ interface BuildMetadataInput {
   title: string;
   description: string;
   path: string;
+  /** Omit to leave robots unset (defaults to index, follow). Pass explicitly to declare a page noindex. */
+  robots?: { index: boolean; follow: boolean };
 }
 
-export function buildMetadata({ title, description, path }: BuildMetadataInput): Metadata {
+export function buildMetadata({ title, description, path, robots }: BuildMetadataInput): Metadata {
   const url = `${siteConfig.domain}${path}`;
   const fullTitle = title.includes(siteConfig.brandName)
     ? title
@@ -17,6 +19,7 @@ export function buildMetadata({ title, description, path }: BuildMetadataInput):
     title,
     description,
     alternates: { canonical: url },
+    ...(robots ? { robots: { index: robots.index, follow: robots.follow } } : {}),
     openGraph: {
       title: fullTitle,
       description,

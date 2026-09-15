@@ -3,6 +3,7 @@ import { getRegionBySlug, getChildren } from "@/data/regions";
 import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { getGradeBySlug } from "@/data/grades";
 import { buildMetadata } from "@/lib/metadata";
+import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -30,11 +31,15 @@ export async function generateMetadata(
   if (!ctx) return {};
 
   const label = ctx.type === "grade" ? `${ctx.region.name} ${ctx.grade.name}` : ctx.district.name;
+  const { index } = getIndexability(
+    ctx.type === "grade" ? "region-grade-subject" : "region-district-subject"
+  );
 
   return buildMetadata({
     title: `${label} ${ctx.subject.name}과외 | 1:1 맞춤 수업`,
     description: `${label}에서 ${ctx.subject.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 수업을 상담해보세요.`,
     path: `/region/${province}/${city}/${slug}/${subjectSlug}`,
+    robots: { index, follow: true },
   });
 }
 

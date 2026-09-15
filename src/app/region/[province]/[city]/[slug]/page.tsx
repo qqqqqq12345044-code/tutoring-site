@@ -7,6 +7,7 @@ import { grades, getGradeBySlug } from "@/data/grades";
 import { getRegionSubjectContent, regionSubjectContents } from "@/data/regionSubjectContent";
 import { homeFaqSlugs, getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
+import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -50,23 +51,32 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
   if (!ctx) return {};
 
   if (ctx.type === "subject") {
+    const { index } = getIndexability("region-subject", {
+      regionSlug: ctx.region.slug,
+      subjectSlug: ctx.subject.slug,
+    });
     return buildMetadata({
       title: `${ctx.region.name} ${ctx.subject.name}과외 | 초·중·고 1:1 맞춤 수업`,
       description: `${ctx.region.name} 초등·중등·고등 ${ctx.subject.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 방문·화상 수업을 상담해보세요.`,
       path: `/region/${province}/${city}/${slug}`,
+      robots: { index, follow: true },
     });
   }
   if (ctx.type === "grade") {
+    const { index } = getIndexability("region-grade");
     return buildMetadata({
       title: `${ctx.region.name} ${ctx.grade.name}과외 | 1:1 맞춤 수업`,
       description: `${ctx.region.name} ${ctx.grade.label}을 위한 1:1 과외를 상담해보세요.`,
       path: `/region/${province}/${city}/${slug}`,
+      robots: { index, follow: true },
     });
   }
+  const { index } = getIndexability("region");
   return buildMetadata({
     title: `${ctx.district.name} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${ctx.district.fullName} 초등·중등·고등 1:1 과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 상담해보세요.`,
     path: `/region/${province}/${city}/${slug}`,
+    robots: { index, follow: true },
   });
 }
 

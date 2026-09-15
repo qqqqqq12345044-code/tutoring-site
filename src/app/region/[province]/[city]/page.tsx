@@ -4,6 +4,7 @@ import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { homeFaqSlugs, getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
+import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -22,10 +23,13 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
   const region = getRegionBySlug(city);
   if (!region || region.parentSlug !== province) return {};
 
+  const { index } = getIndexability("region");
+
   return buildMetadata({
     title: `${region.name} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${region.fullName} 초등·중등·고등 1:1 과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 상담해보세요.`,
     path: `/region/${province}/${region.slug}`,
+    robots: { index, follow: true },
   });
 }
 

@@ -4,6 +4,7 @@ import { getSubjectBySlug } from "@/data/subjects";
 import { getRegionBySlug, getRegionUrl, getRegionPath } from "@/data/regions";
 import { grades } from "@/data/grades";
 import { buildMetadata } from "@/lib/metadata";
+import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -17,10 +18,13 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]">)
   const school = getSchoolBySlug(schoolSlug);
   if (!school) return {};
 
+  const { index } = getIndexability("school");
+
   return buildMetadata({
     title: `${school.name} 과외 | 학교 진도에 맞춘 1:1 수업`,
     description: `${school.name} 학생을 위한 1:1 과외를 상담해보세요. 학교 진도와 시험 일정에 맞춘 수업을 안내해드립니다.`,
     path: `/school/${school.slug}`,
+    robots: { index, follow: true },
   });
 }
 

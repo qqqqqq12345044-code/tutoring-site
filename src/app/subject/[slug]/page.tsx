@@ -3,6 +3,7 @@ import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
+import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -21,10 +22,13 @@ export async function generateMetadata(props: PageProps<"/subject/[slug]">) {
   const subject = getSubjectBySlug(slug);
   if (!subject) return {};
 
+  const { index } = getIndexability("subject");
+
   return buildMetadata({
     title: `${subject.name}과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${subject.shortDescription}. 학생의 현재 수준과 목표에 맞는 1:1 ${subject.name}과외를 상담해보세요.`,
     path: `/subject/${subject.slug}`,
+    robots: { index, follow: true },
   });
 }
 
