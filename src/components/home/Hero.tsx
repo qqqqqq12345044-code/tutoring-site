@@ -1,4 +1,5 @@
 import { CheckCircle2, ClipboardList, UserCheck, BookOpenCheck } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function Hero() {
@@ -7,7 +8,7 @@ export default function Hero() {
       <div className="container-page py-12 md:py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-5">
           <span className="inline-flex w-fit items-center rounded-full bg-brand-light px-3.5 py-1.5 text-xs font-bold text-brand">
-            초·중·고 국영수사과 1:1 맞춤 수업
+            {siteConfig.tagline}
           </span>
           <h1 className="text-3xl md:text-[2.6rem] font-extrabold text-navy leading-[1.3] whitespace-pre-line">
             {"우리 아이에게 맞는\n1:1 과외를 찾아드립니다"}

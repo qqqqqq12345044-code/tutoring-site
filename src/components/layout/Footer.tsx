@@ -45,11 +45,8 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr] md:gap-8 lg:gap-16">
           <div className="max-w-sm">
             <p className="text-lg font-bold">{siteConfig.brandName}</p>
-            <p className="mt-3 text-sm text-white/70 leading-relaxed">
-              초·중·고 국어·영어·수학·사회·과학
-              <br />
-              1:1 맞춤 과외 상담
-            </p>
+            <p className="mt-1.5 text-sm font-medium text-white/80">{siteConfig.slogan}</p>
+            <p className="mt-3 text-sm text-white/70 leading-relaxed">{siteConfig.tagline}</p>
             {siteConfig.phone && (
               <p className="mt-4 text-sm text-white/70">상담 문의 {siteConfig.phoneDisplay}</p>
             )}

@@ -38,7 +38,7 @@ import StepFlow from "@/components/ui/StepFlow";
 import { JsonLd, faqSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: `${siteConfig.brandName} | 초·중·고 1:1 맞춤 과외`,
+  title: `${siteConfig.brandName} | ${siteConfig.tagline}`,
   description:
     "국어·영어·수학·사회·과학 초중고 1:1 과외. 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 무료로 상담받아보세요.",
   path: "/",
