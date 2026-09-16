@@ -2,12 +2,22 @@ import { notFound } from "next/navigation";
 import { schools, getSchoolBySlug } from "@/data/schools";
 import { getSubjectBySlug } from "@/data/subjects";
 import { getRegionBySlug, getRegionUrl, getRegionPath } from "@/data/regions";
-import { grades } from "@/data/grades";
+import { getGradeBySlug } from "@/data/grades";
+import { getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
+import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
+import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
+
+const schoolLevelToGradeSlug: Record<string, string> = {
+  초등학교: "elementary",
+  중학교: "middle",
+  고등학교: "high",
+};
 
 export function generateStaticParams() {
   return schools.map((s) => ({ schoolSlug: s.slug }));
@@ -35,9 +45,13 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
 
   const region = getRegionBySlug(school.regionSlug);
   const regionPath = getRegionPath(school.regionSlug);
+  const matchingGrade = getGradeBySlug(schoolLevelToGradeSlug[school.level]);
+  const faqs = getFaqsBySlugs(["subject-scope", "lesson-type", "pricing"]);
 
   return (
     <>
+      <JsonLd data={faqSchema(faqs)} />
+
       <section className="bg-white border-b border-border-subtle">
         <div className="container-page py-8 md:py-10 flex flex-col gap-4">
           <Breadcrumb
@@ -73,13 +87,20 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
           title="관련 지역·학년"
           links={[
             ...(region ? [{ label: `${region.name} 과외`, href: getRegionUrl(region.slug) }] : []),
-            ...grades.map((g) => ({ label: `${g.name}과외`, href: `/grade/${g.slug}` })),
+            ...(matchingGrade ? [{ label: `${matchingGrade.name}과외`, href: `/grade/${matchingGrade.slug}` }] : []),
           ]}
         />
       </section>
 
       <section className="container-page pb-16 md:pb-20">
         <ConsultCTA title={`${school.name} 학생 맞춤 과외 상담받기`} />
+      </section>
+
+      <section className="container-page pb-16 md:pb-20">
+        <SectionHeader align="left" title="자주 묻는 질문" />
+        <div className="mt-8 max-w-2xl">
+          <FAQAccordion items={faqs} />
+        </div>
       </section>
     </>
   );

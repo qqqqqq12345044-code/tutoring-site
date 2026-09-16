@@ -5,14 +5,10 @@ import Link from "next/link";
 import { MessageCircle, Loader2, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { subjects } from "@/data/subjects";
+import { grades } from "@/data/grades";
 import { getProvinces } from "@/data/regions";
 
-const gradeOptions = [
-  "초1", "초2", "초3", "초4", "초5", "초6",
-  "중1", "중2", "중3",
-  "고1", "고2", "고3",
-  "기타",
-];
+const gradeOptions = [...grades.flatMap((g) => g.subGrades.map((sg) => sg.label)), "기타"];
 
 const lessonTypeOptions = [
   { value: "visit", label: "방문" },
@@ -125,25 +121,25 @@ export default function ConsultForm() {
         </Field>
 
         <Field label="시/군/구 또는 동 (직접입력)">
-          <input name="cityDetail" type="text" placeholder="예) 영통구, 원천동" className={inputClass} />
+          <input name="cityDetail" type="text" maxLength={100} placeholder="예) 영통구, 원천동" className={inputClass} />
         </Field>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         <Field label="학생 이름 또는 보호자 이름" required>
-          <input name="contactName" type="text" required className={inputClass} />
+          <input name="contactName" type="text" required maxLength={50} className={inputClass} />
         </Field>
         <Field label="연락처" required>
-          <input name="phone" type="tel" required placeholder="010-0000-0000" className={inputClass} />
+          <input name="phone" type="tel" required maxLength={20} placeholder="010-0000-0000" className={inputClass} />
         </Field>
       </div>
 
       <Field label="상담 가능 시간">
-        <input name="availableTime" type="text" placeholder="예) 평일 저녁 7시 이후" className={inputClass} />
+        <input name="availableTime" type="text" maxLength={100} placeholder="예) 평일 저녁 7시 이후" className={inputClass} />
       </Field>
 
       <Field label="문의사항">
-        <textarea name="message" rows={3} className={`${inputClass} resize-none`} />
+        <textarea name="message" rows={3} maxLength={1000} className={`${inputClass} resize-none`} />
       </Field>
 
       <label className="flex items-start gap-2.5 rounded-xl bg-bg-app px-4 py-3.5 text-[13px] text-text-muted leading-relaxed">
@@ -164,7 +160,7 @@ export default function ConsultForm() {
       </label>
 
       {state === "error" && (
-        <p className="text-sm text-red-600">
+        <p role="alert" className="text-sm text-red-600">
           신청 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.
         </p>
       )}

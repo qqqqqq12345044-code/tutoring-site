@@ -52,7 +52,7 @@ export default function Footer() {
               <div className="inline-flex w-fit items-center rounded-lg bg-white px-3 py-2 mb-3">
                 <Image
                   src={siteConfig.brand.logoHorizontal}
-                  alt={siteConfig.brandName}
+                  alt=""
                   width={153}
                   height={32}
                   className="h-7 w-auto"

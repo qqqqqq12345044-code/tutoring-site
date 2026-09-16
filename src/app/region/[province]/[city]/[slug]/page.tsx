@@ -5,7 +5,8 @@ import { getRegionBySlug, getChildren } from "@/data/regions";
 import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { grades, getGradeBySlug } from "@/data/grades";
 import { getRegionSubjectContent, regionSubjectContents } from "@/data/regionSubjectContent";
-import { homeFaqSlugs, getFaqsBySlugs } from "@/data/faqs";
+import { schools } from "@/data/schools";
+import { getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
@@ -85,7 +86,6 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
   const ctx = resolveContext(province, city, slug);
   if (!ctx) notFound();
 
-  const faqs = getFaqsBySlugs(homeFaqSlugs.slice(0, 4));
   const breadcrumbBase = [
     { name: "지역별 과외", href: "/regions" },
     { name: `${ctx.parent.name} 과외`, href: `/region/${ctx.parent.slug}` },
@@ -95,6 +95,12 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
   if (ctx.type === "subject") {
     const content = getRegionSubjectContent(ctx.region.slug, ctx.subject.slug);
     const districts = getChildren(ctx.region.slug);
+    const faqs = getFaqsBySlugs(ctx.subject.faqSlugs);
+    const relatedSchools = schools.filter((s) => {
+      if (s.regionSlug === ctx.region.slug) return true;
+      const schoolRegion = getRegionBySlug(s.regionSlug);
+      return schoolRegion?.parentSlug === ctx.region.slug;
+    });
 
     return (
       <>
@@ -216,6 +222,12 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
               }))}
             />
           )}
+          {relatedSchools.length > 0 && (
+            <RelatedLinks
+              title={`${ctx.region.name} 관련 학교`}
+              links={relatedSchools.map((s) => ({ label: `${s.name} 과외`, href: `/school/${s.slug}` }))}
+            />
+          )}
         </section>
 
         <section className="container-page pb-14 md:pb-16">
@@ -269,6 +281,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
     label: `${ctx.district.name} ${s.name}과외`,
     href: `/region/${province}/${city}/${slug}/${s.slug}`,
   }));
+  const districtSchools = schools.filter((s) => s.regionSlug === ctx.district.slug);
 
   return (
     <>
@@ -284,8 +297,14 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
         </div>
       </section>
 
-      <section className="container-page py-14 md:py-16">
+      <section className="container-page py-14 md:py-16 grid md:grid-cols-2 gap-4">
         <RelatedLinks title={`${ctx.district.name} 과목별 과외`} links={districtSubjectLinks} />
+        {districtSchools.length > 0 && (
+          <RelatedLinks
+            title={`${ctx.district.name} 관련 학교`}
+            links={districtSchools.map((s) => ({ label: `${s.name} 과외`, href: `/school/${s.slug}` }))}
+          />
+        )}
       </section>
 
       <section className="container-page pb-16 md:pb-20">

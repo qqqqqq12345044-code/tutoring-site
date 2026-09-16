@@ -89,3 +89,41 @@ export function getGuideArticleBySlug(slug: string): GuideArticle | undefined {
 export function getArticlesByCategory(categorySlug: string): GuideArticle[] {
   return guideArticles.filter((a) => a.categorySlug === categorySlug);
 }
+
+/** Maps a guide category to the grade/subject it's most relevant to, for cross-linking. */
+const categoryToGradeSlug: Record<string, string> = {
+  "elementary-study": "elementary",
+  "middle-naeshin": "middle",
+  "high-naeshin": "high",
+  suneung: "high",
+};
+
+const categoryToSubjectSlug: Record<string, string> = {
+  "korean-study": "korean",
+  "english-study": "english",
+  "math-study": "math",
+  "social-study": "social",
+  "science-study": "science",
+};
+
+export function getRelatedGradeSlug(categorySlug: string): string | undefined {
+  return categoryToGradeSlug[categorySlug];
+}
+
+export function getRelatedSubjectSlug(categorySlug: string): string | undefined {
+  return categoryToSubjectSlug[categorySlug];
+}
+
+export function getArticlesByGradeSlug(gradeSlug: string): GuideArticle[] {
+  const categorySlugs = Object.entries(categoryToGradeSlug)
+    .filter(([, g]) => g === gradeSlug)
+    .map(([c]) => c);
+  return guideArticles.filter((a) => categorySlugs.includes(a.categorySlug));
+}
+
+export function getArticlesBySubjectSlug(subjectSlug: string): GuideArticle[] {
+  const categorySlugs = Object.entries(categoryToSubjectSlug)
+    .filter(([, s]) => s === subjectSlug)
+    .map(([c]) => c);
+  return guideArticles.filter((a) => categorySlugs.includes(a.categorySlug));
+}

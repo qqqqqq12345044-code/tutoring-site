@@ -17,7 +17,7 @@ export default function Header() {
           {hasLogoSymbol ? (
             <Image
               src={siteConfig.brand.logoSymbol}
-              alt={siteConfig.brandShortName}
+              alt=""
               width={36}
               height={36}
               className="rounded-xl"

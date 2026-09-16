@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getFaqsBySlugs } from "@/data/faqs";
+import { getArticlesBySubjectSlug } from "@/data/guide";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
@@ -38,6 +39,7 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
   if (!subject) notFound();
 
   const faqs = getFaqsBySlugs(subject.faqSlugs);
+  const relatedArticles = getArticlesBySubjectSlug(subject.slug);
 
   return (
     <>
@@ -132,6 +134,15 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
             .map((s) => ({ label: `${s.name}과외`, href: `/subject/${s.slug}` }))}
         />
       </section>
+
+      {relatedArticles.length > 0 && (
+        <section className="container-page pb-14 md:pb-16">
+          <RelatedLinks
+            title={`${subject.name} 학습가이드`}
+            links={relatedArticles.map((a) => ({ label: a.title, href: `/guide/${a.slug}` }))}
+          />
+        </section>
+      )}
 
       <section className="container-page pb-16 md:pb-20">
         <SectionHeader align="left" title="자주 묻는 질문" />

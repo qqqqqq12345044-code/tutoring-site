@@ -39,9 +39,12 @@ export default function MobileBottomCTA() {
       <div className="lg:hidden invisible" aria-hidden="true">
         {bar}
       </div>
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-border-subtle">
+      <nav
+        aria-label="빠른 상담"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-border-subtle"
+      >
         {bar}
-      </div>
+      </nav>
     </>
   );
 }

@@ -80,9 +80,9 @@ export default function VisitLessonPage() {
               <div className="h-px bg-border-subtle" />
               <div className="flex items-center justify-between text-center">
                 <FlowStep icon={MapPin} label="학생 집 방문" />
-                <span className="text-border-subtle">→</span>
+                <span className="text-border-subtle" aria-hidden="true">→</span>
                 <FlowStep icon={BookOpen} label="교재 확인" />
-                <span className="text-border-subtle">→</span>
+                <span className="text-border-subtle" aria-hidden="true">→</span>
                 <FlowStep icon={ClipboardCheck} label="1:1 수업" />
               </div>
             </div>

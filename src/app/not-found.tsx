@@ -1,5 +1,13 @@
 import { SearchX } from "lucide-react";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import RelatedLinks from "@/components/RelatedLinks";
+
+const quickLinks = [
+  { label: "과목별 과외", href: "/subjects" },
+  { label: "학년별 과외", href: "/grades" },
+  { label: "지역별 과외", href: "/regions" },
+  { label: "학습가이드", href: "/guide" },
+];
 
 export default function NotFound() {
   return (
@@ -17,6 +25,9 @@ export default function NotFound() {
         <PrimaryButton href="/consult" variant="outline">
           무료 상담받기
         </PrimaryButton>
+      </div>
+      <div className="mt-6 max-w-md w-full">
+        <RelatedLinks title="이런 페이지를 찾고 계셨나요?" links={quickLinks} />
       </div>
     </section>
   );

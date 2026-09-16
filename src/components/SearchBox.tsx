@@ -39,7 +39,11 @@ export default function SearchBox({ targets }: { targets: SearchTarget[] }) {
       <form onSubmit={handleSubmit} className="flex w-full gap-2">
         <div className="relative flex-1">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+          <label htmlFor="region-search-input" className="sr-only">
+            지역, 학교 검색
+          </label>
           <input
+            id="region-search-input"
             type="text"
             value={query}
             onChange={(e) => {
@@ -63,7 +67,11 @@ export default function SearchBox({ targets }: { targets: SearchTarget[] }) {
           과외 찾기
         </button>
       </form>
-      {notice && <p className="mt-2 text-sm text-text-muted">{notice}</p>}
+      {notice && (
+        <p role="status" className="mt-2 text-sm text-text-muted">
+          {notice}
+        </p>
+      )}
     </div>
   );
 }

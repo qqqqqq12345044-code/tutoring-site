@@ -2,14 +2,11 @@ import { notFound } from "next/navigation";
 import { regions, getRegionBySlug, getChildren } from "@/data/regions";
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
-import { homeFaqSlugs, getFaqsBySlugs } from "@/data/faqs";
+import { schools } from "@/data/schools";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
-import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
-import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
 
 export function generateStaticParams() {
@@ -40,12 +37,14 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
   if (!region || !parent || region.parentSlug !== province) notFound();
 
   const districts = getChildren(region.slug);
-  const faqs = getFaqsBySlugs(homeFaqSlugs.slice(0, 4));
+  const relatedSchools = schools.filter((s) => {
+    if (s.regionSlug === region.slug) return true;
+    const schoolRegion = getRegionBySlug(s.regionSlug);
+    return schoolRegion?.parentSlug === region.slug;
+  });
 
   return (
     <>
-      <JsonLd data={faqSchema(faqs)} />
-
       <section className="bg-white border-b border-border-subtle">
         <div className="container-page py-8 md:py-10 flex flex-col gap-4">
           <Breadcrumb
@@ -76,24 +75,25 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
         />
       </section>
 
-      {districts.length > 0 && (
-        <section className="container-page pb-14 md:pb-16">
-          <RelatedLinks
-            title={`${region.name} 하위 지역`}
-            links={districts.map((d) => ({ label: d.name, href: `/region/${parent.slug}/${region.slug}/${d.slug}` }))}
-          />
+      {(districts.length > 0 || relatedSchools.length > 0) && (
+        <section className="container-page pb-14 md:pb-16 grid md:grid-cols-2 gap-4">
+          {districts.length > 0 && (
+            <RelatedLinks
+              title={`${region.name} 하위 지역`}
+              links={districts.map((d) => ({ label: d.name, href: `/region/${parent.slug}/${region.slug}/${d.slug}` }))}
+            />
+          )}
+          {relatedSchools.length > 0 && (
+            <RelatedLinks
+              title={`${region.name} 관련 학교`}
+              links={relatedSchools.map((s) => ({ label: `${s.name} 과외`, href: `/school/${s.slug}` }))}
+            />
+          )}
         </section>
       )}
 
-      <section className="container-page pb-14 md:pb-16">
-        <ConsultCTA title={`${region.name} 과외, 지금 상담부터 받아보세요`} description="지역과 학년, 과목을 알려주시면 안내해드립니다." />
-      </section>
-
       <section className="container-page pb-16 md:pb-20">
-        <SectionHeader align="left" title="자주 묻는 질문" />
-        <div className="mt-8 max-w-2xl">
-          <FAQAccordion items={faqs} />
-        </div>
+        <ConsultCTA title={`${region.name} 과외, 지금 상담부터 받아보세요`} description="지역과 학년, 과목을 알려주시면 안내해드립니다." />
       </section>
     </>
   );

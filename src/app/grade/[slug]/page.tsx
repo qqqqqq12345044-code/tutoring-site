@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { grades, getGradeBySlug } from "@/data/grades";
 import { subjects } from "@/data/subjects";
+import { getArticlesByGradeSlug } from "@/data/guide";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -34,6 +35,8 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
   const { slug } = await props.params;
   const grade = getGradeBySlug(slug);
   if (!grade) notFound();
+
+  const relatedArticles = getArticlesByGradeSlug(grade.slug);
 
   return (
     <>
@@ -107,11 +110,17 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
         </div>
       </section>
 
-      <section className="container-page pb-14 md:pb-16">
+      <section className="container-page pb-14 md:pb-16 grid md:grid-cols-2 gap-4">
         <RelatedLinks
           title={`${grade.name} 과목별 과외`}
           links={subjects.map((s) => ({ label: `${grade.name} ${s.name}과외`, href: `/subject/${s.slug}` }))}
         />
+        {relatedArticles.length > 0 && (
+          <RelatedLinks
+            title={`${grade.name} 학습가이드`}
+            links={relatedArticles.map((a) => ({ label: a.title, href: `/guide/${a.slug}` }))}
+          />
+        )}
       </section>
 
       <section className="container-page pb-16 md:pb-20">

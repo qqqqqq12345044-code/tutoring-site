@@ -20,6 +20,7 @@ export default function FAQAccordion({ items }: { items: FAQ[] }) {
               type="button"
               onClick={() => setOpenSlug(isOpen ? null : item.slug)}
               aria-expanded={isOpen}
+              aria-controls={`faq-panel-${item.slug}`}
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
             >
               <span className="text-sm md:text-base font-semibold text-navy">
@@ -32,7 +33,10 @@ export default function FAQAccordion({ items }: { items: FAQ[] }) {
               />
             </button>
             {isOpen && (
-              <div className="px-5 pb-4 text-sm text-text-muted leading-relaxed">
+              <div
+                id={`faq-panel-${item.slug}`}
+                className="px-5 pb-4 text-sm text-text-muted leading-relaxed"
+              >
                 {item.answer}
               </div>
             )}

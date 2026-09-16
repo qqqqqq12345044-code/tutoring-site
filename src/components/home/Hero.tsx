@@ -60,9 +60,9 @@ export default function Hero() {
               <div className="h-px bg-border-subtle" />
               <div className="flex items-center justify-between text-center">
                 <FlowStep icon={ClipboardList} label="진단" />
-                <span className="text-border-subtle">→</span>
+                <span className="text-border-subtle" aria-hidden="true">→</span>
                 <FlowStep icon={UserCheck} label="선생님 매칭" />
-                <span className="text-border-subtle">→</span>
+                <span className="text-border-subtle" aria-hidden="true">→</span>
                 <FlowStep icon={BookOpenCheck} label="맞춤 수업" />
               </div>
             </div>
