@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { publicAssetExists } from "@/lib/brand";
 
 interface BuildMetadataInput {
   title: string;
@@ -27,6 +28,9 @@ export function buildMetadata({ title, description, path, robots }: BuildMetadat
       siteName: siteConfig.brandName,
       locale: "ko_KR",
       type: "website",
+      ...(publicAssetExists(siteConfig.brand.ogImage)
+        ? { images: [siteConfig.brand.ogImage] }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",

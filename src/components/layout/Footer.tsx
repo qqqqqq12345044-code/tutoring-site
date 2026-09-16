@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import { publicAssetExists } from "@/lib/brand";
 
 const serviceLinks = [
   { label: "과목별 과외", href: "/subjects" },
@@ -39,11 +41,25 @@ function LinkGroup({ heading, links }: { heading: string; links: typeof serviceL
 }
 
 export default function Footer() {
+  const hasLogoHorizontal = publicAssetExists(siteConfig.brand.logoHorizontal);
+
   return (
     <footer className="bg-navy text-white">
       <div className="container-page py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr] md:gap-8 lg:gap-16">
           <div className="max-w-sm">
+            {hasLogoHorizontal && (
+              <div className="inline-flex w-fit items-center rounded-lg bg-white px-3 py-2 mb-3">
+                <Image
+                  src={siteConfig.brand.logoHorizontal}
+                  alt={siteConfig.brandName}
+                  width={153}
+                  height={32}
+                  className="h-7 w-auto"
+                  loading="eager"
+                />
+              </div>
+            )}
             <p className="text-lg font-bold">{siteConfig.brandName}</p>
             <p className="mt-1.5 text-sm font-medium text-white/80">{siteConfig.slogan}</p>
             <p className="mt-3 text-sm text-white/70 leading-relaxed">{siteConfig.tagline}</p>

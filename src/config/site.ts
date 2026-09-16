@@ -14,6 +14,20 @@ export const siteConfig = {
   businessRegistrationNumber: "",
   businessAddress: "",
   email: "contact@example-tutoring.com",
+  /**
+   * Central registry of brand asset paths under public/assets/brand.
+   * Files don't need to exist yet — components check for them and fall
+   * back to the current text/icon treatment when a path isn't there.
+   * Drop the real file in at the path below to activate it, no code
+   * changes required. See public/assets/brand/README.md.
+   */
+  brand: {
+    logoSymbol: "/assets/brand/logo-symbol.svg",
+    logoHorizontal: "/assets/brand/logo-horizontal.svg",
+    faviconSvg: "/assets/brand/favicon.svg",
+    appleTouchIcon: "/assets/brand/apple-touch-icon.png",
+    ogImage: "/assets/brand/og-default.png",
+  },
 } as const;
 
 export type SiteConfig = typeof siteConfig;

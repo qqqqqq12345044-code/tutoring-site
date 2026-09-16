@@ -1,18 +1,33 @@
 import Link from "next/link";
+import Image from "next/image";
 import { GraduationCap } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { publicAssetExists } from "@/lib/brand";
 import { mainNav, isNavGroup } from "@/data/nav";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import MobileMenu from "@/components/layout/MobileMenu";
 
 export default function Header() {
+  const hasLogoSymbol = publicAssetExists(siteConfig.brand.logoSymbol);
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border-subtle">
       <div className="container-page flex items-center justify-between h-16 md:h-18">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-white">
-            <GraduationCap className="w-5 h-5" />
-          </span>
+          {hasLogoSymbol ? (
+            <Image
+              src={siteConfig.brand.logoSymbol}
+              alt={siteConfig.brandShortName}
+              width={36}
+              height={36}
+              className="rounded-xl"
+              priority
+            />
+          ) : (
+            <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-white">
+              <GraduationCap className="w-5 h-5" />
+            </span>
+          )}
           <span className="text-lg font-bold text-navy">{siteConfig.brandShortName}</span>
         </Link>
 
