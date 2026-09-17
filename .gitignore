@@ -51,3 +51,7 @@ next-env.d.ts
 
 # generated validator cache (not source, not the handoff docs themselves)
 /scripts/.validation-cache.json
+
+# AI handoff runtime snapshot — regenerated via `npm run handoff`, not durable
+# record. PROJECT_STATE/DECISIONS/NEXT_TASK stay tracked; this one doesn't.
+/docs/ai/AI_HANDOFF.md
