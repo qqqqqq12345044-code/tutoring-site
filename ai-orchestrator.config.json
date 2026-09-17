@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "projectName": "tutoring-site",
+  "handoff": {
+    "projectState": "docs/ai/PROJECT_STATE.md",
+    "decisions": "docs/ai/DECISIONS.md",
+    "handoff": "docs/ai/AI_HANDOFF.md",
+    "nextTask": "docs/ai/NEXT_TASK.md"
+  },
+  "commands": {
+    "validateQuick": "npm run validate:quick",
+    "validateFull": "npm run validate:full"
+  },
+  "policy": {
+    "defaultRisk": "SAFE_EDIT",
+    "allowCommit": false,
+    "allowPush": false,
+    "allowDeploy": false,
+    "allowDestructiveCommands": false
+  }
+}
