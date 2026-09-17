@@ -48,3 +48,6 @@ next-env.d.ts
 /review-screenshots-final/
 /review-screenshots-brand/
 /scratch-audit2/
+
+# generated validator cache (not source, not the handoff docs themselves)
+/scripts/.validation-cache.json

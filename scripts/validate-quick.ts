@@ -5,6 +5,7 @@
  */
 import { spawnSync } from "child_process";
 import { computeSummary } from "./lib/route-inventory";
+import { writeCacheEntry } from "./lib/validation-cache";
 
 const KNOWN_PLACEHOLDERS = ["example-tutoring.com", "1588-0000", "pf.kakao.com/_example"];
 
@@ -51,6 +52,13 @@ async function main() {
 
   const pass = lintOk && typeOk && configOk;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
+
+  writeCacheEntry("quick", pass, {
+    lint: lintOk ? "PASS" : "FAIL",
+    typecheck: typeOk ? "PASS" : "FAIL",
+    config: configOk ? "PASS" : "FAIL",
+  });
+
   process.exit(pass ? 0 : 1);
 }
 

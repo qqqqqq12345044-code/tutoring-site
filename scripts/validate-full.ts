@@ -9,6 +9,7 @@ import { computeSummary, getSitemapPaths } from "./lib/route-inventory";
 import { startServer, stopServer } from "./lib/server";
 import { crawlSitemapAndLinks, checkSearchSmoke, checkConsultApiSmoke } from "./lib/checks";
 import { BASELINE } from "./lib/baseline";
+import { writeCacheEntry } from "./lib/validation-cache";
 
 function runQuick(): boolean {
   const result = spawnSync("npx tsx scripts/validate-quick.ts", { stdio: "inherit", shell: true });
@@ -26,11 +27,14 @@ function runBuild(): boolean {
 
 async function main() {
   const failures: string[] = [];
+  const results: Record<string, string | number> = {};
 
   const quickOk = runQuick();
+  results.quick = quickOk ? "PASS" : "FAIL";
   if (!quickOk) failures.push("quick validation");
 
   const buildOk = runBuild();
+  results.build = buildOk ? "PASS" : "FAIL";
   if (!buildOk) failures.push("build");
 
   const summary = computeSummary();
@@ -39,6 +43,9 @@ async function main() {
   const noindexOk = summary.noindexCount === BASELINE.noindexCount;
   const integrityOk = summary.duplicateSitemapUrls.length === 0 && summary.indexSitemapMismatches.length === 0;
 
+  results.routes = summary.totalRoutes;
+  results.sitemap = summary.sitemapCount;
+  results.noindex = summary.noindexCount;
   console.log(`Routes: ${summary.totalRoutes} ${routesOk ? "PASS" : `FAIL (baseline ${BASELINE.totalRoutes})`}`);
   console.log(`Sitemap: ${summary.sitemapCount} ${sitemapOk ? "PASS" : `FAIL (baseline ${BASELINE.sitemapCount})`}`);
   console.log(`Noindex: ${summary.noindexCount} ${noindexOk ? "PASS" : `FAIL (baseline ${BASELINE.noindexCount})`}`);
@@ -61,6 +68,7 @@ async function main() {
     try {
       const crawl = await crawlSitemapAndLinks(getSitemapPaths());
       const brokenOk = crawl.brokenLinks.length === BASELINE.brokenLinks;
+      results.brokenLinks = crawl.brokenLinks.length;
       console.log(`Broken links: ${crawl.brokenLinks.length} ${brokenOk ? "PASS" : "FAIL"}`);
       if (!brokenOk) {
         failures.push("broken links");
@@ -68,6 +76,7 @@ async function main() {
       }
 
       const dupCount = crawl.duplicateTitles.length + crawl.duplicateDescriptions.length;
+      results.metadataDuplicates = dupCount;
       console.log(`Metadata duplicates: ${dupCount} ${dupCount === 0 ? "PASS" : "FAIL"}`);
       if (dupCount > 0) {
         failures.push("duplicate title/description");
@@ -76,10 +85,12 @@ async function main() {
       }
 
       const searchOk = await checkSearchSmoke();
+      results.searchSmoke = searchOk ? "PASS" : "FAIL";
       console.log(`Search smoke: ${searchOk ? "PASS" : "FAIL"}`);
       if (!searchOk) failures.push("search smoke");
 
       const consult = await checkConsultApiSmoke();
+      results.consultSmoke = consult.ok ? "PASS" : "FAIL";
       console.log(`Consult API smoke: ${consult.ok ? "PASS" : "FAIL"}`);
       if (!consult.ok) {
         failures.push("consult API smoke");
@@ -93,6 +104,9 @@ async function main() {
   const pass = failures.length === 0;
   console.log(`FULL VALIDATION: ${pass ? "PASS" : "FAIL"}`);
   if (!pass) console.log(`Failed: ${failures.join(", ")}`);
+
+  writeCacheEntry("full", pass, results);
+
   process.exit(pass ? 0 : 1);
 }
 

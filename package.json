@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "validate:quick": "tsx scripts/validate-quick.ts",
-    "validate:full": "tsx scripts/validate-full.ts"
+    "validate:full": "tsx scripts/validate-full.ts",
+    "handoff": "tsx scripts/update-ai-handoff.ts",
+    "handoff:copy": "npm run handoff --silent && powershell -ExecutionPolicy Bypass -File scripts/copy-handoff.ps1"
   },
   "dependencies": {
     "lucide-react": "^1.45.0",
