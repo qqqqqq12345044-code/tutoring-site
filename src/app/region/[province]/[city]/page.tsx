@@ -37,11 +37,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
   if (!region || !parent || region.parentSlug !== province) notFound();
 
   const districts = getChildren(region.slug);
-  const relatedSchools = schools.filter((s) => {
-    if (s.regionSlug === region.slug) return true;
-    const schoolRegion = getRegionBySlug(s.regionSlug);
-    return schoolRegion?.parentSlug === region.slug;
-  });
+  const relatedSchools = schools.filter((s) => s.cityRegionSlug === region.slug);
 
   return (
     <>

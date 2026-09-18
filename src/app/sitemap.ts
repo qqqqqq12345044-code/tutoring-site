@@ -48,7 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     for (const g of grades) {
       for (const s of subjects) {
-        if (getIndexability("region-grade-subject").sitemap) {
+        if (
+          getIndexability("region-grade-subject", {
+            regionSlug: city.slug,
+            gradeSlug: g.slug,
+            subjectSlug: s.slug,
+          }).sitemap
+        ) {
           cityComboPaths.push(`${base}/${g.slug}/${s.slug}`);
         }
       }
@@ -62,7 +68,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  const allPaths = Array.from(new Set([...staticPaths, ...dynamicPaths, ...cityComboPaths]));
+  // School-level combination pages: /school/[schoolSlug]/[subject], bounded by
+  // each school's own availableSubjectSlugs. Same content-gated pattern as
+  // region-grade-subject above — only combos marked `sitemap: true` there
+  // (i.e. a published schoolSubjectContent entry) are listed here.
+  const schoolComboPaths: string[] = [];
+  for (const school of schools) {
+    for (const subjectSlug of school.availableSubjectSlugs) {
+      if (getIndexability("school-subject", { schoolSlug: school.slug, subjectSlug }).sitemap) {
+        schoolComboPaths.push(`/school/${school.slug}/${subjectSlug}`);
+      }
+    }
+  }
+
+  const allPaths = Array.from(new Set([...staticPaths, ...dynamicPaths, ...cityComboPaths, ...schoolComboPaths]));
 
   return allPaths.map((path) => ({
     url: `${siteConfig.domain}${path}`,

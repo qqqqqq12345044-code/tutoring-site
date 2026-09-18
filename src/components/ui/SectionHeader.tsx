@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 interface SectionHeaderProps {
   eyebrow?: string;
   title: string;
@@ -14,7 +16,7 @@ export default function SectionHeader({
   const alignClass = align === "center" ? "text-center items-center" : "text-left items-start";
 
   return (
-    <div className={`flex flex-col gap-3 ${alignClass}`}>
+    <FadeIn className={`flex flex-col gap-3 ${alignClass}`}>
       {eyebrow && (
         <span className="text-xs font-bold tracking-widest text-brand uppercase">{eyebrow}</span>
       )}
@@ -26,6 +28,6 @@ export default function SectionHeader({
           {description}
         </p>
       )}
-    </div>
+    </FadeIn>
   );
 }

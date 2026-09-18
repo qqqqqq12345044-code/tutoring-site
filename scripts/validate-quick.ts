@@ -4,7 +4,13 @@
  * config computed from live source (see scripts/lib/route-inventory.ts).
  */
 import { spawnSync } from "child_process";
-import { computeSummary } from "./lib/route-inventory";
+import {
+  computeSummary,
+  checkRegionGradeSubjectGate,
+  checkSchoolDataIntegrity,
+  checkSchoolSubjectGate,
+} from "./lib/route-inventory";
+import { checkRegionGradeSubjectContentQuality, checkSchoolSubjectContentQuality } from "./lib/content-quality";
 import { writeCacheEntry } from "./lib/validation-cache";
 
 const KNOWN_PLACEHOLDERS = ["example-tutoring.com", "1588-0000", "pf.kakao.com/_example"];
@@ -35,12 +41,38 @@ async function main() {
           (summary.indexSitemapMismatches.length > 5 ? ` (+${summary.indexSitemapMismatches.length - 5} more)` : "")
       );
     }
+
+    const gate = checkRegionGradeSubjectGate();
+    if (!gate.ok) {
+      configOk = false;
+      configIssues.push(...gate.issues);
+    }
+
+    const schoolIntegrity = checkSchoolDataIntegrity();
+    if (!schoolIntegrity.ok) {
+      configOk = false;
+      configIssues.push(...schoolIntegrity.issues);
+    }
+
+    const schoolGate = checkSchoolSubjectGate();
+    if (!schoolGate.ok) {
+      configOk = false;
+      configIssues.push(...schoolGate.issues);
+    }
   } catch (err) {
     configOk = false;
     configIssues.push(`route-inventory threw: ${(err as Error).message}`);
   }
   console.log(`Config: ${configOk ? "PASS" : "FAIL"}`);
   if (!configOk) configIssues.forEach((i) => console.log(`  - ${i}`));
+
+  const contentQuality = checkRegionGradeSubjectContentQuality();
+  console.log(`Content quality: ${contentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!contentQuality.ok) contentQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
+  const schoolContentQuality = checkSchoolSubjectContentQuality();
+  console.log(`School content quality: ${schoolContentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!schoolContentQuality.ok) schoolContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
 
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
@@ -50,13 +82,15 @@ async function main() {
     console.log(`Placeholders: ${remaining.length} known (see docs/qa/remaining-placeholders.md)`);
   }
 
-  const pass = lintOk && typeOk && configOk;
+  const pass = lintOk && typeOk && configOk && contentQuality.ok && schoolContentQuality.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {
     lint: lintOk ? "PASS" : "FAIL",
     typecheck: typeOk ? "PASS" : "FAIL",
     config: configOk ? "PASS" : "FAIL",
+    contentQuality: contentQuality.ok ? "PASS" : "FAIL",
+    schoolContentQuality: schoolContentQuality.ok ? "PASS" : "FAIL",
   });
 
   process.exit(pass ? 0 : 1);

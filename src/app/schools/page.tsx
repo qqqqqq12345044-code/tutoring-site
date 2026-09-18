@@ -22,12 +22,12 @@ export default function SchoolsPage() {
 
       <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {schools.map((s) => {
-          const region = getRegionBySlug(s.regionSlug);
+          const region = getRegionBySlug(s.districtRegionSlug ?? s.cityRegionSlug);
           return (
             <Link
               key={s.slug}
               href={`/school/${s.slug}`}
-              className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 hover:border-brand hover:shadow-md transition-all"
+              className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
             >
               <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-light text-brand shrink-0">
                 <SchoolIcon className="w-5 h-5" />

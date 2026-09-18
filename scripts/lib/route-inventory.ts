@@ -8,9 +8,11 @@
 import { siteConfig } from "@/config/site";
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
-import { regions, getChildren, getRegionUrl } from "@/data/regions";
+import { regions, getChildren, getRegionUrl, getRegionBySlug } from "@/data/regions";
 import { schools } from "@/data/schools";
 import { guideArticles } from "@/data/guide";
+import { getRegionGradeSubjectContent, isPublishedContent } from "@/data/regionGradeSubjectContent";
+import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished } from "@/data/schoolSubjectContent";
 import { getIndexability } from "@/lib/indexability";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
@@ -68,7 +70,11 @@ export function getAllContentRoutes(): RouteEntry[] {
     }
     for (const g of grades) {
       for (const s of subjects) {
-        const { index, sitemap } = getIndexability("region-grade-subject");
+        const { index, sitemap } = getIndexability("region-grade-subject", {
+          regionSlug: city.slug,
+          gradeSlug: g.slug,
+          subjectSlug: s.slug,
+        });
         routes.push({ path: `${base}/${g.slug}/${s.slug}`, index, sitemap });
       }
     }
@@ -77,6 +83,14 @@ export function getAllContentRoutes(): RouteEntry[] {
         const { index, sitemap } = getIndexability("region-district-subject");
         routes.push({ path: `${base}/${district.slug}/${s.slug}`, index, sitemap });
       }
+    }
+  }
+
+  // School-level combination pages, mirroring src/app/sitemap.ts's iteration.
+  for (const school of schools) {
+    for (const subjectSlug of school.availableSubjectSlugs) {
+      const { index, sitemap } = getIndexability("school-subject", { schoolSlug: school.slug, subjectSlug });
+      routes.push({ path: `/school/${school.slug}/${subjectSlug}`, index, sitemap });
     }
   }
 
@@ -127,4 +141,108 @@ export function computeSummary(): InventorySummary {
     duplicateSitemapUrls,
     indexSitemapMismatches,
   };
+}
+
+export interface GateCheckResult {
+  ok: boolean;
+  issues: string[];
+}
+
+/**
+ * Regression check for the region-grade-subject content gate
+ * (src/data/regionGradeSubjectContent.ts): for every city × grade × subject
+ * combination, whether getIndexability() marks it index+sitemap must match
+ * isPublishedContent() on the raw data (status "published" + at least one
+ * regionSpecificNotes item — a "draft" entry must NOT be indexed). This
+ * independently cross-checks the policy function against the raw data (not
+ * just against itself), so a bug in the "region-grade-subject" case of
+ * indexability.ts is caught across all 165 combos, not just a hand-picked few.
+ */
+export function checkRegionGradeSubjectGate(): GateCheckResult {
+  const issues: string[] = [];
+
+  for (const city of regions.filter((r) => r.level === "city")) {
+    for (const g of grades) {
+      for (const s of subjects) {
+        const isEligible = isPublishedContent(getRegionGradeSubjectContent(city.slug, g.slug, s.slug));
+        const { index, sitemap } = getIndexability("region-grade-subject", {
+          regionSlug: city.slug,
+          gradeSlug: g.slug,
+          subjectSlug: s.slug,
+        });
+        if (index !== isEligible || sitemap !== isEligible) {
+          issues.push(
+            `region-grade-subject gate: ${city.slug}/${g.slug}/${s.slug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`
+          );
+        }
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Structural integrity check for src/data/schools.ts, ahead of scaling it
+ * past the Stage 1 pilot (33 schools): every school.slug must be globally
+ * unique, cityRegionSlug must reference an existing city-level RegionNode,
+ * and districtRegionSlug (when present) must reference an existing
+ * district-level RegionNode whose parentSlug matches that school's
+ * cityRegionSlug.
+ */
+export function checkSchoolDataIntegrity(): GateCheckResult {
+  const issues: string[] = [];
+
+  const slugCounts = new Map<string, number>();
+  for (const s of schools) slugCounts.set(s.slug, (slugCounts.get(s.slug) ?? 0) + 1);
+  for (const [slug, count] of slugCounts) {
+    if (count > 1) issues.push(`school slug 중복: "${slug}" (${count}건)`);
+  }
+
+  for (const s of schools) {
+    const cityRegion = getRegionBySlug(s.cityRegionSlug);
+    if (!cityRegion) {
+      issues.push(`${s.slug}: cityRegionSlug "${s.cityRegionSlug}"가 regions.ts에 존재하지 않음`);
+    } else if (cityRegion.level !== "city") {
+      issues.push(`${s.slug}: cityRegionSlug "${s.cityRegionSlug}"는 city-level이 아님 (level=${cityRegion.level})`);
+    }
+
+    if (s.districtRegionSlug) {
+      const districtRegion = getRegionBySlug(s.districtRegionSlug);
+      if (!districtRegion) {
+        issues.push(`${s.slug}: districtRegionSlug "${s.districtRegionSlug}"가 regions.ts에 존재하지 않음`);
+      } else if (districtRegion.parentSlug !== s.cityRegionSlug) {
+        issues.push(
+          `${s.slug}: districtRegionSlug "${s.districtRegionSlug}"의 부모(${districtRegion.parentSlug})가 cityRegionSlug "${s.cityRegionSlug}"와 일치하지 않음`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Regression check for the school-subject content gate
+ * (src/data/schoolSubjectContent.ts), mirroring checkRegionGradeSubjectGate:
+ * for every school × its own availableSubjectSlugs combination, whether
+ * getIndexability() marks it index+sitemap must match isPublishedContent()
+ * on the raw data.
+ */
+export function checkSchoolSubjectGate(): GateCheckResult {
+  const issues: string[] = [];
+
+  for (const school of schools) {
+    for (const subjectSlug of school.availableSubjectSlugs) {
+      const isEligible = isSchoolSubjectPublished(getSchoolSubjectContent(school.slug, subjectSlug));
+      const { index, sitemap } = getIndexability("school-subject", { schoolSlug: school.slug, subjectSlug });
+      if (index !== isEligible || sitemap !== isEligible) {
+        issues.push(
+          `school-subject gate: ${school.slug}/${subjectSlug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
 }

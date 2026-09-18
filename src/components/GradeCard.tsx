@@ -6,7 +6,7 @@ export default function GradeCard({ grade }: { grade: Grade }) {
   return (
     <Link
       href={`/grade/${grade.slug}`}
-      className="group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-white p-7 hover:border-brand hover:shadow-md transition-all"
+      className="group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-white p-7 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
     >
       <span
         aria-hidden="true"

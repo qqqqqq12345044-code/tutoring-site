@@ -35,7 +35,7 @@ export default function PrimaryButton({
   type,
   onClick,
 }: PrimaryButtonProps) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors whitespace-nowrap ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98] motion-reduce:transition-none motion-reduce:transform-none ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if (href) {
     return (

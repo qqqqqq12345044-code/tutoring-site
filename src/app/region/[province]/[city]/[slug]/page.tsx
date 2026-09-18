@@ -96,11 +96,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
     const content = getRegionSubjectContent(ctx.region.slug, ctx.subject.slug);
     const districts = getChildren(ctx.region.slug);
     const faqs = getFaqsBySlugs(ctx.subject.faqSlugs);
-    const relatedSchools = schools.filter((s) => {
-      if (s.regionSlug === ctx.region.slug) return true;
-      const schoolRegion = getRegionBySlug(s.regionSlug);
-      return schoolRegion?.parentSlug === ctx.region.slug;
-    });
+    const relatedSchools = schools.filter((s) => s.cityRegionSlug === ctx.region.slug);
 
     return (
       <>
@@ -166,7 +162,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
             <div className="mt-8 grid sm:grid-cols-2 gap-4 max-w-2xl">
               <Link
                 href="/lesson/visit"
-                className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 hover:border-brand transition-colors"
+                className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
               >
                 <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-light text-brand shrink-0">
                   <HomeIcon className="w-5 h-5" />
@@ -180,7 +176,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
               </Link>
               <Link
                 href="/lesson/online"
-                className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 hover:border-brand transition-colors"
+                className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
               >
                 <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-light text-brand shrink-0">
                   <Video className="w-5 h-5" />
@@ -281,7 +277,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
     label: `${ctx.district.name} ${s.name}과외`,
     href: `/region/${province}/${city}/${slug}/${s.slug}`,
   }));
-  const districtSchools = schools.filter((s) => s.regionSlug === ctx.district.slug);
+  const districtSchools = schools.filter((s) => s.districtRegionSlug === ctx.district.slug);
 
   return (
     <>

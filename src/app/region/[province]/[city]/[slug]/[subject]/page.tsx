@@ -2,11 +2,26 @@ import { notFound } from "next/navigation";
 import { getRegionBySlug, getChildren } from "@/data/regions";
 import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { getGradeBySlug } from "@/data/grades";
+import { getRegionGradeSubjectContent, isPublishedContent, regionGradeSubjectContents } from "@/data/regionGradeSubjectContent";
+import { getGradeSubjectPlaybook } from "@/data/gradeSubjectPlaybook";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
+
+export function generateStaticParams() {
+  return regionGradeSubjectContents.filter(isPublishedContent).map((c) => {
+    const region = getRegionBySlug(c.regionSlug);
+    return {
+      province: region?.parentSlug as string,
+      city: c.regionSlug,
+      slug: c.gradeSlug,
+      subject: c.subjectSlug,
+    };
+  });
+}
 
 function resolveContext(province: string, city: string, slug: string, subjectSlug: string) {
   const parent = getRegionBySlug(province);
@@ -31,10 +46,29 @@ export async function generateMetadata(
   if (!ctx) return {};
 
   const label = ctx.type === "grade" ? `${ctx.region.name} ${ctx.grade.name}` : ctx.district.name;
-  const { index } = getIndexability(
-    ctx.type === "grade" ? "region-grade-subject" : "region-district-subject"
-  );
 
+  if (ctx.type === "grade") {
+    const rawContent = getRegionGradeSubjectContent(ctx.region.slug, ctx.grade.slug, ctx.subject.slug);
+    const content = isPublishedContent(rawContent) ? rawContent : undefined;
+    const { index } = getIndexability("region-grade-subject", {
+      regionSlug: ctx.region.slug,
+      gradeSlug: ctx.grade.slug,
+      subjectSlug: ctx.subject.slug,
+    });
+
+    return buildMetadata({
+      title: content
+        ? `${label} ${ctx.subject.name}과외 | ${content.regionSpecificNotes[0].title}`
+        : `${label} ${ctx.subject.name}과외 | 1:1 맞춤 수업`,
+      description:
+        content?.intro ??
+        `${label}에서 ${ctx.subject.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 수업을 상담해보세요.`,
+      path: `/region/${province}/${city}/${slug}/${subjectSlug}`,
+      robots: { index, follow: true },
+    });
+  }
+
+  const { index } = getIndexability("region-district-subject");
   return buildMetadata({
     title: `${label} ${ctx.subject.name}과외 | 1:1 맞춤 수업`,
     description: `${label}에서 ${ctx.subject.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 수업을 상담해보세요.`,
@@ -51,6 +85,10 @@ export default async function RegionFilterSubjectPage(
   if (!ctx) notFound();
 
   const label = ctx.type === "grade" ? `${ctx.region.name} ${ctx.grade.name}` : ctx.district.name;
+  const rawContent =
+    ctx.type === "grade" ? getRegionGradeSubjectContent(ctx.region.slug, ctx.grade.slug, ctx.subject.slug) : undefined;
+  const content = isPublishedContent(rawContent) ? rawContent : undefined;
+  const playbook = ctx.type === "grade" ? getGradeSubjectPlaybook(ctx.grade.slug, ctx.subject.slug) : undefined;
 
   return (
     <>
@@ -68,11 +106,39 @@ export default async function RegionFilterSubjectPage(
             {label} {ctx.subject.name}과외
           </h1>
           <p className="text-text-muted leading-relaxed max-w-2xl">
-            {label}에서 {ctx.subject.name}과외를 찾는다면 현재 개념 이해도와 목표를 먼저 확인하고
-            필요한 부분부터 1:1로 학습하는 것이 중요합니다.
+            {content?.intro ??
+              `${label}에서 ${ctx.subject.name}과외를 찾는다면 현재 개념 이해도와 목표를 먼저 확인하고 필요한 부분부터 1:1로 학습하는 것이 중요합니다.`}
           </p>
         </div>
       </section>
+
+      {playbook && (
+        <section className="container-page py-14 md:py-16">
+          <SectionHeader align="left" title={`${ctx.type === "grade" ? ctx.grade.name : ""} ${ctx.subject.name}과외 학습 포인트`} />
+          <div className="mt-8 grid sm:grid-cols-3 gap-6">
+            {playbook.focusPoints.map((p) => (
+              <div key={p.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+                <p className="font-bold text-navy">{p.title}</p>
+                <p className="mt-2 text-sm text-text-muted leading-relaxed">{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {content && (
+        <section className="container-page py-14 md:py-16">
+          <SectionHeader align="left" title={`${label} ${ctx.subject.name}과외 지역 안내`} />
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+            {content.regionSpecificNotes.map((n) => (
+              <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+                <p className="font-bold text-navy">{n.title}</p>
+                <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="container-page py-14 md:py-16">
         <ConsultCTA title={`${label} ${ctx.subject.name}과외 상담받기`} />

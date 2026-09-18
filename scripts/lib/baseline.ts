@@ -7,8 +7,8 @@
  * region, subject, school, or regionSubjectContent entry.
  */
 export const BASELINE = {
-  totalRoutes: 333,
-  sitemapCount: 60,
-  noindexCount: 271,
+  totalRoutes: 529,
+  sitemapCount: 106,
+  noindexCount: 421,
   brokenLinks: 0,
 };

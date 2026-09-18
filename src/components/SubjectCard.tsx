@@ -16,7 +16,7 @@ export default function SubjectCard({ subject }: { subject: Subject }) {
   return (
     <Link
       href={`/subject/${subject.slug}`}
-      className="group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-white p-6 hover:border-brand hover:shadow-md transition-all"
+      className="group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-white p-6 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
     >
       <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-brand-light text-brand">
         <Icon className="w-5 h-5" />

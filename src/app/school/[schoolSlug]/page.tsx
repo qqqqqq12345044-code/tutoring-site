@@ -43,8 +43,8 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
   const school = getSchoolBySlug(schoolSlug);
   if (!school) notFound();
 
-  const region = getRegionBySlug(school.regionSlug);
-  const regionPath = getRegionPath(school.regionSlug);
+  const region = getRegionBySlug(school.districtRegionSlug ?? school.cityRegionSlug);
+  const regionPath = getRegionPath(school.districtRegionSlug ?? school.cityRegionSlug);
   const matchingGrade = getGradeBySlug(schoolLevelToGradeSlug[school.level]);
   const faqs = getFaqsBySlugs(["subject-scope", "lesson-type", "pricing"]);
 

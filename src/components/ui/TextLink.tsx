@@ -13,7 +13,7 @@ export default function TextLink({
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-blue-700 transition-colors ${className}`}
+      className={`group inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-blue-700 transition-colors duration-200 ease-out ${className}`}
     >
       {children}
       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />

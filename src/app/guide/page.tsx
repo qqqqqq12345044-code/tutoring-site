@@ -35,7 +35,7 @@ export default function GuidePage() {
           <Link
             key={a.slug}
             href={`/guide/${a.slug}`}
-            className="group flex flex-col gap-3 rounded-2xl border border-border-subtle bg-white p-6 hover:border-brand hover:shadow-md transition-all"
+            className="group flex flex-col gap-3 rounded-2xl border border-border-subtle bg-white p-6 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
           >
             <span className="w-fit rounded-full bg-brand-light px-2.5 py-1 text-xs font-semibold text-brand">
               {guideCategories.find((c) => c.slug === a.categorySlug)?.name}
