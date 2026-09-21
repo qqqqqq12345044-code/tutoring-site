@@ -21,7 +21,7 @@ export const faqs: FAQ[] = [
     slug: "elementary-tutoring",
     question: "초등학생도 과외가 가능한가요?",
     answer:
-      "가능합니다. 초등 과정은 무리한 선행보다는 기초 개념과 학습 습관 형성을 중요하게 봅니다.",
+      "네, 가능합니다. 초등 과정은 무리한 선행 학습보다 기초 개념 이해와 학습 습관 형성을 더 중요하게 생각합니다.",
   },
   {
     slug: "pricing",
@@ -32,7 +32,8 @@ export const faqs: FAQ[] = [
   {
     slug: "teacher-match",
     question: "선생님이 학생과 맞지 않으면 어떻게 하나요?",
-    answer: "상담을 통해 학생 상황을 확인하고 조율합니다.",
+    answer:
+      "상담을 통해 학생 상황을 다시 확인한 뒤, 필요한 경우 선생님을 조율해드립니다.",
   },
   {
     slug: "consult-commitment",
