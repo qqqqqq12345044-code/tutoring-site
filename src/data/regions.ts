@@ -10,7 +10,7 @@ export interface RegionNode {
 }
 
 export const regions: RegionNode[] = [
-  { slug: "seoul", name: "서울", fullName: "서울특별시", level: "province", parentSlug: null, children: ["gangnam", "seocho", "songpa", "yangcheon", "mapo"] },
+  { slug: "seoul", name: "서울", fullName: "서울특별시", level: "province", parentSlug: null, children: ["gangnam", "seocho", "songpa", "yangcheon", "mapo", "gangseo"] },
   { slug: "gyeonggi", name: "경기", fullName: "경기도", level: "province", parentSlug: null, children: ["suwon", "seongnam", "yongin", "goyang", "anyang", "bucheon"] },
   { slug: "incheon", name: "인천", fullName: "인천광역시", level: "province", parentSlug: null, children: [] },
   { slug: "busan", name: "부산", fullName: "부산광역시", level: "province", parentSlug: null, children: [] },
@@ -33,6 +33,7 @@ export const regions: RegionNode[] = [
   { slug: "songpa", name: "송파구", fullName: "서울 송파구", level: "city", parentSlug: "seoul", children: [] },
   { slug: "yangcheon", name: "양천구", fullName: "서울 양천구", level: "city", parentSlug: "seoul", children: [] },
   { slug: "mapo", name: "마포구", fullName: "서울 마포구", level: "city", parentSlug: "seoul", children: [] },
+  { slug: "gangseo", name: "강서구", fullName: "서울 강서구", level: "city", parentSlug: "seoul", children: [] },
 
   { slug: "suwon", name: "수원", fullName: "수원시", level: "city", parentSlug: "gyeonggi", children: ["yeongtong", "paldal", "jangan", "gwonseon"] },
   { slug: "seongnam", name: "성남", fullName: "성남시", level: "city", parentSlug: "gyeonggi", children: [] },
