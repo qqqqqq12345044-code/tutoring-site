@@ -13,6 +13,7 @@ import { regions, getChildren, getRegionUrl, getRegionBySlug } from "@/data/regi
 import { schools } from "@/data/schools";
 import { guideArticles } from "@/data/guide";
 import { getRegionGradeSubjectContent, isPublishedContent } from "@/data/regionGradeSubjectContent";
+import { getSchoolContent, isPublishedContent as isSchoolPublished } from "@/data/schoolContent";
 import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished } from "@/data/schoolSubjectContent";
 import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished } from "@/data/regionProgramContent";
 import { getIndexability } from "@/lib/indexability";
@@ -46,7 +47,10 @@ export function getAllContentRoutes(): RouteEntry[] {
   for (const path of STATIC_PATHS) routes.push({ path, index: true, sitemap: true });
   for (const s of subjects) routes.push({ path: `/subject/${s.slug}`, index: true, sitemap: true });
   for (const g of grades) routes.push({ path: `/grade/${g.slug}`, index: true, sitemap: true });
-  for (const sc of schools) routes.push({ path: `/school/${sc.slug}`, index: true, sitemap: true });
+  for (const sc of schools) {
+    const { index, sitemap } = getIndexability("school", { schoolSlug: sc.slug });
+    routes.push({ path: `/school/${sc.slug}`, index, sitemap });
+  }
   for (const a of guideArticles) routes.push({ path: `/guide/${a.slug}`, index: true, sitemap: true });
   for (const p of programs) routes.push({ path: `/program/${p.slug}`, index: true, sitemap: true });
 
@@ -228,6 +232,25 @@ export function checkSchoolDataIntegrity(): GateCheckResult {
           `${s.slug}: districtRegionSlug "${s.districtRegionSlug}"의 부모(${districtRegion.parentSlug})가 cityRegionSlug "${s.cityRegionSlug}"와 일치하지 않음`
         );
       }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Regression check for the plain-school content gate (src/data/schoolContent.ts),
+ * mirroring checkSchoolSubjectGate: for every school, whether getIndexability()
+ * marks it index+sitemap must match isPublishedContent() on the raw data.
+ */
+export function checkSchoolGate(): GateCheckResult {
+  const issues: string[] = [];
+
+  for (const school of schools) {
+    const isEligible = isSchoolPublished(getSchoolContent(school.slug));
+    const { index, sitemap } = getIndexability("school", { schoolSlug: school.slug });
+    if (index !== isEligible || sitemap !== isEligible) {
+      issues.push(`school gate: ${school.slug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`);
     }
   }
 

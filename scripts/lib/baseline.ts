@@ -8,7 +8,7 @@
  */
 export const BASELINE = {
   totalRoutes: 1006,
-  sitemapCount: 211,
-  noindexCount: 793,
+  sitemapCount: 139,
+  noindexCount: 865,
   brokenLinks: 0,
 };

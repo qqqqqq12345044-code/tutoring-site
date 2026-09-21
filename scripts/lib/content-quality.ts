@@ -7,8 +7,10 @@
  * whitespace-split tokens, normalized to 0~1) as reusable validator code.
  */
 import { regionGradeSubjectContents, type RegionGradeSubjectContent } from "@/data/regionGradeSubjectContent";
+import { schoolContents, type SchoolContent } from "@/data/schoolContent";
 import { schoolSubjectContents, type SchoolSubjectContent } from "@/data/schoolSubjectContent";
 import { regionProgramContents, type RegionProgramContent } from "@/data/regionProgramContent";
+import { schools } from "@/data/schools";
 
 export interface ContentQualityResult {
   ok: boolean;
@@ -145,6 +147,88 @@ export function checkRegionProgramContentQuality(): ContentQualityResult {
               ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 지역명만 바뀐 동일 문서일 가능성)`
           );
         }
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+function plainSchoolEntryText(c: SchoolContent): string {
+  return [c.intro, ...c.schoolSpecificNotes.map((n) => n.body)].join(" ");
+}
+
+/**
+ * Checks every schoolContent entry (src/data/schoolContent.ts, the plain
+ * /school/[schoolSlug] page's content gate) for publish-readiness:
+ * - published entries must have at least one schoolSpecificNotes item
+ * - published entries' intro must meet a minimum length
+ * - no empty note title/body
+ * - published entries sharing the same school level, or the same city
+ *   region, must not read as the same document with only the school name
+ *   swapped (token similarity gate) — this is the axis most likely to leak
+ *   into the rendered page (shared FAQ/subject-list boilerplate), so it's
+ *   checked in addition to the full-corpus pairwise check below.
+ */
+export function checkSchoolContentQuality(): ContentQualityResult {
+  const issues: string[] = [];
+
+  for (const c of schoolContents) {
+    if (c.status !== "published") continue;
+
+    if (c.schoolSpecificNotes.length === 0) {
+      issues.push(`${c.schoolSlug}: status "published"이지만 schoolSpecificNotes가 비어 있음`);
+    }
+    if (c.intro.trim().length < MIN_INTRO_LENGTH) {
+      issues.push(`${c.schoolSlug}: intro가 최소 길이(${MIN_INTRO_LENGTH}자) 미만 (${c.intro.trim().length}자)`);
+    }
+    for (const note of c.schoolSpecificNotes) {
+      if (!note.title.trim() || !note.body.trim()) {
+        issues.push(`${c.schoolSlug}: schoolSpecificNotes에 빈 title/body가 있음`);
+      }
+    }
+  }
+
+  const published = schoolContents.filter((c) => c.status === "published");
+
+  function checkGroups(groups: Map<string, SchoolContent[]>, label: string) {
+    for (const [key, group] of groups) {
+      for (let i = 0; i < group.length; i++) {
+        for (let j = i + 1; j < group.length; j++) {
+          const similarity = tokenSimilarity(plainSchoolEntryText(group[i]), plainSchoolEntryText(group[j]));
+          if (similarity > SIMILARITY_THRESHOLD) {
+            issues.push(
+              `${label} "${key}": ${group[i].schoolSlug} vs ${group[j].schoolSlug} 콘텐츠 유사도 ${(similarity * 100).toFixed(1)}%` +
+                ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 학교명만 바뀐 동일 문서일 가능성)`
+            );
+          }
+        }
+      }
+    }
+  }
+
+  const byLevel = new Map<string, SchoolContent[]>();
+  const byCityRegion = new Map<string, SchoolContent[]>();
+  for (const c of published) {
+    const school = schools.find((s) => s.slug === c.schoolSlug);
+    if (!school) continue;
+    if (!byLevel.has(school.level)) byLevel.set(school.level, []);
+    byLevel.get(school.level)!.push(c);
+    if (!byCityRegion.has(school.cityRegionSlug)) byCityRegion.set(school.cityRegionSlug, []);
+    byCityRegion.get(school.cityRegionSlug)!.push(c);
+  }
+  checkGroups(byLevel, "학교급");
+  checkGroups(byCityRegion, "지역");
+
+  // Full-corpus check: catches duplication across region/level boundaries too.
+  for (let i = 0; i < published.length; i++) {
+    for (let j = i + 1; j < published.length; j++) {
+      const similarity = tokenSimilarity(plainSchoolEntryText(published[i]), plainSchoolEntryText(published[j]));
+      if (similarity > SIMILARITY_THRESHOLD) {
+        issues.push(
+          `전체 학교: ${published[i].schoolSlug} vs ${published[j].schoolSlug} 콘텐츠 유사도 ${(similarity * 100).toFixed(1)}%` +
+            ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 학교명만 바뀐 동일 문서일 가능성)`
+        );
       }
     }
   }

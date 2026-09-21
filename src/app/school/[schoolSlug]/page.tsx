@@ -4,6 +4,7 @@ import { getSubjectBySlug } from "@/data/subjects";
 import { getRegionBySlug, getRegionUrl, getRegionPath } from "@/data/regions";
 import { getGradeBySlug } from "@/data/grades";
 import { getFaqsBySlugs } from "@/data/faqs";
+import { getSchoolContent, isPublishedContent } from "@/data/schoolContent";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
@@ -28,11 +29,17 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]">)
   const school = getSchoolBySlug(schoolSlug);
   if (!school) return {};
 
-  const { index } = getIndexability("school");
+  const rawContent = getSchoolContent(school.slug);
+  const content = isPublishedContent(rawContent) ? rawContent : undefined;
+  const { index } = getIndexability("school", { schoolSlug: school.slug });
 
   return buildMetadata({
-    title: `${school.name} 과외 | 학교 진도에 맞춘 1:1 수업`,
-    description: `${school.name} 학생을 위한 1:1 과외를 상담해보세요. 학교 진도와 시험 일정에 맞춘 수업을 안내해드립니다.`,
+    title: content
+      ? `${school.name} 과외 | ${content.schoolSpecificNotes[0].title}`
+      : `${school.name} 과외 | 학교 진도에 맞춘 1:1 수업`,
+    description:
+      content?.intro ??
+      `${school.name} 학생을 위한 1:1 과외를 상담해보세요. 학교 진도와 시험 일정에 맞춘 수업을 안내해드립니다.`,
     path: `/school/${school.slug}`,
     robots: { index, follow: true },
   });
@@ -43,6 +50,8 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
   const school = getSchoolBySlug(schoolSlug);
   if (!school) notFound();
 
+  const rawContent = getSchoolContent(school.slug);
+  const content = isPublishedContent(rawContent) ? rawContent : undefined;
   const region = getRegionBySlug(school.districtRegionSlug ?? school.cityRegionSlug);
   const regionPath = getRegionPath(school.districtRegionSlug ?? school.cityRegionSlug);
   const matchingGrade = getGradeBySlug(schoolLevelToGradeSlug[school.level]);
@@ -64,8 +73,8 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
             {school.name} 과외
           </h1>
           <p className="text-text-muted leading-relaxed max-w-2xl">
-            {school.name} 학생도 학교 진도와 시험 일정에 맞춘 1:1 상담이 가능합니다. 현재 학습
-            상황과 목표를 먼저 확인하고 필요한 과목부터 수업을 시작합니다.
+            {content?.intro ??
+              `${school.name} 학생도 학교 진도와 시험 일정에 맞춘 1:1 상담이 가능합니다. 현재 학습 상황과 목표를 먼저 확인하고 필요한 과목부터 수업을 시작합니다.`}
           </p>
           {region && (
             <p className="text-sm text-text-muted">
@@ -91,6 +100,22 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
           ]}
         />
       </section>
+
+      {content && (
+        <section className="bg-white border-y border-border-subtle">
+          <div className="container-page py-14 md:py-16">
+            <SectionHeader align="left" title={`${school.name} 학생을 위한 안내`} />
+            <div className="mt-8 grid sm:grid-cols-2 gap-6">
+              {content.schoolSpecificNotes.map((n) => (
+                <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+                  <p className="font-bold text-navy">{n.title}</p>
+                  <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="container-page pb-16 md:pb-20">
         <ConsultCTA title={`${school.name} 학생 맞춤 과외 상담받기`} />

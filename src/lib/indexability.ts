@@ -1,5 +1,6 @@
 import { getRegionSubjectContent } from "@/data/regionSubjectContent";
 import { getRegionGradeSubjectContent, isPublishedContent as isRegionGradeSubjectPublished } from "@/data/regionGradeSubjectContent";
+import { getSchoolContent, isPublishedContent as isSchoolPublished } from "@/data/schoolContent";
 import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished } from "@/data/schoolSubjectContent";
 import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished } from "@/data/regionProgramContent";
 
@@ -12,26 +13,29 @@ import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished
  * rather than hardcoding robots/sitemap logic per URL.
  *
  * Category mapping (see the audit report for full reasoning):
- *   A/B (index, sitemap)   — subject, grade, school, program, region (province/city/plain district),
+ *   A/B (index, sitemap)   — subject, grade, program, region (province/city/plain district),
+ *                            school pages with a *published* schoolContent entry,
  *                            region+subject pages with dedicated regionSubjectContent,
  *                            region+grade+subject pages with a *published*
  *                            regionGradeSubjectContent entry, school+subject pages with a
  *                            *published* schoolSubjectContent entry, region+program pages with a
  *                            *published* regionProgramContent entry (status "published" AND
  *                            at least one notes item — see each data file's isPublishedContent())
- *   C   (noindex, no sitemap) — region+subject / region+grade+subject / school+subject / region+program
- *                            fallback pages (no dedicated content, or a "draft" entry not yet ready)
+ *   C   (noindex, no sitemap) — school / region+subject / region+grade+subject / school+subject /
+ *                            region+program fallback pages (no dedicated content, or a "draft"
+ *                            entry not yet ready)
  *   D   (noindex, no sitemap) — region+grade, region+district+subject
  *
- * Note: plain "school" (/school/[schoolSlug]) stays unconditionally indexed — that policy
- * is unchanged here. Only the new "school-subject" combination is content-gated. Same for
- * plain "program" (/program/[slug]) vs. the "region-program" combination.
+ * Note: plain "school" (/school/[schoolSlug]) is content-gated the same way as
+ * "school-subject" (2026-09 change — ~97% of school pages were near-duplicate
+ * templates once school count scaled past ~100; see docs/qa for the audit).
+ * Plain "program" (/program/[slug]) is unchanged and still unconditionally indexed.
  */
 
 export type IndexabilityKind =
   | "subject"
   | "grade"
-  | "school"
+  | "school" // /school/[schoolSlug]
   | "program" // /program/[slug]
   | "region" // province / city / plain (subject-less, grade-less) district page
   | "region-subject" // /region/[province]/[city]/[subject]
@@ -48,7 +52,7 @@ export interface IndexabilityContext {
   subjectSlug?: string;
   /** Grade slug, required for "region-grade-subject" to look up dedicated content. */
   gradeSlug?: string;
-  /** School slug, required for "school-subject" to look up dedicated content. */
+  /** School slug, required for "school" / "school-subject" to look up dedicated content. */
   schoolSlug?: string;
   /** Program slug, required for "region-program" to look up dedicated content. */
   programSlug?: string;
@@ -68,10 +72,14 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
   switch (kind) {
     case "subject":
     case "grade":
-    case "school":
     case "program":
     case "region":
       return INDEXED;
+
+    case "school": {
+      const content = ctx.schoolSlug ? getSchoolContent(ctx.schoolSlug) : undefined;
+      return isSchoolPublished(content) ? INDEXED : NOT_INDEXED;
+    }
 
     case "region-subject": {
       const hasDedicatedContent = Boolean(

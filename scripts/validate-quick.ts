@@ -8,12 +8,14 @@ import {
   computeSummary,
   checkRegionGradeSubjectGate,
   checkSchoolDataIntegrity,
+  checkSchoolGate,
   checkSchoolSubjectGate,
   checkRegionProgramGate,
   checkProgramRouteCollisions,
 } from "./lib/route-inventory";
 import {
   checkRegionGradeSubjectContentQuality,
+  checkSchoolContentQuality,
   checkSchoolSubjectContentQuality,
   checkRegionProgramContentQuality,
 } from "./lib/content-quality";
@@ -60,6 +62,12 @@ async function main() {
       configIssues.push(...schoolIntegrity.issues);
     }
 
+    const plainSchoolGate = checkSchoolGate();
+    if (!plainSchoolGate.ok) {
+      configOk = false;
+      configIssues.push(...plainSchoolGate.issues);
+    }
+
     const schoolGate = checkSchoolSubjectGate();
     if (!schoolGate.ok) {
       configOk = false;
@@ -88,6 +96,10 @@ async function main() {
   console.log(`Content quality: ${contentQuality.ok ? "PASS" : "FAIL"}`);
   if (!contentQuality.ok) contentQuality.issues.forEach((i) => console.log(`  - ${i}`));
 
+  const plainSchoolContentQuality = checkSchoolContentQuality();
+  console.log(`Plain school content quality: ${plainSchoolContentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!plainSchoolContentQuality.ok) plainSchoolContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
   const schoolContentQuality = checkSchoolSubjectContentQuality();
   console.log(`School content quality: ${schoolContentQuality.ok ? "PASS" : "FAIL"}`);
   if (!schoolContentQuality.ok) schoolContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
@@ -104,7 +116,14 @@ async function main() {
     console.log(`Placeholders: ${remaining.length} known (see docs/qa/remaining-placeholders.md)`);
   }
 
-  const pass = lintOk && typeOk && configOk && contentQuality.ok && schoolContentQuality.ok && programContentQuality.ok;
+  const pass =
+    lintOk &&
+    typeOk &&
+    configOk &&
+    contentQuality.ok &&
+    plainSchoolContentQuality.ok &&
+    schoolContentQuality.ok &&
+    programContentQuality.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {
@@ -112,6 +131,7 @@ async function main() {
     typecheck: typeOk ? "PASS" : "FAIL",
     config: configOk ? "PASS" : "FAIL",
     contentQuality: contentQuality.ok ? "PASS" : "FAIL",
+    plainSchoolContentQuality: plainSchoolContentQuality.ok ? "PASS" : "FAIL",
     schoolContentQuality: schoolContentQuality.ok ? "PASS" : "FAIL",
     programContentQuality: programContentQuality.ok ? "PASS" : "FAIL",
   });

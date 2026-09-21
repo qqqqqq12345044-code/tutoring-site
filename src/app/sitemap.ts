@@ -28,9 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...grades.map((g) => `/grade/${g.slug}`),
     ...programs.map((p) => `/program/${p.slug}`),
     ...regions.map((r) => getRegionUrl(r.slug)),
-    ...schools.map((s) => `/school/${s.slug}`),
     ...guideArticles.map((a) => `/guide/${a.slug}`),
   ];
+
+  // Plain school pages: /school/[schoolSlug]. Content-gated the same way as
+  // school-subject below — only schools with a published schoolContent entry
+  // (i.e. `sitemap: true` from getIndexability("school")) are listed here.
+  const schoolPaths: string[] = [];
+  for (const school of schools) {
+    if (getIndexability("school", { schoolSlug: school.slug }).sitemap) {
+      schoolPaths.push(`/school/${school.slug}`);
+    }
+  }
 
   // City-level combination pages: /region/[province]/[city]/[subject|grade],
   // plus the deeper grade+subject / district+subject pages one level below.
@@ -97,7 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   const allPaths = Array.from(
-    new Set([...staticPaths, ...dynamicPaths, ...cityComboPaths, ...schoolComboPaths, ...regionProgramPaths])
+    new Set([...staticPaths, ...dynamicPaths, ...schoolPaths, ...cityComboPaths, ...schoolComboPaths, ...regionProgramPaths])
   );
 
   return allPaths.map((path) => ({
