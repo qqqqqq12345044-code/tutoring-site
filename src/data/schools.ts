@@ -897,6 +897,162 @@ export const schools: School[] = [
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
   },
+
+  // 인천 미추홀구 (나무위키 구역별 학교 목록 대조 확인)
+  {
+    slug: "michuhol-elementary-school",
+    name: "인천숭의초등학교",
+    cityRegionSlug: "michuhol",
+    level: "초등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "michuhol-middle-school",
+    name: "관교중학교",
+    cityRegionSlug: "michuhol",
+    level: "중학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "michuhol-high-school",
+    name: "인천고등학교",
+    cityRegionSlug: "michuhol",
+    level: "고등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+
+  // 인천 연수구
+  {
+    slug: "yeonsu-elementary-school",
+    name: "인천송도초등학교",
+    cityRegionSlug: "yeonsu",
+    level: "초등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "yeonsu-middle-school",
+    name: "연수중학교",
+    cityRegionSlug: "yeonsu",
+    level: "중학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "yeonsu-high-school",
+    name: "연수고등학교",
+    cityRegionSlug: "yeonsu",
+    level: "고등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+
+  // 인천 남동구
+  {
+    slug: "namdong-elementary-school",
+    name: "인천구월초등학교",
+    cityRegionSlug: "namdong",
+    level: "초등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "namdong-middle-school",
+    name: "구월중학교",
+    cityRegionSlug: "namdong",
+    level: "중학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "namdong-high-school",
+    name: "인천남동고등학교",
+    cityRegionSlug: "namdong",
+    level: "고등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+
+  // 인천 부평구
+  {
+    slug: "bupyeong-elementary-school",
+    name: "인천갈산초등학교",
+    cityRegionSlug: "bupyeong",
+    level: "초등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "bupyeong-middle-school",
+    name: "부평중학교",
+    cityRegionSlug: "bupyeong",
+    level: "중학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "bupyeong-high-school",
+    name: "부평고등학교",
+    cityRegionSlug: "bupyeong",
+    level: "고등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+
+  // 인천 계양구
+  {
+    slug: "gyeyang-elementary-school",
+    name: "인천계산초등학교",
+    cityRegionSlug: "gyeyang",
+    level: "초등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "gyeyang-middle-school",
+    name: "계산중학교",
+    cityRegionSlug: "gyeyang",
+    level: "중학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "gyeyang-high-school",
+    name: "계산고등학교",
+    cityRegionSlug: "gyeyang",
+    level: "고등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+
+  // 인천 강화군
+  {
+    slug: "ganghwa-elementary-school",
+    name: "강화초등학교",
+    cityRegionSlug: "ganghwa",
+    level: "초등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "ganghwa-middle-school",
+    name: "강화중학교",
+    cityRegionSlug: "ganghwa",
+    level: "중학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
+  {
+    slug: "ganghwa-high-school",
+    name: "강화고등학교",
+    cityRegionSlug: "ganghwa",
+    level: "고등학교",
+    availableSubjectSlugs: ALL_SUBJECTS,
+    dataSource: "manual",
+  },
 ];
 
 export function getSchoolBySlug(slug: string): School | undefined {

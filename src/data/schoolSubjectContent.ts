@@ -608,6 +608,315 @@ export const schoolSubjectContents: SchoolSubjectContent[] = [
       },
     ],
   },
+
+  // 인천 미추홀구·연수구·남동구·부평구·계양구·강화군 (나무위키 구역별 학교 목록 대조 확인,
+  // 2026-09 지역 확장분)
+  {
+    schoolSlug: "michuhol-elementary-school",
+    subjectSlug: "korean",
+    status: "published",
+    intro:
+      "인천숭의초등학교 학생이 국어과외를 찾는다면, 학교 진도와 최근 시험 범위를 먼저 확인하고 취약한 부분부터 보완하는 것이 중요합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "인천숭의초등학교 학생 안내",
+        body: "인천숭의초등학교에 재학 중이라면 지역별 과외 페이지(미추홀 초등 국어과외)에서도 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "초등 국어 학습 방향",
+        body: "초등 국어는 어휘력과 독해력이 이후 전 과목 학습의 기초가 되므로, 짧은 글이라도 매일 읽고 내용을 스스로 요약해보는 연습이 도움이 됩니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "michuhol-middle-school",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "관교중학교 재학생이 수학과외를 고려하고 있다면, 학교 진도에 맞춰 부족한 개념부터 채워나가는 방식이 효과적입니다.",
+    schoolSpecificNotes: [
+      {
+        title: "관교중학교 학생 안내",
+        body: "미추홀 중등 수학과외 페이지에서 관교중학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "중등 수학 학습 방향",
+        body: "중학교 수학은 단원 간 연결이 강한 과목이라, 현재 진도에서 막히면 관련된 이전 단원부터 되짚어 확인하는 것이 좋습니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "michuhol-high-school",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "인천고등학교에 재학 중이라면, 영어 학습을 시작하기 전에 학교 진도표를 기준으로 이전 단원 이해도를 먼저 점검해보는 것이 좋습니다.",
+    schoolSpecificNotes: [
+      {
+        title: "인천고등학교 학생 안내",
+        body: "미추홀 고등 영어과외 페이지에서 인천고등학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "고등 영어 학습 방향",
+        body: "고등학교 영어는 문장 구조가 복잡해지는 만큼, 어휘 암기와 함께 긴 문장을 끊어 읽는 구문 분석 훈련을 병행하는 것이 도움이 됩니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "yeonsu-elementary-school",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "인천송도초등학교에 재학 중이라면, 수학 학습을 시작하기 전에 학교 진도표를 기준으로 이전 단원 이해도를 먼저 점검해보는 것이 좋습니다.",
+    schoolSpecificNotes: [
+      {
+        title: "인천송도초등학교 학생 안내",
+        body: "연수 초등 수학과외 페이지에서 인천송도초등학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "초등 수학 학습 방향",
+        body: "초등 수학은 연산 정확도만큼 개념 이해가 중요해, 문제를 풀게 하기보다 왜 그렇게 푸는지 스스로 설명하게 해보는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "yeonsu-middle-school",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "영어과외를 알아보는 연수중학교 학생이라면, 먼저 최근 학교 시험에서 자주 틀리는 유형을 정리해보는 것을 추천합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "연수중학교 학생 안내",
+        body: "연수 중등 영어과외 페이지에서 연수중학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "중등 영어 학습 방향",
+        body: "중학교 영어는 서술형 문항 비중이 늘어나는 시기라, 문법 규칙을 암기하는 데서 그치지 않고 문장으로 직접 써보는 연습이 필요합니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "yeonsu-high-school",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "수학과외를 알아보는 연수고등학교 학생이라면, 먼저 최근 학교 시험에서 자주 틀리는 유형을 정리해보는 것을 추천합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "연수고등학교 학생 안내",
+        body: "연수고등학교 학생이라면 지역별 과외 페이지(연수 고등 수학과외)도 함께 참고할 수 있습니다.",
+      },
+      {
+        title: "고등 수학 학습 방향",
+        body: "고등학교 수학은 기본 개념과 응용·심화 문제의 난이도 차이가 크므로, 어느 단계에서 막히는지 먼저 구분한 뒤 학습 방향을 정하는 것이 중요합니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "namdong-elementary-school",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "인천구월초등학교 재학생이 영어과외를 고려하고 있다면, 학교 진도에 맞춰 부족한 개념부터 채워나가는 방식이 효과적입니다.",
+    schoolSpecificNotes: [
+      {
+        title: "인천구월초등학교 학생 안내",
+        body: "남동 초등 영어과외 페이지에서 인천구월초등학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "초등 영어 학습 방향",
+        body: "초등 영어는 파닉스 이후 리딩 습관을 들이는 시기이므로, 짧은 지문이라도 소리 내어 읽는 연습을 꾸준히 이어가는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "namdong-middle-school",
+    subjectSlug: "korean",
+    status: "published",
+    intro:
+      "국어과외를 알아보는 구월중학교 학생이라면, 먼저 최근 학교 시험에서 자주 틀리는 유형을 정리해보는 것을 추천합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "구월중학교 학생 안내",
+        body: "남동 중등 국어과외 페이지에서 구월중학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "중등 국어 학습 방향",
+        body: "중학교 국어는 문학·비문학 지문을 함께 다루는 만큼, 지문 유형별로 접근 방식을 구분해 연습하는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "namdong-high-school",
+    subjectSlug: "social",
+    status: "published",
+    intro:
+      "인천남동고등학교 학생이 사회과외를 찾는다면, 학교 진도와 최근 시험 범위를 먼저 확인하고 취약한 부분부터 보완하는 것이 중요합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "인천남동고등학교 학생 안내",
+        body: "인천남동고등학교에 재학 중이라면 지역별 과외 페이지(남동 고등 사회과외)에서도 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "고등 사회 학습 방향",
+        body: "고등학교 사회 탐구 과목은 개념 이해와 함께 최신 자료 해석 능력도 필요해, 교과서 개념을 자료 문제에 적용해보는 연습이 필요합니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "bupyeong-elementary-school",
+    subjectSlug: "science",
+    status: "published",
+    intro:
+      "인천갈산초등학교 학생이 과학과외를 찾는다면, 학교 진도와 최근 시험 범위를 먼저 확인하고 취약한 부분부터 보완하는 것이 중요합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "인천갈산초등학교 학생 안내",
+        body: "인천갈산초등학교에 재학 중이라면 지역별 과외 페이지(부평 초등 과학과외)에서도 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "초등 과학 학습 방향",
+        body: "초등 과학은 실생활 현상과 연결해 이해하면 오래 기억에 남으므로, 개념을 배운 뒤 주변에서 비슷한 사례를 찾아보게 하는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "bupyeong-middle-school",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "부평중학교에 재학 중이라면, 영어 학습을 시작하기 전에 학교 진도표를 기준으로 이전 단원 이해도를 먼저 점검해보는 것이 좋습니다.",
+    schoolSpecificNotes: [
+      {
+        title: "부평중학교 학생 안내",
+        body: "지역별 과외 페이지(부평 중등 영어과외)에서도 부평중학교 재학생을 위한 안내를 함께 볼 수 있습니다.",
+      },
+      {
+        title: "중등 영어 학습 방향",
+        body: "중학교 영어는 서술형 문항 비중이 늘어나는 시기라, 문법 규칙을 암기하는 데서 그치지 않고 문장으로 직접 써보는 연습이 필요합니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "bupyeong-high-school",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "부평고등학교 학생이 수학과외를 찾는다면, 학교 시험 범위와 평소 수업 이해도를 함께 고려해 학습 계획을 세우는 것이 중요합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "부평고등학교 학생 안내",
+        body: "부평 고등 수학과외 페이지에서 부평고등학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "고등 수학 학습 방향",
+        body: "고등학교 수학은 기본 개념과 응용·심화 문제의 난이도 차이가 크므로, 어느 단계에서 막히는지 먼저 구분한 뒤 학습 방향을 정하는 것이 중요합니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "gyeyang-elementary-school",
+    subjectSlug: "korean",
+    status: "published",
+    intro:
+      "국어과외를 알아보는 인천계산초등학교 학생이라면, 먼저 최근 학교 시험에서 자주 틀리는 유형을 정리해보는 것을 추천합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "인천계산초등학교 학생 안내",
+        body: "계양 초등 국어과외 페이지에서 인천계산초등학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "초등 국어 학습 방향",
+        body: "초등 국어는 어휘력과 독해력이 이후 전 과목 학습의 기초가 되므로, 짧은 글이라도 매일 읽고 내용을 스스로 요약해보는 연습이 도움이 됩니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "gyeyang-middle-school",
+    subjectSlug: "social",
+    status: "published",
+    intro:
+      "사회과외를 알아보는 계산중학교 학생이라면, 먼저 최근 학교 시험에서 자주 틀리는 유형을 정리해보는 것을 추천합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "계산중학교 학생 안내",
+        body: "계양 중등 사회과외 페이지에서 계산중학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "중등 사회 학습 방향",
+        body: "중학교 사회는 다루는 범위가 넓어지는 만큼, 단원별 핵심 개념을 먼저 정리한 뒤 세부 내용을 채워가는 방식이 도움이 됩니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "gyeyang-high-school",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "영어과외를 알아보는 계산고등학교 학생이라면, 먼저 최근 학교 시험에서 자주 틀리는 유형을 정리해보는 것을 추천합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "계산고등학교 학생 안내",
+        body: "지역별 과외 페이지(계양 고등 영어과외)에서도 계산고등학교 재학생을 위한 안내를 함께 볼 수 있습니다.",
+      },
+      {
+        title: "고등 영어 학습 방향",
+        body: "고등학교 영어는 문장 구조가 복잡해지는 만큼, 어휘 암기와 함께 긴 문장을 끊어 읽는 구문 분석 훈련을 병행하는 것이 도움이 됩니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "ganghwa-elementary-school",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "강화초등학교 재학생이 수학과외를 고려하고 있다면, 학교 진도에 맞춰 부족한 개념부터 채워나가는 방식이 효과적입니다.",
+    schoolSpecificNotes: [
+      {
+        title: "강화초등학교 학생 안내",
+        body: "지역별 과외 페이지(강화 초등 수학과외)에서도 강화초등학교 재학생을 위한 안내를 함께 볼 수 있습니다.",
+      },
+      {
+        title: "초등 수학 학습 방향",
+        body: "초등 수학은 연산 정확도만큼 개념 이해가 중요해, 문제를 풀게 하기보다 왜 그렇게 푸는지 스스로 설명하게 해보는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "ganghwa-middle-school",
+    subjectSlug: "science",
+    status: "published",
+    intro:
+      "과학과외를 알아보는 강화중학교 학생이라면, 먼저 최근 학교 시험에서 자주 틀리는 유형을 정리해보는 것을 추천합니다.",
+    schoolSpecificNotes: [
+      {
+        title: "강화중학교 학생 안내",
+        body: "강화 중등 과학과외 페이지에서 강화중학교 재학생에게 도움이 되는 지역 정보를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "중등 과학 학습 방향",
+        body: "중학교 과학은 개념과 계산이 함께 나오는 단원이 많아, 공식을 암기하기 전에 개념부터 이해했는지 확인하는 것이 중요합니다.",
+      },
+    ],
+  },
+  {
+    schoolSlug: "ganghwa-high-school",
+    subjectSlug: "korean",
+    status: "published",
+    intro:
+      "강화고등학교에 재학 중이라면, 국어 학습을 시작하기 전에 학교 진도표를 기준으로 이전 단원 이해도를 먼저 점검해보는 것이 좋습니다.",
+    schoolSpecificNotes: [
+      {
+        title: "강화고등학교 학생 안내",
+        body: "강화고등학교 학생이라면 지역별 과외 페이지(강화 고등 국어과외)도 함께 참고할 수 있습니다.",
+      },
+      {
+        title: "고등 국어 학습 방향",
+        body: "고등학교 국어는 지문 길이와 정보량이 늘어나는 만큼, 제한 시간 안에 핵심 정보를 찾는 훈련을 꾸준히 병행하는 것이 좋습니다.",
+      },
+    ],
+  },
 ];
 
 export function getSchoolSubjectContent(
