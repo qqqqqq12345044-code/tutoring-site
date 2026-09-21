@@ -8,6 +8,7 @@
  */
 import { regionGradeSubjectContents, type RegionGradeSubjectContent } from "@/data/regionGradeSubjectContent";
 import { schoolSubjectContents, type SchoolSubjectContent } from "@/data/schoolSubjectContent";
+import { regionProgramContents, type RegionProgramContent } from "@/data/regionProgramContent";
 
 export interface ContentQualityResult {
   ok: boolean;
@@ -87,6 +88,60 @@ export function checkRegionGradeSubjectContentQuality(): ContentQualityResult {
         if (similarity > SIMILARITY_THRESHOLD) {
           issues.push(
             `${key}: ${group[i].regionSlug} vs ${group[j].regionSlug} 콘텐츠 유사도 ${(similarity * 100).toFixed(1)}%` +
+              ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 지역명만 바뀐 동일 문서일 가능성)`
+          );
+        }
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+function programEntryText(c: RegionProgramContent): string {
+  return [c.intro, ...c.regionSpecificNotes.map((n) => n.body)].join(" ");
+}
+
+/**
+ * Same checks as checkRegionGradeSubjectContentQuality, applied to
+ * src/data/regionProgramContent.ts: published entries need notes + a minimum
+ * intro length, and published entries sharing the same program must not read
+ * as the same document with only the region name swapped.
+ */
+export function checkRegionProgramContentQuality(): ContentQualityResult {
+  const issues: string[] = [];
+
+  for (const c of regionProgramContents) {
+    const key = `${c.regionSlug}/${c.programSlug}`;
+    if (c.status !== "published") continue;
+
+    if (c.regionSpecificNotes.length === 0) {
+      issues.push(`${key}: status "published"이지만 regionSpecificNotes가 비어 있음`);
+    }
+    if (c.intro.trim().length < MIN_INTRO_LENGTH) {
+      issues.push(`${key}: intro가 최소 길이(${MIN_INTRO_LENGTH}자) 미만 (${c.intro.trim().length}자)`);
+    }
+    for (const note of c.regionSpecificNotes) {
+      if (!note.title.trim() || !note.body.trim()) {
+        issues.push(`${key}: regionSpecificNotes에 빈 title/body가 있음`);
+      }
+    }
+  }
+
+  const publishedByProgram = new Map<string, RegionProgramContent[]>();
+  for (const c of regionProgramContents) {
+    if (c.status !== "published") continue;
+    if (!publishedByProgram.has(c.programSlug)) publishedByProgram.set(c.programSlug, []);
+    publishedByProgram.get(c.programSlug)!.push(c);
+  }
+
+  for (const [programSlug, group] of publishedByProgram) {
+    for (let i = 0; i < group.length; i++) {
+      for (let j = i + 1; j < group.length; j++) {
+        const similarity = tokenSimilarity(programEntryText(group[i]), programEntryText(group[j]));
+        if (similarity > SIMILARITY_THRESHOLD) {
+          issues.push(
+            `${programSlug}: ${group[i].regionSlug} vs ${group[j].regionSlug} 콘텐츠 유사도 ${(similarity * 100).toFixed(1)}%` +
               ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 지역명만 바뀐 동일 문서일 가능성)`
           );
         }

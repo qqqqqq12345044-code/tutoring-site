@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
+import { programs } from "@/data/programs";
 import { regions, getRegionUrl, getChildren } from "@/data/regions";
 import { schools } from "@/data/schools";
 import { guideArticles } from "@/data/guide";
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicPaths = [
     ...subjects.map((s) => `/subject/${s.slug}`),
     ...grades.map((g) => `/grade/${g.slug}`),
+    ...programs.map((p) => `/program/${p.slug}`),
     ...regions.map((r) => getRegionUrl(r.slug)),
     ...schools.map((s) => `/school/${s.slug}`),
     ...guideArticles.map((a) => `/guide/${a.slug}`),
@@ -81,7 +83,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  const allPaths = Array.from(new Set([...staticPaths, ...dynamicPaths, ...cityComboPaths, ...schoolComboPaths]));
+  // Region+program combination pages: /region/[province]/[city]/program/[programSlug].
+  // Same content-gated pattern as school-subject above — only combos marked
+  // `sitemap: true` there (i.e. a published regionProgramContent entry) are listed here.
+  const regionProgramPaths: string[] = [];
+  for (const city of regions.filter((r) => r.level === "city")) {
+    const base = getRegionUrl(city.slug);
+    for (const p of programs) {
+      if (getIndexability("region-program", { regionSlug: city.slug, programSlug: p.slug }).sitemap) {
+        regionProgramPaths.push(`${base}/program/${p.slug}`);
+      }
+    }
+  }
+
+  const allPaths = Array.from(
+    new Set([...staticPaths, ...dynamicPaths, ...cityComboPaths, ...schoolComboPaths, ...regionProgramPaths])
+  );
 
   return allPaths.map((path) => ({
     url: `${siteConfig.domain}${path}`,

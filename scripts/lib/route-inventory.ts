@@ -8,11 +8,13 @@
 import { siteConfig } from "@/config/site";
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
+import { programs } from "@/data/programs";
 import { regions, getChildren, getRegionUrl, getRegionBySlug } from "@/data/regions";
 import { schools } from "@/data/schools";
 import { guideArticles } from "@/data/guide";
 import { getRegionGradeSubjectContent, isPublishedContent } from "@/data/regionGradeSubjectContent";
 import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished } from "@/data/schoolSubjectContent";
+import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished } from "@/data/regionProgramContent";
 import { getIndexability } from "@/lib/indexability";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
@@ -46,6 +48,7 @@ export function getAllContentRoutes(): RouteEntry[] {
   for (const g of grades) routes.push({ path: `/grade/${g.slug}`, index: true, sitemap: true });
   for (const sc of schools) routes.push({ path: `/school/${sc.slug}`, index: true, sitemap: true });
   for (const a of guideArticles) routes.push({ path: `/guide/${a.slug}`, index: true, sitemap: true });
+  for (const p of programs) routes.push({ path: `/program/${p.slug}`, index: true, sitemap: true });
 
   // region / province / city / plain-district pages — always indexed.
   for (const r of regions) {
@@ -91,6 +94,15 @@ export function getAllContentRoutes(): RouteEntry[] {
     for (const subjectSlug of school.availableSubjectSlugs) {
       const { index, sitemap } = getIndexability("school-subject", { schoolSlug: school.slug, subjectSlug });
       routes.push({ path: `/school/${school.slug}/${subjectSlug}`, index, sitemap });
+    }
+  }
+
+  // Region+program combination pages, mirroring src/app/sitemap.ts's iteration.
+  for (const city of regions.filter((r) => r.level === "city")) {
+    const base = getRegionUrl(city.slug);
+    for (const p of programs) {
+      const { index, sitemap } = getIndexability("region-program", { regionSlug: city.slug, programSlug: p.slug });
+      routes.push({ path: `${base}/program/${p.slug}`, index, sitemap });
     }
   }
 
@@ -242,6 +254,70 @@ export function checkSchoolSubjectGate(): GateCheckResult {
         );
       }
     }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Regression check for the region-program content gate
+ * (src/data/regionProgramContent.ts), mirroring checkSchoolSubjectGate:
+ * for every city × program combination, whether getIndexability() marks it
+ * index+sitemap must match isPublishedContent() on the raw data.
+ */
+export function checkRegionProgramGate(): GateCheckResult {
+  const issues: string[] = [];
+
+  for (const city of regions.filter((r) => r.level === "city")) {
+    for (const p of programs) {
+      const isEligible = isRegionProgramPublished(getRegionProgramContent(city.slug, p.slug));
+      const { index, sitemap } = getIndexability("region-program", { regionSlug: city.slug, programSlug: p.slug });
+      if (index !== isEligible || sitemap !== isEligible) {
+        issues.push(
+          `region-program gate: ${city.slug}/${p.slug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Route-collision check for the new program track: /program/[slug] lives in
+ * its own top-level namespace (no existing route uses that first segment),
+ * and /region/[province]/[city]/program/[programSlug] adds a literal
+ * "program" segment as a sibling of the existing polymorphic
+ * /region/[province]/[city]/[slug] route (which resolves subject → grade →
+ * district, in that order). Next.js always prefers a literal path segment
+ * over a sibling dynamic one, so this only stays unambiguous as long as no
+ * program slug also happens to be a subject/grade/district slug (which would
+ * make that value unreachable through the [slug] resolver) and no existing
+ * slug is literally "program".
+ */
+export function checkProgramRouteCollisions(): GateCheckResult {
+  const issues: string[] = [];
+
+  const subjectSlugs = new Set(subjects.map((s) => s.slug));
+  const gradeSlugs = new Set(grades.map((g) => g.slug));
+  const districtSlugs = new Set(regions.filter((r) => r.level === "district").map((r) => r.slug));
+
+  for (const p of programs) {
+    if (subjectSlugs.has(p.slug)) issues.push(`program slug "${p.slug}"가 subject slug와 충돌함`);
+    if (gradeSlugs.has(p.slug)) issues.push(`program slug "${p.slug}"가 grade slug와 충돌함`);
+    if (districtSlugs.has(p.slug)) issues.push(`program slug "${p.slug}"가 district slug와 충돌함`);
+  }
+  if (subjectSlugs.has("program") || gradeSlugs.has("program") || districtSlugs.has("program")) {
+    issues.push('기존 subject/grade/district slug 중 "program"이 이미 존재함 (region/[city]/program 세그먼트와 충돌)');
+  }
+  if (STATIC_PATHS.includes("/program")) {
+    issues.push('STATIC_PATHS에 "/program"이 이미 존재함 (/program/[slug]와 충돌)');
+  }
+
+  const programSlugCounts = new Map<string, number>();
+  for (const p of programs) programSlugCounts.set(p.slug, (programSlugCounts.get(p.slug) ?? 0) + 1);
+  for (const [slug, count] of programSlugCounts) {
+    if (count > 1) issues.push(`program slug 중복: "${slug}" (${count}건)`);
   }
 
   return { ok: issues.length === 0, issues };

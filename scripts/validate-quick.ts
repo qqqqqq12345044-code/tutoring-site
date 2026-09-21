@@ -9,8 +9,14 @@ import {
   checkRegionGradeSubjectGate,
   checkSchoolDataIntegrity,
   checkSchoolSubjectGate,
+  checkRegionProgramGate,
+  checkProgramRouteCollisions,
 } from "./lib/route-inventory";
-import { checkRegionGradeSubjectContentQuality, checkSchoolSubjectContentQuality } from "./lib/content-quality";
+import {
+  checkRegionGradeSubjectContentQuality,
+  checkSchoolSubjectContentQuality,
+  checkRegionProgramContentQuality,
+} from "./lib/content-quality";
 import { writeCacheEntry } from "./lib/validation-cache";
 
 const KNOWN_PLACEHOLDERS = ["example-tutoring.com", "1588-0000", "pf.kakao.com/_example"];
@@ -59,6 +65,18 @@ async function main() {
       configOk = false;
       configIssues.push(...schoolGate.issues);
     }
+
+    const programGate = checkRegionProgramGate();
+    if (!programGate.ok) {
+      configOk = false;
+      configIssues.push(...programGate.issues);
+    }
+
+    const programCollisions = checkProgramRouteCollisions();
+    if (!programCollisions.ok) {
+      configOk = false;
+      configIssues.push(...programCollisions.issues);
+    }
   } catch (err) {
     configOk = false;
     configIssues.push(`route-inventory threw: ${(err as Error).message}`);
@@ -74,6 +92,10 @@ async function main() {
   console.log(`School content quality: ${schoolContentQuality.ok ? "PASS" : "FAIL"}`);
   if (!schoolContentQuality.ok) schoolContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
 
+  const programContentQuality = checkRegionProgramContentQuality();
+  console.log(`Program content quality: ${programContentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!programContentQuality.ok) programContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
   const siteConfigSrc = fs.readFileSync("src/config/site.ts", "utf-8");
@@ -82,7 +104,7 @@ async function main() {
     console.log(`Placeholders: ${remaining.length} known (see docs/qa/remaining-placeholders.md)`);
   }
 
-  const pass = lintOk && typeOk && configOk && contentQuality.ok && schoolContentQuality.ok;
+  const pass = lintOk && typeOk && configOk && contentQuality.ok && schoolContentQuality.ok && programContentQuality.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {
@@ -91,6 +113,7 @@ async function main() {
     config: configOk ? "PASS" : "FAIL",
     contentQuality: contentQuality.ok ? "PASS" : "FAIL",
     schoolContentQuality: schoolContentQuality.ok ? "PASS" : "FAIL",
+    programContentQuality: programContentQuality.ok ? "PASS" : "FAIL",
   });
 
   process.exit(pass ? 0 : 1);
