@@ -27,7 +27,7 @@ export const faqs: FAQ[] = [
     slug: "teacher-match",
     question: "선생님이 학생과 맞지 않으면 어떻게 하나요?",
     answer:
-      "상담을 통해 학생 상황을 다시 확인한 뒤, 필요한 경우 선생님을 조율해드립니다.",
+      "상담을 통해 학생 상황을 다시 확인한 뒤, 필요한 경우 선생님을 교체해드립니다.",
   },
   {
     slug: "consult-commitment",
