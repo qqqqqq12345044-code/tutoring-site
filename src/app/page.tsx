@@ -3,8 +3,6 @@ import {
   Route,
   CalendarClock,
   LineChart,
-  Home as HomeIcon,
-  Video,
   School,
   BookX,
   CircleHelp,
@@ -26,7 +24,6 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import { subjectIcons } from "@/components/SubjectCard";
 import GradeCard from "@/components/GradeCard";
 import RegionCard from "@/components/RegionCard";
-import LessonTypeCard from "@/components/LessonTypeCard";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import ConsultForm from "@/components/ConsultForm";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -188,41 +185,6 @@ export default function HomePage() {
           {grades.map((g) => (
             <GradeCard key={g.slug} grade={g} />
           ))}
-        </div>
-      </section>
-
-      {/* VISIT VS ONLINE */}
-      <section className="bg-white border-y border-border-subtle">
-        <div className="container-page py-16 md:py-20">
-          <SectionHeader title={"학생에게 편한 방식으로\n수업할 수 있습니다"} />
-          <div className="mt-10 grid md:grid-cols-2 gap-5">
-            <LessonTypeCard
-              icon={HomeIcon}
-              title="방문과외"
-              description="선생님이 학생의 집으로 방문해 수업합니다."
-              benefits={[
-                "집에서 안정적으로 수업",
-                "학생 교재와 학습 환경 직접 확인",
-                "학부모와 수업 전후 소통 가능",
-                "이동 시간을 줄이고 규칙적인 학습 가능",
-              ]}
-              ctaLabel="방문과외 알아보기"
-              ctaHref="/lesson/visit"
-            />
-            <LessonTypeCard
-              icon={Video}
-              title="화상과외"
-              description="화상 프로그램을 통해 실시간으로 수업합니다."
-              benefits={[
-                "전국 어디서든 수업 가능",
-                "지역과 관계없이 선생님 선택 가능",
-                "화면 공유를 활용한 실시간 수업",
-                "일정 조율이 상대적으로 유연",
-              ]}
-              ctaLabel="화상과외 알아보기"
-              ctaHref="/lesson/online"
-            />
-          </div>
         </div>
       </section>
 

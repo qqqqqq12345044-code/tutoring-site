@@ -1,10 +1,9 @@
 /** Validated shape of a consult submission, before a server timestamp is attached. */
 export interface ConsultPayload {
-  contactName: string;
+  studentName: string;
   phone: string;
   grade: string;
   subject: string;
-  lessonType: string;
   province: string;
   cityDetail?: string;
   availableTime?: string;

@@ -13,7 +13,6 @@ export const guideCategories: GuideCategory[] = [
   { slug: "math-study", name: "수학 공부법" },
   { slug: "social-study", name: "사회 공부법" },
   { slug: "science-study", name: "과학 공부법" },
-  { slug: "choosing-tutor", name: "과외 선택 가이드" },
 ];
 
 export interface GuideArticle {
@@ -67,17 +66,6 @@ export const guideArticles: GuideArticle[] = [
       "수학은 단원 간 연결이 강한 과목입니다. 현재 배우는 단원에서 막힌다면 이전 학년의 관련 개념을 먼저 점검해보는 것이 좋습니다.",
       "문제를 많이 푸는 것보다 왜 틀렸는지 원인을 파악하는 것이 취약 단원을 보완하는 핵심입니다.",
       "오답노트를 활용해 자주 틀리는 유형을 따로 관리하면 같은 실수를 반복하지 않는 데 도움이 됩니다.",
-    ],
-  },
-  {
-    slug: "choosing-visit-or-online",
-    categorySlug: "choosing-tutor",
-    title: "방문과외와 화상과외, 무엇을 선택해야 할까요",
-    excerpt: "학생의 성향과 생활 패턴에 따라 맞는 수업 방식이 다릅니다.",
-    body: [
-      "방문과외는 학생의 학습 환경을 직접 확인하고 정해진 시간에 규칙적으로 수업할 수 있다는 장점이 있습니다.",
-      "화상과외는 지역에 관계없이 선생님을 선택할 수 있고 일정 조율이 상대적으로 유연합니다.",
-      "어느 한쪽이 무조건 낫다고 말하기는 어렵습니다. 학생의 성향과 가능한 시간을 고려해 상담을 통해 결정하는 것을 권합니다.",
     ],
   },
 ];

@@ -16,8 +16,6 @@ export default function Hero() {
           <p className="text-text-main/80 text-base md:text-lg leading-relaxed">
             학생의 현재 수준과 목표를 먼저 확인하고, 국어·영어·수학·사회·과학 과목에 맞는 1:1
             수업을 연결합니다.
-            <br />
-            방문과외와 화상과외 모두 상담 가능합니다.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-1">

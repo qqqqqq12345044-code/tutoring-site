@@ -10,12 +10,6 @@ import { getProvinces } from "@/data/regions";
 
 const gradeOptions = [...grades.flatMap((g) => g.subGrades.map((sg) => sg.label)), "기타"];
 
-const lessonTypeOptions = [
-  { value: "visit", label: "방문" },
-  { value: "online", label: "화상" },
-  { value: "any", label: "상관없음" },
-];
-
 type SubmitState = "idle" | "loading" | "success" | "error";
 
 export default function ConsultForm() {
@@ -90,26 +84,6 @@ export default function ConsultForm() {
         </Field>
       </div>
 
-      <fieldset className="flex flex-col gap-1.5 border-0 p-0 m-0 min-w-0">
-        <legend className="p-0 text-sm font-semibold text-navy">
-          수업 방식<span className="text-brand"> *</span>
-        </legend>
-        <div className="flex flex-wrap gap-4 pt-1">
-          {lessonTypeOptions.map((opt) => (
-            <label key={opt.value} className="flex items-center gap-2 text-sm text-text-main">
-              <input
-                type="radio"
-                name="lessonType"
-                value={opt.value}
-                required
-                className="w-4 h-4 accent-blue-600"
-              />
-              {opt.label}
-            </label>
-          ))}
-        </div>
-      </fieldset>
-
       <div className="grid gap-5 md:grid-cols-2">
         <Field label="지역 (시/도)" required>
           <select name="province" required className={inputClass} defaultValue="">
@@ -126,8 +100,8 @@ export default function ConsultForm() {
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
-        <Field label="학생 이름 또는 보호자 이름" required>
-          <input name="contactName" type="text" required maxLength={50} className={inputClass} />
+        <Field label="학생 이름" required>
+          <input name="studentName" type="text" required maxLength={50} className={inputClass} />
         </Field>
         <Field label="연락처" required>
           <input name="phone" type="tel" required maxLength={20} placeholder="010-0000-0000" className={inputClass} />

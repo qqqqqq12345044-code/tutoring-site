@@ -243,6 +243,297 @@ export const regionGradeSubjectContents: RegionGradeSubjectContent[] = [
       },
     ],
   },
+
+  // 2026-09 확장분 — 서울 마포구·강서구, 인천 6개 구/군 (마포구·강서구는 이미 학교별
+  // 콘텐츠가 있는 학교를 우선 활용, 인천은 나무위키 구역별 학교 목록 대조 확인)
+  {
+    regionSlug: "mapo",
+    gradeSlug: "middle",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "마포구 지역의 중학교인 마포중학교 재학생이라면, 학교 진도에 맞춰 영어 취약 부분부터 보완하는 것이 효과적입니다.",
+    regionSpecificNotes: [
+      {
+        title: "마포중학교 학생 안내",
+        body: "학교별 과외 페이지에서 마포중학교 재학생을 위한 안내를 확인해보세요.",
+      },
+      {
+        title: "마포구 지역 구조",
+        body: "마포구는 마포중학교·숭문고등학교 등 여러 학교가 등록되어 있어, 재학 중인 학교의 최근 시험 형식을 기준으로 준비하는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "mapo",
+    gradeSlug: "high",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "마포구 지역의 고등학교인 숭문고등학교 재학생이라면, 학교 진도에 맞춰 영어 취약 부분부터 보완하는 것이 효과적입니다.",
+    regionSpecificNotes: [
+      {
+        title: "숭문고등학교 학생 안내",
+        body: "학교별 과외 페이지에서 숭문고등학교 재학생을 위한 안내를 확인해보세요.",
+      },
+      {
+        title: "마포구 지역 구조",
+        body: "마포구는 마포중학교·숭문고등학교 등 여러 학교가 등록되어 있어, 재학 중인 학교의 최근 시험 형식을 기준으로 준비하는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "gangseo",
+    gradeSlug: "elementary",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "강서구는 서울양천초등학교 등 실제 재학 학교 정보가 등록된 지역으로, 수학 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "서울양천초등학교 학생 안내",
+        body: "서울양천초등학교에 재학 중이라면 학교별 과외 페이지에서 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "강서구 지역 구조",
+        body: "강서구는 서울양천초등학교·마포고등학교처럼 교명과 실제 소재지가 다른 학교가 있어, 학교명이 아닌 실제 재학 학교를 기준으로 지역 정보를 확인하는 것이 중요합니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "gangseo",
+    gradeSlug: "high",
+    subjectSlug: "korean",
+    status: "published",
+    intro:
+      "강서구는 마포고등학교 등 실제 재학 학교 정보가 등록된 지역으로, 국어 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "마포고등학교 학생 안내",
+        body: "마포고등학교에 재학 중이라면 학교별 과외 페이지에서 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "강서구 지역 구조",
+        body: "강서구는 서울양천초등학교·마포고등학교처럼 교명과 실제 소재지가 다른 학교가 있어, 학교명이 아닌 실제 재학 학교를 기준으로 지역 정보를 확인하는 것이 중요합니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "michuhol",
+    gradeSlug: "middle",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "미추홀구 지역의 중학교인 관교중학교 재학생이라면, 학교 진도에 맞춰 수학 취약 부분부터 보완하는 것이 효과적입니다.",
+    regionSpecificNotes: [
+      {
+        title: "관교중학교 학생 안내",
+        body: "관교중학교 학생이라면 학교별 과외 페이지도 함께 참고할 수 있습니다.",
+      },
+      {
+        title: "미추홀구 지역 구조",
+        body: "미추홀구는 관교중학교·인천고등학교 등 학교급별 정보가 함께 등록되어 있어, 학년이 바뀌어도 지역 내에서 이어서 확인할 수 있습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "michuhol",
+    gradeSlug: "high",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "미추홀구는 인천고등학교 등 실제 재학 학교 정보가 등록된 지역으로, 영어 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "인천고등학교 학생 안내",
+        body: "인천고등학교 학생이라면 학교별 과외 페이지도 함께 참고할 수 있습니다.",
+      },
+      {
+        title: "미추홀구 지역 구조",
+        body: "미추홀구는 관교중학교·인천고등학교 등 학교급별 정보가 함께 등록되어 있어, 학년이 바뀌어도 지역 내에서 이어서 확인할 수 있습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "yeonsu",
+    gradeSlug: "middle",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "연수구는 연수중학교 등 실제 재학 학교 정보가 등록된 지역으로, 영어 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "연수중학교 학생 안내",
+        body: "연수중학교 학생이라면 학교별 과외 페이지도 함께 참고할 수 있습니다.",
+      },
+      {
+        title: "연수구 지역 구조",
+        body: "연수구는 송도 등 신도시 개발로 학교가 계속 늘어나는 지역이라, 재학 중인 학교의 최신 공지사항을 함께 확인하는 것이 좋습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "yeonsu",
+    gradeSlug: "high",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "연수구 지역의 고등학교인 연수고등학교 재학생이라면, 학교 진도에 맞춰 수학 취약 부분부터 보완하는 것이 효과적입니다.",
+    regionSpecificNotes: [
+      {
+        title: "연수고등학교 학생 안내",
+        body: "학교별 과외 페이지에서 연수고등학교 재학생을 위한 안내를 확인해보세요.",
+      },
+      {
+        title: "연수구 지역 구조",
+        body: "연수구는 송도 등 신도시 개발로 학교가 계속 늘어나는 지역이라, 재학 중인 학교의 최신 공지사항을 함께 확인하는 것이 좋습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "namdong",
+    gradeSlug: "middle",
+    subjectSlug: "korean",
+    status: "published",
+    intro:
+      "남동구는 구월중학교 등 실제 재학 학교 정보가 등록된 지역으로, 국어 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "구월중학교 학생 안내",
+        body: "구월중학교에 재학 중이라면 학교별 과외 페이지에서 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "남동구 지역 구조",
+        body: "남동구는 구월동을 중심으로 여러 학교가 밀집해 있어, 재학 중인 학교의 시험 범위를 우선 기준으로 학습 계획을 세우는 것이 좋습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "namdong",
+    gradeSlug: "high",
+    subjectSlug: "social",
+    status: "published",
+    intro:
+      "남동구는 인천남동고등학교 등 실제 재학 학교 정보가 등록된 지역으로, 사회 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "인천남동고등학교 학생 안내",
+        body: "인천남동고등학교에 재학 중이라면 학교별 과외 페이지에서 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "남동구 지역 구조",
+        body: "남동구는 구월동을 중심으로 여러 학교가 밀집해 있어, 재학 중인 학교의 시험 범위를 우선 기준으로 학습 계획을 세우는 것이 좋습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "bupyeong",
+    gradeSlug: "middle",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "부평중학교가 있는 부평구에서 영어과외를 찾는다면, 재학 중인 학교의 평가 방식을 먼저 확인하고 학습 계획을 세우는 것이 좋습니다.",
+    regionSpecificNotes: [
+      {
+        title: "부평중학교 학생 안내",
+        body: "부평중학교 학생이라면 학교별 과외 페이지도 함께 참고할 수 있습니다.",
+      },
+      {
+        title: "부평구 지역 구조",
+        body: "부평구는 부평중학교·부평고등학교 등 학교급별 정보가 함께 등록되어 있어, 학년이 바뀌어도 지역 내에서 이어서 확인할 수 있습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "bupyeong",
+    gradeSlug: "high",
+    subjectSlug: "math",
+    status: "published",
+    intro:
+      "부평구는 부평고등학교 등 실제 재학 학교 정보가 등록된 지역으로, 수학 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "부평고등학교 학생 안내",
+        body: "학교별 과외 페이지에서 부평고등학교 재학생을 위한 안내를 확인해보세요.",
+      },
+      {
+        title: "부평구 지역 구조",
+        body: "부평구는 부평중학교·부평고등학교 등 학교급별 정보가 함께 등록되어 있어, 학년이 바뀌어도 지역 내에서 이어서 확인할 수 있습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "gyeyang",
+    gradeSlug: "middle",
+    subjectSlug: "social",
+    status: "published",
+    intro:
+      "계양구는 계산중학교 등 실제 재학 학교 정보가 등록된 지역으로, 사회 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "계산중학교 학생 안내",
+        body: "계산중학교에 재학 중이라면 학교별 과외 페이지에서 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "계양구 지역 구조",
+        body: "계양구는 계산동을 중심으로 여러 학교가 모여 있어, 재학 중인 학교의 평가 기준을 먼저 확인하고 학습 방향을 정하는 것이 좋습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "gyeyang",
+    gradeSlug: "high",
+    subjectSlug: "english",
+    status: "published",
+    intro:
+      "계양구에는 계산고등학교를 포함한 고등학교 정보가 등록되어 있어, 재학 중인 학교를 기준으로 영어 학습 방향을 정하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "계산고등학교 학생 안내",
+        body: "계산고등학교 학생이라면 학교별 과외 페이지도 함께 참고할 수 있습니다.",
+      },
+      {
+        title: "계양구 지역 구조",
+        body: "계양구는 계산동을 중심으로 여러 학교가 모여 있어, 재학 중인 학교의 평가 기준을 먼저 확인하고 학습 방향을 정하는 것이 좋습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "ganghwa",
+    gradeSlug: "middle",
+    subjectSlug: "science",
+    status: "published",
+    intro:
+      "강화군은 강화중학교 등 실제 재학 학교 정보가 등록된 지역으로, 과학 학습을 시작하기 전에 재학 중인 학교의 진도와 시험 범위부터 확인하는 것이 중요합니다.",
+    regionSpecificNotes: [
+      {
+        title: "강화중학교 학생 안내",
+        body: "강화중학교에 재학 중이라면 학교별 과외 페이지에서 관련 안내를 함께 확인할 수 있습니다.",
+      },
+      {
+        title: "강화군 지역 구조",
+        body: "강화군은 도서 지역 특성상 학교 수가 많지 않아, 강화중학교·강화고등학교 재학생이라면 학교 자체 공지사항을 우선 확인하는 것이 효과적입니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "ganghwa",
+    gradeSlug: "high",
+    subjectSlug: "korean",
+    status: "published",
+    intro:
+      "강화군 지역의 고등학교인 강화고등학교 재학생이라면, 학교 진도에 맞춰 국어 취약 부분부터 보완하는 것이 효과적입니다.",
+    regionSpecificNotes: [
+      {
+        title: "강화고등학교 학생 안내",
+        body: "학교별 과외 페이지에서 강화고등학교 재학생을 위한 안내를 확인해보세요.",
+      },
+      {
+        title: "강화군 지역 구조",
+        body: "강화군은 도서 지역 특성상 학교 수가 많지 않아, 강화중학교·강화고등학교 재학생이라면 학교 자체 공지사항을 우선 확인하는 것이 효과적입니다.",
+      },
+    ],
+  },
 ];
 
 export function getRegionGradeSubjectContent(

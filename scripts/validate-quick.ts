@@ -9,13 +9,19 @@ import {
   checkRegionGradeSubjectGate,
   checkSchoolDataIntegrity,
   checkSchoolGate,
+  checkSubGradeGate,
+  checkSubjectTopicGate,
   checkSchoolSubjectGate,
   checkRegionProgramGate,
   checkProgramRouteCollisions,
 } from "./lib/route-inventory";
 import {
   checkRegionGradeSubjectContentQuality,
+  checkRegionPageContentQuality,
+  checkRegionFaqContentQuality,
   checkSchoolContentQuality,
+  checkSubGradeContentQuality,
+  checkSubjectTopicContentQuality,
   checkSchoolSubjectContentQuality,
   checkRegionProgramContentQuality,
 } from "./lib/content-quality";
@@ -74,6 +80,18 @@ async function main() {
       configIssues.push(...schoolGate.issues);
     }
 
+    const subGradeGate = checkSubGradeGate();
+    if (!subGradeGate.ok) {
+      configOk = false;
+      configIssues.push(...subGradeGate.issues);
+    }
+
+    const subjectTopicGate = checkSubjectTopicGate();
+    if (!subjectTopicGate.ok) {
+      configOk = false;
+      configIssues.push(...subjectTopicGate.issues);
+    }
+
     const programGate = checkRegionProgramGate();
     if (!programGate.ok) {
       configOk = false;
@@ -108,6 +126,22 @@ async function main() {
   console.log(`Program content quality: ${programContentQuality.ok ? "PASS" : "FAIL"}`);
   if (!programContentQuality.ok) programContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
 
+  const regionPageContentQuality = checkRegionPageContentQuality();
+  console.log(`Region page content quality: ${regionPageContentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!regionPageContentQuality.ok) regionPageContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
+  const subGradeContentQuality = checkSubGradeContentQuality();
+  console.log(`Sub-grade content quality: ${subGradeContentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!subGradeContentQuality.ok) subGradeContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
+  const regionFaqContentQuality = checkRegionFaqContentQuality();
+  console.log(`Region FAQ content quality: ${regionFaqContentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!regionFaqContentQuality.ok) regionFaqContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
+  const subjectTopicContentQuality = checkSubjectTopicContentQuality();
+  console.log(`Subject topic content quality: ${subjectTopicContentQuality.ok ? "PASS" : "FAIL"}`);
+  if (!subjectTopicContentQuality.ok) subjectTopicContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
   const siteConfigSrc = fs.readFileSync("src/config/site.ts", "utf-8");
@@ -123,7 +157,11 @@ async function main() {
     contentQuality.ok &&
     plainSchoolContentQuality.ok &&
     schoolContentQuality.ok &&
-    programContentQuality.ok;
+    programContentQuality.ok &&
+    regionPageContentQuality.ok &&
+    subGradeContentQuality.ok &&
+    regionFaqContentQuality.ok &&
+    subjectTopicContentQuality.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {
@@ -134,6 +172,10 @@ async function main() {
     plainSchoolContentQuality: plainSchoolContentQuality.ok ? "PASS" : "FAIL",
     schoolContentQuality: schoolContentQuality.ok ? "PASS" : "FAIL",
     programContentQuality: programContentQuality.ok ? "PASS" : "FAIL",
+    regionPageContentQuality: regionPageContentQuality.ok ? "PASS" : "FAIL",
+    subGradeContentQuality: subGradeContentQuality.ok ? "PASS" : "FAIL",
+    regionFaqContentQuality: regionFaqContentQuality.ok ? "PASS" : "FAIL",
+    subjectTopicContentQuality: subjectTopicContentQuality.ok ? "PASS" : "FAIL",
   });
 
   process.exit(pass ? 0 : 1);

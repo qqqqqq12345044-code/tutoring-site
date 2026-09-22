@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Home as HomeIcon, Video } from "lucide-react";
 import { getRegionBySlug, getChildren } from "@/data/regions";
 import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { grades, getGradeBySlug } from "@/data/grades";
 import { getRegionSubjectContent, regionSubjectContents } from "@/data/regionSubjectContent";
-import { schools } from "@/data/schools";
+import { schools, type School } from "@/data/schools";
+import { caseStudies } from "@/data/caseStudies";
 import { getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
@@ -17,6 +17,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import StepFlow from "@/components/ui/StepFlow";
+import CaseStudyCard from "@/components/CaseStudyCard";
+
+const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
 
 export function generateStaticParams() {
   return regionSubjectContents.map((c) => {
@@ -155,40 +158,58 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
           </div>
         </section>
 
-        {/* LESSON TYPE CHOICE */}
-        <section className="bg-white border-y border-border-subtle">
-          <div className="container-page py-14 md:py-16">
-            <SectionHeader align="left" title="방문과외 또는 화상과외 중 선택할 수 있습니다" />
-            <div className="mt-8 grid sm:grid-cols-2 gap-4 max-w-2xl">
-              <Link
-                href="/lesson/visit"
-                className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
-              >
-                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-light text-brand shrink-0">
-                  <HomeIcon className="w-5 h-5" />
-                </span>
-                <div>
-                  <p className="font-bold text-navy">방문과외</p>
-                  <p className="mt-1 text-sm text-text-muted leading-relaxed">
-                    선생님이 직접 방문해 학습 환경을 확인하며 수업합니다.
-                  </p>
-                </div>
-              </Link>
-              <Link
-                href="/lesson/online"
-                className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6 transition-all duration-300 ease-out hover:border-brand hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
-              >
-                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-light text-brand shrink-0">
-                  <Video className="w-5 h-5" />
-                </span>
-                <div>
-                  <p className="font-bold text-navy">화상과외</p>
-                  <p className="mt-1 text-sm text-text-muted leading-relaxed">
-                    지역과 관계없이 실시간 화상으로 수업합니다.
-                  </p>
-                </div>
-              </Link>
+        {/* REGION SCHOOL INFO */}
+        {relatedSchools.length > 0 && (
+          <section className="bg-white border-y border-border-subtle">
+            <div className="container-page py-14 md:py-16">
+              <SectionHeader
+                align="left"
+                title={`${ctx.region.name} 학교별 ${ctx.subject.name}과외 정보`}
+                description="재학 중인 학교를 확인하면 진도와 시험 일정에 맞춘 학교별 안내를 볼 수 있습니다."
+              />
+              <div className="mt-8 grid sm:grid-cols-3 gap-6">
+                {LEVEL_ORDER.map((level) => {
+                  const list = relatedSchools.filter((s) => s.level === level);
+                  if (list.length === 0) return null;
+                  return (
+                    <div key={level} className="rounded-2xl border border-border-subtle p-6">
+                      <p className="font-bold text-navy">
+                        {level} <span className="text-text-muted font-medium text-sm">{list.length}곳</span>
+                      </p>
+                      <ul className="mt-3 flex flex-col gap-1.5">
+                        {list.map((s) => (
+                          <li key={s.slug}>
+                            <Link
+                              href={`/school/${s.slug}/${ctx.subject.slug}`}
+                              className="text-sm text-text-main hover:text-brand transition-colors"
+                            >
+                              {s.name} {ctx.subject.name}과외
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
+          </section>
+        )}
+
+        {/* CASE STUDIES */}
+        <section className="container-page py-14 md:py-16">
+          <SectionHeader
+            align="left"
+            title={`이런 학생에게 도움이 되는 ${ctx.subject.name} 수업 방식`}
+            description="특정 학생을 대상으로 한 후기가 아닌, 이해를 돕기 위한 수업 설계 예시입니다."
+          />
+          <div className="mt-8 grid sm:grid-cols-3 gap-5">
+            {(caseStudies.filter((cs) => cs.subject === ctx.subject.name).length > 0
+              ? caseStudies.filter((cs) => cs.subject === ctx.subject.name)
+              : caseStudies.slice(0, 3)
+            ).map((cs) => (
+              <CaseStudyCard key={cs.id} caseStudy={cs} />
+            ))}
           </div>
         </section>
 

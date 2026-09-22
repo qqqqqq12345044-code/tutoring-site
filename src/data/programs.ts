@@ -56,7 +56,7 @@ export const programs: Program[] = [
       { title: "직접 만들어보기", body: "배운 개념을 작은 프로젝트에 적용해봅니다." },
       { title: "점검·확장", body: "완성한 결과물을 점검하고 다음 목표를 정합니다." },
     ],
-    faqSlugs: ["program-scope", "lesson-type", "pricing", "teacher-match"],
+    faqSlugs: ["program-scope", "pricing", "teacher-match"],
   },
   {
     slug: "ged",
@@ -86,7 +86,7 @@ export const programs: Program[] = [
       { title: "기출 문제 적용", body: "기출 문제를 풀며 실전 감각을 익힙니다." },
       { title: "모의 점검", body: "모의 채점으로 합격 가능성을 점검하고 남은 기간 계획을 조정합니다." },
     ],
-    faqSlugs: ["program-scope", "lesson-type", "pricing", "consult-commitment"],
+    faqSlugs: ["program-scope", "pricing", "consult-commitment"],
   },
   {
     slug: "korean-language",
@@ -116,7 +116,7 @@ export const programs: Program[] = [
       { title: "실생활·교과 적용", body: "익힌 표현을 실제 대화와 교과서 지문에 적용해봅니다." },
       { title: "점검·확장", body: "이해도를 점검하고 어휘·표현 범위를 넓혀갑니다." },
     ],
-    faqSlugs: ["program-scope", "lesson-type", "pricing", "teacher-match"],
+    faqSlugs: ["program-scope", "pricing", "teacher-match"],
   },
 ];
 

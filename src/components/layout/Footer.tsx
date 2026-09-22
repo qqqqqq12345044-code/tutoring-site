@@ -11,9 +11,8 @@ const serviceLinks = [
 ];
 
 const consultLinks = [
-  { label: "방문과외", href: "/lesson/visit" },
-  { label: "화상과외", href: "/lesson/online" },
   { label: "무료상담", href: "/consult" },
+  { label: "카카오톡 상담", href: siteConfig.kakaoUrl },
 ];
 
 const legalLinks = [
@@ -26,15 +25,27 @@ function LinkGroup({ heading, links }: { heading: string; links: typeof serviceL
     <div>
       <p className="text-xs font-semibold tracking-wide text-white/70 uppercase">{heading}</p>
       <div className="mt-4 flex flex-col gap-2.5 text-sm">
-        {links.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-white/80 hover:text-white transition-colors w-fit"
-          >
-            {link.label}
-          </Link>
-        ))}
+        {links.map((link) =>
+          link.href.startsWith("http") ? (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white transition-colors w-fit"
+            >
+              {link.label}
+            </a>
+          ) : (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-white/80 hover:text-white transition-colors w-fit"
+            >
+              {link.label}
+            </Link>
+          )
+        )}
       </div>
     </div>
   );
@@ -69,7 +80,7 @@ export default function Footer() {
           </div>
 
           <LinkGroup heading="서비스" links={serviceLinks} />
-          <LinkGroup heading="상담·수업 방식" links={consultLinks} />
+          <LinkGroup heading="상담" links={consultLinks} />
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-white/50">

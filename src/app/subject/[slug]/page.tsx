@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getFaqsBySlugs } from "@/data/faqs";
 import { getArticlesBySubjectSlug } from "@/data/guide";
+import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
@@ -82,22 +84,38 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
         <div className="container-page py-14 md:py-16">
           <SectionHeader align="left" title={`${subject.name}과외, 이렇게 학습합니다`} />
           <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-8">
-            {subject.topics.map((topic, i) => (
-              <div key={topic.title} className="flex gap-4">
-                <span
-                  aria-hidden="true"
-                  className="text-3xl font-extrabold text-brand-light shrink-0 leading-none tabular-nums"
+            {subject.topics.map((topic, i) => {
+              const published = isSubjectTopicPublished(getSubjectTopicContent(subject.slug, topic.slug));
+              const topicContent = (
+                <>
+                  <span
+                    aria-hidden="true"
+                    className="text-3xl font-extrabold text-brand-light shrink-0 leading-none tabular-nums"
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <p className="font-bold text-navy text-base md:text-lg">{topic.title}</p>
+                    <p className="mt-1.5 text-sm md:text-[15px] text-text-muted leading-relaxed">
+                      {topic.description}
+                    </p>
+                  </div>
+                </>
+              );
+              return published ? (
+                <Link
+                  key={topic.slug}
+                  href={`/subject/${subject.slug}/${topic.slug}`}
+                  className="flex gap-4 -m-2 p-2 rounded-xl transition-colors hover:bg-brand-light/40"
                 >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p className="font-bold text-navy text-base md:text-lg">{topic.title}</p>
-                  <p className="mt-1.5 text-sm md:text-[15px] text-text-muted leading-relaxed">
-                    {topic.description}
-                  </p>
+                  {topicContent}
+                </Link>
+              ) : (
+                <div key={topic.slug} className="flex gap-4">
+                  {topicContent}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

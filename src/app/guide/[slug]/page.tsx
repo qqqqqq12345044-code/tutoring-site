@@ -40,12 +40,6 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
   const relatedLinks = [
     ...(relatedGrade ? [{ label: `${relatedGrade.name}과외`, href: `/grade/${relatedGrade.slug}` }] : []),
     ...(relatedSubject ? [{ label: `${relatedSubject.name}과외`, href: `/subject/${relatedSubject.slug}` }] : []),
-    ...(article.categorySlug === "choosing-tutor"
-      ? [
-          { label: "방문과외 알아보기", href: "/lesson/visit" },
-          { label: "화상과외 알아보기", href: "/lesson/online" },
-        ]
-      : []),
   ];
 
   return (

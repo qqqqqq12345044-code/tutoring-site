@@ -1,4 +1,5 @@
 export interface SubjectTopic {
+  slug: string;
   title: string;
   description: string;
 }
@@ -28,13 +29,13 @@ export const subjects: Subject[] = [
     heroDescription:
       "국어는 단순 암기가 아니라 글을 읽고 구조화하는 연습이 필요한 과목입니다. 학생이 어디에서 막히는지부터 확인하고 독서, 문학, 문법 영역을 균형 있게 학습합니다.",
     topics: [
-      { title: "독서", description: "지문의 구조를 파악하고 핵심 정보를 빠르게 찾는 훈련" },
-      { title: "문학", description: "작품의 맥락과 표현 방식을 이해하는 감상 학습" },
-      { title: "문법", description: "헷갈리기 쉬운 문법 개념을 예문 중심으로 정리" },
-      { title: "서술형", description: "채점 기준에 맞춰 답안을 구성하는 연습" },
-      { title: "내신", description: "학교 진도와 기출 경향에 맞춘 시험 대비" },
-      { title: "모의고사", description: "정기적인 모의고사 분석으로 취약 유형 관리" },
-      { title: "수능", description: "수능 국어 영역별 문제 풀이 전략 학습" },
+      { slug: "reading", title: "독서", description: "지문의 구조를 파악하고 핵심 정보를 빠르게 찾는 훈련" },
+      { slug: "literature", title: "문학", description: "작품의 맥락과 표현 방식을 이해하는 감상 학습" },
+      { slug: "grammar", title: "문법", description: "헷갈리기 쉬운 문법 개념을 예문 중심으로 정리" },
+      { slug: "essay", title: "서술형", description: "채점 기준에 맞춰 답안을 구성하는 연습" },
+      { slug: "school-exam", title: "내신", description: "학교 진도와 기출 경향에 맞춘 시험 대비" },
+      { slug: "mock-exam", title: "모의고사", description: "정기적인 모의고사 분석으로 취약 유형 관리" },
+      { slug: "suneung", title: "수능", description: "수능 국어 영역별 문제 풀이 전략 학습" },
     ],
     gradeStrategies: [
       { grade: "초등", description: "글을 읽고 핵심 내용을 정리하는 독해 습관을 만듭니다." },
@@ -54,7 +55,7 @@ export const subjects: Subject[] = [
       { title: "지문 적용 학습", body: "다양한 지문에 읽기 전략을 적용해봅니다." },
       { title: "서술형·오답 관리", body: "서술형 답안과 틀린 문제를 함께 점검합니다." },
     ],
-    faqSlugs: ["subject-scope", "lesson-type", "elementary-tutoring", "pricing"],
+    faqSlugs: ["subject-scope", "elementary-tutoring", "pricing"],
   },
   {
     slug: "english",
@@ -64,14 +65,14 @@ export const subjects: Subject[] = [
     heroDescription:
       "단어를 많이 외워도 긴 문장 앞에서 막히는 경우가 많습니다. 구문 분석과 독해 적용을 연결해 학교 내신과 수능까지 이어지는 학습을 설계합니다.",
     topics: [
-      { title: "어휘", description: "학년 수준에 맞는 어휘를 문맥 속에서 익히는 학습" },
-      { title: "문법", description: "글쓰기와 독해에 바로 쓸 수 있는 실전 문법 정리" },
-      { title: "구문", description: "긴 문장을 끊어 읽고 구조를 분석하는 훈련" },
-      { title: "독해", description: "지문 유형별 독해 전략과 시간 관리 연습" },
-      { title: "서술형", description: "학교 시험 서술형 문항에 맞춘 영작 연습" },
-      { title: "학교 내신", description: "교과서 본문과 부교재를 기반으로 한 내신 대비" },
-      { title: "모의고사", description: "듣기·독해 영역별 모의고사 분석" },
-      { title: "수능", description: "수능 영어 유형별 풀이 전략 학습" },
+      { slug: "vocab", title: "어휘", description: "학년 수준에 맞는 어휘를 문맥 속에서 익히는 학습" },
+      { slug: "grammar", title: "문법", description: "글쓰기와 독해에 바로 쓸 수 있는 실전 문법 정리" },
+      { slug: "syntax", title: "구문", description: "긴 문장을 끊어 읽고 구조를 분석하는 훈련" },
+      { slug: "reading-comprehension", title: "독해", description: "지문 유형별 독해 전략과 시간 관리 연습" },
+      { slug: "essay", title: "서술형", description: "학교 시험 서술형 문항에 맞춘 영작 연습" },
+      { slug: "school-exam", title: "학교 내신", description: "교과서 본문과 부교재를 기반으로 한 내신 대비" },
+      { slug: "mock-exam", title: "모의고사", description: "듣기·독해 영역별 모의고사 분석" },
+      { slug: "suneung", title: "수능", description: "수능 영어 유형별 풀이 전략 학습" },
     ],
     gradeStrategies: [
       { grade: "초등", description: "파닉스 이후 리딩 습관과 기초 문장 구조를 익힙니다." },
@@ -91,7 +92,7 @@ export const subjects: Subject[] = [
       { title: "지문 적용 학습", body: "구문 분석을 실제 지문 독해에 적용해봅니다." },
       { title: "서술형·오답 관리", body: "서술형 답안과 오답을 함께 점검합니다." },
     ],
-    faqSlugs: ["subject-scope", "lesson-type", "pricing", "teacher-match"],
+    faqSlugs: ["subject-scope", "pricing", "teacher-match"],
   },
   {
     slug: "math",
@@ -101,12 +102,12 @@ export const subjects: Subject[] = [
     heroDescription:
       "수학은 이전 단원의 개념이 다음 단원과 이어지는 과목입니다. 막힌 지점을 정확히 찾아 취약 개념을 보완하고 학교 진도와 목표에 맞는 문제 유형을 함께 학습합니다.",
     topics: [
-      { title: "개념 학습", description: "공식 암기가 아닌 원리 이해 중심의 개념 정리" },
-      { title: "취약 단원 보완", description: "이전 학년에서 놓친 개념을 함께 확인하고 메꾸는 학습" },
-      { title: "유형 학습", description: "단원별 대표 유형을 반복하며 풀이 방법을 체득" },
-      { title: "심화 학습", description: "목표에 따라 난이도 높은 문제로 사고력 확장" },
-      { title: "내신 대비", description: "학교 시험 범위와 기출 경향에 맞춘 집중 관리" },
-      { title: "수능 대비", description: "수능 수학 영역별 문제풀이 전략과 시간 배분 연습" },
+      { slug: "concept", title: "개념 학습", description: "공식 암기가 아닌 원리 이해 중심의 개념 정리" },
+      { slug: "weak-unit", title: "취약 단원 보완", description: "이전 학년에서 놓친 개념을 함께 확인하고 메꾸는 학습" },
+      { slug: "problem-types", title: "유형 학습", description: "단원별 대표 유형을 반복하며 풀이 방법을 체득" },
+      { slug: "advanced", title: "심화 학습", description: "목표에 따라 난이도 높은 문제로 사고력 확장" },
+      { slug: "school-exam", title: "내신 대비", description: "학교 시험 범위와 기출 경향에 맞춘 집중 관리" },
+      { slug: "suneung", title: "수능 대비", description: "수능 수학 영역별 문제풀이 전략과 시간 배분 연습" },
     ],
     gradeStrategies: [
       { grade: "초등", description: "연산 정확도와 함께 개념을 말로 설명할 수 있는 이해력을 기릅니다." },
@@ -126,7 +127,7 @@ export const subjects: Subject[] = [
       { title: "문제 적용", body: "이해한 개념을 다양한 유형의 문제에 적용해봅니다." },
       { title: "오답 관리", body: "틀린 문제를 분석하고 같은 실수를 반복하지 않도록 관리합니다." },
     ],
-    faqSlugs: ["subject-scope", "lesson-type", "pricing", "teacher-match"],
+    faqSlugs: ["subject-scope", "pricing", "teacher-match"],
   },
   {
     slug: "social",
@@ -136,11 +137,11 @@ export const subjects: Subject[] = [
     heroDescription:
       "사회는 단순 암기보다 개념 사이의 흐름과 구조를 이해할 때 오래 기억됩니다. 단원별 핵심 구조를 잡고 학교 시험과 사회탐구 대비까지 연결합니다.",
     topics: [
-      { title: "개념 구조화", description: "단원별 핵심 개념을 흐름도로 정리하는 학습" },
-      { title: "암기 전략", description: "무작정 외우지 않고 연결지어 기억하는 방법 학습" },
-      { title: "자료 해석", description: "그래프·지도·통계 자료를 해석하는 연습" },
-      { title: "학교 내신", description: "학교 진도와 수행평가 일정에 맞춘 시험 대비" },
-      { title: "사회탐구", description: "고등 사회탐구 과목별 개념 정리와 기출 분석" },
+      { slug: "concept-structure", title: "개념 구조화", description: "단원별 핵심 개념을 흐름도로 정리하는 학습" },
+      { slug: "memorization", title: "암기 전략", description: "무작정 외우지 않고 연결지어 기억하는 방법 학습" },
+      { slug: "data-interpretation", title: "자료 해석", description: "그래프·지도·통계 자료를 해석하는 연습" },
+      { slug: "school-exam", title: "학교 내신", description: "학교 진도와 수행평가 일정에 맞춘 시험 대비" },
+      { slug: "social-tamgu", title: "사회탐구", description: "고등 사회탐구 과목별 개념 정리와 기출 분석" },
     ],
     gradeStrategies: [
       { grade: "초등", description: "사회 현상에 관심을 갖고 기본 개념 용어를 익힙니다." },
@@ -160,7 +161,7 @@ export const subjects: Subject[] = [
       { title: "자료 해석 연습", body: "그래프·통계·지도 자료를 문제에 적용해봅니다." },
       { title: "오답 관리", body: "틀린 문제를 분석하고 개념을 다시 정리합니다." },
     ],
-    faqSlugs: ["subject-scope", "lesson-type", "pricing"],
+    faqSlugs: ["subject-scope", "pricing"],
   },
   {
     slug: "science",
@@ -170,13 +171,13 @@ export const subjects: Subject[] = [
     heroDescription:
       "과학은 개념을 이해해도 문제에 적용하는 과정에서 막히는 경우가 많습니다. 개념 이해와 문제 적용을 함께 훈련해 학교 시험과 과학탐구까지 대비합니다.",
     topics: [
-      { title: "개념 이해", description: "원리를 그림과 예시로 이해하는 개념 학습" },
-      { title: "문제 적용", description: "이해한 개념을 실전 문제에 적용하는 훈련" },
-      { title: "물리", description: "물리 단원별 개념과 계산 문제 풀이 연습" },
-      { title: "화학", description: "화학 개념과 반응식, 계산 문제 학습" },
-      { title: "생명과학", description: "생명과학 개념 구조화와 암기 전략" },
-      { title: "지구과학", description: "지구과학 개념과 자료 해석 연습" },
-      { title: "과학탐구", description: "고등 과학탐구 과목별 기출 문제 분석" },
+      { slug: "concept", title: "개념 이해", description: "원리를 그림과 예시로 이해하는 개념 학습" },
+      { slug: "problem-application", title: "문제 적용", description: "이해한 개념을 실전 문제에 적용하는 훈련" },
+      { slug: "physics", title: "물리", description: "물리 단원별 개념과 계산 문제 풀이 연습" },
+      { slug: "chemistry", title: "화학", description: "화학 개념과 반응식, 계산 문제 학습" },
+      { slug: "biology", title: "생명과학", description: "생명과학 개념 구조화와 암기 전략" },
+      { slug: "earth-science", title: "지구과학", description: "지구과학 개념과 자료 해석 연습" },
+      { slug: "science-tamgu", title: "과학탐구", description: "고등 과학탐구 과목별 기출 문제 분석" },
     ],
     gradeStrategies: [
       { grade: "초등", description: "실험과 관찰을 바탕으로 과학적 사고의 기초를 다집니다." },
@@ -196,7 +197,7 @@ export const subjects: Subject[] = [
       { title: "문제 적용", body: "이해한 개념을 실전 문제에 적용해봅니다." },
       { title: "오답 관리", body: "틀린 문제의 원인을 분석하고 다시 정리합니다." },
     ],
-    faqSlugs: ["subject-scope", "lesson-type", "pricing"],
+    faqSlugs: ["subject-scope", "pricing"],
   },
 ];
 

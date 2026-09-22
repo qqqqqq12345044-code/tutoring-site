@@ -12,12 +12,6 @@ export const faqs: FAQ[] = [
       "국어, 영어, 수학, 사회, 과학을 중심으로 학생의 학년과 목표에 맞는 1:1 수업을 상담할 수 있습니다.",
   },
   {
-    slug: "lesson-type",
-    question: "방문과외와 화상과외 모두 가능한가요?",
-    answer:
-      "지역과 과목, 선생님 일정에 따라 가능한 방식이 달라질 수 있습니다. 상담 시 희망 방식을 알려주시면 확인해드립니다.",
-  },
-  {
     slug: "elementary-tutoring",
     question: "초등학생도 과외가 가능한가요?",
     answer:
@@ -51,7 +45,6 @@ export const faqs: FAQ[] = [
 
 export const homeFaqSlugs = [
   "subject-scope",
-  "lesson-type",
   "elementary-tutoring",
   "pricing",
   "teacher-match",

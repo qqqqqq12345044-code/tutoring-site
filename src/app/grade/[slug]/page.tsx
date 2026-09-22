@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { grades, getGradeBySlug } from "@/data/grades";
 import { subjects } from "@/data/subjects";
 import { getArticlesByGradeSlug } from "@/data/guide";
+import { isPublishedContent as isSubGradePublished, getSubGradeContent } from "@/data/subGradeContent";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -101,12 +103,28 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
       <section className="container-page py-14 md:py-16">
         <SectionHeader align="left" title={`${grade.name} 학년별 학습 방향`} />
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {grade.subGrades.map((sg) => (
-            <div key={sg.slug} className="rounded-2xl bg-brand-light p-5">
-              <p className="font-extrabold text-navy">{sg.label}</p>
-              <p className="mt-1.5 text-sm text-text-main/80 leading-relaxed">{sg.note}</p>
-            </div>
-          ))}
+          {grade.subGrades.map((sg) => {
+            const published = isSubGradePublished(getSubGradeContent(grade.slug, sg.slug));
+            const cardContent = (
+              <>
+                <p className="font-extrabold text-navy">{sg.label}</p>
+                <p className="mt-1.5 text-sm text-text-main/80 leading-relaxed">{sg.note}</p>
+              </>
+            );
+            return published ? (
+              <Link
+                key={sg.slug}
+                href={`/grade/${grade.slug}/${sg.slug}`}
+                className="rounded-2xl bg-brand-light p-5 transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
+              >
+                {cardContent}
+              </Link>
+            ) : (
+              <div key={sg.slug} className="rounded-2xl bg-brand-light p-5">
+                {cardContent}
+              </div>
+            );
+          })}
         </div>
       </section>
 

@@ -30,14 +30,6 @@ export const mainNav: (NavGroup | NavLink)[] = [
       { label: "과학", href: "/subject/science" },
     ],
   },
-  {
-    label: "수업방식",
-    href: "/lesson/visit",
-    children: [
-      { label: "방문과외", href: "/lesson/visit" },
-      { label: "화상과외", href: "/lesson/online" },
-    ],
-  },
   { label: "학습가이드", href: "/guide" },
 ];
 

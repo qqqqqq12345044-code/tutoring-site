@@ -91,11 +91,10 @@ export async function checkConsultApiSmoke(): Promise<ConsultSmokeResult> {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      contactName: "검증스크립트",
+      studentName: "검증스크립트",
       phone: "010-0000-0000",
       grade: "중2",
       subject: "수학",
-      lessonType: "visit",
       province: "경기",
       agree: "on",
     }),
@@ -109,7 +108,7 @@ export async function checkConsultApiSmoke(): Promise<ConsultSmokeResult> {
   const missingRes = await fetch(`${BASE_URL}/api/consult`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ contactName: "검증스크립트" }),
+    body: JSON.stringify({ studentName: "검증스크립트" }),
   });
   if (missingRes.status !== 400) {
     ok = false;

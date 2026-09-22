@@ -16,8 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/regions",
     "/schools",
     "/guide",
-    "/lesson/visit",
-    "/lesson/online",
     "/consult",
     "/privacy",
     "/terms",
@@ -38,6 +36,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const school of schools) {
     if (getIndexability("school", { schoolSlug: school.slug }).sitemap) {
       schoolPaths.push(`/school/${school.slug}`);
+    }
+  }
+
+  // Sub-grade pages: /grade/[slug]/[subGradeSlug]. Content-gated the same way
+  // as school above — only sub-grades with a published subGradeContent entry
+  // are listed here.
+  const subGradePaths: string[] = [];
+  for (const grade of grades) {
+    for (const subGrade of grade.subGrades) {
+      if (getIndexability("sub-grade", { gradeSlug: grade.slug, subGradeSlug: subGrade.slug }).sitemap) {
+        subGradePaths.push(`/grade/${grade.slug}/${subGrade.slug}`);
+      }
+    }
+  }
+
+  // Subject-topic pages: /subject/[slug]/[topicSlug]. Content-gated the same
+  // way as sub-grade above — only topics with a published subjectTopicContent
+  // entry are listed here.
+  const subjectTopicPaths: string[] = [];
+  for (const subject of subjects) {
+    for (const topic of subject.topics) {
+      if (getIndexability("subject-topic", { subjectSlug: subject.slug, topicSlug: topic.slug }).sitemap) {
+        subjectTopicPaths.push(`/subject/${subject.slug}/${topic.slug}`);
+      }
     }
   }
 
@@ -106,7 +128,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   const allPaths = Array.from(
-    new Set([...staticPaths, ...dynamicPaths, ...schoolPaths, ...cityComboPaths, ...schoolComboPaths, ...regionProgramPaths])
+    new Set([
+      ...staticPaths,
+      ...dynamicPaths,
+      ...schoolPaths,
+      ...subGradePaths,
+      ...subjectTopicPaths,
+      ...cityComboPaths,
+      ...schoolComboPaths,
+      ...regionProgramPaths,
+    ])
   );
 
   return allPaths.map((path) => ({

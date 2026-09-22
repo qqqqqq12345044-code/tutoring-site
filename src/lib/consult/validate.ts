@@ -3,11 +3,10 @@ import type { ConsultPayload } from "./types";
 const MAX_FIELD_LENGTH = 500;
 const MAX_MESSAGE_LENGTH = MAX_FIELD_LENGTH * 4;
 const REQUIRED_STRING_FIELDS = [
-  "contactName",
+  "studentName",
   "phone",
   "grade",
   "subject",
-  "lessonType",
   "province",
   "agree",
 ] as const;
@@ -44,11 +43,10 @@ export function validateConsultBody(body: Record<string, unknown>): ValidationRe
   return {
     ok: true,
     payload: {
-      contactName: body.contactName as string,
+      studentName: body.studentName as string,
       phone: body.phone as string,
       grade: body.grade as string,
       subject: body.subject as string,
-      lessonType: body.lessonType as string,
       province: body.province as string,
       cityDetail: optionalString(body.cityDetail),
       availableTime: optionalString(body.availableTime),

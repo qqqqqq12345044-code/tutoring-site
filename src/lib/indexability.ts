@@ -3,6 +3,8 @@ import { getRegionGradeSubjectContent, isPublishedContent as isRegionGradeSubjec
 import { getSchoolContent, isPublishedContent as isSchoolPublished } from "@/data/schoolContent";
 import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished } from "@/data/schoolSubjectContent";
 import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished } from "@/data/regionProgramContent";
+import { getSubGradeContent, isPublishedContent as isSubGradePublished } from "@/data/subGradeContent";
+import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
 
 /**
  * Central indexing policy for programmatic SEO routes.
@@ -15,15 +17,17 @@ import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished
  * Category mapping (see the audit report for full reasoning):
  *   A/B (index, sitemap)   — subject, grade, program, region (province/city/plain district),
  *                            school pages with a *published* schoolContent entry,
+ *                            sub-grade pages with a *published* subGradeContent entry,
+ *                            subject-topic pages with a *published* subjectTopicContent entry,
  *                            region+subject pages with dedicated regionSubjectContent,
  *                            region+grade+subject pages with a *published*
  *                            regionGradeSubjectContent entry, school+subject pages with a
  *                            *published* schoolSubjectContent entry, region+program pages with a
  *                            *published* regionProgramContent entry (status "published" AND
  *                            at least one notes item — see each data file's isPublishedContent())
- *   C   (noindex, no sitemap) — school / region+subject / region+grade+subject / school+subject /
- *                            region+program fallback pages (no dedicated content, or a "draft"
- *                            entry not yet ready)
+ *   C   (noindex, no sitemap) — school / sub-grade / region+subject / region+grade+subject /
+ *                            school+subject / region+program fallback pages (no dedicated
+ *                            content, or a "draft" entry not yet ready)
  *   D   (noindex, no sitemap) — region+grade, region+district+subject
  *
  * Note: plain "school" (/school/[schoolSlug]) is content-gated the same way as
@@ -35,6 +39,8 @@ import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished
 export type IndexabilityKind =
   | "subject"
   | "grade"
+  | "sub-grade" // /grade/[slug]/[subGradeSlug]
+  | "subject-topic" // /subject/[slug]/[topicSlug]
   | "school" // /school/[schoolSlug]
   | "program" // /program/[slug]
   | "region" // province / city / plain (subject-less, grade-less) district page
@@ -50,8 +56,12 @@ export interface IndexabilityContext {
   regionSlug?: string;
   /** Subject slug, required for "region-subject" / "region-grade-subject" / "school-subject". */
   subjectSlug?: string;
-  /** Grade slug, required for "region-grade-subject" to look up dedicated content. */
+  /** Grade slug, required for "region-grade-subject" / "sub-grade" to look up dedicated content. */
   gradeSlug?: string;
+  /** Sub-grade slug (e.g. "6" for 초6), required for "sub-grade" to look up dedicated content. */
+  subGradeSlug?: string;
+  /** Subject topic slug (e.g. "syntax" for 구문), required for "subject-topic" to look up dedicated content. */
+  topicSlug?: string;
   /** School slug, required for "school" / "school-subject" to look up dedicated content. */
   schoolSlug?: string;
   /** Program slug, required for "region-program" to look up dedicated content. */
@@ -79,6 +89,18 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
     case "school": {
       const content = ctx.schoolSlug ? getSchoolContent(ctx.schoolSlug) : undefined;
       return isSchoolPublished(content) ? INDEXED : NOT_INDEXED;
+    }
+
+    case "sub-grade": {
+      const content =
+        ctx.gradeSlug && ctx.subGradeSlug ? getSubGradeContent(ctx.gradeSlug, ctx.subGradeSlug) : undefined;
+      return isSubGradePublished(content) ? INDEXED : NOT_INDEXED;
+    }
+
+    case "subject-topic": {
+      const content =
+        ctx.subjectSlug && ctx.topicSlug ? getSubjectTopicContent(ctx.subjectSlug, ctx.topicSlug) : undefined;
+      return isSubjectTopicPublished(content) ? INDEXED : NOT_INDEXED;
     }
 
     case "region-subject": {

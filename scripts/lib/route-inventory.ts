@@ -16,6 +16,8 @@ import { getRegionGradeSubjectContent, isPublishedContent } from "@/data/regionG
 import { getSchoolContent, isPublishedContent as isSchoolPublished } from "@/data/schoolContent";
 import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished } from "@/data/schoolSubjectContent";
 import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished } from "@/data/regionProgramContent";
+import { getSubGradeContent, isPublishedContent as isSubGradePublished } from "@/data/subGradeContent";
+import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
 import { getIndexability } from "@/lib/indexability";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
@@ -33,8 +35,6 @@ const STATIC_PATHS = [
   "/regions",
   "/schools",
   "/guide",
-  "/lesson/visit",
-  "/lesson/online",
   "/consult",
   "/privacy",
   "/terms",
@@ -50,6 +50,18 @@ export function getAllContentRoutes(): RouteEntry[] {
   for (const sc of schools) {
     const { index, sitemap } = getIndexability("school", { schoolSlug: sc.slug });
     routes.push({ path: `/school/${sc.slug}`, index, sitemap });
+  }
+  for (const g of grades) {
+    for (const sg of g.subGrades) {
+      const { index, sitemap } = getIndexability("sub-grade", { gradeSlug: g.slug, subGradeSlug: sg.slug });
+      routes.push({ path: `/grade/${g.slug}/${sg.slug}`, index, sitemap });
+    }
+  }
+  for (const s of subjects) {
+    for (const t of s.topics) {
+      const { index, sitemap } = getIndexability("subject-topic", { subjectSlug: s.slug, topicSlug: t.slug });
+      routes.push({ path: `/subject/${s.slug}/${t.slug}`, index, sitemap });
+    }
   }
   for (const a of guideArticles) routes.push({ path: `/guide/${a.slug}`, index: true, sitemap: true });
   for (const p of programs) routes.push({ path: `/program/${p.slug}`, index: true, sitemap: true });
@@ -251,6 +263,54 @@ export function checkSchoolGate(): GateCheckResult {
     const { index, sitemap } = getIndexability("school", { schoolSlug: school.slug });
     if (index !== isEligible || sitemap !== isEligible) {
       issues.push(`school gate: ${school.slug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`);
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Regression check for the sub-grade content gate (src/data/subGradeContent.ts),
+ * mirroring checkSchoolGate: for every grade × sub-grade combination, whether
+ * getIndexability() marks it index+sitemap must match isPublishedContent()
+ * on the raw data.
+ */
+export function checkSubGradeGate(): GateCheckResult {
+  const issues: string[] = [];
+
+  for (const grade of grades) {
+    for (const subGrade of grade.subGrades) {
+      const isEligible = isSubGradePublished(getSubGradeContent(grade.slug, subGrade.slug));
+      const { index, sitemap } = getIndexability("sub-grade", { gradeSlug: grade.slug, subGradeSlug: subGrade.slug });
+      if (index !== isEligible || sitemap !== isEligible) {
+        issues.push(
+          `sub-grade gate: ${grade.slug}/${subGrade.slug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Regression check for the subject-topic content gate
+ * (src/data/subjectTopicContent.ts), mirroring checkSubGradeGate: for every
+ * subject × topic combination, whether getIndexability() marks it
+ * index+sitemap must match isPublishedContent() on the raw data.
+ */
+export function checkSubjectTopicGate(): GateCheckResult {
+  const issues: string[] = [];
+
+  for (const subject of subjects) {
+    for (const topic of subject.topics) {
+      const isEligible = isSubjectTopicPublished(getSubjectTopicContent(subject.slug, topic.slug));
+      const { index, sitemap } = getIndexability("subject-topic", { subjectSlug: subject.slug, topicSlug: topic.slug });
+      if (index !== isEligible || sitemap !== isEligible) {
+        issues.push(
+          `subject-topic gate: ${subject.slug}/${topic.slug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`
+        );
+      }
     }
   }
 

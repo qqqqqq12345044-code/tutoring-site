@@ -10,7 +10,12 @@ import { regionGradeSubjectContents, type RegionGradeSubjectContent } from "@/da
 import { schoolContents, type SchoolContent } from "@/data/schoolContent";
 import { schoolSubjectContents, type SchoolSubjectContent } from "@/data/schoolSubjectContent";
 import { regionProgramContents, type RegionProgramContent } from "@/data/regionProgramContent";
+import { subGradeContents, type SubGradeContent } from "@/data/subGradeContent";
+import { subjectTopicContents, type SubjectTopicContent } from "@/data/subjectTopicContent";
 import { schools } from "@/data/schools";
+import { regions } from "@/data/regions";
+import { buildRegionSchoolIntro } from "@/lib/regionIntro";
+import { buildRegionFaqs } from "@/lib/regionFaq";
 
 export interface ContentQualityResult {
   ok: boolean;
@@ -228,6 +233,184 @@ export function checkSchoolContentQuality(): ContentQualityResult {
         issues.push(
           `전체 학교: ${published[i].schoolSlug} vs ${published[j].schoolSlug} 콘텐츠 유사도 ${(similarity * 100).toFixed(1)}%` +
             ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 학교명만 바뀐 동일 문서일 가능성)`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Checks the data-driven intro sentence every city-level region page
+ * (src/app/region/[province]/[city]/page.tsx) renders via
+ * buildRegionSchoolIntro(). Only regions with at least one registered school
+ * are compared — those intros are expected to differ (real school names),
+ * so a high pairwise similarity there means two regions are effectively
+ * reading as the same document with only the region name swapped. Regions
+ * with no school data yet share an honest, short "not yet covered" sentence
+ * by design and are excluded from this check.
+ */
+export function checkRegionPageContentQuality(): ContentQualityResult {
+  const issues: string[] = [];
+
+  const cityRegions = regions.filter((r) => r.level === "city");
+  const withSchools = cityRegions
+    .map((r) => ({
+      slug: r.slug,
+      intro: buildRegionSchoolIntro(r.slug, r.name, schools.filter((s) => s.cityRegionSlug === r.slug)),
+    }))
+    .filter((r) => schools.some((s) => s.cityRegionSlug === r.slug));
+
+  for (let i = 0; i < withSchools.length; i++) {
+    for (let j = i + 1; j < withSchools.length; j++) {
+      const similarity = tokenSimilarity(withSchools[i].intro, withSchools[j].intro);
+      if (similarity > SIMILARITY_THRESHOLD) {
+        issues.push(
+          `지역 허브 페이지: ${withSchools[i].slug} vs ${withSchools[j].slug} 인트로 유사도 ${(similarity * 100).toFixed(1)}%` +
+            ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 지역명만 바뀐 동일 문서일 가능성)`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Checks the data-driven region FAQ every city-level region page renders via
+ * buildRegionFaqs() (src/lib/regionFaq.ts) — the "school count/names" answer
+ * (Q1, always present when the region has schools) must not read as the same
+ * document across regions with only the region name swapped; the optional
+ * district/program answers are derived directly from real per-region data
+ * (getChildren(), regionProgramContents) so they're excluded from the
+ * cross-region similarity check by construction (they only render at all for
+ * a region that actually has that data).
+ */
+export function checkRegionFaqContentQuality(): ContentQualityResult {
+  const issues: string[] = [];
+
+  const cityRegions = regions.filter((r) => r.level === "city");
+  const withFaqs = cityRegions
+    .map((r) => ({
+      slug: r.slug,
+      faqs: buildRegionFaqs(r.slug, r.name, schools.filter((s) => s.cityRegionSlug === r.slug)),
+    }))
+    .filter((r) => r.faqs.length > 0);
+
+  for (const r of withFaqs) {
+    for (const f of r.faqs) {
+      if (!f.question.trim() || !f.answer.trim()) {
+        issues.push(`지역 FAQ: ${r.slug}/${f.slug} — 빈 question/answer`);
+      }
+    }
+  }
+
+  for (let i = 0; i < withFaqs.length; i++) {
+    for (let j = i + 1; j < withFaqs.length; j++) {
+      const similarity = tokenSimilarity(withFaqs[i].faqs[0].answer, withFaqs[j].faqs[0].answer);
+      if (similarity > SIMILARITY_THRESHOLD) {
+        issues.push(
+          `지역 FAQ: ${withFaqs[i].slug} vs ${withFaqs[j].slug} 학교 안내 답변 유사도 ${(similarity * 100).toFixed(1)}%` +
+            ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과 — 지역명만 바뀐 동일 문서일 가능성)`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+function subGradeEntryText(c: SubGradeContent): string {
+  return [c.intro, ...c.notes.map((n) => n.body)].join(" ");
+}
+
+/**
+ * Checks every subGradeContent entry (src/data/subGradeContent.ts, the
+ * /grade/[slug]/[subGradeSlug] page's content gate) for publish-readiness:
+ * required fields, plus pairwise similarity across all published entries
+ * (there's no secondary grouping axis here — every entry is already a
+ * distinct grade transition year, so a full-corpus check is sufficient).
+ */
+export function checkSubGradeContentQuality(): ContentQualityResult {
+  const issues: string[] = [];
+
+  for (const c of subGradeContents) {
+    const key = `${c.gradeSlug}/${c.subGradeSlug}`;
+    if (c.status !== "published") continue;
+
+    if (c.notes.length === 0) {
+      issues.push(`${key}: status "published"이지만 notes가 비어 있음`);
+    }
+    if (c.intro.trim().length < MIN_INTRO_LENGTH) {
+      issues.push(`${key}: intro가 최소 길이(${MIN_INTRO_LENGTH}자) 미만 (${c.intro.trim().length}자)`);
+    }
+    for (const note of c.notes) {
+      if (!note.title.trim() || !note.body.trim()) {
+        issues.push(`${key}: notes에 빈 title/body가 있음`);
+      }
+    }
+  }
+
+  const published = subGradeContents.filter((c) => c.status === "published");
+  for (let i = 0; i < published.length; i++) {
+    for (let j = i + 1; j < published.length; j++) {
+      const similarity = tokenSimilarity(subGradeEntryText(published[i]), subGradeEntryText(published[j]));
+      if (similarity > SIMILARITY_THRESHOLD) {
+        const a = `${published[i].gradeSlug}/${published[i].subGradeSlug}`;
+        const b = `${published[j].gradeSlug}/${published[j].subGradeSlug}`;
+        issues.push(
+          `${a} vs ${b} 콘텐츠 유사도 ${(similarity * 100).toFixed(1)}%` +
+            ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과)`
+        );
+      }
+    }
+  }
+
+  return { ok: issues.length === 0, issues };
+}
+
+function subjectTopicEntryText(c: SubjectTopicContent): string {
+  return [c.intro, ...c.notes.map((n) => n.body)].join(" ");
+}
+
+/**
+ * Checks every subjectTopicContent entry (src/data/subjectTopicContent.ts,
+ * the /subject/[slug]/[topicSlug] page's content gate) for publish-readiness,
+ * mirroring checkSubGradeContentQuality: required fields, plus pairwise
+ * similarity across all published entries (full corpus — topics already span
+ * distinct subjects and sub-areas, so no secondary grouping axis is needed).
+ */
+export function checkSubjectTopicContentQuality(): ContentQualityResult {
+  const issues: string[] = [];
+
+  for (const c of subjectTopicContents) {
+    const key = `${c.subjectSlug}/${c.topicSlug}`;
+    if (c.status !== "published") continue;
+
+    if (c.notes.length === 0) {
+      issues.push(`${key}: status "published"이지만 notes가 비어 있음`);
+    }
+    if (c.intro.trim().length < MIN_INTRO_LENGTH) {
+      issues.push(`${key}: intro가 최소 길이(${MIN_INTRO_LENGTH}자) 미만 (${c.intro.trim().length}자)`);
+    }
+    for (const note of c.notes) {
+      if (!note.title.trim() || !note.body.trim()) {
+        issues.push(`${key}: notes에 빈 title/body가 있음`);
+      }
+    }
+  }
+
+  const published = subjectTopicContents.filter((c) => c.status === "published");
+  for (let i = 0; i < published.length; i++) {
+    for (let j = i + 1; j < published.length; j++) {
+      const similarity = tokenSimilarity(subjectTopicEntryText(published[i]), subjectTopicEntryText(published[j]));
+      if (similarity > SIMILARITY_THRESHOLD) {
+        const a = `${published[i].subjectSlug}/${published[i].topicSlug}`;
+        const b = `${published[j].subjectSlug}/${published[j].topicSlug}`;
+        issues.push(
+          `${a} vs ${b} 콘텐츠 유사도 ${(similarity * 100).toFixed(1)}%` +
+            ` (기준 ${SIMILARITY_THRESHOLD * 100}% 초과)`
         );
       }
     }

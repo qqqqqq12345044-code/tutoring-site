@@ -24,7 +24,7 @@ export const consolePersistence: ConsultPersistence = {
   async save(record) {
     console.log("[consult] new inquiry (mock, not persisted):", {
       ...record,
-      contactName: mask(record.contactName),
+      studentName: mask(record.studentName),
       phone: mask(record.phone),
     });
   },
