@@ -33,7 +33,7 @@ export const schoolContents: SchoolContent[] = [
     schoolSlug: "gangnam-middle-school",
     status: "published",
     intro:
-      "대치중학교 학생을 위한 과외를 찾고 있다면, 서울 강남구에 위치한 중학교 정보를 참고해 학습 계획을 세워보세요.",
+      "대치중학교 재학생이라면 아래 영어·수학과외 페이지에서 학교별 내신 대비 안내를 바로 확인할 수 있습니다.",
     schoolSpecificNotes: [
       {
         title: "대치중학교 학생 안내",
@@ -97,7 +97,7 @@ export const schoolContents: SchoolContent[] = [
     schoolSlug: "seocho-high-school",
     status: "published",
     intro:
-      "세화고등학교(서울 서초구 소재 고등학교) 학생이라면, 아래 학교별·과목별 안내를 통해 필요한 정보를 확인할 수 있습니다.",
+      "세화고등학교에 다니고 있다면 영어과외 페이지의 학교별 맞춤 안내를 먼저 확인한 뒤 상담을 진행하는 것이 좋습니다.",
     schoolSpecificNotes: [
       {
         title: "세화고등학교 학생 안내",
@@ -177,7 +177,7 @@ export const schoolContents: SchoolContent[] = [
     schoolSlug: "yeongtong-middle-school",
     status: "published",
     intro:
-      "경기 수원 영통구의 중학교인 영통중학교에 재학 중이라면, 학교급과 지역에 맞춘 과외 정보를 먼저 확인하는 것이 좋습니다.",
+      "영통중학교는 수원 영통구 배정 중학교로, 아래에서 수학과외 등 과목별 내신 대비 정보를 바로 확인할 수 있습니다.",
     schoolSpecificNotes: [
       {
         title: "영통중학교 학생 안내",

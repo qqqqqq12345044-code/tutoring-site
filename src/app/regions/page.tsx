@@ -35,7 +35,7 @@ export default function RegionsPage() {
       </div>
 
       <div className="mt-10 md:mt-12">
-        <p className="text-sm font-bold text-navy mb-4">주요 지역</p>
+        <p className="text-sm font-bold text-navy mb-4">학교 정보가 등록된 지역</p>
         <div className="grid sm:grid-cols-2 gap-4">
           {featured.map((p) => (
             <RegionCard key={p.slug} region={p} />
@@ -44,7 +44,7 @@ export default function RegionsPage() {
       </div>
 
       <div className="mt-10 md:mt-12">
-        <p className="text-sm font-bold text-navy mb-4">그 외 지역</p>
+        <p className="text-sm font-bold text-navy mb-4">그 외 지역 (방문·화상 상담 가능)</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {compact.map((p) => (
             <Link

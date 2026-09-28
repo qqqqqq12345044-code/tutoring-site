@@ -77,6 +77,17 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
         </div>
       </section>
 
+      <section className="container-page py-14 md:py-16 grid md:grid-cols-2 gap-4">
+        <RelatedLinks
+          title={`${region.name} 과목별 과외`}
+          links={subjects.map((s) => ({ label: `${region.name} ${s.name}과외`, href: `/region/${parent.slug}/${region.slug}/${s.slug}` }))}
+        />
+        <RelatedLinks
+          title={`${region.name} 학년별 과외`}
+          links={grades.map((g) => ({ label: `${region.name} ${g.name}과외`, href: `/grade/${g.slug}` }))}
+        />
+      </section>
+
       {schoolsByLevel.length > 0 && (
         <section className="container-page py-14 md:py-16">
           <SectionHeader align="left" title={`${region.name} 학교별 과외 정보`} />
@@ -103,17 +114,6 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
           </div>
         </section>
       )}
-
-      <section className="container-page py-14 md:py-16 grid md:grid-cols-2 gap-4">
-        <RelatedLinks
-          title={`${region.name} 학년별 과외`}
-          links={grades.map((g) => ({ label: `${region.name} ${g.name}과외`, href: `/grade/${g.slug}` }))}
-        />
-        <RelatedLinks
-          title={`${region.name} 과목별 과외`}
-          links={subjects.map((s) => ({ label: `${region.name} ${s.name}과외`, href: `/region/${parent.slug}/${region.slug}/${s.slug}` }))}
-        />
-      </section>
 
       {districts.length > 0 && (
         <section className="container-page pb-14 md:pb-16">

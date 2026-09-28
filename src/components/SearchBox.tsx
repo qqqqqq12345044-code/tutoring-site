@@ -3,11 +3,20 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
+import { subjects } from "@/data/subjects";
+import { programs } from "@/data/programs";
 
 interface SearchTarget {
   label: string;
   href: string;
 }
+
+// 지역/학교 검색창에 과목·프로그램명을 입력하는 경우도 있어(예: "수학", "코딩"),
+// targets(지역·학교)에서 못 찾으면 이 목록도 함께 확인한 뒤에만 "결과 없음"으로 처리한다.
+const topicTargets: SearchTarget[] = [
+  ...subjects.map((s) => ({ label: s.name, href: `/subject/${s.slug}` })),
+  ...programs.map((p) => ({ label: p.name, href: `/program/${p.slug}` })),
+];
 
 export default function SearchBox({ targets }: { targets: SearchTarget[] }) {
   const [query, setQuery] = useState("");
@@ -21,9 +30,10 @@ export default function SearchBox({ targets }: { targets: SearchTarget[] }) {
       setNotice(null);
       return;
     }
+    const allTargets = [...targets, ...topicTargets];
     const match =
-      targets.find((t) => t.label === trimmed) ??
-      targets.find((t) => t.label.includes(trimmed) || trimmed.includes(t.label));
+      allTargets.find((t) => t.label === trimmed) ??
+      allTargets.find((t) => t.label.includes(trimmed) || trimmed.includes(t.label));
 
     if (match) {
       setNotice(null);
@@ -31,7 +41,7 @@ export default function SearchBox({ targets }: { targets: SearchTarget[] }) {
       return;
     }
 
-    setNotice(`'${trimmed}'에 대한 검색 결과가 없습니다. 아래 지역 목록에서 찾아보세요.`);
+    setNotice(`'${trimmed}'에 대한 검색 결과가 없습니다. 지역·학교명 또는 과목명으로 다시 찾아보시거나, 아래 지역 목록을 확인해보세요.`);
   }
 
   return (
@@ -51,7 +61,7 @@ export default function SearchBox({ targets }: { targets: SearchTarget[] }) {
               if (notice) setNotice(null);
             }}
             list="region-search-list"
-            placeholder="예) 수원, 영통구, 영통중학교"
+            placeholder="예) 수원, 영통중학교, 수학"
             className="w-full rounded-full border border-border-subtle bg-white py-3.5 pl-11 pr-4 text-base text-text-main placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand"
           />
           <datalist id="region-search-list">
