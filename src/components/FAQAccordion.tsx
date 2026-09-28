@@ -32,14 +32,16 @@ export default function FAQAccordion({ items }: { items: FAQ[] }) {
                 }`}
               />
             </button>
-            {isOpen && (
-              <div
-                id={`faq-panel-${item.slug}`}
-                className="px-5 pb-4 text-sm text-text-muted leading-relaxed"
-              >
-                {item.answer}
-              </div>
-            )}
+            {/* Always rendered (not conditionally mounted) so the answer text is present
+                in the server HTML and matches the page's FAQPage JSON-LD — a client-only
+                mount would make Google/Naver see structured data with no visible content. */}
+            <div
+              id={`faq-panel-${item.slug}`}
+              hidden={!isOpen}
+              className="px-5 pb-4 text-sm text-text-muted leading-relaxed"
+            >
+              {item.answer}
+            </div>
           </div>
         );
       })}

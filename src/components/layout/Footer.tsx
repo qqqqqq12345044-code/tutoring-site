@@ -7,6 +7,9 @@ const serviceLinks = [
   { label: "과목별 과외", href: "/subjects" },
   { label: "학년별 과외", href: "/grades" },
   { label: "지역별 과외", href: "/regions" },
+  { label: "코딩과외", href: "/program/coding" },
+  { label: "검정고시", href: "/program/ged" },
+  { label: "한국어과외", href: "/program/korean-language" },
   { label: "학습가이드", href: "/guide" },
 ];
 
