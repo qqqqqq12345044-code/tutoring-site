@@ -83,21 +83,31 @@ export interface ConsultSmokeResult {
   details: string[];
 }
 
+/**
+ * Runs against a real `next start` server with CONSULT_GOOGLE_SHEETS_WEBHOOK_URL
+ * pointed at a local mockWebhook.ts instance (see validate-full.ts) — so
+ * "valid submission" exercises the actual googleSheetsPersistence code path,
+ * not a stub. Uses only placeholder test data (테스트학생 / 010-0000-0000),
+ * never real personal information.
+ */
 export async function checkConsultApiSmoke(): Promise<ConsultSmokeResult> {
   const details: string[] = [];
   let ok = true;
 
+  const validPayload = {
+    studentName: "테스트학생",
+    phone: "010-0000-0000",
+    grade: "중2",
+    subject: "수학",
+    province: "경기",
+    message: "테스트 상담 신청입니다.",
+    agree: "on",
+  };
+
   const validRes = await fetch(`${BASE_URL}/api/consult`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      studentName: "검증스크립트",
-      phone: "010-0000-0000",
-      grade: "중2",
-      subject: "수학",
-      province: "경기",
-      agree: "on",
-    }),
+    body: JSON.stringify(validPayload),
   });
   const validBody = await validRes.json();
   if (validRes.status !== 200 || !validBody.ok) {
@@ -105,10 +115,43 @@ export async function checkConsultApiSmoke(): Promise<ConsultSmokeResult> {
     details.push(`valid submission expected 200/ok:true, got ${validRes.status} ${JSON.stringify(validBody)}`);
   }
 
+  // Same identity resubmitted immediately — should be treated as a duplicate
+  // and short-circuit to a success response without a second webhook call.
+  const duplicateRes = await fetch(`${BASE_URL}/api/consult`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(validPayload),
+  });
+  const duplicateBody = await duplicateRes.json();
+  if (duplicateRes.status !== 200 || !duplicateBody.ok) {
+    ok = false;
+    details.push(`duplicate submission expected 200/ok:true, got ${duplicateRes.status} ${JSON.stringify(duplicateBody)}`);
+  }
+
+  const invalidPhoneRes = await fetch(`${BASE_URL}/api/consult`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...validPayload, studentName: "테스트학생2", phone: "abc" }),
+  });
+  if (invalidPhoneRes.status !== 400) {
+    ok = false;
+    details.push(`invalid phone expected 400, got ${invalidPhoneRes.status}`);
+  }
+
+  const noAgreeRes = await fetch(`${BASE_URL}/api/consult`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...validPayload, studentName: "테스트학생3", agree: undefined }),
+  });
+  if (noAgreeRes.status !== 400) {
+    ok = false;
+    details.push(`missing agree expected 400, got ${noAgreeRes.status}`);
+  }
+
   const missingRes = await fetch(`${BASE_URL}/api/consult`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ studentName: "검증스크립트" }),
+    body: JSON.stringify({ studentName: "테스트학생" }),
   });
   if (missingRes.status !== 400) {
     ok = false;

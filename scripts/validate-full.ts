@@ -8,6 +8,7 @@ import { spawnSync } from "child_process";
 import { computeSummary, getSitemapPaths } from "./lib/route-inventory";
 import { startServer, stopServer } from "./lib/server";
 import { crawlSitemapAndLinks, checkSearchSmoke, checkConsultApiSmoke } from "./lib/checks";
+import { startMockWebhook, stopMockWebhook } from "./lib/mockWebhook";
 import { BASELINE } from "./lib/baseline";
 import { writeCacheEntry } from "./lib/validation-cache";
 
@@ -64,6 +65,16 @@ async function main() {
     console.log("Consult API smoke: SKIPPED (build failed)");
     console.log("Search smoke: SKIPPED (build failed)");
   } else {
+    // Stand in for the real Google Apps Script webhook so the consult smoke
+    // test below exercises the actual googleSheetsPersistence success path.
+    // Must be set before startServer() spawns `next start`, which inherits
+    // process.env at spawn time.
+    const webhookSecret = "validate-full-test-secret";
+    const mockWebhook = await startMockWebhook(webhookSecret);
+    process.env.CONSULT_GOOGLE_SHEETS_WEBHOOK_URL = mockWebhook.url;
+    process.env.CONSULT_WEBHOOK_SECRET = webhookSecret;
+    process.env.CONSULT_ADMIN_EMAIL = "";
+
     const server = await startServer();
     try {
       const crawl = await crawlSitemapAndLinks(getSitemapPaths());
@@ -98,6 +109,7 @@ async function main() {
       }
     } finally {
       stopServer(server);
+      stopMockWebhook(mockWebhook.server);
     }
   }
 

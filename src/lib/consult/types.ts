@@ -11,7 +11,9 @@ export interface ConsultPayload {
   agree: boolean;
 }
 
-/** A payload plus the server-assigned submission time — what persistence/notification receive. */
+/** A payload plus server-assigned metadata — what persistence/notification receive. */
 export interface ConsultRecord extends ConsultPayload {
   submittedAt: string;
+  /** Page the request originated from (derived server-side from the Referer header, never user input). */
+  sourceUrl: string;
 }
