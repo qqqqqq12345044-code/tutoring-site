@@ -52,7 +52,7 @@ export default function SearchBox({ targets }: { targets: SearchTarget[] }) {
             }}
             list="region-search-list"
             placeholder="예) 수원, 영통구, 영통중학교"
-            className="w-full rounded-full border border-border-subtle bg-white py-3.5 pl-11 pr-4 text-sm text-text-main placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand"
+            className="w-full rounded-full border border-border-subtle bg-white py-3.5 pl-11 pr-4 text-base text-text-main placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand"
           />
           <datalist id="region-search-list">
             {targets.map((t) => (

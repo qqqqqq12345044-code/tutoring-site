@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata = buildMetadata({
   title: "개인정보처리방침",
-  description: `${siteConfig.brandName} 개인정보처리방침 안내`,
+  description: `${siteConfig.brandName} 개인정보처리방침 안내입니다. 상담 신청 시 수집하는 개인정보 항목, 이용 목적, 보관 기간을 확인하실 수 있습니다.`,
   path: "/privacy",
 });
 

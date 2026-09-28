@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata = buildMetadata({
   title: "이용약관",
-  description: `${siteConfig.brandName} 이용약관 안내`,
+  description: `${siteConfig.brandName} 이용약관 안내입니다. 과외 상담 및 매칭 서비스 이용 조건과 절차, 이용자와 회사의 권리·의무를 확인하실 수 있습니다.`,
   path: "/terms",
 });
 

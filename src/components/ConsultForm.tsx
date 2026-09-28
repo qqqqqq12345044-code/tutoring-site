@@ -104,7 +104,16 @@ export default function ConsultForm() {
           <input name="studentName" type="text" required maxLength={50} className={inputClass} />
         </Field>
         <Field label="연락처" required>
-          <input name="phone" type="tel" required maxLength={20} placeholder="010-0000-0000" className={inputClass} />
+          <input
+            name="phone"
+            type="tel"
+            required
+            maxLength={20}
+            placeholder="010-0000-0000"
+            pattern="[0-9\-\s]{9,20}"
+            title="숫자, 하이픈(-)으로 입력해주세요. 예) 010-1234-5678"
+            className={inputClass}
+          />
         </Field>
       </div>
 
@@ -163,7 +172,7 @@ export default function ConsultForm() {
 }
 
 const inputClass =
-  "w-full rounded-xl border border-border-subtle bg-white px-4 py-3 text-sm text-text-main placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand";
+  "w-full rounded-xl border border-border-subtle bg-white px-4 py-3 text-base text-text-main placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand";
 
 function Field({
   label,

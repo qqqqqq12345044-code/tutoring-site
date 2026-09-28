@@ -4,7 +4,6 @@ const MAX_FIELD_LENGTH = 500;
 const MAX_MESSAGE_LENGTH = MAX_FIELD_LENGTH * 4;
 const REQUIRED_STRING_FIELDS = [
   "studentName",
-  "phone",
   "grade",
   "subject",
   "province",
@@ -19,6 +18,13 @@ function isNonEmptyString(value: unknown, maxLength = MAX_FIELD_LENGTH): value i
   return typeof value === "string" && value.trim().length > 0 && value.length <= maxLength;
 }
 
+/** Accepts Korean phone numbers in common formats (010-1234-5678, 01012345678, 02-123-4567, etc). */
+export function isValidPhone(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  const digits = value.replace(/[^0-9]/g, "");
+  return /^0\d{8,10}$/.test(digits);
+}
+
 function optionalString(value: unknown, maxLength = MAX_FIELD_LENGTH): string | undefined {
   return typeof value === "string" && value.length <= maxLength ? value : undefined;
 }
@@ -29,6 +35,9 @@ export function validateConsultBody(body: Record<string, unknown>): ValidationRe
     if (!isNonEmptyString(body[field])) {
       return { ok: false, error: "missing required fields" };
     }
+  }
+  if (!isValidPhone(body.phone)) {
+    return { ok: false, error: "invalid phone" };
   }
   if (typeof body.cityDetail === "string" && body.cityDetail.length > MAX_FIELD_LENGTH) {
     return { ok: false, error: "invalid field" };

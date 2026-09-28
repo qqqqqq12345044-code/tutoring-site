@@ -111,7 +111,7 @@ export default function MobileMenu() {
         aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center justify-center w-10 h-10 rounded-lg text-navy hover:bg-brand-light transition-colors"
+        className="flex items-center justify-center w-11 h-11 rounded-lg text-navy hover:bg-brand-light transition-colors"
       >
         {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
