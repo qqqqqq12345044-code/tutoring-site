@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons,
+  verification: {
+    other: {
+      "naver-site-verification": "9a96b2a9519d34ca9e3b5440269cacb7ad3a98ee",
+    },
+  },
   // Site-wide default OG image; pages built via buildMetadata() override this
   // with the same image today, but any page that skips buildMetadata (e.g.
   // not-found) still gets a real image instead of no preview at all.
