@@ -6,14 +6,14 @@ export const siteConfig = {
   description:
     "국어·영어·수학·사회·과학 1:1 과외. 학생의 현재 수준과 목표를 먼저 확인하고 방문·화상 수업을 연결합니다.",
   domain: "https://gyogwaseolgye.com",
-  phone: "1588-0000",
-  phoneDisplay: "1588-0000",
+  phone: "",
+  phoneDisplay: "",
   kakaoUrl: "https://pf.kakao.com/_example",
   naverFormUrl: "",
   businessName: "",
   businessRegistrationNumber: "",
   businessAddress: "",
-  email: "contact@example-tutoring.com",
+  email: "",
   /**
    * Central registry of brand asset paths under public/assets/brand.
    * Files don't need to exist yet — components check for them and fall
