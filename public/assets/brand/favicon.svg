@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="교과설계소">
-  <polygon points="17,4 28,4 28,15 24,15 24,8 17,8" fill="#142B52" />
-  <polygon points="15,28 4,28 4,17 8,17 8,24 15,24" fill="#2563EB" />
+  <rect width="32" height="32" rx="6" fill="#142B52" />
+  <polygon points="16,6 26,6 26,16 20.5,16 20.5,11.5 16,11.5" fill="#FFFFFF" />
+  <polygon points="16,26 6,26 6,16 11.5,16 11.5,20.5 16,20.5" fill="#2563EB" />
 </svg>
