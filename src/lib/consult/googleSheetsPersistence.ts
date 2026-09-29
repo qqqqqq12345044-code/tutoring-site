@@ -16,6 +16,7 @@ export class ConsultPersistenceError extends Error {
 
 interface WebhookResponseBody {
   ok?: boolean;
+  message?: string;
 }
 
 /**
@@ -40,6 +41,7 @@ export const googleSheetsPersistence: ConsultPersistence = {
       throw new ConsultPersistenceError("config", "CONSULT_GOOGLE_SHEETS_WEBHOOK_URL is not configured");
     }
 
+    const start = Date.now();
     let response: Response;
     try {
       response = await fetch(webhookUrl, {
@@ -61,18 +63,33 @@ export const googleSheetsPersistence: ConsultPersistence = {
           agree: record.agree,
         }),
       });
-    } catch {
+    } catch (err) {
+      // DIAGNOSTIC (temporary — see incident investigation, remove once root cause is confirmed fixed):
+      // no PII here, only timing/error shape.
+      console.error(
+        `[consult] webhook fetch threw after ${Date.now() - start}ms: ${err instanceof Error ? err.message : "unknown"}`
+      );
       throw new ConsultPersistenceError("network", "failed to reach the Google Sheets webhook");
     }
+    const elapsedMs = Date.now() - start;
 
+    // Read as text first so a non-JSON response body can still be logged
+    // (safely — Apps Script's own error pages never echo submitted PII back).
+    const rawText = await response.text();
     let body: WebhookResponseBody = {};
     try {
-      body = (await response.json()) as WebhookResponseBody;
+      body = JSON.parse(rawText) as WebhookResponseBody;
     } catch {
+      console.error(
+        `[consult] webhook non-JSON response: status=${response.status} content-type=${response.headers.get("content-type")} elapsed=${elapsedMs}ms bodyPrefix=${JSON.stringify(rawText.slice(0, 200))}`
+      );
       throw new ConsultPersistenceError("webhook", "webhook returned a non-JSON response");
     }
 
     if (!response.ok || body.ok !== true) {
+      console.error(
+        `[consult] webhook rejected: status=${response.status} ok=${body.ok} message=${body.message ?? ""} elapsed=${elapsedMs}ms`
+      );
       throw new ConsultPersistenceError("webhook", `webhook rejected the submission (status ${response.status})`);
     }
   },
