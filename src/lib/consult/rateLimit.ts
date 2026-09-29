@@ -11,7 +11,13 @@ const RATE_LIMIT_WINDOW_MS = 60_000;
 // several legitimate submissions in a minute. This is a floor against
 // scripted flooding, not a per-user throttle (that's wasRecentlySubmitted()).
 const RATE_LIMIT_MAX_REQUESTS = 20;
-const DUPLICATE_WINDOW_MS = 10_000;
+// Covers both accidental double-taps AND a user resubmitting after an
+// ambiguous Apps Script webhook failure (route.ts marks those as
+// "submitted" too — see the "webhook" kind handling there). Production
+// incident investigation measured that ambiguous webhook round-trips can
+// take 20-35s, so this needs to comfortably outlast a person reading the
+// error and deciding to try again, not just a reflexive double-click.
+const DUPLICATE_WINDOW_MS = 5 * 60_000;
 /** Prevents the maps below from growing unbounded on a long-lived instance. */
 const MAX_TRACKED_KEYS = 5_000;
 

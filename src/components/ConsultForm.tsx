@@ -144,7 +144,8 @@ export default function ConsultForm() {
 
       {state === "error" && (
         <p role="alert" className="text-sm text-red-600">
-          신청 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.
+          신청 처리 확인에 실패했습니다. 이미 접수되었을 수 있으니 급하신 경우
+          카카오톡으로 문의해주시고, 아니라면 잠시 후 다시 시도해주세요.
         </p>
       )}
 

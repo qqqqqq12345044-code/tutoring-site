@@ -53,6 +53,20 @@ export async function POST(request: Request) {
     const kind = err instanceof ConsultPersistenceError ? err.kind : "unknown";
     // Never log the record itself — only the failure category.
     console.error(`[consult] persistence failed: ${kind}`);
+
+    // Apps Script Web Apps occasionally return a malformed/non-JSON response
+    // (a Google-side response-delivery quirk, not a script failure — see
+    // docs/setup/consult-google-apps-script.md) even though the script's own
+    // execution (Sheets append + email) completed. In that case ("webhook"
+    // kind: we received *some* response from Apps Script, just not a
+    // validated ok:true) we can't tell success from failure — so we treat it
+    // as "possibly submitted" and gate a same-identity retry the same as a
+    // confirmed success, rather than risk a duplicate Sheets row + email.
+    // "config"/"network" failures mean the request never reached Apps
+    // Script at all, so those stay freely retryable.
+    if (kind === "webhook") {
+      markSubmitted(dedupeKey);
+    }
     return NextResponse.json({ ok: false, error: "submission failed" }, { status: 503 });
   }
 

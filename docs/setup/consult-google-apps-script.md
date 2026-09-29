@@ -120,3 +120,40 @@ Google Sheets에 행이 추가되고 관리자 이메일이 도착하는지 확�
 "배포 관리"에서 기존 배포를 업데이트하면 URL이 바뀌지 않습니다 — 새
 배포를 만들면 URL이 바뀌므로 그 경우에만 `CONSULT_GOOGLE_SHEETS_WEBHOOK_URL`도
 갱신하세요.
+
+## 알려진 이슈: Apps Script가 가끔 JSON 대신 HTML을 반환함 (2026-09 발견)
+
+Production 상담폼에서 "관리자 이메일은 도착했는데 사용자 화면에는 오류가
+표시됨" 현상이 발생해 조사한 결과, 원인은 이 저장소의 Next.js 코드가 아니라
+**Google Apps Script Web App 응답 전달 계층의 간헐적 오작동**으로 확인됐습니다.
+
+실측(`src/lib/consult/googleSheetsPersistence.ts`의 진단 로그로 확인):
+
+- 정상 케이스: 약 1.5~6초 내에 `{"ok":true,...}` JSON 응답.
+- 실패 케이스: 19~35초가 걸린 뒤, `ContentService`가 반환해야 할 JSON 대신
+  Google의 내부 뷰어/인터스티셜로 보이는 HTML(`window['ppConfig'] = ...`로
+  시작)이 status 200 또는 404와 함께 돌아옴.
+- 이 HTML은 스크립트가 만든 응답이 아니며, `doPost()`의 `appendRow`/
+  `MailApp.sendEmail` 실행 자체는 이미 끝난 뒤 응답만 유실되는 것으로 보임
+  (실제로 이메일은 정상 발송됨) — 즉 **저장/알림은 성공했는데 호출자
+  (Next.js)만 그 사실을 확인하지 못하는 상태**.
+- 실행이 느릴수록(약 20초 이상) 이 증상이 나타나는 경향이 있어, 동시 실행
+  경합(같은 스크립트/시트에 짧은 시간 안에 여러 요청이 몰릴 때)이 계기일
+  가능성이 있으나 Google 인프라 내부 동작이라 이 저장소에서 완전히
+  통제할 수는 없습니다.
+
+**현재 Next.js 쪽 대응** (`src/app/api/consult/route.ts`,
+`src/lib/consult/rateLimit.ts`): 이런 애매한 응답("webhook" 종류 실패)을
+받으면 사용자에게는 정직하게 실패를 알리되, 같은 학생이름+전화번호로
+5분 안에 재제출하면 Apps Script를 다시 호출하지 않고 조용히 성공 처리해
+**중복 행/중복 메일을 방지**합니다. 단, 이 방법은 "중복 저장 방지"이지
+"첫 시도의 실패 표시 자체를 없애는" 근본 해결책은 아닙니다.
+
+**더 근본적인 해결(선택, 이 저장소에서 직접 배포는 불가능 — Apps Script는
+Google 쪽 리소스라 Claude Code 세션에서 수정할 수 없습니다)**: 위 2번
+섹션의 `doPost` 스크립트에 요청마다 고유 ID(Next.js가 생성해 함께 보내는
+`submissionId` 등)를 받아 `CacheService.getScriptCache()`에 짧은 TTL(예:
+10분)로 기록하고, 이미 처리한 ID가 재수신되면 `appendRow`/`sendEmail`을
+건너뛰고 바로 `respond(true, "ok")`를 반환하도록 하면, Next.js 쪽에서
+안전하게 자동 재시도를 붙일 수 있게 됩니다. 필요하면 이 스크립트 수정을
+요청해주세요 — Next.js 쪽 코드도 함께 맞춰 변경합니다.
