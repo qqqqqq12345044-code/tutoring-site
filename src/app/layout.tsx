@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { publicAssetExists } from "@/lib/brand";
+import { ogImage } from "@/lib/metadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileBottomCTA from "@/components/layout/MobileBottomCTA";
@@ -34,16 +35,21 @@ export const metadata: Metadata = {
       "naver-site-verification": "9a96b2a9519d34ca9e3b5440269cacb7ad3a98ee",
     },
   },
-  // Site-wide default OG image; pages built via buildMetadata() override this
-  // with the same image today, but any page that skips buildMetadata (e.g.
-  // not-found) still gets a real image instead of no preview at all.
-  ...(publicAssetExists(siteConfig.brand.ogImage)
+  // Site-wide default OG/Twitter image; pages built via buildMetadata()
+  // override this with the same image today, but any page that skips
+  // buildMetadata (e.g. not-found) still gets a real image instead of no
+  // preview at all.
+  ...(ogImage
     ? {
         openGraph: {
           siteName: siteConfig.brandName,
           locale: "ko_KR",
           type: "website",
-          images: [siteConfig.brand.ogImage],
+          images: ogImage,
+        },
+        twitter: {
+          card: "summary_large_image",
+          images: ogImage,
         },
       }
     : {}),
