@@ -16,4 +16,10 @@ export interface ConsultRecord extends ConsultPayload {
   submittedAt: string;
   /** Page the request originated from (derived server-side from the Referer header, never user input). */
   sourceUrl: string;
+  /**
+   * Idempotency key for this submission (client-generated and reused when the
+   * same content is resubmitted; server-generated for clients that don't send
+   * one). The Apps Script uses it to skip duplicate rows/emails.
+   */
+  submissionId: string;
 }

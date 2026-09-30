@@ -6,6 +6,8 @@ import { ogImage } from "@/lib/metadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileBottomCTA from "@/components/layout/MobileBottomCTA";
+import AnalyticsTracker from "@/components/analytics/AnalyticsTracker";
+import GoogleAnalytics, { GoogleAnalyticsInit } from "@/components/analytics/GoogleAnalytics";
 import { JsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
 // favicon.ico (src/app/favicon.ico) is the guaranteed fallback; the SVG/apple
@@ -65,6 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
+        <GoogleAnalyticsInit />
       </head>
       <body className="min-h-full flex flex-col">
         <JsonLd data={organizationSchema()} />
@@ -73,6 +76,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <MobileBottomCTA />
+        <AnalyticsTracker />
+        <GoogleAnalytics />
       </body>
     </html>
   );

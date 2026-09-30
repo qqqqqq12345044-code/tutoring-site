@@ -15,7 +15,7 @@ const serviceLinks = [
 
 const consultLinks = [
   { label: "무료상담", href: "/consult" },
-  { label: "카카오톡 상담", href: siteConfig.kakaoUrl },
+  ...(siteConfig.kakaoUrl ? [{ label: "카카오톡 상담", href: siteConfig.kakaoUrl }] : []),
 ];
 
 const legalLinks = [
@@ -78,7 +78,12 @@ export default function Footer() {
             <p className="mt-1.5 text-sm font-medium text-white/80">{siteConfig.slogan}</p>
             <p className="mt-3 text-sm text-white/70 leading-relaxed">{siteConfig.tagline}</p>
             {siteConfig.phone && (
-              <p className="mt-4 text-sm text-white/70">상담 문의 {siteConfig.phoneDisplay}</p>
+              <p className="mt-4 text-sm text-white/70">
+                상담 문의{" "}
+                <a href={`tel:${siteConfig.phone}`} className="text-white/90 hover:text-white underline-offset-2 hover:underline">
+                  {siteConfig.phoneDisplay}
+                </a>
+              </p>
             )}
           </div>
 

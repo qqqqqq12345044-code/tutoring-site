@@ -6,9 +6,14 @@ export const siteConfig = {
   description:
     "국어·영어·수학·사회·과학 1:1 과외. 학생의 현재 수준과 목표를 먼저 확인하고 방문·화상 수업을 연결합니다.",
   domain: "https://gyogwaseolgye.com",
-  phone: "",
-  phoneDisplay: "",
-  kakaoUrl: "https://pf.kakao.com/_example",
+  phone: "010-2813-1821",
+  phoneDisplay: "010-2813-1821",
+  /**
+   * Kakao Talk channel URL. Empty until a real channel exists — every Kakao
+   * button checks this and hides itself, so no dead link is ever rendered.
+   * (The previous placeholder channel ID "_example" doesn't exist on Kakao.)
+   */
+  kakaoUrl: "",
   naverFormUrl: "",
   businessName: "",
   businessRegistrationNumber: "",

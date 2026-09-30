@@ -17,7 +17,10 @@ export default function ConsultCTA({
   showKakao = true,
 }: ConsultCTAProps) {
   return (
-    <div className="rounded-2xl bg-brand-light px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+    <div
+      className="rounded-2xl bg-brand-light px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+      data-analytics-location="consult_cta"
+    >
       <div>
         <p className="text-lg md:text-xl font-bold text-navy">{title}</p>
         {description && <p className="mt-1.5 text-sm text-text-muted">{description}</p>}
@@ -26,7 +29,7 @@ export default function ConsultCTA({
         <PrimaryButton href="/consult" size="lg">
           {ctaLabel}
         </PrimaryButton>
-        {showKakao && (
+        {showKakao && siteConfig.kakaoUrl && (
           <a
             href={siteConfig.kakaoUrl}
             target="_blank"

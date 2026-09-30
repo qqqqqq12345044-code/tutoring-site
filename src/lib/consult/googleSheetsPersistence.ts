@@ -7,7 +7,9 @@ export type ConsultPersistenceErrorKind = "config" | "network" | "webhook";
 export class ConsultPersistenceError extends Error {
   constructor(
     public readonly kind: ConsultPersistenceErrorKind,
-    message: string
+    message: string,
+    /** False when a retry can't help (missing config, rejected secret). */
+    public readonly retryable = true
   ) {
     super(message);
     this.name = "ConsultPersistenceError";
@@ -20,16 +22,86 @@ interface WebhookResponseBody {
 }
 
 /**
+ * One automatic retry is only safe once the deployed Apps Script dedupes by
+ * submissionId (docs/setup/consult-apps-script.gs, v2). Against the old v1
+ * script a retry after a lost response would append a second row and send a
+ * second email, so this stays off until CONSULT_WEBHOOK_IDEMPOTENT=true is set
+ * *after* deploying v2.
+ */
+const RETRY_DELAY_MS = 1_000;
+/** Don't start a retry this late — ambiguous failures already take 20-40s. */
+const RETRY_START_BUDGET_MS = 45_000;
+/** A v2 duplicate answer comes from CacheService/the sheet lookup, so a retry should be quick. */
+const RETRY_TIMEOUT_MS = 15_000;
+
+export function isIdempotentWebhook(): boolean {
+  return process.env.CONSULT_WEBHOOK_IDEMPOTENT === "true";
+}
+
+async function postOnce(webhookUrl: string, payload: string, signal?: AbortSignal): Promise<void> {
+  const start = Date.now();
+  let response: Response;
+  try {
+    response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: payload,
+      signal,
+    });
+  } catch (err) {
+    // No PII here, only timing/error shape.
+    console.error(
+      `[consult] webhook fetch threw after ${Date.now() - start}ms: ${err instanceof Error ? err.message : "unknown"}`
+    );
+    throw new ConsultPersistenceError("network", "failed to reach the Google Sheets webhook");
+  }
+  const elapsedMs = Date.now() - start;
+
+  // Read as text first so a non-JSON response body can still be logged
+  // (safely — Apps Script's own error pages never echo submitted PII back).
+  let rawText: string;
+  try {
+    rawText = await response.text();
+  } catch {
+    console.error(`[consult] webhook body read failed: status=${response.status} elapsed=${elapsedMs}ms`);
+    throw new ConsultPersistenceError("webhook", "webhook response body could not be read");
+  }
+  let body: WebhookResponseBody = {};
+  try {
+    body = JSON.parse(rawText) as WebhookResponseBody;
+  } catch {
+    console.error(
+      `[consult] webhook non-JSON response: status=${response.status} content-type=${response.headers.get("content-type")} elapsed=${elapsedMs}ms bodyPrefix=${JSON.stringify(rawText.slice(0, 200))}`
+    );
+    throw new ConsultPersistenceError("webhook", "webhook returned a non-JSON response");
+  }
+
+  if (!response.ok || body.ok !== true) {
+    console.error(
+      `[consult] webhook rejected: status=${response.status} ok=${body.ok} message=${body.message ?? ""} elapsed=${elapsedMs}ms`
+    );
+    throw new ConsultPersistenceError(
+      "webhook",
+      `webhook rejected the submission (status ${response.status})`,
+      body.message !== "unauthorized" && body.message !== "bad request"
+    );
+  }
+  if (body.message === "duplicate") {
+    console.info(`[consult] webhook recognized a duplicate submissionId elapsed=${elapsedMs}ms`);
+  }
+}
+
+/**
  * Persists a consult submission via a Google Apps Script Web App bound to a
- * Google Sheet (see docs/setup/consult-google-apps-script.md for the script
- * itself and setup steps). The script also sends the admin email notification
- * in the same execution, so this is the only outbound call this app makes —
- * no separate notifier round-trip is needed.
+ * Google Sheet (see docs/setup/consult-google-apps-script.md for setup and
+ * docs/setup/consult-apps-script.gs for the script). The script also sends the
+ * admin email notification in the same execution, so this is the only
+ * outbound call this app makes — no separate notifier round-trip is needed.
  *
  * Apps Script Web Apps always answer HTTP 200 for a completed execution, even
  * when the script's own logic rejects the request (e.g. bad secret) — so a
  * failure is only visible in the JSON body's `ok` field, not the HTTP status.
- * Both are checked below.
+ * Both are checked.
  */
 export const googleSheetsPersistence: ConsultPersistence = {
   async save(record: ConsultRecord) {
@@ -38,59 +110,38 @@ export const googleSheetsPersistence: ConsultPersistence = {
     const adminEmail = process.env.CONSULT_ADMIN_EMAIL;
 
     if (!webhookUrl) {
-      throw new ConsultPersistenceError("config", "CONSULT_GOOGLE_SHEETS_WEBHOOK_URL is not configured");
+      throw new ConsultPersistenceError("config", "CONSULT_GOOGLE_SHEETS_WEBHOOK_URL is not configured", false);
     }
+
+    const payload = JSON.stringify({
+      secret,
+      adminEmail,
+      submissionId: record.submissionId,
+      submittedAt: record.submittedAt,
+      studentName: record.studentName,
+      phone: record.phone,
+      grade: record.grade,
+      subject: record.subject,
+      province: record.province,
+      cityDetail: record.cityDetail ?? "",
+      availableTime: record.availableTime ?? "",
+      message: record.message ?? "",
+      sourceUrl: record.sourceUrl,
+      agree: record.agree,
+    });
 
     const start = Date.now();
-    let response: Response;
     try {
-      response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          secret,
-          adminEmail,
-          submittedAt: record.submittedAt,
-          studentName: record.studentName,
-          phone: record.phone,
-          grade: record.grade,
-          subject: record.subject,
-          province: record.province,
-          cityDetail: record.cityDetail ?? "",
-          availableTime: record.availableTime ?? "",
-          message: record.message ?? "",
-          sourceUrl: record.sourceUrl,
-          agree: record.agree,
-        }),
-      });
+      await postOnce(webhookUrl, payload);
     } catch (err) {
-      // DIAGNOSTIC (temporary — see incident investigation, remove once root cause is confirmed fixed):
-      // no PII here, only timing/error shape.
-      console.error(
-        `[consult] webhook fetch threw after ${Date.now() - start}ms: ${err instanceof Error ? err.message : "unknown"}`
-      );
-      throw new ConsultPersistenceError("network", "failed to reach the Google Sheets webhook");
-    }
-    const elapsedMs = Date.now() - start;
+      const retryable = err instanceof ConsultPersistenceError && err.retryable;
+      if (!retryable || !isIdempotentWebhook() || Date.now() - start > RETRY_START_BUDGET_MS) throw err;
 
-    // Read as text first so a non-JSON response body can still be logged
-    // (safely — Apps Script's own error pages never echo submitted PII back).
-    const rawText = await response.text();
-    let body: WebhookResponseBody = {};
-    try {
-      body = JSON.parse(rawText) as WebhookResponseBody;
-    } catch {
-      console.error(
-        `[consult] webhook non-JSON response: status=${response.status} content-type=${response.headers.get("content-type")} elapsed=${elapsedMs}ms bodyPrefix=${JSON.stringify(rawText.slice(0, 200))}`
-      );
-      throw new ConsultPersistenceError("webhook", "webhook returned a non-JSON response");
-    }
-
-    if (!response.ok || body.ok !== true) {
-      console.error(
-        `[consult] webhook rejected: status=${response.status} ok=${body.ok} message=${body.message ?? ""} elapsed=${elapsedMs}ms`
-      );
-      throw new ConsultPersistenceError("webhook", `webhook rejected the submission (status ${response.status})`);
+      // Same submissionId: the v2 script answers "duplicate" if the first
+      // attempt was actually saved, or saves it now if it wasn't.
+      console.error(`[consult] retrying webhook once after ${(err as ConsultPersistenceError).kind} failure`);
+      await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
+      await postOnce(webhookUrl, payload, AbortSignal.timeout(RETRY_TIMEOUT_MS));
     }
   },
 };

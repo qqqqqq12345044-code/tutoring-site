@@ -15,64 +15,13 @@ Script Web App에 한 번 POST합니다. 스크립트는 (1) Google Sheets에 �
 ## 2. Apps Script 작성
 
 해당 Sheets 문서에서 **확장 프로그램 → Apps Script**를 열고, 기본
-`Code.gs` 내용을 아래 코드로 교체합니다.
+`Code.gs` 내용을 이 저장소의 **`docs/setup/consult-apps-script.gs` 파일 전체**로
+교체합니다(스크립트 원본은 이 파일 하나만 관리합니다 — 문서에 코드를 복사해
+두지 않습니다).
 
-```javascript
-function doPost(e) {
-  try {
-    var data = JSON.parse(e.postData.contents);
-
-    var expectedSecret = PropertiesService.getScriptProperties().getProperty("WEBHOOK_SECRET");
-    if (!expectedSecret || data.secret !== expectedSecret) {
-      return respond(false, "unauthorized");
-    }
-
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    sheet.appendRow([
-      data.submittedAt || new Date().toISOString(),
-      data.studentName || "",
-      data.phone || "",
-      data.grade || "",
-      data.subject || "",
-      data.province || "",
-      data.cityDetail || "",
-      data.availableTime || "",
-      data.message || "",
-      data.sourceUrl || "",
-      data.agree ? "Y" : "N",
-    ]);
-
-    if (data.adminEmail) {
-      MailApp.sendEmail({
-        to: data.adminEmail,
-        subject: "[교과설계소] 새 상담 신청 - " + (data.studentName || ""),
-        body:
-          "새 상담 신청이 접수되었습니다.\n\n" +
-          "학생 이름: " + (data.studentName || "") + "\n" +
-          "전화번호: " + (data.phone || "") + "\n" +
-          "학년: " + (data.grade || "") + "\n" +
-          "과목: " + (data.subject || "") + "\n" +
-          "지역: " + (data.province || "") + " " + (data.cityDetail || "") + "\n" +
-          "희망 시간: " + (data.availableTime || "") + "\n" +
-          "문의사항: " + (data.message || "") + "\n" +
-          "유입 페이지: " + (data.sourceUrl || "") + "\n" +
-          "접수 시각: " + (data.submittedAt || "") + "\n\n" +
-          "전체 내역은 Google Sheets에서 확인하세요.",
-      });
-    }
-
-    return respond(true, "ok");
-  } catch (err) {
-    return respond(false, "error");
-  }
-}
-
-function respond(ok, message) {
-  var output = ContentService.createTextOutput(JSON.stringify({ ok: ok, message: message }));
-  output.setMimeType(ContentService.MimeType.JSON);
-  return output;
-}
-```
+1단계 헤더에 두 열을 더 추가해 둡니다(v2부터 사용, 없어도 동작은 하지만
+시트에서 알아보기 쉽도록): `... | 개인정보동의 | 접수ID | 알림메일`
+(L열 = 접수ID, M열 = 알림메일 "Y").
 
 ## 3. Secret 설정
 
@@ -142,18 +91,49 @@ Production 상담폼에서 "관리자 이메일은 도착했는데 사용자 화
   가능성이 있으나 Google 인프라 내부 동작이라 이 저장소에서 완전히
   통제할 수는 없습니다.
 
-**현재 Next.js 쪽 대응** (`src/app/api/consult/route.ts`,
-`src/lib/consult/rateLimit.ts`): 이런 애매한 응답("webhook" 종류 실패)을
-받으면 사용자에게는 정직하게 실패를 알리되, 같은 학생이름+전화번호로
-5분 안에 재제출하면 Apps Script를 다시 호출하지 않고 조용히 성공 처리해
-**중복 행/중복 메일을 방지**합니다. 단, 이 방법은 "중복 저장 방지"이지
-"첫 시도의 실패 표시 자체를 없애는" 근본 해결책은 아닙니다.
+**대응 (2026-09-30, v2 idempotency)**: 응답 유실 자체는 Google 쪽 문제라
+막을 수 없으므로, "같은 요청이 여러 번 도착해도 결과는 1건"이 되도록 양쪽을
+바꿨습니다.
 
-**더 근본적인 해결(선택, 이 저장소에서 직접 배포는 불가능 — Apps Script는
-Google 쪽 리소스라 Claude Code 세션에서 수정할 수 없습니다)**: 위 2번
-섹션의 `doPost` 스크립트에 요청마다 고유 ID(Next.js가 생성해 함께 보내는
-`submissionId` 등)를 받아 `CacheService.getScriptCache()`에 짧은 TTL(예:
-10분)로 기록하고, 이미 처리한 ID가 재수신되면 `appendRow`/`sendEmail`을
-건너뛰고 바로 `respond(true, "ok")`를 반환하도록 하면, Next.js 쪽에서
-안전하게 자동 재시도를 붙일 수 있게 됩니다. 필요하면 이 스크립트 수정을
-요청해주세요 — Next.js 쪽 코드도 함께 맞춰 변경합니다.
+- **submissionId**: `ConsultForm`이 제출마다 UUID를 만들고, 같은 폼에서
+  *같은 내용*으로 다시 제출하면 같은 ID를 재사용합니다(내용이 하나라도 바뀌면
+  새 ID). "이름+전화번호가 같으면 중복"으로 보지 않으므로, 같은 가족의 다른
+  과목 신청 같은 실제로 다른 요청은 합쳐지지 않습니다. ID가 없는 구버전
+  클라이언트 요청은 서버가 ID를 만들어 붙입니다.
+- **Apps Script v2** (`consult-apps-script.gs`): `LockService` 스크립트 락으로
+  "ID 조회 → 행 추가 → 메일 → 메일 표시"를 직렬화하고, 이미 처리한 ID는 행을
+  추가하지 않고 `{"ok":true,"message":"duplicate"}`로 답합니다. 처리 여부의
+  근거는 시트의 **접수ID 열**(영구)이고, `CacheService`는 빠른 응답용일 뿐입니다
+  (최대 6시간·임의 축출 가능하므로 정확성의 근거로 쓰지 않음). 행은 저장됐는데
+  메일 전에 실패한 경우, 재시도 때 메일만 보냅니다. `PropertiesService`는 용량
+  (전체 500KB)이 작아 ID 저장소로 쓰지 않고 secret 보관에만 씁니다.
+  락을 20초 안에 못 잡으면 아무것도 쓰지 않고 `busy`로 답합니다(재시도 안전).
+- **Next.js 방어 계층 (유지)**: 같은 인스턴스에서 5분 안의 재제출은 Apps Script를
+  다시 부르지 않고 성공 처리합니다. 키는 `submissionId`와 **입력 전체의 해시**
+  입니다(이전: 이름+전화번호).
+- **자동 재시도 (`CONSULT_WEBHOOK_IDEMPOTENT=true`일 때만)**: 애매한 실패
+  (HTML 응답, 네트워크 오류, `ok:false`의 error/busy)면 같은 submissionId로 1회
+  재시도합니다. v2 스크립트가 "duplicate"를 빠르게 돌려주므로, 위 장애 패턴이
+  사용자 화면에서 **성공**으로 바뀝니다. 잘못된 secret(`unauthorized`)은 재시도하지
+  않습니다. 이 모드에서는 실패한 요청을 5분 게이트로 막지 않아, 저장 전에 실패한
+  신청도 사용자가 다시 제출할 수 있습니다.
+
+로컬 검증(실제 Google 계정 없이, `.gs` 파일을 그대로 실행하는 모의 서비스 +
+실제 `next start`): 정상/동일 요청 재전송/동시 중복/같은 이름·번호의 다른 요청/
+잘못된 secret/저장 후 HTML 응답/저장 전 실패/메일 실패/소켓 끊김/구버전
+요청(ID 없음) 시나리오에서 행·메일이 모두 1건(다른 요청은 각 1건)으로 확인됨.
+
+## v2로 업그레이드하는 순서 (반드시 이 순서)
+
+1. Sheets 1행 L1·M1에 `접수ID`, `알림메일` 헤더를 추가합니다(선택).
+2. Apps Script 편집기에서 `Code.gs`를 `docs/setup/consult-apps-script.gs`로
+   교체 → **배포 → 배포 관리 → 기존 배포 편집(연필) → 버전: 새 버전 → 배포**.
+   (새 배포를 만들면 URL이 바뀝니다. 기존 배포를 새 버전으로 올리면 URL 유지.)
+   v2는 submissionId가 없는 기존 요청도 v1과 똑같이 처리하므로, 이 단계만
+   먼저 해도 운영에 영향이 없습니다.
+3. 테스트 제출 1건으로 L열에 접수ID가 채워지고 M열이 `Y`가 되는지 확인합니다.
+4. 그 다음에 Vercel 환경변수 `CONSULT_WEBHOOK_IDEMPOTENT=true`를 추가하고
+   재배포합니다. **v2 배포 전에 이 값을 켜면 재시도가 중복 행/메일을 만듭니다.**
+
+롤백: `CONSULT_WEBHOOK_IDEMPOTENT`를 지우고 재배포하면 재시도가 꺼집니다.
+Apps Script는 "배포 관리"에서 이전 버전을 선택해 되돌릴 수 있습니다.

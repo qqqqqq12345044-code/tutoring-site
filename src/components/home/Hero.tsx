@@ -4,7 +4,7 @@ import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function Hero() {
   return (
-    <section className="bg-white border-b border-border-subtle">
+    <section className="bg-white border-b border-border-subtle" data-analytics-location="hero">
       <div className="container-page py-12 md:py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-5">
           <span className="inline-flex w-fit items-center rounded-full bg-brand-light px-3.5 py-1.5 text-xs font-bold text-brand">

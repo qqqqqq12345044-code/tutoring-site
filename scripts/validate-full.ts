@@ -101,6 +101,12 @@ async function main() {
       if (!searchOk) failures.push("search smoke");
 
       const consult = await checkConsultApiSmoke();
+      // The smoke sends one valid submission plus an identical resubmission;
+      // only the first may reach the webhook (the second must be deduped).
+      if (mockWebhook.receivedCount() !== 1) {
+        consult.ok = false;
+        consult.details.push(`webhook expected exactly 1 call (duplicate deduped), got ${mockWebhook.receivedCount()}`);
+      }
       results.consultSmoke = consult.ok ? "PASS" : "FAIL";
       console.log(`Consult API smoke: ${consult.ok ? "PASS" : "FAIL"}`);
       if (!consult.ok) {

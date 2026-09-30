@@ -1,20 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
-import { MessageCircle, Loader2, CheckCircle2 } from "lucide-react";
+import { MessageCircle, Loader2, CheckCircle2, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getProvinces } from "@/data/regions";
+import { readConsultSource, trackEvent } from "@/lib/analytics";
 
 const gradeOptions = [...grades.flatMap((g) => g.subGrades.map((sg) => sg.label)), "기타"];
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
+/** Fallback contact named in the success/error copy: Kakao when configured, else the phone line. */
+const quickContactLabel = siteConfig.kakaoUrl
+  ? "카카오톡으로"
+  : siteConfig.phone
+    ? `전화(${siteConfig.phoneDisplay})로`
+    : "";
+
+function newSubmissionId(): string {
+  if (typeof crypto.randomUUID === "function") return crypto.randomUUID();
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  return Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("");
+}
+
 export default function ConsultForm() {
   const [state, setState] = useState<SubmitState>("idle");
   const provinces = getProvinces();
+  // One idempotency key per distinct submission: resubmitting the *same*
+  // content (e.g. after an ambiguous failure) reuses it so the server and
+  // Apps Script recognize the retry; changing any field starts a new one.
+  const attemptRef = useRef<{ fingerprint: string; submissionId: string } | null>(null);
+  const startedRef = useRef(false);
+
+  function handleFirstInteraction() {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackEvent("consult_form_start", { ...readConsultSource() });
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -22,16 +47,29 @@ export default function ConsultForm() {
 
     const formData = new FormData(e.currentTarget);
     const payload = Object.fromEntries(formData.entries());
+    const fingerprint = JSON.stringify(payload);
+    if (attemptRef.current?.fingerprint !== fingerprint) {
+      attemptRef.current = { fingerprint, submissionId: newSubmissionId() };
+    }
+    const { submissionId } = attemptRef.current;
 
+    // Attribution only — never form values.
+    const source = readConsultSource();
     try {
       const res = await fetch("/api/consult", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, submissionId }),
       });
-      if (!res.ok) throw new Error("submit failed");
+      if (!res.ok) {
+        trackEvent("consult_submit_failure", { ...source, reason: `http_${res.status}` });
+        setState("error");
+        return;
+      }
+      trackEvent("consult_submit_success", { ...source });
       setState("success");
     } catch {
+      trackEvent("consult_submit_failure", { ...source, reason: "network" });
       setState("error");
     }
   }
@@ -42,18 +80,30 @@ export default function ConsultForm() {
         <CheckCircle2 className="w-10 h-10 text-brand" />
         <p className="text-lg font-bold text-navy">상담 신청이 접수되었습니다</p>
         <p className="text-sm text-text-muted leading-relaxed">
-          남겨주신 연락처로 순차적으로 연락드리겠습니다. 빠른 상담이 필요하시면 카카오톡으로도
-          문의해주세요.
+          남겨주신 연락처로 순차적으로 연락드리겠습니다.
+          {quickContactLabel && ` 빠른 상담이 필요하시면 ${quickContactLabel}도 문의해주세요.`}
         </p>
-        <a
-          href={siteConfig.kakaoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-[#FEE500] text-[#191919] font-semibold px-6 py-3 text-sm"
-        >
-          <MessageCircle className="w-4 h-4" />
-          카카오톡으로 상담하기
-        </a>
+        {siteConfig.kakaoUrl ? (
+          <a
+            href={siteConfig.kakaoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-[#FEE500] text-[#191919] font-semibold px-6 py-3 text-sm"
+          >
+            <MessageCircle className="w-4 h-4" />
+            카카오톡으로 상담하기
+          </a>
+        ) : (
+          siteConfig.phone && (
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-brand text-brand font-semibold px-6 py-3 text-sm"
+            >
+              <Phone className="w-4 h-4" aria-hidden="true" />
+              {siteConfig.phoneDisplay} 전화 상담
+            </a>
+          )
+        )}
       </div>
     );
   }
@@ -61,6 +111,7 @@ export default function ConsultForm() {
   return (
     <form
       onSubmit={handleSubmit}
+      onFocus={handleFirstInteraction}
       className="rounded-2xl border border-border-subtle bg-white p-5 sm:p-6 md:p-8 flex flex-col gap-5 md:gap-6"
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -144,8 +195,9 @@ export default function ConsultForm() {
 
       {state === "error" && (
         <p role="alert" className="text-sm text-red-600">
-          신청 처리 확인에 실패했습니다. 이미 접수되었을 수 있으니 급하신 경우
-          카카오톡으로 문의해주시고, 아니라면 잠시 후 다시 시도해주세요.
+          신청 처리 확인에 실패했습니다. 이미 접수되었을 수 있으니
+          {quickContactLabel ? ` 급하신 경우 ${quickContactLabel} 문의해주시고, 아니라면` : ""} 잠시 후
+          같은 내용으로 다시 시도해주세요.
         </p>
       )}
 
@@ -158,15 +210,17 @@ export default function ConsultForm() {
           {state === "loading" && <Loader2 className="w-4 h-4 animate-spin" />}
           무료 상담 신청하기
         </button>
-        <a
-          href={siteConfig.kakaoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] text-[#191919] font-semibold py-3.5 text-sm"
-        >
-          <MessageCircle className="w-4 h-4" />
-          카카오톡으로 상담하기
-        </a>
+        {siteConfig.kakaoUrl && (
+          <a
+            href={siteConfig.kakaoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] text-[#191919] font-semibold py-3.5 text-sm"
+          >
+            <MessageCircle className="w-4 h-4" />
+            카카오톡으로 상담하기
+          </a>
+        )}
       </div>
     </form>
   );
