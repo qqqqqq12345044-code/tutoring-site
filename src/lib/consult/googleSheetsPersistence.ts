@@ -38,16 +38,82 @@ export function isIdempotentWebhook(): boolean {
   return process.env.CONSULT_WEBHOOK_IDEMPOTENT === "true";
 }
 
+/** fetch()'s own default redirect limit, so manual following gives up at the same point. */
+const MAX_REDIRECTS = 20;
+const REDIRECT_STATUSES = new Set([301, 302, 303, 307, 308]);
+
+/**
+ * Where a hop went, safe to log: hostname + a coarse path kind only. Never the
+ * full URL — the webhook path carries the deployment ID and the echo URL
+ * carries a reusable user_content_key.
+ */
+function describeHop(url: string): string {
+  try {
+    const { hostname, pathname } = new URL(url);
+    const kind = pathname.endsWith("/exec") ? "exec" : pathname.includes("/echo") ? "echo" : "other";
+    return `${hostname}/${kind}`;
+  } catch {
+    return "invalid-url";
+  }
+}
+
+/**
+ * Same semantics as fetch()'s default redirect: "follow" (303, and 301/302 after
+ * a POST, become a GET without a body; 307/308 repeat the method and body), but
+ * each hop is timed so the Apps Script POST (answered with a 302 only after
+ * doPost() returns) can be told apart from the echo GET that delivers the
+ * result. Logs one [consult-webhook-timing] line per call — status,
+ * content-type, elapsed ms and hop host/kind only, no PII.
+ */
+async function fetchWithTimedRedirects(url: string, payload: string, signal?: AbortSignal): Promise<Response> {
+  const start = Date.now();
+  const hops: string[] = [];
+  let method = "POST";
+  let body: string | undefined = payload;
+  let currentUrl = url;
+
+  try {
+    for (let hop = 0; ; hop++) {
+      const hopStart = Date.now();
+      const response = await fetch(currentUrl, {
+        method,
+        headers: body !== undefined ? { "Content-Type": "application/json" } : undefined,
+        body,
+        redirect: "manual",
+        signal,
+      });
+      const location = response.headers.get("location");
+      const label = hop === 0 ? "post" : `hop${hop}`;
+      hops.push(
+        `${label}=${response.status}/${Date.now() - hopStart}ms(${response.headers.get("content-type") ?? "-"})@${describeHop(currentUrl)}`
+      );
+
+      if (!REDIRECT_STATUSES.has(response.status) || !location) {
+        console.info(`[consult-webhook-timing] ${hops.join(" ")} total=${Date.now() - start}ms`);
+        return response;
+      }
+      if (hop >= MAX_REDIRECTS) throw new TypeError("redirect count exceeded");
+
+      // Drain the redirect body so the connection can be reused.
+      await response.arrayBuffer().catch(() => undefined);
+      if (response.status === 303 || ((response.status === 301 || response.status === 302) && method === "POST")) {
+        method = "GET";
+        body = undefined;
+      }
+      currentUrl = new URL(location, currentUrl).toString();
+    }
+  } catch (err) {
+    hops.push(`threw@${describeHop(currentUrl)}`);
+    console.info(`[consult-webhook-timing] ${hops.join(" ")} total=${Date.now() - start}ms`);
+    throw err;
+  }
+}
+
 async function postOnce(webhookUrl: string, payload: string, signal?: AbortSignal): Promise<void> {
   const start = Date.now();
   let response: Response;
   try {
-    response = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: payload,
-      signal,
-    });
+    response = await fetchWithTimedRedirects(webhookUrl, payload, signal);
   } catch (err) {
     // No PII here, only timing/error shape.
     console.error(
