@@ -5,6 +5,9 @@ import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished
 import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished } from "@/data/regionProgramContent";
 import { getSubGradeContent, isPublishedContent as isSubGradePublished } from "@/data/subGradeContent";
 import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
+import { getRegionBySlug, getRegionUrl } from "@/data/regions";
+import { qualityNoindexPaths } from "@/data/qualityNoindex";
+import { schools } from "@/data/schools";
 
 /**
  * Central indexing policy for programmatic SEO routes.
@@ -34,6 +37,16 @@ import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished }
  * "school-subject" (2026-09 change — ~97% of school pages were near-duplicate
  * templates once school count scaled past ~100; see docs/qa for the audit).
  * Plain "program" (/program/[slug]) is unchanged and still unconditionally indexed.
+ *
+ * "region" (province / city / district hub) is gated on registered schools
+ * (2026-10 change): a region with no school anywhere in its subtree renders
+ * the same template as every other empty region (audit: 14 provinces read
+ * ~100% identical), so it stays reachable for users but is noindex and out of
+ * the sitemap until schools.ts covers it.
+ *
+ * "region-subject" / "region-grade-subject" / "school-subject" pages listed in
+ * src/data/qualityNoindex.ts (quality gate RED, 2026-10) are noindex even with
+ * published content; the page itself still renders unchanged.
  */
 
 export type IndexabilityKind =
@@ -52,7 +65,10 @@ export type IndexabilityKind =
   | "region-program"; // /region/[province]/[city]/program/[programSlug]
 
 export interface IndexabilityContext {
-  /** City-level region slug, required for "region-subject" / "region-grade-subject" / "region-program" to look up dedicated content. */
+  /**
+   * Region slug. Any level for "region" (school-count gate); city-level for
+   * "region-subject" / "region-grade-subject" / "region-program" to look up dedicated content.
+   */
   regionSlug?: string;
   /** Subject slug, required for "region-subject" / "region-grade-subject" / "school-subject". */
   subjectSlug?: string;
@@ -75,6 +91,16 @@ export interface Indexability {
   sitemap: boolean;
 }
 
+/** Registered schools located anywhere under a province / city / district node. */
+export function countSchoolsInRegion(regionSlug: string): number {
+  return schools.filter(
+    (s) =>
+      s.cityRegionSlug === regionSlug ||
+      s.districtRegionSlug === regionSlug ||
+      getRegionBySlug(s.cityRegionSlug)?.parentSlug === regionSlug
+  ).length;
+}
+
 const INDEXED: Indexability = { index: true, sitemap: true };
 const NOT_INDEXED: Indexability = { index: false, sitemap: false };
 
@@ -83,8 +109,10 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
     case "subject":
     case "grade":
     case "program":
-    case "region":
       return INDEXED;
+
+    case "region":
+      return ctx.regionSlug && countSchoolsInRegion(ctx.regionSlug) > 0 ? INDEXED : NOT_INDEXED;
 
     case "school": {
       const content = ctx.schoolSlug ? getSchoolContent(ctx.schoolSlug) : undefined;
@@ -107,7 +135,8 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
       const hasDedicatedContent = Boolean(
         ctx.regionSlug && ctx.subjectSlug && getRegionSubjectContent(ctx.regionSlug, ctx.subjectSlug)
       );
-      return hasDedicatedContent ? INDEXED : NOT_INDEXED;
+      if (!hasDedicatedContent) return NOT_INDEXED;
+      return qualityNoindexPaths.has(`${getRegionUrl(ctx.regionSlug!)}/${ctx.subjectSlug}`) ? NOT_INDEXED : INDEXED;
     }
 
     case "region-grade-subject": {
@@ -115,13 +144,17 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
         ctx.regionSlug && ctx.gradeSlug && ctx.subjectSlug
           ? getRegionGradeSubjectContent(ctx.regionSlug, ctx.gradeSlug, ctx.subjectSlug)
           : undefined;
-      return isRegionGradeSubjectPublished(content) ? INDEXED : NOT_INDEXED;
+      if (!isRegionGradeSubjectPublished(content)) return NOT_INDEXED;
+      return qualityNoindexPaths.has(`${getRegionUrl(content.regionSlug)}/${content.gradeSlug}/${content.subjectSlug}`)
+        ? NOT_INDEXED
+        : INDEXED;
     }
 
     case "school-subject": {
       const content =
         ctx.schoolSlug && ctx.subjectSlug ? getSchoolSubjectContent(ctx.schoolSlug, ctx.subjectSlug) : undefined;
-      return isSchoolSubjectPublished(content) ? INDEXED : NOT_INDEXED;
+      if (!isSchoolSubjectPublished(content)) return NOT_INDEXED;
+      return qualityNoindexPaths.has(`/school/${content.schoolSlug}/${content.subjectSlug}`) ? NOT_INDEXED : INDEXED;
     }
 
     case "region-program": {

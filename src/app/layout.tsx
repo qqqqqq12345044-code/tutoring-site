@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { publicAssetExists } from "@/lib/brand";
-import { ogImage } from "@/lib/metadata";
+import { ogImage, rssFeed } from "@/lib/metadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileBottomCTA from "@/components/layout/MobileBottomCTA";
@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.brandName}`,
   },
   description: siteConfig.description,
+  alternates: { types: { "application/rss+xml": rssFeed } },
   icons,
   verification: {
     other: {

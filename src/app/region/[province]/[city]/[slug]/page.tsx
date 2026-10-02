@@ -7,8 +7,11 @@ import { getRegionSubjectContent, regionSubjectContents } from "@/data/regionSub
 import { schools, type School } from "@/data/schools";
 import { caseStudies } from "@/data/caseStudies";
 import { getFaqsBySlugs } from "@/data/faqs";
+import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
+import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
+import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -75,7 +78,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
       robots: { index, follow: true },
     });
   }
-  const { index } = getIndexability("region");
+  const { index } = getIndexability("region", { regionSlug: ctx.district.slug });
   return buildMetadata({
     title: `${ctx.district.name} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${ctx.district.fullName} 초등·중등·고등 1:1 과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 상담해보세요.`,
@@ -98,8 +101,21 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
   if (ctx.type === "subject") {
     const content = getRegionSubjectContent(ctx.region.slug, ctx.subject.slug);
     const districts = getChildren(ctx.region.slug);
-    const faqs = getFaqsBySlugs(ctx.subject.faqSlugs);
+    const guide = getSubjectStudyGuide(ctx.subject.slug);
+    const regionFaqs = (content?.faqs ?? []).map((f, i) => ({ slug: `region-${i}`, ...f }));
+    const faqs = [...regionFaqs, ...getFaqsBySlugs(ctx.subject.faqSlugs)];
     const relatedSchools = schools.filter((s) => s.cityRegionSlug === ctx.region.slug);
+    // Deeper region+grade+subject pages that are indexed — linked up top so the
+    // broad (region+subject) and narrow (region+grade+subject) pages keep distinct roles.
+    const gradeDetailLinks = indexedRegionGradeSubjectLinks(ctx.region.slug, { subjectSlug: ctx.subject.slug });
+    // Sibling subjects: only indexed region+subject pages; the city hub lists every subject.
+    const siblingSubjectLinks = subjects
+      .filter(
+        (s) =>
+          s.slug !== ctx.subject.slug &&
+          getIndexability("region-subject", { regionSlug: ctx.region.slug, subjectSlug: s.slug }).index
+      )
+      .map((s) => ({ label: `${ctx.region.name} ${s.name}과외`, href: `/region/${province}/${city}/${s.slug}` }));
 
     return (
       <>
@@ -136,16 +152,79 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
           </div>
         </section>
 
+        {gradeDetailLinks.length > 0 && (
+          <section className="container-page pb-14 md:pb-16 -mt-4">
+            <RelatedLinks title="학년별로 더 자세히 보기" links={gradeDetailLinks} />
+          </section>
+        )}
+
+        {/* REGION-SPECIFIC NOTES */}
+        {content?.localNotes && content.localNotes.length > 0 && (
+          <section className="bg-white border-y border-border-subtle">
+            <div className="container-page py-14 md:py-16">
+              <SectionHeader align="left" title={`${ctx.region.name}에서 ${ctx.subject.name} 공부할 때 알아둘 점`} />
+              <div className="mt-8 grid md:grid-cols-2 gap-8">
+                {content.localNotes.map((n) => (
+                  <article key={n.title}>
+                    <h3 className="font-bold text-navy">{n.title}</h3>
+                    <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed">{n.body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* SHARED STUDY GUIDE — problems & fixes, exam plan */}
+        {guide && (
+          <>
+            <section className="container-page py-14 md:py-16">
+              <SectionHeader
+                align="left"
+                title={`${ctx.subject.name} 성적이 오르지 않는 대표적인 이유와 해결 방법`}
+                description="지역과 관계없이 많은 학생이 비슷한 지점에서 막힙니다."
+              />
+              <div className="mt-8 flex flex-col gap-5">
+                {guide.commonProblems.map((p) => (
+                  <article key={p.problem} className="rounded-2xl border border-border-subtle bg-white p-6">
+                    <h3 className="font-bold text-navy">“{p.problem}”</h3>
+                    <p className="mt-2 text-sm text-text-muted leading-relaxed">
+                      <span className="font-semibold text-text-main">원인</span> · {p.cause}
+                    </p>
+                    <p className="mt-1.5 text-sm text-text-muted leading-relaxed">
+                      <span className="font-semibold text-brand">해결</span> · {p.solution}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="bg-white border-y border-border-subtle">
+              <div className="container-page py-14 md:py-16">
+                <SectionHeader align="left" title={`시험 4주 전부터의 ${ctx.subject.name} 학습 계획`} />
+                <ol className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                  {guide.examPlan.map((step) => (
+                    <li key={step.when} className="border-l-4 border-brand-light pl-5 py-0.5">
+                      <p className="text-sm font-bold text-brand">{step.when}</p>
+                      <p className="mt-2 text-sm text-text-main leading-relaxed">{step.focus}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </section>
+          </>
+        )}
+
         {/* WHEN TO CONSULT */}
-        <section className="bg-white border-y border-border-subtle">
-          <div className="container-page py-14 md:py-16">
+        <section className={guide ? "container-page py-14 md:py-16" : "bg-white border-y border-border-subtle"}>
+          <div className={guide ? "" : "container-page py-14 md:py-16"}>
             <SectionHeader
               align="left"
-              title={`이런 경우 ${ctx.subject.name}과외 상담을 받아보세요`}
+              title={guide ? `1:1 ${ctx.subject.name}과외가 도움이 되는 경우` : `이런 경우 ${ctx.subject.name}과외 상담을 받아보세요`}
               description="지역과 관계없이 학생들이 공통적으로 겪는 학습 상황입니다."
             />
             <div className="mt-8">
-              <ChecklistPanel items={ctx.subject.painPoints} />
+              <ChecklistPanel items={guide ? guide.whenOneOnOne : ctx.subject.painPoints} />
             </div>
           </div>
         </section>
@@ -177,16 +256,20 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                         {level} <span className="text-text-muted font-medium text-sm">{list.length}곳</span>
                       </p>
                       <ul className="mt-3 flex flex-col gap-1.5">
-                        {list.map((s) => (
-                          <li key={s.slug}>
-                            <Link
-                              href={`/school/${s.slug}/${ctx.subject.slug}`}
-                              className="text-sm text-text-main hover:text-brand transition-colors"
-                            >
-                              {s.name} {ctx.subject.name}과외
-                            </Link>
-                          </li>
-                        ))}
+                        {list.map((s) => {
+                          // School×subject page when it's indexed, otherwise the school hub.
+                          const subjectHref = indexedSchoolSubjectHref(s, ctx.subject.slug);
+                          return (
+                            <li key={s.slug}>
+                              <Link
+                                href={subjectHref ?? `/school/${s.slug}`}
+                                className="text-sm text-text-main hover:text-brand transition-colors"
+                              >
+                                {subjectHref ? `${s.name} ${ctx.subject.name}과외` : `${s.name} 과외`}
+                              </Link>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   );
@@ -218,9 +301,10 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
           <div className="grid md:grid-cols-2 gap-4">
             <RelatedLinks
               title="관련 과목"
-              links={subjects
-                .filter((s) => s.slug !== ctx.subject.slug)
-                .map((s) => ({ label: `${ctx.region.name} ${s.name}과외`, href: `/region/${province}/${city}/${s.slug}` }))}
+              links={[
+                { label: `${ctx.region.name} 과외 전체`, href: `/region/${province}/${city}` },
+                ...siblingSubjectLinks,
+              ]}
             />
             <RelatedLinks
               title="관련 학년"
@@ -232,17 +316,8 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
           </div>
           {districts.length > 0 && (
             <RelatedLinks
-              title={`${ctx.region.name} 하위 지역 ${ctx.subject.name}과외`}
-              links={districts.map((d) => ({
-                label: `${d.name} ${ctx.subject.name}과외`,
-                href: `/region/${province}/${city}/${d.slug}/${ctx.subject.slug}`,
-              }))}
-            />
-          )}
-          {relatedSchools.length > 0 && (
-            <RelatedLinks
-              title={`${ctx.region.name} 관련 학교`}
-              links={relatedSchools.map((s) => ({ label: `${s.name} 과외`, href: `/school/${s.slug}` }))}
+              title={`${ctx.region.name} 하위 지역`}
+              links={districts.map((d) => ({ label: `${d.name} 과외`, href: `/region/${province}/${city}/${d.slug}` }))}
             />
           )}
         </section>
@@ -262,6 +337,8 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
   }
 
   if (ctx.type === "grade") {
+    const levelName = LEVEL_ORDER.find((l) => schoolLevelToGradeSlug[l] === ctx.grade.slug);
+    const levelSchools = schools.filter((s) => s.cityRegionSlug === ctx.region.slug && s.level === levelName);
     return (
       <>
         <section className="bg-white border-b border-border-subtle">
@@ -277,13 +354,23 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
           </div>
         </section>
 
-        <section className="container-page py-14 md:py-16">
+        <section className="container-page py-14 md:py-16 flex flex-col gap-4">
+          {levelSchools.length > 0 && (
+            <RelatedLinks
+              title={`${ctx.region.name} ${levelName} ${levelSchools.length}곳`}
+              links={levelSchools.map((s) => ({ label: `${s.name} 과외`, href: `/school/${s.slug}` }))}
+            />
+          )}
           <RelatedLinks
             title={`${ctx.region.name} ${ctx.grade.name} 과목별 과외`}
             links={subjects.map((s) => ({
               label: `${ctx.region.name} ${ctx.grade.name} ${s.name}과외`,
               href: `/region/${province}/${city}/${slug}/${s.slug}`,
             }))}
+          />
+          <RelatedLinks
+            title={`${ctx.grade.name} 학년별 학습 정보`}
+            links={ctx.grade.subGrades.map((sg) => ({ label: `${sg.label} 과외`, href: `/grade/${ctx.grade.slug}/${sg.slug}` }))}
           />
         </section>
 

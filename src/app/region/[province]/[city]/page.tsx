@@ -7,6 +7,7 @@ import { schools, type School } from "@/data/schools";
 import { caseStudies } from "@/data/caseStudies";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
+import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { buildRegionSchoolIntro } from "@/lib/regionIntro";
 import { buildRegionFaqs } from "@/lib/regionFaq";
 import { JsonLd, faqSchema } from "@/lib/schema";
@@ -30,7 +31,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
   const region = getRegionBySlug(city);
   if (!region || region.parentSlug !== province) return {};
 
-  const { index } = getIndexability("region");
+  const { index } = getIndexability("region", { regionSlug: region.slug });
 
   return buildMetadata({
     title: `${region.name} 과외 | 초·중·고 1:1 맞춤 수업`,
@@ -54,6 +55,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
   })).filter((g) => g.list.length > 0);
   const relevantCaseStudies = caseStudies.slice(0, 3);
   const regionFaqs = buildRegionFaqs(region.slug, region.name, relatedSchools);
+  const gradeSubjectLinks = indexedRegionGradeSubjectLinks(region.slug);
 
   return (
     <>
@@ -88,6 +90,12 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
         />
       </section>
 
+      {gradeSubjectLinks.length > 0 && (
+        <section className="container-page pb-14 md:pb-16">
+          <RelatedLinks title={`${region.name} 학년·과목별 과외 안내`} links={gradeSubjectLinks} />
+        </section>
+      )}
+
       {schoolsByLevel.length > 0 && (
         <section className="container-page py-14 md:py-16">
           <SectionHeader align="left" title={`${region.name} 학교별 과외 정보`} />
@@ -98,16 +106,27 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
                   {g.level} <span className="text-text-muted font-medium text-sm">{g.list.length}곳</span>
                 </p>
                 <ul className="mt-3 flex flex-col gap-1.5">
-                  {g.list.map((s) => (
-                    <li key={s.slug}>
-                      <Link
-                        href={`/school/${s.slug}`}
-                        className="text-sm text-text-main hover:text-brand transition-colors"
-                      >
-                        {s.name} 과외
-                      </Link>
-                    </li>
-                  ))}
+                  {g.list.map((s) => {
+                    const subjectLinks = subjects.flatMap((subj) => {
+                      const href = indexedSchoolSubjectHref(s, subj.slug);
+                      return href ? [{ name: `${subj.name}과외`, href }] : [];
+                    });
+                    return (
+                      <li key={s.slug} className="text-sm">
+                        <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+                          {s.name} 과외
+                        </Link>
+                        {subjectLinks.map((l) => (
+                          <span key={l.href}>
+                            <span aria-hidden="true" className="text-text-muted"> · </span>
+                            <Link href={l.href} className="text-text-muted hover:text-brand transition-colors">
+                              {l.name}
+                            </Link>
+                          </span>
+                        ))}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

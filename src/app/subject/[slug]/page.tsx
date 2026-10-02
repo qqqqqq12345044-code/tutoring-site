@@ -4,9 +4,11 @@ import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getFaqsBySlugs } from "@/data/faqs";
 import { getArticlesBySubjectSlug } from "@/data/guide";
+import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
 import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
+import { indexedRegionLinksForSubject } from "@/lib/internalLinks";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -42,6 +44,8 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
 
   const faqs = getFaqsBySlugs(subject.faqSlugs);
   const relatedArticles = getArticlesBySubjectSlug(subject.slug);
+  const guide = getSubjectStudyGuide(subject.slug);
+  const regionLinks = indexedRegionLinksForSubject(subject.slug);
 
   return (
     <>
@@ -120,18 +124,66 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
         </div>
       </section>
 
-      {/* GRADE STRATEGY */}
-      <section className="container-page py-14 md:py-16">
-        <SectionHeader align="left" title="학년별 학습 방향" />
-        <div className="mt-8 grid sm:grid-cols-3 gap-6">
-          {subject.gradeStrategies.map((gs) => (
-            <div key={gs.grade} className="border-l-4 border-brand-light pl-5 py-0.5">
-              <span className="text-sm font-bold text-brand">{gs.grade}</span>
-              <p className="mt-2 text-sm text-text-main leading-relaxed">{gs.description}</p>
+      {/* GRADE STRATEGY — detailed study-guide version when one exists */}
+      {guide ? (
+        <>
+          <section className="container-page py-14 md:py-16">
+            <SectionHeader
+              align="left"
+              title={`초등·중등·고등 ${subject.name}, 무엇이 달라지나요`}
+              description="학교급이 바뀔 때마다 배우는 내용과 시험 방식이 달라져 공부 방법도 함께 바뀌어야 합니다."
+            />
+            <div className="mt-8 grid md:grid-cols-3 gap-6">
+              {guide.levelDifferences.map((ld) => (
+                <article key={ld.level} className="border-l-4 border-brand-light pl-5 py-0.5">
+                  <span className="text-sm font-bold text-brand">{ld.level}</span>
+                  <h3 className="mt-1 font-bold text-navy">{ld.title}</h3>
+                  <p className="mt-2 text-sm text-text-main leading-relaxed">{ld.body}</p>
+                </article>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+
+          <section className="bg-white border-y border-border-subtle">
+            <div className="container-page py-14 md:py-16 grid md:grid-cols-2 gap-10">
+              <div>
+                <SectionHeader align="left" title="개념 공부와 문제풀이를 함께 하는 방법" />
+                <ol className="mt-8 flex flex-col gap-5">
+                  {guide.conceptPractice.map((step, i) => (
+                    <li key={step.title} className="flex gap-4">
+                      <span aria-hidden="true" className="text-xl font-extrabold text-brand-light tabular-nums leading-none">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="font-bold text-navy">{step.title}</h3>
+                        <p className="mt-1 text-sm text-text-muted leading-relaxed">{step.body}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div>
+                <SectionHeader align="left" title={`${subject.name} 내신 대비, 이렇게 준비합니다`} />
+                <div className="mt-8">
+                  <ChecklistPanel items={guide.examPrep} columns={1} />
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      ) : (
+        <section className="container-page py-14 md:py-16">
+          <SectionHeader align="left" title="학년별 학습 방향" />
+          <div className="mt-8 grid sm:grid-cols-3 gap-6">
+            {subject.gradeStrategies.map((gs) => (
+              <div key={gs.grade} className="border-l-4 border-brand-light pl-5 py-0.5">
+                <span className="text-sm font-bold text-brand">{gs.grade}</span>
+                <p className="mt-2 text-sm text-text-main leading-relaxed">{gs.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="container-page pb-14 md:pb-16">
         <ConsultCTA
@@ -152,6 +204,12 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
             .map((s) => ({ label: `${s.name}과외`, href: `/subject/${s.slug}` }))}
         />
       </section>
+
+      {regionLinks.length > 0 && (
+        <section className="container-page pb-14 md:pb-16">
+          <RelatedLinks title={`지역별 ${subject.name}과외 안내`} links={regionLinks} />
+        </section>
+      )}
 
       {relatedArticles.length > 0 && (
         <section className="container-page pb-14 md:pb-16">

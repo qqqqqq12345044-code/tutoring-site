@@ -22,6 +22,9 @@ export const ogImage = publicAssetExists(siteConfig.brand.ogImage)
     ]
   : undefined;
 
+/** Site-wide RSS feed (src/app/rss.xml/route.ts), advertised via <link rel="alternate">. */
+export const rssFeed = [{ url: "/rss.xml", title: `${siteConfig.brandName} 학습 정보` }];
+
 export function buildMetadata({ title, description, path, robots }: BuildMetadataInput): Metadata {
   const url = `${siteConfig.domain}${path}`;
   const fullTitle = title.includes(siteConfig.brandName)
@@ -31,7 +34,8 @@ export function buildMetadata({ title, description, path, robots }: BuildMetadat
   return {
     title,
     description,
-    alternates: { canonical: url },
+    // Page-level alternates replace layout.tsx's, so the RSS discovery link is repeated here.
+    alternates: { canonical: url, types: { "application/rss+xml": rssFeed } },
     ...(robots ? { robots: { index: robots.index, follow: robots.follow } } : {}),
     openGraph: {
       title: fullTitle,

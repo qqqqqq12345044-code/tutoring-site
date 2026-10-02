@@ -7,6 +7,7 @@ import { regions, getRegionUrl, getChildren } from "@/data/regions";
 import { schools } from "@/data/schools";
 import { guideArticles } from "@/data/guide";
 import { getIndexability } from "@/lib/indexability";
+import { getContentUpdatedAt } from "@/data/contentDates";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
@@ -25,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...subjects.map((s) => `/subject/${s.slug}`),
     ...grades.map((g) => `/grade/${g.slug}`),
     ...programs.map((p) => `/program/${p.slug}`),
-    ...regions.map((r) => getRegionUrl(r.slug)),
+    ...regions.filter((r) => getIndexability("region", { regionSlug: r.slug }).sitemap).map((r) => getRegionUrl(r.slug)),
     ...guideArticles.map((a) => `/guide/${a.slug}`),
   ];
 
@@ -140,8 +141,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ])
   );
 
+  // lastmod = last real content change (src/data/contentDates.ts), never build time.
   return allPaths.map((path) => ({
     url: `${siteConfig.domain}${path}`,
-    lastModified: new Date(),
+    lastModified: getContentUpdatedAt(path),
   }));
 }

@@ -16,6 +16,9 @@ import { schools } from "@/data/schools";
 import { regions } from "@/data/regions";
 import { buildRegionSchoolIntro } from "@/lib/regionIntro";
 import { buildRegionFaqs } from "@/lib/regionFaq";
+import { guideArticles, type GuideArticle } from "@/data/guide";
+import { subjectStudyGuides, type SubjectStudyGuide } from "@/data/subjectStudyGuide";
+import { regionSubjectContents } from "@/data/regionSubjectContent";
 
 export interface ContentQualityResult {
   ok: boolean;
@@ -471,4 +474,122 @@ export function checkSchoolSubjectContentQuality(): ContentQualityResult {
   }
 
   return { ok: issues.length === 0, issues };
+}
+
+const MIN_GUIDE_CHARS = 1000;
+/** Paragraph-level: a guide paragraph this close to any other page's text is a copy. */
+const PARAGRAPH_DUP_THRESHOLD = 0.5;
+
+function guideParagraphs(a: GuideArticle): string[] {
+  return [...a.body, ...a.sections.flatMap((s) => s.paragraphs)];
+}
+
+/** Visible characters (whitespace excluded), the "N자" a reader would count. */
+export function guideCharCount(a: GuideArticle): number {
+  return guideParagraphs(a).join("").replace(/\s/g, "").length;
+}
+
+function studyGuideStrings(g: SubjectStudyGuide): string[] {
+  return [
+    ...g.levelDifferences.map((l) => l.body),
+    ...g.conceptPractice.map((c) => c.body),
+    ...g.examPrep,
+    ...g.commonProblems.flatMap((p) => [p.cause, p.solution]),
+    ...g.examPlan.map((e) => e.focus),
+    ...g.whenOneOnOne,
+  ];
+}
+
+export interface GuideQualityResult extends ContentQualityResult {
+  maxGuidePairSimilarity: number;
+  maxParagraphOverlap: number;
+  maxStudyGuidePairSimilarity: number;
+  minChars: number;
+}
+
+/**
+ * Guide articles (src/data/guide.ts) and subject study guides
+ * (src/data/subjectStudyGuide.ts) — the site's informational layer:
+ * - every guide ≥ MIN_GUIDE_CHARS visible characters, ≥ 2 sections, https sources
+ * - guide vs guide full-text similarity ≤ SIMILARITY_THRESHOLD
+ * - no guide paragraph near-copies (> PARAGRAPH_DUP_THRESHOLD) a study-guide,
+ *   region or school content string (rendered on other indexed pages)
+ * - study guides of different subjects don't read as the same template
+ */
+export function checkGuideContentQuality(): GuideQualityResult {
+  const issues: string[] = [];
+  let minChars = Infinity;
+
+  for (const a of guideArticles) {
+    const chars = guideCharCount(a);
+    minChars = Math.min(minChars, chars);
+    if (chars < MIN_GUIDE_CHARS) issues.push(`guide ${a.slug}: ${chars}자 (최소 ${MIN_GUIDE_CHARS}자 미만)`);
+    if (a.sections.length < 2) issues.push(`guide ${a.slug}: sections ${a.sections.length}개 (<2)`);
+    for (const src of a.sources ?? []) {
+      if (!/^https:\/\//.test(src.url) || !src.label.trim()) issues.push(`guide ${a.slug}: 출처 형식 오류 (${src.url})`);
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(a.publishedAt) || !/^\d{4}-\d{2}-\d{2}$/.test(a.updatedAt) || a.updatedAt < a.publishedAt) {
+      issues.push(`guide ${a.slug}: publishedAt/updatedAt 형식 또는 순서 오류`);
+    }
+  }
+
+  let maxGuidePairSimilarity = 0;
+  const texts = guideArticles.map((a) => guideParagraphs(a).join(" "));
+  for (let i = 0; i < texts.length; i++) {
+    for (let j = i + 1; j < texts.length; j++) {
+      const sim = tokenSimilarity(texts[i], texts[j]);
+      maxGuidePairSimilarity = Math.max(maxGuidePairSimilarity, sim);
+      if (sim > SIMILARITY_THRESHOLD) {
+        issues.push(`guide ${guideArticles[i].slug} vs ${guideArticles[j].slug} 유사도 ${(sim * 100).toFixed(1)}%`);
+      }
+    }
+  }
+
+  const corpus: { where: string; text: string }[] = [
+    ...subjectStudyGuides.flatMap((g) => studyGuideStrings(g).map((text) => ({ where: `studyGuide:${g.subjectSlug}`, text }))),
+    ...regionSubjectContents.flatMap((c) =>
+      [c.intro, ...c.gradeSections.map((x) => x.body), ...(c.localNotes ?? []).map((x) => x.body)].map((text) => ({
+        where: `region-subject:${c.regionSlug}/${c.subjectSlug}`,
+        text,
+      }))
+    ),
+    ...regionGradeSubjectContents.flatMap((c) =>
+      [c.intro, ...c.regionSpecificNotes.map((x) => x.body)].map((text) => ({ where: `rgs:${c.regionSlug}`, text }))
+    ),
+    ...schoolContents.flatMap((c) => [c.intro, ...c.schoolSpecificNotes.map((x) => x.body)].map((text) => ({ where: `school:${c.schoolSlug}`, text }))),
+    ...schoolSubjectContents.flatMap((c) =>
+      [c.intro, ...c.schoolSpecificNotes.map((x) => x.body)].map((text) => ({ where: `school-subject:${c.schoolSlug}`, text }))
+    ),
+  ];
+  let maxParagraphOverlap = 0;
+  for (const a of guideArticles) {
+    for (const para of guideParagraphs(a)) {
+      for (const c of corpus) {
+        const sim = tokenSimilarity(para, c.text);
+        maxParagraphOverlap = Math.max(maxParagraphOverlap, sim);
+        if (sim > PARAGRAPH_DUP_THRESHOLD) {
+          issues.push(`guide ${a.slug} 문단이 ${c.where}와 유사도 ${(sim * 100).toFixed(1)}%: "${para.slice(0, 30)}…"`);
+        }
+      }
+    }
+  }
+
+  let maxStudyGuidePairSimilarity = 0;
+  const sg = subjectStudyGuides.map((g) => ({ slug: g.subjectSlug, text: studyGuideStrings(g).join(" ") }));
+  for (let i = 0; i < sg.length; i++) {
+    for (let j = i + 1; j < sg.length; j++) {
+      const sim = tokenSimilarity(sg[i].text, sg[j].text);
+      maxStudyGuidePairSimilarity = Math.max(maxStudyGuidePairSimilarity, sim);
+      if (sim > SIMILARITY_THRESHOLD) issues.push(`studyGuide ${sg[i].slug} vs ${sg[j].slug} 유사도 ${(sim * 100).toFixed(1)}%`);
+    }
+  }
+
+  return {
+    ok: issues.length === 0,
+    issues,
+    maxGuidePairSimilarity,
+    maxParagraphOverlap,
+    maxStudyGuidePairSimilarity,
+    minChars: minChars === Infinity ? 0 : minChars,
+  };
 }

@@ -1,8 +1,30 @@
+/**
+ * Region-specific part of a region+subject landing page
+ * (/region/[province]/[city]/[subject]). Having an entry here is what makes
+ * the page indexable (src/lib/indexability.ts "region-subject").
+ *
+ * Only write what is actually specific to the region: registered schools
+ * (src/data/schools.ts), administrative facts already verified in
+ * src/data/regions.ts / schools.ts comments, and how the consult is run for
+ * that region. Subject-wide study advice belongs in subjectStudyGuide.ts,
+ * which the page renders alongside this entry — never paste it here with the
+ * region name swapped.
+ */
 export interface RegionSubjectContent {
   regionSlug: string;
   subjectSlug: string;
   intro: string;
   gradeSections: { title: string; body: string }[];
+  /** Region-only facts/considerations (optional; older entries predate this field). */
+  localNotes?: { title: string; body: string }[];
+  /** Region-specific FAQs, rendered before the subject's shared FAQs. */
+  faqs?: { question: string; answer: string }[];
+  /**
+   * Where the entry's factual statements come from (e.g. "학교알리미 소재지",
+   * "인천광역시 행정체제 개편 고시"). Required for the quality gate's GREEN
+   * grade (scripts/lib/quality-gate.ts); an entry without sources is AMBER.
+   */
+  sources?: string[];
 }
 
 export const regionSubjectContents: RegionSubjectContent[] = [
@@ -43,6 +65,90 @@ export const regionSubjectContents: RegionSubjectContent[] = [
       {
         title: "수원 고등 영어과외",
         body: "구문 분석을 바탕으로 내신과 모의고사 독해를 함께 관리하고 서술형 대비까지 연결합니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "gangseo",
+    subjectSlug: "math",
+    intro:
+      "서울 강서구에서 수학과외를 알아보고 있다면, 자녀가 다니는 학교와 지금 배우는 수학 단원을 기준으로 상담을 시작하는 것이 좋습니다. 교과설계소에는 강서구 소재 학교 중 서울양천초등학교와 마포고등학교 정보가 등록되어 있으며, 초등 연산·문장제부터 고등 내신과 모의고사까지 학생의 현재 위치에서 필요한 부분을 1:1로 설계합니다.",
+    gradeSections: [
+      {
+        title: "강서구 초등 수학과외",
+        body: "분수·소수 연산과 문장제를 식으로 바꾸는 연습을 중심으로, 학교 단원평가 범위에 맞춰 개념을 직접 설명할 수 있을 때까지 확인합니다.",
+      },
+      {
+        title: "강서구 중등 수학과외",
+        body: "강서구 중학교 정보는 아직 등록 전이라 상담 때 재학 학교의 시험 범위와 서술형 비중을 직접 확인하고, 일차방정식·일차함수처럼 학년 간 이어지는 단원의 빈틈부터 점검합니다.",
+      },
+      {
+        title: "강서구 고등 수학과외",
+        body: "학교 내신 범위와 모의고사 일정을 함께 놓고 학습 비중을 정합니다. 마포고등학교처럼 교명과 소재 구가 다른 학교도 있어 상담은 실제 재학 학교를 기준으로 진행합니다.",
+      },
+    ],
+    localNotes: [
+      {
+        title: "교명과 소재지가 다른 강서구 학교",
+        body: "강서구에는 가양동에 있는 서울양천초등학교, 1985년 마포구에서 강서구로 옮긴 뒤 교명을 유지한 마포고등학교처럼 다른 구 이름이 들어간 학교가 있습니다. 학교명만 보고 지역 페이지를 찾으면 엉뚱한 지역 정보를 보게 될 수 있어, 교과설계소는 학교를 실제 소재 구 기준으로 분류합니다.",
+      },
+      {
+        title: "초등에서 고등까지 이어지는 수학",
+        body: "현재 강서구에 등록된 학교는 초등학교와 고등학교입니다. 초등 문장제 해석 능력과 중학교 함수 개념이 고등 수학의 기초가 되므로, 학년이 바뀌어도 이전 단계의 빈틈을 함께 확인하는 방식으로 수업을 이어갑니다.",
+      },
+    ],
+    faqs: [
+      {
+        question: "강서구 중학생도 수학과외 상담이 가능한가요?",
+        answer:
+          "가능합니다. 현재 사이트에 등록된 강서구 학교는 초등학교·고등학교뿐이지만 상담은 등록 여부와 관계없이 진행합니다. 학교명과 학년, 최근 시험 범위를 알려주시면 그에 맞춰 수업 계획을 안내해드립니다.",
+      },
+      {
+        question: "마포고등학교는 마포구 페이지에서 찾아야 하나요?",
+        answer:
+          "아닙니다. 마포고등학교는 강서구에 있는 학교라 강서구 학교 목록에 분류되어 있습니다. 학교별 페이지에서 마포고등학교 수학과외 안내를 확인할 수 있습니다.",
+      },
+    ],
+  },
+  {
+    regionSlug: "michuhol",
+    subjectSlug: "english",
+    intro:
+      "인천 미추홀구에서 영어과외를 찾고 있다면, 학교급에 따라 영어 시험 방식이 크게 달라진다는 점부터 고려하는 것이 좋습니다. 교과설계소에는 미추홀구의 인천숭의초등학교·관교중학교·인천고등학교 정보가 등록되어 있어 초등 읽기 습관부터 중등 교과서 내신, 고등 구문·독해까지 학교급별로 이어서 확인할 수 있습니다.",
+    gradeSections: [
+      {
+        title: "미추홀구 초등 영어과외",
+        body: "3학년부터 시작되는 학교 영어 수업에 맞춰 파닉스와 짧은 문장 읽기를 다지고, 영어 문장을 소리 내어 읽는 습관을 만드는 데 초점을 둡니다.",
+      },
+      {
+        title: "미추홀구 중등 영어과외",
+        body: "중학교 내신은 교과서 본문과 학교 자료 비중이 큰 편이라 본문 구조 분석과 변형 문제·서술형 영작을 함께 준비합니다. 관교중학교 등 재학 학교의 실제 시험 범위는 상담 때 확인합니다.",
+      },
+      {
+        title: "미추홀구 고등 영어과외",
+        body: "고등학교는 부교재·모의고사 지문까지 시험 범위가 넓어질 수 있어, 인천고등학교 등 재학 학교의 범위를 먼저 확인하고 구문 분석을 바탕으로 내신과 모의고사 독해를 함께 관리합니다.",
+      },
+    ],
+    localNotes: [
+      {
+        title: "2026년 인천 행정체제 개편과 미추홀구",
+        body: "2026년 7월 1일 인천 행정체제 개편으로 중구·동구·서구가 제물포구·영종구·검단구·서해구로 재편되었지만, 미추홀구는 기존 구역을 그대로 유지합니다. 개편 이후에도 미추홀구 학교 정보는 같은 지역 페이지에서 확인할 수 있습니다.",
+      },
+      {
+        title: "초·중·고 학교 정보가 모두 등록된 지역",
+        body: "미추홀구는 초등학교·중학교·고등학교 정보가 모두 등록되어 있어, 자녀가 상급 학교로 진학해도 같은 지역 안에서 학교별 영어 안내를 이어서 확인할 수 있습니다.",
+      },
+    ],
+    faqs: [
+      {
+        question: "인천 행정구역 개편 이후 미추홀구 페이지가 바뀌나요?",
+        answer:
+          "바뀌지 않습니다. 미추홀구는 2026년 7월 개편으로 구역이 바뀐 지역이 아니어서 기존 지역 페이지와 학교 페이지를 그대로 이용할 수 있습니다.",
+      },
+      {
+        question: "인천숭의초등학교 학생도 영어 기초부터 시작할 수 있나요?",
+        answer:
+          "가능합니다. 현재 읽기 수준과 학교 영어 수업 진도를 먼저 확인한 뒤 파닉스나 기초 문장 등 필요한 단계부터 시작합니다.",
       },
     ],
   },

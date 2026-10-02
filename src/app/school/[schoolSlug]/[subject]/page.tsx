@@ -5,6 +5,8 @@ import { getSchoolSubjectContent, isPublishedContent } from "@/data/schoolSubjec
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { buildSchoolBreadcrumb } from "@/lib/schoolHierarchy";
+import { indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -59,8 +61,7 @@ export default async function SchoolSubjectPage(props: PageProps<"/school/[schoo
         <div className="container-page py-8 md:py-10 flex flex-col gap-4">
           <Breadcrumb
             items={[
-              { name: "학교별 과외", href: "/schools" },
-              { name: `${ctx.school.name} 과외`, href: `/school/${ctx.school.slug}` },
+              ...buildSchoolBreadcrumb(ctx.school),
               { name: `${ctx.school.name} ${ctx.subject.name}과외`, href: `/school/${schoolSlug}/${subjectSlug}` },
             ]}
           />
@@ -109,7 +110,13 @@ export default async function SchoolSubjectPage(props: PageProps<"/school/[schoo
             .filter((slug) => slug !== ctx.subject.slug)
             .map((slug) => subjects.find((s) => s.slug === slug))
             .filter((s): s is NonNullable<typeof s> => Boolean(s))
-            .map((s) => ({ label: `${ctx.school.name} ${s.name}과외`, href: `/school/${ctx.school.slug}/${s.slug}` }))}
+            .map((s) => {
+              // Same index-aware rule as the school hub: indexed school×subject page, else the subject hub.
+              const href = indexedSchoolSubjectHref(ctx.school, s.slug);
+              return href
+                ? { label: `${ctx.school.name} ${s.name}과외`, href }
+                : { label: `${s.name}과외`, href: `/subject/${s.slug}` };
+            })}
         />
         <RelatedLinks
           title="관련 페이지"

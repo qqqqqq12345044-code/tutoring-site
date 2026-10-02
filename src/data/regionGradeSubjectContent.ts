@@ -24,6 +24,12 @@ export interface RegionGradeSubjectContent {
   status: "draft" | "published";
   intro: string;
   regionSpecificNotes: { title: string; body: string }[];
+  /**
+   * Where the entry's factual statements come from (e.g. "학교알리미 소재지",
+   * "인천광역시 행정체제 개편 고시"). Required for the quality gate's GREEN
+   * grade (scripts/lib/quality-gate.ts); an entry without sources is AMBER.
+   */
+  sources?: string[];
 }
 
 export const regionGradeSubjectContents: RegionGradeSubjectContent[] = [

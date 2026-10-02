@@ -5,7 +5,8 @@
  * visual/responsive review stays a separate, explicit command.
  */
 import { spawnSync } from "child_process";
-import { computeSummary, getSitemapPaths } from "./lib/route-inventory";
+import { computeSummary, getSitemapPaths, getAllContentRoutes } from "./lib/route-inventory";
+import { buildLinkGraph } from "./lib/link-graph";
 import { startServer, stopServer } from "./lib/server";
 import { crawlSitemapAndLinks, checkSearchSmoke, checkConsultApiSmoke } from "./lib/checks";
 import { startMockWebhook, stopMockWebhook } from "./lib/mockWebhook";
@@ -94,6 +95,17 @@ async function main() {
         crawl.duplicateTitles.forEach((t) => console.log(`  duplicate title: "${t}"`));
         crawl.duplicateDescriptions.forEach((d) => console.log(`  duplicate description: "${d.slice(0, 60)}..."`));
       }
+
+      const graph = await buildLinkGraph(getAllContentRoutes());
+      const linkRatio = graph.indexOutLinks ? (graph.indexToNoindexLinks / graph.indexOutLinks) * 100 : 0;
+      results.orphans = graph.orphans.length;
+      results.indexToNoindexPct = Number(linkRatio.toFixed(1));
+      console.log(`Orphans: ${graph.orphans.length} ${graph.orphans.length === 0 ? "PASS" : "FAIL"}`);
+      if (graph.orphans.length > 0) {
+        failures.push("orphan indexed pages");
+        graph.orphans.forEach((o) => console.log(`  ${o}`));
+      }
+      console.log(`Index→noindex links: ${linkRatio.toFixed(1)}% (info)`);
 
       const searchOk = await checkSearchSmoke();
       results.searchSmoke = searchOk ? "PASS" : "FAIL";

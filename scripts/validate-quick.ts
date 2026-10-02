@@ -14,7 +14,10 @@ import {
   checkSchoolSubjectGate,
   checkRegionProgramGate,
   checkProgramRouteCollisions,
+  checkRegionGate,
+  checkSitemapLastmod,
 } from "./lib/route-inventory";
+import { runQualityGate, summarizeQualityGate, checkQualityNoindexSync } from "./lib/quality-gate";
 import {
   checkRegionGradeSubjectContentQuality,
   checkRegionPageContentQuality,
@@ -24,6 +27,7 @@ import {
   checkSubjectTopicContentQuality,
   checkSchoolSubjectContentQuality,
   checkRegionProgramContentQuality,
+  checkGuideContentQuality,
 } from "./lib/content-quality";
 import { writeCacheEntry } from "./lib/validation-cache";
 
@@ -98,6 +102,18 @@ async function main() {
       configIssues.push(...programGate.issues);
     }
 
+    const regionGate = checkRegionGate();
+    if (!regionGate.ok) {
+      configOk = false;
+      configIssues.push(...regionGate.issues);
+    }
+
+    const lastmod = checkSitemapLastmod();
+    if (!lastmod.ok) {
+      configOk = false;
+      configIssues.push(...lastmod.issues.slice(0, 5));
+    }
+
     const programCollisions = checkProgramRouteCollisions();
     if (!programCollisions.ok) {
       configOk = false;
@@ -142,6 +158,19 @@ async function main() {
   console.log(`Subject topic content quality: ${subjectTopicContentQuality.ok ? "PASS" : "FAIL"}`);
   if (!subjectTopicContentQuality.ok) subjectTopicContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
 
+  const guideQuality = checkGuideContentQuality();
+  console.log(
+    `Guide content quality: ${guideQuality.ok ? "PASS" : "FAIL"} (min ${guideQuality.minChars}자, guide pair max ${(guideQuality.maxGuidePairSimilarity * 100).toFixed(0)}%, paragraph overlap max ${(guideQuality.maxParagraphOverlap * 100).toFixed(0)}%, studyGuide pair max ${(guideQuality.maxStudyGuidePairSimilarity * 100).toFixed(0)}%)`
+  );
+  if (!guideQuality.ok) guideQuality.issues.forEach((i) => console.log(`  - ${i}`));
+
+  // RED pages must be held noindex (src/data/qualityNoindex.ts); AMBER stays informational.
+  const qualityRows = runQualityGate();
+  summarizeQualityGate(qualityRows).forEach((l) => console.log(`Quality gate ${l}`));
+  const qualitySync = checkQualityNoindexSync(qualityRows);
+  console.log(`Quality gate RED sync: ${qualitySync.ok ? "PASS" : "FAIL"}`);
+  if (!qualitySync.ok) qualitySync.issues.forEach((i) => console.log(`  - ${i}`));
+
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
   const siteConfigSrc = fs.readFileSync("src/config/site.ts", "utf-8");
@@ -161,7 +190,9 @@ async function main() {
     regionPageContentQuality.ok &&
     subGradeContentQuality.ok &&
     regionFaqContentQuality.ok &&
-    subjectTopicContentQuality.ok;
+    subjectTopicContentQuality.ok &&
+    guideQuality.ok &&
+    qualitySync.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {
@@ -176,6 +207,8 @@ async function main() {
     subGradeContentQuality: subGradeContentQuality.ok ? "PASS" : "FAIL",
     regionFaqContentQuality: regionFaqContentQuality.ok ? "PASS" : "FAIL",
     subjectTopicContentQuality: subjectTopicContentQuality.ok ? "PASS" : "FAIL",
+    guideContentQuality: guideQuality.ok ? "PASS" : "FAIL",
+    qualityRedSync: qualitySync.ok ? "PASS" : "FAIL",
   });
 
   process.exit(pass ? 0 : 1);

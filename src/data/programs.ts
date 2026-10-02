@@ -1,5 +1,5 @@
 /**
- * "Program" track — non-교과목 learning tracks (코딩, 검정고시, 한국어) that don't
+ * "Program" track — non-교과목 learning tracks (코딩, 검정고시, 한국어, 논술) that don't
  * belong in subjects.ts. subjects.ts models regular school subjects with
  * grade-tiered strategies (초/중/고); these programs have their own audience
  * and structure instead, so they get a separate data model rather than being
@@ -117,6 +117,36 @@ export const programs: Program[] = [
       { title: "점검·확장", body: "이해도를 점검하고 어휘·표현 범위를 넓혀갑니다." },
     ],
     faqSlugs: ["program-scope", "pricing", "teacher-match"],
+  },
+  {
+    slug: "nonsul",
+    name: "논술",
+    shortDescription: "글을 읽고 생각을 정리해 근거 있는 글로 쓰는 힘을 기르는 초·중·고 논술 학습",
+    heroTitle: "읽고, 생각하고, 근거를 들어 쓰는\n1:1 논술과외",
+    heroDescription:
+      "논술은 주어진 글이나 자료를 정확히 읽고, 자신의 주장을 근거와 함께 논리적인 글로 표현하는 능력을 다룹니다. 초·중등에서는 독서와 글쓰기를 바탕으로 생각을 정리하는 힘을 기르고, 고등에서는 학교 서술형·수행평가부터 대학별 논술전형 준비까지 학생의 목표에 맞춰 학습 방향을 정합니다.",
+    targetAudience:
+      "책은 읽지만 생각을 글로 정리하기 어려운 초·중등 학생, 학교 서술형·수행평가 글쓰기를 보완하려는 학생, 수시 논술전형을 준비하는 고등학생까지 상담할 수 있습니다. 대입 논술은 대학·계열마다 출제 방식이 달라 목표 대학을 먼저 확인합니다.",
+    topics: [
+      { title: "읽기와 요약", description: "글의 핵심 주장과 근거를 찾아 짧게 요약하는 학습" },
+      { title: "글의 구조 세우기", description: "주장–근거–예시–결론 순서로 글의 뼈대를 먼저 세우는 연습" },
+      { title: "제시문 비교·분석", description: "여러 제시문의 관점을 비교하고 공통점과 차이점을 정리하는 학습" },
+      { title: "첨삭과 고쳐 쓰기", description: "쓴 글을 문장·논리 단위로 첨삭받고 다시 써보며 완성도를 높이는 과정" },
+    ],
+    painPoints: [
+      "책은 많이 읽는데 생각을 글로 정리하지 못하는 경우",
+      "글을 쓰면 주장과 근거가 섞여 논리가 흐트러지는 경우",
+      "수행평가·서술형 글쓰기에서 점수가 기대보다 낮게 나오는 경우",
+      "논술전형을 준비하지만 혼자서는 답안의 문제점을 찾기 어려운 경우",
+    ],
+    process: [
+      { title: "현재 글쓰기 확인", body: "짧은 글을 직접 써보며 읽기 이해와 글 구성 수준을 확인합니다." },
+      { title: "목표 설정", body: "사고력·학교 글쓰기·대입 논술 중 필요한 목표를 함께 정합니다." },
+      { title: "읽기·구조화", body: "제시문을 읽고 핵심 주장과 근거를 구조화하는 연습을 합니다." },
+      { title: "쓰기·첨삭", body: "직접 쓴 글을 문장과 논리 흐름 단위로 첨삭합니다." },
+      { title: "고쳐 쓰기·점검", body: "피드백을 반영해 다시 쓰고, 이전 글과 비교하며 달라진 점을 점검합니다." },
+    ],
+    faqSlugs: ["program-scope", "pricing", "consult-commitment"],
   },
 ];
 

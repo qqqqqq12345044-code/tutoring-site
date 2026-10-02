@@ -18,7 +18,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]">) {
   const region = getRegionBySlug(province);
   if (!region || region.level !== "province") return {};
 
-  const { index } = getIndexability("region");
+  const { index } = getIndexability("region", { regionSlug: region.slug });
 
   return buildMetadata({
     title: `${region.name} 과외 | 초·중·고 1:1 맞춤 수업`,

@@ -1,11 +1,14 @@
 import { notFound } from "next/navigation";
 import { getRegionBySlug, getChildren } from "@/data/regions";
-import { subjects, getSubjectBySlug } from "@/data/subjects";
+import { getSubjectBySlug } from "@/data/subjects";
 import { getGradeBySlug } from "@/data/grades";
 import { getRegionGradeSubjectContent, isPublishedContent, regionGradeSubjectContents } from "@/data/regionGradeSubjectContent";
 import { getGradeSubjectPlaybook } from "@/data/gradeSubjectPlaybook";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
+import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
+import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
+import { schools } from "@/data/schools";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
@@ -90,6 +93,30 @@ export default async function RegionFilterSubjectPage(
   const content = isPublishedContent(rawContent) ? rawContent : undefined;
   const playbook = ctx.type === "grade" ? getGradeSubjectPlaybook(ctx.grade.slug, ctx.subject.slug) : undefined;
 
+  // Index-aware related links: same-city schools of this level with an indexed
+  // school×subject page, sibling indexed grade×subject pages, then upward hubs.
+  const cityBase = `/region/${province}/${city}`;
+  const schoolLinks =
+    ctx.type === "grade"
+      ? schools
+          .filter((s) => s.cityRegionSlug === ctx.region.slug && schoolLevelToGradeSlug[s.level] === ctx.grade.slug)
+          .flatMap((s) => {
+            const href = indexedSchoolSubjectHref(s, ctx.subject.slug);
+            return href ? [{ label: `${s.name} ${ctx.subject.name}과외`, href }] : [];
+          })
+      : [];
+  const siblingLinks = indexedRegionGradeSubjectLinks(ctx.region.slug).filter(
+    (l) => l.href !== `${cityBase}/${slug}/${subjectSlug}`
+  );
+  const upLinks = [
+    ...(getIndexability("region-subject", { regionSlug: ctx.region.slug, subjectSlug: ctx.subject.slug }).index
+      ? [{ label: `${ctx.region.name} ${ctx.subject.name}과외`, href: `${cityBase}/${ctx.subject.slug}` }]
+      : []),
+    { label: `${ctx.region.name} 과외`, href: cityBase },
+    ...(ctx.type === "grade" ? [{ label: `${ctx.grade.name}과외`, href: `/grade/${ctx.grade.slug}` }] : []),
+    { label: `${ctx.subject.name}과외`, href: `/subject/${ctx.subject.slug}` },
+  ];
+
   return (
     <>
       <section className="bg-white border-b border-border-subtle">
@@ -145,12 +172,13 @@ export default async function RegionFilterSubjectPage(
       </section>
 
       <section className="container-page pb-16 md:pb-20">
-        <RelatedLinks
-          title="다른 과목"
-          links={subjects
-            .filter((s) => s.slug !== ctx.subject.slug)
-            .map((s) => ({ label: `${label} ${s.name}과외`, href: `/region/${province}/${city}/${slug}/${s.slug}` }))}
-        />
+        <div className="flex flex-col gap-4">
+          {schoolLinks.length > 0 && (
+            <RelatedLinks title={`${label} 학교별 ${ctx.subject.name}과외`} links={schoolLinks} />
+          )}
+          {siblingLinks.length > 0 && <RelatedLinks title={`${ctx.region.name} 다른 학년·과목 안내`} links={siblingLinks} />}
+          <RelatedLinks title="관련 페이지" links={upLinks} />
+        </div>
       </section>
     </>
   );

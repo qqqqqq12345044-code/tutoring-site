@@ -10,6 +10,7 @@ const serviceLinks = [
   { label: "코딩과외", href: "/program/coding" },
   { label: "검정고시", href: "/program/ged" },
   { label: "한국어과외", href: "/program/korean-language" },
+  { label: "논술과외", href: "/program/nonsul" },
   { label: "학습가이드", href: "/guide" },
 ];
 

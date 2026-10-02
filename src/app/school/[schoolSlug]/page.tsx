@@ -7,18 +7,14 @@ import { getFaqsBySlugs } from "@/data/faqs";
 import { getSchoolContent, isPublishedContent } from "@/data/schoolContent";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
+import { buildSchoolBreadcrumb, schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
+import { indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
-
-const schoolLevelToGradeSlug: Record<string, string> = {
-  초등학교: "elementary",
-  중학교: "middle",
-  고등학교: "high",
-};
 
 export function generateStaticParams() {
   return schools.map((s) => ({ schoolSlug: s.slug }));
@@ -63,12 +59,7 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
 
       <section className="bg-white border-b border-border-subtle">
         <div className="container-page py-8 md:py-10 flex flex-col gap-4">
-          <Breadcrumb
-            items={[
-              { name: "학교별 과외", href: "/schools" },
-              { name: `${school.name} 과외`, href: `/school/${school.slug}` },
-            ]}
-          />
+          <Breadcrumb items={buildSchoolBreadcrumb(school)} />
           <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
             {school.name} 과외
           </h1>
@@ -90,7 +81,12 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
           links={school.availableSubjectSlugs
             .map((slug) => getSubjectBySlug(slug))
             .filter((s): s is NonNullable<typeof s> => Boolean(s))
-            .map((s) => ({ label: `${s.name}과외`, href: `/subject/${s.slug}` }))}
+            .map((s) => {
+              const href = indexedSchoolSubjectHref(school, s.slug);
+              return href
+                ? { label: `${school.name} ${s.name}과외`, href }
+                : { label: `${s.name}과외`, href: `/subject/${s.slug}` };
+            })}
         />
         <RelatedLinks
           title="관련 지역·학년"

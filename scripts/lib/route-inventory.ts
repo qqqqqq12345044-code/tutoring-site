@@ -18,7 +18,8 @@ import { getSchoolSubjectContent, isPublishedContent as isSchoolSubjectPublished
 import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished } from "@/data/regionProgramContent";
 import { getSubGradeContent, isPublishedContent as isSubGradePublished } from "@/data/subGradeContent";
 import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
-import { getIndexability } from "@/lib/indexability";
+import { getIndexability, countSchoolsInRegion } from "@/lib/indexability";
+import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
 
@@ -66,9 +67,9 @@ export function getAllContentRoutes(): RouteEntry[] {
   for (const a of guideArticles) routes.push({ path: `/guide/${a.slug}`, index: true, sitemap: true });
   for (const p of programs) routes.push({ path: `/program/${p.slug}`, index: true, sitemap: true });
 
-  // region / province / city / plain-district pages — always indexed.
+  // region / province / city / plain-district pages — gated on registered schools.
   for (const r of regions) {
-    const { index, sitemap } = getIndexability("region");
+    const { index, sitemap } = getIndexability("region", { regionSlug: r.slug });
     routes.push({ path: getRegionUrl(r.slug), index, sitemap });
   }
 
@@ -192,7 +193,9 @@ export function checkRegionGradeSubjectGate(): GateCheckResult {
   for (const city of regions.filter((r) => r.level === "city")) {
     for (const g of grades) {
       for (const s of subjects) {
-        const isEligible = isPublishedContent(getRegionGradeSubjectContent(city.slug, g.slug, s.slug));
+        const isEligible =
+          isPublishedContent(getRegionGradeSubjectContent(city.slug, g.slug, s.slug)) &&
+          !qualityNoindexPaths.has(`${getRegionUrl(city.slug)}/${g.slug}/${s.slug}`);
         const { index, sitemap } = getIndexability("region-grade-subject", {
           regionSlug: city.slug,
           gradeSlug: g.slug,
@@ -329,7 +332,9 @@ export function checkSchoolSubjectGate(): GateCheckResult {
 
   for (const school of schools) {
     for (const subjectSlug of school.availableSubjectSlugs) {
-      const isEligible = isSchoolSubjectPublished(getSchoolSubjectContent(school.slug, subjectSlug));
+      const isEligible =
+        isSchoolSubjectPublished(getSchoolSubjectContent(school.slug, subjectSlug)) &&
+        !qualityNoindexPaths.has(`/school/${school.slug}/${subjectSlug}`);
       const { index, sitemap } = getIndexability("school-subject", { schoolSlug: school.slug, subjectSlug });
       if (index !== isEligible || sitemap !== isEligible) {
         issues.push(
@@ -403,5 +408,47 @@ export function checkProgramRouteCollisions(): GateCheckResult {
     if (count > 1) issues.push(`program slug 중복: "${slug}" (${count}건)`);
   }
 
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Regression check for the region hub gate (2026-10): a province / city /
+ * district page is index+sitemap exactly when at least one registered school
+ * sits in its subtree. Cross-checks getIndexability("region") against a
+ * direct count over schools.ts so a slip in either side is caught.
+ */
+export function checkRegionGate(): GateCheckResult {
+  const issues: string[] = [];
+  for (const r of regions) {
+    const direct = schools.filter(
+      (s) =>
+        s.cityRegionSlug === r.slug ||
+        s.districtRegionSlug === r.slug ||
+        getRegionBySlug(s.cityRegionSlug)?.parentSlug === r.slug
+    ).length;
+    const eligible = direct > 0;
+    const { index, sitemap } = getIndexability("region", { regionSlug: r.slug });
+    if (index !== eligible || sitemap !== eligible || countSchoolsInRegion(r.slug) !== direct) {
+      issues.push(`region gate: ${r.slug} — schools=${direct} but index=${index} sitemap=${sitemap}`);
+    }
+  }
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * sitemap <lastmod> must come from src/data/contentDates.ts: a real
+ * YYYY-MM-DD content date, never a build-time Date, and never in the future.
+ */
+export function checkSitemapLastmod(): GateCheckResult {
+  const issues: string[] = [];
+  const today = new Date().toISOString().slice(0, 10);
+  for (const entry of sitemap()) {
+    const lm = entry.lastModified;
+    if (typeof lm !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(lm)) {
+      issues.push(`sitemap lastmod: ${entry.url} — not a content date (${String(lm)})`);
+    } else if (lm > today) {
+      issues.push(`sitemap lastmod: ${entry.url} — future date ${lm}`);
+    }
+  }
   return { ok: issues.length === 0, issues };
 }

@@ -9,6 +9,7 @@ import {
 import { getGradeBySlug } from "@/data/grades";
 import { getSubjectBySlug } from "@/data/subjects";
 import { buildMetadata } from "@/lib/metadata";
+import { indexedSubGradeLinks, indexedSubjectTopicLinks } from "@/lib/internalLinks";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -41,6 +42,16 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
     ...(relatedGrade ? [{ label: `${relatedGrade.name}과외`, href: `/grade/${relatedGrade.slug}` }] : []),
     ...(relatedSubject ? [{ label: `${relatedSubject.name}과외`, href: `/subject/${relatedSubject.slug}` }] : []),
   ];
+  // Deeper indexed explainers for the same subject / school level (never noindex pages).
+  const studyLinks = [
+    ...(relatedSubject ? indexedSubjectTopicLinks(relatedSubject.slug) : []),
+    ...(relatedGrade ? indexedSubGradeLinks(relatedGrade.slug) : []),
+  ];
+  // The next four guides in list order (wrapping), so every guide gets inbound links.
+  const idx = guideArticles.findIndex((a) => a.slug === article.slug);
+  const otherGuides = [...guideArticles.slice(idx + 1), ...guideArticles.slice(0, idx)]
+    .slice(0, 4)
+    .map((a) => ({ label: a.title, href: `/guide/${a.slug}` }));
 
   return (
     <article className="container-page py-10 md:py-14 max-w-2xl">
@@ -65,11 +76,37 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
           </p>
         ))}
       </div>
-      {relatedLinks.length > 0 && (
-        <div className="mt-10">
-          <RelatedLinks title="관련 페이지" links={relatedLinks} />
-        </div>
+      {article.sections.map((section) => (
+        <section key={section.heading} className="mt-10">
+          <h2 className="text-lg md:text-xl font-bold text-navy">{section.heading}</h2>
+          <div className="mt-3 flex flex-col gap-4">
+            {section.paragraphs.map((p) => (
+              <p key={p} className="text-text-main leading-relaxed">
+                {p}
+              </p>
+            ))}
+          </div>
+        </section>
+      ))}
+      {article.sources && article.sources.length > 0 && (
+        <aside className="mt-10 rounded-2xl border border-border-subtle bg-white p-5">
+          <p className="text-sm font-bold text-navy">참고 자료</p>
+          <ul className="mt-2 flex flex-col gap-1.5">
+            {article.sources.map((src) => (
+              <li key={src.url} className="text-sm text-text-muted break-words">
+                <a href={src.url} target="_blank" rel="noopener noreferrer" className="hover:text-brand underline-offset-2 hover:underline">
+                  {src.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
       )}
+      <div className="mt-10 flex flex-col gap-4">
+        {relatedLinks.length > 0 && <RelatedLinks title="관련 페이지" links={relatedLinks} />}
+        {studyLinks.length > 0 && <RelatedLinks title="함께 보면 좋은 학습 정보" links={studyLinks} />}
+        <RelatedLinks title="다른 학습가이드" links={otherGuides} />
+      </div>
 
       <div className="mt-10">
         <ConsultCTA title="더 궁금한 점이 있다면 상담해보세요" />
