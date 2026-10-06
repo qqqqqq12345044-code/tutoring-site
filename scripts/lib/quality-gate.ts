@@ -35,6 +35,8 @@ export interface QualityRow {
   kind: "region-subject" | "region-grade-subject" | "school-subject";
   path: string;
   indexed: boolean;
+  /** True only for a status "draft" entry graded by a dry run (includeDrafts); never indexed. */
+  draft?: boolean;
   grade: QualityGrade;
   nearest: number; // masked nearest-neighbour similarity within the same kind, 0~1
   reasons: string[];
@@ -70,9 +72,10 @@ interface Candidate {
   kind: QualityRow["kind"];
   path: string;
   indexed: boolean;
+  draft?: boolean;
   text: string;
   notes: { title: string; body: string }[];
-  sources: string[];
+  sources: readonly unknown[];
   structural: { red: string[]; amber: string[] };
 }
 
@@ -93,7 +96,15 @@ function grade(candidates: Candidate[]): QualityRow[] {
     else if (nearest > GREEN_SIMILARITY) amber.push(`이름 마스킹 유사도 ${(nearest * 100).toFixed(0)}% (>30%)`);
     if (c.sources.length === 0) amber.push("출처(sources) 없음");
     const g: QualityGrade = red.length ? "RED" : amber.length ? "AMBER" : "GREEN";
-    return { kind: c.kind, path: c.path, indexed: c.indexed, grade: g, nearest, reasons: [...red, ...amber] };
+    return {
+      kind: c.kind,
+      path: c.path,
+      indexed: c.indexed,
+      ...(c.draft ? { draft: true } : {}),
+      grade: g,
+      nearest,
+      reasons: [...red, ...amber],
+    };
   });
 }
 
@@ -101,7 +112,14 @@ function cityPath(slug: string): string {
   return getRegionUrl(slug);
 }
 
-export function runQualityGate(): QualityRow[] {
+/**
+ * includeDrafts (dry run only): also grades status "draft" region×grade×subject
+ * entries as if published, so a candidate can be scored before it is switched
+ * on. Drafts stay noindex (getIndexability ignores them) and never enter the
+ * validators' default run, which keeps calling runQualityGate() without it.
+ */
+export function runQualityGate(options: { includeDrafts?: boolean } = {}): QualityRow[] {
+  const includeDrafts = options.includeDrafts ?? false;
   const regionSubject: Candidate[] = regionSubjectContents.map((c) => ({
     kind: "region-subject",
     path: `${cityPath(c.regionSlug)}/${c.subjectSlug}`,
@@ -116,7 +134,7 @@ export function runQualityGate(): QualityRow[] {
   }));
 
   const regionGradeSubject: Candidate[] = regionGradeSubjectContents
-    .filter((c) => c.status === "published")
+    .filter((c) => c.status === "published" || includeDrafts)
     .map((c) => {
       const hasLevelSchool = schools.some(
         (s) => s.cityRegionSlug === c.regionSlug && schoolLevelToGradeSlug[s.level] === c.gradeSlug
@@ -124,6 +142,7 @@ export function runQualityGate(): QualityRow[] {
       return {
         kind: "region-grade-subject",
         path: `${cityPath(c.regionSlug)}/${c.gradeSlug}/${c.subjectSlug}`,
+        draft: c.status !== "published",
         indexed: getIndexability("region-grade-subject", {
           regionSlug: c.regionSlug,
           gradeSlug: c.gradeSlug,

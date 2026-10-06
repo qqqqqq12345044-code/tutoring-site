@@ -68,12 +68,28 @@ const PATH_UPDATED: Record<string, string> = {
   "/subject/math": "2026-10-02",
   "/subject/english": "2026-10-02",
   "/subject/korean": "2026-10-02",
-  "/subject/social": "2026-10-02",
-  "/subject/science": "2026-10-02",
+  "/subject/social": "2026-10-06", // 2026-10-06: 탐구 주제 설명 정리 (STEP 12)
+  "/subject/science": "2026-10-06", // 2026-10-06: 탐구 주제 설명 정리 (STEP 12)
   "/grade/elementary/1": "2026-10-02",
   "/grade/elementary/2": "2026-10-02",
   "/grade/elementary/3": "2026-10-02",
   "/program/nonsul": "2026-10-02",
+  // 2026-10-06 STEP 12: 2028학년도 수능 표현 점검 (탐구 주제 응시 학년도 구분, 주제 설명 정리)
+  "/subject/social/social-tamgu": "2026-10-06",
+  "/subject/science/science-tamgu": "2026-10-06",
+  // 2026-10-06 후속: 공식 출처 보강·"참고 자료" 표시·지역 사실 정정, 신규 GREEN 3건(수원·서초·양천 중등)
+  "/region/seoul/gangseo/math": "2026-10-06",
+  "/region/incheon/michuhol/english": "2026-10-06",
+  "/region/gyeonggi/suwon/middle/math": "2026-10-06",
+  "/region/seoul/seocho/middle/english": "2026-10-06",
+  "/region/seoul/yangcheon/middle/math": "2026-10-06",
+  // 2026-10-06 STEP 8: new region×grade×subject pages (quality gate GREEN)
+  "/region/gyeonggi/seongnam/middle/english": "2026-10-06",
+  "/region/gyeonggi/yongin/middle/math": "2026-10-06",
+  "/region/gyeonggi/bucheon/middle/math": "2026-10-06",
+  "/region/gyeonggi/anyang/middle/math": "2026-10-06",
+  "/region/gyeonggi/goyang/high/math": "2026-10-06",
+  "/region/seoul/songpa/middle/math": "2026-10-06",
 };
 
 const subjectSlugs = new Set(subjects.map((s) => s.slug));

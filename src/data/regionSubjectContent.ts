@@ -1,3 +1,5 @@
+import { neisSchoolSource, type ContentSource } from "@/data/sources";
+
 /**
  * Region-specific part of a region+subject landing page
  * (/region/[province]/[city]/[subject]). Having an entry here is what makes
@@ -20,11 +22,12 @@ export interface RegionSubjectContent {
   /** Region-specific FAQs, rendered before the subject's shared FAQs. */
   faqs?: { question: string; answer: string }[];
   /**
-   * Where the entry's factual statements come from (e.g. "학교알리미 소재지",
-   * "인천광역시 행정체제 개편 고시"). Required for the quality gate's GREEN
-   * grade (scripts/lib/quality-gate.ts); an entry without sources is AMBER.
+   * Where the entry's factual statements come from — official pages that were
+   * actually opened (시청 연혁, 교육부 NEIS 학교기본정보, 학교 공식 연혁 등).
+   * Shown to visitors in the page's "참고 자료" block (SourceList) and required for
+   * the quality gate's GREEN grade (scripts/lib/quality-gate.ts); without it the entry is AMBER.
    */
-  sources?: string[];
+  sources?: ContentSource[];
 }
 
 export const regionSubjectContents: RegionSubjectContent[] = [
@@ -90,7 +93,7 @@ export const regionSubjectContents: RegionSubjectContent[] = [
     localNotes: [
       {
         title: "교명과 소재지가 다른 강서구 학교",
-        body: "강서구에는 가양동에 있는 서울양천초등학교, 1985년 마포구에서 강서구로 옮긴 뒤 교명을 유지한 마포고등학교처럼 다른 구 이름이 들어간 학교가 있습니다. 학교명만 보고 지역 페이지를 찾으면 엉뚱한 지역 정보를 보게 될 수 있어, 교과설계소는 학교를 실제 소재 구 기준으로 분류합니다.",
+        body: "강서구에는 가양동에 있는 서울양천초등학교, 1985년 2월 등촌동 신교사로 이전한 마포고등학교처럼 다른 구 이름이 들어간 학교가 있습니다. 학교명만 보고 지역 페이지를 찾으면 엉뚱한 지역 정보를 보게 될 수 있어, 교과설계소는 학교를 실제 소재 구 기준으로 분류합니다.",
       },
       {
         title: "초등에서 고등까지 이어지는 수학",
@@ -108,6 +111,11 @@ export const regionSubjectContents: RegionSubjectContent[] = [
         answer:
           "아닙니다. 마포고등학교는 강서구에 있는 학교라 강서구 학교 목록에 분류되어 있습니다. 학교별 페이지에서 마포고등학교 수학과외 안내를 확인할 수 있습니다.",
       },
+    ],
+    sources: [
+      neisSchoolSource("서울양천초등학교"),
+      neisSchoolSource("마포고등학교"),
+      { label: "마포고등학교 — 학교연혁 (1985.02 강서구 등촌동 신교사 완공 이전)", url: "https://mapo.sen.hs.kr/18853/subMenu.do" },
     ],
   },
   {
@@ -132,11 +140,11 @@ export const regionSubjectContents: RegionSubjectContent[] = [
     localNotes: [
       {
         title: "2026년 인천 행정체제 개편과 미추홀구",
-        body: "2026년 7월 1일 인천 행정체제 개편으로 중구·동구·서구가 제물포구·영종구·검단구·서해구로 재편되었지만, 미추홀구는 기존 구역을 그대로 유지합니다. 개편 이후에도 미추홀구 학교 정보는 같은 지역 페이지에서 확인할 수 있습니다.",
+        body: "2026년 7월 1일 인천 행정체제 개편으로 중구·동구는 제물포구와 영종구로, 서구는 서해구와 검단구로 재편되어 2군·8구가 2군·9구가 되었습니다. 미추홀구는 연수구·남동구·부평구·계양구와 함께 기존 체제를 유지하는 구입니다.",
       },
       {
         title: "초·중·고 학교 정보가 모두 등록된 지역",
-        body: "미추홀구는 초등학교·중학교·고등학교 정보가 모두 등록되어 있어, 자녀가 상급 학교로 진학해도 같은 지역 안에서 학교별 영어 안내를 이어서 확인할 수 있습니다.",
+        body: "등록된 인천숭의초등학교(숭의동)는 남녀공학이고, 관교중학교(관교동)와 인천고등학교(주안동)는 남학교로 분류되어 있습니다. 초·중·고가 모두 등록되어 있어 자녀가 상급 학교로 진학해도 같은 지역 안에서 학교별 영어 안내를 이어서 확인할 수 있습니다.",
       },
     ],
     faqs: [
@@ -150,6 +158,13 @@ export const regionSubjectContents: RegionSubjectContent[] = [
         answer:
           "가능합니다. 현재 읽기 수준과 학교 영어 수업 진도를 먼저 확인한 뒤 파닉스나 기초 문장 등 필요한 단계부터 시작합니다.",
       },
+    ],
+    sources: [
+      { label: "인천광역시 — 인천형 행정체제 개편 개요 (2026-07-01 2군·9구 출범)", url: "https://www.incheon.go.kr/IC01070101" },
+      { label: "인천광역시 보도자료 — ’26년 7월, 인천에 자치구 하나 더 생겨 2군·9구로 출범 (개편 대상·유지 구)", url: "https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000009096254" },
+      neisSchoolSource("인천숭의초등학교"),
+      neisSchoolSource("관교중학교"),
+      neisSchoolSource("인천고등학교"),
     ],
   },
 ];

@@ -28,6 +28,7 @@ import {
   checkSchoolSubjectContentQuality,
   checkRegionProgramContentQuality,
   checkGuideContentQuality,
+  checkContentSources,
 } from "./lib/content-quality";
 import { writeCacheEntry } from "./lib/validation-cache";
 
@@ -130,6 +131,10 @@ async function main() {
   console.log(`Content quality: ${contentQuality.ok ? "PASS" : "FAIL"}`);
   if (!contentQuality.ok) contentQuality.issues.forEach((i) => console.log(`  - ${i}`));
 
+  const contentSources = checkContentSources();
+  console.log(`Content sources: ${contentSources.ok ? "PASS" : "FAIL"}`);
+  if (!contentSources.ok) contentSources.issues.forEach((i) => console.log(`  - ${i}`));
+
   const plainSchoolContentQuality = checkSchoolContentQuality();
   console.log(`Plain school content quality: ${plainSchoolContentQuality.ok ? "PASS" : "FAIL"}`);
   if (!plainSchoolContentQuality.ok) plainSchoolContentQuality.issues.forEach((i) => console.log(`  - ${i}`));
@@ -184,6 +189,7 @@ async function main() {
     typeOk &&
     configOk &&
     contentQuality.ok &&
+    contentSources.ok &&
     plainSchoolContentQuality.ok &&
     schoolContentQuality.ok &&
     programContentQuality.ok &&
@@ -200,6 +206,7 @@ async function main() {
     typecheck: typeOk ? "PASS" : "FAIL",
     config: configOk ? "PASS" : "FAIL",
     contentQuality: contentQuality.ok ? "PASS" : "FAIL",
+    contentSources: contentSources.ok ? "PASS" : "FAIL",
     plainSchoolContentQuality: plainSchoolContentQuality.ok ? "PASS" : "FAIL",
     schoolContentQuality: schoolContentQuality.ok ? "PASS" : "FAIL",
     programContentQuality: programContentQuality.ok ? "PASS" : "FAIL",

@@ -8,7 +8,9 @@
  */
 export const BASELINE = {
   totalRoutes: 1482,
-  sitemapCount: 198,
-  noindexCount: 1282,
+  // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
+  // They were already routes (noindex fallback), so totalRoutes is unchanged.
+  sitemapCount: 204,
+  noindexCount: 1276,
   brokenLinks: 0,
 };

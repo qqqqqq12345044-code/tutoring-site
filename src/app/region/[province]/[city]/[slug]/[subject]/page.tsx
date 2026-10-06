@@ -13,6 +13,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
+import SourceList from "@/components/SourceList";
 
 export function generateStaticParams() {
   return regionGradeSubjectContents.filter(isPublishedContent).map((c) => {
@@ -178,6 +179,7 @@ export default async function RegionFilterSubjectPage(
           )}
           {siblingLinks.length > 0 && <RelatedLinks title={`${ctx.region.name} 다른 학년·과목 안내`} links={siblingLinks} />}
           <RelatedLinks title="관련 페이지" links={upLinks} />
+          <SourceList sources={content?.sources} />
         </div>
       </section>
     </>

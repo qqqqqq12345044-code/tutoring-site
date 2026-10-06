@@ -62,6 +62,10 @@ const SRC_2028_NEWS: GuideSource = {
   label: "대한민국 정책브리핑, 올해 중2부터 선택과목 없는 ‘통합형 수능’…내신 5등급 체제로",
   url: "https://www.korea.kr/news/policyNewsView.do?newsId=148924193",
 };
+const SRC_2028_CSAT: GuideSource = {
+  label: "대한민국 정책브리핑, 2028학년도 수능 ‘통합·융합형’으로…탐구 과목, 문항 수·시간 늘린다 (교육부·한국교육과정평가원 발표, 2025.1.21)",
+  url: "https://www.korea.kr/news/policyNewsView.do?newsId=148938778",
+};
 const SRC_CREDIT: GuideSource = {
   label: "대한민국 정책브리핑, ‘고교학점제·진로연계학기’ 도입…학생 맞춤형 교육 강화한다",
   url: "https://www.korea.kr/news/policyNewsView.do?newsId=148895991",
@@ -210,8 +214,8 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     publishedAt: "2026-09-15",
-    updatedAt: "2026-10-02",
-    sources: [SRC_2028, SRC_2028_NEWS, SRC_CREDIT],
+    updatedAt: "2026-10-06",
+    sources: [SRC_2028, SRC_2028_NEWS, SRC_2028_CSAT, SRC_CREDIT],
   },
   {
     slug: "math-weak-unit",
@@ -306,8 +310,8 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     publishedAt: "2026-10-02",
-    updatedAt: "2026-10-02",
-    sources: [SRC_2028, SRC_2028_NEWS],
+    updatedAt: "2026-10-06",
+    sources: [SRC_2028, SRC_2028_NEWS, SRC_2028_CSAT],
   },
   {
     slug: "korean-reading-habit",
@@ -450,8 +454,8 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     publishedAt: "2026-10-02",
-    updatedAt: "2026-10-02",
-    sources: [SRC_SUBJECTS, SRC_2028],
+    updatedAt: "2026-10-06",
+    sources: [SRC_SUBJECTS, SRC_2028, SRC_2028_CSAT],
   },
   {
     slug: "science-concept-experiment",
@@ -497,8 +501,8 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     publishedAt: "2026-10-02",
-    updatedAt: "2026-10-02",
-    sources: [SRC_SUBJECTS, SRC_2028],
+    updatedAt: "2026-10-06",
+    sources: [SRC_SUBJECTS, SRC_2028, SRC_2028_CSAT],
   },
 ];
 

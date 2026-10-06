@@ -141,7 +141,7 @@ export const subjects: Subject[] = [
       { slug: "memorization", title: "암기 전략", description: "무작정 외우지 않고 연결지어 기억하는 방법 학습" },
       { slug: "data-interpretation", title: "자료 해석", description: "그래프·지도·통계 자료를 해석하는 연습" },
       { slug: "school-exam", title: "학교 내신", description: "학교 진도와 수행평가 일정에 맞춘 시험 대비" },
-      { slug: "social-tamgu", title: "사회탐구", description: "고등 사회탐구 과목별 개념 정리와 기출 분석" },
+      { slug: "social-tamgu", title: "사회탐구", description: "고등 사회탐구 개념 정리와 기출 분석" },
     ],
     gradeStrategies: [
       { grade: "초등", description: "사회 현상에 관심을 갖고 기본 개념 용어를 익힙니다." },
@@ -177,7 +177,7 @@ export const subjects: Subject[] = [
       { slug: "chemistry", title: "화학", description: "화학 개념과 반응식, 계산 문제 학습" },
       { slug: "biology", title: "생명과학", description: "생명과학 개념 구조화와 암기 전략" },
       { slug: "earth-science", title: "지구과학", description: "지구과학 개념과 자료 해석 연습" },
-      { slug: "science-tamgu", title: "과학탐구", description: "고등 과학탐구 과목별 기출 문제 분석" },
+      { slug: "science-tamgu", title: "과학탐구", description: "고등 과학탐구 개념 정리와 기출 문제 분석" },
     ],
     gradeStrategies: [
       { grade: "초등", description: "실험과 관찰을 바탕으로 과학적 사고의 기초를 다집니다." },

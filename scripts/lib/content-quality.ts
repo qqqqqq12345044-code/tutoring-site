@@ -593,3 +593,27 @@ export function checkGuideContentQuality(): GuideQualityResult {
     minChars: minChars === Infinity ? 0 : minChars,
   };
 }
+
+/**
+ * Every `sources` entry shown to visitors ("참고 자료") must be a real https link with a label,
+ * and an entry must not list the same URL twice. (That a source actually backs its sentence
+ * is a human check done when the entry is written — see docs/qa/source-audit-2026-10-06.md.)
+ */
+export function checkContentSources(): ContentQualityResult {
+  const issues: string[] = [];
+  const entries = [
+    ...regionSubjectContents.map((c) => ({ key: `${c.regionSlug}/${c.subjectSlug}`, sources: c.sources })),
+    ...regionGradeSubjectContents.map((c) => ({ key: `${c.regionSlug}/${c.gradeSlug}/${c.subjectSlug}`, sources: c.sources })),
+  ];
+  for (const { key, sources } of entries) {
+    if (!sources) continue;
+    const seen = new Set<string>();
+    for (const s of sources) {
+      if (!s.label.trim()) issues.push(`${key}: 출처 label이 비어 있음`);
+      if (!/^https:\/\/\S+$/.test(s.url)) issues.push(`${key}: 출처 URL은 https 주소여야 함 (${s.url})`);
+      if (seen.has(s.url)) issues.push(`${key}: 중복 출처 URL (${s.url})`);
+      seen.add(s.url);
+    }
+  }
+  return { ok: issues.length === 0, issues };
+}

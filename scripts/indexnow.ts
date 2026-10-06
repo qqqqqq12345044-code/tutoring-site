@@ -5,6 +5,7 @@
  *      Diffs the live production sitemap.xml (= previous deploy) against the
  *      local sitemap() (= this deploy) and stores only new / removed /
  *      lastmod-changed URLs in a pending file. Read-only against production.
+ *   (any time)         npx tsx scripts/indexnow.ts status            (readiness check; sends nothing)
  *   2. AFTER deploy:   npx tsx scripts/indexnow.ts submit            (dry-run: prints the request)
  *                      npx tsx scripts/indexnow.ts submit --send     (actually POSTs, once)
  *      Re-checks each pending URL on production (new/changed must be 200,
@@ -122,10 +123,50 @@ async function submit(send: boolean) {
   else console.log(`  pending file kept; response: ${(await res.text()).slice(0, 200)}`);
 }
 
-const [cmd] = process.argv.slice(2);
-(cmd === "prepare" ? prepare() : cmd === "submit" ? submit(process.argv.includes("--send")) : Promise.reject(new Error("usage: indexnow.ts prepare | submit [--send]"))).catch(
-  (err) => {
-    console.error(`IndexNow: ${(err as Error).message}`);
-    process.exit(1);
+/**
+ * Readiness check before the first real --send. Read-only, sends nothing, and
+ * never prints the key. Exit code 1 while anything is missing.
+ */
+async function status() {
+  const key = process.env.INDEXNOW_KEY ?? "";
+  const keyFormatOk = /^[a-zA-Z0-9-]{8,128}$/.test(key);
+  const keyFile = keyFormatOk ? path.join(__dirname, "..", "public", `${key}.txt`) : "";
+  const localKeyFile = keyFormatOk && fs.existsSync(keyFile) && fs.readFileSync(keyFile, "utf-8").trim() === key;
+  let liveKeyFile = false;
+  if (localKeyFile) {
+    try {
+      const res = await fetch(`${siteConfig.domain}/${key}.txt`);
+      liveKeyFile = res.ok && (await res.text()).trim() === key;
+    } catch {
+      liveKeyFile = false;
+    }
   }
-);
+  const pending: Pending | null = fs.existsSync(PENDING) ? JSON.parse(fs.readFileSync(PENDING, "utf-8")) : null;
+  const rows: [string, boolean, string][] = [
+    ["INDEXNOW_KEY env (8–128자 [a-zA-Z0-9-])", keyFormatOk, key ? "" : "미설정"],
+    ["public/{key}.txt (내용 = key)", localKeyFile, keyFormatOk ? "" : "key 필요"],
+    ["운영 서버의 /{key}.txt (배포 완료)", liveKeyFile, localKeyFile ? "배포 전이면 정상" : "key 파일 필요"],
+    [
+      "pending 변경분 (prepare 결과)",
+      Boolean(pending),
+      pending ? `added ${pending.added.length} / removed ${pending.removed.length} / changed ${pending.changed.length}` : "prepare 필요",
+    ],
+  ];
+  for (const [label, ok, note] of rows) console.log(`${ok ? "OK " : "NO "} ${label}${note ? ` — ${note}` : ""}`);
+  const ready = rows.every(([, ok]) => ok);
+  console.log(ready ? "IndexNow status: READY (submit --send 가능)" : "IndexNow status: NOT READY — 전송하지 마세요");
+  if (!ready) process.exit(1);
+}
+
+const [cmd] = process.argv.slice(2);
+(cmd === "prepare"
+  ? prepare()
+  : cmd === "submit"
+    ? submit(process.argv.includes("--send"))
+    : cmd === "status"
+      ? status()
+      : Promise.reject(new Error("usage: indexnow.ts prepare | status | submit [--send]"))
+).catch((err) => {
+  console.error(`IndexNow: ${(err as Error).message}`);
+  process.exit(1);
+});

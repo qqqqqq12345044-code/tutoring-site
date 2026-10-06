@@ -13,6 +13,7 @@ import { indexedSubGradeLinks, indexedSubjectTopicLinks } from "@/lib/internalLi
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
+import SourceList from "@/components/SourceList";
 
 export function generateStaticParams() {
   return guideArticles.map((a) => ({ slug: a.slug }));
@@ -88,20 +89,7 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
           </div>
         </section>
       ))}
-      {article.sources && article.sources.length > 0 && (
-        <aside className="mt-10 rounded-2xl border border-border-subtle bg-white p-5">
-          <p className="text-sm font-bold text-navy">참고 자료</p>
-          <ul className="mt-2 flex flex-col gap-1.5">
-            {article.sources.map((src) => (
-              <li key={src.url} className="text-sm text-text-muted break-words">
-                <a href={src.url} target="_blank" rel="noopener noreferrer" className="hover:text-brand underline-offset-2 hover:underline">
-                  {src.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      )}
+      <SourceList sources={article.sources} className="mt-10" />
       <div className="mt-10 flex flex-col gap-4">
         {relatedLinks.length > 0 && <RelatedLinks title="관련 페이지" links={relatedLinks} />}
         {studyLinks.length > 0 && <RelatedLinks title="함께 보면 좋은 학습 정보" links={studyLinks} />}

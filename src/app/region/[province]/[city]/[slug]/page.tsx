@@ -18,6 +18,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
+import SourceList from "@/components/SourceList";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import StepFlow from "@/components/ui/StepFlow";
 import CaseStudyCard from "@/components/CaseStudyCard";
@@ -328,6 +329,12 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
             <FAQAccordion items={faqs} />
           </div>
         </section>
+
+        {content?.sources && content.sources.length > 0 && (
+          <section className="container-page pb-14 md:pb-16">
+            <SourceList sources={content.sources} />
+          </section>
+        )}
 
         <section className="container-page pb-16 md:pb-20">
           <ConsultCTA title={`${ctx.region.name} ${ctx.subject.name}과외 상담받기`} description="학년과 목표를 알려주시면 안내해드립니다." />
