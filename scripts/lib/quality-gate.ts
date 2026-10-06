@@ -28,6 +28,7 @@ import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
 import { getIndexability } from "@/lib/indexability";
 import { tokenSimilarity } from "./content-quality";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
+import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 
 export type QualityGrade = "GREEN" | "AMBER" | "RED";
 
@@ -196,5 +197,22 @@ export function checkQualityNoindexSync(rows: QualityRow[]): { ok: boolean; issu
   for (const p of red) if (!qualityNoindexPaths.has(p)) issues.push(`RED but not held noindex: ${p}`);
   for (const p of qualityNoindexPaths) if (!red.has(p)) issues.push(`held noindex but no longer RED: ${p}`);
   for (const r of rows) if (r.grade === "RED" && r.indexed) issues.push(`RED page still indexed: ${r.path}`);
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * src/data/schoolSubjectNoindex.ts (editorial AMBER holds) must stay separate from the
+ * RED list: every entry must be a graded school×subject page, not RED, not also in
+ * qualityNoindex.ts, and actually noindex.
+ */
+export function checkSchoolSubjectNoindexHolds(rows: QualityRow[]): { ok: boolean; issues: string[] } {
+  const issues: string[] = [];
+  for (const p of schoolSubjectNoindexPaths) {
+    const row = rows.find((r) => r.kind === "school-subject" && r.path === p);
+    if (!row) issues.push(`hold is not a published school×subject page: ${p}`);
+    else if (row.grade === "RED") issues.push(`hold is RED — move it to qualityNoindex.ts: ${p}`);
+    else if (row.indexed) issues.push(`hold is still indexed: ${p}`);
+    if (qualityNoindexPaths.has(p)) issues.push(`listed in both noindex lists: ${p}`);
+  }
   return { ok: issues.length === 0, issues };
 }

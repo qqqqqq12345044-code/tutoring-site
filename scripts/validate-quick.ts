@@ -17,7 +17,7 @@ import {
   checkRegionGate,
   checkSitemapLastmod,
 } from "./lib/route-inventory";
-import { runQualityGate, summarizeQualityGate, checkQualityNoindexSync } from "./lib/quality-gate";
+import { runQualityGate, summarizeQualityGate, checkQualityNoindexSync, checkSchoolSubjectNoindexHolds } from "./lib/quality-gate";
 import {
   checkRegionGradeSubjectContentQuality,
   checkRegionPageContentQuality,
@@ -175,6 +175,9 @@ async function main() {
   const qualitySync = checkQualityNoindexSync(qualityRows);
   console.log(`Quality gate RED sync: ${qualitySync.ok ? "PASS" : "FAIL"}`);
   if (!qualitySync.ok) qualitySync.issues.forEach((i) => console.log(`  - ${i}`));
+  const schoolHolds = checkSchoolSubjectNoindexHolds(qualityRows);
+  console.log(`School×subject noindex holds: ${schoolHolds.ok ? "PASS" : "FAIL"}`);
+  if (!schoolHolds.ok) schoolHolds.issues.forEach((i) => console.log(`  - ${i}`));
 
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
@@ -198,7 +201,8 @@ async function main() {
     regionFaqContentQuality.ok &&
     subjectTopicContentQuality.ok &&
     guideQuality.ok &&
-    qualitySync.ok;
+    qualitySync.ok &&
+    schoolHolds.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {
@@ -216,6 +220,7 @@ async function main() {
     subjectTopicContentQuality: subjectTopicContentQuality.ok ? "PASS" : "FAIL",
     guideContentQuality: guideQuality.ok ? "PASS" : "FAIL",
     qualityRedSync: qualitySync.ok ? "PASS" : "FAIL",
+    schoolSubjectHolds: schoolHolds.ok ? "PASS" : "FAIL",
   });
 
   process.exit(pass ? 0 : 1);

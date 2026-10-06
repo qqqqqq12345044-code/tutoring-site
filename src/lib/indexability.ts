@@ -7,6 +7,7 @@ import { getSubGradeContent, isPublishedContent as isSubGradePublished } from "@
 import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
 import { getRegionBySlug, getRegionUrl } from "@/data/regions";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
+import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schools } from "@/data/schools";
 
 /**
@@ -154,7 +155,9 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
       const content =
         ctx.schoolSlug && ctx.subjectSlug ? getSchoolSubjectContent(ctx.schoolSlug, ctx.subjectSlug) : undefined;
       if (!isSchoolSubjectPublished(content)) return NOT_INDEXED;
-      return qualityNoindexPaths.has(`/school/${content.schoolSlug}/${content.subjectSlug}`) ? NOT_INDEXED : INDEXED;
+      const path = `/school/${content.schoolSlug}/${content.subjectSlug}`;
+      // RED holds (quality gate) and editorial school×subject holds (AMBER) are kept in separate lists.
+      return qualityNoindexPaths.has(path) || schoolSubjectNoindexPaths.has(path) ? NOT_INDEXED : INDEXED;
     }
 
     case "region-program": {

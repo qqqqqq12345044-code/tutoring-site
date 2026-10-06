@@ -10,7 +10,8 @@ export const BASELINE = {
   totalRoutes: 1482,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
-  sitemapCount: 204,
-  noindexCount: 1276,
+  // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
+  sitemapCount: 199,
+  noindexCount: 1281,
   brokenLinks: 0,
 };
