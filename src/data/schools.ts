@@ -46,6 +46,7 @@ export const schools: School[] = [
     slug: "suwon-high-school",
     name: "수원고등학교",
     cityRegionSlug: "suwon",
+    districtRegionSlug: "paldal", // NEIS 공식 주소: 팔달구 정조로 666-10 (매교동)
     level: "고등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
@@ -137,7 +138,7 @@ export const schools: School[] = [
   // 서울 강남구
   {
     slug: "gangnam-elementary-school",
-    name: "개원초등학교",
+    name: "서울개원초등학교", // NEIS 공식 교명 (2026-10-06 정정, 기존 "개원초등학교")
     cityRegionSlug: "gangnam",
     level: "초등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
@@ -442,7 +443,8 @@ export const schools: School[] = [
   {
     slug: "mapo-middle-school",
     name: "마포중학교",
-    cityRegionSlug: "mapo",
+    // NEIS 공식 주소: 서울 강서구 화곡로 403 (마포고와 같은 주소). 2026-10-06 마포구 → 강서구 정정.
+    cityRegionSlug: "gangseo",
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",

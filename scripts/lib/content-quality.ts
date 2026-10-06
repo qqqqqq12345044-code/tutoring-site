@@ -604,6 +604,7 @@ export function checkContentSources(): ContentQualityResult {
   const entries = [
     ...regionSubjectContents.map((c) => ({ key: `${c.regionSlug}/${c.subjectSlug}`, sources: c.sources })),
     ...regionGradeSubjectContents.map((c) => ({ key: `${c.regionSlug}/${c.gradeSlug}/${c.subjectSlug}`, sources: c.sources })),
+    ...schoolSubjectContents.map((c) => ({ key: `school/${c.schoolSlug}/${c.subjectSlug}`, sources: c.sources })),
   ];
   for (const { key, sources } of entries) {
     if (!sources) continue;

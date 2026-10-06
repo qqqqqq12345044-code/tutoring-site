@@ -17,6 +17,22 @@
 | #6 `yangcheon/middle/math` | NEIS 소재 동·교육지원청 기반 재작성 → **GREEN 19%** |
 | #4, #7~#10 | 이번에 미착수 (그대로 AMBER) |
 
+### 3차 처리 (남은 AMBER 6개 재평가)
+
+| 페이지 | 결과 |
+|---|---|
+| `goyang/middle/math` | NEIS 기반 재작성(백마중 마두동, 행신중 행신동, 일산중이 일산고와 같은 원일로 53) → **GREEN 49→20%** |
+| `mapo/middle/english` | 마포중이 실제로는 강서구라 마포구 목록에서 제외하고 광성중(1894 설립 사립 남학교)·성산중(합정동) 기준으로 재작성 → **GREEN 60→21%** |
+| `suwon/high/math` | 수원고(1909, 사립 남)·수원여고(1936, 공립 여) 등 공식 사실로 재작성 → AMBER 47→31% (기준 30%를 1%p 넘어 GREEN 아님, 숫자 맞추기용 수정은 하지 않음) |
+| `anyang/high/english` | 고등 영어 공통 가이드(playbook) 추가 + 안양외고 외국어계열 특목고, 평촌고는 호계동 등으로 재작성 → AMBER 37→31% |
+| `seongnam/middle/math`, `bucheon/middle/english` | 같은 학교들의 공식 사실을 이미 GREEN 형제 페이지(성남 중등 영어, 부천 중등 수학)가 사용 → 겹치지 않는 새 사실이 없어 **AMBER 유지**(무수정) |
+
+### 4차 (같은 날, 배포 직전)
+- `bucheon/middle/english`: 아직 쓰지 않은 공식 사실(설립 연도 1950·1995·1997, 세 학교 모두 경기도부천교육지원청 관할 공립 남녀공학)로 재작성 → **GREEN 30→19%**
+- `suwon/high/math`·`anyang/high/english`(31%), `seongnam/middle/math`: 새 공식 사실이 없어 **AMBER 유지**(표현만 바꾸는 수정은 하지 않음)
+
+현재 지역×학년×과목은 GREEN 12 / AMBER 3 / RED 19, 전체는 GREEN 14 / AMBER 53 / RED 34다.
+
 이 문서 아래 표(§1~§6)는 **1차 작업 시점(GREEN 6 / AMBER 61)의 기록**이다. 현재는 GREEN 11 / AMBER 56 / RED 34.
 
 ## 1. 현재 수치 (1차 작업 시점)

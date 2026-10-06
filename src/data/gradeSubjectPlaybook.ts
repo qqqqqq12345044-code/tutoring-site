@@ -71,6 +71,24 @@ export const gradeSubjectPlaybooks: GradeSubjectPlaybook[] = [
       },
     ],
   },
+  {
+    gradeSlug: "high",
+    subjectSlug: "english",
+    focusPoints: [
+      {
+        title: "고1 낯선 지문 독해 적응",
+        body: "교과서 본문을 외워 대비하던 중학교 시험과 달리 처음 보는 지문을 제한 시간 안에 읽어야 하므로, 구문 분석과 문단 요지 파악을 함께 연습합니다.",
+      },
+      {
+        title: "고2 내신 범위 확인과 지문별 정리",
+        body: "학교에 따라 교과서 외 부교재나 모의고사 지문이 내신 범위에 들어가기도 하므로, 재학 학교의 시험 범위를 먼저 확인하고 지문 단위로 정리합니다.",
+      },
+      {
+        title: "고3 수능 영어 유형별 마무리",
+        body: "남은 기간 동안 유형별 시간 배분을 점검하고 자주 틀리는 유형의 오답을 따로 모아 반복 확인하며 수능 대비를 마무리합니다.",
+      },
+    ],
+  },
 ];
 
 export function getGradeSubjectPlaybook(

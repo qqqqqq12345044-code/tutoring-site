@@ -10,6 +10,7 @@ import { indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
+import SourceList from "@/components/SourceList";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 
 function resolveContext(schoolSlug: string, subjectSlug: string) {
@@ -126,6 +127,12 @@ export default async function SchoolSubjectPage(props: PageProps<"/school/[schoo
           ]}
         />
       </section>
+
+      {content?.sources && content.sources.length > 0 && (
+        <section className="container-page pb-16 md:pb-20">
+          <SourceList sources={content.sources} />
+        </section>
+      )}
     </>
   );
 }

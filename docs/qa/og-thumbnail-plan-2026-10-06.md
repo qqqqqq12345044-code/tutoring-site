@@ -69,3 +69,7 @@ function resolveOgImage(image?: string) {
 
 - 위 16장(또는 우선순위 높은 `subject-*` 5장 + `grade-*` 3장부터) 이미지 준비 후 `public/assets/og/`에 저장.
 - 준비되면 "OG 이미지 적용" 작업으로 §4 패치를 적용하고 카드 미리보기를 확인한다.
+
+## 6. 재점검 (2026-10-06 3차)
+
+`public/` 이미지는 여전히 브랜드 에셋(`og-default.png` 1200×630, 로고·파비콘)뿐이고, `opengraph-image`/`twitter-image` 라우트도 없다. 카테고리 이미지가 없어 **코드는 바꾸지 않았다.** §2 목록과 §4 패치안을 그대로 유지한다.

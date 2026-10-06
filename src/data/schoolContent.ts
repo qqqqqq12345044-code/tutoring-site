@@ -161,7 +161,7 @@ export const schoolContents: SchoolContent[] = [
     schoolSlug: "mapo-middle-school",
     status: "published",
     intro:
-      "마포중학교(중학교)에 다니고 있다면, 서울 마포구 지역 정보와 함께 학교별 안내를 살펴보는 것을 권합니다.",
+      "마포중학교(중학교)에 다니고 있다면, 서울 강서구 지역 정보와 함께 학교별 안내를 살펴보는 것을 권합니다.",
     schoolSpecificNotes: [
       {
         title: "마포중학교 학생 안내",
