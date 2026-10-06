@@ -55,3 +55,6 @@ next-env.d.ts
 # AI handoff runtime snapshot — regenerated via `npm run handoff`, not durable
 # record. PROJECT_STATE/DECISIONS/NEXT_TASK stay tracked; this one doesn't.
 /docs/ai/AI_HANDOFF.md
+
+# Claude Code personal settings
+.claude/settings.local.json
