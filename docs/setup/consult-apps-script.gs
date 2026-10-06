@@ -34,7 +34,7 @@ function doPost(e) {
     return respond(false, "bad request");
   }
 
-  var expectedSecret = PropertiesService.getScriptProperties().getProperty("WEBHOOK_SECRET");
+  var expectedSecret = getExpectedSecret_();
   if (!expectedSecret || data.secret !== expectedSecret) {
     return respond(false, "unauthorized");
   }
@@ -47,7 +47,7 @@ function doPost(e) {
   var cacheKey = "consult:" + submissionId;
 
   if (submissionId && cache.get(cacheKey) === "done") {
-    return respond(true, "duplicate");
+    return respond(true, "duplicate", { mail: "already" });
   }
 
   var lock = LockService.getScriptLock();
@@ -58,6 +58,7 @@ function doPost(e) {
 
   try {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    ensureColumns(sheet);
     var row = submissionId ? findRowBySubmissionId(sheet, submissionId) : 0;
     var isDuplicate = row > 0;
 
@@ -82,22 +83,45 @@ function doPost(e) {
     }
 
     // 행은 있는데 메일 표시가 없으면(이전 실행이 저장 후 메일 전에 실패) 메일만 보냄.
-    var mailSent = sheet.getRange(row, COL_MAIL_SENT).getValue() === "Y";
-    if (!mailSent && data.adminEmail) {
-      sendAdminEmail(data);
-      sheet.getRange(row, COL_MAIL_SENT).setValue("Y");
-      SpreadsheetApp.flush();
+    var mail = "already";
+    if (sheet.getRange(row, COL_MAIL_SENT).getValue() !== "Y") {
+      if (data.adminEmail) {
+        sendAdminEmail(data);
+        sheet.getRange(row, COL_MAIL_SENT).setValue("Y");
+        SpreadsheetApp.flush();
+        mail = "sent";
+      } else {
+        mail = "skipped";
+      }
     }
 
     if (submissionId) {
       cache.put(cacheKey, "done", CACHE_TTL_SECONDS);
     }
-    return respond(true, isDuplicate ? "duplicate" : "ok");
+    return respond(true, isDuplicate ? "duplicate" : "ok", { row: row, mail: mail });
   } catch (err) {
     return respond(false, "error");
   } finally {
     lock.releaseLock();
   }
+}
+
+/**
+ * WEBHOOK_SECRET 스크립트 속성을 우선 사용. 속성이 없으면 LEGACY_WEBHOOK_SECRET
+ * 전역(이 저장소에 없는 별도 스크립트 파일에서 정의)을 폴백으로 씁니다 — 속성
+ * 도입 전에 배포된 스크립트가 secret을 코드에 넣어 두었던 경우를 위한 것이고,
+ * secret 값 자체는 어떤 경우에도 이 저장소에 두지 않습니다.
+ */
+function getExpectedSecret_() {
+  var fromProperty = PropertiesService.getScriptProperties().getProperty("WEBHOOK_SECRET");
+  if (fromProperty) return fromProperty;
+  return typeof LEGACY_WEBHOOK_SECRET === "string" ? LEGACY_WEBHOOK_SECRET : "";
+}
+
+/** 접수ID(L)·알림메일(M) 열이 시트 범위에 없으면(11열까지만 있는 시트) 열을 추가. */
+function ensureColumns(sheet) {
+  var missing = COL_MAIL_SENT - sheet.getMaxColumns();
+  if (missing > 0) sheet.insertColumnsAfter(sheet.getMaxColumns(), missing);
 }
 
 /** 접수ID 열에서 정확히 일치하는 셀의 행 번호, 없으면 0. */
@@ -131,8 +155,11 @@ function sendAdminEmail(data) {
   });
 }
 
-function respond(ok, message) {
-  var output = ContentService.createTextOutput(JSON.stringify({ ok: ok, message: message, v: 2 }));
+/** extra: 진단용 부가 필드(row, mail). 개인정보는 넣지 않습니다. */
+function respond(ok, message, extra) {
+  var body = { ok: ok, message: message, v: 2 };
+  for (var key in extra || {}) body[key] = extra[key];
+  var output = ContentService.createTextOutput(JSON.stringify(body));
   output.setMimeType(ContentService.MimeType.JSON);
   return output;
 }
