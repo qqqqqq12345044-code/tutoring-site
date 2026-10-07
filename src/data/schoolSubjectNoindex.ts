@@ -1,11 +1,15 @@
 /**
- * School×subject pages held at noindex by an editorial decision (2026-10-06),
- * separate from src/data/qualityNoindex.ts (which must hold exactly the quality
- * gate's RED set). These are AMBER pages — not RED — whose content could not be
- * made distinct with verified official facts:
- * - masked similarity 56~58%, no sources, first note only points to a region page;
- * - rewriting them with NEIS facts did not add enough unique content
- *   (see docs/qa/school-subject-amber-analysis-2026-10-06.md §7·§8).
+ * School×subject pages held at noindex by an editorial decision, separate from
+ * src/data/qualityNoindex.ts (which must hold exactly the quality gate's RED set).
+ * An entry here must be a published, non-RED page.
+ *
+ * History: 2026-10-06 five AMBER pages were held (개포고 수학, 서현중 영어, 영통중 영어,
+ * 인천갈산초 과학, 인천남동고 사회). 2026-10-07 they were rewritten with 학교알리미 공시 평가계획
+ * facts, reached GREEN, and were released from this list.
+ *
+ * Current hold: 반포중 수학 — 학교알리미에서 '휴교'로 표시되고 2023학년도가 마지막 공시다
+ * (docs/qa/seo-full-audit-2026-10-07.md §3). Its school page is held in
+ * src/data/schoolNoindex.ts.
  *
  * Like qualityNoindex, the page stays reachable (HTTP 200, canonical and body
  * unchanged); only robots becomes noindex and the URL leaves sitemap.xml
@@ -14,9 +18,5 @@
  * not RED (a RED page belongs in qualityNoindex.ts instead).
  */
 export const schoolSubjectNoindexPaths = new Set<string>([
-  "/school/gangnam-high-school/math", // 개포고 수학
-  "/school/seongnam-middle-school/english", // 서현중 영어
-  "/school/yeongtong-middle-school/english", // 영통중 영어
-  "/school/bupyeong-elementary-school/science", // 인천갈산초 과학
-  "/school/namdong-high-school/social", // 인천남동고 사회
+  "/school/banpo-middle-school/math", // 반포중 수학 — 휴교
 ]);

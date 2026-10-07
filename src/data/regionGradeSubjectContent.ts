@@ -1,4 +1,4 @@
-import { neisSchoolSource, type ContentSource } from "@/data/sources";
+import { neisSchoolSource, schoolInfoPlanSource, type ContentSource } from "@/data/sources";
 
 /**
  * Region-specific content for a (region × grade × subject) combination —
@@ -192,16 +192,21 @@ export const regionGradeSubjectContents: RegionGradeSubjectContent[] = [
     subjectSlug: "math",
     status: "published",
     intro:
-      "성남은 서현중학교 등 여러 중학교가 있는 지역으로, 재학 중인 학교의 수학 단원별 진도를 확인한 뒤 취약한 부분부터 보완하는 학습 계획이 필요합니다.",
+      "교과설계소에 등록된 성남 중학교는 서현중학교·이매중학교·판교중학교입니다. 세 학교의 2026학년도 2학기 수학 평가계획은 같은 분당구 안에서도 정기시험 횟수와 수행평가 비중이 달라, 중학교 수학과외는 학교와 학년을 먼저 확인한 뒤 준비 방향을 정합니다.",
     regionSpecificNotes: [
       {
-        title: "서현중학교 학생 안내",
-        body: "서현중학교에 재학 중이라면 학교별 과외 페이지도 함께 참고할 수 있습니다.",
+        title: "1학년 정기시험 — 한 번(서현·이매)과 두 번(판교)",
+        body: "학교알리미에 공시된 평가계획에서 서현중학교와 이매중학교 1학년은 12월 2주 2차 시험 한 번이 50%이고, 나머지 50%는 작도와 도형의 성질을 설명하는 수행평가입니다. 판교중학교 1학년은 1차(9월 5주)와 2차(12월 3주) 시험이 각 35%로 정기시험이 70%입니다. 판교중 1학년은 9월 말 첫 시험 대비가 필요하고, 서현중·이매중 1학년은 도형 수행평가 준비 비중이 큽니다.",
       },
       {
-        title: "성남 지역 중학교 정보 비교",
-        body: "성남에는 서현중학교뿐 아니라 이매중학교·판교중학교 정보도 등록되어 있으니, 학교별 수학 진도 차이를 미리 비교해두면 계획을 세우기 쉬워집니다.",
+        title: "2·3학년 — 시험 60%와 70%의 차이",
+        body: "2·3학년은 서현중학교와 이매중학교가 정기시험 60%·수행평가 40%, 판교중학교가 정기시험 70%·수행평가 30%입니다. 이매중학교는 2학년 '도형의 닮음 문제 해결하기'(논술형) 30%와 나만의 수학 포트폴리오 10%, 3학년 '삼각비로 실생활문제 해결하기'와 '원의 성질 문제 해결하기'(각 논술형 20%)를 봅니다. 판교중학교는 2·3학년 모두 문제해결력평가(논술형) 20%와 수학탐구 프로세스폴리오 10%입니다.",
       },
+    ],
+    sources: [
+      schoolInfoPlanSource("서현중학교"),
+      schoolInfoPlanSource("이매중학교"),
+      schoolInfoPlanSource("판교중학교"),
     ],
   },
   {
@@ -262,11 +267,17 @@ export const regionGradeSubjectContents: RegionGradeSubjectContent[] = [
         title: "평촌고는 평촌동이 아닌 호계동",
         body: "평촌고등학교의 공식 주소는 동안구 동안로 80(호계동)입니다. 관양고등학교는 동안구 관양동, 안양외국어고등학교는 만안구 안양동에 있습니다.",
       },
+      {
+        title: "같은 1학년 공통영어2도 학교마다 평가 비중이 다름",
+        body: "학교알리미에 공시된 2026학년도 2학기 평가계획에서 안양외국어고등학교 1학년 공통영어2는 정기시험 30%(1차 14%, 2차 16%), 수행평가 70%입니다. 평촌고등학교 공통영어2는 정기시험 60%에 단편소설 읽고 탐색하기 20%, 단편소설 서평쓰기 10%, 수업내용 성찰하기 10%를 수행평가로 봅니다. 같은 과목이어도 시험 대비와 글쓰기 과제 중 어디에 시간을 써야 하는지가 학교마다 달라, 상담 때 학교 이름을 먼저 확인합니다.",
+      },
     ],
     sources: [
       neisSchoolSource("안양외국어고등학교"),
       neisSchoolSource("평촌고등학교"),
       neisSchoolSource("관양고등학교"),
+      schoolInfoPlanSource("안양외국어고등학교"),
+      schoolInfoPlanSource("평촌고등학교"),
     ],
   },
   {

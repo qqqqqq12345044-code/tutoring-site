@@ -8,6 +8,7 @@ import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished }
 import { getRegionBySlug, getRegionUrl } from "@/data/regions";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
+import { schoolNoindexSlugs } from "@/data/schoolNoindex";
 import { schools } from "@/data/schools";
 
 /**
@@ -117,6 +118,7 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
 
     case "school": {
       const content = ctx.schoolSlug ? getSchoolContent(ctx.schoolSlug) : undefined;
+      if (ctx.schoolSlug && schoolNoindexSlugs.has(ctx.schoolSlug)) return NOT_INDEXED; // editorial hold (휴교 등)
       return isSchoolPublished(content) ? INDEXED : NOT_INDEXED;
     }
 

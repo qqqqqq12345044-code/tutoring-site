@@ -94,3 +94,74 @@ export function neisSchoolSource(name: keyof typeof NEIS_SCHOOLS): ContentSource
     url: `${NEIS_SCHOOL_INFO}?Type=json&ATPT_OFCDC_SC_CODE=${sido}&SD_SCHUL_CODE=${code}`,
   };
 }
+
+/**
+ * 학교알리미(교육부·KERIS 초·중등 정보공시) 학교 페이지. 학교×과목 페이지의 평가 비율·수행평가
+ * 과제·시험 횟수는 이 페이지의 공시항목 '교과별(학년별) 교수ㆍ학습 및 평가계획에 관한 사항'
+ * (2026년 3차 공시, 2026학년도 2학기 계획)의 첨부 원문을 직접 내려받아 확인했다(2026-10-07).
+ * 학교 ID(SHL_IDF_CD)는 학교알리미 검색 결과에서 주소로 학교를 확인해 기록했다. 다음 공시
+ * (2027년 1차)부터는 내용이 바뀌므로 학기마다 다시 확인한다.
+ */
+const SCHOOLINFO_PAGE = "https://www.schoolinfo.go.kr/ei/ss/Pneiss_b01_s0.do";
+
+const SCHOOLINFO_IDS = {
+  대치중학교: "d421d19f-3917-4555-b1f0-6082c91c9b76",
+  목동중학교: "741fee11-57e5-478b-ab77-12cff12bc624",
+  세화고등학교: "7e0cc566-7b34-4f5f-b2ed-41765e58af22",
+  가락중학교: "f46686f7-b1ab-4404-8fa7-4ec3cb762b85",
+  가락고등학교: "c6ad5e0f-54d0-4a34-bf19-2c401d9169a7",
+  양천고등학교: "5167e2d4-a3c8-459f-9eb6-ae5f11d1b22c",
+  마포중학교: "f9cd934a-316d-4e49-9662-80367c6b8225",
+  영통중학교: "92d8a8e4-2cb4-4d66-9861-1732e75ac66d",
+  신갈고등학교: "fb02969c-7b0c-41f9-8ca9-7a794bbadd3a",
+  안양외국어고등학교: "4ef1d0d4-8ee6-49ae-a74c-9e76b18c6cbf",
+  부천중학교: "06b1115a-3593-4b74-9a5c-7057de31f04d",
+  중동고등학교: "5d7e5684-e466-46e6-aa67-90e5dcb7423b",
+  반포중학교: "86cb430b-f27c-4ad7-885b-c310c01c67bf",
+  잠실고등학교: "aae10552-a2b4-4854-a43e-52ded43821df",
+  신서중학교: "28e25565-10e0-4fd8-b5c7-f77b9b6213f8",
+  성산중학교: "3e7fa217-4edd-4e0a-a5ea-791df69f9d4e",
+  죽전고등학교: "d16c2695-b72c-4a90-ac03-a853b247b347",
+  평촌고등학교: "3b8f84a4-aed6-4d5a-aefb-21cc61095e73",
+  서울대치초등학교: "621e3b61-3cad-41ec-9fed-daaf471dcbc0",
+  현대고등학교: "e7624b61-e239-48af-b9e1-a91ccfa9b61c",
+  문정중학교: "0b8d5ba7-366d-4840-9566-5e7b18792767",
+  신목고등학교: "78be01ae-2e6d-4d6e-84fa-51b87125b718",
+  숭문고등학교: "7e8bb116-3383-4ea7-9a2d-fe93e67d0a77",
+  서울반포초등학교: "2f9c1aee-926a-40ca-ba91-ed9658bf04c6",
+  인천숭의초등학교: "c8278998-e903-42db-8a10-ea8d15231ded",
+  관교중학교: "af7581c1-d6e7-411d-b909-2ced6d5b947c",
+  인천송도초등학교: "f8f8185f-3359-4bff-a705-59ef641b0132",
+  연수고등학교: "c74664db-464e-47ca-91f4-38b75030e1dd",
+  인천구월초등학교: "8b778086-4fdb-4506-810a-df0085367d72",
+  부평중학교: "94bbab87-0a16-4cb2-ad81-4289873302fd",
+  부평고등학교: "3a067a4d-bb5a-4da6-b1fc-11699aa5c39e",
+  계산고등학교: "63144aec-562a-443c-9015-227aba0516d0",
+  강화초등학교: "10aaaaf5-7a70-41ef-b973-772c1e1b303e",
+  강화고등학교: "0d642df1-7a21-4685-877e-980bef55a0c7",
+  세화여자중학교: "51a4217f-09d9-41d7-aa1b-362991a3ab6d",
+  서현중학교: "1a1ca19d-bbe1-4d51-b40d-6976ecbbb6e0",
+  고양국제고등학교: "1e45b58e-50d8-4b90-9ecc-c3b5baa88c31",
+  언남중학교: "c8a81ab4-aed8-43a9-9790-242ebe1a1455",
+  이매중학교: "9f37a5eb-ecb1-42d4-8f0f-97a9ab2197f6",
+  판교중학교: "fcffb1b5-2ebc-4576-a0c0-62fe791e8366",
+  개포고등학교: "cf11e801-c2a6-4ebc-bfb2-0947d4a16e16",
+  인천남동고등학교: "77ae0abc-5307-4a00-959b-c4a674783583",
+  인천갈산초등학교: "a5750535-239e-44c7-a20b-34a4d2966529",
+} as const;
+
+/** 학교알리미의 2026학년도 2학기 교과별(학년별) 교수·학습 및 평가계획 공시(학교 페이지에서 해당 공시항목 선택). */
+export function schoolInfoPlanSource(name: keyof typeof SCHOOLINFO_IDS): ContentSource {
+  return {
+    label: `학교알리미 — ${name} 교과별(학년별) 교수·학습 및 평가계획 (2026학년도 2학기, 2026년 9월 공시)`,
+    url: `${SCHOOLINFO_PAGE}?SHL_IDF_CD=${SCHOOLINFO_IDS[name]}`,
+  };
+}
+
+/** 학교알리미 학교 페이지 자체(공시 현황·학교 상태 표시 확인용). */
+export function schoolInfoPageSource(name: keyof typeof SCHOOLINFO_IDS): ContentSource {
+  return {
+    label: `학교알리미 — ${name} 학교 정보`,
+    url: `${SCHOOLINFO_PAGE}?SHL_IDF_CD=${SCHOOLINFO_IDS[name]}`,
+  };
+}

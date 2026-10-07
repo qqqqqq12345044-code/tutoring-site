@@ -21,6 +21,7 @@ import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished }
 import { getIndexability, countSchoolsInRegion } from "@/lib/indexability";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
+import { schoolNoindexSlugs } from "@/data/schoolNoindex";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
 
@@ -263,11 +264,14 @@ export function checkSchoolGate(): GateCheckResult {
   const issues: string[] = [];
 
   for (const school of schools) {
-    const isEligible = isSchoolPublished(getSchoolContent(school.slug));
+    const isEligible = isSchoolPublished(getSchoolContent(school.slug)) && !schoolNoindexSlugs.has(school.slug);
     const { index, sitemap } = getIndexability("school", { schoolSlug: school.slug });
     if (index !== isEligible || sitemap !== isEligible) {
       issues.push(`school gate: ${school.slug} — published-eligible=${isEligible} but index=${index} sitemap=${sitemap}`);
     }
+  }
+  for (const slug of schoolNoindexSlugs) {
+    if (!schools.some((s) => s.slug === slug)) issues.push(`school noindex hold is not a registered school: ${slug}`);
   }
 
   return { ok: issues.length === 0, issues };
