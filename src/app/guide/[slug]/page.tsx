@@ -5,15 +5,19 @@ import {
   getGuideArticleBySlug,
   getRelatedGradeSlug,
   getRelatedSubjectSlug,
+  getRelatedProgramSlug,
 } from "@/data/guide";
+import { getProgramBySlug } from "@/data/programs";
 import { getGradeBySlug } from "@/data/grades";
 import { getSubjectBySlug } from "@/data/subjects";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForGuideCategory } from "@/lib/thumbnails";
 import { indexedSubGradeLinks, indexedSubjectTopicLinks } from "@/lib/internalLinks";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
 import SourceList from "@/components/SourceList";
+import StudyThumbnail from "@/components/StudyThumbnail";
 
 export function generateStaticParams() {
   return guideArticles.map((a) => ({ slug: a.slug }));
@@ -28,6 +32,7 @@ export async function generateMetadata(props: PageProps<"/guide/[slug]">) {
     title: article.title,
     description: article.excerpt,
     path: `/guide/${article.slug}`,
+    image: motifForGuideCategory(article.categorySlug),
   });
 }
 
@@ -39,9 +44,11 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
   const category = guideCategories.find((c) => c.slug === article.categorySlug);
   const relatedGrade = getGradeBySlug(getRelatedGradeSlug(article.categorySlug) ?? "");
   const relatedSubject = getSubjectBySlug(getRelatedSubjectSlug(article.categorySlug) ?? "");
+  const relatedProgram = getProgramBySlug(getRelatedProgramSlug(article.categorySlug) ?? "");
   const relatedLinks = [
     ...(relatedGrade ? [{ label: `${relatedGrade.name}과외`, href: `/grade/${relatedGrade.slug}` }] : []),
     ...(relatedSubject ? [{ label: `${relatedSubject.name}과외`, href: `/subject/${relatedSubject.slug}` }] : []),
+    ...(relatedProgram ? [{ label: `${relatedProgram.name}과외`, href: `/program/${relatedProgram.slug}` }] : []),
   ];
   // Deeper indexed explainers for the same subject / school level (never noindex pages).
   const studyLinks = [
@@ -70,6 +77,9 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
       <h1 className="mt-3 text-2xl md:text-3xl font-extrabold text-navy leading-snug">
         {article.title}
       </h1>
+      <div className="mt-6 overflow-hidden rounded-2xl border border-border-subtle">
+        <StudyThumbnail motif={motifForGuideCategory(article.categorySlug)} />
+      </div>
       <div className="mt-6 flex flex-col gap-4">
         {article.body.map((p) => (
           <p key={p} className="text-text-main leading-relaxed">

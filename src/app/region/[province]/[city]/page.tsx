@@ -9,6 +9,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { buildRegionSchoolIntro } from "@/lib/regionIntro";
+import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
 import { buildRegionFaqs } from "@/lib/regionFaq";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -37,6 +38,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
     title: `${region.name} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${region.fullName} 초등·중등·고등 1:1 과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 상담해보세요.`,
     path: `/region/${province}/${region.slug}`,
+    image: "region",
     robots: { index, follow: true },
   });
 }
@@ -102,9 +104,12 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {schoolsByLevel.map((g) => (
               <div key={g.level} className="rounded-2xl border border-border-subtle bg-white p-6">
-                <p className="font-bold text-navy">
-                  {g.level} <span className="text-text-muted font-medium text-sm">{g.list.length}곳</span>
-                </p>
+                <Link
+                  href={`/region/${parent.slug}/${region.slug}/${schoolLevelToGradeSlug[g.level]}`}
+                  className="font-bold text-navy hover:text-brand transition-colors"
+                >
+                  {region.name} {g.level} <span className="text-text-muted font-medium text-sm">{g.list.length}곳</span>
+                </Link>
                 <ul className="mt-3 flex flex-col gap-1.5">
                   {g.list.map((s) => {
                     const subjectLinks = subjects.flatMap((subj) => {

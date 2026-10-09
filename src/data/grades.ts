@@ -87,6 +87,12 @@ export const grades: Grade[] = [
   },
 ];
 
+/** 학년 하위 페이지의 풀네임(예: "초등학교 1학년") — 사람들이 검색하는 표기. */
+export function subGradeFullLabel(gradeSlug: string, subGradeSlug: string): string {
+  const level: Record<string, string> = { elementary: "초등학교", middle: "중학교", high: "고등학교" };
+  return `${level[gradeSlug] ?? getGradeBySlug(gradeSlug)?.label ?? ""} ${subGradeSlug}학년`;
+}
+
 export function getGradeBySlug(slug: string): Grade | undefined {
   return grades.find((g) => g.slug === slug);
 }

@@ -6,6 +6,7 @@ import { subjects } from "@/data/subjects";
 import { getArticlesByGradeSlug } from "@/data/guide";
 import { isPublishedContent as isSubGradePublished, getSubGradeContent } from "@/data/subGradeContent";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -29,6 +30,7 @@ export async function generateMetadata(props: PageProps<"/grade/[slug]">) {
     title: `${grade.label} 과외 | 학년별 1:1 맞춤 수업`,
     description: `${grade.description}. ${grade.label}에게 맞는 1:1 과외를 상담해보세요.`,
     path: `/grade/${grade.slug}`,
+    image: motifForSlug(grade.slug),
     robots: { index, follow: true },
   });
 }

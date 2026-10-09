@@ -3,7 +3,9 @@ import { programs, getProgramBySlug } from "@/data/programs";
 import { regions, getRegionUrl } from "@/data/regions";
 import { regionProgramContents, isPublishedContent } from "@/data/regionProgramContent";
 import { getFaqsBySlugs } from "@/data/faqs";
+import { getArticlesByProgramSlug } from "@/data/guide";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -14,6 +16,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import StepFlow from "@/components/ui/StepFlow";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import StudyThumbnail from "@/components/StudyThumbnail";
 
 export function generateStaticParams() {
   return programs.map((p) => ({ slug: p.slug }));
@@ -30,6 +33,7 @@ export async function generateMetadata(props: PageProps<"/program/[slug]">) {
     title: `${program.name}과외 | 1:1 맞춤 프로그램`,
     description: `${program.shortDescription}. 학생의 현재 수준과 목표에 맞는 1:1 ${program.name}과외를 상담해보세요.`,
     path: `/program/${program.slug}`,
+    image: motifForSlug(program.slug),
     robots: { index, follow: true },
   });
 }
@@ -40,6 +44,7 @@ export default async function ProgramPage(props: PageProps<"/program/[slug]">) {
   if (!program) notFound();
 
   const faqs = getFaqsBySlugs(program.faqSlugs);
+  const guideLinks = getArticlesByProgramSlug(program.slug).map((a) => ({ label: a.title, href: `/guide/${a.slug}` }));
   const regionLinks = regionProgramContents
     .filter((c) => c.programSlug === program.slug && isPublishedContent(c))
     .map((c) => {
@@ -55,19 +60,29 @@ export default async function ProgramPage(props: PageProps<"/program/[slug]">) {
 
       <section className="bg-white border-b border-border-subtle">
         <div className="container-page py-8 md:py-10 flex flex-col gap-6">
-          <Breadcrumb items={[{ name: `${program.name}과외`, href: `/program/${program.slug}` }]} />
-          <div className="max-w-2xl">
-            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight whitespace-pre-line">
-              {program.heroTitle}
-            </h1>
-            <p className="mt-4 text-text-main/80 leading-relaxed">{program.heroDescription}</p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <PrimaryButton href="/consult" size="lg">
-                {program.name}과외 상담받기
-              </PrimaryButton>
-              <PrimaryButton href="/regions" variant="outline" size="lg">
-                우리 동네 과외 찾기
-              </PrimaryButton>
+          <Breadcrumb
+            items={[
+              { name: "과목별 과외", href: "/subjects" },
+              { name: `${program.name}과외`, href: `/program/${program.slug}` },
+            ]}
+          />
+          <div className="grid md:grid-cols-[minmax(0,1fr)_320px] gap-8 items-center">
+            <div className="max-w-2xl">
+              <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight whitespace-pre-line">
+                {program.heroTitle}
+              </h1>
+              <p className="mt-4 text-text-main/80 leading-relaxed">{program.heroDescription}</p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <PrimaryButton href="/consult" size="lg">
+                  {program.name}과외 상담받기
+                </PrimaryButton>
+                <PrimaryButton href="/regions" variant="outline" size="lg">
+                  우리 동네 과외 찾기
+                </PrimaryButton>
+              </div>
+            </div>
+            <div className="hidden md:block overflow-hidden rounded-2xl border border-border-subtle">
+              <StudyThumbnail motif={motifForSlug(program.slug)} />
             </div>
           </div>
         </div>
@@ -137,6 +152,7 @@ export default async function ProgramPage(props: PageProps<"/program/[slug]">) {
             .filter((p) => p.slug !== program.slug)
             .map((p) => ({ label: `${p.name}과외`, href: `/program/${p.slug}` }))}
         />
+        {guideLinks.length > 0 && <RelatedLinks title={`${program.name} 공부법·준비 가이드`} links={guideLinks} />}
         {regionLinks.length > 0 && <RelatedLinks title="지역별 프로그램" links={regionLinks} />}
       </section>
 

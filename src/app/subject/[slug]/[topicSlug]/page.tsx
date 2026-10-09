@@ -3,6 +3,7 @@ import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getSubjectTopicContent, isPublishedContent } from "@/data/subjectTopicContent";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -33,6 +34,7 @@ export async function generateMetadata(props: PageProps<"/subject/[slug]/[topicS
     title: `${ctx.subject.name} ${ctx.topic.title} | 1:1 맞춤 과외`,
     description: content?.intro ?? `${ctx.subject.name} ${ctx.topic.title} 학습을 위한 1:1 과외를 상담해보세요. ${ctx.topic.description}`,
     path: `/subject/${ctx.subject.slug}/${ctx.topic.slug}`,
+    image: motifForSlug(ctx.subject.slug),
     robots: { index, follow: true },
   });
 }

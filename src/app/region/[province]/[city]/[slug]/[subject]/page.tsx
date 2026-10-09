@@ -5,6 +5,7 @@ import { getGradeBySlug } from "@/data/grades";
 import { getRegionGradeSubjectContent, isPublishedContent, regionGradeSubjectContents } from "@/data/regionGradeSubjectContent";
 import { getGradeSubjectPlaybook } from "@/data/gradeSubjectPlaybook";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
@@ -68,6 +69,7 @@ export async function generateMetadata(
         content?.intro ??
         `${label}에서 ${ctx.subject.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 수업을 상담해보세요.`,
       path: `/region/${province}/${city}/${slug}/${subjectSlug}`,
+      image: motifForSlug(ctx.subject.slug),
       robots: { index, follow: true },
     });
   }
@@ -77,6 +79,7 @@ export async function generateMetadata(
     title: `${label} ${ctx.subject.name}과외 | 1:1 맞춤 수업`,
     description: `${label}에서 ${ctx.subject.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 수업을 상담해보세요.`,
     path: `/region/${province}/${city}/${slug}/${subjectSlug}`,
+    image: motifForSlug(ctx.subject.slug),
     robots: { index, follow: true },
   });
 }

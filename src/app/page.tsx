@@ -18,6 +18,11 @@ import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { regions, getProvinces, getRegionUrl } from "@/data/regions";
 import { schools } from "@/data/schools";
+import { programs } from "@/data/programs";
+import { guideArticles, guideCategories } from "@/data/guide";
+import { countSchoolsInRegion } from "@/lib/indexability";
+import { motifForGuideCategory, motifForSlug } from "@/lib/thumbnails";
+import StudyThumbnail from "@/components/StudyThumbnail";
 import { caseStudies } from "@/data/caseStudies";
 import { homeFaqSlugs, getFaqsBySlugs } from "@/data/faqs";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -87,10 +92,14 @@ const problemItems = [
 export default function HomePage() {
   const homeFaqs = getFaqsBySlugs(homeFaqSlugs);
   const provinces = getProvinces();
-  const featuredProvinces = provinces.filter((p) => p.children.length > 0);
+  const featuredProvinces = provinces.filter((p) => countSchoolsInRegion(p.slug) > 0);
+  // 교과 외 과정 중 홈에 노출할 3종 (한국어과외는 대상이 달라 과목 목록에서 제외, 푸터·과목 허브에서 연결)
+  const homePrograms = programs.filter((p) => ["nonsul", "coding", "ged"].includes(p.slug));
+  // 최신 정보성 글 6편 (publishedAt 내림차순)
+  const latestGuides = [...guideArticles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)).slice(0, 6);
 
   const searchTargets = [
-    ...regions.map((r) => ({ label: r.name, href: getRegionUrl(r.slug) })),
+    ...regions.map((r) => ({ label: r.level === "province" ? r.name : r.fullName, href: getRegionUrl(r.slug) })),
     ...schools.map((s) => ({ label: s.name, href: `/school/${s.slug}` })),
   ];
 
@@ -175,6 +184,51 @@ export default function HomePage() {
               );
             })}
           </div>
+          <p className="mt-10 text-sm font-bold text-navy">교과 외 과정</p>
+          <div className="mt-3 grid sm:grid-cols-3 gap-4">
+            {homePrograms.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/program/${p.slug}`}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-white transition-colors hover:border-brand"
+              >
+                <StudyThumbnail motif={motifForSlug(p.slug)} />
+                <div className="p-5">
+                  <p className="font-bold text-navy">{p.name}과외</p>
+                  <p className="mt-1 text-sm text-text-muted leading-relaxed">{p.shortDescription}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STUDY GUIDES — informational content, not tutoring listings */}
+      <section className="container-page py-16 md:py-20">
+        <SectionHeader
+          eyebrow="STUDY GUIDE"
+          title={"과외를 고르기 전에\n먼저 읽어보면 좋은 공부법"}
+          description="학습 전략, 시험 대비, 학년별·과목별 공부법을 정리했습니다."
+        />
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {latestGuides.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/guide/${a.slug}`}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-white transition-colors hover:border-brand"
+            >
+              <StudyThumbnail motif={motifForGuideCategory(a.categorySlug)} />
+              <div className="flex flex-col gap-2 p-5">
+                <span className="w-fit rounded-full bg-brand-light px-2.5 py-1 text-xs font-semibold text-brand">
+                  {guideCategories.find((c) => c.slug === a.categorySlug)?.name}
+                </span>
+                <h3 className="font-bold text-navy leading-snug">{a.title}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-8 flex justify-center">
+          <TextLink href="/guide">학습가이드 전체 보기</TextLink>
         </div>
       </section>
 

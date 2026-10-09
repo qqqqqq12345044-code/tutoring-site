@@ -7,6 +7,7 @@ import { getArticlesBySubjectSlug } from "@/data/guide";
 import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
 import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { indexedRegionLinksForSubject } from "@/lib/internalLinks";
 import { JsonLd, faqSchema } from "@/lib/schema";
@@ -33,6 +34,7 @@ export async function generateMetadata(props: PageProps<"/subject/[slug]">) {
     title: `${subject.name}과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${subject.shortDescription}. 학생의 현재 수준과 목표에 맞는 1:1 ${subject.name}과외를 상담해보세요.`,
     path: `/subject/${subject.slug}`,
+    image: motifForSlug(subject.slug),
     robots: { index, follow: true },
   });
 }

@@ -5,6 +5,7 @@ import { getRegionProgramContent, isPublishedContent } from "@/data/regionProgra
 import { schools } from "@/data/schools";
 import { getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -53,6 +54,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
       (published ? content?.intro : undefined) ??
       `${ctx.region.name}에서 ${ctx.program.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 방문·화상 수업을 상담해보세요.`,
     path: `/region/${province}/${city}/program/${programSlug}`,
+    image: motifForSlug(ctx.program.slug),
     robots: { index, follow: true },
   });
 }

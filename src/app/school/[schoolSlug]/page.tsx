@@ -37,6 +37,7 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]">)
       content?.intro ??
       `${school.name} 학생을 위한 1:1 과외를 상담해보세요. 학교 진도와 시험 일정에 맞춘 수업을 안내해드립니다.`,
     path: `/school/${school.slug}`,
+    image: "school",
     robots: { index, follow: true },
   });
 }

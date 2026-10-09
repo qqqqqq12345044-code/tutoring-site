@@ -3,7 +3,7 @@ import { getProvinces, getRegionBySlug, getChildren } from "@/data/regions";
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { buildMetadata } from "@/lib/metadata";
-import { getIndexability } from "@/lib/indexability";
+import { getIndexability, countSchoolsInRegion } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
@@ -24,6 +24,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]">) {
     title: `${region.name} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${region.name} 지역 초등·중등·고등 1:1 과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 상담해보세요.`,
     path: `/region/${region.slug}`,
+    image: "region",
     robots: { index, follow: true },
   });
 }
@@ -34,6 +35,8 @@ export default async function ProvincePage(props: PageProps<"/region/[province]"
   if (!region || region.level !== "province") notFound();
 
   const children = getChildren(region.slug);
+  const withSchools = children.filter((c) => countSchoolsInRegion(c.slug) > 0);
+  const withoutSchools = children.filter((c) => countSchoolsInRegion(c.slug) === 0);
 
   return (
     <>
@@ -51,14 +54,23 @@ export default async function ProvincePage(props: PageProps<"/region/[province]"
       </section>
 
       {children.length > 0 && (
-        <section className="container-page py-14 md:py-16">
-          <SectionHeader align="left" title={`${region.name} 주요 지역`} />
-          <div className="mt-6">
+        <section className="container-page py-14 md:py-16 flex flex-col gap-4">
+          <SectionHeader align="left" title={`${region.name} 시·군·구별 과외`} />
+          {withSchools.length > 0 && (
             <RelatedLinks
-              title=""
-              links={children.map((c) => ({ label: c.name, href: `/region/${region.slug}/${c.slug}` }))}
+              title="학교 정보가 등록된 지역"
+              links={withSchools.map((c) => ({
+                label: `${c.name} (학교 ${countSchoolsInRegion(c.slug)}곳)`,
+                href: `/region/${region.slug}/${c.slug}`,
+              }))}
             />
-          </div>
+          )}
+          {withoutSchools.length > 0 && (
+            <RelatedLinks
+              title={withSchools.length > 0 ? "그 외 지역 (방문·화상 상담 가능)" : `${region.name} 전체 시·군·구`}
+              links={withoutSchools.map((c) => ({ label: c.name, href: `/region/${region.slug}/${c.slug}` }))}
+            />
+          )}
         </section>
       )}
 

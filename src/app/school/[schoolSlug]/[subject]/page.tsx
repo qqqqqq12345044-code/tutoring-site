@@ -3,6 +3,7 @@ import { schools, getSchoolBySlug } from "@/data/schools";
 import { subjects, getSubjectBySlug } from "@/data/subjects";
 import { getSchoolSubjectContent, isPublishedContent } from "@/data/schoolSubjectContent";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { buildSchoolBreadcrumb } from "@/lib/schoolHierarchy";
@@ -44,6 +45,7 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]/[s
       content?.intro ??
       `${ctx.school.name} 학생을 위한 ${ctx.subject.name}과외를 상담해보세요. 학교 진도와 시험 일정에 맞춘 수업을 안내해드립니다.`,
     path: `/school/${schoolSlug}/${subjectSlug}`,
+    image: motifForSlug(ctx.subject.slug),
     robots: { index, follow: true },
   });
 }

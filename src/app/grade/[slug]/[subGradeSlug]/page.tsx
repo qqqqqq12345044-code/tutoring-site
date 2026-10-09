@@ -1,8 +1,11 @@
 import { notFound } from "next/navigation";
-import { grades, getGradeBySlug } from "@/data/grades";
+import { grades, getGradeBySlug, subGradeFullLabel } from "@/data/grades";
 import { subjects } from "@/data/subjects";
 import { getSubGradeContent, isPublishedContent } from "@/data/subGradeContent";
+import { gradeSubjectPlaybooks } from "@/data/gradeSubjectPlaybook";
+import { getArticlesByGradeSlug, getStrategyArticles } from "@/data/guide";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -13,7 +16,8 @@ function resolveContext(gradeSlug: string, subGradeSlug: string) {
   const grade = getGradeBySlug(gradeSlug);
   const subGrade = grade?.subGrades.find((sg) => sg.slug === subGradeSlug);
   if (!grade || !subGrade) return null;
-  return { grade, subGrade };
+  const fullLabel = subGradeFullLabel(grade.slug, subGrade.slug);
+  return { grade, subGrade, fullLabel };
 }
 
 export function generateStaticParams() {
@@ -31,10 +35,11 @@ export async function generateMetadata(props: PageProps<"/grade/[slug]/[subGrade
 
   return buildMetadata({
     title: content
-      ? `${ctx.subGrade.label} 과외 | ${content.notes[0].title}`
-      : `${ctx.subGrade.label} 과외 | 1:1 맞춤 수업`,
+      ? `${ctx.fullLabel}(${ctx.subGrade.label}) 과외 | ${content.notes[0].title}`
+      : `${ctx.fullLabel}(${ctx.subGrade.label}) 과외 | 1:1 맞춤 수업`,
     description: content?.intro ?? `${ctx.subGrade.label} 학생을 위한 1:1 과외를 상담해보세요. ${ctx.subGrade.note}`,
     path: `/grade/${ctx.grade.slug}/${ctx.subGrade.slug}`,
+    image: motifForSlug(ctx.grade.slug),
     robots: { index, follow: true },
   });
 }
@@ -46,6 +51,18 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
 
   const rawContent = getSubGradeContent(ctx.grade.slug, ctx.subGrade.slug);
   const content = isPublishedContent(rawContent) ? rawContent : undefined;
+  // 이 학년에 해당하는 과목별 포인트만 공통 playbook에서 골라 보여준다 (예: "중2 …").
+  const subjectFocus = gradeSubjectPlaybooks
+    .filter((pb) => pb.gradeSlug === ctx.grade.slug)
+    .flatMap((pb) => {
+      const subject = subjects.find((s) => s.slug === pb.subjectSlug);
+      const point = pb.focusPoints.find((fp) => fp.title.startsWith(ctx.subGrade.label));
+      return subject && point ? [{ subject, point }] : [];
+    });
+  const guideLinks = [...getArticlesByGradeSlug(ctx.grade.slug), ...getStrategyArticles()].map((a) => ({
+    label: a.title,
+    href: `/guide/${a.slug}`,
+  }));
 
   return (
     <>
@@ -59,7 +76,8 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
             ]}
           />
           <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-            {ctx.subGrade.label} 1:1 맞춤 과외
+            {ctx.fullLabel} 과외{" "}
+            <span className="text-text-muted font-medium text-lg md:text-2xl">| {ctx.subGrade.label} 1:1 맞춤 수업</span>
           </h1>
           <p className="text-text-main/80 leading-relaxed max-w-2xl">{content?.intro ?? ctx.subGrade.note}</p>
         </div>
@@ -79,6 +97,21 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
         </section>
       )}
 
+      {subjectFocus.length > 0 && (
+        <section className="container-page pb-14 md:pb-16">
+          <SectionHeader align="left" title={`${ctx.subGrade.label} 과목별 학습 포인트`} />
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+            {subjectFocus.map(({ subject, point }) => (
+              <div key={subject.slug} className="rounded-2xl border border-border-subtle bg-white p-6">
+                <p className="text-xs font-semibold text-brand">{subject.name}</p>
+                <p className="mt-1 font-bold text-navy">{point.title}</p>
+                <p className="mt-2 text-sm text-text-muted leading-relaxed">{point.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="container-page pb-14 md:pb-16 grid md:grid-cols-2 gap-4">
         <RelatedLinks
           title={`${ctx.subGrade.label} 과목별 과외`}
@@ -90,6 +123,7 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
             .filter((sg) => sg.slug !== ctx.subGrade.slug)
             .map((sg) => ({ label: `${sg.label} 과외`, href: `/grade/${ctx.grade.slug}/${sg.slug}` }))}
         />
+        {guideLinks.length > 0 && <RelatedLinks title={`${ctx.grade.name} 공부법·학습 전략`} links={guideLinks} />}
       </section>
 
       <section className="container-page pb-16 md:pb-20">

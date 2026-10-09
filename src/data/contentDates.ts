@@ -37,15 +37,19 @@ export type ContentKind =
   | "school-subject";
 
 const KIND_UPDATED: Record<ContentKind, string> = {
-  home: "2026-09-29",
+  // 2026-10-09: 교과 외 과정·학습가이드 섹션 추가
+  home: "2026-10-09",
   static: "2026-09-28",
   subject: "2026-09-22",
   "subject-topic": "2026-09-28",
   grade: "2026-09-22",
-  "sub-grade": "2026-09-28",
+  // 2026-10-09: "초등학교 1학년" 풀네임 제목, 학년별 과목 포인트, 공부법 링크 추가
+  "sub-grade": "2026-10-09",
   guide: "2026-09-22",
-  program: "2026-09-22",
-  "region-province": "2026-09-21",
+  // 2026-10-09: 과목 허브 연결, 공부법·준비 가이드 링크
+  program: "2026-10-09",
+  // 2026-10-09: 시·군·구 전체 목록(학교 등록 지역/그 외) 표시
+  "region-province": "2026-10-09",
   "region-city": "2026-09-28",
   "region-district": "2026-09-22",
   // 2026-10-02: shared study-guide sections, local notes and region FAQs added to the template.
@@ -60,20 +64,17 @@ const KIND_UPDATED: Record<ContentKind, string> = {
 
 /** Per-URL overrides — pages whose own content changed after their kind's date. */
 const PATH_UPDATED: Record<string, string> = {
-  "/subjects": "2026-09-15",
-  "/grades": "2026-09-15",
-  "/schools": "2026-09-18",
-  "/guide": "2026-10-02", // 2026-10-02: article list expanded (5 new guides)
+  // 2026-10-09: 과목 허브에 논술·코딩·검정고시, 학년 허브에 1~12학년 목록, 학교 허브 지역 계층화, 가이드 9편 추가
+  "/subjects": "2026-10-09",
+  "/grades": "2026-10-09",
+  "/schools": "2026-10-09",
+  "/guide": "2026-10-09",
   // 2026-10-02 SEO content work
   "/subject/math": "2026-10-02",
   "/subject/english": "2026-10-02",
   "/subject/korean": "2026-10-02",
   "/subject/social": "2026-10-06", // 2026-10-06: 탐구 주제 설명 정리 (STEP 12)
   "/subject/science": "2026-10-06", // 2026-10-06: 탐구 주제 설명 정리 (STEP 12)
-  "/grade/elementary/1": "2026-10-02",
-  "/grade/elementary/2": "2026-10-02",
-  "/grade/elementary/3": "2026-10-02",
-  "/program/nonsul": "2026-10-02",
   // 2026-10-06 STEP 12: 2028학년도 수능 표현 점검 (탐구 주제 응시 학년도 구분, 주제 설명 정리)
   "/subject/social/social-tamgu": "2026-10-06",
   "/subject/science/science-tamgu": "2026-10-06",

@@ -9,6 +9,7 @@ import { caseStudies } from "@/data/caseStudies";
 import { getFaqsBySlugs } from "@/data/faqs";
 import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
 import { buildMetadata } from "@/lib/metadata";
+import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
 import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
@@ -67,6 +68,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
       title: `${ctx.region.name} ${ctx.subject.name}과외 | 초·중·고 1:1 맞춤 수업`,
       description: `${ctx.region.name} 초등·중등·고등 ${ctx.subject.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 방문·화상 수업을 상담해보세요.`,
       path: `/region/${province}/${city}/${slug}`,
+      image: motifForSlug(ctx.subject.slug),
       robots: { index, follow: true },
     });
   }
@@ -76,6 +78,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
       title: `${ctx.region.name} ${ctx.grade.name}과외 | 1:1 맞춤 수업`,
       description: `${ctx.region.name} ${ctx.grade.label}을 위한 1:1 과외를 상담해보세요.`,
       path: `/region/${province}/${city}/${slug}`,
+      image: motifForSlug(ctx.grade.slug),
       robots: { index, follow: true },
     });
   }
@@ -84,6 +87,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
     title: `${ctx.district.name} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${ctx.district.fullName} 초등·중등·고등 1:1 과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 상담해보세요.`,
     path: `/region/${province}/${city}/${slug}`,
+    image: "region",
     robots: { index, follow: true },
   });
 }
@@ -363,10 +367,35 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
 
         <section className="container-page py-14 md:py-16 flex flex-col gap-4">
           {levelSchools.length > 0 && (
-            <RelatedLinks
-              title={`${ctx.region.name} ${levelName} ${levelSchools.length}곳`}
-              links={levelSchools.map((s) => ({ label: `${s.name} 과외`, href: `/school/${s.slug}` }))}
-            />
+            <div className="rounded-2xl border border-border-subtle bg-white p-6">
+              <p className="font-bold text-navy">
+                {ctx.region.name} {levelName} <span className="text-text-muted font-medium text-sm">{levelSchools.length}곳</span>
+              </p>
+              <ul className="mt-3 flex flex-col gap-1.5">
+                {levelSchools.map((s) => {
+                  // 개별 학교 → 학교별 과외 페이지, 색인 중인 학교×과목 페이지가 있으면 함께 연결.
+                  const subjectLinks = subjects.flatMap((subj) => {
+                    const href = indexedSchoolSubjectHref(s, subj.slug);
+                    return href ? [{ name: `${subj.name}과외`, href }] : [];
+                  });
+                  return (
+                    <li key={s.slug} className="text-sm">
+                      <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+                        {s.name} 과외
+                      </Link>
+                      {subjectLinks.map((l) => (
+                        <span key={l.href}>
+                          <span aria-hidden="true" className="text-text-muted"> · </span>
+                          <Link href={l.href} className="text-text-muted hover:text-brand transition-colors">
+                            {l.name}
+                          </Link>
+                        </span>
+                      ))}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           )}
           <RelatedLinks
             title={`${ctx.region.name} ${ctx.grade.name} 과목별 과외`}

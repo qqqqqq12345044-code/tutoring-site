@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { regions, getProvinces, getRegionUrl } from "@/data/regions";
 import { schools } from "@/data/schools";
+import { countSchoolsInRegion } from "@/lib/indexability";
 import { buildMetadata } from "@/lib/metadata";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import RegionCard from "@/components/RegionCard";
@@ -11,14 +12,16 @@ export const metadata = buildMetadata({
   title: "지역별 과외 | 전국 시/도별 1:1 과외 안내",
   description: "서울, 경기를 비롯한 전국 지역별 1:1 과외 정보를 확인하고 무료 상담을 받아보세요.",
   path: "/regions",
+  image: "region",
 });
 
 export default function RegionsPage() {
   const provinces = getProvinces();
-  const featured = provinces.filter((p) => p.children.length > 0);
-  const compact = provinces.filter((p) => p.children.length === 0);
+  // 하위에 등록 학교가 있는 시·도만 "학교 정보가 등록된 지역"으로 묶는다 (모든 시·도가 시·군·구를 가진 뒤에도 의미 유지).
+  const featured = provinces.filter((p) => countSchoolsInRegion(p.slug) > 0);
+  const compact = provinces.filter((p) => countSchoolsInRegion(p.slug) === 0);
   const searchTargets = [
-    ...regions.map((r) => ({ label: r.name, href: getRegionUrl(r.slug) })),
+    ...regions.map((r) => ({ label: r.level === "province" ? r.name : r.fullName, href: getRegionUrl(r.slug) })),
     ...schools.map((s) => ({ label: s.name, href: `/school/${s.slug}` })),
   ];
 
