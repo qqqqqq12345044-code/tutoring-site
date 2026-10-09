@@ -12,6 +12,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
+import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -41,6 +42,8 @@ function resolveContext(province: string, city: string, slug: string) {
   const parent = getRegionBySlug(province);
   const region = getRegionBySlug(city);
   if (!region || !parent || region.parentSlug !== province) return null;
+  // School-less regions added in the 2026-10 expansion have only the hub page (src/lib/regionRoutes.ts).
+  if (!hasRegionComboRoutes(region.slug)) return null;
 
   const subject = getSubjectBySlug(slug);
   if (subject) return { parent, region, type: "subject" as const, subject };
@@ -313,10 +316,12 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
             />
             <RelatedLinks
               title="관련 학년"
-              links={grades.map((g) => ({
-                label: `${ctx.region.name} ${g.name}과외`,
-                href: `/region/${province}/${city}/${g.slug}`,
-              }))}
+              links={grades.map((g) =>
+                // 학교급 hub only when this city actually has schools of that level; otherwise the nationwide grade page.
+                relatedSchools.some((s) => schoolLevelToGradeSlug[s.level] === g.slug)
+                  ? { label: `${ctx.region.name} ${g.name}과외`, href: `/region/${province}/${city}/${g.slug}` }
+                  : { label: `${g.name}과외 안내`, href: `/grade/${g.slug}` }
+              )}
             />
           </div>
           {districts.length > 0 && (

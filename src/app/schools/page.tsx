@@ -68,7 +68,7 @@ export default function SchoolsPage() {
             {cities.map(({ city, levels }) => (
               <div key={city.slug} className="rounded-2xl border border-border-subtle bg-white p-6">
                 <h3 className="font-bold text-navy">
-                  <Link href={getRegionUrl(city.slug)} className="hover:text-brand transition-colors">
+                  <Link href={getRegionUrl(city.slug)} className="inline-block py-1 hover:text-brand transition-colors">
                     {city.fullName}
                   </Link>
                 </h3>
@@ -77,7 +77,7 @@ export default function SchoolsPage() {
                     <div key={level}>
                       <Link
                         href={`${getRegionUrl(city.slug)}/${schoolLevelToGradeSlug[level]}`}
-                        className="text-sm font-semibold text-brand hover:underline"
+                        className="inline-block py-1 text-sm font-semibold text-brand hover:underline"
                       >
                         {level} <span className="text-text-muted font-normal">{list.length}곳</span>
                       </Link>

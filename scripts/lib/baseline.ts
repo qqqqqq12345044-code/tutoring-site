@@ -7,16 +7,16 @@
  * region, subject, school, or regionSubjectContent entry.
  */
 export const BASELINE = {
-  // 2026-10-09: +206 시·군·구 노드(src/data/regions.ts, 지역 누락 보완). 학교 미등록이라 region 게이트로 전부 noindex —
-  // 노드당 28 routes(허브 1 + 과목 5 + 학년 3 + 학년×과목 15 + 프로그램 4) = +5,768 noindex. 가이드 9편 추가로 sitemap +9.
-  // 1482 → 7259, sitemap 202 → 211, noindex 1278 → 7046.
-  totalRoutes: 7259,
+  // 2026-10-09: +206 시·군·구 노드(src/data/regions.ts, 지역 누락 보완) — 학교 미등록이라 허브 1개씩만 생성(noindex).
+  // 조합 route(과목·학년·학년×과목·프로그램)는 학교가 등록될 때만 생김(src/lib/regionRoutes.ts) → 미생성 5,562개.
+  // 가이드 9편 추가로 sitemap +9. 실측(validate:full): 1482 → 1697, sitemap 202 → 211, noindex 1278 → 1484.
+  totalRoutes: 1697,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
   // 2026-10-07: +5 school×subject holds released after GREEN rewrite (공시 평가계획), −2 반포중(휴교) school page + math page
   // held noindex (src/data/schoolNoindex.ts, schoolSubjectNoindex.ts): 199 → 202, noindex 1281 → 1278.
   sitemapCount: 211,
-  noindexCount: 7046,
+  noindexCount: 1484,
   brokenLinks: 0,
 };

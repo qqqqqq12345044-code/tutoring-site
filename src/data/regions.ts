@@ -205,6 +205,27 @@ function withAddedCities(base: RegionNode[], added: Record<string, CityRow[]>): 
 
 export const regions: RegionNode[] = withAddedCities(baseRegions, addedCities);
 
+/**
+ * Region nodes that existed before the 2026-10-09 expansion. Their combination
+ * routes (region × subject / grade / grade × subject / program) are already
+ * public URLs, so they are kept even without registered schools (e.g. 인천
+ * 제물포·영종·검단·서해구). See src/lib/regionRoutes.ts.
+ */
+export const preExpansionRegionSlugs: ReadonlySet<string> = new Set(baseRegions.map((r) => r.slug));
+
+/**
+ * Page-title name for a region hub. Regions added in the 2026-10 expansion whose short name is shared
+ * with another region (중구·동구·강서구·고성군 …) use fullName ("부산 중구") so hub titles stay unique;
+ * pre-expansion regions keep their existing (already indexed) titles unchanged.
+ */
+export function getRegionTitleName(slug: string): string {
+  const node = getRegionBySlug(slug);
+  if (!node) return "";
+  if (preExpansionRegionSlugs.has(slug)) return node.name;
+  const shared = regions.some((r) => r.slug !== slug && r.name === node.name);
+  return shared ? node.fullName : node.name;
+}
+
 export function getRegionBySlug(slug: string): RegionNode | undefined {
   return regions.find((r) => r.slug === slug);
 }

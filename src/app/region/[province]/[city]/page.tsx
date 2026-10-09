@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { regions, getRegionBySlug, getChildren } from "@/data/regions";
+import { regions, getRegionBySlug, getChildren, getRegionTitleName } from "@/data/regions";
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { schools, type School } from "@/data/schools";
@@ -10,6 +10,7 @@ import { getIndexability } from "@/lib/indexability";
 import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { buildRegionSchoolIntro } from "@/lib/regionIntro";
 import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
+import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { buildRegionFaqs } from "@/lib/regionFaq";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -35,7 +36,7 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
   const { index } = getIndexability("region", { regionSlug: region.slug });
 
   return buildMetadata({
-    title: `${region.name} 과외 | 초·중·고 1:1 맞춤 수업`,
+    title: `${getRegionTitleName(region.slug)} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${region.fullName} 초등·중등·고등 1:1 과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 방문·화상 수업을 상담해보세요.`,
     path: `/region/${province}/${region.slug}`,
     image: "region",
@@ -50,6 +51,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
   if (!region || !parent || region.parentSlug !== province) notFound();
 
   const districts = getChildren(region.slug);
+  const hasCombos = hasRegionComboRoutes(region.slug);
   const relatedSchools = schools.filter((s) => s.cityRegionSlug === region.slug);
   const schoolsByLevel = LEVEL_ORDER.map((level) => ({
     level,
@@ -73,7 +75,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
             ]}
           />
           <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-            {region.name} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
+            {getRegionTitleName(region.slug)} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
           </h1>
           <p className="text-text-main/80 leading-relaxed max-w-2xl">
             {buildRegionSchoolIntro(region.slug, region.name, relatedSchools)}
@@ -84,11 +86,20 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
       <section className="container-page py-14 md:py-16 grid md:grid-cols-2 gap-4">
         <RelatedLinks
           title={`${region.name} 과목별 과외`}
-          links={subjects.map((s) => ({ label: `${region.name} ${s.name}과외`, href: `/region/${parent.slug}/${region.slug}/${s.slug}` }))}
+          links={subjects.map((s) =>
+            hasCombos
+              ? { label: `${region.name} ${s.name}과외`, href: `/region/${parent.slug}/${region.slug}/${s.slug}` }
+              : // No region×subject routes for a school-less region (src/lib/regionRoutes.ts) — link the nationwide subject page.
+                { label: `${s.name}과외 안내`, href: `/subject/${s.slug}` }
+          )}
         />
         <RelatedLinks
           title={`${region.name} 학년별 과외`}
-          links={grades.map((g) => ({ label: `${region.name} ${g.name}과외`, href: `/grade/${g.slug}` }))}
+          links={grades.map((g) => ({
+            // Nationwide grade page; school-less regions get a neutral label since there is no region-specific page.
+            label: hasCombos ? `${region.name} ${g.name}과외` : `${g.name}과외 안내`,
+            href: `/grade/${g.slug}`,
+          }))}
         />
       </section>
 
@@ -106,7 +117,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
               <div key={g.level} className="rounded-2xl border border-border-subtle bg-white p-6">
                 <Link
                   href={`/region/${parent.slug}/${region.slug}/${schoolLevelToGradeSlug[g.level]}`}
-                  className="font-bold text-navy hover:text-brand transition-colors"
+                  className="inline-block py-1 font-bold text-navy hover:text-brand transition-colors"
                 >
                   {region.name} {g.level} <span className="text-text-muted font-medium text-sm">{g.list.length}곳</span>
                 </Link>

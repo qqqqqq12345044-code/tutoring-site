@@ -7,6 +7,7 @@ import { getFaqsBySlugs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/metadata";
 import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
+import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -19,6 +20,8 @@ function resolveContext(province: string, city: string, programSlug: string) {
   const parent = getRegionBySlug(province);
   const region = getRegionBySlug(city);
   if (!region || !parent || region.parentSlug !== province || region.level !== "city") return null;
+  // School-less regions added in the 2026-10 expansion have only the hub page (src/lib/regionRoutes.ts).
+  if (!hasRegionComboRoutes(region.slug)) return null;
 
   const program = getProgramBySlug(programSlug);
   if (!program) return null;
@@ -28,7 +31,7 @@ function resolveContext(province: string, city: string, programSlug: string) {
 
 export function generateStaticParams() {
   const params: { province: string; city: string; programSlug: string }[] = [];
-  for (const city of regions.filter((r) => r.level === "city")) {
+  for (const city of regions.filter((r) => r.level === "city" && hasRegionComboRoutes(r.slug))) {
     for (const p of programs) {
       params.push({ province: city.parentSlug as string, city: city.slug, programSlug: p.slug });
     }

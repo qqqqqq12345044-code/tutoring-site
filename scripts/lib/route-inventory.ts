@@ -19,6 +19,8 @@ import { getRegionProgramContent, isPublishedContent as isRegionProgramPublished
 import { getSubGradeContent, isPublishedContent as isSubGradePublished } from "@/data/subGradeContent";
 import { getSubjectTopicContent, isPublishedContent as isSubjectTopicPublished } from "@/data/subjectTopicContent";
 import { getIndexability, countSchoolsInRegion } from "@/lib/indexability";
+import { hasRegionComboRoutes } from "@/lib/regionRoutes";
+import { preExpansionRegionSlugs } from "@/data/regions";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schoolNoindexSlugs } from "@/data/schoolNoindex";
@@ -75,8 +77,9 @@ export function getAllContentRoutes(): RouteEntry[] {
     routes.push({ path: getRegionUrl(r.slug), index, sitemap });
   }
 
-  // City-level combination pages, mirroring src/app/sitemap.ts's iteration.
-  for (const city of regions.filter((r) => r.level === "city")) {
+  // City-level combination pages, mirroring src/app/sitemap.ts's iteration. School-less regions added
+  // in the 2026-10 expansion have no combination routes at all (src/lib/regionRoutes.ts).
+  for (const city of regions.filter((r) => r.level === "city" && hasRegionComboRoutes(r.slug))) {
     const base = getRegionUrl(city.slug);
 
     for (const s of subjects) {
@@ -117,7 +120,7 @@ export function getAllContentRoutes(): RouteEntry[] {
   }
 
   // Region+program combination pages, mirroring src/app/sitemap.ts's iteration.
-  for (const city of regions.filter((r) => r.level === "city")) {
+  for (const city of regions.filter((r) => r.level === "city" && hasRegionComboRoutes(r.slug))) {
     const base = getRegionUrl(city.slug);
     for (const p of programs) {
       const { index, sitemap } = getIndexability("region-program", { regionSlug: city.slug, programSlug: p.slug });
@@ -414,6 +417,36 @@ export function checkProgramRouteCollisions(): GateCheckResult {
     if (count > 1) issues.push(`program slug 중복: "${slug}" (${count}건)`);
   }
 
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * Combination-route gate (2026-10-09, src/lib/regionRoutes.ts): every city hub
+ * exists; a city's combination routes (subject / grade / grade×subject /
+ * district×subject / program) exist in full when the city predates the
+ * 2026-10 expansion or has a registered school, and not at all otherwise.
+ * Cross-checks the helper against preExpansionRegionSlugs + a direct school
+ * count, so pre-existing public URLs can't silently disappear.
+ */
+export function checkRegionComboRoutes(): GateCheckResult {
+  const issues: string[] = [];
+  const paths = new Set(getAllContentRoutes().map((r) => r.path));
+  for (const city of regions.filter((r) => r.level === "city")) {
+    const base = getRegionUrl(city.slug);
+    const expected =
+      preExpansionRegionSlugs.has(city.slug) || schools.some((s) => s.cityRegionSlug === city.slug);
+    if (hasRegionComboRoutes(city.slug) !== expected) issues.push(`combo gate: ${city.slug} helper=${!expected} expected=${expected}`);
+    if (!paths.has(base)) issues.push(`combo gate: city hub missing ${base}`);
+    const combos = [
+      ...subjects.map((s) => `${base}/${s.slug}`),
+      ...grades.flatMap((g) => [`${base}/${g.slug}`, ...subjects.map((s) => `${base}/${g.slug}/${s.slug}`)]),
+      ...getChildren(city.slug).flatMap((d) => subjects.map((s) => `${base}/${d.slug}/${s.slug}`)),
+      ...programs.map((p) => `${base}/program/${p.slug}`),
+    ];
+    const present = combos.filter((p) => paths.has(p)).length;
+    if (expected && present !== combos.length) issues.push(`combo gate: ${city.slug} has ${present}/${combos.length} combo routes`);
+    if (!expected && present !== 0) issues.push(`combo gate: school-less ${city.slug} still has ${present} combo routes`);
+  }
   return { ok: issues.length === 0, issues };
 }
 

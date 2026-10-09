@@ -9,6 +9,7 @@ import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { indexedRegionGradeSubjectLinks, indexedSchoolSubjectHref } from "@/lib/internalLinks";
 import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
+import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { schools } from "@/data/schools";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -33,6 +34,8 @@ function resolveContext(province: string, city: string, slug: string, subjectSlu
   const region = getRegionBySlug(city);
   const subject = getSubjectBySlug(subjectSlug);
   if (!region || !parent || !subject || region.parentSlug !== province) return null;
+  // School-less regions added in the 2026-10 expansion have only the hub page (src/lib/regionRoutes.ts).
+  if (!hasRegionComboRoutes(region.slug)) return null;
 
   const grade = getGradeBySlug(slug);
   if (grade) return { parent, region, subject, type: "grade" as const, grade };

@@ -15,6 +15,7 @@ import {
   checkRegionProgramGate,
   checkProgramRouteCollisions,
   checkRegionGate,
+  checkRegionComboRoutes,
   checkSitemapLastmod,
 } from "./lib/route-inventory";
 import { runQualityGate, summarizeQualityGate, checkQualityNoindexSync, checkSchoolSubjectNoindexHolds } from "./lib/quality-gate";
@@ -101,6 +102,12 @@ async function main() {
     if (!programGate.ok) {
       configOk = false;
       configIssues.push(...programGate.issues);
+    }
+
+    const comboGate = checkRegionComboRoutes();
+    if (!comboGate.ok) {
+      configOk = false;
+      configIssues.push(...comboGate.issues.slice(0, 10));
     }
 
     const regionGate = checkRegionGate();

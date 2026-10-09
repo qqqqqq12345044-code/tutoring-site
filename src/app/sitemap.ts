@@ -7,6 +7,7 @@ import { regions, getRegionUrl, getChildren } from "@/data/regions";
 import { schools } from "@/data/schools";
 import { guideArticles } from "@/data/guide";
 import { getIndexability } from "@/lib/indexability";
+import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { getContentUpdatedAt } from "@/data/contentDates";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -69,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Inclusion follows the central indexing policy (src/lib/indexability.ts) —
   // only combinations marked `sitemap: true` there are listed here.
   const cityComboPaths: string[] = [];
-  for (const city of regions.filter((r) => r.level === "city")) {
+  for (const city of regions.filter((r) => r.level === "city" && hasRegionComboRoutes(r.slug))) {
     const base = getRegionUrl(city.slug);
 
     for (const s of subjects) {
@@ -119,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Same content-gated pattern as school-subject above — only combos marked
   // `sitemap: true` there (i.e. a published regionProgramContent entry) are listed here.
   const regionProgramPaths: string[] = [];
-  for (const city of regions.filter((r) => r.level === "city")) {
+  for (const city of regions.filter((r) => r.level === "city" && hasRegionComboRoutes(r.slug))) {
     const base = getRegionUrl(city.slug);
     for (const p of programs) {
       if (getIndexability("region-program", { regionSlug: city.slug, programSlug: p.slug }).sitemap) {
