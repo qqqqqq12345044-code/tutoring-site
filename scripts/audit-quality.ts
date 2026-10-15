@@ -6,7 +6,7 @@
  *               published (candidates not yet switched on), and list them
  *   --classify  count the missing GREEN conditions across non-GREEN rows
  */
-import { runQualityGate, summarizeQualityGate, type QualityRow } from "./lib/quality-gate";
+import { runQualityGate, summarizeQualityGate, QUALITY_KINDS, type QualityRow } from "./lib/quality-gate";
 
 const dryRun = process.argv.includes("--dry-run");
 const rows = runQualityGate({ includeDrafts: dryRun });
@@ -26,7 +26,7 @@ if (process.argv.includes("--classify")) {
     ["지역·학교 데이터 부족", /등록 학교 0/],
     ["공통 가이드(playbook) 부족", /playbook/],
   ];
-  for (const kind of ["region-subject", "region-grade-subject", "school-subject"] as const) {
+  for (const kind of QUALITY_KINDS) {
     const bad = rows.filter((r) => r.kind === kind && r.grade !== "GREEN");
     const parts = categories.map(([name, re]) => `${name} ${bad.filter((r) => r.reasons.some((x) => re.test(x))).length}`);
     console.log(`${kind} (non-GREEN ${bad.length}): ${parts.join(" / ")}`);

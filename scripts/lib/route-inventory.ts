@@ -24,6 +24,7 @@ import { preExpansionRegionSlugs } from "@/data/regions";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schoolNoindexSlugs } from "@/data/schoolNoindex";
+import { dongs, getDongsByCity } from "@/data/dongs";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
 
@@ -125,6 +126,19 @@ export function getAllContentRoutes(): RouteEntry[] {
     for (const p of programs) {
       const { index, sitemap } = getIndexability("region-program", { regionSlug: city.slug, programSlug: p.slug });
       routes.push({ path: `${base}/program/${p.slug}`, index, sitemap });
+    }
+  }
+
+  // 행정동 hub / 행정동×과목 pages, mirroring src/app/sitemap.ts's iteration.
+  for (const city of regions.filter((r) => r.level === "city" && hasRegionComboRoutes(r.slug))) {
+    const base = getRegionUrl(city.slug);
+    for (const dong of getDongsByCity(city.slug)) {
+      const hub = getIndexability("region-dong", { regionSlug: city.slug, dongSlug: dong.slug });
+      routes.push({ path: `${base}/${dong.slug}`, index: hub.index, sitemap: hub.sitemap });
+      for (const s of subjects) {
+        const { index, sitemap } = getIndexability("region-dong-subject", { regionSlug: city.slug, dongSlug: dong.slug, subjectSlug: s.slug });
+        routes.push({ path: `${base}/${dong.slug}/${s.slug}`, index, sitemap });
+      }
     }
   }
 
@@ -469,6 +483,64 @@ export function checkRegionGate(): GateCheckResult {
     const { index, sitemap } = getIndexability("region", { regionSlug: r.slug });
     if (index !== eligible || sitemap !== eligible || countSchoolsInRegion(r.slug) !== direct) {
       issues.push(`region gate: ${r.slug} — schools=${direct} but index=${index} sitemap=${sitemap}`);
+    }
+  }
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * 행정동 data integrity (src/data/dongs.ts + School.dongSlug / School.official), 2026-10-16:
+ * - dong slugs unique per city, end in "-dong", and never equal a subject / grade /
+ *   district / "program" segment (they share the /region/[province]/[city]/[slug] route);
+ * - every dong's city is a city-level region; 법정동 list non-empty, 통·반 positive;
+ * - every School.dongSlug points to a dong of that school's own city; NEIS codes unique;
+ * - "region-dong(-subject)" indexability matches a direct rule: the dong has a registered
+ *   school and the path is not in src/data/qualityNoindex.ts.
+ */
+export function checkDongData(): GateCheckResult {
+  const issues: string[] = [];
+  const reserved = new Set<string>([
+    ...subjects.map((s) => s.slug),
+    ...grades.map((g) => g.slug),
+    ...regions.filter((r) => r.level === "district").map((r) => r.slug),
+    "program",
+  ]);
+  const seen = new Set<string>();
+  for (const d of dongs) {
+    const key = `${d.citySlug}/${d.slug}`;
+    if (seen.has(key)) issues.push(`dong slug 중복: ${key}`);
+    seen.add(key);
+    if (!d.slug.endsWith("-dong")) issues.push(`dong slug는 "-dong"으로 끝나야 함: ${key}`);
+    if (reserved.has(d.slug)) issues.push(`dong slug가 subject/grade/district/program과 충돌: ${key}`);
+    if (getRegionBySlug(d.citySlug)?.level !== "city") issues.push(`dong citySlug가 city-level이 아님: ${key}`);
+    if (d.legalDongs.length === 0) issues.push(`법정동 없음: ${key}`);
+    if (!(d.tong > 0 && d.ban > 0)) issues.push(`통·반 수 이상: ${key}`);
+    if (dongs.filter((x) => x.citySlug === d.citySlug && x.name === d.name).length > 1) issues.push(`dong 이름 중복: ${d.citySlug}/${d.name}`);
+  }
+  for (const s of schools) {
+    if (!s.dongSlug) continue;
+    if (!dongs.some((x) => x.slug === s.dongSlug && x.citySlug === s.cityRegionSlug)) {
+      issues.push(`${s.slug}: dongSlug "${s.dongSlug}"가 ${s.cityRegionSlug}의 행정동이 아님`);
+    }
+  }
+  const officialCodes = new Map<string, string>();
+  for (const s of schools) {
+    if (!s.official) continue;
+    const prev = officialCodes.get(s.official.code);
+    if (prev) issues.push(`NEIS 학교코드 중복: ${s.official.code} (${prev}, ${s.slug})`);
+    officialCodes.set(s.official.code, s.slug);
+  }
+  for (const d of dongs) {
+    const base = `${getRegionUrl(d.citySlug)}/${d.slug}`;
+    const hasSchool = schools.some((s) => s.cityRegionSlug === d.citySlug && s.dongSlug === d.slug);
+    const hub = getIndexability("region-dong", { regionSlug: d.citySlug, dongSlug: d.slug });
+    const hubEligible = hasSchool && !qualityNoindexPaths.has(base);
+    if (hub.index !== hubEligible || hub.sitemap !== hubEligible) issues.push(`region-dong gate: ${base} eligible=${hubEligible} index=${hub.index}`);
+    for (const s of subjects) {
+      const path = `${base}/${s.slug}`;
+      const r = getIndexability("region-dong-subject", { regionSlug: d.citySlug, dongSlug: d.slug, subjectSlug: s.slug });
+      const eligible = hasSchool && !qualityNoindexPaths.has(path);
+      if (r.index !== eligible || r.sitemap !== eligible) issues.push(`region-dong-subject gate: ${path} eligible=${eligible} index=${r.index}`);
     }
   }
   return { ok: issues.length === 0, issues };

@@ -7,8 +7,12 @@
  *
  * dataSource: "manual" — verified one by one against public sources (school
  * home pages, 학교알리미, Wikipedia/나무위키 category pages) during Stage 1
- * data entry, not from a bulk official import. "official" is reserved for a
- * future structured import (e.g. NEIS) and unused so far.
+ * data entry, not from a bulk official import. "official" — taken from NEIS
+ * 학교기본정보 by school code together with an `official` record (의정부,
+ * 2026-10-16; see the 의정부 block below for how it was collected).
+ *
+ * dongSlug (optional) is the 행정동 (src/data/dongs.ts) the school sits in,
+ * resolved from its road address — never guessed from the 법정동 name.
  */
 export interface School {
   slug: string;
@@ -18,6 +22,25 @@ export interface School {
   level: "초등학교" | "중학교" | "고등학교";
   availableSubjectSlugs: string[];
   dataSource: "manual" | "official";
+  /** 행정동 slug from src/data/dongs.ts (same city). Only set when the address resolves to exactly one 행정동. */
+  dongSlug?: string;
+  /** Official record backing dataSource "official" (NEIS 학교기본정보 + 행정안전부 주소정보누리집). */
+  official?: OfficialSchoolRecord;
+}
+
+export interface OfficialSchoolRecord {
+  /** NEIS 행정표준코드 (SD_SCHUL_CODE), 경기도교육청(J10). */
+  code: string;
+  /** 도로명주소 — NEIS 주소를 주소정보누리집에서 같은 주소·건물로 확인한 값. */
+  roadAddress: string;
+  /** 주소정보누리집이 돌려준 법정동. */
+  legalDong: string;
+  foundation: "공립" | "사립";
+  coed: "남녀공학" | "남학교" | "여학교";
+  /** 고등학교만: NEIS 고등학교구분(특목고는 계열 포함). */
+  highSchoolType?: "일반고" | "특성화고" | "특목고(과학계열)";
+  /** NEIS 설립일 (FOND_YMD). */
+  founded: string;
 }
 
 const ALL_SUBJECTS = ["korean", "english", "math", "social", "science"];
@@ -1055,7 +1078,609 @@ export const schools: School[] = [
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
   },
+
+  // 경기 의정부 — 2026-10-16 등록, 70개교(초 34·중 20·고 16; 방송통신중·고, 특수학교 2곳 제외).
+  // 목록: NEIS 학교기본정보를 의정부교육지원청 학교코드 범위(7561000~7561300)와 경기도교육청 고교 코드
+  // 범위(7530000~7531800)에서 코드 단위로 전수 조회해 주소가 의정부시인 학교만 추렸다(의정부교육지원청
+  // 2023 발표 "초등 34교, 중등 36교"와 일치). 행정동: 각 도로명주소를 행정안전부 주소정보누리집(juso.go.kr)에서
+  // 조회해 행정동이 정확히 1개로 나온 경우만 dongSlug로 기록(70/70, 보류 0). 배영초는 NEIS 도로명 필드가
+  // "가능로 135" / ", 20"으로 나뉘어 있어 건물명 검색으로 "가능로135번길 20"(의정부1동)을 확인했다.
+  // 의정부1동
+  uijeongbu("uijeongbu-gyeongui-elementary-school", "경의초등학교", "초등학교", "uijeongbu1-dong", {
+    code: "7561023",
+    roadAddress: "경기도 의정부시 경의로 135",
+    legalDong: "의정부동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1967-04-26",
+  }),
+  uijeongbu("uijeongbu-baeyeong-elementary-school", "배영초등학교", "초등학교", "uijeongbu1-dong", {
+    code: "7561026",
+    roadAddress: "경기도 의정부시 가능로135번길 20",
+    legalDong: "의정부동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1969-03-02",
+  }),
+  uijeongbu("uijeongbu-jungang-elementary-school", "의정부중앙초등학교", "초등학교", "uijeongbu1-dong", {
+    code: "7561038",
+    roadAddress: "경기도 의정부시 호국로1291번길 17",
+    legalDong: "의정부동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1896-09-20",
+  }),
+  // 의정부2동
+  uijeongbu("uijeongbu-sangu-high-school", "상우고등학교", "고등학교", "uijeongbu2-dong", {
+    code: "7530571",
+    roadAddress: "경기도 의정부시 범골로 79",
+    legalDong: "의정부동",
+    foundation: "사립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "2003-03-01",
+  }),
+  // 호원1동
+  uijeongbu("uijeongbu-hoam-elementary-school", "호암초등학교", "초등학교", "howon1-dong", {
+    code: "7561041",
+    roadAddress: "경기도 의정부시 호암로 47",
+    legalDong: "호원동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1958-04-01",
+  }),
+  uijeongbu("uijeongbu-hoeryong-elementary-school", "회룡초등학교", "초등학교", "howon1-dong", {
+    code: "7561042",
+    roadAddress: "경기도 의정부시 안말로 57",
+    legalDong: "호원동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1995-11-01",
+  }),
+  uijeongbu("uijeongbu-hoeryong-middle-school", "회룡중학교", "중학교", "howon1-dong", {
+    code: "7561016",
+    roadAddress: "경기도 의정부시 안말로 45",
+    legalDong: "호원동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1996-03-01",
+  }),
+  uijeongbu("uijeongbu-howon-high-school", "호원고등학교", "고등학교", "howon1-dong", {
+    code: "7530483",
+    roadAddress: "경기도 의정부시 망월로 56",
+    legalDong: "호원동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "2000-01-08",
+  }),
+  // 호원2동
+  uijeongbu("uijeongbu-hodong-elementary-school", "의정부호동초등학교", "초등학교", "howon2-dong", {
+    code: "7561040",
+    roadAddress: "경기도 의정부시 호동로 45",
+    legalDong: "호원동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1998-03-02",
+  }),
+  uijeongbu("uijeongbu-howon-elementary-school", "의정부호원초등학교", "초등학교", "howon2-dong", {
+    code: "7561046",
+    roadAddress: "경기도 의정부시 전좌로156번길 20",
+    legalDong: "호원동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2003-03-03",
+  }),
+  uijeongbu("uijeongbu-howon-middle-school", "호원중학교", "중학교", "howon2-dong", {
+    code: "7561014",
+    roadAddress: "경기도 의정부시 호암로 205",
+    legalDong: "호원동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2000-03-01",
+  }),
+  // 장암동
+  uijeongbu("uijeongbu-dongam-elementary-school", "동암초등학교", "초등학교", "jangam-dong", {
+    code: "7561073",
+    roadAddress: "경기도 의정부시 장곡로 206",
+    legalDong: "장암동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2005-09-01",
+  }),
+  uijeongbu("uijeongbu-jangam-elementary-school", "의정부장암초등학교", "초등학교", "jangam-dong", {
+    code: "7561037",
+    roadAddress: "경기도 의정부시 동일로 417",
+    legalDong: "장암동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1993-03-02",
+  }),
+  uijeongbu("uijeongbu-dongam-middle-school", "동암중학교", "중학교", "jangam-dong", {
+    code: "7561081",
+    roadAddress: "경기도 의정부시 장곡로226번길 132",
+    legalDong: "장암동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2008-03-01",
+  }),
+  // 신곡1동
+  uijeongbu("uijeongbu-balgok-elementary-school", "발곡초등학교", "초등학교", "singok1-dong", {
+    code: "7561025",
+    roadAddress: "경기도 의정부시 동일로454번길 74",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1998-03-01",
+  }),
+  uijeongbu("uijeongbu-sindong-elementary-school", "신동초등학교", "초등학교", "singok1-dong", {
+    code: "7561044",
+    roadAddress: "경기도 의정부시 시민로179번길 42",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1999-09-01",
+  }),
+  uijeongbu("uijeongbu-cheongnyong-elementary-school", "의정부청룡초등학교", "초등학교", "singok1-dong", {
+    code: "7561039",
+    roadAddress: "경기도 의정부시 장곡로322번길 21",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1998-09-01",
+  }),
+  uijeongbu("uijeongbu-elementary-school", "의정부초등학교", "초등학교", "singok1-dong", {
+    code: "7561032",
+    roadAddress: "경기도 의정부시 동일로522번길 30",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1945-09-30",
+  }),
+  uijeongbu("uijeongbu-balgok-middle-school", "발곡중학교", "중학교", "singok1-dong", {
+    code: "7561006",
+    roadAddress: "경기도 의정부시 회룡로 185",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1998-01-15",
+  }),
+  uijeongbu("uijeongbu-balgok-high-school", "발곡고등학교", "고등학교", "singok1-dong", {
+    code: "7530933",
+    roadAddress: "경기도 의정부시 동일로454번길 150",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "2010-03-01",
+  }),
+  // 신곡2동
+  uijeongbu("uijeongbu-dongo-elementary-school", "동오초등학교", "초등학교", "singok2-dong", {
+    code: "7561024",
+    roadAddress: "경기도 의정부시 추동로23번길 10",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1996-03-01",
+  }),
+  uijeongbu("uijeongbu-saemal-elementary-school", "새말초등학교", "초등학교", "singok2-dong", {
+    code: "7561027",
+    roadAddress: "경기도 의정부시 추동로124번길 37",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-09-01",
+  }),
+  uijeongbu("uijeongbu-singok-elementary-school", "의정부신곡초등학교", "초등학교", "singok2-dong", {
+    code: "7561035",
+    roadAddress: "경기도 의정부시 능곡로 31",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1993-09-01",
+  }),
+  uijeongbu("uijeongbu-hyoja-elementary-school", "의정부효자초등학교", "초등학교", "singok2-dong", {
+    code: "7561017",
+    roadAddress: "경기도 의정부시 부용로204번길 16",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2005-09-01",
+  }),
+  uijeongbu("uijeongbu-singok-middle-school", "신곡중학교", "중학교", "singok2-dong", {
+    code: "7561008",
+    roadAddress: "경기도 의정부시 추동로24번길 23",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1993-03-01",
+  }),
+  uijeongbu("uijeongbu-hyoja-middle-school", "효자중학교", "중학교", "singok2-dong", {
+    code: "7561015",
+    roadAddress: "경기도 의정부시 부용로185번길 15",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-03-01",
+  }),
+  uijeongbu("uijeongbu-hyoja-high-school", "효자고등학교", "고등학교", "singok2-dong", {
+    code: "7530773",
+    roadAddress: "경기도 의정부시 부용로 165",
+    legalDong: "신곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "2006-03-01",
+  }),
+  // 송산1동
+  uijeongbu("uijeongbu-solmoe-elementary-school", "솔뫼초등학교", "초등학교", "songsan1-dong", {
+    code: "7561045",
+    roadAddress: "경기도 의정부시 시민로 442",
+    legalDong: "용현동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1999-09-01",
+  }),
+  uijeongbu("uijeongbu-eoryong-elementary-school", "어룡초등학교", "초등학교", "songsan1-dong", {
+    code: "7561029",
+    roadAddress: "경기도 의정부시 부용로 241",
+    legalDong: "용현동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-09-01",
+  }),
+  uijeongbu("uijeongbu-yonghyeon-elementary-school", "의정부용현초등학교", "초등학교", "songsan1-dong", {
+    code: "7561036",
+    roadAddress: "경기도 의정부시 용민로 87",
+    legalDong: "용현동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1992-10-02",
+  }),
+  uijeongbu("uijeongbu-solmoe-middle-school", "솔뫼중학교", "중학교", "songsan1-dong", {
+    code: "7561082",
+    roadAddress: "경기도 의정부시 시민로 464-14",
+    legalDong: "용현동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2008-03-01",
+  }),
+  uijeongbu("uijeongbu-yeongseok-high-school", "동국대학교사범대학부속영석고등학교", "고등학교", "songsan1-dong", {
+    code: "7530999",
+    roadAddress: "경기도 의정부시 시민로 363",
+    legalDong: "용현동",
+    foundation: "사립",
+    coed: "남학교",
+    highSchoolType: "일반고",
+    founded: "1970-06-01",
+  }),
+  // 송산2동
+  uijeongbu("uijeongbu-minrak-elementary-school", "민락초등학교", "초등학교", "songsan2-dong", {
+    code: "7561043",
+    roadAddress: "경기도 의정부시 용현로159번길 26",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1999-09-01",
+  }),
+  uijeongbu("uijeongbu-odong-elementary-school", "오동초등학교", "초등학교", "songsan2-dong", {
+    code: "7561030",
+    roadAddress: "경기도 의정부시 용민로 151",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2001-03-01",
+  }),
+  uijeongbu("uijeongbu-buyong-elementary-school", "의정부부용초등학교", "초등학교", "songsan2-dong", {
+    code: "7561033",
+    roadAddress: "경기도 의정부시 오목로 83",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-01-14",
+  }),
+  uijeongbu("uijeongbu-minrak-middle-school", "민락중학교", "중학교", "songsan2-dong", {
+    code: "7561005",
+    roadAddress: "경기도 의정부시 오목로 151",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1999-03-03",
+  }),
+  uijeongbu("uijeongbu-buyong-middle-school", "부용중학교", "중학교", "songsan2-dong", {
+    code: "7561007",
+    roadAddress: "경기도 의정부시 오목로 86",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-01-14",
+  }),
+  uijeongbu("uijeongbu-chungui-middle-school", "충의중학교", "중학교", "songsan2-dong", {
+    code: "7561013",
+    roadAddress: "경기도 의정부시 용현로 125",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-03-01",
+  }),
+  uijeongbu("uijeongbu-buyong-high-school", "부용고등학교", "고등학교", "songsan2-dong", {
+    code: "7530575",
+    roadAddress: "경기도 의정부시 오목로 96",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "2003-03-03",
+  }),
+  uijeongbu("uijeongbu-songhyeon-high-school", "송현고등학교", "고등학교", "songsan2-dong", {
+    code: "7530481",
+    roadAddress: "경기도 의정부시 용민로 159",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "1999-03-01",
+  }),
+  // 송산3동
+  uijeongbu("uijeongbu-samhyeon-elementary-school", "삼현초등학교", "초등학교", "songsan3-dong", {
+    code: "7561132",
+    roadAddress: "경기도 의정부시 송양로 87",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2016-03-01",
+  }),
+  uijeongbu("uijeongbu-songyang-elementary-school", "송양초등학교", "초등학교", "songsan3-dong", {
+    code: "7561028",
+    roadAddress: "경기도 의정부시 송양로 49",
+    legalDong: "낙양동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1950-04-01",
+  }),
+  uijeongbu("uijeongbu-songsan-elementary-school", "의정부송산초등학교", "초등학교", "songsan3-dong", {
+    code: "7561127",
+    roadAddress: "경기도 의정부시 오목로 228",
+    legalDong: "민락동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2015-03-01",
+  }),
+  uijeongbu("uijeongbu-songyang-middle-school", "송양중학교", "중학교", "songsan3-dong", {
+    code: "7561125",
+    roadAddress: "경기도 의정부시 용민로 308",
+    legalDong: "낙양동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2012-03-01",
+  }),
+  uijeongbu("uijeongbu-songyang-high-school", "송양고등학교", "고등학교", "songsan3-dong", {
+    code: "7531167",
+    roadAddress: "경기도 의정부시 송양로 6",
+    legalDong: "낙양동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "2015-03-01",
+  }),
+  // 자금동
+  uijeongbu("uijeongbu-geumo-elementary-school", "금오초등학교", "초등학교", "jageum-dong", {
+    code: "7561021",
+    roadAddress: "경기도 의정부시 천보로 418",
+    legalDong: "금오동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1963-12-30",
+  }),
+  uijeongbu("uijeongbu-uisun-elementary-school", "의순초등학교", "초등학교", "jageum-dong", {
+    code: "7561031",
+    roadAddress: "경기도 의정부시 부용로 77",
+    legalDong: "금오동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-06-01",
+  }),
+  uijeongbu("uijeongbu-geumo-middle-school", "금오중학교", "중학교", "jageum-dong", {
+    code: "7561075",
+    roadAddress: "경기도 의정부시 금신로 380",
+    legalDong: "금오동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1984-01-16",
+  }),
+  uijeongbu("uijeongbu-cheonbo-middle-school", "천보중학교", "중학교", "jageum-dong", {
+    code: "7561012",
+    roadAddress: "경기도 의정부시 부용로 61",
+    legalDong: "금오동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2002-01-14",
+  }),
+  // 가능동
+  uijeongbu("uijeongbu-yeoja-middle-school", "의정부여자중학교", "중학교", "ganeung-dong", {
+    code: "7561011",
+    roadAddress: "경기도 의정부시 신흥로365번길 40",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "여학교",
+    founded: "1956-05-25",
+  }),
+  uijeongbu("uijeongbu-middle-school", "의정부중학교", "중학교", "ganeung-dong", {
+    code: "7561010",
+    roadAddress: "경기도 의정부시 가능로 75",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "남학교",
+    founded: "1943-05-10",
+  }),
+  uijeongbu("uijeongbu-high-school", "의정부고등학교", "고등학교", "ganeung-dong", {
+    code: "7530109",
+    roadAddress: "경기도 의정부시 녹양로 29",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "남학교",
+    highSchoolType: "일반고",
+    founded: "1974-01-05",
+  }),
+  uijeongbu("uijeongbu-yeoja-high-school", "의정부여자고등학교", "고등학교", "ganeung-dong", {
+    code: "7530110",
+    roadAddress: "경기도 의정부시 신흥로365번길 10",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "여학교",
+    highSchoolType: "일반고",
+    founded: "1958-04-02",
+  }),
+  uijeongbu("korea-mobility-high-school", "한국모빌리티고등학교", "고등학교", "ganeung-dong", {
+    code: "7531615",
+    roadAddress: "경기도 의정부시 가능로 57",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "특성화고",
+    founded: "1943-05-10",
+  }),
+  // 흥선동
+  uijeongbu("uijeongbu-ganeung-elementary-school", "가능초등학교", "초등학교", "heungseon-dong", {
+    code: "7561020",
+    roadAddress: "경기도 의정부시 의정로140번길 15",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1961-09-20",
+  }),
+  uijeongbu("uijeongbu-seo-elementary-school", "의정부서초등학교", "초등학교", "heungseon-dong", {
+    code: "7561034",
+    roadAddress: "경기도 의정부시 둔야로 57",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1988-02-06",
+  }),
+  uijeongbu("uijeongbu-gyeongmin-yeoja-middle-school", "경민여자중학교", "중학교", "heungseon-dong", {
+    code: "7561004",
+    roadAddress: "경기도 의정부시 서부로 545",
+    legalDong: "가능동",
+    foundation: "사립",
+    coed: "여학교",
+    founded: "1968-12-03",
+  }),
+  uijeongbu("uijeongbu-gyeongmin-middle-school", "경민중학교", "중학교", "heungseon-dong", {
+    code: "7561003",
+    roadAddress: "경기도 의정부시 서부로 545",
+    legalDong: "가능동",
+    foundation: "사립",
+    coed: "남학교",
+    founded: "1967-10-09",
+  }),
+  uijeongbu("uijeongbu-daon-middle-school", "다온중학교", "중학교", "heungseon-dong", {
+    code: "7561134",
+    roadAddress: "경기도 의정부시 둔야로49번길 30",
+    legalDong: "가능동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1989-12-22",
+  }),
+  uijeongbu("uijeongbu-gyeongmin-high-school", "경민고등학교", "고등학교", "heungseon-dong", {
+    code: "7530141",
+    roadAddress: "경기도 의정부시 서부로 545",
+    legalDong: "가능동",
+    foundation: "사립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "1971-01-29",
+  }),
+  uijeongbu("uijeongbu-gyeongmin-business-high-school", "경민비즈니스고등학교", "고등학교", "heungseon-dong", {
+    code: "7531061",
+    roadAddress: "경기도 의정부시 서부로 545",
+    legalDong: "가능동",
+    foundation: "사립",
+    coed: "여학교",
+    highSchoolType: "특성화고",
+    founded: "1974-01-07",
+  }),
+  uijeongbu("uijeongbu-gyeongmin-it-high-school", "경민IT고등학교", "고등학교", "heungseon-dong", {
+    code: "7530995",
+    roadAddress: "경기도 의정부시 서부로 545",
+    legalDong: "가능동",
+    foundation: "사립",
+    coed: "남녀공학",
+    highSchoolType: "특성화고",
+    founded: "1985-01-22",
+  }),
+  // 녹양동
+  uijeongbu("uijeongbu-nogyang-elementary-school", "녹양초등학교", "초등학교", "nogyang-dong", {
+    code: "7561022",
+    roadAddress: "경기도 의정부시 체육로 265-25",
+    legalDong: "녹양동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1965-09-01",
+  }),
+  uijeongbu("uijeongbu-beodeulgae-elementary-school", "버들개초등학교", "초등학교", "nogyang-dong", {
+    code: "7561074",
+    roadAddress: "경기도 의정부시 체육로 201",
+    legalDong: "녹양동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2007-03-01",
+  }),
+  uijeongbu("uijeongbu-nogyang-middle-school", "녹양중학교", "중학교", "nogyang-dong", {
+    code: "7561080",
+    roadAddress: "경기도 의정부시 체육로 187",
+    legalDong: "녹양동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2008-03-01",
+  }),
+  uijeongbu("gyeonggibuk-science-high-school", "경기북과학고등학교", "고등학교", "nogyang-dong", {
+    code: "7530851",
+    roadAddress: "경기도 의정부시 체육로135번길 32",
+    legalDong: "녹양동",
+    foundation: "공립",
+    coed: "남녀공학",
+    highSchoolType: "특목고(과학계열)",
+    founded: "2005-03-01",
+  }),
+  uijeongbu("uijeongbu-gwangdong-high-school", "의정부광동고등학교", "고등학교", "nogyang-dong", {
+    code: "7530663",
+    roadAddress: "경기도 의정부시 서부로 691",
+    legalDong: "녹양동",
+    foundation: "사립",
+    coed: "남녀공학",
+    highSchoolType: "일반고",
+    founded: "1955-04-08",
+  }),
+  // 고산동
+  uijeongbu("uijeongbu-gosan-elementary-school", "고산초등학교", "초등학교", "gosan-dong", {
+    code: "7561019",
+    roadAddress: "경기도 의정부시 문화로 41",
+    legalDong: "산곡동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "1946-09-01",
+  }),
+  uijeongbu("uijeongbu-hunmin-elementary-school", "훈민초등학교", "초등학교", "gosan-dong", {
+    code: "7561135",
+    roadAddress: "경기도 의정부시 훈민로 14",
+    legalDong: "고산동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2020-03-01",
+  }),
+  uijeongbu("uijeongbu-hunmin-middle-school", "훈민중학교", "중학교", "gosan-dong", {
+    code: "7561145",
+    roadAddress: "경기도 의정부시 홈다리길 10",
+    legalDong: "고산동",
+    foundation: "공립",
+    coed: "남녀공학",
+    founded: "2020-09-01",
+  }),
 ];
+
+function uijeongbu(slug: string, name: string, level: School["level"], dongSlug: string, official: OfficialSchoolRecord): School {
+  return { slug, name, cityRegionSlug: "uijeongbu", level, availableSubjectSlugs: ALL_SUBJECTS, dataSource: "official", dongSlug, official };
+}
 
 export function getSchoolBySlug(slug: string): School | undefined {
   return schools.find((s) => s.slug === slug);

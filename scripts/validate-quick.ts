@@ -17,6 +17,7 @@ import {
   checkRegionGate,
   checkRegionComboRoutes,
   checkSitemapLastmod,
+  checkDongData,
 } from "./lib/route-inventory";
 import { runQualityGate, summarizeQualityGate, checkQualityNoindexSync, checkSchoolSubjectNoindexHolds } from "./lib/quality-gate";
 import {
@@ -120,6 +121,12 @@ async function main() {
     if (!lastmod.ok) {
       configOk = false;
       configIssues.push(...lastmod.issues.slice(0, 5));
+    }
+
+    const dongData = checkDongData();
+    if (!dongData.ok) {
+      configOk = false;
+      configIssues.push(...dongData.issues.slice(0, 10));
     }
 
     const programCollisions = checkProgramRouteCollisions();

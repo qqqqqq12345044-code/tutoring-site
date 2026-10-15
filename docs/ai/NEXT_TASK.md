@@ -1,5 +1,15 @@
 # Next Tasks
 
+## 의정부 행정동×과목 SEO 파일럿 (2026-10-16) — 작업 브랜치 `work/uijeongbu-dong-seo`, main 미반영·배포 NO
+- 커밋: `feat: add uijeongbu dong seo pilot` (base `1d814e5` = main/Production). 상세: `docs/qa/uijeongbu-dong-pilot-2026-10-16.md`
+- 구현: 행정동 15(`src/data/dongs.ts`, 의정부시청 표), 학교 70(NEIS, 학교→행정동 70/70, 보류 0), 동 허브 15 + 동×과목 75
+  (`src/components/region/DongPages.tsx`, `src/lib/dongContent.ts`), quality gate·indexability·sitemap·validator 연결.
+- Validation: lint · validate:quick · validate:full · build PASS. Routes 2,234 / Sitemap 212 / Noindex 2,020, Broken 0 · Orphan 0 · indexed RED 0.
+- RED/noindex 이유: 공식 데이터만으로 생성한 동 페이지는 동·학교 이름 마스킹 시 유사도 70~88% → 기존 게이트 RED
+  → `src/data/qualityNoindex.ts`에 90개 등록(기준 완화 없음).
+- 다음: 학교알리미 교과별 평가계획 기반 고유 콘텐츠 보강 → 대표 3개 동 × 3개 과목 파일럿
+  → `npx tsx scripts/audit-quality.ts --verbose`로 GREEN 확인 → qualityNoindex에서 제거 → 나머지 확대 여부 결정.
+
 ## 현재 상태 (2026-10-09, 미커밋 — commit/push/배포 NO)
 - HEAD/Production `38cc67a`. 사수 오더 1~6 + 빈 지역 조합 route 정리가 working tree에만 있음.
 - Routes 1,697 / Index 211 / Noindex 1,484 / Sitemap 211 (HEAD 1,482 / 202 / 1,278 / 202, 정리 전 7,259 / 211 / 7,046 / 211).

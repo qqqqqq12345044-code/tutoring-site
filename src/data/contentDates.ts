@@ -1,6 +1,7 @@
 import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { guideArticles } from "@/data/guide";
+import { dongs } from "@/data/dongs";
 
 /**
  * When each page's *content* last really changed (YYYY-MM-DD, KST) — the
@@ -34,7 +35,9 @@ export type ContentKind =
   | "region-district-subject"
   | "region-program"
   | "school"
-  | "school-subject";
+  | "school-subject"
+  | "region-dong"
+  | "region-dong-subject";
 
 const KIND_UPDATED: Record<ContentKind, string> = {
   // 2026-10-09: 교과 외 과정·학습가이드 섹션 추가
@@ -60,6 +63,9 @@ const KIND_UPDATED: Record<ContentKind, string> = {
   "region-program": "2026-09-28",
   school: "2026-09-28",
   "school-subject": "2026-09-28",
+  // 2026-10-16: 의정부 행정동 pilot (행정동 hub, 행정동×과목)
+  "region-dong": "2026-10-16",
+  "region-dong-subject": "2026-10-16",
 };
 
 /** Per-URL overrides — pages whose own content changed after their kind's date. */
@@ -159,6 +165,7 @@ const PATH_UPDATED: Record<string, string> = {
 
 const subjectSlugs = new Set(subjects.map((s) => s.slug));
 const gradeSlugs = new Set(grades.map((g) => g.slug));
+const dongSlugs = new Set(dongs.map((d) => d.slug));
 
 export function getContentKind(path: string): ContentKind {
   const seg = path.split("/").filter(Boolean);
@@ -182,8 +189,10 @@ export function getContentKind(path: string): ContentKind {
       if (seg.length === 4) {
         if (subjectSlugs.has(seg[3])) return "region-subject";
         if (gradeSlugs.has(seg[3])) return "region-grade";
+        if (dongSlugs.has(seg[3])) return "region-dong";
         return "region-district";
       }
+      if (dongSlugs.has(seg[3])) return "region-dong-subject";
       return gradeSlugs.has(seg[3]) ? "region-grade-subject" : "region-district-subject";
     }
   }

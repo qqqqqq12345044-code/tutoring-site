@@ -10,6 +10,8 @@ import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schoolNoindexSlugs } from "@/data/schoolNoindex";
 import { schools } from "@/data/schools";
+import { getDong } from "@/data/dongs";
+import { getSubjectBySlug } from "@/data/subjects";
 
 /**
  * Central indexing policy for programmatic SEO routes.
@@ -46,6 +48,12 @@ import { schools } from "@/data/schools";
  * ~100% identical), so it stays reachable for users but is noindex and out of
  * the sitemap until schools.ts covers it.
  *
+ * "region-dong" / "region-dong-subject" (2026-10-16, 의정부 pilot): a 행정동 page exists for every
+ * 행정동 in src/data/dongs.ts; it is indexed only when at least one registered school resolves into
+ * that 행정동 (School.dongSlug) and the quality gate has not graded it RED (RED pages are listed in
+ * src/data/qualityNoindex.ts like the other combination kinds). Content is built from official data
+ * only (src/lib/dongContent.ts), so there is no separate "published" flag.
+ *
  * "region-subject" / "region-grade-subject" / "school-subject" pages listed in
  * src/data/qualityNoindex.ts (quality gate RED, 2026-10) are noindex even with
  * published content; the page itself still renders unchanged.
@@ -64,7 +72,9 @@ export type IndexabilityKind =
   | "region-grade-subject" // /region/[province]/[city]/[grade]/[subject]
   | "region-district-subject" // /region/[province]/[city]/[district]/[subject]
   | "school-subject" // /school/[schoolSlug]/[subject]
-  | "region-program"; // /region/[province]/[city]/program/[programSlug]
+  | "region-program" // /region/[province]/[city]/program/[programSlug]
+  | "region-dong" // /region/[province]/[city]/[dong] (행정동)
+  | "region-dong-subject"; // /region/[province]/[city]/[dong]/[subject]
 
 export interface IndexabilityContext {
   /**
@@ -84,6 +94,8 @@ export interface IndexabilityContext {
   schoolSlug?: string;
   /** Program slug, required for "region-program" to look up dedicated content. */
   programSlug?: string;
+  /** 행정동 slug (src/data/dongs.ts), required for "region-dong" / "region-dong-subject" (regionSlug = its city). */
+  dongSlug?: string;
 }
 
 export interface Indexability {
@@ -166,6 +178,16 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
       const content =
         ctx.regionSlug && ctx.programSlug ? getRegionProgramContent(ctx.regionSlug, ctx.programSlug) : undefined;
       return isRegionProgramPublished(content) ? INDEXED : NOT_INDEXED;
+    }
+
+    case "region-dong":
+    case "region-dong-subject": {
+      const dong = ctx.regionSlug && ctx.dongSlug ? getDong(ctx.regionSlug, ctx.dongSlug) : undefined;
+      if (!dong) return NOT_INDEXED;
+      if (kind === "region-dong-subject" && !(ctx.subjectSlug && getSubjectBySlug(ctx.subjectSlug))) return NOT_INDEXED;
+      if (!schools.some((s) => s.cityRegionSlug === dong.citySlug && s.dongSlug === dong.slug)) return NOT_INDEXED;
+      const path = `${getRegionUrl(dong.citySlug)}/${dong.slug}${kind === "region-dong-subject" ? `/${ctx.subjectSlug}` : ""}`;
+      return qualityNoindexPaths.has(path) ? NOT_INDEXED : INDEXED;
     }
 
     case "region-grade":

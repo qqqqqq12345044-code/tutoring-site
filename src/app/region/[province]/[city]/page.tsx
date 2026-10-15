@@ -12,6 +12,7 @@ import { buildRegionSchoolIntro } from "@/lib/regionIntro";
 import { schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
 import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { buildRegionFaqs } from "@/lib/regionFaq";
+import { getDongsByCity } from "@/data/dongs";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -60,6 +61,8 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
   const relevantCaseStudies = caseStudies.slice(0, 3);
   const regionFaqs = buildRegionFaqs(region.slug, region.name, relatedSchools);
   const gradeSubjectLinks = indexedRegionGradeSubjectLinks(region.slug);
+  // 행정동 pages exist only alongside the city's combination routes (src/lib/regionRoutes.ts).
+  const dongs = hasCombos ? getDongsByCity(region.slug) : [];
 
   return (
     <>
@@ -106,6 +109,15 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
       {gradeSubjectLinks.length > 0 && (
         <section className="container-page pb-14 md:pb-16">
           <RelatedLinks title={`${region.name} 학년·과목별 과외 안내`} links={gradeSubjectLinks} />
+        </section>
+      )}
+
+      {dongs.length > 0 && (
+        <section className="container-page pb-14 md:pb-16">
+          <RelatedLinks
+            title={`${region.name} 행정동별 과외`}
+            links={dongs.map((d) => ({ label: `${d.name} 과외`, href: `/region/${parent.slug}/${region.slug}/${d.slug}` }))}
+          />
         </section>
       )}
 

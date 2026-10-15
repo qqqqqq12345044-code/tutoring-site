@@ -9,6 +9,7 @@ import { guideArticles } from "@/data/guide";
 import { getIndexability } from "@/lib/indexability";
 import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { getContentUpdatedAt } from "@/data/contentDates";
+import { getDongsByCity } from "@/data/dongs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
@@ -129,6 +130,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // 행정동 hub / 행정동×과목 pages: /region/[province]/[city]/[dong](/[subject]) (src/data/dongs.ts).
+  // Only for cities that have combination routes, and only entries marked `sitemap: true`.
+  const dongPaths: string[] = [];
+  for (const city of regions.filter((r) => r.level === "city" && hasRegionComboRoutes(r.slug))) {
+    const base = getRegionUrl(city.slug);
+    for (const dong of getDongsByCity(city.slug)) {
+      if (getIndexability("region-dong", { regionSlug: city.slug, dongSlug: dong.slug }).sitemap) {
+        dongPaths.push(`${base}/${dong.slug}`);
+      }
+      for (const s of subjects) {
+        if (getIndexability("region-dong-subject", { regionSlug: city.slug, dongSlug: dong.slug, subjectSlug: s.slug }).sitemap) {
+          dongPaths.push(`${base}/${dong.slug}/${s.slug}`);
+        }
+      }
+    }
+  }
+
   const allPaths = Array.from(
     new Set([
       ...staticPaths,
@@ -139,6 +157,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...cityComboPaths,
       ...schoolComboPaths,
       ...regionProgramPaths,
+      ...dongPaths,
     ])
   );
 

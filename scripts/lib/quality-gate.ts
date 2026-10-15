@@ -1,6 +1,7 @@
 /**
  * RED / AMBER / GREEN quality gate for the programmatic combination pages
- * (region×subject, region×grade×subject, school×subject). Read-only: it grades
+ * (region×subject, region×grade×subject, school×subject, and — since the
+ * 2026-10-16 의정부 pilot — 행정동 hub and 행정동×subject pages). Read-only: it grades
  * the data, it does not change indexability — that stays in
  * src/lib/indexability.ts and is decided per policy after reviewing this report.
  *
@@ -29,11 +30,23 @@ import { getIndexability } from "@/lib/indexability";
 import { tokenSimilarity } from "./content-quality";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
+import { dongs } from "@/data/dongs";
+import { subjects } from "@/data/subjects";
+import { buildDongHubContent, buildDongSubjectContent, getDongSchools } from "@/lib/dongContent";
 
 export type QualityGrade = "GREEN" | "AMBER" | "RED";
 
+export const QUALITY_KINDS = [
+  "region-subject",
+  "region-grade-subject",
+  "school-subject",
+  "region-dong",
+  "region-dong-subject",
+] as const;
+export type QualityKind = (typeof QUALITY_KINDS)[number];
+
 export interface QualityRow {
-  kind: "region-subject" | "region-grade-subject" | "school-subject";
+  kind: QualityKind;
   path: string;
   indexed: boolean;
   /** True only for a status "draft" entry graded by a dry run (includeDrafts); never indexed. */
@@ -59,6 +72,8 @@ function isPointerNote(body: string): boolean {
 const names = [
   ...schools.map((s) => s.name),
   ...regions.flatMap((r) => [r.fullName, r.name, r.name.replace(/(구|군|시)$/, "")]),
+  // 행정동·법정동 names, so dong pages that differ only by the dong they name score ~100%.
+  ...dongs.flatMap((d) => [d.name, ...d.legalDongs]),
 ]
   .filter((n) => n.length >= 2)
   .sort((a, b) => b.length - a.length); // longest first so "서울양천초등학교" masks before "양천"
@@ -171,12 +186,50 @@ export function runQualityGate(options: { includeDrafts?: boolean } = {}): Quali
       structural: { red: [], amber: [] },
     }));
 
-  return [...grade(regionSubject), ...grade(regionGradeSubject), ...grade(schoolSubject)];
+  // 행정동 hub / 행정동×subject (src/lib/dongContent.ts): graded on the dong-specific text the
+  // page renders (intro + notes); shared layers on the same page are excluded, as for the kinds above.
+  // Every dong is graded (there is no draft state) — a page is indexed only if it is not RED.
+  const dongCandidates = (kind: "region-dong" | "region-dong-subject") =>
+    dongs.flatMap((d) => {
+      const city = regions.find((r) => r.slug === d.citySlug);
+      if (!city) return [];
+      const base = `${cityPath(d.citySlug)}/${d.slug}`;
+      const structural = { red: getDongSchools(d).length > 0 ? [] : ["동 등록 학교 0"], amber: [] };
+      const toCandidate = (path: string, indexed: boolean, c: ReturnType<typeof buildDongHubContent>): Candidate => ({
+        kind,
+        path,
+        indexed,
+        text: [c.intro, ...c.notes.map((n) => n.body)].join(" "),
+        notes: c.notes,
+        sources: c.sources,
+        structural,
+      });
+      if (kind === "region-dong") {
+        return [
+          toCandidate(base, getIndexability("region-dong", { regionSlug: d.citySlug, dongSlug: d.slug }).index, buildDongHubContent(d, city.name)),
+        ];
+      }
+      return subjects.map((s) =>
+        toCandidate(
+          `${base}/${s.slug}`,
+          getIndexability("region-dong-subject", { regionSlug: d.citySlug, dongSlug: d.slug, subjectSlug: s.slug }).index,
+          buildDongSubjectContent(d, city.name, s)
+        )
+      );
+    });
+
+  return [
+    ...grade(regionSubject),
+    ...grade(regionGradeSubject),
+    ...grade(schoolSubject),
+    ...grade(dongCandidates("region-dong")),
+    ...grade(dongCandidates("region-dong-subject")),
+  ];
 }
 
 export function summarizeQualityGate(rows: QualityRow[]): string[] {
   const lines: string[] = [];
-  for (const kind of ["region-subject", "region-grade-subject", "school-subject"] as const) {
+  for (const kind of QUALITY_KINDS) {
     const k = rows.filter((r) => r.kind === kind);
     const count = (g: QualityGrade) => k.filter((r) => r.grade === g).length;
     const indexedRed = k.filter((r) => r.indexed && r.grade === "RED").length;

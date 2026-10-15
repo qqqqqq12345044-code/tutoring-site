@@ -24,6 +24,8 @@ import SourceList from "@/components/SourceList";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import StepFlow from "@/components/ui/StepFlow";
 import CaseStudyCard from "@/components/CaseStudyCard";
+import { getDong } from "@/data/dongs";
+import { DongHubView, dongHubMetadata } from "@/components/region/DongPages";
 
 const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
 
@@ -54,6 +56,10 @@ function resolveContext(province: string, city: string, slug: string) {
   const district = getChildren(region.slug).find((d) => d.slug === slug);
   if (district) return { parent, region, type: "district" as const, district };
 
+  // 행정동 hub (src/data/dongs.ts) — slugs end in "-dong", so they never shadow the cases above.
+  const dong = getDong(region.slug, slug);
+  if (dong) return { parent, region, type: "dong" as const, dong };
+
   return null;
 }
 
@@ -61,6 +67,8 @@ export async function generateMetadata(props: PageProps<"/region/[province]/[cit
   const { province, city, slug } = await props.params;
   const ctx = resolveContext(province, city, slug);
   if (!ctx) return {};
+
+  if (ctx.type === "dong") return dongHubMetadata(ctx);
 
   if (ctx.type === "subject") {
     const { index } = getIndexability("region-subject", {
@@ -99,6 +107,8 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
   const { province, city, slug } = await props.params;
   const ctx = resolveContext(province, city, slug);
   if (!ctx) notFound();
+
+  if (ctx.type === "dong") return <DongHubView ctx={ctx} />;
 
   const breadcrumbBase = [
     { name: "지역별 과외", href: "/regions" },

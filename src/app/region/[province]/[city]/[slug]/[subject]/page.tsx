@@ -16,6 +16,8 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
 import SourceList from "@/components/SourceList";
+import { getDong } from "@/data/dongs";
+import { DongSubjectView, dongSubjectMetadata } from "@/components/region/DongPages";
 
 export function generateStaticParams() {
   return regionGradeSubjectContents.filter(isPublishedContent).map((c) => {
@@ -43,6 +45,10 @@ function resolveContext(province: string, city: string, slug: string, subjectSlu
   const district = getChildren(region.slug).find((d) => d.slug === slug);
   if (district) return { parent, region, subject, type: "district" as const, district };
 
+  // 행정동 × 과목 (src/data/dongs.ts).
+  const dong = getDong(region.slug, slug);
+  if (dong) return { parent, region, subject, type: "dong" as const, dong };
+
   return null;
 }
 
@@ -52,6 +58,8 @@ export async function generateMetadata(
   const { province, city, slug, subject: subjectSlug } = await props.params;
   const ctx = resolveContext(province, city, slug, subjectSlug);
   if (!ctx) return {};
+
+  if (ctx.type === "dong") return dongSubjectMetadata(ctx, ctx.subject);
 
   const label = ctx.type === "grade" ? `${ctx.region.name} ${ctx.grade.name}` : ctx.district.name;
 
@@ -93,6 +101,8 @@ export default async function RegionFilterSubjectPage(
   const { province, city, slug, subject: subjectSlug } = await props.params;
   const ctx = resolveContext(province, city, slug, subjectSlug);
   if (!ctx) notFound();
+
+  if (ctx.type === "dong") return <DongSubjectView ctx={ctx} subject={ctx.subject} />;
 
   const label = ctx.type === "grade" ? `${ctx.region.name} ${ctx.grade.name}` : ctx.district.name;
   const rawContent =

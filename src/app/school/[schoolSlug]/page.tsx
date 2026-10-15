@@ -3,6 +3,7 @@ import { schools, getSchoolBySlug } from "@/data/schools";
 import { getSubjectBySlug } from "@/data/subjects";
 import { getRegionBySlug, getRegionUrl, getRegionPath } from "@/data/regions";
 import { getGradeBySlug } from "@/data/grades";
+import { getDong } from "@/data/dongs";
 import { getFaqsBySlugs } from "@/data/faqs";
 import { getSchoolContent, isPublishedContent } from "@/data/schoolContent";
 import { buildMetadata } from "@/lib/metadata";
@@ -52,6 +53,7 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
   const region = getRegionBySlug(school.districtRegionSlug ?? school.cityRegionSlug);
   const regionPath = getRegionPath(school.districtRegionSlug ?? school.cityRegionSlug);
   const matchingGrade = getGradeBySlug(schoolLevelToGradeSlug[school.level]);
+  const dong = school.dongSlug ? getDong(school.cityRegionSlug, school.dongSlug) : undefined;
   const faqs = getFaqsBySlugs(["subject-scope", "pricing"]);
 
   return (
@@ -70,7 +72,14 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
           </p>
           {region && (
             <p className="text-sm text-text-muted">
-              지역: {regionPath.map((r) => r.name).join(" > ")} · 학교급: {school.level}
+              지역: {regionPath.map((r) => r.name).join(" > ")}
+              {dong ? ` > ${dong.name}` : ""} · 학교급: {school.level}
+            </p>
+          )}
+          {school.official && (
+            <p className="text-sm text-text-muted">
+              주소: {school.official.roadAddress} · {school.official.foundation}
+              {school.official.highSchoolType ? ` · ${school.official.highSchoolType}` : ""} (NEIS 학교기본정보)
             </p>
           )}
         </div>
@@ -93,6 +102,7 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
           title="관련 지역·학년"
           links={[
             ...(region ? [{ label: `${region.name} 과외`, href: getRegionUrl(region.slug) }] : []),
+            ...(dong ? [{ label: `${dong.name} 과외`, href: `${getRegionUrl(dong.citySlug)}/${dong.slug}` }] : []),
             ...(matchingGrade ? [{ label: `${matchingGrade.name}과외`, href: `/grade/${matchingGrade.slug}` }] : []),
           ]}
         />
