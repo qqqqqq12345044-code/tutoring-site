@@ -2,12 +2,14 @@ import { dongTableSources, getDongsSharingLegalDong, type AdminDong } from "@/da
 import { schools, type School } from "@/data/schools";
 import type { Subject } from "@/data/subjects";
 import type { ContentSource } from "@/data/sources";
+import { getDongSubjectContent } from "@/data/dongSubjectContent";
 
 /**
  * Page content for 행정동 pages (/region/[province]/[city]/[dong]) and 행정동×과목 pages
  * (/region/[province]/[city]/[dong]/[subject]), built only from verified data:
  * - the city's official 행정동 table (src/data/dongs.ts — 법정동, 통·반),
- * - NEIS 학교기본정보 records of the schools resolved into the dong (src/data/schools.ts).
+ * - NEIS 학교기본정보 records of the schools resolved into the dong (src/data/schools.ts),
+ * - for 행정동×과목 pages with a written entry, the schools' 학교알리미 평가계획 (src/data/dongSubjectContent.ts).
  *
  * No region "facts" (교육열, 학원 수, 성적, 학생 수 …) and no reviews are generated here.
  * The same builders feed the page and the quality gate (scripts/lib/quality-gate.ts), so the
@@ -25,6 +27,8 @@ export interface DongContent {
   intro: string;
   notes: DongNote[];
   sources: ContentSource[];
+  /** True when the text comes from src/data/dongSubjectContent.ts (학교알리미 평가계획) rather than the generator. */
+  planBased?: boolean;
 }
 
 const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
@@ -171,6 +175,16 @@ function subjectSchoolFacts(subject: Subject, list: School[]): string[] {
 
 export function buildDongSubjectContent(dong: AdminDong, cityName: string, subject: Subject): DongContent {
   const list = getDongSchools(dong);
+  const written = getDongSubjectContent(dong.citySlug, dong.slug, subject.slug);
+  if (written) {
+    const own = written.sources.map((s) => s.url);
+    return {
+      intro: written.intro,
+      notes: written.notes,
+      sources: [...written.sources, ...dongSources(dong, list).filter((s) => !own.includes(s.url))],
+      planBased: true,
+    };
+  }
   const levels = groupByLevel(list);
   const checkpoints = SUBJECT_LEVEL_CHECKPOINTS[subject.slug] ?? {};
   const notes: DongNote[] = levels.map((g) => ({

@@ -63,7 +63,9 @@ export const qualityNoindexPaths = new Set<string>([
   "/region/gyeonggi/uijeongbu/heungseon-dong",
   "/region/gyeonggi/uijeongbu/nogyang-dong",
   "/region/gyeonggi/uijeongbu/gosan-dong",
-  // 행정동×과목 — 이름 마스킹 유사도 >60% (75) — 같은 동의 다른 과목/같은 과목의 다른 동과 75~88%.
+  // 행정동×과목 — 이름 마스킹 유사도 >60% (66) — 같은 동의 다른 과목/같은 과목의 다른 동과 75~88%.
+  // 2026-10-16 2단계 파일럿: 송산2동·흥선동·신곡2동 × 국어·영어·수학 9개는 학교알리미 평가계획으로 다시 써서
+  // (src/data/dongSubjectContent.ts) GREEN 15~20%가 되어 제외했다.
   "/region/gyeonggi/uijeongbu/uijeongbu1-dong/korean",
   "/region/gyeonggi/uijeongbu/uijeongbu1-dong/english",
   "/region/gyeonggi/uijeongbu/uijeongbu1-dong/math",
@@ -94,9 +96,6 @@ export const qualityNoindexPaths = new Set<string>([
   "/region/gyeonggi/uijeongbu/singok1-dong/math",
   "/region/gyeonggi/uijeongbu/singok1-dong/social",
   "/region/gyeonggi/uijeongbu/singok1-dong/science",
-  "/region/gyeonggi/uijeongbu/singok2-dong/korean",
-  "/region/gyeonggi/uijeongbu/singok2-dong/english",
-  "/region/gyeonggi/uijeongbu/singok2-dong/math",
   "/region/gyeonggi/uijeongbu/singok2-dong/social",
   "/region/gyeonggi/uijeongbu/singok2-dong/science",
   "/region/gyeonggi/uijeongbu/songsan1-dong/korean",
@@ -104,9 +103,6 @@ export const qualityNoindexPaths = new Set<string>([
   "/region/gyeonggi/uijeongbu/songsan1-dong/math",
   "/region/gyeonggi/uijeongbu/songsan1-dong/social",
   "/region/gyeonggi/uijeongbu/songsan1-dong/science",
-  "/region/gyeonggi/uijeongbu/songsan2-dong/korean",
-  "/region/gyeonggi/uijeongbu/songsan2-dong/english",
-  "/region/gyeonggi/uijeongbu/songsan2-dong/math",
   "/region/gyeonggi/uijeongbu/songsan2-dong/social",
   "/region/gyeonggi/uijeongbu/songsan2-dong/science",
   "/region/gyeonggi/uijeongbu/songsan3-dong/korean",
@@ -124,9 +120,6 @@ export const qualityNoindexPaths = new Set<string>([
   "/region/gyeonggi/uijeongbu/ganeung-dong/math",
   "/region/gyeonggi/uijeongbu/ganeung-dong/social",
   "/region/gyeonggi/uijeongbu/ganeung-dong/science",
-  "/region/gyeonggi/uijeongbu/heungseon-dong/korean",
-  "/region/gyeonggi/uijeongbu/heungseon-dong/english",
-  "/region/gyeonggi/uijeongbu/heungseon-dong/math",
   "/region/gyeonggi/uijeongbu/heungseon-dong/social",
   "/region/gyeonggi/uijeongbu/heungseon-dong/science",
   "/region/gyeonggi/uijeongbu/nogyang-dong/korean",

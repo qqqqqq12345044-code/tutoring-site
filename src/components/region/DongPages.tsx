@@ -6,6 +6,7 @@ import { grades } from "@/data/grades";
 import { guideArticles } from "@/data/guide";
 import { getGradeSubjectPlaybook } from "@/data/gradeSubjectPlaybook";
 import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
+import { getDongSubjectContent } from "@/data/dongSubjectContent";
 import type { School } from "@/data/schools";
 import { buildMetadata } from "@/lib/metadata";
 import { motifForSlug } from "@/lib/thumbnails";
@@ -75,9 +76,12 @@ export function dongSubjectMetadata(ctx: DongCtx, subject: Subject) {
     dongSlug: ctx.dong.slug,
     subjectSlug: subject.slug,
   });
+  const planBased = Boolean(getDongSubjectContent(ctx.region.slug, ctx.dong.slug, subject.slug));
   return buildMetadata({
-    title: `${ctx.region.name} ${ctx.dong.name} ${subject.name}과외 | 학교급별 ${subject.name} 공부 포인트`,
-    description: `${ctx.region.name} ${ctx.dong.name}(법정동 ${ctx.dong.legalDongs.join("·")}) ${subject.name}과외 — ${shortSchoolNames(list)} 학교급별 ${subject.name} 학습 포인트와 1:1 수업 진행 방식을 안내합니다.`,
+    title: `${ctx.region.name} ${ctx.dong.name} ${subject.name}과외 | ${planBased ? `학교별 2학기 ${subject.name} 평가계획` : `학교급별 ${subject.name} 공부 포인트`}`,
+    description: planBased
+      ? `${ctx.region.name} ${ctx.dong.name} ${subject.name}과외 — ${shortSchoolNames(list)}의 2026학년도 2학기 ${subject.name} 평가계획(정기시험·수행평가 비율과 과제)을 학교알리미 공시 기준으로 비교합니다.`
+      : `${ctx.region.name} ${ctx.dong.name}(법정동 ${ctx.dong.legalDongs.join("·")}) ${subject.name}과외 — ${shortSchoolNames(list)} 학교급별 ${subject.name} 학습 포인트와 1:1 수업 진행 방식을 안내합니다.`,
     path: `${dongBase(ctx)}/${subject.slug}`,
     image: motifForSlug(subject.slug),
     robots: { index, follow: true },
@@ -236,8 +240,10 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
   const playbooks = groupByLevel(list)
     .map((g) => ({ level: g.level, playbook: getGradeSubjectPlaybook(schoolLevelToGradeSlug[g.level], subject.slug) }))
     .filter((p) => p.playbook);
-  const levelNotes = content.notes.filter((n) => n.title.endsWith(`${subject.name} 공부 포인트`));
+  // Written (평가계획) pages show all their notes in the main section.
+  const levelNotes = content.planBased ? content.notes : content.notes.filter((n) => n.title.endsWith(`${subject.name} 공부 포인트`));
   const otherNotes = content.notes.filter((n) => !levelNotes.includes(n));
+  const heading = content.planBased ? `학교별 2학기 ${subject.name} 평가계획` : `학교급별 ${subject.name} 공부 포인트`;
 
   return (
     <>
@@ -254,7 +260,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
             <div className="max-w-2xl">
               <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
                 {ctx.region.name} {ctx.dong.name} {subject.name}과외
-                <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">학교급별 {subject.name} 공부 포인트</span>
+                <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">{heading}</span>
               </h1>
               <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
             </div>
@@ -266,7 +272,11 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
       </section>
 
       <section className="container-page py-14 md:py-16">
-        <SectionHeader align="left" title={`${ctx.dong.name} 학교급별 ${subject.name} 공부 포인트`} />
+        <SectionHeader
+          align="left"
+          title={`${ctx.dong.name} ${heading}`}
+          description={content.planBased ? "학교알리미에 공시된 각 학교의 2026학년도 2학기 교과별 평가계획 원문을 확인해 정리했습니다. 시기와 과제는 학교 사정에 따라 바뀔 수 있습니다." : undefined}
+        />
         <NotesGrid notes={levelNotes} />
         <SchoolsByLevel list={list} />
       </section>

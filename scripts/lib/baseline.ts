@@ -19,7 +19,9 @@ export const BASELINE = {
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
   // 2026-10-07: +5 school×subject holds released after GREEN rewrite (공시 평가계획), −2 반포중(휴교) school page + math page
   // held noindex (src/data/schoolNoindex.ts, schoolSubjectNoindex.ts): 199 → 202, noindex 1281 → 1278.
-  sitemapCount: 212,
-  noindexCount: 2020,
+  // 2026-10-16 2단계: 행정동×과목 9개(송산2동·흥선동·신곡2동 × 국어·영어·수학)를 학교알리미 평가계획으로 다시 써서
+  // 품질 게이트 GREEN → qualityNoindex에서 제외되어 색인: sitemap 212 → 221, noindex 2020 → 2011.
+  sitemapCount: 221,
+  noindexCount: 2011,
   brokenLinks: 0,
 };
