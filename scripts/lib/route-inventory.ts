@@ -25,6 +25,8 @@ import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schoolNoindexSlugs } from "@/data/schoolNoindex";
 import { dongs, getDongsByCity } from "@/data/dongs";
+import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
+import { officialDongsForRegion, loadAdminDongTable } from "../official/lib/admin-dong-table";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
 
@@ -136,6 +138,7 @@ export function getAllContentRoutes(): RouteEntry[] {
       const hub = getIndexability("region-dong", { regionSlug: city.slug, dongSlug: dong.slug });
       routes.push({ path: `${base}/${dong.slug}`, index: hub.index, sitemap: hub.sitemap });
       for (const s of subjects) {
+        if (!hasDongSubjectRoute(city.slug, dong.slug, s.slug)) continue; // no written entry → no route (404)
         const { index, sitemap } = getIndexability("region-dong-subject", { regionSlug: city.slug, dongSlug: dong.slug, subjectSlug: s.slug });
         routes.push({ path: `${base}/${dong.slug}/${s.slug}`, index, sitemap });
       }
@@ -510,11 +513,11 @@ export function checkDongData(): GateCheckResult {
     const key = `${d.citySlug}/${d.slug}`;
     if (seen.has(key)) issues.push(`dong slug 중복: ${key}`);
     seen.add(key);
-    if (!d.slug.endsWith("-dong")) issues.push(`dong slug는 "-dong"으로 끝나야 함: ${key}`);
+    if (!/-(dong|eup|myeon)$/.test(d.slug)) issues.push(`dong slug는 "-dong"/"-eup"/"-myeon"으로 끝나야 함: ${key}`);
     if (reserved.has(d.slug)) issues.push(`dong slug가 subject/grade/district/program과 충돌: ${key}`);
     if (getRegionBySlug(d.citySlug)?.level !== "city") issues.push(`dong citySlug가 city-level이 아님: ${key}`);
     if (d.legalDongs.length === 0) issues.push(`법정동 없음: ${key}`);
-    if (!(d.tong > 0 && d.ban > 0)) issues.push(`통·반 수 이상: ${key}`);
+    if ((d.tong !== undefined || d.ban !== undefined) && !(d.tong! > 0 && d.ban! > 0)) issues.push(`통·반 수 이상: ${key}`);
     if (dongs.filter((x) => x.citySlug === d.citySlug && x.name === d.name).length > 1) issues.push(`dong 이름 중복: ${d.citySlug}/${d.name}`);
   }
   for (const s of schools) {
@@ -537,11 +540,26 @@ export function checkDongData(): GateCheckResult {
     const hubEligible = hasSchool && !qualityNoindexPaths.has(base);
     if (hub.index !== hubEligible || hub.sitemap !== hubEligible) issues.push(`region-dong gate: ${base} eligible=${hubEligible} index=${hub.index}`);
     for (const s of subjects) {
+      if (!hasDongSubjectRoute(d.citySlug, d.slug, s.slug)) continue;
       const path = `${base}/${s.slug}`;
       const r = getIndexability("region-dong-subject", { regionSlug: d.citySlug, dongSlug: d.slug, subjectSlug: s.slug });
       const eligible = hasSchool && !qualityNoindexPaths.has(path);
       if (r.index !== eligible || r.sitemap !== eligible) issues.push(`region-dong-subject gate: ${path} eligible=${eligible} index=${r.index}`);
     }
+  }
+  // Every page-enabled 행정동 must be a current official 행정동 of its city with the same 법정동 set
+  // (data/official/admin-dongs.json, 행정안전부 주민등록 행정기관 코드 — scripts/official/admin-dongs.ts).
+  const table = loadAdminDongTable();
+  for (const d of dongs) {
+    const official = officialDongsForRegion(d.citySlug, table).filter((o) => o.name === d.name);
+    if (official.length !== 1) {
+      issues.push(`공식 행정동 표(${table.source.asOf})에 없음 또는 중복: ${d.citySlug}/${d.name} (${official.length})`);
+      continue;
+    }
+    const legal = official[0].legal.map(([, n]) => n).sort().join("·");
+    const mine = [...d.legalDongs].sort().join("·");
+    if (legal !== mine) issues.push(`법정동 구성 불일치: ${d.citySlug}/${d.name} — 사이트 ${mine} / 공식 ${legal}`);
+    if (d.code && d.code !== official[0].code) issues.push(`행정동코드 불일치: ${d.citySlug}/${d.name} ${d.code} ≠ ${official[0].code}`);
   }
   return { ok: issues.length === 0, issues };
 }

@@ -32,6 +32,7 @@ import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { dongs } from "@/data/dongs";
 import { subjects } from "@/data/subjects";
+import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { buildDongHubContent, buildDongSubjectContent, getDongSchools } from "@/lib/dongContent";
 
 export type QualityGrade = "GREEN" | "AMBER" | "RED";
@@ -209,7 +210,7 @@ export function runQualityGate(options: { includeDrafts?: boolean } = {}): Quali
           toCandidate(base, getIndexability("region-dong", { regionSlug: d.citySlug, dongSlug: d.slug }).index, buildDongHubContent(d, city.name)),
         ];
       }
-      return subjects.map((s) =>
+      return subjects.filter((s) => hasDongSubjectRoute(d.citySlug, d.slug, s.slug)).map((s) =>
         toCandidate(
           `${base}/${s.slug}`,
           getIndexability("region-dong-subject", { regionSlug: d.citySlug, dongSlug: d.slug, subjectSlug: s.slug }).index,

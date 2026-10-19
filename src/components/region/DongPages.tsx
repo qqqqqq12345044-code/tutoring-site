@@ -6,7 +6,7 @@ import { grades } from "@/data/grades";
 import { guideArticles } from "@/data/guide";
 import { getGradeSubjectPlaybook } from "@/data/gradeSubjectPlaybook";
 import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
-import { getDongSubjectContent } from "@/data/dongSubjectContent";
+import { getDongSubjectContent, hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import type { School } from "@/data/schools";
 import { buildMetadata } from "@/lib/metadata";
 import { motifForSlug } from "@/lib/thumbnails";
@@ -130,6 +130,8 @@ function siblingDongLinks(ctx: DongCtx, subject?: Subject): RelatedLink[] {
   return getDongsSharingLegalDong(ctx.dong)
     .flatMap((g) => g.dongs)
     .filter((d, i, arr) => arr.findIndex((x) => x.slug === d.slug) === i)
+    // Subject links only where that dong's subject page exists (written entry).
+    .filter((d) => !subject || hasDongSubjectRoute(ctx.region.slug, d.slug, subject.slug))
     .map((d) => ({
       label: subject ? `${d.name} ${subject.name}과외` : `${d.name} 과외`,
       href: subject ? `${base}/${d.slug}/${subject.slug}` : `${base}/${d.slug}`,
@@ -187,7 +189,9 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
       <section className="container-page py-14 md:py-16">
         <RelatedLinks
           title={`${ctx.dong.name} 과목별 과외`}
-          links={subjects.map((s) => ({ label: `${ctx.dong.name} ${s.name}과외`, href: `${base}/${s.slug}` }))}
+          links={subjects
+            .filter((s) => hasDongSubjectRoute(ctx.region.slug, ctx.dong.slug, s.slug))
+            .map((s) => ({ label: `${ctx.dong.name} ${s.name}과외`, href: `${base}/${s.slug}` }))}
         />
       </section>
 
@@ -357,7 +361,9 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
             title={`${ctx.dong.name} 다른 과목`}
             links={[
               { label: `${ctx.dong.name} 과외 전체`, href: base },
-              ...subjects.filter((s) => s.slug !== subject.slug).map((s) => ({ label: `${ctx.dong.name} ${s.name}과외`, href: `${base}/${s.slug}` })),
+              ...subjects
+                .filter((s) => s.slug !== subject.slug && hasDongSubjectRoute(ctx.region.slug, ctx.dong.slug, s.slug))
+                .map((s) => ({ label: `${ctx.dong.name} ${s.name}과외`, href: `${base}/${s.slug}` })),
             ]}
           />
           <RelatedLinks

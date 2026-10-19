@@ -2763,6 +2763,14 @@ export const dongSubjectContents: DongSubjectContent[] = [
   },
 ];
 
+/**
+ * A 행정동×과목 route exists only when its entry is written and published (2026-10-19): a dong's subject page
+ * without disclosed-plan content would be the generated template, so the URL is not created at all.
+ */
+export function hasDongSubjectRoute(citySlug: string, dongSlug: string, subjectSlug: string): boolean {
+  return Boolean(getDongSubjectContent(citySlug, dongSlug, subjectSlug));
+}
+
 export function getDongSubjectContent(citySlug: string, dongSlug: string, subjectSlug: string): DongSubjectContent | undefined {
   const c = dongSubjectContents.find((x) => x.citySlug === citySlug && x.dongSlug === dongSlug && x.subjectSlug === subjectSlug);
   return c && c.status === "published" && c.notes.length > 0 ? c : undefined;

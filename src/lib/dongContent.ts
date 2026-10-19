@@ -1,4 +1,4 @@
-import { dongTableSources, getDongsSharingLegalDong, type AdminDong } from "@/data/dongs";
+import { dongTableSources, getDongsSharingLegalDong, MOIS_ADMIN_CODE_SOURCE, type AdminDong } from "@/data/dongs";
 import { schools, type School } from "@/data/schools";
 import { subjects, type Subject } from "@/data/subjects";
 import type { ContentSource } from "@/data/sources";
@@ -76,8 +76,8 @@ function neisSource(s: School): ContentSource | undefined {
 }
 
 function dongSources(dong: AdminDong, list: School[]): ContentSource[] {
-  const table = dongTableSources[dong.citySlug];
-  return [...(table ? [table] : []), ...list.flatMap((s) => neisSource(s) ?? [])];
+  const table = dongTableSources[dong.citySlug] ?? MOIS_ADMIN_CODE_SOURCE;
+  return [table, ...list.flatMap((s) => neisSource(s) ?? [])];
 }
 
 /** 법정동 composition + which other 행정동 share each 법정동 (official table only). */
@@ -91,7 +91,7 @@ function legalDongNote(dong: AdminDong): DongNote {
   if (own.length > 0) parts.push(`법정동 ${own.join("·")}은 ${dong.name}에만 속합니다.`);
   return {
     title: `${dong.legalDongs.join("·")}으로 찾을 때`,
-    body: `${dong.name}은 법정동 ${dong.legalDongs.join("·")}을 관할하는 행정동입니다(통 ${dong.tong}개·반 ${dong.ban}개). ${parts.join(" ")} 주소에 적힌 동 이름이 법정동이라면 실제 행정동을 먼저 확인하세요.`,
+    body: `${dong.name}은 법정동 ${dong.legalDongs.join("·")}을 관할하는 행정동입니다${dong.tong && dong.ban ? `(통 ${dong.tong}개·반 ${dong.ban}개)` : ""}. ${parts.join(" ")} 주소에 적힌 동 이름이 법정동이라면 실제 행정동을 먼저 확인하세요.`,
   };
 }
 

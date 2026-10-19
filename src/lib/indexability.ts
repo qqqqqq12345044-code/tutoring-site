@@ -11,6 +11,7 @@ import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schoolNoindexSlugs } from "@/data/schoolNoindex";
 import { schools } from "@/data/schools";
 import { getDong } from "@/data/dongs";
+import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { getSubjectBySlug } from "@/data/subjects";
 
 /**
@@ -185,6 +186,7 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
       const dong = ctx.regionSlug && ctx.dongSlug ? getDong(ctx.regionSlug, ctx.dongSlug) : undefined;
       if (!dong) return NOT_INDEXED;
       if (kind === "region-dong-subject" && !(ctx.subjectSlug && getSubjectBySlug(ctx.subjectSlug))) return NOT_INDEXED;
+      if (kind === "region-dong-subject" && !hasDongSubjectRoute(dong.citySlug, dong.slug, ctx.subjectSlug!)) return NOT_INDEXED;
       if (!schools.some((s) => s.cityRegionSlug === dong.citySlug && s.dongSlug === dong.slug)) return NOT_INDEXED;
       const path = `${getRegionUrl(dong.citySlug)}/${dong.slug}${kind === "region-dong-subject" ? `/${ctx.subjectSlug}` : ""}`;
       return qualityNoindexPaths.has(path) ? NOT_INDEXED : INDEXED;

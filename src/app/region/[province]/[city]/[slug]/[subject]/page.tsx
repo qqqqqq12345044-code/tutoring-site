@@ -17,6 +17,7 @@ import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
 import SourceList from "@/components/SourceList";
 import { getDong } from "@/data/dongs";
+import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { DongSubjectView, dongSubjectMetadata } from "@/components/region/DongPages";
 import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
 
@@ -48,7 +49,8 @@ function resolveContext(province: string, city: string, slug: string, subjectSlu
 
   // 행정동 × 과목 (src/data/dongs.ts).
   const dong = getDong(region.slug, slug);
-  if (dong) return { parent, region, subject, type: "dong" as const, dong };
+  // A 행정동×과목 URL exists only with a written entry (src/data/dongSubjectContent.ts).
+  if (dong) return hasDongSubjectRoute(region.slug, dong.slug, subject.slug) ? { parent, region, subject, type: "dong" as const, dong } : null;
 
   return null;
 }
