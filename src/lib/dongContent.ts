@@ -80,6 +80,10 @@ function dongSources(dong: AdminDong, list: School[]): ContentSource[] {
   return [table, ...list.flatMap((s) => neisSource(s) ?? [])];
 }
 
+function isEupMyeon(dong: AdminDong): boolean {
+  return /(읍|면)$/.test(dong.name);
+}
+
 /** 법정동 composition + which other 행정동 share each 법정동 (official table only). */
 function legalDongNote(dong: AdminDong): DongNote {
   const shared = getDongsSharingLegalDong(dong);
@@ -89,6 +93,14 @@ function legalDongNote(dong: AdminDong): DongNote {
     parts.push(`법정동 ${g.legalDong}은 ${dong.name} 외에 ${g.dongs.map((d) => d.name).join("·")}에도 걸쳐 있습니다.`);
   }
   if (own.length > 0) parts.push(`법정동 ${own.join("·")}은 ${dong.name}에만 속합니다.`);
+  if (isEupMyeon(dong)) {
+    // 읍·면: KIKmix lists the 읍/면 itself plus its 법정리.
+    const ri = dong.legalDongs.filter((l) => l !== dong.name);
+    return {
+      title: `${dong.name} 관할 리`,
+      body: `${dong.name}은 법정리 ${ri.join("·")}을 관할합니다(행정안전부 행정동 코드표). 주소에 리 이름이 적혀 있으면 ${dong.name} 학교 목록을 함께 확인하세요.`,
+    };
+  }
   return {
     title: `${dong.legalDongs.join("·")}으로 찾을 때`,
     body: `${dong.name}은 법정동 ${dong.legalDongs.join("·")}을 관할하는 행정동입니다${dong.tong && dong.ban ? `(통 ${dong.tong}개·반 ${dong.ban}개)` : ""}. ${parts.join(" ")} 주소에 적힌 동 이름이 법정동이라면 실제 행정동을 먼저 확인하세요.`,
@@ -139,7 +151,9 @@ export function buildDongHubContent(dong: AdminDong, cityName: string): DongCont
   const planSources = written.flatMap(({ entry }) => entry.sources).filter((s) => !seen.has(s.url) && seen.add(s.url));
 
   return {
-    intro: `${cityName} ${dong.name}은 법정동 ${dong.legalDongs.join("·")}에 걸친 행정동이며, NEIS 학교기본정보 기준 ${levelCounts(list)}이 주소상 이 동에 있습니다.`,
+    intro: isEupMyeon(dong)
+      ? `${cityName} ${dong.name}은 법정리 ${dong.legalDongs.filter((l) => l !== dong.name).length}곳을 관할하는 읍·면이며, NEIS 학교기본정보 기준 ${levelCounts(list)}이 주소상 이곳에 있습니다.`
+      : `${cityName} ${dong.name}은 법정동 ${dong.legalDongs.join("·")}에 걸친 행정동이며, NEIS 학교기본정보 기준 ${levelCounts(list)}이 주소상 이 동에 있습니다.`,
     notes,
     sources: [...planSources, ...sources],
   };

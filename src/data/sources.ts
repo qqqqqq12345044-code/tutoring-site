@@ -139,6 +139,11 @@ const SCHOOLINFO_IDS = {
   계산고등학교: "63144aec-562a-443c-9015-227aba0516d0",
   강화초등학교: "10aaaaf5-7a70-41ef-b973-772c1e1b303e",
   강화고등학교: "0d642df1-7a21-4685-877e-980bef55a0c7",
+  // 2026-10-19 전국 1차 행정동 batch (scripts/official/schoolinfo_plans.py — 검색 결과 NEIS 코드 일치 확인)
+  서울성산초등학교: "ca3de21c-2d96-4a8e-9504-a790f0471cb7",
+  신갈초등학교: "6ebbde1b-2ff0-4c9c-8057-7e1297fd98ff",
+  신갈중학교: "bc090a2c-d228-43cf-99b7-3253f71b6f23",
+  강화중학교: "b31ce45b-b663-469d-9e0a-b2cc0cc320e8",
   세화여자중학교: "51a4217f-09d9-41d7-aa1b-362991a3ab6d",
   서현중학교: "1a1ca19d-bbe1-4d51-b40d-6976ecbbb6e0",
   고양국제고등학교: "1e45b58e-50d8-4b90-9ecc-c3b5baa88c31",

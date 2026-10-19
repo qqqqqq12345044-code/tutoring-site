@@ -489,6 +489,7 @@ export const schools: School[] = [
     level: "초등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "hapjeong-dong", // 법정동 1:1 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "gwangseong-middle-school",
@@ -505,6 +506,7 @@ export const schools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "hapjeong-dong", // 법정동 1:1 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "sungmun-high-school",
@@ -627,6 +629,7 @@ export const schools: School[] = [
     level: "초등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "singal-dong", // 법정동 1:1 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "yongin-middle-school",
@@ -635,6 +638,7 @@ export const schools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "singal-dong", // 법정동 1:1 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "yongin-high-school",
@@ -1061,6 +1065,7 @@ export const schools: School[] = [
     level: "초등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "ganghwa-eup", // 법정동 1:1 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "ganghwa-middle-school",
@@ -1069,6 +1074,7 @@ export const schools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "ganghwa-eup", // 법정동 1:1 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "ganghwa-high-school",
@@ -1077,6 +1083,7 @@ export const schools: School[] = [
     level: "고등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "ganghwa-eup", // 법정동 1:1 → 공식 행정동 (data/official/school-dongs.json)
   },
 
   // 경기 의정부 — 2026-10-16 등록, 70개교(초 34·중 20·고 16; 방송통신중·고, 특수학교 2곳 제외).

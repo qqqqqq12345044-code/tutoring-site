@@ -13,7 +13,9 @@ export const BASELINE = {
   // 2026-10-16: 의정부 파일럿 — 학교 70곳 등록(NEIS, 행정동 매핑) → 의정부 허브 색인(+1 sitemap), 조합 route 27,
   // 학교 70 + 학교×과목 350, 행정동 허브 15 + 행정동×과목 75 (전부 noindex: 콘텐츠 미작성 또는 품질 게이트 RED).
   // 실측: 1697 → 2234, sitemap 211 → 212, noindex 1484 → 2020.
-  totalRoutes: 2234,
+  // 2026-10-19 전국 1차 행정동 batch: 합정동(마포)·신갈동(용인)·강화읍(강화) 허브 3 + 작성된 동×과목 15 = +18 route,
+  // 전부 GREEN·색인(빈 동×과목 route는 만들지 않음 → noindex 증가 0): 2234 → 2252, sitemap 302 → 320.
+  totalRoutes: 2252,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -25,7 +27,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 302,
+  sitemapCount: 320,
   noindexCount: 1930,
   brokenLinks: 0,
 };

@@ -67,6 +67,18 @@ export const dongs: AdminDong[] = [
   { slug: "heungseon-dong", code: "4115061500", name: "흥선동", citySlug: "uijeongbu", legalDongs: ["의정부동", "가능동"], tong: 37, ban: 195 },
   { slug: "nogyang-dong", code: "4115062000", name: "녹양동", citySlug: "uijeongbu", legalDongs: ["녹양동"], tong: 37, ban: 203 },
   { slug: "gosan-dong", code: "4115063000", name: "고산동", citySlug: "uijeongbu", legalDongs: ["고산동", "산곡동"], tong: 38, ban: 165 },
+
+  // 2026-10-19 전국 1차 batch — 등록 학교 2곳 이상이 법정동 1:1로 확정된 행정동만 (docs/qa/national-dong-batch1-2026-10-19.md).
+  // 행정안전부 행정동코드·법정동(리) 구성 그대로(data/official/admin-dongs.json).
+  { slug: "hapjeong-dong", code: "1144068000", name: "합정동", citySlug: "mapo", legalDongs: ["합정동"] },
+  { slug: "singal-dong", code: "4146351000", name: "신갈동", citySlug: "yongin", legalDongs: ["신갈동"] },
+  {
+    slug: "ganghwa-eup",
+    code: "2871025000",
+    name: "강화읍",
+    citySlug: "ganghwa",
+    legalDongs: ["강화읍", "신문리", "관청리", "국화리", "남산리", "갑곳리", "용정리", "옥림리", "월곳리", "대산리"],
+  },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

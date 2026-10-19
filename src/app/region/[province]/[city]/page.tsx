@@ -118,7 +118,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
       {dongs.length > 0 && (
         <section className="container-page pb-14 md:pb-16">
           <RelatedLinks
-            title={`${region.name} 행정동별 과외`}
+            title={`${region.name} ${dongs.some((d) => /(읍|면)$/.test(d.name)) ? "읍·면·동" : "행정동"}별 과외`}
             links={dongs.map((d) => ({ label: `${d.name} 과외`, href: `/region/${parent.slug}/${region.slug}/${d.slug}` }))}
           />
         </section>
