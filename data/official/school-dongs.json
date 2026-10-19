@@ -9,32 +9,26 @@
   {
    "schoolSlug": "yeongtong-elementary-school",
    "schoolName": "영통초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7541102",
    "roadAddress": "경기 수원시 영통구 영통로 328",
    "sigungu": "수원시 영통구",
    "legalDong": "영통동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "영통1동",
-    "영통2동",
-    "영통3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4111758500",
+   "dongName": "영통3동"
   },
   {
    "schoolSlug": "yeongtong-middle-school",
    "schoolName": "영통중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7541037",
    "roadAddress": "경기도 수원시 영통구 영통로 316",
    "sigungu": "수원시 영통구",
    "legalDong": "영통동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "영통1동",
-    "영통2동",
-    "영통3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4111758500",
+   "dongName": "영통3동"
   },
   {
    "schoolSlug": "suwon-high-school",
@@ -63,25 +57,26 @@
   {
    "schoolSlug": "suseong-elementary-school",
    "schoolName": "수성초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7541090",
    "roadAddress": "경기도 수원시 장안구 금당로 19",
    "sigungu": "수원시 장안구",
    "legalDong": "조원동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "조원1동",
-    "조원2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4111159700",
+   "dongName": "조원1동"
   },
   {
    "schoolSlug": "seryu-elementary-school",
    "schoolName": "세류초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7541085",
    "roadAddress": "경기도 수원시 권선구 세류로 78",
    "sigungu": "수원시 권선구",
-   "reason": "NEIS 상세주소에 법정동 없음 ((세류초등학교))"
+   "legalDong": "세류동",
+   "method": "juso-api",
+   "dongCode": "4111352000",
+   "dongName": "세류1동"
   },
   {
    "schoolSlug": "maehyang-middle-school",
@@ -110,17 +105,14 @@
   {
    "schoolSlug": "hwahong-middle-school",
    "schoolName": "화홍중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7541047",
    "roadAddress": "경기도 수원시 권선구 덕영대로1323번길 25-11",
    "sigungu": "수원시 권선구",
    "legalDong": "권선동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "권선1동",
-    "권선2동",
-    "곡선동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4111369000",
+   "dongName": "곡선동"
   },
   {
    "schoolSlug": "suwon-yeoja-high-school",
@@ -137,621 +129,482 @@
   {
    "schoolSlug": "yeongsaeng-high-school",
    "schoolName": "영생고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530195",
    "roadAddress": "경기도 수원시 장안구 서부로2198번길 22",
    "sigungu": "수원시 장안구",
    "legalDong": "천천동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "율천동",
-    "정자3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4111157300",
+   "dongName": "정자3동"
   },
   {
    "schoolSlug": "gwonseon-high-school",
    "schoolName": "권선고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530057",
    "roadAddress": "경기도 수원시 권선구 세권로 276",
    "sigungu": "수원시 권선구",
    "legalDong": "권선동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "권선1동",
-    "권선2동",
-    "곡선동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4111368000",
+   "dongName": "권선2동"
   },
   {
    "schoolSlug": "gangnam-elementary-school",
    "schoolName": "서울개원초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091369",
    "roadAddress": "서울특별시 강남구 선릉로 29",
    "sigungu": "강남구",
    "legalDong": "개포동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "개포1동",
-    "개포2동",
-    "개포3동",
-    "개포4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168066000",
+   "dongName": "개포1동"
   },
   {
    "schoolSlug": "gangnam-middle-school",
    "schoolName": "대치중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091427",
    "roadAddress": "서울특별시 강남구 남부순환로378길 39",
    "sigungu": "강남구",
    "legalDong": "도곡동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "도곡1동",
-    "도곡2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168065600",
+   "dongName": "도곡2동"
   },
   {
    "schoolSlug": "gangnam-high-school",
    "schoolName": "개포고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010058",
    "roadAddress": "서울특별시 강남구 개포로 402",
    "sigungu": "강남구",
    "legalDong": "개포동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "개포1동",
-    "개포2동",
-    "개포3동",
-    "개포4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168067000",
+   "dongName": "개포2동"
   },
   {
    "schoolSlug": "daechi-elementary-school",
    "schoolName": "서울대치초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091380",
    "roadAddress": "서울특별시 강남구 양재천로 363",
    "sigungu": "강남구",
    "legalDong": "대치동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "대치1동",
-    "대치2동",
-    "대치4동",
-    "개포3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168060000",
+   "dongName": "대치1동"
   },
   {
    "schoolSlug": "dogok-elementary-school",
    "schoolName": "서울도곡초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091382",
    "roadAddress": "서울특별시 강남구 선릉로64길 33",
    "sigungu": "강남구",
    "legalDong": "대치동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "대치1동",
-    "대치2동",
-    "대치4동",
-    "개포3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168063000",
+   "dongName": "대치4동"
   },
   {
    "schoolSlug": "yeoksam-middle-school",
    "schoolName": "역삼중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091444",
    "roadAddress": "서울특별시 강남구 도곡로43길 10",
    "sigungu": "강남구",
    "legalDong": "역삼동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "역삼1동",
-    "역삼2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168065000",
+   "dongName": "역삼2동"
   },
   {
    "schoolSlug": "apgujeong-middle-school",
    "schoolName": "압구정중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091440",
    "roadAddress": "서울특별시 강남구 압구정로 225",
    "sigungu": "강남구",
    "legalDong": "압구정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신사동",
-    "압구정동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168054500",
+   "dongName": "압구정동"
   },
   {
    "schoolSlug": "jungdong-high-school",
    "schoolName": "중동고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010238",
    "roadAddress": "서울특별시 강남구 일원로 7",
    "sigungu": "강남구",
    "legalDong": "일원동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "개포2동",
-    "개포3동",
-    "일원본동",
-    "일원1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168073000",
+   "dongName": "일원1동"
   },
   {
    "schoolSlug": "hyundai-high-school",
    "schoolName": "현대고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010260",
    "roadAddress": "서울특별시 강남구 압구정로 127",
    "sigungu": "강남구",
    "legalDong": "압구정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신사동",
-    "압구정동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1168051000",
+   "dongName": "신사동"
   },
   {
    "schoolSlug": "seocho-elementary-school",
    "schoolName": "서울서초초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091396",
    "roadAddress": "서울특별시 서초구 서운로 178",
    "sigungu": "서초구",
    "legalDong": "서초동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "서초1동",
-    "서초2동",
-    "서초3동",
-    "서초4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1165053100",
+   "dongName": "서초4동"
   },
   {
    "schoolSlug": "seocho-middle-school",
    "schoolName": "세화여자중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091452",
    "roadAddress": "서울특별시 서초구 신반포로 56-7",
    "sigungu": "서초구",
    "legalDong": "반포동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "반포본동",
-    "반포1동",
-    "반포2동",
-    "반포4동"
-   ]
+   "method": "site-verified",
+   "dongName": "반포본동",
+   "dongCode": "1165055000"
   },
   {
    "schoolSlug": "seocho-high-school",
    "schoolName": "세화고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010197",
    "roadAddress": "서울특별시 서초구 신반포로 56-7",
    "sigungu": "서초구",
    "legalDong": "반포동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "반포본동",
-    "반포1동",
-    "반포2동",
-    "반포4동"
-   ]
+   "method": "site-verified",
+   "dongName": "반포본동",
+   "dongCode": "1165055000"
   },
   {
    "schoolSlug": "banpo-elementary-school",
    "schoolName": "서울반포초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091386",
    "roadAddress": "서울특별시 서초구 신반포로 55-4",
    "sigungu": "서초구",
    "legalDong": "반포동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "반포본동",
-    "반포1동",
-    "반포2동",
-    "반포4동"
-   ]
+   "method": "site-verified",
+   "dongName": "반포본동",
+   "dongCode": "1165055000"
   },
   {
    "schoolSlug": "jamwon-elementary-school",
    "schoolName": "서울잠원초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091415",
    "roadAddress": "서울특별시 서초구 신반포로16길 15-25",
    "sigungu": "서초구",
    "legalDong": "반포동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "반포본동",
-    "반포1동",
-    "반포2동",
-    "반포4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1165057000",
+   "dongName": "반포2동"
   },
   {
    "schoolSlug": "banpo-middle-school",
    "schoolName": "반포중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091429",
    "roadAddress": "서울특별시 서초구 신반포로 67",
    "sigungu": "서초구",
    "legalDong": "반포동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "반포본동",
-    "반포1동",
-    "반포2동",
-    "반포4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1165055000",
+   "dongName": "반포본동"
   },
   {
    "schoolSlug": "eonnam-middle-school",
    "schoolName": "언남중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7091441",
    "roadAddress": "서울특별시 서초구 동산로 55",
    "sigungu": "서초구",
    "legalDong": "양재동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "양재1동",
-    "양재2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1165065200",
+   "dongName": "양재2동"
   },
   {
    "schoolSlug": "sangmun-high-school",
    "schoolName": "상문고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010179",
    "roadAddress": "서울특별시 서초구 명달로 45",
    "sigungu": "서초구",
    "legalDong": "방배동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "서초3동",
-    "방배본동",
-    "방배1동",
-    "방배2동",
-    "방배3동",
-    "방배4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1165053000",
+   "dongName": "서초3동"
   },
   {
    "schoolSlug": "yangjae-high-school",
    "schoolName": "양재고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010094",
    "roadAddress": "서울특별시 서초구 남부순환로346길 9",
    "sigungu": "서초구",
    "legalDong": "서초동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "서초1동",
-    "서초2동",
-    "서초3동",
-    "서초4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1165052000",
+   "dongName": "서초2동"
   },
   {
    "schoolSlug": "songpa-elementary-school",
    "schoolName": "서울송파초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7130140",
    "roadAddress": "서울특별시 송파구 백제고분로 400",
    "sigungu": "송파구",
    "legalDong": "송파동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "송파1동",
-    "송파2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1171058000",
+   "dongName": "송파1동"
   },
   {
    "schoolSlug": "songpa-middle-school",
    "schoolName": "가락중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7130165",
    "roadAddress": "서울특별시 송파구 송이로 45",
    "sigungu": "송파구",
    "legalDong": "송파동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "송파1동",
-    "송파2동"
-   ]
+   "method": "site-verified",
+   "dongName": "송파2동",
+   "dongCode": "1171059000"
   },
   {
    "schoolSlug": "songpa-high-school",
    "schoolName": "가락고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010057",
    "roadAddress": "서울특별시 송파구 송이로 42",
    "sigungu": "송파구",
    "legalDong": "송파동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "송파1동",
-    "송파2동"
-   ]
+   "method": "site-verified",
+   "dongName": "송파2동",
+   "dongCode": "1171059000"
   },
   {
    "schoolSlug": "jamsil-elementary-school",
    "schoolName": "서울잠실초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7130152",
    "roadAddress": "서울특별시 송파구 올림픽로35길 20",
    "sigungu": "송파구",
    "legalDong": "신천동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "잠실4동",
-    "잠실6동"
-   ]
+   "method": "site-verified",
+   "dongName": "잠실4동",
+   "dongCode": "1171069000"
   },
   {
    "schoolSlug": "munjeong-elementary-school",
    "schoolName": "서울문정초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7130125",
    "roadAddress": "서울특별시 송파구 문정로5길 20",
    "sigungu": "송파구",
    "legalDong": "문정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "문정1동",
-    "문정2동",
-    "장지동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1171064100",
+   "dongName": "문정1동"
   },
   {
    "schoolSlug": "jamsil-middle-school",
    "schoolName": "잠실중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7130202",
    "roadAddress": "서울특별시 송파구 올림픽로35길 130",
    "sigungu": "송파구",
    "legalDong": "신천동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "잠실4동",
-    "잠실6동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1171071000",
+   "dongName": "잠실6동"
   },
   {
    "schoolSlug": "munjeong-middle-school",
    "schoolName": "문정중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7130176",
    "roadAddress": "서울특별시 송파구 문정로 73",
    "sigungu": "송파구",
    "legalDong": "문정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "문정1동",
-    "문정2동",
-    "장지동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1171064100",
+   "dongName": "문정1동"
   },
   {
    "schoolSlug": "jamsil-high-school",
    "schoolName": "잠실고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010107",
    "roadAddress": "서울특별시 송파구 올림픽로33길 71",
    "sigungu": "송파구",
    "legalDong": "신천동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "잠실4동",
-    "잠실6동"
-   ]
+   "method": "site-verified",
+   "dongName": "잠실4동",
+   "dongCode": "1171069000"
   },
   {
    "schoolSlug": "munjeong-high-school",
    "schoolName": "문정고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010701",
    "roadAddress": "서울특별시 송파구 송이로34길 62",
    "sigungu": "송파구",
    "legalDong": "문정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "문정1동",
-    "문정2동",
-    "장지동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1171064600",
+   "dongName": "장지동"
   },
   {
    "schoolSlug": "yangcheon-middle-school",
    "schoolName": "목동중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7081491",
    "roadAddress": "서울특별시 양천구 목동동로 172",
    "sigungu": "양천구",
    "legalDong": "신정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신정1동",
-    "신정2동",
-    "신정3동",
-    "신정4동",
-    "신정6동",
-    "신정7동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147063000",
+   "dongName": "신정2동"
   },
   {
    "schoolSlug": "yangcheon-high-school",
    "schoolName": "양천고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010209",
    "roadAddress": "서울특별시 양천구 신정로14길 13",
    "sigungu": "양천구",
    "legalDong": "신정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신정1동",
-    "신정2동",
-    "신정3동",
-    "신정4동",
-    "신정6동",
-    "신정7동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147064000",
+   "dongName": "신정3동"
   },
   {
    "schoolSlug": "mokdong-elementary-school",
    "schoolName": "서울목동초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7081438",
    "roadAddress": "서울특별시 양천구 목동동로12길 12",
    "sigungu": "양천구",
    "legalDong": "신정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신정1동",
-    "신정2동",
-    "신정3동",
-    "신정4동",
-    "신정6동",
-    "신정7동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147063000",
+   "dongName": "신정2동"
   },
   {
    "schoolSlug": "sinmok-elementary-school",
    "schoolName": "서울신목초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7081453",
    "roadAddress": "서울특별시 양천구 신목로5길 11-6",
    "sigungu": "양천구",
    "legalDong": "신정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신정1동",
-    "신정2동",
-    "신정3동",
-    "신정4동",
-    "신정6동",
-    "신정7동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147063000",
+   "dongName": "신정2동"
   },
   {
    "schoolSlug": "sinmok-middle-school",
    "schoolName": "신목중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7081502",
    "roadAddress": "서울특별시 양천구 목동중앙로 88",
    "sigungu": "양천구",
    "legalDong": "목동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "목1동",
-    "목2동",
-    "목3동",
-    "목4동",
-    "목5동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147055000",
+   "dongName": "목5동"
   },
   {
    "schoolSlug": "sinseo-middle-school",
    "schoolName": "신서중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7081503",
    "roadAddress": "서울특별시 양천구 중앙로 206",
    "sigungu": "양천구",
    "legalDong": "신정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신정1동",
-    "신정2동",
-    "신정3동",
-    "신정4동",
-    "신정6동",
-    "신정7동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147062000",
+   "dongName": "신정1동"
   },
   {
    "schoolSlug": "sinmok-high-school",
    "schoolName": "신목고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010093",
    "roadAddress": "서울특별시 양천구 안양천로 739",
    "sigungu": "양천구",
    "legalDong": "신정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신정1동",
-    "신정2동",
-    "신정3동",
-    "신정4동",
-    "신정6동",
-    "신정7동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147067000",
+   "dongName": "신정6동"
   },
   {
    "schoolSlug": "sinseo-high-school",
    "schoolName": "신서고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010765",
    "roadAddress": "서울특별시 양천구 은행정로 42",
    "sigungu": "양천구",
    "legalDong": "신정동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "신정1동",
-    "신정2동",
-    "신정3동",
-    "신정4동",
-    "신정6동",
-    "신정7동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1147065000",
+   "dongName": "신정4동"
   },
   {
    "schoolSlug": "mapo-elementary-school",
    "schoolName": "서울공덕초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7031114",
    "roadAddress": "서울특별시 마포구 만리재옛길 13",
    "sigungu": "마포구",
    "legalDong": "공덕동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "아현동",
-    "공덕동",
-    "염리동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1144056500",
+   "dongName": "공덕동"
   },
   {
    "schoolSlug": "mapo-middle-school",
    "schoolName": "마포중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7081518",
    "roadAddress": "서울특별시 강서구 화곡로 403",
    "sigungu": "강서구",
-   "reason": "NEIS 상세주소에 법정동 없음 (, 마포중학교 (전화 02-3663-2587))"
+   "legalDong": "등촌동",
+   "method": "juso-api",
+   "dongCode": "1150053500",
+   "dongName": "등촌제3동"
   },
   {
    "schoolSlug": "ahyeon-elementary-school",
    "schoolName": "서울아현초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7031145",
    "roadAddress": "서울특별시 마포구 굴레방로 6",
    "sigungu": "마포구",
    "legalDong": "아현동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "아현동",
-    "공덕동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1144055500",
+   "dongName": "아현동"
   },
   {
    "schoolSlug": "seongsan-elementary-school",
@@ -761,23 +614,21 @@
    "roadAddress": "서울특별시 마포구 양화로3길 94",
    "sigungu": "마포구",
    "legalDong": "합정동",
-   "method": "legal-dong-unique",
-   "dongCode": "1144068000",
-   "dongName": "합정동"
+   "method": "site-verified",
+   "dongName": "합정동",
+   "dongCode": "1144068000"
   },
   {
    "schoolSlug": "gwangseong-middle-school",
    "schoolName": "광성중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7031180",
    "roadAddress": "서울 마포구 신수로8길 20",
    "sigungu": "마포구",
    "legalDong": "신수동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "대흥동",
-    "신수동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1144063000",
+   "dongName": "신수동"
   },
   {
    "schoolSlug": "seongsan-middle-school",
@@ -787,158 +638,129 @@
    "roadAddress": "서울특별시 마포구 성지1길 32-13",
    "sigungu": "마포구",
    "legalDong": "합정동",
-   "method": "legal-dong-unique",
-   "dongCode": "1144068000",
-   "dongName": "합정동"
+   "method": "site-verified",
+   "dongName": "합정동",
+   "dongCode": "1144068000"
   },
   {
    "schoolSlug": "sungmun-high-school",
    "schoolName": "숭문고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010202",
    "roadAddress": "서울특별시 마포구 숭문길 99",
    "sigungu": "마포구",
    "legalDong": "대흥동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "용강동",
-    "대흥동",
-    "신수동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1144060000",
+   "dongName": "대흥동"
   },
   {
    "schoolSlug": "gwangseong-high-school",
    "schoolName": "광성고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010132",
    "roadAddress": "서울특별시 마포구 신수로8길 20",
    "sigungu": "마포구",
    "legalDong": "신수동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "대흥동",
-    "신수동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1144063000",
+   "dongName": "신수동"
   },
   {
    "schoolSlug": "yangcheon-elementary-school",
    "schoolName": "서울양천초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7081463",
    "roadAddress": "서울특별시 강서구 양천로 329",
    "sigungu": "강서구",
    "legalDong": "가양동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "염창동",
-    "가양제1동",
-    "가양제2동",
-    "가양제3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1150060300",
+   "dongName": "가양제1동"
   },
   {
    "schoolSlug": "mapo-high-school",
    "schoolName": "마포고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7010157",
    "roadAddress": "서울특별시 강서구 화곡로 403",
    "sigungu": "강서구",
    "legalDong": "등촌동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "등촌제1동",
-    "등촌제2동",
-    "등촌제3동",
-    "가양제1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "1150053500",
+   "dongName": "등촌제3동"
   },
   {
    "schoolSlug": "seongnam-elementary-school",
    "schoolName": "서현초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7551071",
    "roadAddress": "경기도 성남시 분당구 중앙공원로39번길 12",
    "sigungu": "성남시 분당구",
    "legalDong": "서현동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "서현1동",
-    "서현2동",
-    "이매2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113558000",
+   "dongName": "서현1동"
   },
   {
    "schoolSlug": "seongnam-middle-school",
    "schoolName": "서현중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7551020",
    "roadAddress": "경기도 성남시 분당구 중앙공원로 54-1",
    "sigungu": "성남시 분당구",
    "legalDong": "서현동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "서현1동",
-    "서현2동",
-    "이매2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113558000",
+   "dongName": "서현1동"
   },
   {
    "schoolSlug": "seongnam-high-school",
    "schoolName": "성남외국어고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530762",
    "roadAddress": "경기도 성남시 분당구 대왕판교로385번길 28",
    "sigungu": "성남시 분당구",
    "legalDong": "백현동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "이매2동",
-    "판교동",
-    "백현동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113565000",
+   "dongName": "판교동"
   },
   {
    "schoolSlug": "imae-elementary-school",
    "schoolName": "이매초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7551092",
    "roadAddress": "경기도 성남시 분당구 양현로 146",
    "sigungu": "성남시 분당구",
    "legalDong": "이매동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "이매1동",
-    "이매2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113560000",
+   "dongName": "이매1동"
   },
   {
    "schoolSlug": "sunae-elementary-school",
    "schoolName": "수내초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7551085",
    "roadAddress": "경기도 성남시 분당구 백현로243번길 12",
    "sigungu": "성남시 분당구",
    "legalDong": "수내동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "수내1동",
-    "수내2동",
-    "수내3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113554000",
+   "dongName": "수내3동"
   },
   {
    "schoolSlug": "imae-middle-school",
    "schoolName": "이매중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7551032",
    "roadAddress": "경기 성남시 분당구 양현로 194",
    "sigungu": "성남시 분당구",
    "legalDong": "이매동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "이매1동",
-    "이매2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113560000",
+   "dongName": "이매1동"
   },
   {
    "schoolSlug": "pangyo-middle-school",
@@ -955,33 +777,26 @@
   {
    "schoolSlug": "bundang-high-school",
    "schoolName": "분당고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530075",
    "roadAddress": "경기도 성남시 분당구 내정로165번길 31",
    "sigungu": "성남시 분당구",
    "legalDong": "수내동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "수내1동",
-    "수내2동",
-    "수내3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113552000",
+   "dongName": "수내1동"
   },
   {
    "schoolSlug": "yatap-high-school",
    "schoolName": "야탑고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530548",
    "roadAddress": "경기도 성남시 분당구 판교로 738",
    "sigungu": "성남시 분당구",
    "legalDong": "야탑동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "이매2동",
-    "야탑1동",
-    "야탑2동",
-    "야탑3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4113564000",
+   "dongName": "야탑3동"
   },
   {
    "schoolSlug": "yongin-elementary-school",
@@ -991,9 +806,9 @@
    "roadAddress": "경기도 용인시 기흥구 신갈로 76",
    "sigungu": "용인시 기흥구",
    "legalDong": "신갈동",
-   "method": "legal-dong-unique",
-   "dongCode": "4146351000",
-   "dongName": "신갈동"
+   "method": "site-verified",
+   "dongName": "신갈동",
+   "dongCode": "4146351000"
   },
   {
    "schoolSlug": "yongin-middle-school",
@@ -1003,9 +818,9 @@
    "roadAddress": "경기도 용인시 기흥구 용구대로2152번길 23",
    "sigungu": "용인시 기흥구",
    "legalDong": "신갈동",
-   "method": "legal-dong-unique",
-   "dongCode": "4146351000",
-   "dongName": "신갈동"
+   "method": "site-verified",
+   "dongName": "신갈동",
+   "dongCode": "4146351000"
   },
   {
    "schoolSlug": "yongin-high-school",
@@ -1022,117 +837,98 @@
   {
    "schoolSlug": "jukjeon-elementary-school",
    "schoolName": "죽전초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7751115",
    "roadAddress": "경기도 용인시 수지구 용구대로2772번길 15",
    "sigungu": "용인시 수지구",
    "legalDong": "죽전동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "죽전1동",
-    "죽전2동",
-    "죽전3동"
-   ]
+   "method": "site-verified",
+   "dongName": "죽전2동",
+   "dongCode": "4146555000"
   },
   {
    "schoolSlug": "suji-elementary-school",
    "schoolName": "수지초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7751096",
    "roadAddress": "경기도 용인시 수지구 정평로13번길 30",
    "sigungu": "용인시 수지구",
    "legalDong": "풍덕천동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "풍덕천1동",
-    "풍덕천2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4146552000",
+   "dongName": "풍덕천2동"
   },
   {
    "schoolSlug": "jukjeon-middle-school",
    "schoolName": "죽전중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7751040",
    "roadAddress": "경기도 용인시 수지구 용구대로2771번길 15",
    "sigungu": "용인시 수지구",
    "legalDong": "죽전동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "죽전1동",
-    "죽전2동",
-    "죽전3동"
-   ]
+   "method": "site-verified",
+   "dongName": "죽전2동",
+   "dongCode": "4146555000"
   },
   {
    "schoolSlug": "suji-middle-school",
    "schoolName": "수지중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7751032",
    "roadAddress": "경기도 용인시 수지구 수풍로 102",
    "sigungu": "용인시 수지구",
    "legalDong": "풍덕천동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "풍덕천1동",
-    "풍덕천2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4146551000",
+   "dongName": "풍덕천1동"
   },
   {
    "schoolSlug": "jukjeon-high-school",
    "schoolName": "죽전고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530525",
    "roadAddress": "경기도 용인시 수지구 용구대로2771번길 23",
    "sigungu": "용인시 수지구",
    "legalDong": "죽전동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "죽전1동",
-    "죽전2동",
-    "죽전3동"
-   ]
+   "method": "site-verified",
+   "dongName": "죽전2동",
+   "dongCode": "4146555000"
   },
   {
    "schoolSlug": "suji-high-school",
    "schoolName": "수지고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530093",
    "roadAddress": "경기도 용인시 수지구 수풍로 73",
    "sigungu": "용인시 수지구",
    "legalDong": "풍덕천동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "풍덕천1동",
-    "풍덕천2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4146551000",
+   "dongName": "풍덕천1동"
   },
   {
    "schoolSlug": "goyang-elementary-school",
    "schoolName": "백마초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7621063",
    "roadAddress": "경기도 고양시 일산동구 일산로 230",
    "sigungu": "고양시 일산동구",
    "legalDong": "마두동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "마두1동",
-    "마두2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128556000",
+   "dongName": "마두1동"
   },
   {
    "schoolSlug": "goyang-middle-school",
    "schoolName": "백마중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7621020",
    "roadAddress": "경기도 고양시 일산동구 강촌로 189",
    "sigungu": "고양시 일산동구",
    "legalDong": "마두동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "마두1동",
-    "마두2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128556000",
+   "dongName": "마두1동"
   },
   {
    "schoolSlug": "goyang-high-school",
@@ -1149,249 +945,182 @@
   {
    "schoolSlug": "juyeop-elementary-school",
    "schoolName": "주엽초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7621091",
    "roadAddress": "경기도 고양시 일산서구 강선로 29",
    "sigungu": "고양시 일산서구",
    "legalDong": "주엽동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "주엽1동",
-    "주엽2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128755000",
+   "dongName": "주엽1동"
   },
   {
    "schoolSlug": "haengsin-elementary-school",
    "schoolName": "행신초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7621099",
    "roadAddress": "경기도 고양시 덕양구 중앙로 527",
    "sigungu": "고양시 덕양구",
    "legalDong": "행신동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "행신1동",
-    "행신2동",
-    "행신3동",
-    "행신4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128164000",
+   "dongName": "행신1동"
   },
   {
    "schoolSlug": "haengsin-middle-school",
    "schoolName": "행신중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7621036",
    "roadAddress": "경기도 고양시 덕양구 화신로 22",
    "sigungu": "고양시 덕양구",
    "legalDong": "행신동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "행신1동",
-    "행신2동",
-    "행신3동",
-    "행신4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128165000",
+   "dongName": "행신2동"
   },
   {
    "schoolSlug": "ilsan-middle-school",
    "schoolName": "일산중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7621029",
    "roadAddress": "경기도 고양시 일산서구 원일로 53",
    "sigungu": "고양시 일산서구",
    "legalDong": "일산동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "일산1동",
-    "일산2동",
-    "일산3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128751000",
+   "dongName": "일산1동"
   },
   {
    "schoolSlug": "haengsin-high-school",
    "schoolName": "행신고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530135",
    "roadAddress": "경기도 고양시 덕양구 소만로 36",
    "sigungu": "고양시 덕양구",
    "legalDong": "행신동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "행신1동",
-    "행신2동",
-    "행신3동",
-    "행신4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128165000",
+   "dongName": "행신2동"
   },
   {
    "schoolSlug": "ilsan-high-school",
    "schoolName": "일산고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530852",
    "roadAddress": "경기도 고양시 일산서구 원일로 53",
    "sigungu": "고양시 일산서구",
    "legalDong": "일산동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "일산1동",
-    "일산2동",
-    "일산3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4128751000",
+   "dongName": "일산1동"
   },
   {
    "schoolSlug": "anyang-elementary-school",
    "schoolName": "안양초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7569032",
    "roadAddress": "경기도 안양시 만안구 현충로28번길 54",
    "sigungu": "안양시 만안구",
    "legalDong": "안양동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "안양1동",
-    "안양2동",
-    "안양3동",
-    "안양4동",
-    "안양5동",
-    "안양6동",
-    "안양7동",
-    "명학동",
-    "병목안동",
-    "석수1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117155000",
+   "dongName": "안양5동"
   },
   {
    "schoolSlug": "anyang-middle-school",
    "schoolName": "안양중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7569065",
    "roadAddress": "경기도 안양시 만안구 와룡로 53",
    "sigungu": "안양시 만안구",
    "legalDong": "석수동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "석수1동",
-    "석수2동",
-    "충훈동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117161100",
+   "dongName": "충훈동"
   },
   {
    "schoolSlug": "anyang-high-school",
    "schoolName": "안양외국어고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530187",
    "roadAddress": "경기도 안양시 만안구 양화로37번길 36",
    "sigungu": "안양시 만안구",
    "legalDong": "안양동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "안양1동",
-    "안양2동",
-    "안양3동",
-    "안양4동",
-    "안양5동",
-    "안양6동",
-    "안양7동",
-    "명학동",
-    "병목안동",
-    "석수1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117153000",
+   "dongName": "안양3동"
   },
   {
    "schoolSlug": "pyeongchon-elementary-school",
    "schoolName": "평촌초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7569047",
    "roadAddress": "경기도 안양시 동안구 평촌대로180번길 56",
    "sigungu": "안양시 동안구",
    "legalDong": "평촌동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "평촌동",
-    "평안동",
-    "귀인동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117357600",
+   "dongName": "평안동"
   },
   {
    "schoolSlug": "gwanyang-elementary-school",
    "schoolName": "관양초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7569012",
    "roadAddress": "경기도 안양시 동안구 관평로336번길 23",
    "sigungu": "안양시 동안구",
    "legalDong": "관양동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "관양동",
-    "인덕원동",
-    "부림동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117355200",
+   "dongName": "관양동"
   },
   {
    "schoolSlug": "pyeongchon-middle-school",
    "schoolName": "평촌중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7569072",
    "roadAddress": "경기도 안양시 동안구 관평로 127",
    "sigungu": "안양시 동안구",
    "legalDong": "평촌동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "평촌동",
-    "평안동",
-    "귀인동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117357600",
+   "dongName": "평안동"
   },
   {
    "schoolSlug": "hogye-middle-school",
    "schoolName": "호계중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7569073",
    "roadAddress": "경기도 안양시 동안구 경수대로665번길 74-23",
    "sigungu": "안양시 동안구",
    "legalDong": "호계동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "호계1동",
-    "호계2동",
-    "호계3동",
-    "범계동",
-    "신촌동",
-    "갈산동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117359000",
+   "dongName": "호계2동"
   },
   {
    "schoolSlug": "pyeongchon-high-school",
    "schoolName": "평촌고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530131",
    "roadAddress": "경기도 안양시 동안구 동안로 80",
    "sigungu": "안양시 동안구",
    "legalDong": "호계동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "호계1동",
-    "호계2동",
-    "호계3동",
-    "범계동",
-    "신촌동",
-    "갈산동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117361000",
+   "dongName": "범계동"
   },
   {
    "schoolSlug": "gwanyang-high-school",
    "schoolName": "관양고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530553",
    "roadAddress": "경기도 안양시 동안구 일동로 115",
    "sigungu": "안양시 동안구",
    "legalDong": "관양동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "관양동",
-    "인덕원동",
-    "부림동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4117355200",
+   "dongName": "관양동"
   },
   {
    "schoolSlug": "bucheon-elementary-school",
@@ -1408,134 +1137,110 @@
   {
    "schoolSlug": "bucheon-middle-school",
    "schoolName": "부천중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7581026",
    "roadAddress": "경기도 부천시 심중로75번길 64",
    "sigungu": "부천시 원미구|부천시 소사구|부천시 오정구",
    "legalDong": "중동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "약대동",
-    "중동",
-    "중1동",
-    "중2동",
-    "중3동",
-    "중4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4119262000",
+   "dongName": "중동"
   },
   {
    "schoolSlug": "bucheon-high-school",
    "schoolName": "부천고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530071",
    "roadAddress": "경기도 부천시 경인로92번길 70",
    "sigungu": "부천시 원미구|부천시 소사구|부천시 오정구",
    "legalDong": "송내동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "송내1동",
-    "송내2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4119460000",
+   "dongName": "송내2동"
   },
   {
    "schoolSlug": "sangdong-elementary-school",
    "schoolName": "상동초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7581077",
    "roadAddress": "경기도 부천시 부흥로 70",
    "sigungu": "부천시 원미구|부천시 소사구|부천시 오정구",
    "legalDong": "상동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "중동",
-    "상동",
-    "상1동",
-    "상2동",
-    "상3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4119268000",
+   "dongName": "상1동"
   },
   {
    "schoolSlug": "sosa-elementary-school",
    "schoolName": "소사초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7581084",
    "roadAddress": "경기도 부천시 은성로 58",
    "sigungu": "부천시 원미구|부천시 소사구|부천시 오정구",
    "legalDong": "소사본동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "소사본동",
-    "소사본1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4119454000",
+   "dongName": "소사본1동"
   },
   {
    "schoolSlug": "sangdong-middle-school",
    "schoolName": "상동중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7581028",
    "roadAddress": "경기도 부천시 부흥로 19",
    "sigungu": "부천시 원미구|부천시 소사구|부천시 오정구",
    "legalDong": "상동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "중동",
-    "상동",
-    "상1동",
-    "상2동",
-    "상3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4119269000",
+   "dongName": "상2동"
   },
   {
    "schoolSlug": "sosa-middle-school",
    "schoolName": "소사중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7581033",
    "roadAddress": "경기도 부천시 소사로102번길 80",
    "sigungu": "부천시 원미구|부천시 소사구|부천시 오정구",
    "legalDong": "소사본동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "소사본동",
-    "소사본1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4119454000",
+   "dongName": "소사본1동"
   },
   {
    "schoolSlug": "sangdong-high-school",
    "schoolName": "상동고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530577",
    "roadAddress": "경기도 부천시 원미구 상이로 22",
    "sigungu": "부천시 원미구",
-   "reason": "NEIS 상세주소에 법정동 없음 (상동고등학교)"
+   "legalDong": "상동",
+   "method": "juso-api",
+   "dongCode": "4119269000",
+   "dongName": "상2동"
   },
   {
    "schoolSlug": "sosa-high-school",
    "schoolName": "소사고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7530087",
    "roadAddress": "경기도 부천시 소사로78번길 22",
    "sigungu": "부천시 원미구|부천시 소사구|부천시 오정구",
    "legalDong": "소사본동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "소사본동",
-    "소사본1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "4119454000",
+   "dongName": "소사본1동"
   },
   {
    "schoolSlug": "michuhol-elementary-school",
    "schoolName": "인천숭의초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7321035",
    "roadAddress": "인천광역시 미추홀구 장천로 99",
    "sigungu": "미추홀구",
    "legalDong": "숭의동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "숭의2동",
-    "숭의1.3동",
-    "숭의4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2817753000",
+   "dongName": "숭의4동"
   },
   {
    "schoolSlug": "michuhol-middle-school",
@@ -1552,205 +1257,158 @@
   {
    "schoolSlug": "michuhol-high-school",
    "schoolName": "인천고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7310057",
    "roadAddress": "인천광역시 미추홀구 경원대로 804",
    "sigungu": "미추홀구",
    "legalDong": "주안동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "주안1동",
-    "주안2동",
-    "주안3동",
-    "주안4동",
-    "주안5동",
-    "주안6동",
-    "주안7동",
-    "주안8동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2817765000",
+   "dongName": "주안4동"
   },
   {
    "schoolSlug": "yeonsu-elementary-school",
    "schoolName": "인천송도초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7341042",
    "roadAddress": "인천광역시 연수구 비류대로214번길 21",
    "sigungu": "연수구",
    "legalDong": "옥련동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "옥련1동",
-    "옥련2동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2818563000",
+   "dongName": "옥련1동"
   },
   {
    "schoolSlug": "yeonsu-middle-school",
    "schoolName": "연수중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7341084",
    "roadAddress": "인천광역시 연수구 원인재로 231",
    "sigungu": "연수구",
    "legalDong": "연수동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "연수1동",
-    "연수2동",
-    "연수3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2818576300",
+   "dongName": "연수3동"
   },
   {
    "schoolSlug": "yeonsu-high-school",
    "schoolName": "연수고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7310053",
    "roadAddress": "인천광역시 연수구 원인재로 145",
    "sigungu": "연수구",
    "legalDong": "연수동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "연수1동",
-    "연수2동",
-    "연수3동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2818576200",
+   "dongName": "연수2동"
   },
   {
    "schoolSlug": "namdong-elementary-school",
    "schoolName": "인천구월초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7341016",
    "roadAddress": "인천광역시 남동구 인주대로 721번길 49",
    "sigungu": "남동구",
    "legalDong": "구월동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "구월1동",
-    "구월2동",
-    "구월3동",
-    "구월4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2820051000",
+   "dongName": "구월1동"
   },
   {
    "schoolSlug": "namdong-middle-school",
    "schoolName": "구월중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7341068",
    "roadAddress": "인천광역시 남동구 남동대로 814",
    "sigungu": "남동구",
    "legalDong": "구월동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "구월1동",
-    "구월2동",
-    "구월3동",
-    "구월4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2820052000",
+   "dongName": "구월2동"
   },
   {
    "schoolSlug": "namdong-high-school",
    "schoolName": "인천남동고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7310339",
    "roadAddress": "인천광역시 남동구 은봉로 283",
    "sigungu": "남동구",
    "legalDong": "논현동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "논현1동",
-    "논현2동",
-    "논현고잔동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2820070000",
+   "dongName": "논현2동"
   },
   {
    "schoolSlug": "bupyeong-elementary-school",
    "schoolName": "인천갈산초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7331011",
    "roadAddress": "인천광역시 부평구 갈월동로 55",
    "sigungu": "부평구",
    "legalDong": "갈산동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "갈산1동",
-    "갈산2동",
-    "삼산1동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2823764200",
+   "dongName": "갈산2동"
   },
   {
    "schoolSlug": "bupyeong-middle-school",
    "schoolName": "부평중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7331065",
    "roadAddress": "인천광역시 부평구 부흥북로57번길 10",
    "sigungu": "부평구",
-   "reason": "NEIS 상세주소에 법정동 없음 (인천 부평구 부흥북로57번길 10 부평중학교)"
+   "method": "site-verified",
+   "dongName": "부평4동",
+   "dongCode": "2823754000",
+   "reason": "NEIS에 법정동 없음 — 기존 주소정보누리집 확인값"
   },
   {
    "schoolSlug": "bupyeong-high-school",
    "schoolName": "부평고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7310048",
    "roadAddress": "인천광역시 부평구 부흥북로 43",
    "sigungu": "부평구",
    "legalDong": "부평동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "부평1동",
-    "부평2동",
-    "부평3동",
-    "부평4동",
-    "부평5동",
-    "부평6동",
-    "산곡3동",
-    "부개1동"
-   ]
+   "method": "site-verified",
+   "dongName": "부평4동",
+   "dongCode": "2823754000"
   },
   {
    "schoolSlug": "gyeyang-elementary-school",
    "schoolName": "인천계산초등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7331185",
    "roadAddress": "인천광역시 계양구 경명대로 1005",
    "sigungu": "계양구",
    "legalDong": "계산동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "계산1동",
-    "계산2동",
-    "계산3동",
-    "계산4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2824561200",
+   "dongName": "계산2동"
   },
   {
    "schoolSlug": "gyeyang-middle-school",
    "schoolName": "계산중학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7331212",
    "roadAddress": "인천광역시 계양구 도두리로 67-16",
    "sigungu": "계양구",
    "legalDong": "계산동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "계산1동",
-    "계산2동",
-    "계산3동",
-    "계산4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2824561400",
+   "dongName": "계산4동"
   },
   {
    "schoolSlug": "gyeyang-high-school",
    "schoolName": "계산고등학교",
-   "status": "pending",
+   "status": "resolved",
    "neisCode": "7310037",
    "roadAddress": "인천광역시 계양구 주부토로 588",
    "sigungu": "계양구",
    "legalDong": "계산동",
-   "reason": "법정동이 여러 행정동에 걸침 (JUSO_CONFM_KEY 필요)",
-   "candidates": [
-    "계산1동",
-    "계산2동",
-    "계산3동",
-    "계산4동"
-   ]
+   "method": "juso-api",
+   "dongCode": "2824561200",
+   "dongName": "계산2동"
   },
   {
    "schoolSlug": "ganghwa-elementary-school",
@@ -1760,9 +1418,9 @@
    "roadAddress": "인천광역시 강화군 강화읍 북문길 36",
    "sigungu": "강화군",
    "legalDong": "강화읍",
-   "method": "legal-dong-unique",
-   "dongCode": "2871025000",
-   "dongName": "강화읍"
+   "method": "site-verified",
+   "dongName": "강화읍",
+   "dongCode": "2871025000"
   },
   {
    "schoolSlug": "ganghwa-middle-school",
@@ -1772,9 +1430,9 @@
    "roadAddress": "인천광역시 강화군 강화읍 동문로 53",
    "sigungu": "강화군",
    "legalDong": "강화읍",
-   "method": "legal-dong-unique",
-   "dongCode": "2871025000",
-   "dongName": "강화읍"
+   "method": "site-verified",
+   "dongName": "강화읍",
+   "dongCode": "2871025000"
   },
   {
    "schoolSlug": "ganghwa-high-school",
@@ -1784,9 +1442,9 @@
    "roadAddress": "인천광역시 강화군 강화읍 고비고개로 20",
    "sigungu": "강화군",
    "legalDong": "강화읍",
-   "method": "legal-dong-unique",
-   "dongCode": "2871025000",
-   "dongName": "강화읍"
+   "method": "site-verified",
+   "dongName": "강화읍",
+   "dongCode": "2871025000"
   },
   {
    "schoolSlug": "uijeongbu-gyeongui-elementary-school",

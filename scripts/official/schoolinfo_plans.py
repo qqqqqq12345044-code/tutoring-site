@@ -225,7 +225,8 @@ def extract():
                     t = "ERROR olefile not installed (set OLEFILE_PATH or pip install olefile)"
                 except Exception as ex:  # unreadable file — reported by `status`, never guessed
                     t = f"ERROR {ex}"
-                open(txt, "w", encoding="utf-8").write(t)
+                # HWP text can hold lone surrogates (broken glyph records); they become U+FFFD, never guessed.
+                open(txt, "w", encoding="utf-8", errors="replace").write(t)
         save_manifest(m)
 
 

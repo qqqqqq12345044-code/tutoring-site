@@ -79,6 +79,14 @@ export const dongs: AdminDong[] = [
     citySlug: "ganghwa",
     legalDongs: ["강화읍", "신문리", "관청리", "국화리", "남산리", "갑곳리", "용정리", "옥림리", "월곳리", "대산리"],
   },
+
+  // 2026-10-19 전국 2차 batch — 등록 학교가 주소정보누리집 도로명주소 API(행정동명)로 확정되고, 그중 2곳 이상의
+  // 2학기 평가계획 원문을 읽을 수 있는 행정동만 (docs/qa/national-dong-batch2-2026-10-19.md).
+  { slug: "banpobon-dong", code: "1165055000", name: "반포본동", citySlug: "seocho", legalDongs: ["반포동"] },
+  { slug: "songpa2-dong", code: "1171059000", name: "송파2동", citySlug: "songpa", legalDongs: ["송파동"] },
+  { slug: "jamsil4-dong", code: "1171069000", name: "잠실4동", citySlug: "songpa", legalDongs: ["신천동"] },
+  { slug: "jukjeon2-dong", code: "4146555000", name: "죽전2동", citySlug: "yongin", legalDongs: ["죽전동"] },
+  { slug: "bupyeong4-dong", code: "2823754000", name: "부평4동", citySlug: "bupyeong", legalDongs: ["부평동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
