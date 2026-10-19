@@ -14,6 +14,15 @@ import { schoolInfoPlanSource, type ContentSource } from "@/data/sources";
  *   2027학년도 1학기 plans are disclosed (2027년 1차 공시, 4월) re-check each entry and update it or set
  *   status "draft" (docs/qa/uijeongbu-dong-subject-*.md list the schools and files used).
  */
+/**
+ * When the facts of each 공시 학기 go stale: "2026-2" (2026년 3차 공시) is superseded by the 2027학년도 1학기 plans
+ * that 학교알리미 publishes in the 2027년 1차 공시 (4월). validate:quick warns after this date (informational —
+ * re-read the new plans, then update the entry or set status "draft").
+ */
+export const PLAN_TERM_RECHECK_BY: Record<DongSubjectContent["planTerm"], string> = {
+  "2026-2": "2027-04-30",
+};
+
 export interface DongSubjectContent {
   citySlug: string;
   dongSlug: string;

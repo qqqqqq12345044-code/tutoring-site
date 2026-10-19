@@ -198,6 +198,15 @@ async function main() {
   const schoolHolds = checkSchoolSubjectNoindexHolds(qualityRows);
   console.log(`School×subject noindex holds: ${schoolHolds.ok ? "PASS" : "FAIL"}`);
   if (!schoolHolds.ok) schoolHolds.issues.forEach((i) => console.log(`  - ${i}`));
+  // Informational: 평가계획 facts are per semester (src/data/dongSubjectContent.ts planTerm).
+  const { dongSubjectContents, PLAN_TERM_RECHECK_BY } = await import("../src/data/dongSubjectContent");
+  const today = new Date().toISOString().slice(0, 10);
+  const terms = new Map<string, number>();
+  for (const c of dongSubjectContents.filter((x) => x.status === "published")) terms.set(c.planTerm, (terms.get(c.planTerm) ?? 0) + 1);
+  for (const [term, n] of terms) {
+    const due = PLAN_TERM_RECHECK_BY[term as keyof typeof PLAN_TERM_RECHECK_BY];
+    console.log(`Plan freshness ${term}: ${n} entries, recheck by ${due}${today > due ? " — WARN: stale, re-read the new 공시" : ""}`);
+  }
   const dongGreen = checkDongIndexedGreen(qualityRows);
   console.log(`Indexed dong pages GREEN only: ${dongGreen.ok ? "PASS" : "FAIL"}`);
   if (!dongGreen.ok) dongGreen.issues.forEach((i) => console.log(`  - ${i}`));

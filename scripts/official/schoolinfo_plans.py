@@ -278,15 +278,26 @@ def preview(year="2026", term="3", max_pages=2000):
             u = http(BASE + "/pn/cm/documentView.do", body.encode(), timeout=300).decode()
             q = urllib.parse.parse_qs(urllib.parse.urlparse(u).query)
             fn, rs = q["fn"][0], q["rs"][0]
+            # The converter writes pages progressively: a missing page is retried every 5 s, and the document is
+            # taken as finished only after 12 misses in a row on the same page (about a minute).
             pages, misses, n = [], 0, 1
-            while n <= max_pages and misses < 3:
+            while n <= max_pages and misses < 12:
                 try:
-                    raw = http(f"{BASE}{rs}{fn}.files/{fn}_{n}.xml", timeout=60)
-                    pages.append(f"\n===== PAGE {n} =====\n" + preview_lines(raw.decode("utf-8", "ignore")))
-                    misses = 0
+                    _wait()
+                    req = urllib.request.Request(f"{BASE}{rs}{fn}.files/{fn}_{n}.xml", headers=UA)
+                    with urllib.request.urlopen(req, timeout=60) as r:
+                        ok = "xml" in r.headers.get("Content-Type", "")
+                        raw = r.read() if ok else b""
+                    # A missing page comes back as 200 + HTML, so only an XML page with text runs counts.
+                    if ok and b"<text " in raw:
+                        pages.append(f"\n===== PAGE {n} =====\n" + preview_lines(raw.decode("utf-8", "ignore")))
+                        misses = 0
+                        n += 1
+                        continue
                 except Exception:
-                    misses += 1
-                n += 1
+                    pass
+                misses += 1
+                time.sleep(5)
             open(p + ".pv.txt", "w", encoding="utf-8").write("".join(pages))
             print(f"{code} {seq}: preview {len(pages)} pages")
 
