@@ -46,54 +46,8 @@ export const qualityNoindexPaths = new Set<string>([
   "/school/suwon-yeoja-high-school/english",
   "/school/yeonsu-middle-school/english",
   "/school/yongin-high-school/english",
-  // 행정동 hub — 이름 마스킹 유사도 >60% (15) — 2026-10-16 의정부 pilot. 공식 데이터(행정동 표·NEIS 학교)만으로
-  // 만든 페이지라 동 이름·학교 이름을 가리면 서로 70~83% 같은 문서로 읽힌다. 동별 고유 공식 사실을 보강해 RED를 벗어나면 제거.
-  "/region/gyeonggi/uijeongbu/uijeongbu1-dong",
-  "/region/gyeonggi/uijeongbu/uijeongbu2-dong",
-  "/region/gyeonggi/uijeongbu/howon1-dong",
-  "/region/gyeonggi/uijeongbu/howon2-dong",
-  "/region/gyeonggi/uijeongbu/jangam-dong",
-  "/region/gyeonggi/uijeongbu/singok1-dong",
-  "/region/gyeonggi/uijeongbu/singok2-dong",
-  "/region/gyeonggi/uijeongbu/songsan1-dong",
-  "/region/gyeonggi/uijeongbu/songsan2-dong",
-  "/region/gyeonggi/uijeongbu/songsan3-dong",
-  "/region/gyeonggi/uijeongbu/jageum-dong",
-  "/region/gyeonggi/uijeongbu/ganeung-dong",
-  "/region/gyeonggi/uijeongbu/heungseon-dong",
-  "/region/gyeonggi/uijeongbu/nogyang-dong",
-  "/region/gyeonggi/uijeongbu/gosan-dong",
-  // 행정동×과목 — 이름 마스킹 유사도 >60% (30) — 같은 동의 다른 과목/같은 과목의 다른 동과 75~88%.
-  // 2026-10-16 국어·영어·수학 45개(15개 동 전부)는 학교알리미 2026학년도 2학기 평가계획으로 다시 써서
-  // (src/data/dongSubjectContent.ts) GREEN 15~27%가 되어 제외했다(2단계 파일럿 9개 + 확대 36개). 사회·과학 30개는 그대로.
-  "/region/gyeonggi/uijeongbu/uijeongbu1-dong/social",
-  "/region/gyeonggi/uijeongbu/uijeongbu1-dong/science",
-  "/region/gyeonggi/uijeongbu/uijeongbu2-dong/social",
-  "/region/gyeonggi/uijeongbu/uijeongbu2-dong/science",
-  "/region/gyeonggi/uijeongbu/howon1-dong/social",
-  "/region/gyeonggi/uijeongbu/howon1-dong/science",
-  "/region/gyeonggi/uijeongbu/howon2-dong/social",
-  "/region/gyeonggi/uijeongbu/howon2-dong/science",
-  "/region/gyeonggi/uijeongbu/jangam-dong/social",
-  "/region/gyeonggi/uijeongbu/jangam-dong/science",
-  "/region/gyeonggi/uijeongbu/singok1-dong/social",
-  "/region/gyeonggi/uijeongbu/singok1-dong/science",
-  "/region/gyeonggi/uijeongbu/singok2-dong/social",
-  "/region/gyeonggi/uijeongbu/singok2-dong/science",
-  "/region/gyeonggi/uijeongbu/songsan1-dong/social",
-  "/region/gyeonggi/uijeongbu/songsan1-dong/science",
-  "/region/gyeonggi/uijeongbu/songsan2-dong/social",
-  "/region/gyeonggi/uijeongbu/songsan2-dong/science",
-  "/region/gyeonggi/uijeongbu/songsan3-dong/social",
-  "/region/gyeonggi/uijeongbu/songsan3-dong/science",
-  "/region/gyeonggi/uijeongbu/jageum-dong/social",
-  "/region/gyeonggi/uijeongbu/jageum-dong/science",
-  "/region/gyeonggi/uijeongbu/ganeung-dong/social",
-  "/region/gyeonggi/uijeongbu/ganeung-dong/science",
-  "/region/gyeonggi/uijeongbu/heungseon-dong/social",
-  "/region/gyeonggi/uijeongbu/heungseon-dong/science",
-  "/region/gyeonggi/uijeongbu/nogyang-dong/social",
-  "/region/gyeonggi/uijeongbu/nogyang-dong/science",
-  "/region/gyeonggi/uijeongbu/gosan-dong/social",
-  "/region/gyeonggi/uijeongbu/gosan-dong/science",
+  // 행정동 hub — 2026-10-16 의정부 pilot에서 15개 모두 RED(70~83%)였으나, 2026-10-19 허브에 동별 과목 페이지
+  // (학교알리미 평가계획) 요약을 싣고 화면에 없던 학교 목록 노트를 빼서 15개 모두 GREEN(13~28%) → 제외. 현재 해당 항목 없음.
+  // 행정동×과목 — 2026-10-16 국어·영어·수학 45개, 2026-10-19 사회·과학 30개를 학교알리미 2026학년도 2학기 평가계획으로
+  // 다시 써서(src/data/dongSubjectContent.ts) 75개 모두 GREEN(12~27%)이 되어 이 목록에서 제외했다. 현재 해당 항목 없음.
 ]);

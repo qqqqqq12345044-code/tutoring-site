@@ -23,7 +23,9 @@ export const BASELINE = {
   // 품질 게이트 GREEN → qualityNoindex에서 제외되어 색인: sitemap 212 → 221, noindex 2020 → 2011.
   // 2026-10-16 확대: 나머지 12개 동 × 국어·영어·수학 36개도 같은 방식(src/data/dongSubjectContent.ts)으로 GREEN
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
-  sitemapCount: 257,
-  noindexCount: 1975,
+  // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
+  // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
+  sitemapCount: 302,
+  noindexCount: 1930,
   brokenLinks: 0,
 };

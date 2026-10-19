@@ -269,3 +269,15 @@ export function checkSchoolSubjectNoindexHolds(rows: QualityRow[]): { ok: boolea
   }
   return { ok: issues.length === 0, issues };
 }
+
+/**
+ * 행정동 hub / 행정동×subject pages are indexed only at GREEN (2026-10-19). getIndexability() holds RED
+ * pages through qualityNoindex.ts; this check makes sure no AMBER dong page is left indexed either —
+ * an AMBER dong page must be improved to GREEN or held before it ships. Thresholds are unchanged.
+ */
+export function checkDongIndexedGreen(rows: QualityRow[]): { ok: boolean; issues: string[] } {
+  const issues = rows
+    .filter((r) => (r.kind === "region-dong" || r.kind === "region-dong-subject") && r.indexed && r.grade !== "GREEN")
+    .map((r) => `${r.grade} dong page is indexed: ${r.path}`);
+  return { ok: issues.length === 0, issues };
+}

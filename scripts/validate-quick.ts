@@ -19,7 +19,13 @@ import {
   checkSitemapLastmod,
   checkDongData,
 } from "./lib/route-inventory";
-import { runQualityGate, summarizeQualityGate, checkQualityNoindexSync, checkSchoolSubjectNoindexHolds } from "./lib/quality-gate";
+import {
+  runQualityGate,
+  summarizeQualityGate,
+  checkQualityNoindexSync,
+  checkSchoolSubjectNoindexHolds,
+  checkDongIndexedGreen,
+} from "./lib/quality-gate";
 import {
   checkRegionGradeSubjectContentQuality,
   checkRegionPageContentQuality,
@@ -192,6 +198,9 @@ async function main() {
   const schoolHolds = checkSchoolSubjectNoindexHolds(qualityRows);
   console.log(`School×subject noindex holds: ${schoolHolds.ok ? "PASS" : "FAIL"}`);
   if (!schoolHolds.ok) schoolHolds.issues.forEach((i) => console.log(`  - ${i}`));
+  const dongGreen = checkDongIndexedGreen(qualityRows);
+  console.log(`Indexed dong pages GREEN only: ${dongGreen.ok ? "PASS" : "FAIL"}`);
+  if (!dongGreen.ok) dongGreen.issues.forEach((i) => console.log(`  - ${i}`));
 
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
@@ -216,7 +225,8 @@ async function main() {
     subjectTopicContentQuality.ok &&
     guideQuality.ok &&
     qualitySync.ok &&
-    schoolHolds.ok;
+    schoolHolds.ok &&
+    dongGreen.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {

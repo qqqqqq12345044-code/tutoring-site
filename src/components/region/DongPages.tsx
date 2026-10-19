@@ -199,9 +199,33 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
             description="NEIS 학교기본정보의 도로명주소를 행정안전부 주소정보누리집에서 조회해 이 행정동으로 확인된 학교입니다."
           />
           <SchoolsByLevel list={list} />
-          <NotesGrid notes={content.notes.slice(1)} />
+          <NotesGrid notes={content.notes.filter((n) => !n.subjectSlug)} />
         </div>
       </section>
+
+      {content.notes.some((n) => n.subjectSlug) && (
+        <section className="container-page py-14 md:py-16">
+          <SectionHeader
+            align="left"
+            title={`${ctx.dong.name} 과목별 2학기 평가 요약`}
+            description="각 과목 페이지에 정리한 학교알리미 2026학년도 2학기 평가계획 가운데 앞부분을 옮겼습니다."
+          />
+          <div className="mt-8 grid md:grid-cols-2 gap-8">
+            {content.notes
+              .filter((n) => n.subjectSlug)
+              .map((n) => (
+                <article key={n.title}>
+                  <h3 className="font-bold text-navy">
+                    <Link href={`${base}/${n.subjectSlug}`} className="hover:text-brand transition-colors">
+                      {n.title}
+                    </Link>
+                  </h3>
+                  <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed break-keep">{n.body}</p>
+                </article>
+              ))}
+          </div>
+        </section>
+      )}
 
       <section className="container-page py-14 md:py-16 flex flex-col gap-4">
         <div className="grid md:grid-cols-2 gap-4">

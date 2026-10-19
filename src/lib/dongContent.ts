@@ -1,6 +1,6 @@
 import { dongTableSources, getDongsSharingLegalDong, type AdminDong } from "@/data/dongs";
 import { schools, type School } from "@/data/schools";
-import type { Subject } from "@/data/subjects";
+import { subjects, type Subject } from "@/data/subjects";
 import type { ContentSource } from "@/data/sources";
 import { getDongSubjectContent } from "@/data/dongSubjectContent";
 
@@ -21,6 +21,8 @@ import { getDongSubjectContent } from "@/data/dongSubjectContent";
 export interface DongNote {
   title: string;
   body: string;
+  /** Set on hub notes that excerpt a 행정동×과목 page, so the hub can link to it. */
+  subjectSlug?: string;
 }
 
 export interface DongContent {
@@ -107,23 +109,39 @@ function schoolProfileFacts(list: School[]): string[] {
   return facts;
 }
 
+/** First n sentences ("…다.") of a written intro — used as a lead on the hub, not as new text. */
+function leadSentences(text: string, n: number): string {
+  const parts = text.match(/.*?다\.(?=\s|$)/g) ?? [text];
+  return parts.slice(0, n).join(" ").trim();
+}
+
 export function buildDongHubContent(dong: AdminDong, cityName: string): DongContent {
   const list = getDongSchools(dong);
-  const levels = groupByLevel(list);
-  const notes: DongNote[] = [
-    {
-      title: `${dong.name} 학교 ${list.length}곳`,
-      body: levels.map((g) => `${g.level}: ${g.list.map(schoolLabel).join(", ")}.`).join(" "),
-    },
-  ];
+  // The school list itself is rendered by the page (SchoolsByLevel), so it is not repeated as a note.
+  const notes: DongNote[] = [];
   const facts = schoolProfileFacts(list);
   if (facts.length > 0) notes.push({ title: `${dong.name} 학교 구분`, body: facts.join(" ") });
   notes.push(legalDongNote(dong));
 
+  // 과목별 2학기 평가 특징: the lead of each written 행정동×과목 entry (학교알리미 평가계획), so the hub
+  // carries this dong's own disclosed facts instead of only the shared NEIS template.
+  const written = subjects.flatMap((s) => {
+    const w = getDongSubjectContent(dong.citySlug, dong.slug, s.slug);
+    return w ? [{ subject: s, entry: w }] : [];
+  });
+  for (const { subject, entry } of written) {
+    // Excerpt of the subject page: its first two sentences and first two notes (the hub links to the full page).
+    const lead = entry.notes.slice(0, 2).map((n) => `${n.title}: ${n.body}`);
+    notes.push({ title: `${subject.name} — 2학기 평가 요약`, body: [leadSentences(entry.intro, 2), ...lead].join(" "), subjectSlug: subject.slug });
+  }
+  const sources = dongSources(dong, list);
+  const seen = new Set(sources.map((s) => s.url));
+  const planSources = written.flatMap(({ entry }) => entry.sources).filter((s) => !seen.has(s.url) && seen.add(s.url));
+
   return {
-    intro: `${cityName} ${dong.name}은 법정동 ${dong.legalDongs.join("·")}에 걸친 행정동이며, NEIS 학교기본정보 기준 ${levelCounts(list)}이 주소상 이 동에 있습니다. 다니는 학교와 학년을 알려주시면 과목별 1:1 수업 방향을 함께 정리합니다.`,
+    intro: `${cityName} ${dong.name}은 법정동 ${dong.legalDongs.join("·")}에 걸친 행정동이며, NEIS 학교기본정보 기준 ${levelCounts(list)}이 주소상 이 동에 있습니다.`,
     notes,
-    sources: dongSources(dong, list),
+    sources: [...planSources, ...sources],
   };
 }
 
