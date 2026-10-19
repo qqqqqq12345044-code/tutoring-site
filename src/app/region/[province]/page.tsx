@@ -8,6 +8,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
+import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
 
 export function generateStaticParams() {
   return getProvinces().map((p) => ({ province: p.slug }));
@@ -41,15 +42,17 @@ export default async function ProvincePage(props: PageProps<"/region/[province]"
   return (
     <>
       <section className="bg-white border-b border-border-subtle">
-        <div className="container-page py-8 md:py-10 flex flex-col gap-4">
+        <div className="container-page py-8 md:py-10 flex flex-col gap-6">
           <Breadcrumb items={[{ name: "지역별 과외", href: "/regions" }, { name: `${region.name} 과외`, href: `/region/${region.slug}` }]} />
-          <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-            {region.name} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
-          </h1>
-          <p className="text-text-muted leading-relaxed max-w-2xl">
-            {region.name} 지역에서 과외를 찾고 있다면 학생의 학년과 과목, 목표를 먼저 확인하는 것이
-            중요합니다. 방문과 화상 수업 모두 상담을 통해 가능 여부를 확인해드립니다.
-          </p>
+          <HeroWithThumbnail motif="region">
+            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+              {region.name} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
+            </h1>
+            <p className="mt-4 text-text-muted leading-relaxed">
+              {region.name} 지역에서 과외를 찾고 있다면 학생의 학년과 과목, 목표를 먼저 확인하는 것이
+              중요합니다. 방문과 화상 수업 모두 상담을 통해 가능 여부를 확인해드립니다.
+            </p>
+          </HeroWithThumbnail>
         </div>
       </section>
 
@@ -60,7 +63,7 @@ export default async function ProvincePage(props: PageProps<"/region/[province]"
             <RelatedLinks
               title="학교 정보가 등록된 지역"
               links={withSchools.map((c) => ({
-                label: `${c.name} (학교 ${countSchoolsInRegion(c.slug)}곳)`,
+                label: c.name,
                 href: `/region/${region.slug}/${c.slug}`,
               }))}
             />

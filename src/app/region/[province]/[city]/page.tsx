@@ -20,6 +20,7 @@ import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import FAQAccordion from "@/components/FAQAccordion";
+import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
 
 const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
 
@@ -69,7 +70,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
       {regionFaqs.length > 0 && <JsonLd data={faqSchema(regionFaqs)} />}
 
       <section className="bg-white border-b border-border-subtle">
-        <div className="container-page py-8 md:py-10 flex flex-col gap-4">
+        <div className="container-page py-8 md:py-10 flex flex-col gap-6">
           <Breadcrumb
             items={[
               { name: "지역별 과외", href: "/regions" },
@@ -77,12 +78,14 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
               { name: `${region.name} 과외`, href: `/region/${parent.slug}/${region.slug}` },
             ]}
           />
-          <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-            {getRegionTitleName(region.slug)} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
-          </h1>
-          <p className="text-text-main/80 leading-relaxed max-w-2xl">
-            {buildRegionSchoolIntro(region.slug, region.name, relatedSchools)}
-          </p>
+          <HeroWithThumbnail motif="region">
+            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+              {getRegionTitleName(region.slug)} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
+            </h1>
+            <p className="mt-4 text-text-main/80 leading-relaxed">
+              {buildRegionSchoolIntro(region.slug, region.name, relatedSchools)}
+            </p>
+          </HeroWithThumbnail>
         </div>
       </section>
 
@@ -131,7 +134,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
                   href={`/region/${parent.slug}/${region.slug}/${schoolLevelToGradeSlug[g.level]}`}
                   className="inline-block py-1 font-bold text-navy hover:text-brand transition-colors"
                 >
-                  {region.name} {g.level} <span className="text-text-muted font-medium text-sm">{g.list.length}곳</span>
+                  {region.name} {g.level}
                 </Link>
                 <ul className="mt-3 flex flex-col gap-1.5">
                   {g.list.map((s) => {

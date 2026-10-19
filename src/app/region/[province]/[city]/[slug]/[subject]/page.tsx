@@ -18,6 +18,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import SourceList from "@/components/SourceList";
 import { getDong } from "@/data/dongs";
 import { DongSubjectView, dongSubjectMetadata } from "@/components/region/DongPages";
+import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
 
 export function generateStaticParams() {
   return regionGradeSubjectContents.filter(isPublishedContent).map((c) => {
@@ -137,7 +138,7 @@ export default async function RegionFilterSubjectPage(
   return (
     <>
       <section className="bg-white border-b border-border-subtle">
-        <div className="container-page py-8 md:py-10 flex flex-col gap-4">
+        <div className="container-page py-8 md:py-10 flex flex-col gap-6">
           <Breadcrumb
             items={[
               { name: "지역별 과외", href: "/regions" },
@@ -146,13 +147,15 @@ export default async function RegionFilterSubjectPage(
               { name: `${label} ${ctx.subject.name}과외`, href: `/region/${province}/${city}/${slug}/${subjectSlug}` },
             ]}
           />
-          <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-            {label} {ctx.subject.name}과외
-          </h1>
-          <p className="text-text-muted leading-relaxed max-w-2xl">
-            {content?.intro ??
-              `${label}에서 ${ctx.subject.name}과외를 찾는다면 현재 개념 이해도와 목표를 먼저 확인하고 필요한 부분부터 1:1로 학습하는 것이 중요합니다.`}
-          </p>
+          <HeroWithThumbnail motif={motifForSlug(ctx.subject.slug)}>
+            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+              {label} {ctx.subject.name}과외
+            </h1>
+            <p className="mt-4 text-text-muted leading-relaxed">
+              {content?.intro ??
+                `${label}에서 ${ctx.subject.name}과외를 찾는다면 현재 개념 이해도와 목표를 먼저 확인하고 필요한 부분부터 1:1로 학습하는 것이 중요합니다.`}
+            </p>
+          </HeroWithThumbnail>
         </div>
       </section>
 

@@ -26,6 +26,7 @@ import StepFlow from "@/components/ui/StepFlow";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import { getDong } from "@/data/dongs";
 import { DongHubView, dongHubMetadata } from "@/components/region/DongPages";
+import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
 
 const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
 
@@ -139,16 +140,18 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
       <>
         <JsonLd data={faqSchema(faqs)} />
         <section className="bg-white border-b border-border-subtle">
-          <div className="container-page py-8 md:py-10 flex flex-col gap-4">
+          <div className="container-page py-8 md:py-10 flex flex-col gap-6">
             <Breadcrumb items={[...breadcrumbBase, { name: `${ctx.subject.name}과외`, href: `/region/${province}/${city}/${slug}` }]} />
-            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-              {ctx.region.name} {ctx.subject.name}과외
-              <br className="hidden md:block" /> 초·중·고 1:1 맞춤 수업
-            </h1>
-            <p className="text-text-main/80 leading-relaxed max-w-2xl">
-              {content?.intro ??
-                `${ctx.subject.name}은 같은 학년이라도 학생마다 막히는 지점이 다릅니다. 현재 개념 이해도와 학교 진도, 목표를 확인하고 필요한 부분부터 1:1로 학습합니다.`}
-            </p>
+            <HeroWithThumbnail motif={motifForSlug(ctx.subject.slug)}>
+              <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+                {ctx.region.name} {ctx.subject.name}과외
+                <br className="hidden md:block" /> 초·중·고 1:1 맞춤 수업
+              </h1>
+              <p className="mt-4 text-text-main/80 leading-relaxed">
+                {content?.intro ??
+                  `${ctx.subject.name}은 같은 학년이라도 학생마다 막히는 지점이 다릅니다. 현재 개념 이해도와 학교 진도, 목표를 확인하고 필요한 부분부터 1:1로 학습합니다.`}
+              </p>
+            </HeroWithThumbnail>
           </div>
         </section>
 
@@ -270,9 +273,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                   if (list.length === 0) return null;
                   return (
                     <div key={level} className="rounded-2xl border border-border-subtle p-6">
-                      <p className="font-bold text-navy">
-                        {level} <span className="text-text-muted font-medium text-sm">{list.length}곳</span>
-                      </p>
+                      <p className="font-bold text-navy">{level}</p>
                       <ul className="mt-3 flex flex-col gap-1.5">
                         {list.map((s) => {
                           // School×subject page when it's indexed, otherwise the school hub.
@@ -368,15 +369,17 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
     return (
       <>
         <section className="bg-white border-b border-border-subtle">
-          <div className="container-page py-8 md:py-10 flex flex-col gap-4">
+          <div className="container-page py-8 md:py-10 flex flex-col gap-6">
             <Breadcrumb items={[...breadcrumbBase, { name: `${ctx.grade.name}과외`, href: `/region/${province}/${city}/${slug}` }]} />
-            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-              {ctx.region.name} {ctx.grade.name}과외
-            </h1>
-            <p className="text-text-muted leading-relaxed max-w-2xl">
-              {ctx.region.name}에서 {ctx.grade.label} 자녀의 과외를 찾고 있다면 과목별 학습 방향을
-              먼저 확인해보세요.
-            </p>
+            <HeroWithThumbnail motif={motifForSlug(ctx.grade.slug)}>
+              <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+                {ctx.region.name} {ctx.grade.name}과외
+              </h1>
+              <p className="mt-4 text-text-muted leading-relaxed">
+                {ctx.region.name}에서 {ctx.grade.label} 자녀의 과외를 찾고 있다면 과목별 학습 방향을
+                먼저 확인해보세요.
+              </p>
+            </HeroWithThumbnail>
           </div>
         </section>
 
@@ -384,7 +387,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
           {levelSchools.length > 0 && (
             <div className="rounded-2xl border border-border-subtle bg-white p-6">
               <p className="font-bold text-navy">
-                {ctx.region.name} {levelName} <span className="text-text-muted font-medium text-sm">{levelSchools.length}곳</span>
+                {ctx.region.name} {levelName}
               </p>
               <ul className="mt-3 flex flex-col gap-1.5">
                 {levelSchools.map((s) => {
@@ -441,14 +444,16 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
   return (
     <>
       <section className="bg-white border-b border-border-subtle">
-        <div className="container-page py-8 md:py-10 flex flex-col gap-4">
+        <div className="container-page py-8 md:py-10 flex flex-col gap-6">
           <Breadcrumb items={[...breadcrumbBase, { name: `${ctx.district.name} 과외`, href: `/region/${province}/${city}/${slug}` }]} />
-          <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-            {ctx.district.name} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
-          </h1>
-          <p className="text-text-muted leading-relaxed max-w-2xl">
-            {ctx.district.fullName}에서 과외를 찾는다면 학생의 학년과 과목에 맞는 1:1 수업을 상담해보세요.
-          </p>
+          <HeroWithThumbnail motif="region">
+            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+              {ctx.district.name} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
+            </h1>
+            <p className="mt-4 text-text-muted leading-relaxed">
+              {ctx.district.fullName}에서 과외를 찾는다면 학생의 학년과 과목에 맞는 1:1 수업을 상담해보세요.
+            </p>
+          </HeroWithThumbnail>
         </div>
       </section>
 

@@ -79,7 +79,7 @@ export default function SchoolsPage() {
                         href={`${getRegionUrl(city.slug)}/${schoolLevelToGradeSlug[level]}`}
                         className="inline-block py-1 text-sm font-semibold text-brand hover:underline"
                       >
-                        {level} <span className="text-text-muted font-normal">{list.length}곳</span>
+                        {level}
                       </Link>
                       <ul className="mt-2 flex flex-col gap-1.5">
                         {list.map((s) => (

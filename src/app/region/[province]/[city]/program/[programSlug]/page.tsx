@@ -15,6 +15,7 @@ import ConsultCTA from "@/components/ConsultCTA";
 import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
+import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
 
 function resolveContext(province: string, city: string, programSlug: string) {
   const parent = getRegionBySlug(province);
@@ -83,17 +84,19 @@ export default async function RegionProgramPage(props: PageProps<"/region/[provi
       <JsonLd data={faqSchema(faqs)} />
 
       <section className="bg-white border-b border-border-subtle">
-        <div className="container-page py-8 md:py-10 flex flex-col gap-4">
+        <div className="container-page py-8 md:py-10 flex flex-col gap-6">
           <Breadcrumb
             items={[...breadcrumbBase, { name: `${ctx.program.name}과외`, href: `/region/${province}/${city}/program/${programSlug}` }]}
           />
-          <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-            {ctx.region.name} {ctx.program.name}과외
-          </h1>
-          <p className="text-text-muted leading-relaxed max-w-2xl">
-            {content?.intro ??
-              `${ctx.region.name}에서 ${ctx.program.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 방문·화상 수업을 상담해보세요.`}
-          </p>
+          <HeroWithThumbnail motif={motifForSlug(ctx.program.slug)}>
+            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+              {ctx.region.name} {ctx.program.name}과외
+            </h1>
+            <p className="mt-4 text-text-muted leading-relaxed">
+              {content?.intro ??
+                `${ctx.region.name}에서 ${ctx.program.name}과외를 찾고 있다면 학생의 현재 수준과 목표에 맞는 1:1 방문·화상 수업을 상담해보세요.`}
+            </p>
+          </HeroWithThumbnail>
         </div>
       </section>
 

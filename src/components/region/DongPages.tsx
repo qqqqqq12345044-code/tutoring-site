@@ -106,9 +106,7 @@ function SchoolsByLevel({ list }: { list: School[] }) {
     <div className="mt-8 grid sm:grid-cols-3 gap-6">
       {groupByLevel(list).map((g) => (
         <div key={g.level} className="rounded-2xl border border-border-subtle bg-white p-6">
-          <p className="font-bold text-navy">
-            {g.level} <span className="text-text-muted font-medium text-sm">{g.list.length}곳</span>
-          </p>
+          <p className="font-bold text-navy">{g.level}</p>
           <ul className="mt-3 flex flex-col gap-2">
             {g.list.map((s) => (
               <li key={s.slug} className="text-sm leading-snug">
