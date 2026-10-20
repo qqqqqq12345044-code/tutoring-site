@@ -2,7 +2,7 @@
 
   python -I -X utf8 scripts/official/schoolinfo_plans.py fetch   --schools <list.tsv> [--year 2026] [--term 3]
   python -I -X utf8 scripts/official/schoolinfo_plans.py extract
-  python -I -X utf8 scripts/official/schoolinfo_plans.py preview [--schools <list.tsv>]  # PDFs without a Korean text layer
+  python -I -X utf8 scripts/official/schoolinfo_plans.py preview [--schools <list.tsv>] [--limit N] [--min-free-mb 1024]  # PDFs without a Korean text layer
   python -I -X utf8 scripts/official/schoolinfo_plans.py status
 
 <list.tsv>: one school per line, "NEIS학교코드<TAB>학교명".
@@ -263,10 +263,38 @@ def preview_lines(xml):
     return "\n".join(r for r in out if r)
 
 
-def preview(year="2026", term="3", max_pages=2000, schools_path=None):
+def free_memory_mb():
+    """Available physical memory (Windows GlobalMemoryStatusEx; elsewhere /proc/meminfo). None if unknown."""
+    try:
+        import ctypes
+
+        class MS(ctypes.Structure):
+            _fields_ = [("len", ctypes.c_ulong), ("load", ctypes.c_ulong), ("total", ctypes.c_ulonglong), ("avail", ctypes.c_ulonglong),
+                        ("tp", ctypes.c_ulonglong), ("ap", ctypes.c_ulonglong), ("tv", ctypes.c_ulonglong), ("av", ctypes.c_ulonglong),
+                        ("ae", ctypes.c_ulonglong)]
+        s = MS()
+        s.len = ctypes.sizeof(MS)
+        if ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(s)):
+            return s.avail // 1048576
+    except Exception:
+        pass
+    try:
+        for line in open("/proc/meminfo"):
+            if line.startswith("MemAvailable:"):
+                return int(line.split()[1]) // 1024
+    except Exception:
+        pass
+    return None
+
+
+def preview(year="2026", term="3", max_pages=2000, schools_path=None, limit=None, min_free_mb=1024):
     """For PDFs whose text layer has no Hangul, read 학교알리미's own preview conversion into <file>.pv.txt.
-    --schools <list.tsv> limits it to those NEIS codes (third column: FILE_SEQs). Each file is written as soon as it is converted."""
+    --schools <list.tsv> limits it to those NEIS codes (third column: FILE_SEQs). --limit N stops after N files.
+    Pages are appended to <file>.pv.part as they arrive (first line = converter id), so an interrupted file resumes
+    from its next page when the converter id is the same; done files (.pv.txt) are skipped. A new file is not started
+    while available memory is under --min-free-mb (default 1024) — the run ends instead of pushing the system."""
     m = load_manifest()
+    done = 0
     # Optional third column: comma-separated FILE_SEQ values to convert (e.g. only the 6학년 plan); empty = all.
     only = None
     if schools_path:
@@ -287,6 +315,14 @@ def preview(year="2026", term="3", max_pages=2000, schools_path=None):
             t = open(p + ".txt", encoding="utf-8", errors="ignore").read() if os.path.exists(p + ".txt") else ""
             if len(re.findall(r"[가-힣]", t)) >= 200:
                 continue
+            if limit is not None and done >= limit:
+                print(f"limit {limit} reached")
+                return
+            free = free_memory_mb()
+            if free is not None and free < min_free_mb:
+                print(f"STOP: available memory {free} MB < {min_free_mb} MB — not starting {code} {seq}")
+                return
+            done += 1
             body = (f"SHL_IDF_CD={entry['shl']}&JG_BURYU_CD=JG040&JG_HANGMOK_CD=14&JG_GUBUN=1&JG_YEAR={year}"
                     f"&JG_CHASU={term}&USE_YN=Y&FILE_SEQ={seq}&PREVIEW_TYPE=GONGSI")
             u = http(BASE + "/pn/cm/documentView.do", body.encode(), timeout=300).decode()
@@ -294,7 +330,17 @@ def preview(year="2026", term="3", max_pages=2000, schools_path=None):
             fn, rs = q["fn"][0], q["rs"][0]
             # The converter writes pages progressively: a missing page is retried every 5 s, and the document is
             # taken as finished only after 12 misses in a row on the same page (about a minute).
-            pages, misses, n = [], 0, 1
+            part = p + ".pv.part"
+            pages, misses, n = 0, 0, 1
+            if os.path.exists(part):
+                prev = open(part, encoding="utf-8").read()
+                if prev.startswith(f"#fn={fn}\n"):
+                    pages = prev.count("\n===== PAGE ")
+                    n = pages + 1
+                else:
+                    os.remove(part)
+            if not os.path.exists(part):
+                open(part, "w", encoding="utf-8").write(f"#fn={fn}\n")
             while n <= max_pages and misses < 12:
                 try:
                     _wait()
@@ -304,7 +350,9 @@ def preview(year="2026", term="3", max_pages=2000, schools_path=None):
                         raw = r.read() if ok else b""
                     # A missing page comes back as 200 + HTML, so only an XML page with text runs counts.
                     if ok and b"<text " in raw:
-                        pages.append(f"\n===== PAGE {n} =====\n" + preview_lines(raw.decode("utf-8", "ignore")))
+                        with open(part, "a", encoding="utf-8") as out:
+                            out.write(f"\n===== PAGE {n} =====\n" + preview_lines(raw.decode("utf-8", "ignore")))
+                        pages += 1
                         misses = 0
                         n += 1
                         continue
@@ -312,8 +360,10 @@ def preview(year="2026", term="3", max_pages=2000, schools_path=None):
                     pass
                 misses += 1
                 time.sleep(5)
-            open(p + ".pv.txt", "w", encoding="utf-8").write("".join(pages))
-            print(f"{code} {seq}: preview {len(pages)} pages")
+            body_text = open(part, encoding="utf-8").read().split("\n", 1)[1]
+            open(p + ".pv.txt", "w", encoding="utf-8").write(body_text)
+            os.remove(part)
+            print(f"{code} {seq}: preview {pages} pages")
 
 
 def status():
@@ -345,6 +395,8 @@ if __name__ == "__main__":
     elif cmd == "extract":
         extract()
     elif cmd == "preview":
-        preview(opt("--year", "2026"), opt("--term", "3"), schools_path=opt("--schools"))
+        lim = opt("--limit")
+        preview(opt("--year", "2026"), opt("--term", "3"), schools_path=opt("--schools"),
+                limit=int(lim) if lim else None, min_free_mb=int(opt("--min-free-mb", "1024")))
     else:
         status()

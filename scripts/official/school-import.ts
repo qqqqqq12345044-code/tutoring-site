@@ -262,7 +262,8 @@ function rankDongs(list: SchoolCandidate[], top: number) {
 // ── promote ───────────────────────────────────────────────────────────────────────────────────────────────
 function promote(list: SchoolCandidate[], dongCodes: string[]) {
   const rows = neisRows();
-  const prev: string = existsSync(IMPORTED_TS) ? readFileSync(IMPORTED_TS, "utf-8") : "";
+  // Normalized to LF so the append point is found whatever line endings the file was checked out with.
+  const prev: string = existsSync(IMPORTED_TS) ? readFileSync(IMPORTED_TS, "utf-8").replace(/\r\n/g, "\n") : "";
   const already = new Set([...prev.matchAll(/code: "(\d+)"/g)].map((m) => m[1]));
   const add: string[] = [];
   const skipped: string[] = [];
@@ -299,6 +300,7 @@ function promote(list: SchoolCandidate[], dongCodes: string[]) {
   for (const s of skipped) console.log(`  skip ${s}`);
   for (const a of add) console.log(`  + ${a.trim().slice(0, 150)}`);
   if (!process.argv.includes("--write") || add.length === 0) return console.log(add.length ? "dry run (pass --write to save)" : "nothing to add");
+  if (prev && !prev.includes("\n];\n")) throw new Error(`${IMPORTED_TS}: array end not found`);
   const body = prev ? prev.replace(/\n\];\n[\s\S]*$/, `\n${add.join("\n")}\n];\n`) + tailOf(prev) : header() + add.join("\n") + "\n];\n" + footer();
   writeFileSync(IMPORTED_TS, body);
   console.log(`wrote ${IMPORTED_TS}`);
