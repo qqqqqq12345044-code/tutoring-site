@@ -1,3 +1,5 @@
+import { importedSchools } from "@/data/schools.imported";
+
 /**
  * cityRegionSlug must be a city-level RegionNode.slug from src/data/regions.ts.
  * districtRegionSlug (optional) must, when present, be a district-level
@@ -29,8 +31,10 @@ export interface School {
 }
 
 export interface OfficialSchoolRecord {
-  /** NEIS 행정표준코드 (SD_SCHUL_CODE), 경기도교육청(J10). */
+  /** NEIS 행정표준코드 (SD_SCHUL_CODE). */
   code: string;
+  /** NEIS 시도교육청 코드 (ATPT_OFCDC_SC_CODE); absent = 경기도교육청 J10 (의정부 block). */
+  office?: string;
   /** 도로명주소 — NEIS 주소를 주소정보누리집에서 같은 주소·건물로 확인한 값. */
   roadAddress: string;
   /** 주소정보누리집이 돌려준 법정동. */
@@ -38,14 +42,14 @@ export interface OfficialSchoolRecord {
   foundation: "공립" | "사립";
   coed: "남녀공학" | "남학교" | "여학교";
   /** 고등학교만: NEIS 고등학교구분(특목고는 계열 포함). */
-  highSchoolType?: "일반고" | "특성화고" | "특목고(과학계열)";
+  highSchoolType?: "일반고" | "특성화고" | "자율고" | "특목고" | `특목고(${string})`;
   /** NEIS 설립일 (FOND_YMD). */
   founded: string;
 }
 
 const ALL_SUBJECTS = ["korean", "english", "math", "social", "science"];
 
-export const schools: School[] = [
+const listedSchools: School[] = [
   // 수원 (기존 2건 migration + 신규 초등 1건)
   {
     slug: "yeongtong-elementary-school",
@@ -1707,6 +1711,9 @@ export const schools: School[] = [
 function uijeongbu(slug: string, name: string, level: School["level"], dongSlug: string, official: OfficialSchoolRecord): School {
   return { slug, name, cityRegionSlug: "uijeongbu", level, availableSubjectSlugs: ALL_SUBJECTS, dataSource: "official", dongSlug, official };
 }
+
+/** Hand-listed schools + the ones registered from the national candidate list (src/data/schools.imported.ts). */
+export const schools: School[] = [...listedSchools, ...importedSchools];
 
 export function getSchoolBySlug(slug: string): School | undefined {
   return schools.find((s) => s.slug === slug);

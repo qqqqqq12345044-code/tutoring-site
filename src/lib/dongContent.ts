@@ -71,7 +71,7 @@ function neisSource(s: School): ContentSource | undefined {
   if (!s.official) return undefined;
   return {
     label: `교육부 NEIS 학교기본정보 — ${s.name}`,
-    url: `${NEIS_SCHOOL_INFO}?Type=json&ATPT_OFCDC_SC_CODE=J10&SD_SCHUL_CODE=${s.official.code}`,
+    url: `${NEIS_SCHOOL_INFO}?Type=json&ATPT_OFCDC_SC_CODE=${s.official.office ?? "J10"}&SD_SCHUL_CODE=${s.official.code}`,
   };
 }
 
