@@ -2,7 +2,7 @@
 
   python -I -X utf8 scripts/official/schoolinfo_plans.py fetch   --schools <list.tsv> [--year 2026] [--term 3]
   python -I -X utf8 scripts/official/schoolinfo_plans.py extract
-  python -I -X utf8 scripts/official/schoolinfo_plans.py preview   # PDFs without a Korean text layer
+  python -I -X utf8 scripts/official/schoolinfo_plans.py preview [--schools <list.tsv>]  # PDFs without a Korean text layer
   python -I -X utf8 scripts/official/schoolinfo_plans.py status
 
 <list.tsv>: one school per line, "NEIS학교코드<TAB>학교명".
@@ -263,11 +263,24 @@ def preview_lines(xml):
     return "\n".join(r for r in out if r)
 
 
-def preview(year="2026", term="3", max_pages=2000):
-    """For PDFs whose text layer has no Hangul, read 학교알리미's own preview conversion into <file>.pv.txt."""
+def preview(year="2026", term="3", max_pages=2000, schools_path=None):
+    """For PDFs whose text layer has no Hangul, read 학교알리미's own preview conversion into <file>.pv.txt.
+    --schools <list.tsv> limits it to those NEIS codes (third column: FILE_SEQs). Each file is written as soon as it is converted."""
     m = load_manifest()
+    # Optional third column: comma-separated FILE_SEQ values to convert (e.g. only the 6학년 plan); empty = all.
+    only = None
+    if schools_path:
+        only = {}
+        for l in open(schools_path, encoding="utf-8"):
+            cols = l.rstrip("\n").split("\t")
+            if cols[0].strip():
+                only[cols[0].strip()] = {x.strip() for x in cols[2].split(",") if x.strip()} if len(cols) > 2 else set()
     for code, entry in m["schools"].items():
+        if only is not None and code not in only:
+            continue
         for seq, f in entry.get("files", {}).items():
+            if only and only[code] and seq not in only[code]:
+                continue
             p = f["path"]
             if not p.endswith(".pdf") or os.path.exists(p + ".pv.txt"):
                 continue
@@ -332,6 +345,6 @@ if __name__ == "__main__":
     elif cmd == "extract":
         extract()
     elif cmd == "preview":
-        preview(opt("--year", "2026"), opt("--term", "3"))
+        preview(opt("--year", "2026"), opt("--term", "3"), schools_path=opt("--schools"))
     else:
         status()

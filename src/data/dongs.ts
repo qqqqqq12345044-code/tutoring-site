@@ -87,6 +87,12 @@ export const dongs: AdminDong[] = [
   { slug: "jamsil4-dong", code: "1171069000", name: "잠실4동", citySlug: "songpa", legalDongs: ["신천동"] },
   { slug: "jukjeon2-dong", code: "4146555000", name: "죽전2동", citySlug: "yongin", legalDongs: ["죽전동"] },
   { slug: "bupyeong4-dong", code: "2823754000", name: "부평4동", citySlug: "bupyeong", legalDongs: ["부평동"] },
+
+  // 2026-10-20 전국 3차 batch — 같은 기준(등록 학교 2곳 이상 확정 + 그 학교들의 2학기 평가계획을 텍스트로 확인)
+  // (docs/qa/national-dong-batch3-2026-10-20.md).
+  { slug: "imae1-dong", code: "4113560000", name: "이매1동", citySlug: "seongnam", legalDongs: ["이매동"] },
+  { slug: "madu1-dong", code: "4128556000", name: "마두1동", citySlug: "goyang", legalDongs: ["마두동"] },
+  { slug: "sinjeong2-dong", code: "1147063000", name: "신정2동", citySlug: "yangcheon", legalDongs: ["신정동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
