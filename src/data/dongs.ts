@@ -93,6 +93,13 @@ export const dongs: AdminDong[] = [
   { slug: "imae1-dong", code: "4113560000", name: "이매1동", citySlug: "seongnam", legalDongs: ["이매동"] },
   { slug: "madu1-dong", code: "4128556000", name: "마두1동", citySlug: "goyang", legalDongs: ["마두동"] },
   { slug: "sinjeong2-dong", code: "1147063000", name: "신정2동", citySlug: "yangcheon", legalDongs: ["신정동"] },
+
+  // 2026-10-20 전국 4차 batch — 학교는 전국 후보 목록에서 등록(scripts/official/school-import.ts --promote)
+  // (docs/qa/national-dong-batch4-2026-10-20.md).
+  { slug: "daeheung-dong", code: "1144060000", name: "대흥동", citySlug: "mapo", legalDongs: ["대흥동", "노고산동", "신수동"] },
+  { slug: "sinsu-dong", code: "1144063000", name: "신수동", citySlug: "mapo", legalDongs: ["대흥동", "신수동", "현석동", "구수동", "신정동"] },
+  { slug: "sangam-dong", code: "1144074000", name: "상암동", citySlug: "mapo", legalDongs: ["상암동"] },
+  { slug: "deungchon3-dong", code: "1150053500", name: "등촌제3동", citySlug: "gangseo", legalDongs: ["등촌동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
