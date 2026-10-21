@@ -572,6 +572,7 @@ const listedSchools: School[] = [
     level: "초등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "seohyeon1-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "seongnam-middle-school",
@@ -580,6 +581,7 @@ const listedSchools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "seohyeon1-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "seongnam-high-school",
@@ -843,6 +845,7 @@ const listedSchools: School[] = [
     level: "초등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "gwanyang-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "pyeongchon-middle-school",
@@ -875,6 +878,7 @@ const listedSchools: School[] = [
     level: "고등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "gwanyang-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
 
   // 경기 부천시
