@@ -115,6 +115,10 @@ export const dongs: AdminDong[] = [
   // 2026-10-23 전국 7차 batch (docs/qa/national-dong-batch7-2026-10-23.md). 잠실2동은 잠신중 표 해석이 불확실해 제외.
   { slug: "banghwa3-dong", code: "1150064100", name: "방화제3동", citySlug: "gangseo", legalDongs: ["마곡동", "방화동"] },
   { slug: "sinjeong3-dong", code: "1147064000", name: "신정3동", citySlug: "yangcheon", legalDongs: ["신정동"] },
+
+  // 2026-10-23 전국 8차 batch (docs/qa/national-dong-batch8-2026-10-23.md).
+  { slug: "pungnap2-dong", code: "1171052000", name: "풍납2동", citySlug: "songpa", legalDongs: ["풍납동"] },
+  { slug: "mok5-dong", code: "1147055000", name: "목5동", citySlug: "yangcheon", legalDongs: ["목동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
