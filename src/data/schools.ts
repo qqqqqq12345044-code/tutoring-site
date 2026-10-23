@@ -414,6 +414,7 @@ const listedSchools: School[] = [
     level: "고등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "sinjeong3-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
 
   // 서울 양천구 추가
