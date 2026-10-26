@@ -152,6 +152,9 @@ export const dongs: AdminDong[] = [
 
   // 2026-10-26 전국 15차 batch (docs/qa/national-dong-batch15-2026-10-26.md).
   { slug: "bangbae4-dong", code: "1165062100", name: "방배4동", citySlug: "seocho", legalDongs: ["방배동"] },
+
+  // 2026-10-26 전국 16차 batch (docs/qa/national-dong-batch16-2026-10-26.md).
+  { slug: "sang-dong", code: "4119267000", name: "상동", citySlug: "bucheon", legalDongs: ["상동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

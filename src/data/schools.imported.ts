@@ -186,6 +186,9 @@ export const importedSchools: School[] = [
   imported("seomunyeoja-high-school", "서문여자고등학교", "seocho", undefined, "고등학교", "bangbae4-dong", { code: "7010183", office: "B10", roadAddress: "서울특별시 서초구 동광로12길 84", legalDong: "방배동", foundation: "사립", coed: "여학교", highSchoolType: "일반고", founded: "1972-12-29" }), // 서초구 방배4동
   imported("seoulbangbae-elementary-school", "서울방배초등학교", "seocho", undefined, "초등학교", "bangbae4-dong", { code: "7091387", office: "B10", roadAddress: "서울특별시 서초구 방배중앙로13길 26", legalDong: "방배동", foundation: "공립", coed: "남녀공학", founded: "1975-09-12" }), // 서초구 방배4동
   imported("seomunyeoja-middle-school", "서문여자중학교", "seocho", undefined, "중학교", "bangbae4-dong", { code: "7091451", office: "B10", roadAddress: "서울특별시 서초구 동광로12길 84", legalDong: "방배동", foundation: "사립", coed: "여학교", founded: "1978-12-29" }), // 서초구 방배4동
+  imported("bucheonyeoja-high-school", "부천여자고등학교", "bucheon", undefined, "고등학교", "sang-dong", { code: "7530073", office: "J10", roadAddress: "경기도 부천시 원미구 석천로16번길 37", legalDong: "상동", foundation: "공립", coed: "여학교", highSchoolType: "일반고", founded: "1981-01-15" }), // 부천시 원미구 상동
+  imported("sangdo-middle-school-bucheon", "상도중학교", "bucheon", undefined, "중학교", "sang-dong", { code: "7581027", office: "J10", roadAddress: "경기도 부천시 장말로 159", legalDong: "상동", foundation: "공립", coed: "남녀공학", founded: "1994-03-01" }), // 부천시 원미구 상동
+  imported("songnae-elementary-school", "송내초등학교", "bucheon", undefined, "초등학교", "sang-dong", { code: "7581086", office: "J10", roadAddress: "경기도 부천시 석천로 27", legalDong: "상동", foundation: "공립", coed: "남녀공학", founded: "1992-05-04" }), // 부천시 원미구 상동
 ];
 
 function imported(
