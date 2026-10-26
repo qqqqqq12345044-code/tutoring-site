@@ -175,6 +175,14 @@ export const importedSchools: School[] = [
   imported("seouleonbuk-elementary-school", "서울언북초등학교", "gangnam", undefined, "초등학교", "cheongdam-dong", { code: "7091405", office: "B10", roadAddress: "서울특별시 강남구 삼성로135길 42", legalDong: "청담동", foundation: "공립", coed: "남녀공학", founded: "1945-04-01" }), // 강남구 청담동
   imported("seoulcheongdam-elementary-school", "서울청담초등학교", "gangnam", undefined, "초등학교", "cheongdam-dong", { code: "7091416", office: "B10", roadAddress: "서울특별시 강남구 압구정로71길 9", legalDong: "청담동", foundation: "공립", coed: "남녀공학", founded: "1980-03-01" }), // 강남구 청담동
   imported("cheongdam-middle-school", "청담중학교", "gangnam", undefined, "중학교", "cheongdam-dong", { code: "7091448", office: "B10", roadAddress: "서울특별시 강남구 압구정로61길 36", legalDong: "청담동", foundation: "공립", coed: "남녀공학", founded: "1984-03-01" }), // 강남구 청담동
+  imported("sehyeon-high-school", "세현고등학교", "gangseo", undefined, "고등학교", "gayang3-dong", { code: "7010764", office: "B10", roadAddress: "서울특별시 강서구 허준로 227", legalDong: "가양동", foundation: "공립", coed: "남녀공학", highSchoolType: "일반고", founded: "2006-03-01" }), // 강서구 가양제3동
+  imported("seoulgayang-elementary-school", "서울가양초등학교", "gangseo", undefined, "초등학교", "gayang3-dong", { code: "7081419", office: "B10", roadAddress: "서울 강서구 허준로 186", legalDong: "가양동", foundation: "공립", coed: "남녀공학", founded: "1992-07-15" }), // 강서구 가양제3동
+  imported("gyeongseo-middle-school", "경서중학교", "gangseo", undefined, "중학교", "gayang3-dong", { code: "7081485", office: "B10", roadAddress: "서울특별시 강서구 양천로59길 31", legalDong: "가양동", foundation: "공립", coed: "남녀공학", founded: "1950-09-01" }), // 강서구 가양제3동
+  imported("hansesaibeoboan-high-school", "한세사이버보안고등학교", "mapo", undefined, "고등학교", "ahyeon-dong", { code: "7010911", office: "B10", roadAddress: "서울특별시 마포구 마포대로11길 44-80", legalDong: "아현동", foundation: "사립", coed: "남녀공학", highSchoolType: "특성화고", founded: "1994-10-05" }), // 마포구 아현동
+  imported("ahyeon-middle-school", "아현중학교", "mapo", undefined, "중학교", "ahyeon-dong", { code: "7031202", office: "B10", roadAddress: "서울특별시 마포구 마포대로 247", legalDong: "아현동", foundation: "공립", coed: "남녀공학", founded: "1980-02-02" }), // 마포구 아현동
+  imported("seoulyeongsang-high-school", "서울영상고등학교", "yangcheon", undefined, "고등학교", "sinjeong4-dong", { code: "7010795", office: "B10", roadAddress: "서울특별시 양천구 목동로11길 46", legalDong: "신정동", foundation: "사립", coed: "남녀공학", highSchoolType: "특성화고", founded: "1961-12-08" }), // 양천구 신정4동
+  imported("seoulyangdong-elementary-school", "서울양동초등학교", "yangcheon", undefined, "초등학교", "sinjeong4-dong", { code: "7081459", office: "B10", roadAddress: "서울특별시 양천구 오목로23길 24", legalDong: "신정동", foundation: "공립", coed: "남녀공학", founded: "1972-08-11" }), // 양천구 신정4동
+  imported("seoulyangmok-elementary-school", "서울양목초등학교", "yangcheon", undefined, "초등학교", "sinjeong4-dong", { code: "7081461", office: "B10", roadAddress: "서울특별시 양천구 목동로11길 30", legalDong: "신정동", foundation: "공립", coed: "남녀공학", founded: "1980-04-17" }), // 양천구 신정4동
 ];
 
 function imported(
