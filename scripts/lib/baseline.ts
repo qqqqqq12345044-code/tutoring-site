@@ -31,7 +31,9 @@ export const BASELINE = {
   // 등록한 학교 13곳의 학교 페이지(콘텐츠 전 noindex, 과목 route 0) = +25 → 2446 → 2471, sitemap 440 → 452, noindex 2004 → 2017.
   // 2026-10-23 전국 9차 batch: 신월3동(양천)·서초3동(서초)·염리동(마포) 허브 3 + 동×과목 15 (GREEN·색인) + 전국 후보에서
   // 등록한 학교 16곳의 학교 페이지(콘텐츠 전 noindex, 과목 route 0) = +34 → 2471 → 2505, sitemap 452 → 470, noindex 2017 → 2033.
-  totalRoutes: 2505,
+  // 2026-10-26 전국 10차 batch: 대치1동(강남)·세곡동(강남)·오륜동(송파)·위례동(송파) 허브 4 + 동×과목 20 (GREEN·색인) + 전국 후보에서
+  // 등록한 학교 24곳의 학교 페이지(콘텐츠 전 noindex, 과목 route 0) = +48 → 2505 → 2553, sitemap 470 → 494, noindex 2033 → 2057.
+  totalRoutes: 2553,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -43,7 +45,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 470,
-  noindexCount: 2033,
+  sitemapCount: 494,
+  noindexCount: 2057,
   brokenLinks: 0,
 };
