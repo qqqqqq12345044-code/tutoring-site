@@ -178,6 +178,7 @@ const listedSchools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "dogok2-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "gangnam-high-school",
@@ -186,6 +187,7 @@ const listedSchools: School[] = [
     level: "고등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "gaepo2-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
 
   // 서울 강남구 추가
