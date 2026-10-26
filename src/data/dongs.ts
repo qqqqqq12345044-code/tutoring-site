@@ -149,6 +149,9 @@ export const dongs: AdminDong[] = [
   { slug: "gayang3-dong", code: "1150060500", name: "가양제3동", citySlug: "gangseo", legalDongs: ["가양동"] },
   { slug: "ahyeon-dong", code: "1144055500", name: "아현동", citySlug: "mapo", legalDongs: ["아현동", "공덕동", "염리동"] },
   { slug: "sinjeong4-dong", code: "1147065000", name: "신정4동", citySlug: "yangcheon", legalDongs: ["신정동"] },
+
+  // 2026-10-26 전국 15차 batch (docs/qa/national-dong-batch15-2026-10-26.md).
+  { slug: "bangbae4-dong", code: "1165062100", name: "방배4동", citySlug: "seocho", legalDongs: ["방배동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

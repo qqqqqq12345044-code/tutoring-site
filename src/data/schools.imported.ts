@@ -183,6 +183,9 @@ export const importedSchools: School[] = [
   imported("seoulyeongsang-high-school", "서울영상고등학교", "yangcheon", undefined, "고등학교", "sinjeong4-dong", { code: "7010795", office: "B10", roadAddress: "서울특별시 양천구 목동로11길 46", legalDong: "신정동", foundation: "사립", coed: "남녀공학", highSchoolType: "특성화고", founded: "1961-12-08" }), // 양천구 신정4동
   imported("seoulyangdong-elementary-school", "서울양동초등학교", "yangcheon", undefined, "초등학교", "sinjeong4-dong", { code: "7081459", office: "B10", roadAddress: "서울특별시 양천구 오목로23길 24", legalDong: "신정동", foundation: "공립", coed: "남녀공학", founded: "1972-08-11" }), // 양천구 신정4동
   imported("seoulyangmok-elementary-school", "서울양목초등학교", "yangcheon", undefined, "초등학교", "sinjeong4-dong", { code: "7081461", office: "B10", roadAddress: "서울특별시 양천구 목동로11길 30", legalDong: "신정동", foundation: "공립", coed: "남녀공학", founded: "1980-04-17" }), // 양천구 신정4동
+  imported("seomunyeoja-high-school", "서문여자고등학교", "seocho", undefined, "고등학교", "bangbae4-dong", { code: "7010183", office: "B10", roadAddress: "서울특별시 서초구 동광로12길 84", legalDong: "방배동", foundation: "사립", coed: "여학교", highSchoolType: "일반고", founded: "1972-12-29" }), // 서초구 방배4동
+  imported("seoulbangbae-elementary-school", "서울방배초등학교", "seocho", undefined, "초등학교", "bangbae4-dong", { code: "7091387", office: "B10", roadAddress: "서울특별시 서초구 방배중앙로13길 26", legalDong: "방배동", foundation: "공립", coed: "남녀공학", founded: "1975-09-12" }), // 서초구 방배4동
+  imported("seomunyeoja-middle-school", "서문여자중학교", "seocho", undefined, "중학교", "bangbae4-dong", { code: "7091451", office: "B10", roadAddress: "서울특별시 서초구 동광로12길 84", legalDong: "방배동", foundation: "사립", coed: "여학교", founded: "1978-12-29" }), // 서초구 방배4동
 ];
 
 function imported(
