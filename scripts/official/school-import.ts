@@ -28,6 +28,7 @@ import { dongs } from "@/data/dongs";
 import { schools } from "@/data/schools";
 import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { loadAdminDongTable, officialSigunguNames } from "./lib/admin-dong-table";
+import { disclosedFromManifest, previouslyDisclosed, resolveOperating } from "./lib/operating";
 
 const NATIONAL = "data/official/national-school-dongs.json";
 const REGISTERED = "data/official/school-dongs.json";
@@ -133,7 +134,12 @@ function neisRows(): Map<string, Record<string, string | null>> {
 function disclosedCodes(): Set<string> {
   if (!existsSync(SCHOOLINFO_MANIFEST)) return new Set();
   const m = JSON.parse(readFileSync(SCHOOLINFO_MANIFEST, "utf-8")).schools as Record<string, { term?: string; files?: object; error?: string }>;
-  return new Set(Object.entries(m).filter(([, e]) => e.term === "3" && !e.error && Object.keys(e.files ?? {}).length > 0).map(([c]) => c));
+  return disclosedFromManifest(m);
+}
+
+/** Confirmations saved by earlier runs (kept even when this PC's manifest lacks the school). */
+function savedDisclosedCodes(): Set<string> {
+  return existsSync(CANDIDATES) ? previouslyDisclosed(JSON.parse(readFileSync(CANDIDATES, "utf-8")).records) : new Set();
 }
 
 function registeredByCode(): Map<string, string> {
@@ -154,6 +160,7 @@ function buildCandidates(): { list: SchoolCandidate[]; registry: Record<string, 
   for (const [code, slug] of registered) if (!registry[code]) registry[code] = slug;
   const idx = sigunguIndex();
   const disclosed = disclosedCodes();
+  const savedDisclosed = savedDisclosedCodes();
   // NEIS lists (가칭)/개교예정 rows with a blank code (7 spaces): no identity, so they are counted but not listed.
   const all = readNational();
   const recs = all.filter((r) => r.neisCode?.trim()).sort((a, b) => a.neisCode.localeCompare(b.neisCode));
@@ -197,7 +204,7 @@ function buildCandidates(): { list: SchoolCandidate[]; registry: Record<string, 
       dongName: r.dongName,
       citySlug: region?.city,
       districtSlug: region?.district,
-      operating: disclosed.has(r.neisCode) ? "disclosed-2026-3" : "unverified",
+      operating: resolveOperating(r.neisCode, disclosed, savedDisclosed),
       reason: r.state === "CONFIRMED" ? (region ? undefined : `사이트 지역 노드 없음: ${where?.sido} ${where?.sigungu}`) : r.reason,
     });
   }
