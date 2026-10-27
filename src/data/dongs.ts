@@ -165,6 +165,11 @@ export const dongs: AdminDong[] = [
   { slug: "gaepo1-dong", code: "1168066000", name: "개포1동", citySlug: "gangnam", legalDongs: ["개포동"] },
   { slug: "samseong1-dong", code: "1168058000", name: "삼성1동", citySlug: "gangnam", legalDongs: ["삼성동"] },
   { slug: "hwajeong1-dong", code: "4128162100", name: "화정1동", citySlug: "goyang", legalDongs: ["화정동"] },
+
+  // 2026-10-27 전국 19차 batch (docs/qa/national-dong-batch19-2026-10-27.md).
+  { slug: "yeoksam2-dong", code: "1168065000", name: "역삼2동", citySlug: "gangnam", legalDongs: ["역삼동"] },
+  { slug: "yeomchang-dong", code: "1150051000", name: "염창동", citySlug: "gangseo", legalDongs: ["염창동", "가양동"] },
+  { slug: "gwangyo-dong", code: "2817770000", name: "관교동", citySlug: "michuhol", legalDongs: ["관교동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

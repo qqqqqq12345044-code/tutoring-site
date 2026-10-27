@@ -216,6 +216,7 @@ const listedSchools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "yeoksam2-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "apgujeong-middle-school",
@@ -984,6 +985,7 @@ const listedSchools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "gwangyo-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "michuhol-high-school",
