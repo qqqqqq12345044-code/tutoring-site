@@ -241,6 +241,7 @@ const listedSchools: School[] = [
     level: "고등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "sinsa-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
 
   // 서울 서초구
@@ -1013,6 +1014,7 @@ const listedSchools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "yeonsu3-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "yeonsu-high-school",
@@ -1093,6 +1095,7 @@ const listedSchools: School[] = [
     level: "중학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "gyesan4-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "gyeyang-high-school",
