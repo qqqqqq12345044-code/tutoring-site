@@ -103,3 +103,10 @@
 | B2 | 서울 강남 수서동 | 4 | 2(수서초, 수서중) | 0 | 2(고) | 초·중 | 6 | 4 | 고교 2곳 PDF |
 - 그 밖: 인천 연수3동(초 2만 HWP, 중·고 zip, 인천중 검색 미일치), 송도3동(초 2 HWP, 나머지 PDF/zip) → 차순위. 서울 잠실7동·서초2동·신사동(초·중 HWP 2곳씩) 차순위.
 - 인천 확대 가능: 미추홀·연수·계양·남동·부평은 조합 route가 있어 기존 구조로 수용 가능.
+
+# Production (2026-10-27)
+- 배포 전: origin/main = Production = `1256e45`, work = `cea3072`(main 위 2커밋, FF). 작업 트리 clean, 다른 세션 변경 없음.
+- 배포 전 audit: `validate:full` PASS(Routes 2,773 / Sitemap 626 / Noindex 2,145, region-dong 69/69·subject 345/345 GREEN, indexed RED 0). main..work 9파일(데이터·QA 문서·test·baseline), secret 패턴 0(문서 내 "secret 패턴 0" 문구 오탐 1). Preview(`tutoring-site-i6118lh57`)는 Vercel 인증 보호(302)라 비인증 확인 불가 → 로컬 build 검증으로 대체.
+- `git push origin cea3072:main`(FF) → GitHub Production deployment `7350898516` success.
+- Smoke: sitemap 608 → **626**, 전부 200, 이전 URL 손실 0, 신규 18(허브 3 + 동×과목 15) 모두 index 가능·canonical 일치. 미작성 조합(`yeoksam2-dong/physics`, `gwangyo-dong/history`, `yeomchang-dong/chemistry`) 404, `/school/gwangyoyeoja-middle-school` `noindex, follow`.
+- 롤백 지점: `1256e45` (deployment 7349736708).
