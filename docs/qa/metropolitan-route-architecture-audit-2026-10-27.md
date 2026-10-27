@@ -156,3 +156,17 @@ route 파일(`src/app/region/**`), `sitemap.ts`, `indexability.ts`, `regionRoute
 광주 추가분(A안): `scripts/official/lib/admin-dong-table.ts` `officialSigunguNames` L36에 통합 시·도 fallback을 넣는다(~5-10줄 + 테스트). 그 뒤 `school-import.ts --write`로 후보를 재생성한다(route 변화 0). B/C안은 별도 프로젝트 규모다: regions.ts 시·도 노드, redirect 설정, 내부 링크, validator 전부.
 
 UNVERIFIED 목록: 실제 route/sitemap 증가 수치(스크립트 미실행), 각 광역시 교육청 office 코드와 학교알리미 fetch 가능 여부, `dongSlugFor` romanize 결과, 부산 등의 동을 추가했을 때 validate:quick이 실제로 통과하는지(코드 경로상 통과 예상).
+
+# Official data sampling (2026-10-27, 읽기 전용 probe)
+도시별 CONFIRMED 중학교 2곳씩 학교알리미 4-가 첨부 목록만 조회(1초 간격, 다운로드 0).
+
+| 도시 | 학교 | 결과 |
+|---|---|---|
+| 대구 | 경북대학교사범대학부설중(대봉1동) / 매천중(태전2동) | PDF 3 / hwp 2·hwpx 1 |
+| 부산 | 감천중(감천제1동) / 연일중(연산제8동) | hwp 3 / zip 3 |
+| 대전 | 대전가양중(가양2동) / 대전괴정중(괴정동) | hwp 1 / hwp 3 |
+| 울산 | 강동중(강동동) / 고헌중(송정동) | 학교알리미 NOTFOUND / hwp 1·hwpx 2 |
+| 광주 | — | `school-candidates.json`에 광주 citySlug로 매핑된 후보 0건(위 Gwangju 절의 시·도명 매핑 gap과 일치) |
+
+- 부산·대구·대전·울산은 표본 8곳 중 6곳이 HWP/HWPX(+zip 1) → 수도권과 같은 READY 수준을 기대할 수 있다. 데이터 측 걸림돌은 형식이 아니라 첫 학교 등록 게이트(`school-import.ts` L284)다.
+- 표본이 작아(도시당 2곳) 도시별 READY 비율은 추정하지 않는다.

@@ -62,3 +62,16 @@
 | B3 | 유림2동 | 경기 용인 처인구 | 7 | 고진중 hwp 3 | 고림중 PDF 14 | 6 | ~7 | 중학교 1곳만 READY |
 - 제외: 대화동(고양) 중·고 전부 PDF, 도화2·3동(미추홀) 중학교 전부 PDF, 상2동(부천) 상동중 PDF·상일중 NOTFOUND.
 - 광역시(부산·대구·대전·울산·광주)는 `docs/qa/metropolitan-route-architecture-audit-2026-10-27.md` 결론대로 첫 학교 등록 게이트 정책 결정 전에는 batch 후보에 넣지 않는다.
+
+# Thin indexed page mini-audit (Production 공개 HTML 읽기 전용, 구현·색인 변경 0)
+`<main>` 본문 글자 수·h2·내부 링크·수치(%) 사실 수로 15개 샘플을 분류했다.
+
+| 페이지 | 글자 | h2 | 내부 링크 | 분류 | 메모 |
+|---|---:|---:|---:|---|---|
+| /region/seoul, /region/gyeonggi | 417 | 1 | 25·31 | IMPROVE | 시·도 허브가 링크 목록 위주 — 하위 동·과목 평가계획 요약(기준 표시) 추가 후보 |
+| /region/incheon | 361 | 1 | 11 | IMPROVE | 인천 동 9곳이 생겼으나 허브 본문은 최소 |
+| /region/seoul/gangnam, /region/seoul/songpa | 2,545·2,342 | 3 | 75·71 | KEEP | 동·과목 링크와 요약 충분 |
+| /region/gyeonggi/anyang, /region/incheon/yeonsu, /region/incheon/gyeyang, /region/gyeonggi/bucheon | 1,192~1,469 | 3 | 26~33 | INVESTIGATE | 동 수가 적은 구·시 — 동 허브 요약 노출 방식 확인 |
+| 색인된 학교 허브 6곳(성문고·대치초·송파고·서초중·부평초·남동중) | 533~562 | 2 | 4~7 | IMPROVE | 수치 사실 0 — 학교알리미 평가계획(공시 확인분) 요약을 학교 허브에 붙이는 것이 다음 개선 후보 |
+
+- 우선순위: ① 색인된 학교 허브(수가 많고 가장 얇음) ② 시·도 허브 3곳 ③ 동이 적은 구·시 페이지. 어느 것도 noindex 전환 대상이 아니며, 개선은 별도 작업으로.
