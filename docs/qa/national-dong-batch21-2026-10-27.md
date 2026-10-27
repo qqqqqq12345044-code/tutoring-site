@@ -55,3 +55,9 @@
 # Render
 - 로컬 production 서버(깨끗한 build): 신규 12페이지 200·`index, follow`·canonical 일치·H1 1개·BreadcrumbList·기준 표시·맥락 상담 CTA. 미작성 조합(`suseo-dong/physics`, `seocho2-dong/history`)과 보류한 `/region/seoul/songpa/jamsil7-dong` 404·noindex. `/school/suseo-middle-school`·`/school/seoun-middle-school`·`/school/yangjae-high-school` `noindex, follow`, 미등록 `/school/aju-middle-school` 404. 상위 강남구·서초구 페이지에서 신규 동 링크. 20차 18페이지 회귀 bad 0.
 - 참고(로컬 환경): 20차 때 띄운 로컬 서버가 남아 공유 `.next` 캐시에 이전 코드 기준 렌더(신규 동 noindex/404)를 써서 첫 smoke가 어긋났다. 다시 build하고 다른 포트의 새 서버로 재검사해 위 결과를 얻었다(Vercel build와 무관).
+
+# Production (2026-10-27)
+- 배포 전: origin/main = Production = `0ed9b41`, work = `ba6e908`(main 위 2커밋: candidates 정리 `e7ea3d4` + 21차, FF). Vercel preview build success.
+- `git push origin ba6e908:main`(FF) → GitHub Production deployment `7351706821` success.
+- Smoke: sitemap 644 → **656**, 전부 200, 이전 URL 손실 0, 신규 12(허브 2 + 동×과목 10) 모두 index 가능·canonical 일치. 미작성 조합·보류한 `/region/seoul/songpa/jamsil7-dong` 404, `/school/suseo-middle-school`·`/school/yangjae-high-school` `noindex, follow`.
+- 롤백 지점: `0ed9b41` (deployment 7351321519).
