@@ -88,3 +88,10 @@
 - 20차 사용: 용현5동·송도1동·갈산동. 수집했지만 본문 미사용: 인천용현초·인천용현남초(READY, 용학초로 충분).
 - 보류 유지: 목4동·오정동·귀인동·부림동·역곡1동·성산제2동, 신정7동·대치2동·논현2동·문정1동·압구정동(PDF 위주). BACKUP 계산4동·수서동.
 - 다음 후보(19차 조사 기준, 미조회 포함): 인천 연수3동(초 HWP, 중·고 zip), 송도3동(초 HWP, 나머지 PDF/zip), 서울 잠실7동·서초2동·신사동(초·중 HWP 2곳씩). 다음 batch 전에 읽기 전용 조사를 다시 한다.
+
+# Production (2026-10-27)
+- 배포 전: origin/main = Production = `cea3072`, work = `0ed9b41`(main 위 2커밋, FF). 작업 트리 clean, 다른 세션 변경 없음. Vercel preview build success(인증 보호라 페이지는 로컬 build로 확인).
+- 배포 commit 그대로 `validate:full` 재실행 PASS(2,809 / 644 / 2,163, dong 72/72·subject 360/360 GREEN, indexed RED 0).
+- `git push origin 0ed9b41:main`(FF) → GitHub Production deployment `7351321519` success.
+- Smoke: sitemap 626 → **644**, 전부 200, 이전 URL 손실 0, 신규 18(허브 3 + 동×과목 15) 모두 index 가능·canonical 일치. 미작성 조합(`yonghyeon5-dong/physics`, `songdo1-dong/history`, `galsan-dong/chemistry`) 404, `/school/yonghyeon-middle-school`·`/school/daean-middle-school` `noindex, follow`.
+- 롤백 지점: `cea3072` (deployment 7350898516).
