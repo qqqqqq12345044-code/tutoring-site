@@ -12,6 +12,8 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
 import SourceList from "@/components/SourceList";
+import PlanBasisNote from "@/components/PlanBasisNote";
+import { isSchoolInfoPlanSource } from "@/data/sources";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 
 function resolveContext(schoolSlug: string, subjectSlug: string) {
@@ -75,6 +77,7 @@ export default async function SchoolSubjectPage(props: PageProps<"/school/[schoo
             {content?.intro ??
               `${ctx.school.name} 학생도 ${ctx.subject.name} 학교 진도와 시험 일정에 맞춘 1:1 상담이 가능합니다. 현재 학습 상황과 목표를 먼저 확인하고 필요한 부분부터 수업을 시작합니다.`}
           </p>
+          {content?.sources?.some(isSchoolInfoPlanSource) && <PlanBasisNote className="max-w-2xl" />}
         </div>
       </section>
 

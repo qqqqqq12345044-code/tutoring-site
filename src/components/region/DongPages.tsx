@@ -8,6 +8,7 @@ import { getGradeSubjectPlaybook } from "@/data/gradeSubjectPlaybook";
 import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
 import { getDongSubjectContent, hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import type { School } from "@/data/schools";
+import { isSchoolInfoPlanSource } from "@/data/sources";
 import { buildMetadata } from "@/lib/metadata";
 import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
@@ -19,6 +20,7 @@ import StepFlow from "@/components/ui/StepFlow";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import SourceList from "@/components/SourceList";
+import PlanBasisNote from "@/components/PlanBasisNote";
 import StudyThumbnail from "@/components/StudyThumbnail";
 
 /**
@@ -165,6 +167,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
   const content = buildDongHubContent(ctx.dong, ctx.region.name);
   const base = dongBase(ctx);
   const otherDongs = getDongsByCity(ctx.region.slug).filter((d) => d.slug !== ctx.dong.slug);
+  const planBasis = content.sources.some(isSchoolInfoPlanSource);
 
   return (
     <>
@@ -178,6 +181,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">초·중·고 1:1 맞춤 수업</span>
               </h1>
               <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
+              {planBasis && <PlanBasisNote className="mt-3" />}
             </div>
             <div className="hidden md:block overflow-hidden rounded-2xl border border-border-subtle">
               <StudyThumbnail motif="region" />
@@ -269,6 +273,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
   // Written (평가계획) pages show all their notes in the main section.
   const levelNotes = content.planBased ? content.notes : content.notes.filter((n) => n.title.endsWith(`${subject.name} 공부 포인트`));
   const otherNotes = content.notes.filter((n) => !levelNotes.includes(n));
+  const planBasis = content.planBased && content.sources.some(isSchoolInfoPlanSource);
   const heading = content.planBased ? `학교별 2학기 ${subject.name} 평가계획` : `학교급별 ${subject.name} 공부 포인트`;
 
   return (
@@ -289,6 +294,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">{heading}</span>
               </h1>
               <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
+              {planBasis && <PlanBasisNote className="mt-3" />}
             </div>
             <div className="hidden md:block overflow-hidden rounded-2xl border border-border-subtle">
               <StudyThumbnail motif={motifForSlug(subject.slug)} />
@@ -298,11 +304,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
       </section>
 
       <section className="container-page py-14 md:py-16">
-        <SectionHeader
-          align="left"
-          title={`${ctx.dong.name} ${heading}`}
-          description={content.planBased ? "학교알리미에 공시된 각 학교의 2026학년도 2학기 교과별 평가계획 원문을 확인해 정리했습니다. 시기와 과제는 학교 사정에 따라 바뀔 수 있습니다." : undefined}
-        />
+        <SectionHeader align="left" title={`${ctx.dong.name} ${heading}`} />
         <NotesGrid notes={levelNotes} />
         <SchoolsByLevel list={list} />
       </section>

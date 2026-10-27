@@ -6,6 +6,8 @@
 export interface ContentSource {
   label: string;
   url: string;
+  /** Set only by schoolInfoPlanSource — lets templates show the plan-basis note without parsing labels. */
+  schoolInfoPlan?: true;
 }
 
 /**
@@ -377,12 +379,21 @@ const SCHOOLINFO_IDS = {
   화중초등학교: "865d855b-db54-4490-bfd8-6e461d3d2618",
 } as const;
 
+/** 평가계획 공시의 학기·공시 시점 — 출처 라벨과 페이지 상단 기준 표시(PlanBasisNote)가 같은 값을 쓴다. */
+export const SCHOOLINFO_PLAN_TERM = { term: "2026학년도 2학기", disclosed: "2026년 9월 공시" } as const;
+
 /** 학교알리미의 2026학년도 2학기 교과별(학년별) 교수·학습 및 평가계획 공시(학교 페이지에서 해당 공시항목 선택). */
 export function schoolInfoPlanSource(name: keyof typeof SCHOOLINFO_IDS): ContentSource {
   return {
-    label: `학교알리미 — ${name} 교과별(학년별) 교수·학습 및 평가계획 (2026학년도 2학기, 2026년 9월 공시)`,
+    label: `학교알리미 — ${name} 교과별(학년별) 교수·학습 및 평가계획 (${SCHOOLINFO_PLAN_TERM.term}, ${SCHOOLINFO_PLAN_TERM.disclosed})`,
     url: `${SCHOOLINFO_PAGE}?SHL_IDF_CD=${SCHOOLINFO_IDS[name]}`,
+    schoolInfoPlan: true,
   };
+}
+
+/** True for sources made by schoolInfoPlanSource (a page actually built from 학교알리미 평가계획 원문). */
+export function isSchoolInfoPlanSource(src: ContentSource): boolean {
+  return src.schoolInfoPlan === true;
 }
 
 /** 학교알리미 학교 페이지 자체(공시 현황·학교 상태 표시 확인용). */
