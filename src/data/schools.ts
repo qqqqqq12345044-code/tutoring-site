@@ -170,6 +170,7 @@ const listedSchools: School[] = [
     level: "초등학교",
     availableSubjectSlugs: ALL_SUBJECTS,
     dataSource: "manual",
+    dongSlug: "gaepo1-dong", // 주소정보누리집 행정동명 → 공식 행정동 (data/official/school-dongs.json)
   },
   {
     slug: "gangnam-middle-school",
