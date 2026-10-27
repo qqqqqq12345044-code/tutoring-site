@@ -240,6 +240,12 @@ export const importedSchools: School[] = [
   imported("anyangdeokhyeon-elementary-school", "안양덕현초등학교", "anyang", undefined, "초등학교", "galsan-dong", { code: "7569035", office: "J10", roadAddress: "경기도 안양시 동안구 갈산로 34", legalDong: "호계동", foundation: "공립", coed: "남녀공학", founded: "1990-05-31" }), // 안양시 동안구 갈산동
   imported("daean-middle-school", "대안중학교", "anyang", undefined, "중학교", "galsan-dong", { code: "7569057", office: "J10", roadAddress: "경기도 안양시 동안구 흥안대로249번길 25", legalDong: "호계동", foundation: "공립", coed: "남학교", founded: "1984-01-16" }), // 안양시 동안구 갈산동
   imported("daeanyeoja-middle-school", "대안여자중학교", "anyang", undefined, "중학교", "galsan-dong", { code: "7569058", office: "J10", roadAddress: "경기도 안양시 동안구 흥안대로223번길 46", legalDong: "호계동", foundation: "공립", coed: "여학교", founded: "1985-12-18" }), // 안양시 동안구 갈산동
+  imported("seoulsejong-high-school", "서울세종고등학교", "gangnam", undefined, "고등학교", "suseo-dong", { code: "7010186", office: "B10", roadAddress: "서울특별시 강남구 광평로51길 36", legalDong: "수서동", foundation: "사립", coed: "남녀공학", highSchoolType: "일반고", founded: "1958-12-28" }), // 강남구 수서동
+  imported("daejindijain-high-school", "대진디자인고등학교", "gangnam", undefined, "고등학교", "suseo-dong", { code: "7010740", office: "B10", roadAddress: "서울특별시 강남구 광평로39길 93", legalDong: "수서동", foundation: "사립", coed: "남녀공학", highSchoolType: "특성화고", founded: "1994-03-25" }), // 강남구 수서동
+  imported("seoulsuseo-elementary-school", "서울수서초등학교", "gangnam", undefined, "초등학교", "suseo-dong", { code: "7091397", office: "B10", roadAddress: "서울특별시 강남구 광평로51길 46", legalDong: "수서동", foundation: "공립", coed: "남녀공학", founded: "1992-07-15" }), // 강남구 수서동
+  imported("suseo-middle-school", "수서중학교", "gangnam", undefined, "중학교", "suseo-dong", { code: "7091435", office: "B10", roadAddress: "서울특별시 강남구 광평로59길 57", legalDong: "수서동", foundation: "공립", coed: "남녀공학", founded: "1993-04-30" }), // 강남구 수서동
+  imported("seoulseoi-elementary-school", "서울서이초등학교", "seocho", undefined, "초등학교", "seocho2-dong", { code: "7091394", office: "B10", roadAddress: "서울특별시 서초구 서운로 35", legalDong: "서초동", foundation: "공립", coed: "남녀공학", founded: "1983-12-03" }), // 서초구 서초2동
+  imported("seoun-middle-school", "서운중학교", "seocho", undefined, "중학교", "seocho2-dong", { code: "7091432", office: "B10", roadAddress: "서울특별시 서초구 서운로 115", legalDong: "서초동", foundation: "공립", coed: "남녀공학", founded: "1982-01-07" }), // 서초구 서초2동
 ];
 
 function imported(
