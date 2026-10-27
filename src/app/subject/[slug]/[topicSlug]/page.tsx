@@ -96,6 +96,7 @@ export default async function SubjectTopicPage(props: PageProps<"/subject/[slug]
         <ConsultCTA
           title={`${ctx.subject.name} ${ctx.topic.title}, 지금 상담부터 받아보세요`}
           description="현재 학습 상황을 알려주시면 학습 방향을 안내해드립니다."
+          context={{ subject: ctx.subject.slug }}
         />
       </section>
     </>

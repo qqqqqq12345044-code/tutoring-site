@@ -190,7 +190,10 @@ export default async function RegionFilterSubjectPage(
       )}
 
       <section className="container-page py-14 md:py-16">
-        <ConsultCTA title={`${label} ${ctx.subject.name}과외 상담받기`} />
+        <ConsultCTA
+          title={`${label} ${ctx.subject.name}과외 상담받기`}
+          context={{ subject: ctx.subject.slug, region: ctx.type === "district" ? ctx.district.slug : ctx.region.slug }}
+        />
       </section>
 
       <section className="container-page pb-16 md:pb-20">

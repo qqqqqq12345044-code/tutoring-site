@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import { consultHref, type ConsultContext } from "@/lib/consultContext";
 
 interface ConsultCTAProps {
   title: string;
@@ -8,6 +9,8 @@ interface ConsultCTAProps {
   ctaLabel?: string;
   /** Set false to hide the secondary Kakao button (default: shown). */
   showKakao?: boolean;
+  /** Subject/area of the current page, passed to /consult so the form starts prefilled. */
+  context?: ConsultContext;
 }
 
 export default function ConsultCTA({
@@ -15,6 +18,7 @@ export default function ConsultCTA({
   description,
   ctaLabel = "무료 상담받기",
   showKakao = true,
+  context,
 }: ConsultCTAProps) {
   return (
     <div
@@ -26,7 +30,7 @@ export default function ConsultCTA({
         {description && <p className="mt-1.5 text-sm text-text-muted">{description}</p>}
       </div>
       <div className="flex flex-col sm:flex-row gap-2.5 shrink-0">
-        <PrimaryButton href="/consult" size="lg">
+        <PrimaryButton href={consultHref(context)} size="lg">
           {ctaLabel}
         </PrimaryButton>
         {showKakao && siteConfig.kakaoUrl && (

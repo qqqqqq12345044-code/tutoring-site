@@ -255,7 +255,11 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
       </section>
 
       <section className="container-page pb-16 md:pb-20">
-        <ConsultCTA title={`${ctx.region.name} ${ctx.dong.name} 과외 상담받기`} description="학교와 학년, 과목을 알려주시면 안내해드립니다." />
+        <ConsultCTA
+          title={`${ctx.region.name} ${ctx.dong.name} 과외 상담받기`}
+          description="학교와 학년, 과목을 알려주시면 안내해드립니다."
+          context={{ region: ctx.region.slug, dong: ctx.dong.slug }}
+        />
       </section>
     </>
   );
@@ -389,6 +393,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
         <ConsultCTA
           title={`${ctx.region.name} ${ctx.dong.name} ${subject.name}과외 상담받기`}
           description="학교와 학년, 현재 고민을 알려주시면 안내해드립니다."
+          context={{ subject: subject.slug, region: ctx.region.slug, dong: ctx.dong.slug }}
         />
       </section>
     </>

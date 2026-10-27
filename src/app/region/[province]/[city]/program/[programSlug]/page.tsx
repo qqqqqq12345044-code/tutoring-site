@@ -125,7 +125,7 @@ export default async function RegionProgramPage(props: PageProps<"/region/[provi
       )}
 
       <section className="container-page py-14 md:py-16">
-        <ConsultCTA title={`${ctx.region.name} ${ctx.program.name}과외 상담받기`} />
+        <ConsultCTA title={`${ctx.region.name} ${ctx.program.name}과외 상담받기`} context={{ region: ctx.region.slug }} />
       </section>
 
       <section className="container-page pb-14 md:pb-16 grid md:grid-cols-2 gap-4">

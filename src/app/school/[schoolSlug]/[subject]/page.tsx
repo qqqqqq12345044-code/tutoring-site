@@ -106,7 +106,10 @@ export default async function SchoolSubjectPage(props: PageProps<"/school/[schoo
       )}
 
       <section className="container-page py-14 md:py-16">
-        <ConsultCTA title={`${ctx.school.name} ${ctx.subject.name}과외 상담받기`} />
+        <ConsultCTA
+          title={`${ctx.school.name} ${ctx.subject.name}과외 상담받기`}
+          context={{ subject: ctx.subject.slug, region: ctx.school.cityRegionSlug, dong: ctx.school.dongSlug }}
+        />
       </section>
 
       <section className="container-page pb-16 md:pb-20 grid md:grid-cols-2 gap-4">

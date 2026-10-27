@@ -125,7 +125,7 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
       )}
 
       <section className="container-page pb-16 md:pb-20">
-        <ConsultCTA title={`${school.name} 학생 맞춤 과외 상담받기`} />
+        <ConsultCTA title={`${school.name} 학생 맞춤 과외 상담받기`} context={{ region: school.cityRegionSlug, dong: school.dongSlug }} />
       </section>
 
       <section className="container-page pb-16 md:pb-20">

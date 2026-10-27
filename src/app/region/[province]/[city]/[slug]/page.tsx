@@ -357,7 +357,11 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
         )}
 
         <section className="container-page pb-16 md:pb-20">
-          <ConsultCTA title={`${ctx.region.name} ${ctx.subject.name}과외 상담받기`} description="학년과 목표를 알려주시면 안내해드립니다." />
+          <ConsultCTA
+            title={`${ctx.region.name} ${ctx.subject.name}과외 상담받기`}
+            description="학년과 목표를 알려주시면 안내해드립니다."
+            context={{ subject: ctx.subject.slug, region: ctx.region.slug }}
+          />
         </section>
       </>
     );
@@ -429,7 +433,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
         </section>
 
         <section className="container-page pb-16 md:pb-20">
-          <ConsultCTA title={`${ctx.region.name} ${ctx.grade.name}과외 상담받기`} />
+          <ConsultCTA title={`${ctx.region.name} ${ctx.grade.name}과외 상담받기`} context={{ region: ctx.region.slug }} />
         </section>
       </>
     );
@@ -468,7 +472,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
       </section>
 
       <section className="container-page pb-16 md:pb-20">
-        <ConsultCTA title={`${ctx.district.name} 과외 상담받기`} />
+        <ConsultCTA title={`${ctx.district.name} 과외 상담받기`} context={{ region: ctx.district.slug }} />
       </section>
     </>
   );

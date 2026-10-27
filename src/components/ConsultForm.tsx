@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { MessageCircle, Loader2, CheckCircle2, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
@@ -8,6 +8,7 @@ import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getProvinces } from "@/data/regions";
 import { readConsultSource, trackEvent } from "@/lib/analytics";
+import { resolveConsultPrefill } from "@/lib/consultContext";
 
 const gradeOptions = [...grades.flatMap((g) => g.subGrades.map((sg) => sg.label)), "기타"];
 
@@ -34,6 +35,22 @@ export default function ConsultForm() {
   // Apps Script recognize the retry; changing any field starts a new one.
   const attemptRef = useRef<{ fingerprint: string; submissionId: string } | null>(null);
   const startedRef = useRef(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Page context from the CTA that led here (/consult?subject=…&region=…&dong=…), applied after hydration so the
+  // static page renders identically with or without a query. Only empty fields are filled; unknown values are
+  // dropped by resolveConsultPrefill, and setting .value fires no events (no form-start analytics).
+  useEffect(() => {
+    const form = formRef.current;
+    if (!form) return;
+    const prefill = resolveConsultPrefill(window.location.search);
+    for (const [name, value] of Object.entries(prefill)) {
+      const field = form.elements.namedItem(name);
+      if (!value || !(field instanceof HTMLSelectElement || field instanceof HTMLInputElement) || field.value) continue;
+      if (field instanceof HTMLSelectElement && ![...field.options].some((o) => o.value === value)) continue;
+      field.value = value;
+    }
+  }, []);
 
   function handleFirstInteraction() {
     if (startedRef.current) return;
@@ -110,6 +127,7 @@ export default function ConsultForm() {
 
   return (
     <form
+      ref={formRef}
       onSubmit={handleSubmit}
       onFocus={handleFirstInteraction}
       className="rounded-2xl border border-border-subtle bg-white p-5 sm:p-6 md:p-8 flex flex-col gap-5 md:gap-6"

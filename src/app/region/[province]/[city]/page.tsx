@@ -199,7 +199,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
       )}
 
       <section className="container-page pb-16 md:pb-20">
-        <ConsultCTA title={`${region.name} 과외, 지금 상담부터 받아보세요`} description="지역과 학년, 과목을 알려주시면 안내해드립니다." />
+        <ConsultCTA title={`${region.name} 과외, 지금 상담부터 받아보세요`} description="지역과 학년, 과목을 알려주시면 안내해드립니다." context={{ region: region.slug }} />
       </section>
     </>
   );
