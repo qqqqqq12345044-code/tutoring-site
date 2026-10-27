@@ -151,6 +151,12 @@ function gradeLinks(ctx: DongCtx, list: School[]): RelatedLink[] {
     ]);
 }
 
+/** Sub-grade page for a playbook point titled "중2 …" (/grade/middle/2); the level hub when no sub-grade label matches. */
+function subGradeHref(gradeSlug: string, pointTitle: string): string {
+  const sub = grades.find((g) => g.slug === gradeSlug)?.subGrades.find((sg) => pointTitle.startsWith(`${sg.label} `));
+  return sub ? `/grade/${gradeSlug}/${sub.slug}` : `/grade/${gradeSlug}`;
+}
+
 function guideLinks(list: School[], subject?: Subject): RelatedLink[] {
   const categories = new Set<string>([
     ...(subject ? [`${subject.slug}-study`] : []),
@@ -322,42 +328,66 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
         </section>
       )}
 
-      {playbooks.length > 0 && (
+      {(playbooks.length > 0 || guide) && (
         <section className="container-page py-14 md:py-16">
-          <SectionHeader align="left" title={`학년별 ${subject.name} 학습 전략`} description="지역과 관계없이 같은 학년에서 공통으로 확인하는 내용입니다." />
+          <SectionHeader
+            align="left"
+            title={`학년별 ${subject.name} 준비와 시험 대비`}
+            description="학교와 관계없이 공통으로 쓰는 학습 흐름은 학년·과목 페이지에 자세히 정리했습니다."
+          />
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {playbooks.flatMap(({ level, playbook }) =>
-              playbook!.focusPoints.map((p) => (
-                <div key={`${level}-${p.title}`} className="border-l-4 border-brand-light pl-5 py-0.5">
-                  <p className="font-bold text-navy">{p.title}</p>
-                  <p className="mt-2 text-sm text-text-muted leading-relaxed">{p.body}</p>
+            {playbooks.map(({ level, playbook }) => {
+              const gradeSlug = schoolLevelToGradeSlug[level];
+              return (
+                <div key={level} className="border-l-4 border-brand-light pl-5 py-0.5">
+                  <p className="font-bold text-navy">
+                    {level} {subject.name} 학년별 포인트
+                  </p>
+                  <ul className="mt-2 flex flex-col gap-1.5 text-sm">
+                    {playbook!.focusPoints.map((p) => (
+                      <li key={p.title}>
+                        <Link href={subGradeHref(gradeSlug, p.title)} className="text-text-main hover:text-brand transition-colors">
+                          {p.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              ))
+              );
+            })}
+            {guide && (
+              <div className="border-l-4 border-brand-light pl-5 py-0.5">
+                <p className="font-bold text-navy">시험 대비 흐름</p>
+                <p className="mt-2 text-sm text-text-muted leading-relaxed">{guide.examPlan.map((s) => s.when).join(" → ")}</p>
+                <ul className="mt-2 flex flex-col gap-1.5 text-sm">
+                  <li>
+                    <Link href={`${cityBase}/${subject.slug}`} className="text-text-main hover:text-brand transition-colors">
+                      {ctx.region.name} {subject.name}과외: 시험 4주 전부터의 단계별 계획
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/subject/${subject.slug}`} className="text-text-main hover:text-brand transition-colors">
+                      {subject.name} 내신 대비 방법
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             )}
           </div>
         </section>
       )}
 
-      {guide && (
-        <section className="bg-white border-y border-border-subtle">
-          <div className="container-page py-14 md:py-16">
-            <SectionHeader align="left" title={`시험 4주 전부터의 ${subject.name} 학습 계획`} description="지역과 관계없이 공통으로 쓰는 시험 대비 흐름입니다." />
-            <ol className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {guide.examPlan.map((step) => (
-                <li key={step.when} className="border-l-4 border-brand-light pl-5 py-0.5">
-                  <p className="text-sm font-bold text-brand">{step.when}</p>
-                  <p className="mt-2 text-sm text-text-main leading-relaxed">{step.focus}</p>
-                </li>
-              ))}
-            </ol>
+      <section className="bg-white border-y border-border-subtle">
+        <div className="container-page py-14 md:py-16">
+          <SectionHeader align="left" title="수업은 이렇게 진행합니다" />
+          <div className="mt-10">
+            <StepFlow steps={subject.process.map(({ title }) => ({ title }))} />
           </div>
-        </section>
-      )}
-
-      <section className="container-page py-14 md:py-16">
-        <SectionHeader align="left" title="수업은 이렇게 진행합니다" />
-        <div className="mt-10">
-          <StepFlow steps={subject.process} />
+          <p className="mt-8 text-sm">
+            <Link href={`/subject/${subject.slug}`} className="text-brand hover:underline underline-offset-2">
+              {subject.name}과외 학습 방식 자세히 보기
+            </Link>
+          </p>
         </div>
       </section>
 
