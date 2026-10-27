@@ -14,6 +14,8 @@ test("subject, city and 행정동 resolve to the form's option values", () => {
   assert.deepEqual(resolveConsultPrefill("?subject=math&region=gangseo&dong=hwagok4-dong"), { subject: "수학", province: "서울", cityDetail: "강서구 화곡제4동" });
   assert.deepEqual(resolveConsultPrefill("?region=goyang&dong=hwajeong1-dong"), { province: "경기", cityDetail: "고양시 화정1동" });
   assert.deepEqual(resolveConsultPrefill("?subject=science&region=michuhol&dong=gwangyo-dong"), { subject: "과학", province: "인천", cityDetail: "미추홀구 관교동" });
+  assert.deepEqual(resolveConsultPrefill("?subject=math&region=yeonsu&dong=songdo1-dong"), { subject: "수학", province: "인천", cityDetail: "연수구 송도1동" });
+  assert.deepEqual(resolveConsultPrefill("?region=anyang&dong=galsan-dong"), { province: "경기", cityDetail: "안양시 갈산동" });
 });
 
 test("province, city and district contexts", () => {

@@ -52,7 +52,10 @@ export const BASELINE = {
   // 2026-10-27 전국 19차 batch(새 학교알리미 수집, 첫 인천 미추홀구 동 포함): 역삼2동(강남)·염창동(강서)·관교동(인천 미추홀) 허브 3 + 동×과목 15
   // (GREEN·색인) + 등록한 학교 13곳의 학교 페이지(콘텐츠 전 noindex, 과목 route 0; 기등록 역삼중·관교중은 dongSlug만 연결)
   // = +31 → 2742 → 2773, sitemap 608 → 626, noindex 2132 → 2145.
-  totalRoutes: 2773,
+  // 2026-10-27 전국 20차 batch(새 학교알리미 수집, 첫 인천 연수구·안양 갈산동): 용현5동(인천 미추홀)·송도1동(인천 연수)·갈산동(안양) 허브 3
+  // + 동×과목 15 (GREEN·색인) + 등록한 학교 18곳의 학교 페이지(콘텐츠 전 noindex, 과목 route 0)
+  // = +36 → 2773 → 2809, sitemap 626 → 644, noindex 2145 → 2163.
+  totalRoutes: 2809,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -64,7 +67,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 626,
-  noindexCount: 2145,
+  sitemapCount: 644,
+  noindexCount: 2163,
   brokenLinks: 0,
 };
