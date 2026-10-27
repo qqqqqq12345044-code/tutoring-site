@@ -54,3 +54,9 @@
 
 # Render
 - 깨끗한 build + 직접 띄운 로컬 서버: 신규 18페이지 200·index·canonical 일치·H1 1개·BreadcrumbList·기준 표시·맥락 CTA. 미작성 조합·송도3동·잠실7동 404. 신규 학교(`/school/sinsa-middle-school`, `/school/incheonyeoja-high-school`) `noindex, follow`, 기등록 학교 색인 상태 불변. 상위 구 페이지에서 신규 동 링크. 20·21차 대표 페이지 회귀 0.
+
+# Production (2026-10-27)
+- 배포 전: origin/main = Production = `ba6e908`, work = `f7f359f`(FF), 작업 트리 clean, 다른 세션 변경 없음. Vercel preview build success.
+- `git push origin f7f359f:main`(FF) → GitHub Production deployment `7352198164` success.
+- Smoke: sitemap 656 → **674**, 전부 200, 이전 URL 손실 0, 신규 18(허브 3 + 동×과목 15) 모두 index 가능·canonical 일치. 미작성 조합 404, `/school/sinsa-middle-school`·`/school/incheonyeoja-high-school` `noindex, follow`, 기등록 `/school/gyeyang-middle-school` 색인 유지(배포 전과 동일).
+- 롤백 지점: `ba6e908` (deployment 7351706821).
