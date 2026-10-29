@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from "crypto";
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { validateConsultBody } from "@/lib/consult/validate";
 import type { ConsultPayload } from "@/lib/consult/types";
 import {
@@ -8,6 +8,8 @@ import {
   isIdempotentWebhook,
 } from "@/lib/consult/googleSheetsPersistence";
 import { isRateLimited, wasRecentlySubmitted, markSubmitted } from "@/lib/consult/rateLimit";
+import { recordWebLead } from "@/lib/leads/service";
+import { leadDepsFromEnv } from "@/lib/leads/server";
 
 // Persists via a Google Apps Script Web App + Google Sheets (see
 // docs/setup/consult-google-apps-script.md) — the script also sends the
@@ -107,5 +109,26 @@ export async function POST(request: Request) {
   }
 
   dedupeKeys.forEach(markSubmitted);
+
+  // 공통 LeadEvent + Telegram(LEAD_EVENTS_ENABLED / LEAD_TELEGRAM_ENABLED). 저장이 확정된 뒤, 응답 이후에
+  // 실행되므로 실패해도 상담 제출 결과에 영향이 없다. 이름·연락처·지역·문의 내용은 넘기지 않는다.
+  const leadDeps = leadDepsFromEnv("GYOGWASEOLGYE");
+  if (leadDeps.flags.leadEvents) {
+    after(async () => {
+      try {
+        await recordWebLead(
+          {
+            attribution: body.leadAttribution,
+            context: { subject: result.payload.subject, currentLevel: result.payload.grade },
+            leadId: submissionId,
+          },
+          leadDeps,
+        );
+      } catch {
+        console.warn("[leads] web lead failed: exception");
+      }
+    });
+  }
+
   return NextResponse.json({ ok: true, submittedAt: record.submittedAt });
 }

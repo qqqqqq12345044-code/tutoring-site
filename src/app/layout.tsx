@@ -7,6 +7,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileBottomCTA from "@/components/layout/MobileBottomCTA";
 import AnalyticsTracker from "@/components/analytics/AnalyticsTracker";
+import LeadTracking from "@/components/analytics/LeadTracking";
 import GoogleAnalytics, { GoogleAnalyticsInit } from "@/components/analytics/GoogleAnalytics";
 import { JsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
 
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <MobileBottomCTA />
         <AnalyticsTracker />
+        <LeadTracking />
         <GoogleAnalytics />
       </body>
     </html>

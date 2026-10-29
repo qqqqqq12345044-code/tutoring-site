@@ -8,6 +8,7 @@ import { subjects } from "@/data/subjects";
 import { grades } from "@/data/grades";
 import { getProvinces } from "@/data/regions";
 import { readConsultSource, trackEvent } from "@/lib/analytics";
+import { getConsultLeadAttribution } from "@/lib/leads/gyogwaseolgyeClient";
 import { resolveConsultPrefill } from "@/lib/consultContext";
 
 const gradeOptions = [...grades.flatMap((g) => g.subGrades.map((sg) => sg.label)), "기타"];
@@ -76,7 +77,8 @@ export default function ConsultForm() {
       const res = await fetch("/api/consult", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, submissionId }),
+        // leadAttribution: 비식별 유입 정보(UTM/referrer/landing). flag OFF면 undefined라 JSON에서 빠진다.
+        body: JSON.stringify({ ...payload, submissionId, leadAttribution: getConsultLeadAttribution() }),
       });
       if (!res.ok) {
         trackEvent("consult_submit_failure", { ...source, reason: `http_${res.status}` });
