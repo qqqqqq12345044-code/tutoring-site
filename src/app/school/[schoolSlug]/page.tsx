@@ -9,13 +9,15 @@ import { getSchoolContent, isPublishedContent } from "@/data/schoolContent";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import { buildSchoolBreadcrumb, schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
-import { indexedSchoolSubjectHref } from "@/lib/internalLinks";
+import { indexedSchoolSubjectHref, indexedDongSubjectLinksForSchool } from "@/lib/internalLinks";
+import { SCHOOLINFO_PLAN_TERM } from "@/data/sources";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
+import PlanBasisNote from "@/components/PlanBasisNote";
 
 export function generateStaticParams() {
   return schools.map((s) => ({ schoolSlug: s.slug }));
@@ -55,6 +57,8 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
   const matchingGrade = getGradeBySlug(schoolLevelToGradeSlug[school.level]);
   const dong = school.dongSlug ? getDong(school.cityRegionSlug, school.dongSlug) : undefined;
   const faqs = getFaqsBySlugs(["subject-scope", "pricing"]);
+  // 이 학교의 평가계획 원문을 출처로 쓴 색인 동×과목 페이지(학교 소속 동) — 새 사실 없이 기존 공개 콘텐츠로만 연결한다.
+  const planLinks = dong ? indexedDongSubjectLinksForSchool(school) : [];
 
   return (
     <>
@@ -107,6 +111,20 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
           ]}
         />
       </section>
+
+      {dong && planLinks.length > 0 && (
+        <section className="container-page pb-14 md:pb-16">
+          <SectionHeader align="left" title={`${school.name} 평가계획이 반영된 ${dong.name} 과목 페이지`} />
+          <p className="mt-4 text-text-muted leading-relaxed max-w-2xl break-keep">
+            아래 {planLinks.length}개 페이지는 {school.name}의 {SCHOOLINFO_PLAN_TERM.term} 평가계획 원문을 출처로 삼아 {dong.name} 학교들의
+            시험·수행평가 반영 비율과 과제를 정리했습니다. 학년별 비율과 시기는 각 페이지에서 확인할 수 있습니다.
+          </p>
+          <PlanBasisNote className="mt-3 max-w-2xl" />
+          <div className="mt-6 max-w-2xl">
+            <RelatedLinks title={`${dong.name} 과목별 평가계획`} links={planLinks} />
+          </div>
+        </section>
+      )}
 
       {content && (
         <section className="bg-white border-y border-border-subtle">

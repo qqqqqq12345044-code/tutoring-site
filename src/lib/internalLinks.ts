@@ -1,7 +1,10 @@
-import { regions, getRegionUrl } from "@/data/regions";
+import { regions, getRegionUrl, getRegionBySlug, getRegionPath } from "@/data/regions";
 import { grades } from "@/data/grades";
 import { subjects } from "@/data/subjects";
 import type { School } from "@/data/schools";
+import { dongs, getDong } from "@/data/dongs";
+import { dongSubjectContents } from "@/data/dongSubjectContent";
+import { isSchoolInfoPlanSource } from "@/data/sources";
 import { getIndexability } from "@/lib/indexability";
 import type { RelatedLink } from "@/components/RelatedLinks";
 
@@ -17,6 +20,55 @@ export function indexedSchoolSubjectHref(school: School, subjectSlug: string): s
   return getIndexability("school-subject", { schoolSlug: school.slug, subjectSlug }).index
     ? `/school/${school.slug}/${subjectSlug}`
     : undefined;
+}
+
+/**
+ * Indexed 행정동×과목 pages whose facts were read from this school's own 학교알리미 평가계획 — matched by the
+ * schoolInfoPlanSource entry naming the school (not by text search), in subject order.
+ */
+export function indexedDongSubjectLinksForSchool(school: School): RelatedLink[] {
+  const tag = `학교알리미 — ${school.name} 교과별`;
+  return subjects.flatMap((subject) => {
+    const entry = dongSubjectContents.find(
+      (c) =>
+        c.subjectSlug === subject.slug &&
+        c.status === "published" &&
+        c.notes.length > 0 &&
+        c.sources.some((s) => isSchoolInfoPlanSource(s) && s.label.startsWith(tag))
+    );
+    if (!entry) return [];
+    const dong = getDong(entry.citySlug, entry.dongSlug);
+    if (!dong) return [];
+    if (!getIndexability("region-dong-subject", { regionSlug: dong.citySlug, dongSlug: dong.slug, subjectSlug: subject.slug }).index) return [];
+    return [{ label: `${dong.name} ${subject.name}과외`, href: `${getRegionUrl(dong.citySlug)}/${dong.slug}/${subject.slug}` }];
+  });
+}
+
+/**
+ * Indexed 행정동 hubs under one province (시·도), labelled "시·구 동", plus how many indexed 행정동×과목 pages and
+ * 시·군·구 they cover — the counts the province hub shows come straight from these lists.
+ */
+export function indexedDongSummaryForProvince(provinceSlug: string): { links: RelatedLink[]; cityCount: number; subjectPageCount: number } {
+  const inProvince = dongs.filter(
+    (d) =>
+      getRegionPath(d.citySlug)[0]?.slug === provinceSlug &&
+      getIndexability("region-dong", { regionSlug: d.citySlug, dongSlug: d.slug }).index
+  );
+  const subjectPageCount = inProvince.reduce(
+    (n, d) =>
+      n +
+      subjects.filter((s) => getIndexability("region-dong-subject", { regionSlug: d.citySlug, dongSlug: d.slug, subjectSlug: s.slug }).index)
+        .length,
+    0
+  );
+  return {
+    links: inProvince.map((d) => ({
+      label: `${getRegionBySlug(d.citySlug)?.name ?? ""} ${d.name}`.trim(),
+      href: `${getRegionUrl(d.citySlug)}/${d.slug}`,
+    })),
+    cityCount: new Set(inProvince.map((d) => d.citySlug)).size,
+    subjectPageCount,
+  };
 }
 
 /** Indexed region×grade×subject pages under one city (optionally one subject / grade only). */

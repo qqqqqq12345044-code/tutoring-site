@@ -9,6 +9,9 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
 import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
+import PlanBasisNote from "@/components/PlanBasisNote";
+import { indexedDongSummaryForProvince } from "@/lib/internalLinks";
+import { SCHOOLINFO_PLAN_TERM } from "@/data/sources";
 
 export function generateStaticParams() {
   return getProvinces().map((p) => ({ province: p.slug }));
@@ -38,6 +41,9 @@ export default async function ProvincePage(props: PageProps<"/region/[province]"
   const children = getChildren(region.slug);
   const withSchools = children.filter((c) => countSchoolsInRegion(c.slug) > 0);
   const withoutSchools = children.filter((c) => countSchoolsInRegion(c.slug) === 0);
+  // 색인된 행정동 hub·동×과목 페이지 수와 등록 학교 수 — 기존 데이터에서 센 값만 보여준다.
+  const dongSummary = indexedDongSummaryForProvince(region.slug);
+  const schoolCount = countSchoolsInRegion(region.slug);
 
   return (
     <>
@@ -55,6 +61,21 @@ export default async function ProvincePage(props: PageProps<"/region/[province]"
           </HeroWithThumbnail>
         </div>
       </section>
+
+      {dongSummary.links.length > 0 && (
+        <section className="container-page pt-14 md:pt-16">
+          <SectionHeader align="left" title={`${region.name} 동네별 학교 평가계획`} />
+          <p className="mt-4 text-text-muted leading-relaxed max-w-2xl break-keep">
+            {region.name}에서는 {dongSummary.cityCount}개 시·군·구의 행정동 {dongSummary.links.length}곳에 동네 페이지가 있고, 그 동네
+            학교들의 {SCHOOLINFO_PLAN_TERM.term} 평가계획 원문을 과목별로 정리한 페이지가 {dongSummary.subjectPageCount}개 있습니다.
+            교과설계소에 등록된 {region.name} 학교는 {schoolCount}곳입니다.
+          </p>
+          <PlanBasisNote className="mt-3 max-w-2xl" />
+          <div className="mt-6">
+            <RelatedLinks title="평가계획이 정리된 동네" links={dongSummary.links} />
+          </div>
+        </section>
+      )}
 
       {children.length > 0 && (
         <section className="container-page py-14 md:py-16 flex flex-col gap-4">
