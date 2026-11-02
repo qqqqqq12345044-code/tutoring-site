@@ -14,6 +14,7 @@ import {
   checkSchoolSubjectGate,
   checkRegionProgramGate,
   checkProgramRouteCollisions,
+  checkNationalSchools,
   checkRegionGate,
   checkRegionComboRoutes,
   checkSitemapLastmod,
@@ -133,6 +134,12 @@ async function main() {
     if (!dongData.ok) {
       configOk = false;
       configIssues.push(...dongData.issues.slice(0, 10));
+    }
+
+    const nationalSchools = checkNationalSchools();
+    if (!nationalSchools.ok) {
+      configOk = false;
+      configIssues.push(...nationalSchools.issues.slice(0, 10));
     }
 
     const programCollisions = checkProgramRouteCollisions();

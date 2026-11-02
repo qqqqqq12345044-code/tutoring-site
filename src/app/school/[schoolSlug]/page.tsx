@@ -18,7 +18,12 @@ import ConsultCTA from "@/components/ConsultCTA";
 import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
 import PlanBasisNote from "@/components/PlanBasisNote";
+import NationalSchoolPage, { nationalSchoolArea } from "@/components/NationalSchoolPage";
+import { getNationalSchoolBySlug } from "@/data/nationalSchools";
 
+// Registered schools are prerendered. Page-capable national schools (src/data/nationalSchools.ts, ~10k, always
+// noindex) are rendered on demand (dynamicParams defaults to true, same as the 행정동 pages) so the build does not
+// grow with them; any other slug → 404.
 export function generateStaticParams() {
   return schools.map((s) => ({ schoolSlug: s.slug }));
 }
@@ -26,7 +31,19 @@ export function generateStaticParams() {
 export async function generateMetadata(props: PageProps<"/school/[schoolSlug]">) {
   const { schoolSlug } = await props.params;
   const school = getSchoolBySlug(schoolSlug);
-  if (!school) return {};
+  if (!school) {
+    const national = getNationalSchoolBySlug(schoolSlug);
+    if (!national) return {};
+    const { index } = getIndexability("school-national", { schoolSlug: national.slug });
+    const area = `${nationalSchoolArea(national)} ${national.dongName}`;
+    return buildMetadata({
+      title: `${national.name} 과외 | ${area} ${national.level}`,
+      description: `${national.name}(${area} ${national.level}) 기본 정보와 1:1 과외 상담 안내. 학교급·소재 행정동은 NEIS 학교기본정보와 행정안전부 행정동 코드 기준이며, 교과설계소는 학교와 별개의 과외 서비스입니다.`,
+      path: `/school/${national.slug}`,
+      image: "school",
+      robots: { index, follow: true },
+    });
+  }
 
   const rawContent = getSchoolContent(school.slug);
   const content = isPublishedContent(rawContent) ? rawContent : undefined;
@@ -48,7 +65,11 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]">)
 export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]">) {
   const { schoolSlug } = await props.params;
   const school = getSchoolBySlug(schoolSlug);
-  if (!school) notFound();
+  if (!school) {
+    const national = getNationalSchoolBySlug(schoolSlug);
+    if (!national) notFound();
+    return <NationalSchoolPage school={national} />;
+  }
 
   const rawContent = getSchoolContent(school.slug);
   const content = isPublishedContent(rawContent) ? rawContent : undefined;

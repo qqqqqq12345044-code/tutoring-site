@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { RegionNode } from "@/data/regions";
+import { getRegionTitleName, type RegionNode } from "@/data/regions";
 import { getDongsByCity, getDongsSharingLegalDong, type AdminDong } from "@/data/dongs";
 import { subjects, type Subject } from "@/data/subjects";
 import { grades } from "@/data/grades";
@@ -63,7 +63,7 @@ export function dongHubMetadata(ctx: DongCtx) {
   const list = getDongSchools(ctx.dong);
   const { index } = getIndexability("region-dong", { regionSlug: ctx.region.slug, dongSlug: ctx.dong.slug });
   return buildMetadata({
-    title: `${ctx.region.name} ${ctx.dong.name} 과외 | 초·중·고 1:1 맞춤 수업`,
+    title: `${getRegionTitleName(ctx.region.slug)} ${ctx.dong.name} 과외 | 초·중·고 1:1 맞춤 수업`,
     description: `${ctx.region.fullName} ${ctx.dong.name}(법정동 ${ctx.dong.legalDongs.join("·")}) 초·중·고 1:1 과외 안내. 동 안의 학교(${shortSchoolNames(list)})와 과목별 수업 페이지를 확인하세요.`,
     path: dongBase(ctx),
     image: "region",
@@ -80,10 +80,10 @@ export function dongSubjectMetadata(ctx: DongCtx, subject: Subject) {
   });
   const planBased = Boolean(getDongSubjectContent(ctx.region.slug, ctx.dong.slug, subject.slug));
   return buildMetadata({
-    title: `${ctx.region.name} ${ctx.dong.name} ${subject.name}과외 | ${planBased ? `학교별 2학기 ${subject.name} 평가계획` : `학교급별 ${subject.name} 공부 포인트`}`,
+    title: `${getRegionTitleName(ctx.region.slug)} ${ctx.dong.name} ${subject.name}과외 | ${planBased ? `학교별 2학기 ${subject.name} 평가계획` : `학교급별 ${subject.name} 공부 포인트`}`,
     description: planBased
-      ? `${ctx.region.name} ${ctx.dong.name} ${subject.name}과외 — ${shortSchoolNames(list)}의 2026학년도 2학기 ${subject.name} 평가계획(정기시험·수행평가 비율과 과제)을 학교알리미 공시 기준으로 비교합니다.`
-      : `${ctx.region.name} ${ctx.dong.name}(법정동 ${ctx.dong.legalDongs.join("·")}) ${subject.name}과외 — ${shortSchoolNames(list)} 학교급별 ${subject.name} 학습 포인트와 1:1 수업 진행 방식을 안내합니다.`,
+      ? `${getRegionTitleName(ctx.region.slug)} ${ctx.dong.name} ${subject.name}과외 — ${shortSchoolNames(list)}의 2026학년도 2학기 ${subject.name} 평가계획(정기시험·수행평가 비율과 과제)을 학교알리미 공시 기준으로 비교합니다.`
+      : `${getRegionTitleName(ctx.region.slug)} ${ctx.dong.name}(법정동 ${ctx.dong.legalDongs.join("·")}) ${subject.name}과외 — ${shortSchoolNames(list)} 학교급별 ${subject.name} 학습 포인트와 1:1 수업 진행 방식을 안내합니다.`,
     path: `${dongBase(ctx)}/${subject.slug}`,
     image: motifForSlug(subject.slug),
     robots: { index, follow: true },
@@ -146,7 +146,7 @@ function gradeLinks(ctx: DongCtx, list: School[]): RelatedLink[] {
   return grades
     .filter((g) => levels.has(g.slug))
     .flatMap((g) => [
-      { label: `${ctx.region.name} ${g.name}과외`, href: `${cityBase}/${g.slug}` },
+      { label: `${getRegionTitleName(ctx.region.slug)} ${g.name}과외`, href: `${cityBase}/${g.slug}` },
       { label: `${g.name} 학습 안내`, href: `/grade/${g.slug}` },
     ]);
 }
@@ -170,7 +170,7 @@ function guideLinks(list: School[], subject?: Subject): RelatedLink[] {
 
 export function DongHubView({ ctx }: { ctx: DongCtx }) {
   const list = getDongSchools(ctx.dong);
-  const content = buildDongHubContent(ctx.dong, ctx.region.name);
+  const content = buildDongHubContent(ctx.dong, getRegionTitleName(ctx.region.slug));
   const base = dongBase(ctx);
   const otherDongs = getDongsByCity(ctx.region.slug).filter((d) => d.slug !== ctx.dong.slug);
   const planBasis = content.sources.some(isSchoolInfoPlanSource);
@@ -183,7 +183,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
           <div className="grid md:grid-cols-[minmax(0,1fr)_320px] gap-8 items-center">
             <div className="max-w-2xl">
               <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-                {ctx.region.name} {ctx.dong.name} 과외
+                {getRegionTitleName(ctx.region.slug)} {ctx.dong.name} 과외
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">초·중·고 1:1 맞춤 수업</span>
               </h1>
               <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
@@ -248,9 +248,9 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
         </div>
         <RelatedLinks title="법정동을 함께 쓰는 행정동" links={siblingDongLinks(ctx)} />
         <RelatedLinks
-          title={`${ctx.region.name} 다른 행정동`}
+          title={`${getRegionTitleName(ctx.region.slug)} 다른 행정동`}
           links={[
-            { label: `${ctx.region.name} 과외 전체`, href: `/region/${ctx.parent.slug}/${ctx.region.slug}` },
+            { label: `${getRegionTitleName(ctx.region.slug)} 과외 전체`, href: `/region/${ctx.parent.slug}/${ctx.region.slug}` },
             ...otherDongs.map((d) => ({ label: `${d.name} 과외`, href: `/region/${ctx.parent.slug}/${ctx.region.slug}/${d.slug}` })),
           ]}
         />
@@ -262,7 +262,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
 
       <section className="container-page pb-16 md:pb-20">
         <ConsultCTA
-          title={`${ctx.region.name} ${ctx.dong.name} 과외 상담받기`}
+          title={`${getRegionTitleName(ctx.region.slug)} ${ctx.dong.name} 과외 상담받기`}
           description="학교와 학년, 과목을 알려주시면 안내해드립니다."
           context={{ region: ctx.region.slug, dong: ctx.dong.slug }}
         />
@@ -273,7 +273,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
 
 export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subject }) {
   const list = getDongSchools(ctx.dong);
-  const content = buildDongSubjectContent(ctx.dong, ctx.region.name, subject);
+  const content = buildDongSubjectContent(ctx.dong, getRegionTitleName(ctx.region.slug), subject);
   const base = dongBase(ctx);
   const cityBase = `/region/${ctx.parent.slug}/${ctx.region.slug}`;
   const guide = getSubjectStudyGuide(subject.slug);
@@ -300,7 +300,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
           <div className="grid md:grid-cols-[minmax(0,1fr)_320px] gap-8 items-center">
             <div className="max-w-2xl">
               <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
-                {ctx.region.name} {ctx.dong.name} {subject.name}과외
+                {getRegionTitleName(ctx.region.slug)} {ctx.dong.name} {subject.name}과외
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">{heading}</span>
               </h1>
               <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
@@ -362,7 +362,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
                 <ul className="mt-2 flex flex-col gap-1.5 text-sm">
                   <li>
                     <Link href={`${cityBase}/${subject.slug}`} className="text-text-main hover:text-brand transition-colors">
-                      {ctx.region.name} {subject.name}과외: 시험 4주 전부터의 단계별 계획
+                      {getRegionTitleName(ctx.region.slug)} {subject.name}과외: 시험 4주 전부터의 단계별 계획
                     </Link>
                   </li>
                   <li>
@@ -403,9 +403,9 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
             ]}
           />
           <RelatedLinks
-            title={`${ctx.region.name} ${subject.name}과외`}
+            title={`${getRegionTitleName(ctx.region.slug)} ${subject.name}과외`}
             links={[
-              { label: `${ctx.region.name} ${subject.name}과외`, href: `${cityBase}/${subject.slug}` },
+              { label: `${getRegionTitleName(ctx.region.slug)} ${subject.name}과외`, href: `${cityBase}/${subject.slug}` },
               { label: `${subject.name}과외 안내`, href: `/subject/${subject.slug}` },
               ...siblingDongLinks(ctx, subject),
             ]}
@@ -421,7 +421,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
 
       <section className="container-page pb-16 md:pb-20">
         <ConsultCTA
-          title={`${ctx.region.name} ${ctx.dong.name} ${subject.name}과외 상담받기`}
+          title={`${getRegionTitleName(ctx.region.slug)} ${ctx.dong.name} ${subject.name}과외 상담받기`}
           description="학교와 학년, 현재 고민을 알려주시면 안내해드립니다."
           context={{ subject: subject.slug, region: ctx.region.slug, dong: ctx.dong.slug }}
         />

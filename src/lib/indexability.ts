@@ -9,6 +9,7 @@ import { getRegionBySlug, getRegionUrl } from "@/data/regions";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schoolNoindexSlugs } from "@/data/schoolNoindex";
+import { regionHubNoindexSlugs } from "@/data/regionNoindex";
 import { schools } from "@/data/schools";
 import { getDong } from "@/data/dongs";
 import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
@@ -66,6 +67,7 @@ export type IndexabilityKind =
   | "sub-grade" // /grade/[slug]/[subGradeSlug]
   | "subject-topic" // /subject/[slug]/[topicSlug]
   | "school" // /school/[schoolSlug]
+  | "school-national" // /school/[schoolSlug] for a page-capable national school not in schools.ts (src/data/nationalSchools.ts)
   | "program" // /program/[slug]
   | "region" // province / city / plain (subject-less, grade-less) district page
   | "region-subject" // /region/[province]/[city]/[subject]
@@ -127,6 +129,7 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
       return INDEXED;
 
     case "region":
+      if (ctx.regionSlug && regionHubNoindexSlugs.has(ctx.regionSlug)) return NOT_INDEXED; // editorial hold (src/data/regionNoindex.ts)
       return ctx.regionSlug && countSchoolsInRegion(ctx.regionSlug) > 0 ? INDEXED : NOT_INDEXED;
 
     case "school": {
@@ -134,6 +137,12 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
       if (ctx.schoolSlug && schoolNoindexSlugs.has(ctx.schoolSlug)) return NOT_INDEXED; // editorial hold (휴교 등)
       return isSchoolPublished(content) ? INDEXED : NOT_INDEXED;
     }
+
+    case "school-national":
+      // PAGE_ONLY (2026-11-02, docs/qa/national-school-expansion-readiness-2026-11-02.md): official identity only,
+      // no reviewed content → always noindex, follow and out of the sitemap. A school gets an indexable hub only
+      // after it is registered in schools.ts and has a published schoolContent entry ("school" above).
+      return NOT_INDEXED;
 
     case "sub-grade": {
       const content =

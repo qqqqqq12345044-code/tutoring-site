@@ -64,7 +64,14 @@ export const BASELINE = {
   // + 등록한 학교 23곳의 학교 페이지(콘텐츠 전 noindex, 과목 route 0) = +41 → 2856 → 2897, sitemap 674 → 692, noindex 2180 → 2203.
   // 2026-10-27 전국 24차 batch(새 학교알리미 수집): 성남동(성남 중원)·중2동(부천 원미) 허브 2 + 동×과목 10 (GREEN·색인)
   // + 등록한 학교 17곳의 학교 페이지(콘텐츠 전 noindex, 과목 route 0) = +29 → 2897 → 2926, sitemap 692 → 704, noindex 2203 → 2220.
-  totalRoutes: 2926,
+  // 2026-11-02 전국 학교 hub 계층(PAGE_ONLY) + 25차 batch = 광역시 pilot (docs/qa/national-school-expansion-readiness-2026-11-02.md):
+  // ① 등록되지 않은 CONFIRMED 학교 10,149곳의 /school/[slug] hub(src/data/nationalSchools.json, on-demand 렌더, 전부 noindex·sitemap 제외)
+  // → 2926 → 13075, noindex 2220 → 12369, sitemap 변화 0, 정적 생성 페이지 수 변화 0.
+  // ② 울산 무거동(남구)·대전 신성동(유성구) 허브 2 + 동×과목 10 (GREEN·색인) + 학교 15곳 등록(전국 hub에서 등록 학교로 이동, route 수 0)
+  // + 첫 학교로 켜진 ulsan-nam·daejeon-yuseong 조합 route 54(전부 noindex) + 시·도/구 허브 4곳(울산·울산 남구·대전·대전 유성구) noindex→index
+  // = +66 → 13075 → 13141, sitemap 704 → 720, noindex 12369 → 12419.
+  // ③ 시·도 허브 울산·대전은 동 1곳뿐이라 서로 이름 마스킹 100% 동일 → src/data/regionNoindex.ts 보류(원래 noindex였음): sitemap 720 → 718, noindex 12419 → 12421.
+  totalRoutes: 13141,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -76,7 +83,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 704,
-  noindexCount: 2220,
+  sitemapCount: 718,
+  noindexCount: 12421,
   brokenLinks: 0,
 };

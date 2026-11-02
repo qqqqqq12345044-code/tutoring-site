@@ -11,6 +11,7 @@ import { grades } from "@/data/grades";
 import { programs } from "@/data/programs";
 import { regions, getChildren, getRegionUrl, getRegionBySlug } from "@/data/regions";
 import { schools } from "@/data/schools";
+import { allNationalSchools } from "@/data/nationalSchools";
 import { guideArticles } from "@/data/guide";
 import { getRegionGradeSubjectContent, isPublishedContent } from "@/data/regionGradeSubjectContent";
 import { getSchoolContent, isPublishedContent as isSchoolPublished } from "@/data/schoolContent";
@@ -24,9 +25,13 @@ import { preExpansionRegionSlugs } from "@/data/regions";
 import { qualityNoindexPaths } from "@/data/qualityNoindex";
 import { schoolSubjectNoindexPaths } from "@/data/schoolSubjectNoindex";
 import { schoolNoindexSlugs } from "@/data/schoolNoindex";
+import { regionHubNoindexSlugs } from "@/data/regionNoindex";
 import { dongs, getDongsByCity } from "@/data/dongs";
 import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { officialDongsForRegion, loadAdminDongTable } from "../official/lib/admin-dong-table";
+import { buildNationalSchoolRows, readCandidateRecords, renderNationalSchoolsJson } from "../official/national-school-pages";
+import fs from "fs";
+import path from "path";
 import sitemap from "../../src/app/sitemap";
 import robots from "../../src/app/robots";
 
@@ -58,6 +63,11 @@ export function getAllContentRoutes(): RouteEntry[] {
   for (const sc of schools) {
     const { index, sitemap } = getIndexability("school", { schoolSlug: sc.slug });
     routes.push({ path: `/school/${sc.slug}`, index, sitemap });
+  }
+  // Page-capable national schools (PAGE_ONLY, rendered on demand, always noindex) — src/data/nationalSchools.ts.
+  for (const ns of allNationalSchools()) {
+    const { index, sitemap } = getIndexability("school-national", { schoolSlug: ns.slug });
+    routes.push({ path: `/school/${ns.slug}`, index, sitemap });
   }
   for (const g of grades) {
     for (const sg of g.subGrades) {
@@ -482,11 +492,14 @@ export function checkRegionGate(): GateCheckResult {
         s.districtRegionSlug === r.slug ||
         getRegionBySlug(s.cityRegionSlug)?.parentSlug === r.slug
     ).length;
-    const eligible = direct > 0;
+    const eligible = direct > 0 && !regionHubNoindexSlugs.has(r.slug);
     const { index, sitemap } = getIndexability("region", { regionSlug: r.slug });
     if (index !== eligible || sitemap !== eligible || countSchoolsInRegion(r.slug) !== direct) {
       issues.push(`region gate: ${r.slug} — schools=${direct} but index=${index} sitemap=${sitemap}`);
     }
+  }
+  for (const slug of regionHubNoindexSlugs) {
+    if (!getRegionBySlug(slug) || countSchoolsInRegion(slug) === 0) issues.push(`region hub hold is not a region with registered schools: ${slug}`);
   }
   return { ok: issues.length === 0, issues };
 }
@@ -578,6 +591,39 @@ export function checkSitemapLastmod(): GateCheckResult {
     } else if (lm > today) {
       issues.push(`sitemap lastmod: ${entry.url} — future date ${lm}`);
     }
+  }
+  return { ok: issues.length === 0, issues };
+}
+
+/**
+ * National PAGE_ONLY school hubs (src/data/nationalSchools.json, 2026-11-02):
+ * - the file is exactly what scripts/official/national-school-pages.ts derives from school-candidates.json;
+ * - no slug or NEIS code is shared with a registered school (identity collision) and slugs are unique;
+ * - every row points at an existing city (and, when set, a district under that city);
+ * - none is indexed or in the sitemap, and none gets a school×subject route.
+ */
+export function checkNationalSchools(): GateCheckResult {
+  const issues: string[] = [];
+  const expected = renderNationalSchoolsJson(buildNationalSchoolRows(readCandidateRecords()));
+  const actual = fs.readFileSync(path.join("src", "data", "nationalSchools.json"), "utf8").replace(/\r\n/g, "\n");
+  if (actual !== expected) issues.push("src/data/nationalSchools.json is out of sync — run npx tsx scripts/official/national-school-pages.ts --write");
+
+  const registeredSlugs = new Set(schools.map((s) => s.slug));
+  const registeredCodes = new Set(schools.map((s) => s.official?.code).filter(Boolean));
+  const seen = new Set<string>();
+  const sitemapSet = new Set(getSitemapPaths());
+  for (const ns of allNationalSchools()) {
+    if (seen.has(ns.slug)) issues.push(`national school slug 중복: ${ns.slug}`);
+    seen.add(ns.slug);
+    if (registeredSlugs.has(ns.slug)) issues.push(`national school slug collides with a registered school: ${ns.slug}`);
+    if (registeredCodes.has(ns.code)) issues.push(`national school code is already registered: ${ns.code} (${ns.slug})`);
+    const city = getRegionBySlug(ns.cityRegionSlug);
+    if (!city || city.level !== "city") issues.push(`national school ${ns.slug}: unknown city ${ns.cityRegionSlug}`);
+    if (ns.districtRegionSlug && getRegionBySlug(ns.districtRegionSlug)?.parentSlug !== ns.cityRegionSlug) {
+      issues.push(`national school ${ns.slug}: district ${ns.districtRegionSlug} is not under ${ns.cityRegionSlug}`);
+    }
+    if (getIndexability("school-national", { schoolSlug: ns.slug }).index) issues.push(`national school indexed: ${ns.slug}`);
+    if (sitemapSet.has(`/school/${ns.slug}`)) issues.push(`national school in sitemap: ${ns.slug}`);
   }
   return { ok: issues.length === 0, issues };
 }

@@ -7,6 +7,7 @@
  *   npx tsx scripts/official/school-import.ts --write               # save data/official/school-candidates.json + slug registry
  *   npx tsx scripts/official/school-import.ts --dongs [--top 40]    # rank candidate 행정동 for the next dong batch
  *   npx tsx scripts/official/school-import.ts --promote <dongCode,...> [--write]   # register those 행정동's schools
+ *   … --promote <dongCode,...> --allow-new-city <citySlug,...> [--write]          # first schools of a school-less city
  *   npx tsx scripts/official/school-import.ts --summary             # route / sitemap / noindex counts (before/after a promote)
  *
  * Identity is the NEIS school code. Slugs come from data/official/school-slugs.json, which is only ever appended to:
@@ -17,7 +18,8 @@
  *   - availableSubjectSlugs is empty → no /school/[slug]/[subject] routes (those need written content anyway);
  *     the school page itself exists (noindex until it has published content, src/lib/indexability.ts).
  *   - only into cities that already have combination routes (src/lib/regionRoutes.ts), so a first school in a
- *     school-less city can never switch on ~27 template routes or its hub's index gate.
+ *     school-less city can never switch on ~27 template routes or its hub's index gate — unless that city is named
+ *     explicitly with --allow-new-city (2026-11-02 광역시 pilot: a reviewed decision, checked with --summary first).
  *   - only CONFIRMED schools (address → one official 행정동) whose 학교알리미 2026년 3차 공시 was actually fetched
  *     (data/official/... manifest, term 3 with files) — the operating check; anything else stays a candidate.
  */
@@ -268,6 +270,9 @@ function rankDongs(list: SchoolCandidate[], top: number) {
 
 // ── promote ───────────────────────────────────────────────────────────────────────────────────────────────
 function promote(list: SchoolCandidate[], dongCodes: string[]) {
+  const ai = process.argv.indexOf("--allow-new-city");
+  const allowNewCities = new Set(ai > 0 ? process.argv[ai + 1].split(",") : []);
+  for (const c of allowNewCities) if (getRegionBySlug(c)?.level !== "city") throw new Error(`--allow-new-city: not a city slug: ${c}`);
   const rows = neisRows();
   // Normalized to LF so the append point is found whatever line endings the file was checked out with.
   const prev: string = existsSync(IMPORTED_TS) ? readFileSync(IMPORTED_TS, "utf-8").replace(/\r\n/g, "\n") : "";
@@ -281,7 +286,7 @@ function promote(list: SchoolCandidate[], dongCodes: string[]) {
       if (c.status === "registered" || already.has(c.code)) continue;
       if (c.status !== "candidate") { skipped.push(`${c.name}: ${c.status}`); continue; }
       if (c.operating !== "disclosed-2026-3") { skipped.push(`${c.name}: 학교알리미 2026년 3차 공시 미확인`); continue; }
-      if (!hasRegionComboRoutes(c.citySlug!)) { skipped.push(`${c.name}: ${c.citySlug}에 등록 학교 없음(조합 route 보호)`); continue; }
+      if (!hasRegionComboRoutes(c.citySlug!) && !allowNewCities.has(c.citySlug!)) { skipped.push(`${c.name}: ${c.citySlug}에 등록 학교 없음(조합 route 보호)`); continue; }
       const r = rows.get(c.code);
       const n = national().get(c.code);
       if (!r || !n?.roadAddress || !n.legalDong) { skipped.push(`${c.name}: NEIS 행/주소 없음`); continue; }
