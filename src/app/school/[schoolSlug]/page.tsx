@@ -20,6 +20,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import PlanBasisNote from "@/components/PlanBasisNote";
 import NationalSchoolPage, { nationalSchoolArea } from "@/components/NationalSchoolPage";
 import { getNationalSchoolBySlug } from "@/data/nationalSchools";
+import { schoolGradeHref, schoolGradeNumbers } from "@/lib/schoolGrade";
 
 // Registered schools are prerendered. Page-capable national schools (src/data/nationalSchools.ts, ~10k, always
 // noindex) are rendered on demand (dynamicParams defaults to true, same as the 행정동 pages) so the build does not
@@ -130,6 +131,11 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
             ...(dong ? [{ label: `${dong.name} 과외`, href: `${getRegionUrl(dong.citySlug)}/${dong.slug}` }] : []),
             ...(matchingGrade ? [{ label: `${matchingGrade.name}과외`, href: `/grade/${matchingGrade.slug}` }] : []),
           ]}
+        />
+        {/* 학년 hubs exist only where published OFFICIAL 학년×과목 entries exist (src/lib/schoolGrade.ts). */}
+        <RelatedLinks
+          title="학년별 과목 평가 정보"
+          links={schoolGradeNumbers(school).map((g) => ({ label: `${school.name} ${g}학년 과외`, href: schoolGradeHref(school.slug, g) }))}
         />
       </section>
 

@@ -11,6 +11,7 @@ import { grades } from "@/data/grades";
 import { programs } from "@/data/programs";
 import { regions, getChildren, getRegionUrl, getRegionBySlug } from "@/data/regions";
 import { schools } from "@/data/schools";
+import { allSchoolGradeRoutes } from "@/lib/schoolGrade";
 import { allNationalSchools } from "@/data/nationalSchools";
 import { guideArticles } from "@/data/guide";
 import { getRegionGradeSubjectContent, isPublishedContent } from "@/data/regionGradeSubjectContent";
@@ -130,6 +131,13 @@ export function getAllContentRoutes(): RouteEntry[] {
       const { index, sitemap } = getIndexability("school-subject", { schoolSlug: school.slug, subjectSlug });
       routes.push({ path: `/school/${school.slug}/${subjectSlug}`, index, sitemap });
     }
+  }
+
+  // School 학년 / 학년×과목 pages (2026-11-02 Phase 2), mirroring src/app/sitemap.ts's iteration.
+  for (const r of allSchoolGradeRoutes()) {
+    const kind = r.subjectSlug ? "school-grade-subject" : "school-grade";
+    const { index, sitemap } = getIndexability(kind, { schoolSlug: r.schoolSlug, schoolGrade: String(r.grade), subjectSlug: r.subjectSlug });
+    routes.push({ path: `/school/${r.schoolSlug}/${r.grade}${r.subjectSlug ? `/${r.subjectSlug}` : ""}`, index, sitemap });
   }
 
   // Region+program combination pages, mirroring src/app/sitemap.ts's iteration.

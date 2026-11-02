@@ -71,7 +71,10 @@ export const BASELINE = {
   // + 첫 학교로 켜진 ulsan-nam·daejeon-yuseong 조합 route 54(전부 noindex) + 시·도/구 허브 4곳(울산·울산 남구·대전·대전 유성구) noindex→index
   // = +66 → 13075 → 13141, sitemap 704 → 720, noindex 12369 → 12419.
   // ③ 시·도 허브 울산·대전은 동 1곳뿐이라 서로 이름 마스킹 100% 동일 → src/data/regionNoindex.ts 보류(원래 noindex였음): sitemap 720 → 718, noindex 12419 → 12421.
-  totalRoutes: 13141,
+  // 2026-11-02 Phase 2 학교→학년→과목 pilot (docs/qa/national-school-content-expansion-2026-11-02.md): 잠실고·죽전고·계산중·무거중·대덕고
+  // 학년×과목 54 (학교알리미 평가계획 OFFICIAL, 전부 GREEN·색인) + 학년 hub 12 (GREEN 6 색인, 무거중·계산중 AMBER 6 noindex,
+  // src/data/schoolGradeNoindex.ts) = +66 → 13141 → 13207, sitemap 718 → 778, noindex 12421 → 12427. 전국 10,134 hub에는 학년 route 없음.
+  totalRoutes: 13207,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -83,7 +86,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 718,
-  noindexCount: 12421,
+  sitemapCount: 778,
+  noindexCount: 12427,
   brokenLinks: 0,
 };

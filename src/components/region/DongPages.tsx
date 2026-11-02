@@ -8,6 +8,7 @@ import { getGradeSubjectPlaybook } from "@/data/gradeSubjectPlaybook";
 import { getSubjectStudyGuide } from "@/data/subjectStudyGuide";
 import { getDongSubjectContent, hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import type { School } from "@/data/schools";
+import { getNationalSchoolsByDongCode } from "@/data/nationalSchools";
 import { isSchoolInfoPlanSource } from "@/data/sources";
 import { buildMetadata } from "@/lib/metadata";
 import { motifForSlug } from "@/lib/thumbnails";
@@ -127,6 +128,30 @@ function SchoolsByLevel({ list }: { list: School[] }) {
   );
 }
 
+/**
+ * Other schools of the same 행정동 that have only a fact page (PAGE_ONLY, src/data/nationalSchools.ts): matched by
+ * the official 행정동 code, never by name. Name + 학교급 only — the page itself says what is known about them.
+ */
+function OtherDongSchools({ code, dongName }: { code?: string; dongName: string }) {
+  const list = code ? getNationalSchoolsByDongCode(code) : [];
+  if (list.length === 0) return null;
+  return (
+    <div className="mt-6 rounded-2xl border border-border-subtle bg-white p-6">
+      <p className="text-sm font-bold text-navy">{dongName}의 다른 학교</p>
+      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+        {list.map((s) => (
+          <li key={s.slug} className="text-sm">
+            <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+              {s.name}
+            </Link>
+            <span className="ml-1 text-xs text-text-muted">{s.level}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function siblingDongLinks(ctx: DongCtx, subject?: Subject): RelatedLink[] {
   const base = `/region/${ctx.parent.slug}/${ctx.region.slug}`;
   return getDongsSharingLegalDong(ctx.dong)
@@ -213,6 +238,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
             description="NEIS 학교기본정보의 도로명주소를 행정안전부 주소정보누리집에서 조회해 이 행정동으로 확인된 학교입니다."
           />
           <SchoolsByLevel list={list} />
+          <OtherDongSchools code={ctx.dong.code} dongName={ctx.dong.name} />
           <NotesGrid notes={content.notes.filter((n) => !n.subjectSlug)} />
         </div>
       </section>

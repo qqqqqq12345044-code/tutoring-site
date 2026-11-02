@@ -14,6 +14,8 @@ import { schools } from "@/data/schools";
 import { getDong } from "@/data/dongs";
 import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { getSubjectBySlug } from "@/data/subjects";
+import { schoolGradeNoindexPaths } from "@/data/schoolGradeNoindex";
+import { resolveSchoolGrade, resolveSchoolGradeSubject } from "@/lib/schoolGrade";
 
 /**
  * Central indexing policy for programmatic SEO routes.
@@ -77,7 +79,9 @@ export type IndexabilityKind =
   | "school-subject" // /school/[schoolSlug]/[subject]
   | "region-program" // /region/[province]/[city]/program/[programSlug]
   | "region-dong" // /region/[province]/[city]/[dong] (행정동)
-  | "region-dong-subject"; // /region/[province]/[city]/[dong]/[subject]
+  | "region-dong-subject" // /region/[province]/[city]/[dong]/[subject]
+  | "school-grade" // /school/[schoolSlug]/[grade] (학년 1~6, src/lib/schoolGrade.ts)
+  | "school-grade-subject"; // /school/[schoolSlug]/[grade]/[subject]
 
 export interface IndexabilityContext {
   /**
@@ -97,6 +101,8 @@ export interface IndexabilityContext {
   schoolSlug?: string;
   /** Program slug, required for "region-program" to look up dedicated content. */
   programSlug?: string;
+  /** 학년 number as a string ("1"~"6"), required for "school-grade" / "school-grade-subject". */
+  schoolGrade?: string;
   /** 행정동 slug (src/data/dongs.ts), required for "region-dong" / "region-dong-subject" (regionSlug = its city). */
   dongSlug?: string;
 }
@@ -199,6 +205,23 @@ export function getIndexability(kind: IndexabilityKind, ctx: IndexabilityContext
       if (!schools.some((s) => s.cityRegionSlug === dong.citySlug && s.dongSlug === dong.slug)) return NOT_INDEXED;
       const path = `${getRegionUrl(dong.citySlug)}/${dong.slug}${kind === "region-dong-subject" ? `/${ctx.subjectSlug}` : ""}`;
       return qualityNoindexPaths.has(path) ? NOT_INDEXED : INDEXED;
+    }
+
+    case "school-grade":
+    case "school-grade-subject": {
+      // CONTENT_READY (2026-11-02 Phase 2): registered school, 학년 inside the 학교급 range, a published OFFICIAL
+      // entry (src/data/schoolGradeSubjectContent.ts) and quality gate GREEN — RED / AMBER pages are listed in
+      // src/data/schoolGradeNoindex.ts and stay noindex, follow. No entry → the route does not exist (404).
+      if (!ctx.schoolSlug || !ctx.schoolGrade) return NOT_INDEXED;
+      const exists =
+        kind === "school-grade"
+          ? resolveSchoolGrade(ctx.schoolSlug, ctx.schoolGrade)
+          : ctx.subjectSlug
+            ? resolveSchoolGradeSubject(ctx.schoolSlug, ctx.schoolGrade, ctx.subjectSlug)
+            : null;
+      if (!exists) return NOT_INDEXED;
+      const path = `/school/${ctx.schoolSlug}/${ctx.schoolGrade}${kind === "school-grade-subject" ? `/${ctx.subjectSlug}` : ""}`;
+      return schoolGradeNoindexPaths.has(path) ? NOT_INDEXED : INDEXED;
     }
 
     case "region-grade":

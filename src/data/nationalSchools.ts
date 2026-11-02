@@ -62,3 +62,19 @@ export function nationalSchoolSource(s: NationalSchool): { label: string; url: s
     url: `https://open.neis.go.kr/hub/schoolInfo?Type=json&ATPT_OFCDC_SC_CODE=${s.office}&SD_SCHUL_CODE=${s.code}`,
   };
 }
+
+let byDongCode: Map<string, NationalSchool[]> | undefined;
+
+/** PAGE_ONLY schools whose official 행정동 code is `code` (name order) — for the 행정동 hub's school list. */
+export function getNationalSchoolsByDongCode(code: string): NationalSchool[] {
+  if (!byDongCode) {
+    byDongCode = new Map();
+    for (const s of allNationalSchools()) {
+      const list = byDongCode.get(s.dongCode) ?? [];
+      list.push(s);
+      byDongCode.set(s.dongCode, list);
+    }
+    for (const list of byDongCode.values()) list.sort((a, b) => a.name.localeCompare(b.name, "ko"));
+  }
+  return byDongCode.get(code) ?? [];
+}

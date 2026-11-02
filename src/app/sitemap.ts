@@ -10,6 +10,7 @@ import { getIndexability } from "@/lib/indexability";
 import { hasRegionComboRoutes } from "@/lib/regionRoutes";
 import { getContentUpdatedAt } from "@/data/contentDates";
 import { getDongsByCity } from "@/data/dongs";
+import { allSchoolGradeRoutes } from "@/lib/schoolGrade";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
@@ -147,6 +148,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // School 학년 / 학년×과목 pages: /school/[schoolSlug]/[grade](/[subject]) — only routes that exist (published
+  // OFFICIAL entries, src/lib/schoolGrade.ts) and that the policy marks `sitemap: true` (quality gate GREEN).
+  const schoolGradePaths: string[] = [];
+  for (const r of allSchoolGradeRoutes()) {
+    const kind = r.subjectSlug ? "school-grade-subject" : "school-grade";
+    const ctx = { schoolSlug: r.schoolSlug, schoolGrade: String(r.grade), subjectSlug: r.subjectSlug };
+    if (getIndexability(kind, ctx).sitemap) {
+      schoolGradePaths.push(`/school/${r.schoolSlug}/${r.grade}${r.subjectSlug ? `/${r.subjectSlug}` : ""}`);
+    }
+  }
+
   const allPaths = Array.from(
     new Set([
       ...staticPaths,
@@ -158,6 +170,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...schoolComboPaths,
       ...regionProgramPaths,
       ...dongPaths,
+      ...schoolGradePaths,
     ])
   );
 

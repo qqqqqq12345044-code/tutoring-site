@@ -15,6 +15,13 @@ import SourceList from "@/components/SourceList";
 import PlanBasisNote from "@/components/PlanBasisNote";
 import { isSchoolInfoPlanSource } from "@/data/sources";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
+import SchoolGradePage from "@/components/school/SchoolGradePage";
+import { allSchoolGradeRoutes, buildSchoolGradeContent, resolveSchoolGrade } from "@/lib/schoolGrade";
+
+// /school/[schoolSlug]/[segment] serves two page kinds at the same URL depth (2026-11-02 Phase 2):
+// - a subject slug (korean, math …) → the existing school×과목 page (URLs unchanged);
+// - a 학년 digit 1~6 → the school 학년 hub (src/lib/schoolGrade.ts). Subject slugs are never digits.
+// Anything else, or a 학년 without published content, is 404.
 
 function resolveContext(schoolSlug: string, subjectSlug: string) {
   const school = getSchoolBySlug(schoolSlug);
@@ -24,11 +31,27 @@ function resolveContext(schoolSlug: string, subjectSlug: string) {
 }
 
 export function generateStaticParams() {
-  return schools.flatMap((s) => s.availableSubjectSlugs.map((subjectSlug) => ({ schoolSlug: s.slug, subject: subjectSlug })));
+  return [
+    ...schools.flatMap((s) => s.availableSubjectSlugs.map((subjectSlug) => ({ schoolSlug: s.slug, segment: subjectSlug }))),
+    ...allSchoolGradeRoutes()
+      .filter((r) => !r.subjectSlug)
+      .map((r) => ({ schoolSlug: r.schoolSlug, segment: String(r.grade) })),
+  ];
 }
 
-export async function generateMetadata(props: PageProps<"/school/[schoolSlug]/[subject]">) {
-  const { schoolSlug, subject: subjectSlug } = await props.params;
+export async function generateMetadata(props: PageProps<"/school/[schoolSlug]/[segment]">) {
+  const { schoolSlug, segment: subjectSlug } = await props.params;
+  const gradeCtx = resolveSchoolGrade(schoolSlug, subjectSlug);
+  if (gradeCtx) {
+    const { index } = getIndexability("school-grade", { schoolSlug, schoolGrade: subjectSlug });
+    return buildMetadata({
+      title: `${gradeCtx.school.name} ${gradeCtx.grade}학년 과외 · 내신 학습`,
+      description: buildSchoolGradeContent(gradeCtx).intro,
+      path: `/school/${schoolSlug}/${subjectSlug}`,
+      image: "school",
+      robots: { index, follow: true },
+    });
+  }
   const ctx = resolveContext(schoolSlug, subjectSlug);
   if (!ctx) return {};
 
@@ -52,8 +75,10 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]/[s
   });
 }
 
-export default async function SchoolSubjectPage(props: PageProps<"/school/[schoolSlug]/[subject]">) {
-  const { schoolSlug, subject: subjectSlug } = await props.params;
+export default async function SchoolSubjectPage(props: PageProps<"/school/[schoolSlug]/[segment]">) {
+  const { schoolSlug, segment: subjectSlug } = await props.params;
+  const gradeCtx = resolveSchoolGrade(schoolSlug, subjectSlug);
+  if (gradeCtx) return <SchoolGradePage ctx={gradeCtx} />;
   const ctx = resolveContext(schoolSlug, subjectSlug);
   if (!ctx) notFound();
 

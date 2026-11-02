@@ -34,6 +34,9 @@ import { dongs } from "@/data/dongs";
 import { subjects } from "@/data/subjects";
 import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { buildDongHubContent, buildDongSubjectContent, getDongSchools } from "@/lib/dongContent";
+import { schoolGradeSubjectContents, isPublishedGradeSubject } from "@/data/schoolGradeSubjectContent";
+import { schoolGradeNoindexPaths } from "@/data/schoolGradeNoindex";
+import { allSchoolGradeRoutes, buildSchoolGradeContent, groupAssessmentsByCourse, resolveSchoolGrade } from "@/lib/schoolGrade";
 
 export type QualityGrade = "GREEN" | "AMBER" | "RED";
 
@@ -43,6 +46,8 @@ export const QUALITY_KINDS = [
   "school-subject",
   "region-dong",
   "region-dong-subject",
+  "school-grade",
+  "school-grade-subject",
 ] as const;
 export type QualityKind = (typeof QUALITY_KINDS)[number];
 
@@ -96,13 +101,19 @@ interface Candidate {
   structural: { red: string[]; amber: string[] };
 }
 
-function grade(candidates: Candidate[]): QualityRow[] {
+/**
+ * `pool`: texts of other kinds the candidates are also compared against (stricter, never looser) — used so a
+ * school×학년×과목 page cannot pass by repeating its school×과목 or 행정동×과목 page.
+ */
+function grade(candidates: Candidate[], pool: string[] = []): QualityRow[] {
   const masked = candidates.map((c) => mask(c.text));
+  const maskedPool = pool.map(mask);
   return candidates.map((c, i) => {
     let nearest = 0;
     for (let j = 0; j < candidates.length; j++) {
       if (i !== j) nearest = Math.max(nearest, tokenSimilarity(masked[i], masked[j]));
     }
+    for (const t of maskedPool) nearest = Math.max(nearest, tokenSimilarity(masked[i], t));
     const substantive = c.notes.filter((n) => !isPointerNote(n.body));
     const red = [...c.structural.red];
     const amber = [...c.structural.amber];
@@ -219,7 +230,52 @@ export function runQualityGate(options: { includeDrafts?: boolean } = {}): Quali
       );
     });
 
+  // School × 학년 × 과목 and 학년 hub pages (2026-11-02 Phase 2): graded on the entry text the page renders
+  // (intro + summary + notes; the 반영 비율 list is the official table itself). Also compared against the
+  // school×과목 and 행정동×과목 texts so a page cannot pass by repeating them.
+  const schoolGradeSubject: Candidate[] = schoolGradeSubjectContents
+    .filter((c) => (c.status === "published" ? isPublishedGradeSubject(c) : includeDrafts))
+    .map((c) => {
+      const path = `/school/${c.schoolSlug}/${c.grade}/${c.subjectSlug}`;
+      const badTotals = groupAssessmentsByCourse(c)
+        .filter((g) => g.exam + g.task !== 100)
+        .map((g) => `반영 비율 합계 ${g.exam + g.task}% (${g.course || "과목"})`);
+      const routeExists = allSchoolGradeRoutes().some((r) => r.schoolSlug === c.schoolSlug && r.grade === c.grade && r.subjectSlug === c.subjectSlug);
+      return {
+        kind: "school-grade-subject" as const,
+        path,
+        draft: c.status !== "published",
+        indexed: getIndexability("school-grade-subject", { schoolSlug: c.schoolSlug, schoolGrade: String(c.grade), subjectSlug: c.subjectSlug }).index,
+        text: [c.intro, c.summary, ...c.notes.map((n) => n.body)].join(" "),
+        notes: c.notes,
+        sources: c.sources,
+        structural: { red: [...badTotals, ...(routeExists || c.status !== "published" ? [] : ["route 없음(미등록 학교·학년 범위 밖)"])], amber: [] },
+      };
+    });
+  const schoolGradeHub: Candidate[] = allSchoolGradeRoutes()
+    .filter((r) => !r.subjectSlug)
+    .flatMap((r) => {
+      const ctx = resolveSchoolGrade(r.schoolSlug, String(r.grade));
+      if (!ctx) return [];
+      const built = buildSchoolGradeContent(ctx);
+      return [
+        {
+          kind: "school-grade" as const,
+          path: `/school/${r.schoolSlug}/${r.grade}`,
+          indexed: getIndexability("school-grade", { schoolSlug: r.schoolSlug, schoolGrade: String(r.grade) }).index,
+          text: [built.intro, ...built.cards.map((c) => [c.summary, ...c.tasks].join(" "))].join(" "),
+          notes: built.cards.map((c) => ({ title: c.subject.name, body: c.summary })),
+          sources: ctx.entries.flatMap((e) => e.content.sources),
+          structural: { red: [], amber: [] },
+        },
+      ];
+    });
+  const schoolSubjectTexts = schoolSubject.map((c) => c.text);
+  const dongSubjectTexts = dongCandidates("region-dong-subject").map((c) => c.text);
+
   return [
+    ...grade(schoolGradeSubject, [...schoolSubjectTexts, ...dongSubjectTexts]),
+    ...grade(schoolGradeHub),
     ...grade(regionSubject),
     ...grade(regionGradeSubject),
     ...grade(schoolSubject),
@@ -245,7 +301,9 @@ export function summarizeQualityGate(rows: QualityRow[]): string[] {
  * src/data/qualityNoindex.ts must hold exactly the gate's RED set: a RED page
  * that is still indexed, or a held page that improved past RED, is a drift.
  */
-export function checkQualityNoindexSync(rows: QualityRow[]): { ok: boolean; issues: string[] } {
+export function checkQualityNoindexSync(allRows: QualityRow[]): { ok: boolean; issues: string[] } {
+  // School 학년 / 학년×과목 holds live in src/data/schoolGradeNoindex.ts (checkSchoolGradeNoindexSync).
+  const rows = allRows.filter((r) => r.kind !== "school-grade" && r.kind !== "school-grade-subject");
   const red = new Set(rows.filter((r) => r.grade === "RED").map((r) => r.path));
   const issues: string[] = [];
   for (const p of red) if (!qualityNoindexPaths.has(p)) issues.push(`RED but not held noindex: ${p}`);
@@ -276,6 +334,17 @@ export function checkSchoolSubjectNoindexHolds(rows: QualityRow[]): { ok: boolea
  * pages through qualityNoindex.ts; this check makes sure no AMBER dong page is left indexed either —
  * an AMBER dong page must be improved to GREEN or held before it ships. Thresholds are unchanged.
  */
+/** Indexed school 학년 / 학년×과목 pages must be GREEN, and src/data/schoolGradeNoindex.ts lists exactly the non-GREEN ones. */
+export function checkSchoolGradeNoindexSync(rows: QualityRow[]): { ok: boolean; issues: string[] } {
+  const issues: string[] = [];
+  const kinds = new Set(["school-grade", "school-grade-subject"]);
+  const nonGreen = new Set(rows.filter((r) => kinds.has(r.kind) && !r.draft && r.grade !== "GREEN").map((r) => r.path));
+  for (const p of nonGreen) if (!schoolGradeNoindexPaths.has(p)) issues.push(`non-GREEN school-grade page not held at noindex: ${p}`);
+  for (const p of schoolGradeNoindexPaths) if (!nonGreen.has(p)) issues.push(`schoolGradeNoindex.ts lists a page that is GREEN or does not exist: ${p}`);
+  for (const r of rows) if (kinds.has(r.kind) && r.indexed && r.grade !== "GREEN") issues.push(`indexed ${r.grade}: ${r.path}`);
+  return { ok: issues.length === 0, issues };
+}
+
 export function checkDongIndexedGreen(rows: QualityRow[]): { ok: boolean; issues: string[] } {
   const issues = rows
     .filter((r) => (r.kind === "region-dong" || r.kind === "region-dong-subject") && r.indexed && r.grade !== "GREEN")

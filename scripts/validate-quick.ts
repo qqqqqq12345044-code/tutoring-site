@@ -26,7 +26,9 @@ import {
   checkQualityNoindexSync,
   checkSchoolSubjectNoindexHolds,
   checkDongIndexedGreen,
+  checkSchoolGradeNoindexSync,
 } from "./lib/quality-gate";
+import { checkSchoolGradeContent } from "./lib/school-grade-check";
 import {
   checkRegionGradeSubjectContentQuality,
   checkRegionPageContentQuality,
@@ -217,6 +219,12 @@ async function main() {
   const dongGreen = checkDongIndexedGreen(qualityRows);
   console.log(`Indexed dong pages GREEN only: ${dongGreen.ok ? "PASS" : "FAIL"}`);
   if (!dongGreen.ok) dongGreen.issues.forEach((i) => console.log(`  - ${i}`));
+  const gradeSync = checkSchoolGradeNoindexSync(qualityRows);
+  console.log(`School grade pages GREEN-only index: ${gradeSync.ok ? "PASS" : "FAIL"}`);
+  if (!gradeSync.ok) gradeSync.issues.forEach((i) => console.log(`  - ${i}`));
+  const gradeContent = checkSchoolGradeContent();
+  console.log(`School grade content + evidence: ${gradeContent.ok ? "PASS" : "FAIL"} (${gradeContent.summary})`);
+  if (!gradeContent.ok) gradeContent.issues.forEach((i) => console.log(`  - ${i}`));
 
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
@@ -242,7 +250,9 @@ async function main() {
     guideQuality.ok &&
     qualitySync.ok &&
     schoolHolds.ok &&
-    dongGreen.ok;
+    dongGreen.ok &&
+    gradeSync.ok &&
+    gradeContent.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {
