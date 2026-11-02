@@ -13,6 +13,9 @@
  *   province hub is the shared one-dong template; held until the province has enough dong content to differ.
  *   They were noindex before (no registered school), so this is not an indexed→noindex change.
  *
+ * - gyeongnam, gangwon (2026-11-02, 27차 batch): one 행정동 page each (창원 봉암동 / 원주 반곡관설동) — same
+ *   one-dong template as above, held for the same reason; noindex before the batch (no registered school).
+ *
  * Every slug must be a province / city node with a registered school (checked by validate:quick's region gate).
  */
-export const regionHubNoindexSlugs = new Set<string>(["ulsan", "daejeon", "busan", "daegu"]);
+export const regionHubNoindexSlugs = new Set<string>(["ulsan", "daejeon", "busan", "daegu", "gyeongnam", "gangwon"]);

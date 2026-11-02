@@ -200,6 +200,9 @@ export const dongs: AdminDong[] = [
   // 2026-11-02 26차 batch = 부산·대구 pilot (첫 부산·대구 동, docs/qa/national-school-content-expansion-2026-11-02.md).
   { slug: "hadan2-dong", code: "2638056200", name: "하단제2동", citySlug: "busan-saha", legalDongs: ["하단동"] },
   { slug: "beomeo4-dong", code: "2726054000", name: "범어4동", citySlug: "daegu-suseong", legalDongs: ["범어동"] },
+  // 2026-11-02 27차 batch = 경남·강원 pilot (첫 창원·원주 동, docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "bongam-dong", code: "4812762000", name: "봉암동", citySlug: "changwon", legalDongs: ["봉암동", "양덕동"] },
+  { slug: "bangokgwanseol-dong", code: "5113067500", name: "반곡관설동", citySlug: "wonju", legalDongs: ["관설동", "반곡동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

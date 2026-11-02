@@ -20,4 +20,10 @@ export const schoolGradeNoindexPaths = new Set<string>([
   "/school/hadan-middle-school/1",
   "/school/hadan-middle-school/2",
   "/school/hadan-middle-school/3",
+  // 2026-11-02 27차: 창신중 학년 hub (41~43%), 영서고 학년 hub (모든 과목 2회고사 40% + 수행 2개 60%, 32%).
+  "/school/changsin-middle-school/1",
+  "/school/changsin-middle-school/2",
+  "/school/changsin-middle-school/3",
+  "/school/yeongseo-high-school/1",
+  "/school/yeongseo-high-school/2",
 ]);

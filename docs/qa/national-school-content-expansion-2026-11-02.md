@@ -364,3 +364,210 @@
 | 학교 hub 색인 | 26차 신규 11교 포함 schoolContent 미작성 학교는 noindex (기존 gate 유지) |
 | PDF 원문 학교 | 부산여고·동도중 등 — OCR 금지, 내용 없음 |
 | 원문 수집 도구 repo 편입 | Phase 3 결정 (cfb dev dependency) |
+
+---
+
+# Busan/Daegu Production
+
+| 항목 | 결과 |
+|---|---|
+| 시작 상태 | work = origin/work = `7aa4325`, main = origin/main = `6c41ce0`, clean, `diff --check` 문제 없음 |
+| 재검증 | test 11/11, validate:full PASS (Routes 13,318 / Sitemap 834 / Noindex 12,482, broken 0, orphan 0, metadata dup 0, indexed RED 0) |
+| URL regression | Production sitemap(778) 대비 삭제 0, 추가 56 |
+| 반영 | `git push origin 7aa4325:main` (fast-forward) → main = `7aa4325` |
+| 배포 | GitHub deployment 7485632758 success. 롤백 지점 `6c41ce0`(7485137200) |
+| Smoke | 부산·대구 동 hub·동×과목·4개 학교 hub/학년/학년×과목·오류 URL + 서울·경기·인천·울산·대전 대표 32 URL: 정책 일치, 학교알리미 출처·기준 문구 표시 |
+| sitemap 전수 | 834 URL 전부 200·index, 5xx 0 |
+
+# Batch 27
+
+경남과 강원에 각각 첫 행정동 1곳씩을 추가했다. 대상은 HWP/HWPX 평가계획이 있는 중·고교 조합이 있는 동만이다. **work only**(main·Production 반영 금지).
+
+후보 선정 과정:
+
+| 후보 동 | 고 | 중 | 판정 |
+|---|---|---|---|
+| 창원 봉암동 | 창신고 zip → 과목별 HWP | 창신중 과목별 HWP | **채택** |
+| 창원 회원1동·웅천동·여좌동 | 무학여고 PDF / 웅천고 PDF / 진해고 zip | 무학여중 PDF / 웅천중 공시 없음 / 진해중 PDF | 중학교 원문 없음 |
+| 원주 반곡관설동 | 영서고 zip → HWP/HWPX (원주여고·치악고 PDF) | 반곡중 HWPX (버들중 PDF) | **채택** |
+| 원주 개운동·우산동·무실동 | 상지여고 zip / 진광고 PDF / 원주삼육고 PDF | 상지여중 PDF / 진광중 HWPX / 평원중 HWPX | 중·고 중 한쪽만 HWP |
+| 춘천 교동·후평2동·동면 | 유봉여고 PDF / 사대부고 PDF / 강원고 HWP | 유봉여중 HWP / 봉의중 HWPX / 강원중 PDF | 중·고 중 한쪽만 HWP |
+
+- 강원은 원주와 춘천 중 원주를 택했다. 춘천 후보는 모두 중·고 중 한쪽이 PDF였다(OCR 금지, PDF 표는 셀 대응을 보장할 수 없음).
+
+# Gyeongnam
+
+| 항목 | 값 |
+|---|---|
+| 도시·동 | 창원시 마산회원구 봉암동 (`/region/gyeongnam/changwon/bongam-dong`, 행정동 4812762000, 법정동 봉암동·양덕동) |
+| 등록 | 창신고·창신중 (`--promote 4812762000 --allow-new-city changwon`) |
+| 등록 제외 | 봉덕초 — 2026년 3차 공시 미확인 |
+| 동 hub + 동×과목 5 | 전부 GREEN·색인 (중학교 학년과 고1 비교) |
+
+- **창신고**
+  - 학년 hub 1·2: GREEN·색인
+  - 학년×과목 7:
+    - 1학년: 수학(공통수학2), 영어(공통영어2), 과학(통합과학2), 사회(한국사2)
+    - 2학년: 국어(화법과 언어·주제 탐구 독서), 수학(미적분Ⅰ), 영어(영어 독해와 작문·심화영어)
+  - 제외:
+    - 1학년 국어(공통국어2): 반영표 과제명 "진로 독서와 연계한 독서 포트폴리오 분석"과 세부 계획 "진로 독서를 확장한 심화 진로 포트폴리오 작성"이 다름
+    - 기하: 반영표에 과제명 없이 "1회/2회"만 있고 성취기준도 표끼리 다름
+- **창신중**
+  - 학년×과목 11:
+    - 1학년: 국어·수학·과학
+    - 2학년: 국어·수학·영어·사회(역사)
+    - 3학년: 국어·수학·영어·사회(사회+역사)
+  - 학년 hub 1~3: AMBER(41~43%) noindex
+  - 제외:
+    - 1학년 영어: 반영표 영역 "말하기" vs 세부 "쓰기, 말하기"
+    - 1학년 사회: 학습지 20% vs 30%, 과제명 불일치
+    - 2·3학년 과학: "활동지2" vs "탐구보고서"
+  - 시기를 생략한 항목: 1학년 국어 쓰기(9월 vs 11월), 3학년 수학 2차시험
+
+# Gangwon
+
+| 항목 | 값 |
+|---|---|
+| 도시·동 | 원주시 반곡관설동 (`/region/gangwon/wonju/bangokgwanseol-dong`, 행정동 5113067500, 법정동 관설동·반곡동) |
+| 등록 | 8교: 영서고·원주여고·치악고·버들중·반곡중·관설초·단관초·봉대초 |
+| 등록 제외 | 버들초·반곡초 — 공시 미확인 |
+| 동 hub + 동×과목 5 | 전부 GREEN·색인 (반곡중 2·3학년과 영서고 1학년 비교) |
+
+- **영서고**
+  - 직업계 과정이 함께 있는 학교라 공통·일반 과목만 다뤘고, 학과·과정은 쓰지 않았다.
+  - 학년×과목 8:
+    - 1학년: 국·영·수·사(통합사회2)·과
+    - 2학년: 국어(문학과 영상), 영어(세계 문화와 영어), 사회(한국사2)
+  - 학년 hub 1·2: AMBER(32%) noindex. 모든 과목이 "2회고사 40% + 수행 2개 60%" 구조다.
+- **반곡중**
+  - 학년×과목 10: 2·3학년 × 5과목. 2학년 사회과는 역사, 3학년은 사회+역사다.
+  - 학년 hub 2·3: GREEN·색인
+  - 1학년: 자유학기(정기시험 없음, 수행 100%)라 페이지가 없다.
+- 원주여고·치악고·버들중은 평가계획이 PDF라 내용에서 제외했다.
+- 함정 기록:
+  - 영서고 zip 안의 `.hwpx` 일부는 실제로는 HWP 5.0 바이너리였다. `.hwp`로 복사해 덤프했다.
+  - 창신중 3학년 사회(.hwpx)는 바깥 표 한 칸 안에 모든 표가 들어 있는 구조였다.
+
+# Route Delta (Batch 27)
+
+| 항목 | 7aa4325 (Production) | Batch 27 (work) | 차이 |
+|---|---:|---:|---:|
+| Routes | 13,318 | 13,429 | +111 |
+| Sitemap | 834 | 888 | +54 |
+| Noindex | 12,482 | 12,539 | +57 |
+| 전국 PAGE_ONLY hub | 10,123 | 10,113 | −10 (등록 학교로 이동) |
+| 학년×과목 | 90 | 126 | +36 |
+| 학년 hub (색인/noindex) | 21 (12/9) | 30 (16/14) | +9 |
+| 행정동 hub / 동×과목 | 86 / 430 | 88 / 440 | +2 / +10 |
+
+- **사전 예측**: +120 안팎 → 실측 +111.
+- **Routes +111**: changwon·wonju 조합 54(noindex) + 동 12 + 학년 hub 9 + 학년×과목 36.
+- **Sitemap +54**: 동 12 + 학년×과목 36 + 학년 hub 4 + 시 hub 2(changwon·wonju).
+- **Noindex +57**: 조합 54 + AMBER hub 5 − 시 hub 2.
+- **보류**: 시·도 hub 경남·강원은 `regionNoindex.ts`에 보류했다. 동이 1개뿐인 템플릿이고, 원래 noindex였다.
+- **정적 생성**: 학년 경로는 게시된 entry만 생성한다. 전국 10k × 학년 × 과목은 생성하지 않는다.
+
+# Quality Gate (누적)
+
+| kind | GREEN | AMBER | RED | indexed RED |
+|---|---:|---:|---:|---:|
+| region-dong | 88 | 0 | 0 | 0 |
+| region-dong-subject | 440 | 0 | 0 | 0 |
+| school-grade | 16 | 14 | 0 | 0 |
+| school-grade-subject | 126 | 0 | 0 | 0 |
+| school-subject | 48 | 2 | 13 | 0 |
+
+- threshold는 바꾸지 않았다(RED > 60%, AMBER > 30%).
+- 학년×과목은 학교×과목·동×과목 텍스트와도 비교한다.
+- AMBER 학년 hub 14개(무거중·계산중·하단중·창신중 각 1~3, 영서고 1·2)는 `schoolGradeNoindex.ts`에 있다. sync 검사 PASS.
+
+# Validation (Batch 27)
+
+| 항목 | 결과 |
+|---|---|
+| lint · typecheck | PASS |
+| test | 11/11 PASS |
+| build · validate:quick · validate:full | PASS — Routes 13,429 / Sitemap 888 / Noindex 12,539, broken 0, orphan 0, metadata dup 0, indexed RED 0, Search/Consult smoke PASS |
+| 원문 표본 대조 | 창신고 공통수학2 30/30/20/20(과제명 일치), 반곡중 2학년 영어 35/35/10/20(선택형 85·논서술형 15점) 일치 |
+| 로컬 smoke (next start) | 30 URL: 시·도 hub noindex, 시 hub·동·동×과목·GREEN 학년·학년×과목 index, AMBER 학년 noindex, 제외 페이지·전국 hub 학년·범위 밖 학년 404, canonical·H1·CTA·sitemap 일치 |
+| render 390/768/1440 | 동·학교·학년·학년×과목 8페이지 × 3폭: 가로 넘침 0, 깨진 이미지 0, 콘솔 오류 0, breadcrumb·학교알리미 출처·CTA 표시. 24px 미만 터치 대상은 breadcrumb·footer 인라인 링크(기존 템플릿과 동일) |
+
+# Nationwide Coverage
+
+| 시·도 | 등록 학교 | 색인 학교 hub | 학년×과목 콘텐츠 학교 | 상태 |
+|---|---:|---:|---:|---|
+| 서울 | 250 | 20 | 1 | 운영 |
+| 경기 | 162 | 9 | 1 | 운영 |
+| 인천 | 68 | 18 | 1 | 운영 |
+| 울산 | 7 | 0 | 1 | 운영 (시·도 hub 보류) |
+| 대전 | 8 | 0 | 1 | 운영 (시·도 hub 보류) |
+| 부산 | 5 | 0 | 2 | 운영 (시·도 hub 보류) |
+| 대구 | 6 | 0 | 2 | 운영 (시·도 hub 보류) |
+| 경남 | 2 | 0 | 2 | Batch 27 (work) |
+| 강원 | 8 | 0 | 2 | Batch 27 (work) |
+| 충북·충남·전북·경북·제주 | 0 | 0 | 0 | 전국 PAGE_ONLY hub만 |
+| 광주·전남·세종 | — | — | — | 보류 (route 없음) |
+
+- 합계:
+  - 등록 516
+  - 색인 학교 hub 47
+  - 학년×과목 콘텐츠 학교 13 (학년×과목 126 전부 색인)
+  - 전국 PAGE_ONLY hub 10,113 (noindex)
+  - sitemap 888
+
+# NEXT_BATCH_TEMPLATE
+
+한 batch는 시·도 1~2개, 시·도마다 행정동 1곳, 학교 2~4곳이다. 아래 순서를 그대로 반복한다(새 framework 없이 기존 스크립트와 validator 사용).
+
+```
+0. 안전 확인   git status / fetch / rev-parse (work·origin/work·main·origin/main) — 예상과 다르면 STOP
+1. 동 후보      school-candidates.json에서 시·도 첫 도시의 CONFIRMED 동 중 중·고(일반계)가 모두 있는 곳을 학교 수 오름차순으로 5~10개
+2. 원문 확인    collect.mjs fetch <코드·학교명 tsv> → manifest에서 형식 확인
+               채택: 같은 동에 HWP/HWPX(또는 zip 안 HWP) 중학교 1+ · 고등학교 1+
+               PDF·공시 없음 → 다음 후보 (OCR 금지)
+3. 등록         NEIS 단건 조회 → .cache/official/neis/national-NN.json
+               school-import.ts --promote <dongCode,…> --allow-new-city <city,…>   (dry run → --write)
+               sync-candidates.mjs <candidates> <codes.txt> "" --write
+               national-school-pages.ts --write
+               dongs.ts 행 추가(legalDongs = admin-dongs.json), sources.ts SCHOOLINFO_IDS 추가
+4. 덤프         grid.mjs (zip은 collect.mjs extract 후). ".hwpx"가 HWP5면 .hwp로 복사해 덤프. 0바이트 덤프 확인
+5. 콘텐츠       학교별: p2/BRIEF.md + p4/STRICT.md (고: 1학년 5과목 + 2학년 국·영·수, 중: 1~3학년 × 5과목)
+               동별: p3/BRIEF-DONG.md + p4/STRICT.md (학교·학년 비교 5과목)
+               append.mjs로 schoolGradeSubjectContent.ts / dongSubjectContent.ts 끝에 추가
+6. 품질 게이트  validate:quick → AMBER/RED 학년 hub는 schoolGradeNoindex.ts, 동 1개 시·도 hub는 regionNoindex.ts
+7. 수치         route inventory로 delta 확인(예측 ±15% 밖이면 원인 확인) → baseline.ts에 구성과 함께 기록
+8. 검증         validate:full, 원문 표본 대조 2~4건, next start smoke(index/noindex/404), 390/768/1440 render
+9. 문서·커밋    이 문서에 batch 절 추가 → work commit/push (main·Production은 별도 승인)
+```
+
+반복성 평가:
+- 2~9단계는 기존 스크립트와 validator만으로 반복 가능함을 Batch 26·27에서 확인했다.
+- 수작업으로 남는 부분은 세 가지다:
+  - 2단계 형식 판정(PDF 비율이 높은 시·도는 후보를 더 받아야 함)
+  - 5단계 원문 해석과 엄격 규칙 적용
+  - 6단계 AMBER 보류 판단
+- 원문 수집·덤프 도구(collect.mjs·grid.mjs, `cfb` 의존)와 brief 파일은 아직 세션 scratch에 있다. 다음 batch 전에 repo의 `scripts/official/`로 옮길지(dev dependency 추가) 결정이 필요하다. 옮기지 않으면 매 세션마다 이전 세션 scratch 경로를 찾아 써야 한다.
+
+# Holds (Batch 27 기준)
+
+| 항목 | 상태 |
+|---|---|
+| Batch 27 main 반영 / Production | **금지(지시)** — work checkpoint까지만 |
+| 광주·전남 | 보류 — 시·도명 `전남광주통합특별시` 결정 전 |
+| 세종 | 보류 — 구조 변경 없음 |
+| PENDING 159 | 404 유지, 주소 추정 없음 |
+| FIELD_ANALYSIS · CASE_BASED | 검증된 기록 0 — 섹션 숨김, 생성 없음 |
+| 시·도 hub | 울산·대전·부산·대구·경남·강원 `regionNoindex.ts` 보류 (각 1개 동) |
+| 학년 hub AMBER 14 | noindex |
+| 신규 등록 학교 hub | schoolContent 미작성 → noindex (기존 gate) |
+| PDF 원문 학교 | 내용 없음 (OCR 금지) |
+| 원문 수집 도구 repo 편입 | 결정 필요 (cfb dev dependency) |
+
+# 다음 Batch 순서
+
+| Batch | 지역 | 첫 도시 후보 | 비고 |
+|---|---|---|---|
+| 28 | 충북 + 충남 | 청주(184) / 천안(133) | PDF 비율을 보고 2단계에서 후보를 넉넉히 받기 |
+| 29 | 전북 + 경북 | 전주(145) / 포항(131) | |
+| 30 | 경남 2차 + 제주 | 김해(118) 또는 창원 2번째 동 / 제주시(124) | 경남 2번째 동이 생기면 경남 시·도 hub 보류 재측정 |
+| — | 광주·전남·세종 | — | 보류 해소 전 제외 |
