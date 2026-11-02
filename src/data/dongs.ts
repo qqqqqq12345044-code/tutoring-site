@@ -203,6 +203,14 @@ export const dongs: AdminDong[] = [
   // 2026-11-02 27차 batch = 경남·강원 pilot (첫 창원·원주 동, docs/qa/national-school-content-expansion-2026-11-02.md).
   { slug: "bongam-dong", code: "4812762000", name: "봉암동", citySlug: "changwon", legalDongs: ["봉암동", "양덕동"] },
   { slug: "bangokgwanseol-dong", code: "5113067500", name: "반곡관설동", citySlug: "wonju", legalDongs: ["관설동", "반곡동"] },
+  // 2026-11-02 29차 전북 전주 완산구 노송동(전주고·전주신일중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "nosong-dong", code: "5211160500", name: "노송동", citySlug: "jeonju", legalDongs: ["중노송동", "남노송동", "서노송동"] },
+  // 2026-11-02 29차 경북 안동 서구동(안동여고·경안여중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "seogu-dong", code: "4717058500", name: "서구동", citySlug: "andong", legalDongs: ["안흥동", "대석동", "옥야동", "광석동", "당북동", "화성동", "법상동", "금곡동"] },
+  // 2026-11-02 28차 충북 청주 상당구 탑대성동(일신여고·일신여중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "tapdaeseong-dong", code: "4311162000", name: "탑대성동", citySlug: "cheongju", legalDongs: ["탑동", "대성동"] },
+  // 2026-11-02 28차 충남 천안 동남구 병천면(병천고·병천중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "byeongcheon-myeon", code: "4413136000", name: "병천면", citySlug: "cheonan", legalDongs: ["병천면", "가전리", "병천리", "탑원리", "도원리", "매성리", "관성리", "봉항리", "용두리", "송정리"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

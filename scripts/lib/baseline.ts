@@ -82,7 +82,11 @@ export const BASELINE = {
   // + changwon·wonju 조합 route 54(noindex) + 동 hub 2 + 동×과목 10(GREEN·색인) + 학년 hub 9(GREEN 4 색인, 창신중·영서고 AMBER 5
   // noindex) + 학년×과목 36(GREEN·색인) = +111 → 13318 → 13429. 시 허브 changwon·wonju noindex→index, 시·도 허브 경남·강원은
   // regionNoindex.ts 보류(1개 동 템플릿) → sitemap 834 → 888, noindex 12482 → 12539.
-  totalRoutes: 13429,
+  // 2026-11-02 28~29차 = 충북 청주 탑대성동·충남 천안 병천면·전북 전주 노송동·경북 안동 서구동(각 시·도 첫 동): 학교 16곳 등록
+  // (전국 hub에서 이동, route 0) + 4개 시 조합 route 108(noindex) + 동 hub 4 + 동×과목 14(GREEN·색인) + 학년 hub 17(GREEN 13 색인,
+  // 전주신일중 RED 2·병천중 AMBER 2 noindex) + 학년×과목 61(GREEN·색인) = +204 → 13429 → 13633. 시 허브 4곳 noindex→index,
+  // 시·도 허브 충북·충남·전북·경북은 regionNoindex.ts 보류(1개 동 템플릿) → sitemap 888 → 984, noindex 12539 → 12647.
+  totalRoutes: 13633,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -94,7 +98,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 888,
-  noindexCount: 12539,
+  sitemapCount: 984,
+  noindexCount: 12647,
   brokenLinks: 0,
 };

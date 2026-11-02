@@ -26,4 +26,10 @@ export const schoolGradeNoindexPaths = new Set<string>([
   "/school/changsin-middle-school/3",
   "/school/yeongseo-high-school/1",
   "/school/yeongseo-high-school/2",
+  // 2026-11-02 29차: 전주신일중 학년 hub 2·3 (RED 61% — 두 학년의 과목 구성·비율이 거의 같음; RED는 index 금지).
+  "/school/jeonjusinil-middle-school/2",
+  "/school/jeonjusinil-middle-school/3",
+  // 2026-11-02 28차: 병천중 학년 hub 1·2 (AMBER 45%).
+  "/school/byeongcheon-middle-school/1",
+  "/school/byeongcheon-middle-school/2",
 ]);
