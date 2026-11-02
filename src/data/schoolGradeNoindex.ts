@@ -16,4 +16,8 @@ export const schoolGradeNoindexPaths = new Set<string>([
   "/school/gyeyang-middle-school/1",
   "/school/gyeyang-middle-school/2",
   "/school/gyeyang-middle-school/3",
+  // 2026-11-02 26차: 하단중 학년 hub (1·2학년 모두 중간·기말 30%씩 + 수행 40%, 이름 마스킹 유사도 38~50%).
+  "/school/hadan-middle-school/1",
+  "/school/hadan-middle-school/2",
+  "/school/hadan-middle-school/3",
 ]);

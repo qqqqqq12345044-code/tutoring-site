@@ -9,6 +9,10 @@
  *   (docs/qa/national-school-expansion-readiness-2026-11-02.md § Quality Gate), so they stay noindex until the
  *   province has enough dong content to differ. They were noindex before the pilot (no indexed→noindex change).
  *
+ * - busan, daegu (2026-11-02, 26차 batch): same situation — one 행정동 page each (하단제2동 / 범어4동), so the
+ *   province hub is the shared one-dong template; held until the province has enough dong content to differ.
+ *   They were noindex before (no registered school), so this is not an indexed→noindex change.
+ *
  * Every slug must be a province / city node with a registered school (checked by validate:quick's region gate).
  */
-export const regionHubNoindexSlugs = new Set<string>(["ulsan", "daejeon"]);
+export const regionHubNoindexSlugs = new Set<string>(["ulsan", "daejeon", "busan", "daegu"]);
