@@ -12,6 +12,7 @@ import { getDong } from "@/data/dongs";
 import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { getRegionUrl } from "@/data/regions";
 import { isSchoolInfoPlanSource } from "@/data/sources";
+import { orphanRiskSchoolGradeSubjects } from "@/lib/internalLinks";
 
 /** /school/[schoolSlug]/[grade]/[subject] — the conversion page: one school, one 학년, one 과목. */
 export default function SchoolGradeSubjectPage({ ctx }: { ctx: SchoolGradeSubjectContext }) {
@@ -20,6 +21,8 @@ export default function SchoolGradeSubjectPage({ ctx }: { ctx: SchoolGradeSubjec
   const href = schoolGradeSubjectHref(school.slug, grade, subject.slug);
   const dong = school.dongSlug ? getDong(school.cityRegionSlug, school.dongSlug) : undefined;
   const siblings = (resolveSchoolGrade(school.slug, String(grade))?.entries ?? []).filter((e) => e.subject.slug !== subject.slug);
+  // 같은 과목 다른 학년 중 색인 부모 링크가 없는 페이지(학년 hub noindex·같은 학년 단일 과목)만 직접 연결한다.
+  const sameSubjectOtherGrade = orphanRiskSchoolGradeSubjects(school).filter((r) => r.subjectSlug === subject.slug && r.grade !== grade);
 
   return (
     <>
@@ -93,6 +96,7 @@ export default function SchoolGradeSubjectPage({ ctx }: { ctx: SchoolGradeSubjec
           links={[
             { label: `${school.name} ${grade}학년 과외`, href: gradeHref },
             { label: `${school.name} 과외`, href: `/school/${school.slug}` },
+            ...sameSubjectOtherGrade.map(({ grade: g, href: h }) => ({ label: `${g}학년 ${subject.name}과외`, href: h })),
             ...(dong
               ? hasDongSubjectRoute(dong.citySlug, dong.slug, subject.slug)
                 ? [{ label: `${dong.name} ${subject.name}과외`, href: `${getRegionUrl(dong.citySlug)}/${dong.slug}/${subject.slug}` }]

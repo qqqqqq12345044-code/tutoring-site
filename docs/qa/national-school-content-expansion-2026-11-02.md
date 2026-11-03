@@ -757,3 +757,248 @@
 | 신규 등록 학교 hub | schoolContent 미작성 → noindex (기존 gate) |
 | 학과별 계획 학교 | 병천고는 학년 전체 대상 계획만 사용 |
 | 원문 수집 도구 repo 편입 | 결정 필요 (cfb dev dependency) |
+
+---
+
+# Batch 28–29 Production
+
+| 항목 | 결과 |
+|---|---|
+| 시작 상태 | work = origin/work = `9c3a863`, main = origin/main = `77af62c`, clean, ahead 1 / behind 0, `diff --check` 문제 없음 |
+| 재검증 | lint·typecheck PASS, test 7/7(`operating.test.ts`·`national-school-pages.test.ts`), validate:full PASS (Routes 13,633 / Sitemap 984 / Noindex 12,647, broken 0, orphan 0, metadata dup 0, indexed RED 0, Search/Consult smoke PASS) |
+| 추가 확인 | Production sitemap(888) 대비 삭제 0·추가 96, sitemap 중복 0, slug 중복 0, school code 중복 0(등록 412곳이 official code 보유, 등록∩전국 hub 0) |
+| 반영 | `git push origin 9c3a863:main` (fast-forward, force 없음) → main = origin/main = `9c3a863` |
+| 배포 | GitHub deployment 7508266275 (Production) success. 롤백 지점 `77af62c`(7486234788) |
+| Smoke | 122 URL(충북·충남·전북·경북 신규 동·학교·학년·학년×과목, 서울·경기·인천·울산·대전·부산·대구·경남·강원 대표, 404 케이스): 200/404·robots·canonical·H1 1·BreadcrumbList·출처·CTA 정책 일치, BAD 0, 5xx 0 |
+| sitemap 전수 | 984 URL 전부 200·index, 888 손실 0·추가 96 |
+| robots.txt | `Allow: /`, `Disallow: /api/`, sitemap 선언 정상 |
+
+# Batch 30 Jeju
+
+**work only** (main·Production 반영 안 함).
+
+| 항목 | 값 |
+|---|---|
+| 도시·동 | 제주시 한림읍 (`/region/jeju/jeju-si/hanrim-eup`, 행정동 5011025000, 법정동 한림읍 + 15개 리) |
+| 구조 | 기존 province → city → 동(읍·면 포함) 모델에 그대로 들어간다(병천면 선례). `--allow-new-city jeju-si`만 사용했고 URL 구조 변경은 없다 |
+| 등록 | 한림고·한림항공우주고·한림중·한림여중 (한림초 등 초등학교 5곳은 2026년 3차 공시 미확인이라 PAGE_ONLY 유지, 한림초비양분교장 제외) |
+| 동 hub + 동×과목 | hub + 5과목 GREEN·색인 |
+| 한림고 | 학년×과목 7 (1학년 국·수·사회(통합사회2+한국사2)·과학, 2학년 국·수·영). 학년 hub 2학년 GREEN, 1학년 AMBER(31%) noindex |
+| 한림항공우주고 | 학년×과목 8 (1학년 5, 2학년 국·영·수). 학년 hub 1·2학년 AMBER(36%) noindex. 학과·과정 전용 계획은 쓰지 않았다 |
+| 한림여중 | 학년×과목 13 (1학년 수·사·과·영, 2학년 국·사회(역사)·수·과, 3학년 5). 학년 hub 1~3 AMBER(33%) noindex |
+
+**동 선정 과정** (선정 기준: mapping CONFIRMED, 중·고 같은 행정동, 2026 최신 평가계획, HWP/HWPX 판독, 고유성):
+
+| 후보 | 고 | 중 | 판정 |
+|---|---|---|---|
+| 제주시 용담2동 | 사대부고 PDF | 사대부중 HWP | 고 PDF |
+| 제주시 연동 | 남녕고 PDF | 제주중앙중 HWP, 제주서중 PDF | 고 PDF |
+| 제주시 이도2동 | 제주중앙여고 (6개 중 HWP 1개) | 제주제일중·제주동여중 PDF | 중 PDF |
+| 제주시 화북동 | 오현고 PDF | 제주동중 HWP, 오현중 PDF | 고 PDF |
+| 제주시 노형동 | 제주제일고·제주고 PDF | 한라중·노형중 PDF | 전부 PDF |
+| 제주시 아라동 | 제주여고·제주중앙고·영주고 HWPX | 아라중·신성여중·제주여중·탐라중 전부 PDF | 중 PDF |
+| 제주시 한경면 | 한국뷰티고 HWP | 저청중 HWP, 고산중·신창중 공시 미확인 | 특성화고 위주 |
+| 제주시 조천읍 | 함덕고 HWPX | 함덕중 1파일(HWPX)·조천중 PDF | 보류(대체 후보) |
+| 제주시 애월읍 | 제주외고(특목) HWPX, 애월고 PDF | 애월중 HWP, 신엄중·귀일중 PDF | 보류 |
+| 제주시 구좌읍 | 세화고 공시 미확인 | 김녕중·세화중 PDF | 제외 |
+| **제주시 한림읍** | 한림고·한림항공우주고 HWPX | 한림여중 HWP (한림중 PDF) | **채택** |
+
+서귀포시는 제주시에서 후보가 나와 검토하지 않았다. 제주 시·도 hub는 동이 1개라 `regionNoindex.ts`에 보류로 추가했다(원래 noindex).
+
+# Chungbuk Wave 2
+
+| 항목 | 값 |
+|---|---|
+| 동 | 청주시 상당구 금천동 (`geumcheon-dong`, 4311168000, 법정동 금천동) — 두 번째 동 |
+| 등록 | 금천고·금천중·청주동중 (금천초·동주초는 공시 미확인으로 PAGE_ONLY 유지) |
+| 동 hub + 동×과목 | hub + 5과목 GREEN·색인 |
+| 금천고 | 학년×과목 8 (1학년 국·수·영·사회(한국사2)·과학, 2학년 국·영·수). 학년 hub 1·2 GREEN |
+| 금천중 | 학년×과목 8 (2학년 국·영·수·과학, 3학년 국·영·사회(사회+역사)·과학). 학년 hub 2·3 GREEN. 1학년은 자유학기 |
+| 청주동중 | 학년×과목 10 (2·3학년 × 5과목). 학년 hub 2·3 GREEN. 1학년은 자유학기 |
+| 제외 | 금천중 3학년 수학·2학년 사회(진도표 과제명이 반영표·세부 기준과 평가 대상이 다르고, 사회는 평가 횟수 2에 시기 1개), 금천고 통합사회2(학년 표기 불일치), 2학년 독서토론과 글쓰기(5반 한정)·세계 문화와 영어 |
+
+# Chungnam Wave 2
+
+| 항목 | 값 |
+|---|---|
+| 동 | 천안시 동남구 원성1동 (`wonseong1-dong`, 4413153000, 법정동 문화동·원성동·유량동) — 두 번째 동 |
+| 등록 | 천안중앙고·천안제일고·천안중·천성중 |
+| 동 hub + 동×과목 | hub + 5과목 GREEN·색인 |
+| 천안중앙고 | 학년×과목 8 (1학년 5, 2학년 국·수·영). 학년 hub 2학년 GREEN, 1학년 AMBER(31%) noindex |
+| 천안중 | 학년×과목 15. 학년 hub 1~3 AMBER(36~41%) noindex |
+| 천성중 | 학년×과목 15 중 10 색인 + 5 AMBER noindex(1·2학년 수학/과학, 3학년 과학, 33~39%). 학년 hub 1~3 AMBER(39~41%) noindex |
+| 천안제일고 | 공시된 84개 파일이 모두 학과별 계획이라 쓸 수 있는 페이지 0 (병천고 선례). 학교 hub만 등록 |
+| 제외 | 천안중앙고 2학년 기하(6·7반 한정, 수행 과제명·비율이 표마다 다름) |
+
+# Jeonbuk Wave 2
+
+| 항목 | 값 |
+|---|---|
+| 동 | 전주시 완산구 평화1동 (`pyeonghwa1-dong`, 5211169100, 법정동 평화동1가) — 두 번째 동 |
+| 등록 | 완산여고·전주남중·완산중 (전주평화초는 공시 미확인) |
+| 동 hub + 동×과목 | hub + 5과목 GREEN·색인 |
+| 완산여고 | 학년×과목 6 (1학년 5과목, 2학년 수학(직무수학)). 학년 hub 1학년 GREEN, 2학년은 카드 1개(실질 note 1)라 AMBER noindex |
+| 전주남중 | 학년×과목 8 (2학년 국·영·수·사회(역사), 3학년 국·영·수·과학). 학년 hub 2·3 AMBER(41%) noindex. 1학년은 자유학기 |
+| 완산중 | 평가계획이 PDF라 내용 없음(OCR 금지). 학교 hub만 등록 |
+| 제외 | 완산여고 한국사2·무역영어(표끼리 비율 불일치)·직무의사소통(진도표 1차 정기시험 행 불일치, 배점 표기 오기 추정), 전주남중 3학년 사회(수행 세부계획에 `학기 1 / 2025` 표기가 남아 있는 지난해 서식)·2학년 과학 |
+
+# Gyeongbuk Wave 2
+
+| 항목 | 값 |
+|---|---|
+| 동 | 영주시 영주1동 (`yeongju1-dong`, 4721055000, 법정동 영주동·하망동) — 영주 첫 동, 경북 두 번째 동 |
+| 등록 | 영광여고·영광여중 (`--allow-new-city yeongju`; 영주초 공시 미확인, 영광중은 학교알리미 검색 결과 없음) |
+| 동 hub + 동×과목 | hub + 4과목(영어·수학·사회·과학) GREEN·색인. 국어는 영광여고 국어가 제외돼 비교 대상이 없어 만들지 않았다 |
+| 영광여고 | 학년×과목 6 (1학년 수·영·사회(한국사2)·과학, 2학년 수·영). 학년 hub 1·2 GREEN |
+| 영광여중 | 학년×과목 12 (1학년 국·영·사회·과학, 2학년 국·사회(역사)·수·영, 3학년 국·영·수·과학). 학년 hub 1학년 GREEN, 2·3학년 AMBER(37%) noindex |
+| 제외 | 영광여고 국어 1·2학년(반영표와 세부 계획의 과제명이 다르고 시기도 어긋남)·통합사회2(계획서 제목이 2025학년도)·과학탐구실험2, 영광여중 1학년 수학·2학년 과학·3학년 사회·역사 |
+
+# Extraction Notes (Batch 30)
+
+- 학교별 Sonnet subagent 14개가 원문(HWP/HWPX 셀 주소 덤프)에서 추출하고 행마다 파일:줄 근거를 로그에 남겼다. 동×과목 5개 agent는 **최종 확정된 학교 frag만** 근거로 썼다.
+- 통합 단계에서 `STRICT` 규칙을 다시 적용해 agent가 남긴 경계 사례를 추가로 뺐다: 한림고 1학년 영어(intro와 note가 서로 모순)·한림고 2학년 영어 note 1개, 한림여중 1학년 국어·2학년 영어, 금천중 3학년 수학·2학년 사회, 전주남중 3학년 사회, 완산여고 2학년 국어.
+- 원문 표본 대조 3건 일치: 한림항공우주고 1학년 수학 25/25/20/30(시기 10월 2주·12월 2주·11월·8월~12월), 완산여고 공통영어2 시험 20×2·듣기/말하기/쓰기 20씩, 천안중 3학년 과학 30/30/20/20(시기 포함).
+- 수집 도구(`collect.mjs`·`dump`·`classify`·`integrate.sh`)는 세션 scratch의 것을 썼고 repo에 `cfb`를 추가하지 않았다. `package.json`·lock 변경 없음.
+
+# Province Hub Re-evaluation
+
+2번째 동이 생긴 충북·충남·전북·경북과 첫 동이 생긴 제주를 다시 측정했다. **동이 늘었다는 이유만으로 index 승격하지 않는다.**
+
+| 시·도 | 시·군·구 | 동 링크 | 동×과목 | 등록 학교 | 가장 비슷한 시·도 (마스킹 유사도) | 판정 |
+|---|---:|---:|---:|---:|---|---|
+| 충북 | 11 | 2 | 8 | 5 | 전북 97% | noindex 유지 |
+| 충남 | 15 | 2 | 8 | 7 | 전북 99% | noindex 유지 |
+| 전북 | 14 | 2 | 8 | 8 | 충남 99% | noindex 유지 |
+| 경북 | 22 | 2 | 9 | 8 | 강원 94% | noindex 유지 |
+| 제주 | 2 | 1 | 5 | 4 | 대전 97% | noindex(신규 보류) |
+
+- 측정 방법: `src/app/region/[province]/page.tsx`가 만드는 텍스트(히어로 문단·동네 요약 문단·동 링크·시군구·학년·과목 링크·CTA)를 같은 마스킹·`tokenSimilarity`로 계산했다. 렌더 crawl이 아니라 페이지 소스 기반 계산이다(서버 기동 불가, 아래 Validation 참고).
+- 근거: 본문 틀이 시·도마다 같아서 이름만 마스킹하면 94~99%다. Quality Gate의 RED 기준(60%)을 크게 넘고, 새로 생긴 사실은 동 링크 2개와 숫자 3개뿐이다. 이미 색인 중인 서울·경기·인천 hub(88~92%)는 QG 대상이 아니라서 그대로 두었다.
+- 시·도 hub는 동네 요약 문단에서 운영 행정동 수·학교 수·동×과목 페이지 수와 색인된 동 링크를 이미 데이터에서 계산해 보여준다. 새 사실이 없는 장문은 추가하지 않았다.
+- 승격 조건: 시·도 hub 템플릿의 고유 본문을 만드는 별도 개선(Phase 3 과제) 또는 GSC 성과가 생긴 뒤.
+
+# National Coverage
+
+실제 데이터(`schools`·`dongs`·`schoolGradeSubjectContents`·route inventory)에서 계산했다.
+
+| 시·도 | 등록 학교 | 학년×과목 콘텐츠 학교 | 학년×과목 페이지 | 색인 학교 hub | 동 | 색인 동×과목 | 시·도 hub | 환경 |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| 서울 | 250 | 1 | 8 | 20 | 46 | 230 | index | Production |
+| 경기 | 162 | 1 | 8 | 9 | 26 | 130 | index | Production |
+| 인천 | 68 | 1 | 15 | 18 | 10 | 50 | index | Production |
+| 대전 | 8 | 1 | 8 | 0 | 1 | 5 | noindex | Production |
+| 강원 | 8 | 2 | 18 | 0 | 1 | 5 | noindex | Production |
+| 전북 | 8 | 4 | 29 | 0 | 2 | 8 | noindex | Production + work(평화1동) |
+| 경북 | 8 | 4 | 37 | 0 | 2 | 9 | noindex | Production + work(영주1동) |
+| 울산 | 7 | 1 | 15 | 0 | 1 | 5 | noindex | Production |
+| 충남 | 7 | 5 | 52 | 0 | 2 | 8 | noindex | Production + work(원성1동) |
+| 대구 | 6 | 2 | 13 | 0 | 1 | 5 | noindex | Production |
+| 부산 | 5 | 2 | 23 | 0 | 1 | 5 | noindex | Production |
+| 충북 | 5 | 5 | 39 | 0 | 2 | 8 | noindex | Production + work(금천동) |
+| 제주 | 4 | 3 | 28 | 0 | 1 | 5 | noindex | work |
+| 경남 | 2 | 2 | 18 | 0 | 1 | 5 | noindex | Production |
+| **합계** | **548** | **34** | **311** | **47** | **97** | **478** | | |
+
+- 운영 시·도 14곳: Production 13곳(서울·경기·인천·부산·대구·대전·울산·경남·강원·충북·충남·전북·경북), work 전용 1곳(제주). 광주·전남·세종은 보류.
+- 학교: 등록 548(이전 532), 전국 PAGE_ONLY hub 10,081(이전 10,097), 학년×과목 콘텐츠 학교 34(이전 21), CONTENT_READY(색인 학교 hub) 47(변화 없음 — 신규 16교는 schoolContent가 없어 학교 hub는 noindex).
+- 페이지: 색인 URL(sitemap) 1,146, noindex route 12,722. Production은 984 / 12,647.
+- PENDING 159는 그대로 404.
+
+# Route Delta (Batch 30)
+
+| 항목 | 9c3a863 (Production) | Batch 30 (work) | 차이 |
+|---|---:|---:|---:|
+| Routes | 13,633 | 13,870 | +237 |
+| Sitemap | 984 | 1,146 | +162 |
+| Noindex | 12,647 | 12,722 | +75 |
+| 전국 PAGE_ONLY hub | 10,097 | 10,081 | −16 (등록 학교로 이동, route 수 불변) |
+| 학년×과목 | 187 | 311 | +124 (색인 119 / AMBER 5) |
+| 학년 hub | 47 | 77 | +30 (GREEN 12 / AMBER 18) |
+| 행정동 hub / 동×과목 | 92 / 454 | 97 / 478 | +5 / +24 |
+
+- 동별 delta (route / sitemap / noindex): 제주 +68 / +36 / +32, 청주 +38 / +38 / 0, 천안 +52 / +40 / +12, 전주 +24 / +21 / +3, 영주 +55 / +27 / +28.
+- Routes +237 = 새 도시 조합 54(jeju-si·yeongju, noindex) + 동 5 + 동×과목 24 + 학년 hub 30 + 학년×과목 124.
+- Sitemap +162 = 동 5 + 동×과목 24 + 학년×과목 119 + GREEN 학년 hub 12 + 시 hub 2(jeju-si·yeongju).
+- Noindex +75 = 조합 54 + AMBER 학년 hub 18 + AMBER 학년×과목 5 − 시 hub 2.
+- **사전 예측**: +240 안팎 → 실측 +237. route 폭증 없음.
+- Production sitemap(984) 대비 **삭제 0**, 추가 162(시 hub 2·동 5·동×과목 24·학년×과목 119·학년 hub 12).
+
+# Quality Gate (누적, Batch 30 기준)
+
+| kind | GREEN | AMBER | RED | indexed RED |
+|---|---:|---:|---:|---:|
+| region-dong | 97 | 0 | 0 | 0 |
+| region-dong-subject | 478 | 0 | 0 | 0 |
+| school-grade | 41 | 34 | 2 | 0 |
+| school-grade-subject | 306 | 5 | 0 | 0 |
+| school-subject | 48 | 2 | 13 | 0 |
+
+- threshold는 바꾸지 않았다(RED > 60%, AMBER > 30%).
+- **새 학교가 기존 색인 hub를 AMBER로 만든 사례 2건**을 막았다. 한림항공우주고 2학년 hub와 청주동중 2학년 hub가 각각 `ilsinyeoja-high-school/2`(31%), `jukjeon-high-school/1`(31%)의 가장 가까운 이웃이 되면서 이미 색인 중인 두 hub가 임계값을 넘었다. 이 URL을 noindex로 내리면 색인 URL 손실이라, 새 학교 entry의 `summary` 문형(사실은 그대로)을 바꿔 유사도를 낮췄다. 두 hub는 29%·27%로 GREEN을 유지했다.
+- 같은 방식으로 청주동중 hub 2·3, 한림항공우주고 수학 2건, 금천 쪽 hub를 GREEN으로 만들었다. 그래도 AMBER인 새 페이지는 `schoolGradeNoindex.ts`에서 noindex로 보류한다(학년 hub 18, 천성중 학년×과목 5). `checkSchoolGradeNoindexSync` PASS.
+- 학년 hub가 AMBER가 되는 원인은 이전과 같다: 같은 학교의 과목·학년 구조가 거의 같으면 hub끼리 유사도가 올라간다. 학교 수가 늘수록 기존 hub의 이웃이 늘어 이 현상이 반복될 수 있어, hub 도입 문장 템플릿 개선이 필요하다(Next Priority).
+
+# Validation (Batch 30)
+
+| 항목 | 결과 |
+|---|---|
+| lint · typecheck · test | PASS · PASS · 7/7 |
+| 동별 validate:quick | 제주·청주·천안·전주·영주 통합 직후마다 실행, 마지막 실행 PASS (indexed RED 0, `School grade pages GREEN-only index` PASS, `Plan freshness 2026-2` 478) |
+| build | PASS |
+| Routes · Sitemap · Noindex | 13,870 · 1,146 · 12,722 PASS (baseline 갱신 후 `validate:full`이 비교) |
+| sitemap 비교 | Production 984 대비 삭제 0 · 추가 162, 중복 0, index→sitemap 불일치 0 |
+| **validate:full** | **미완료.** build와 count 비교까지 PASS했고, 이어지는 서버 기동 단계에서 `Production server did not become ready on http://localhost:3100 within 20000ms`로 중단됐다. 같은 시점에 하네스가 시스템 메모리 부족(여유 0.7GB / 13.3GB)으로 백그라운드 셸을 종료했다. broken links·metadata duplicates·orphans·Search/Consult smoke는 이번 실행에서 확인하지 못했다 |
+| 로컬 smoke · 390/768/1440 render | **미실행**(서버 기동 필요, 위와 같은 이유로 보류) |
+
+메모리 여유가 확보되면 `npm run validate:full`을 다시 실행하고, 이어서 `next start` 로컬 smoke와 렌더 검수를 하면 된다.
+
+# Holds (Batch 30 기준)
+
+| 항목 | 상태 |
+|---|---|
+| Batch 30 main 반영 / Production | **금지(지시)** — work checkpoint까지만(아래 "Batch 30 최종 검증" 참고) |
+| 광주·전남 | 보류 — 시·도명 `전남광주통합특별시` 결정 전 |
+| 세종 | 보류 — 구조 변경 없음 |
+| PENDING 159 | 404 유지 |
+| FIELD_ANALYSIS · CASE_BASED | 검증된 기록 0 — 섹션 숨김, 생성 없음 |
+| 시·도 hub | 울산·대전·부산·대구·경남·강원·충북·충남·전북·경북·제주 `regionNoindex.ts` 보류 (위 재평가 결과 유지) |
+| 학년 hub / 학년×과목 AMBER·RED | 학년 hub 36(AMBER 34 + RED 2), 학년×과목 5 — noindex |
+| 신규 등록 학교 hub | schoolContent 미작성 → noindex (기존 gate) |
+| 학과별 계획 학교 | 천안제일고는 쓸 수 있는 페이지 0 |
+| PDF 원문 학교 | 완산중·한림중 등 — OCR 금지, 내용 없음 |
+| 원문 수집 도구 repo 편입 | 불필요했음 — scratch 도구로 충분, `cfb` 추가 없음 |
+
+# Next Priority
+
+실제 coverage와 검색 성과 기준의 판단:
+
+- **A (1차 coverage 부족 시 추가 지역)**: 해당 없음. 광주·전남·세종을 뺀 14개 시·도가 모두 동 1곳 이상을 운영한다.
+- **B (2차 동 확장)**: **권장.** 시·도당 동이 1~2개뿐이고(서울 46 / 경기 26 / 인천 10 제외) HWP 쌍 후보 원문이 이미 캐시에 있다: 충북 옥산면(양업고·옥산중), 충남 아산 온양5동(온양용화고·온양중), 경북 영천 금호읍(포은고·금호여중), 제주 조천읍(함덕고·함덕중 일부)·애월읍(애월중).
+- **C (GSC 성과 기준 증설)**: 아직 불가. 마지막 측정(2026-10-29)이 클릭 3·노출 36이고 Quick Win이 0이다. 재측정은 2026-11-24 전후.
+- **D (광주·전남·세종)**: 시·도명 매핑·세종 구조 변경이 필요하므로 구현하지 말고 **Opus 구조 검토 대상**으로 남긴다.
+
+우선순위:
+
+1. Batch 30 마무리: `validate:full` 재실행 → 로컬 smoke·렌더 검수 → work checkpoint commit/push → (승인 후) main 반영.
+2. 학년 hub 도입 문장 템플릿 개선 검토(코드 수준, 많은 페이지에 영향 → Opus 검토 대상): 학교가 늘 때마다 기존 색인 hub가 AMBER 경계(29~31%)로 올라가는 문제를 구조적으로 줄인다.
+3. B: 위 후보로 2차 동 확장.
+4. 2026-11-24 GSC 재측정 후 성과 좋은 지역 우선 증설(C).
+5. D: Opus 구조 검토.
+
+# Batch 30 최종 검증 (2026-11-03)
+
+첫 `validate:full` 재실행(메모리 확보 후)은 콘텐츠·route 수치는 모두 PASS였지만 **Orphans 1 FAIL**: `/school/wansanyeoja-high-school/2/math`.
+완산여고 2학년은 공시 과목이 수학 하나라서 학년 hub `/2`가 AMBER(noindex)이고, 학교 hub도 schoolContent 미작성으로 noindex라 색인 페이지에서 들어오는 링크가 0이었다.
+
+일반 규칙으로 해결(robots·sitemap·Quality Gate·threshold 변경 없음):
+
+- `orphanRiskSchoolGradeSubjects()` (`src/lib/internalLinks.ts`): 색인 학년×과목 중 **학년 hub가 noindex이고 같은 학년의 색인 과목이 그 하나뿐인** 페이지(같은 학년 과목끼리는 서로 링크하므로 둘 이상이면 고아가 아니다). 학년 hub가 색인이면 기존 구조 유지.
+- 연결 위치: ① 학교 hub가 색인이면 hub의 "학년별 과목 평가 정보"에 직접 링크 ② 같은 학교·같은 과목·다른 학년 학년×과목 페이지의 "관련 페이지"에 직접 링크.
+- 전체 재계산: 위험 페이지 1개(완산여고 2/math), 추가 링크 1개(`/school/wansanyeoja-high-school/1/math` → `2/math`). link 폭증·hub 과밀 없음.
+
+| 검증 | 결과 |
+|---|---|
+| lint / typecheck / test(node:test 11) / validate:quick | PASS |
+| validate:full | **PASS** — Routes 13,870 / Sitemap 1,146 / Noindex 12,722, indexed RED 0, broken 0, metadata 중복 0, **orphan 0**, search·consult smoke PASS |
+| 로컬 smoke (next start, 109 URL: Batch 30 동·동×과목·학교·학년·학년×과목 + 기존 Production 표본) | 정책 일치, 5xx 0, 색인 페이지 H1 1·canonical·BreadcrumbList·출처·상담 CTA 모두 있음 (영주1동 국어는 데이터가 없어 404가 맞음) |
+| Render (390/768/1440, 제주 동·학교·학년·학년×과목 + 4개 지역 동·학년×과목) | 가로 overflow 0, 표 overflow 0, heading 건너뜀 0, H1 1. 24px 미만 링크는 breadcrumb·본문 인라인 링크뿐(기존 Production 동 페이지와 같은 패턴) |

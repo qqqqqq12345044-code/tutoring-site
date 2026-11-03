@@ -9,7 +9,7 @@ import { getSchoolContent, isPublishedContent } from "@/data/schoolContent";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
 import { buildSchoolBreadcrumb, schoolLevelToGradeSlug } from "@/lib/schoolHierarchy";
-import { indexedSchoolSubjectHref, indexedDongSubjectLinksForSchool } from "@/lib/internalLinks";
+import { indexedSchoolSubjectHref, indexedDongSubjectLinksForSchool, orphanRiskSchoolGradeSubjects } from "@/lib/internalLinks";
 import { SCHOOLINFO_PLAN_TERM } from "@/data/sources";
 import { JsonLd, faqSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -81,6 +81,10 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
   const faqs = getFaqsBySlugs(["subject-scope", "pricing"]);
   // 이 학교의 평가계획 원문을 출처로 쓴 색인 동×과목 페이지(학교 소속 동) — 새 사실 없이 기존 공개 콘텐츠로만 연결한다.
   const planLinks = dong ? indexedDongSubjectLinksForSchool(school) : [];
+  // 학년 hub가 noindex인데 같은 학년에 색인 과목이 하나뿐인 학년×과목 페이지 — 이 hub가 색인일 때만 직접 연결한다.
+  const directGradeSubjectLinks = getIndexability("school", { schoolSlug: school.slug }).index
+    ? orphanRiskSchoolGradeSubjects(school).map(({ label, href }) => ({ label, href }))
+    : [];
 
   return (
     <>
@@ -135,7 +139,10 @@ export default async function SchoolPage(props: PageProps<"/school/[schoolSlug]"
         {/* 학년 hubs exist only where published OFFICIAL 학년×과목 entries exist (src/lib/schoolGrade.ts). */}
         <RelatedLinks
           title="학년별 과목 평가 정보"
-          links={schoolGradeNumbers(school).map((g) => ({ label: `${school.name} ${g}학년 과외`, href: schoolGradeHref(school.slug, g) }))}
+          links={[
+            ...schoolGradeNumbers(school).map((g) => ({ label: `${school.name} ${g}학년 과외`, href: schoolGradeHref(school.slug, g) })),
+            ...directGradeSubjectLinks,
+          ]}
         />
       </section>
 

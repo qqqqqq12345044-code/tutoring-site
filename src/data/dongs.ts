@@ -211,6 +211,16 @@ export const dongs: AdminDong[] = [
   { slug: "tapdaeseong-dong", code: "4311162000", name: "탑대성동", citySlug: "cheongju", legalDongs: ["탑동", "대성동"] },
   // 2026-11-02 28차 충남 천안 동남구 병천면(병천고·병천중) (docs/qa/national-school-content-expansion-2026-11-02.md).
   { slug: "byeongcheon-myeon", code: "4413136000", name: "병천면", citySlug: "cheonan", legalDongs: ["병천면", "가전리", "병천리", "탑원리", "도원리", "매성리", "관성리", "봉항리", "용두리", "송정리"] },
+  // 2026-11-03 Batch 30 제주 한림읍(한림고·한림항공우주고·한림여중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "hanrim-eup", code: "5011025000", name: "한림읍", citySlug: "jeju-si", legalDongs: ["한림읍", "귀덕리", "수원리", "대림리", "한림리", "금악리", "동명리", "명월리", "옹포리", "상대리", "상명리", "협재리", "월령리", "금능리", "월림리", "한수리"] },
+  // 2026-11-03 Batch 30 청주 금천동(금천고·금천중·청주동중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "geumcheon-dong", code: "4311168000", name: "금천동", citySlug: "cheongju", legalDongs: ["금천동"] },
+  // 2026-11-03 Batch 30 천안 원성1동(천안중앙고·천안중·천성중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "wonseong1-dong", code: "4413153000", name: "원성1동", citySlug: "cheonan", legalDongs: ["문화동", "원성동", "유량동"] },
+  // 2026-11-03 Batch 30 전주 평화1동(완산여고·전주남중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "pyeonghwa1-dong", code: "5211169100", name: "평화1동", citySlug: "jeonju", legalDongs: ["평화동1가"] },
+  // 2026-11-03 Batch 30 영주 영주1동(영광여고·영광여중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "yeongju1-dong", code: "4721055000", name: "영주1동", citySlug: "yeongju", legalDongs: ["영주동", "하망동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

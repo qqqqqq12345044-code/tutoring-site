@@ -6,6 +6,7 @@ import { dongs, getDong } from "@/data/dongs";
 import { dongSubjectContents } from "@/data/dongSubjectContent";
 import { isSchoolInfoPlanSource } from "@/data/sources";
 import { getIndexability } from "@/lib/indexability";
+import { resolveSchoolGrade, schoolGradeNumbers, schoolGradeSubjectHref } from "@/lib/schoolGrade";
 import type { RelatedLink } from "@/components/RelatedLinks";
 
 /**
@@ -121,4 +122,24 @@ export function indexedSubGradeLinks(gradeSlug: string): RelatedLink[] {
   return grade.subGrades
     .filter((sg) => getIndexability("sub-grade", { gradeSlug, subGradeSlug: sg.slug }).index)
     .map((sg) => ({ label: `${sg.label} 공부 포인트`, href: `/grade/${gradeSlug}/${sg.slug}` }));
+}
+
+/**
+ * Indexed 학년×과목 pages of this school that would otherwise get no link from an indexed page: the 학년 hub is
+ * noindex (src/data/schoolGradeNoindex.ts) and no other indexed 학년×과목 page of the same 학년 exists (same-학년
+ * siblings link each other). Callers link these directly — the school hub when it is indexed, otherwise the same
+ * school's indexed 학년×과목 pages of the same subject in other 학년 — so a GREEN page is never left orphaned by a
+ * noindex parent. Pages under an indexed 학년 hub are not returned (existing structure unchanged).
+ */
+export function orphanRiskSchoolGradeSubjects(school: School): { grade: number; subjectSlug: string; label: string; href: string }[] {
+  return schoolGradeNumbers(school).flatMap((grade) => {
+    const g = String(grade);
+    if (getIndexability("school-grade", { schoolSlug: school.slug, schoolGrade: g }).index) return [];
+    const indexed = (resolveSchoolGrade(school.slug, g)?.entries ?? []).filter(
+      (e) => getIndexability("school-grade-subject", { schoolSlug: school.slug, schoolGrade: g, subjectSlug: e.subject.slug }).index
+    );
+    if (indexed.length !== 1) return [];
+    const { subject } = indexed[0];
+    return [{ grade, subjectSlug: subject.slug, label: `${school.name} ${grade}학년 ${subject.name}과외`, href: schoolGradeSubjectHref(school.slug, grade, subject.slug) }];
+  });
 }

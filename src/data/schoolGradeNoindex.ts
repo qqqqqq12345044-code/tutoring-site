@@ -32,4 +32,31 @@ export const schoolGradeNoindexPaths = new Set<string>([
   // 2026-11-02 28차: 병천중 학년 hub 1·2 (AMBER 45%).
   "/school/byeongcheon-middle-school/1",
   "/school/byeongcheon-middle-school/2",
+  // 2026-11-03 Batch 30 제주 한림읍: 한림고 1학년(31%)·한림항공우주고 1·2학년(36%)·한림여중 1~3학년(33%) 학년 hub는 AMBER라 noindex(같은 학교 학년 hub끼리 구조가 비슷함).
+  "/school/hanrim-high-school/1",
+  "/school/hanrimhanggonguju-high-school/1",
+  "/school/hanrimhanggonguju-high-school/2",
+  "/school/hanrimyeoja-middle-school/1",
+  "/school/hanrimyeoja-middle-school/2",
+  "/school/hanrimyeoja-middle-school/3",
+  // 2026-11-03 Batch 30 천안 원성1동: 천안중·천성중 학년 hub(36~41%, 두 학교의 60:40 구조가 같음)·천안중앙고 1학년 hub(31%)·천성중 학년×과목 5개(33~39%)는 AMBER라 noindex.
+  "/school/cheonanjungang-high-school/1",
+  "/school/cheonan-middle-school/1",
+  "/school/cheonan-middle-school/2",
+  "/school/cheonan-middle-school/3",
+  "/school/cheonseong-middle-school/1",
+  "/school/cheonseong-middle-school/2",
+  "/school/cheonseong-middle-school/3",
+  "/school/cheonseong-middle-school/1/math",
+  "/school/cheonseong-middle-school/1/science",
+  "/school/cheonseong-middle-school/2/math",
+  "/school/cheonseong-middle-school/2/science",
+  "/school/cheonseong-middle-school/3/science",
+  // 2026-11-03 Batch 30 전주 평화1동: 완산여고 2학년 hub(과목 카드 1개뿐이라 실질 note 1개)·전주남중 2·3학년 hub(41%, 두 학년의 시험 60%·수행 40% 구조가 같음)는 AMBER라 noindex.
+  "/school/wansanyeoja-high-school/2",
+  "/school/jeonjunam-middle-school/2",
+  "/school/jeonjunam-middle-school/3",
+  // 2026-11-03 Batch 30 영주 영주1동: 영광여중 2·3학년 hub(37%, 시험 2회 60% + 수행 2개 40% 구조가 같음)는 AMBER라 noindex.
+  "/school/yeonggwangyeoja-middle-school/2",
+  "/school/yeonggwangyeoja-middle-school/3",
 ]);

@@ -86,7 +86,12 @@ export const BASELINE = {
   // (전국 hub에서 이동, route 0) + 4개 시 조합 route 108(noindex) + 동 hub 4 + 동×과목 14(GREEN·색인) + 학년 hub 17(GREEN 13 색인,
   // 전주신일중 RED 2·병천중 AMBER 2 noindex) + 학년×과목 61(GREEN·색인) = +204 → 13429 → 13633. 시 허브 4곳 noindex→index,
   // 시·도 허브 충북·충남·전북·경북은 regionNoindex.ts 보류(1개 동 템플릿) → sitemap 888 → 984, noindex 12539 → 12647.
-  totalRoutes: 13633,
+  // 2026-11-03 Batch 30 = 제주 제주시 한림읍(제주 첫 동) + 청주 금천동·천안 원성1동·전주 평화1동·경북 영주1동(영주 첫 동, 각 시·도 2번째 동):
+  // 학교 16곳 등록(전국 hub에서 이동, route 0) + 새 도시 조합 route 54(jeju-si·yeongju, noindex) + 동 hub 5 + 동×과목 24(GREEN·색인) +
+  // 학년 hub 30(GREEN 12 색인, AMBER 18 noindex) + 학년×과목 124(GREEN 119 색인, 천성중 AMBER 5 noindex) = +237 → 13633 → 13870.
+  // 시 허브 jeju-si·yeongju noindex→index, 시·도 허브 제주는 regionNoindex.ts 보류 → sitemap 984 → 1146(+동 5 +동×과목 24 +학년×과목 119
+  // +학년 hub 12 +시 허브 2), noindex 12647 → 12722(+조합 54 +AMBER hub 18 +AMBER 학년×과목 5 −시 허브 2).
+  totalRoutes: 13870,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -98,7 +103,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 984,
-  noindexCount: 12647,
+  sitemapCount: 1146,
+  noindexCount: 12722,
   brokenLinks: 0,
 };

@@ -18,6 +18,8 @@
  *
  * - jeonbuk, chungbuk, chungnam, gyeongbuk (2026-11-02, 28~29차): one 행정동 page each — same one-dong template hold.
  *
+ * - jeju (2026-11-03, Batch 30): one 행정동 page (제주시 한림읍) — same one-dong template hold; noindex before the batch (no registered school).
+ *
  * Every slug must be a province / city node with a registered school (checked by validate:quick's region gate).
  */
-export const regionHubNoindexSlugs = new Set<string>(["ulsan", "daejeon", "busan", "daegu", "gyeongnam", "gangwon", "jeonbuk", "gyeongbuk", "chungbuk", "chungnam"]);
+export const regionHubNoindexSlugs = new Set<string>(["ulsan", "daejeon", "busan", "daegu", "gyeongnam", "gangwon", "jeonbuk", "gyeongbuk", "chungbuk", "chungnam", "jeju"]);
