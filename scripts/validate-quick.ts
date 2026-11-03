@@ -29,6 +29,7 @@ import {
   checkSchoolGradeNoindexSync,
 } from "./lib/quality-gate";
 import { checkSchoolGradeContent } from "./lib/school-grade-check";
+import { checkSchoolGradeGeo } from "./lib/geo-check";
 import {
   checkRegionGradeSubjectContentQuality,
   checkRegionPageContentQuality,
@@ -225,6 +226,9 @@ async function main() {
   const gradeContent = checkSchoolGradeContent();
   console.log(`School grade content + evidence: ${gradeContent.ok ? "PASS" : "FAIL"} (${gradeContent.summary})`);
   if (!gradeContent.ok) gradeContent.issues.forEach((i) => console.log(`  - ${i}`));
+  const geo = checkSchoolGradeGeo();
+  console.log(`GEO/AEO pilot answers: ${geo.ok ? "PASS" : "FAIL"} (${geo.summary})`);
+  if (!geo.ok) geo.issues.forEach((i) => console.log(`  - ${i}`));
 
   // Informational only — known placeholders are tracked in docs/qa/remaining-placeholders.md.
   const fs = await import("fs");
@@ -252,7 +256,8 @@ async function main() {
     schoolHolds.ok &&
     dongGreen.ok &&
     gradeSync.ok &&
-    gradeContent.ok;
+    gradeContent.ok &&
+    geo.ok;
   console.log(`Quick validation: ${pass ? "PASS" : "FAIL"}`);
 
   writeCacheEntry("quick", pass, {

@@ -13,6 +13,8 @@ import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { getRegionUrl } from "@/data/regions";
 import { isSchoolInfoPlanSource } from "@/data/sources";
 import { orphanRiskSchoolGradeSubjects } from "@/lib/internalLinks";
+import { getSchoolGradeGeo } from "@/data/schoolGradeGeo";
+import GeoAnswerSection from "@/components/school/GeoAnswerSection";
 
 /** /school/[schoolSlug]/[grade]/[subject] — the conversion page: one school, one 학년, one 과목. */
 export default function SchoolGradeSubjectPage({ ctx }: { ctx: SchoolGradeSubjectContext }) {
@@ -22,6 +24,8 @@ export default function SchoolGradeSubjectPage({ ctx }: { ctx: SchoolGradeSubjec
   const dong = school.dongSlug ? getDong(school.cityRegionSlug, school.dongSlug) : undefined;
   const siblings = (resolveSchoolGrade(school.slug, String(grade))?.entries ?? []).filter((e) => e.subject.slug !== subject.slug);
   // 같은 과목 다른 학년 중 색인 부모 링크가 없는 페이지(학년 hub noindex·같은 학년 단일 과목)만 직접 연결한다.
+  // GEO/AEO pilot whitelist only (src/data/schoolGradeGeo.ts); other pages render unchanged.
+  const geo = getSchoolGradeGeo(school.slug, grade, subject.slug);
   const sameSubjectOtherGrade = orphanRiskSchoolGradeSubjects(school).filter((r) => r.subjectSlug === subject.slug && r.grade !== grade);
 
   return (
@@ -43,7 +47,9 @@ export default function SchoolGradeSubjectPage({ ctx }: { ctx: SchoolGradeSubjec
         </div>
       </section>
 
-      <section className="container-page py-14 md:py-16">
+      {geo && <GeoAnswerSection title={`${school.name} ${grade}학년 ${subject.name}, 자주 묻는 질문과 답`} geo={geo} content={content} />}
+
+      <section className={`container-page ${geo ? "pb-14 md:pb-16" : "py-14 md:py-16"}`}>
         <SectionHeader align="left" title={`${grade}학년 ${subject.name} 시험·수행평가 반영 비율`} />
         <p className="mt-4 text-sm text-text-muted max-w-2xl break-keep">
           {content.courses.join(" · ")} — 학교 평가계획의 반영 비율 표를 그대로 옮겼습니다.

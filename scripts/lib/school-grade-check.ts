@@ -14,14 +14,14 @@ import { groupAssessmentsByCourse } from "@/lib/schoolGrade";
  * - wording bans: 난이도·합격·등급/성적 향상·학원·후기 claims and figures with no source in the plan;
  * - evidence records: no personal data, figures only with sampleSize + period, no brand/company names.
  */
-const BANNED = [
+export const BANNED = [
   /난이도/, /어렵(다|습니다|게)/, /쉽(다|습니다|게)/, /합격/, /진학\s*실적/, /등급\s*(상승|향상|올)/, /성적\s*(상승|향상)/,
   /학원/, /학군/, /어려워하/, /자주\s*막히/, /1위/,
   // Advertising senses only — plan wording such as 채점 "최고 단계", "인권 보장 장치", "조선 후기" is a fact.
   /(수강|이용|학부모|학생|과외)\s*후기/, /최고(?!\s*(단계|점|수준|배점))/, /(성적|효과|결과|합격|강사|수업).{0,8}보장/,
 ];
-const PII = [/\d{2,3}-\d{3,4}-\d{4}/, /[가-힣]{2,4}\s*(학생|군|양)\s*\(/, /@[a-z0-9-]+\./i, /\d+동\s*\d+호/];
-const BRAND = [/동화세상/, /에듀코/, /자체\s*고객\s*데이터/];
+export const PII = [/\d{2,3}-\d{3,4}-\d{4}/, /[가-힣]{2,4}\s*(학생|군|양)\s*\(/, /@[a-z0-9-]+\./i, /\d+동\s*\d+호/];
+export const BRAND = [/동화세상/, /에듀코/, /자체\s*고객\s*데이터/];
 
 export function checkSchoolGradeContent(): { ok: boolean; issues: string[]; summary: string } {
   const issues: string[] = [];

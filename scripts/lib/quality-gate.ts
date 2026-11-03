@@ -36,6 +36,7 @@ import { hasDongSubjectRoute } from "@/data/dongSubjectContent";
 import { buildDongHubContent, buildDongSubjectContent, getDongSchools } from "@/lib/dongContent";
 import { schoolGradeSubjectContents, isPublishedGradeSubject } from "@/data/schoolGradeSubjectContent";
 import { schoolGradeNoindexPaths } from "@/data/schoolGradeNoindex";
+import { getSchoolGradeGeo } from "@/data/schoolGradeGeo";
 import { allSchoolGradeRoutes, buildSchoolGradeContent, groupAssessmentsByCourse, resolveSchoolGrade } from "@/lib/schoolGrade";
 
 export type QualityGrade = "GREEN" | "AMBER" | "RED";
@@ -246,7 +247,8 @@ export function runQualityGate(options: { includeDrafts?: boolean } = {}): Quali
         path,
         draft: c.status !== "published",
         indexed: getIndexability("school-grade-subject", { schoolSlug: c.schoolSlug, schoolGrade: String(c.grade), subjectSlug: c.subjectSlug }).index,
-        text: [c.intro, c.summary, ...c.notes.map((n) => n.body)].join(" "),
+        // GEO pilot pages (src/data/schoolGradeGeo.ts) are graded with their visible questions/answers included.
+        text: [c.intro, c.summary, ...c.notes.map((n) => n.body), ...(getSchoolGradeGeo(c.schoolSlug, c.grade, c.subjectSlug)?.items.flatMap((i) => [i.question, i.answer]) ?? [])].join(" "),
         notes: c.notes,
         sources: c.sources,
         structural: { red: [...badTotals, ...(routeExists || c.status !== "published" ? [] : ["route 없음(미등록 학교·학년 범위 밖)"])], amber: [] },
