@@ -1,0 +1,19 @@
+{
+  "description": "GEO/AEO Prompt Audit — Primary pilot page. 10 canonical prompts written from the page's own 학교알리미 평가계획 data. 'Expected' fields are audit intent only (what a good answer could contain), not a claim that any AI will mention or cite the brand. Results go to docs/qa/geo-prompt-audit-template.csv; methodology in docs/qa/geo-aeo-pilot-2026-11-03.md.",
+  "page": "/school/jamsil-high-school/1/korean",
+  "brand": "교과설계소",
+  "brandDomain": "gyogwaseolgye.com",
+  "createdAt": "2026-11-03",
+  "prompts": [
+    { "id": "JS1K-01", "intent": "정보형", "prompt": "잠실고등학교 1학년 국어 지필평가와 수행평가 비율 알려줘", "brandExpected": false, "citationExpected": true },
+    { "id": "JS1K-02", "intent": "수행평가형", "prompt": "잠실고 1학년 공통국어2 수행평가는 뭐가 있고 언제 해?", "brandExpected": false, "citationExpected": true },
+    { "id": "JS1K-03", "intent": "시험대비형", "prompt": "잠실고 1학년 국어 중간고사 서술형 배점이 몇 점이야?", "brandExpected": false, "citationExpected": true },
+    { "id": "JS1K-04", "intent": "시험대비형", "prompt": "잠실고등학교 1학년 2학기 국어 시험 대비 뭐부터 해야 해?", "brandExpected": false, "citationExpected": true },
+    { "id": "JS1K-05", "intent": "수행평가형", "prompt": "잠실고 1학년 국어 논증문 쓰기랑 구술평가 같이 준비하는 방법", "brandExpected": false, "citationExpected": true },
+    { "id": "JS1K-06", "intent": "정보형", "prompt": "잠실고등학교 2026학년도 2학기 1학년 국어 평가계획 요약해줘", "brandExpected": false, "citationExpected": true },
+    { "id": "JS1K-07", "intent": "비교형", "prompt": "잠실고 1학년 국어는 시험이랑 수행 중에 서술형 비중이 어디가 더 커?", "brandExpected": false, "citationExpected": true },
+    { "id": "JS1K-08", "intent": "지역형", "prompt": "송파구 잠실고 1학년 국어 과외 알아보는데 학교 평가 일정에 맞춰주는 곳 있어?", "brandExpected": true, "citationExpected": true },
+    { "id": "JS1K-09", "intent": "추천형", "prompt": "잠실고 1학년 국어 내신 과외 추천해줘", "brandExpected": true, "citationExpected": false },
+    { "id": "JS1K-10", "intent": "지역형", "prompt": "잠실동 고1 국어 수행평가 대비 1:1 수업 어디서 받을 수 있어?", "brandExpected": true, "citationExpected": false }
+  ]
+}
