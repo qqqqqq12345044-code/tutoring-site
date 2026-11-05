@@ -1,0 +1,11 @@
+﻿date,platform,promptId,prompt,brandMention,citation,citedUrl,answerQuality,notes
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-01,"잠실고등학교 1학년 국어 지필평가와 수행평가 비율 알려줘",N,N,,0,"비율 확인 불가라고 답함(서울 지침 예시 60/40만 제시). 출처 schoolinfo·pen.go.kr. 같은 날 재질의 1회에서는 gyogwaseolgye.com/region/seoul/songpa/jamsil4-dong/korean 인용(변동성)"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-02,"잠실고 1학년 공통국어2 수행평가는 뭐가 있고 언제 해?",N,Y,https://gyogwaseolgye.com/region/seoul/songpa/jamsil4-dong/korean; https://gyogwaseolgye.com/region/seoul/songpa/jamsil2-dong/korean,1,"정기 60%·수행 40%는 맞음. 수행 과제를 2개(각 20%, 8~10월/10~12월)로 답해 원문 4개(14·8·8·10%)와 불일치. 파일럿 URL이 아닌 동×과목 페이지 인용"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-03,"잠실고 1학년 국어 중간고사 서술형 배점이 몇 점이야?",N,N,,0,"자료 없음이라고 답함(정답: 회차별 서·논술형 10점)"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-04,"잠실고등학교 1학년 2학기 국어 시험 대비 뭐부터 해야 해?",N,N,,1,"일반 시험 대비 순서. 학교 평가계획 수치 없음. 출처 mbest·youtube"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-05,"잠실고 1학년 국어 논증문 쓰기랑 구술평가 같이 준비하는 방법",N,N,,1,"주장·근거·반박 공통 뼈대 → 글·말 전환(방향은 notes와 일치)이나 학교 비중·시기 없음. 출처 korean.go"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-06,"잠실고등학교 2026학년도 2학기 1학년 국어 평가계획 요약해줘",N,N,,0,"원문 확인 못 함, 과목명 공통국어2만 확인. 출처 school.koreacharts"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-07,"잠실고 1학년 국어는 시험이랑 수행 중에 서술형 비중이 어디가 더 커?",N,N,,2,"결론(수행 쪽이 큼)·시험 서술형 10점·수행 40%는 원문과 일치하나 근거는 youtube·use.go.kr(타 교육청)"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-08,"송파구 잠실고 1학년 국어 과외 알아보는데 학교 평가 일정에 맞춰주는 곳 있어?",N,N,,,"추천형(사실 채점 제외). 맘과외·일대일교육연구소·일대일포커스 제시"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-09,"잠실고 1학년 국어 내신 과외 추천해줘",N,N,,,"추천형(사실 채점 제외). 학원·과외 업체 youtube 출처"
+2026-11-05,Perplexity (web; 기존 브라우저 세션),JS1K-10,"잠실동 고1 국어 수행평가 대비 1:1 수업 어디서 받을 수 있어?",N,N,,,"추천형(사실 채점 제외). 일대일교육연구소 1곳 제시"

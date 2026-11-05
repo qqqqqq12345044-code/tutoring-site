@@ -45,3 +45,20 @@ GSC impressions·clicks·CTR·position은 Google 검색 결과의 SEO 성과다.
 오늘(2026-11-03)이 T0라면 T0+7 = 2026-11-10, T0+14 = 2026-11-17, T0+30 = 2026-12-03.
 
 측정 수가 0인 비율은 0%가 아니라 NOT_MEASURED로 적는다. 예측·목표 수치는 적지 않는다.
+
+## T0 기록 (2026-11-05)
+
+- T0 = 2026-11-05: GEO 파일럿을 포함한 `a07e54b`가 Production에 반영됨(GitHub deployment 7566119896). 이어서 IndexNow 키 파일 `571eaf1` 배포(7566667061), 신규 162 + 파일럿 5 = 167 URL을 IndexNow(Naver 엔드포인트)로 1회 전송, 응답 200.
+- Before 측정은 배포 전에 하지 못했다. 아래 Prompt Audit은 **T0 당일(배포 약 1시간 후)** 측정값이다. AI 답변이 새 페이지를 반영하기 전일 가능성이 높지만 확인할 방법은 없으므로 "T0 당일 값"으로 기록한다.
+- 재측정: T0+7 = 2026-11-12, T0+14 = 2026-11-19, T0+30 = 2026-12-05.
+
+### Prompt Audit T0 — Perplexity (`docs/qa/geo-prompt-audit-2026-11-05.csv`)
+
+| Metric | 값 | 비고 |
+|---|---|---|
+| 측정 플랫폼 | Perplexity 1곳 | ChatGPT·Gemini·Copilot: NOT_MEASURED. Perplexity는 앱 내 브라우저의 기존 세션(로그아웃 아님)이라 개인화 가능성 있음 |
+| Mention Rate | 0/10 | 교과설계소 브랜드 언급 0 |
+| Citation Rate | 1/10 | JS1K-02에서 gyogwaseolgye.com 동×과목 페이지 2개 인용. 파일럿 URL 인용 0 |
+| Cited Pages | `/region/seoul/songpa/jamsil4-dong/korean`, `/region/seoul/songpa/jamsil2-dong/korean` | |
+| Answer Quality (사실형 7개 평균) | 5/21 = 0.71 | 0~3 척도. 추천형 3개(JS1K-08~10)는 사실 채점 제외 |
+| 변동성 메모 | JS1K-01 재질의 1회에서는 gyogwaseolgye 인용 발생 | 1회 측정이라 통계적 결론 아님 |
