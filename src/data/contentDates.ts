@@ -16,6 +16,11 @@ import { dongs } from "@/data/dongs";
  * - Initial values come from git history: the last commit that touched each
  *   kind's page template or data file (`git log -1 --format=%cs -- <file>`),
  *   plus 2026-10-02 for the SEO content work done that day.
+ * - A page's date is the later of its kind date and its own PATH_UPDATED /
+ *   PATH_UPDATED_BY_DATE date, so a kind bump also moves older per-page dates.
+ * - Batch work (new 행정동 / 학교×학년×과목 entries, or edits to existing ones):
+ *   add every affected sitemap path under the batch's commit date in
+ *   PATH_UPDATED_BY_DATE. Hubs count as changed when an entry they list changes.
  */
 export type ContentKind =
   | "home"
@@ -36,6 +41,8 @@ export type ContentKind =
   | "region-program"
   | "school"
   | "school-subject"
+  | "school-grade"
+  | "school-grade-subject"
   | "region-dong"
   | "region-dong-subject";
 
@@ -62,10 +69,15 @@ const KIND_UPDATED: Record<ContentKind, string> = {
   "region-district-subject": "2026-09-18",
   "region-program": "2026-09-28",
   school: "2026-09-28",
-  "school-subject": "2026-09-28",
+  // 2026-10-27 (11ba301): PlanBasisNote 기준 문구가 학교×과목 화면에 추가
+  "school-subject": "2026-10-27",
+  // 2026-11-02 (6c41ce0): 학교 학년 hub / 학년×과목 페이지 신설. 이후 batch는 PATH_UPDATED_BY_DATE
+  "school-grade": "2026-11-02",
+  "school-grade-subject": "2026-11-02",
   // 2026-10-16: 의정부 행정동 pilot (행정동 hub, 행정동×과목)
-  "region-dong": "2026-10-16",
-  "region-dong-subject": "2026-10-16",
+  // 2026-10-27 (11ba301·3c31d76): DongPages 기준 문구 추가, 과목 안내 문단 재작성
+  "region-dong": "2026-10-27",
+  "region-dong-subject": "2026-10-27",
 };
 
 /** Per-URL overrides — pages whose own content changed after their kind's date. */
@@ -163,6 +175,262 @@ const PATH_UPDATED: Record<string, string> = {
   "/school/seongnam-middle-school/math": "2026-10-07",
 };
 
+/**
+ * Per-page dates from batch work, grouped by commit date. Derived from git history of src/data/dongs.ts,
+ * dongSubjectContent.ts, schoolGradeSubjectContent.ts (last commit that changed each page's entry or, for a hub,
+ * any entry it lists) and schoolGradeGeo.ts answersUpdatedAt. 2026-10-29 = 00fece6 (학교 hub 기준 표시·평가계획 섹션).
+ * Only dates later than the page's kind date are listed.
+ */
+const PATH_UPDATED_BY_DATE: Record<string, string[]> = {
+  "2026-10-29": [
+    "/school/banpo-elementary-school",
+    "/school/bupyeong-high-school",
+    "/school/bupyeong-middle-school",
+    "/school/daechi-elementary-school",
+    "/school/ganghwa-elementary-school",
+    "/school/ganghwa-high-school",
+    "/school/gangnam-middle-school",
+    "/school/gyeyang-middle-school",
+    "/school/jamsil-high-school",
+    "/school/jukjeon-high-school",
+    "/school/mapo-middle-school",
+    "/school/seocho-high-school",
+    "/school/seocho-middle-school",
+    "/school/seongnam-middle-school",
+    "/school/seongsan-middle-school",
+    "/school/songpa-high-school",
+    "/school/songpa-middle-school",
+    "/school/yeonsu-middle-school",
+  ],
+  "2026-11-02": [
+    "/region/busan/busan-saha/hadan2-dong",
+    "/region/busan/busan-saha/hadan2-dong/english",
+    "/region/busan/busan-saha/hadan2-dong/korean",
+    "/region/busan/busan-saha/hadan2-dong/math",
+    "/region/busan/busan-saha/hadan2-dong/science",
+    "/region/busan/busan-saha/hadan2-dong/social",
+    "/region/chungbuk/cheongju/tapdaeseong-dong",
+    "/region/chungbuk/cheongju/tapdaeseong-dong/korean",
+    "/region/chungbuk/cheongju/tapdaeseong-dong/science",
+    "/region/chungbuk/cheongju/tapdaeseong-dong/social",
+    "/region/chungnam/cheonan/byeongcheon-myeon",
+    "/region/chungnam/cheonan/byeongcheon-myeon/math",
+    "/region/chungnam/cheonan/byeongcheon-myeon/science",
+    "/region/chungnam/cheonan/byeongcheon-myeon/social",
+    "/region/daegu/daegu-suseong/beomeo4-dong",
+    "/region/daegu/daegu-suseong/beomeo4-dong/english",
+    "/region/daegu/daegu-suseong/beomeo4-dong/korean",
+    "/region/daegu/daegu-suseong/beomeo4-dong/math",
+    "/region/daegu/daegu-suseong/beomeo4-dong/science",
+    "/region/daegu/daegu-suseong/beomeo4-dong/social",
+    "/region/daejeon/daejeon-yuseong/sinseong-dong",
+    "/region/daejeon/daejeon-yuseong/sinseong-dong/english",
+    "/region/daejeon/daejeon-yuseong/sinseong-dong/korean",
+    "/region/daejeon/daejeon-yuseong/sinseong-dong/math",
+    "/region/daejeon/daejeon-yuseong/sinseong-dong/science",
+    "/region/daejeon/daejeon-yuseong/sinseong-dong/social",
+    "/region/gangwon/wonju/bangokgwanseol-dong",
+    "/region/gangwon/wonju/bangokgwanseol-dong/english",
+    "/region/gangwon/wonju/bangokgwanseol-dong/korean",
+    "/region/gangwon/wonju/bangokgwanseol-dong/math",
+    "/region/gangwon/wonju/bangokgwanseol-dong/science",
+    "/region/gangwon/wonju/bangokgwanseol-dong/social",
+    "/region/gyeongbuk/andong/seogu-dong",
+    "/region/gyeongbuk/andong/seogu-dong/english",
+    "/region/gyeongbuk/andong/seogu-dong/korean",
+    "/region/gyeongbuk/andong/seogu-dong/math",
+    "/region/gyeongbuk/andong/seogu-dong/science",
+    "/region/gyeongbuk/andong/seogu-dong/social",
+    "/region/gyeongnam/changwon/bongam-dong",
+    "/region/gyeongnam/changwon/bongam-dong/english",
+    "/region/gyeongnam/changwon/bongam-dong/korean",
+    "/region/gyeongnam/changwon/bongam-dong/math",
+    "/region/gyeongnam/changwon/bongam-dong/science",
+    "/region/gyeongnam/changwon/bongam-dong/social",
+    "/region/jeonbuk/jeonju/nosong-dong",
+    "/region/jeonbuk/jeonju/nosong-dong/math",
+    "/region/jeonbuk/jeonju/nosong-dong/science",
+    "/region/jeonbuk/jeonju/nosong-dong/social",
+    "/region/ulsan/ulsan-nam/mugeo-dong",
+    "/region/ulsan/ulsan-nam/mugeo-dong/english",
+    "/region/ulsan/ulsan-nam/mugeo-dong/korean",
+    "/region/ulsan/ulsan-nam/mugeo-dong/math",
+    "/region/ulsan/ulsan-nam/mugeo-dong/science",
+    "/region/ulsan/ulsan-nam/mugeo-dong/social",
+  ],
+  "2026-11-03": [
+    "/region/chungbuk/cheongju/geumcheon-dong",
+    "/region/chungbuk/cheongju/geumcheon-dong/english",
+    "/region/chungbuk/cheongju/geumcheon-dong/korean",
+    "/region/chungbuk/cheongju/geumcheon-dong/math",
+    "/region/chungbuk/cheongju/geumcheon-dong/science",
+    "/region/chungbuk/cheongju/geumcheon-dong/social",
+    "/region/chungnam/cheonan/wonseong1-dong",
+    "/region/chungnam/cheonan/wonseong1-dong/english",
+    "/region/chungnam/cheonan/wonseong1-dong/korean",
+    "/region/chungnam/cheonan/wonseong1-dong/math",
+    "/region/chungnam/cheonan/wonseong1-dong/science",
+    "/region/chungnam/cheonan/wonseong1-dong/social",
+    "/region/gyeongbuk/yeongju/yeongju1-dong",
+    "/region/gyeongbuk/yeongju/yeongju1-dong/english",
+    "/region/gyeongbuk/yeongju/yeongju1-dong/math",
+    "/region/gyeongbuk/yeongju/yeongju1-dong/science",
+    "/region/gyeongbuk/yeongju/yeongju1-dong/social",
+    "/region/jeju/jeju-si/hanrim-eup",
+    "/region/jeju/jeju-si/hanrim-eup/english",
+    "/region/jeju/jeju-si/hanrim-eup/korean",
+    "/region/jeju/jeju-si/hanrim-eup/math",
+    "/region/jeju/jeju-si/hanrim-eup/science",
+    "/region/jeju/jeju-si/hanrim-eup/social",
+    "/region/jeonbuk/jeonju/pyeonghwa1-dong",
+    "/region/jeonbuk/jeonju/pyeonghwa1-dong/english",
+    "/region/jeonbuk/jeonju/pyeonghwa1-dong/korean",
+    "/region/jeonbuk/jeonju/pyeonghwa1-dong/math",
+    "/region/jeonbuk/jeonju/pyeonghwa1-dong/science",
+    "/region/jeonbuk/jeonju/pyeonghwa1-dong/social",
+    "/school/cheonan-middle-school/1/english",
+    "/school/cheonan-middle-school/1/korean",
+    "/school/cheonan-middle-school/1/math",
+    "/school/cheonan-middle-school/1/science",
+    "/school/cheonan-middle-school/1/social",
+    "/school/cheonan-middle-school/2/english",
+    "/school/cheonan-middle-school/2/korean",
+    "/school/cheonan-middle-school/2/math",
+    "/school/cheonan-middle-school/2/science",
+    "/school/cheonan-middle-school/2/social",
+    "/school/cheonan-middle-school/3/english",
+    "/school/cheonan-middle-school/3/korean",
+    "/school/cheonan-middle-school/3/math",
+    "/school/cheonan-middle-school/3/science",
+    "/school/cheonan-middle-school/3/social",
+    "/school/cheonanjungang-high-school/1/english",
+    "/school/cheonanjungang-high-school/1/korean",
+    "/school/cheonanjungang-high-school/1/math",
+    "/school/cheonanjungang-high-school/1/science",
+    "/school/cheonanjungang-high-school/1/social",
+    "/school/cheonanjungang-high-school/2",
+    "/school/cheonanjungang-high-school/2/english",
+    "/school/cheonanjungang-high-school/2/korean",
+    "/school/cheonanjungang-high-school/2/math",
+    "/school/cheongjudong-middle-school/2",
+    "/school/cheongjudong-middle-school/2/english",
+    "/school/cheongjudong-middle-school/2/korean",
+    "/school/cheongjudong-middle-school/2/math",
+    "/school/cheongjudong-middle-school/2/science",
+    "/school/cheongjudong-middle-school/2/social",
+    "/school/cheongjudong-middle-school/3",
+    "/school/cheongjudong-middle-school/3/english",
+    "/school/cheongjudong-middle-school/3/korean",
+    "/school/cheongjudong-middle-school/3/math",
+    "/school/cheongjudong-middle-school/3/science",
+    "/school/cheongjudong-middle-school/3/social",
+    "/school/cheonseong-middle-school/1/english",
+    "/school/cheonseong-middle-school/1/korean",
+    "/school/cheonseong-middle-school/1/social",
+    "/school/cheonseong-middle-school/2/english",
+    "/school/cheonseong-middle-school/2/korean",
+    "/school/cheonseong-middle-school/2/social",
+    "/school/cheonseong-middle-school/3/english",
+    "/school/cheonseong-middle-school/3/korean",
+    "/school/cheonseong-middle-school/3/math",
+    "/school/cheonseong-middle-school/3/social",
+    "/school/geumcheon-high-school-cheongju/1",
+    "/school/geumcheon-high-school-cheongju/1/english",
+    "/school/geumcheon-high-school-cheongju/1/korean",
+    "/school/geumcheon-high-school-cheongju/1/math",
+    "/school/geumcheon-high-school-cheongju/1/science",
+    "/school/geumcheon-high-school-cheongju/1/social",
+    "/school/geumcheon-high-school-cheongju/2",
+    "/school/geumcheon-high-school-cheongju/2/english",
+    "/school/geumcheon-high-school-cheongju/2/korean",
+    "/school/geumcheon-high-school-cheongju/2/math",
+    "/school/geumcheon-middle-school/2",
+    "/school/geumcheon-middle-school/2/english",
+    "/school/geumcheon-middle-school/2/korean",
+    "/school/geumcheon-middle-school/2/math",
+    "/school/geumcheon-middle-school/2/science",
+    "/school/geumcheon-middle-school/3",
+    "/school/geumcheon-middle-school/3/english",
+    "/school/geumcheon-middle-school/3/korean",
+    "/school/geumcheon-middle-school/3/science",
+    "/school/geumcheon-middle-school/3/social",
+    "/school/gyeonganyeoja-middle-school/2/science",
+    "/school/hadan-middle-school/2/english",
+    "/school/hanrim-high-school/1/korean",
+    "/school/hanrim-high-school/1/math",
+    "/school/hanrim-high-school/1/science",
+    "/school/hanrim-high-school/1/social",
+    "/school/hanrim-high-school/2",
+    "/school/hanrim-high-school/2/english",
+    "/school/hanrim-high-school/2/korean",
+    "/school/hanrim-high-school/2/math",
+    "/school/hanrimhanggonguju-high-school/1/english",
+    "/school/hanrimhanggonguju-high-school/1/korean",
+    "/school/hanrimhanggonguju-high-school/1/math",
+    "/school/hanrimhanggonguju-high-school/1/science",
+    "/school/hanrimhanggonguju-high-school/1/social",
+    "/school/hanrimhanggonguju-high-school/2/english",
+    "/school/hanrimhanggonguju-high-school/2/korean",
+    "/school/hanrimhanggonguju-high-school/2/math",
+    "/school/hanrimyeoja-middle-school/1/english",
+    "/school/hanrimyeoja-middle-school/1/math",
+    "/school/hanrimyeoja-middle-school/1/science",
+    "/school/hanrimyeoja-middle-school/1/social",
+    "/school/hanrimyeoja-middle-school/2/korean",
+    "/school/hanrimyeoja-middle-school/2/math",
+    "/school/hanrimyeoja-middle-school/2/science",
+    "/school/hanrimyeoja-middle-school/2/social",
+    "/school/hanrimyeoja-middle-school/3/english",
+    "/school/hanrimyeoja-middle-school/3/korean",
+    "/school/hanrimyeoja-middle-school/3/math",
+    "/school/hanrimyeoja-middle-school/3/science",
+    "/school/hanrimyeoja-middle-school/3/social",
+    "/school/jamsil-high-school/1/korean",
+    "/school/jeonjunam-middle-school/2/english",
+    "/school/jeonjunam-middle-school/2/korean",
+    "/school/jeonjunam-middle-school/2/math",
+    "/school/jeonjunam-middle-school/2/social",
+    "/school/jeonjunam-middle-school/3/english",
+    "/school/jeonjunam-middle-school/3/korean",
+    "/school/jeonjunam-middle-school/3/math",
+    "/school/jeonjunam-middle-school/3/science",
+    "/school/jukjeon-high-school/2/math",
+    "/school/mugeo-middle-school/3/social",
+    "/school/wansanyeoja-high-school/1",
+    "/school/wansanyeoja-high-school/1/english",
+    "/school/wansanyeoja-high-school/1/korean",
+    "/school/wansanyeoja-high-school/1/math",
+    "/school/wansanyeoja-high-school/1/science",
+    "/school/wansanyeoja-high-school/1/social",
+    "/school/wansanyeoja-high-school/2/math",
+    "/school/yeonggwangyeoja-high-school/1",
+    "/school/yeonggwangyeoja-high-school/1/english",
+    "/school/yeonggwangyeoja-high-school/1/math",
+    "/school/yeonggwangyeoja-high-school/1/science",
+    "/school/yeonggwangyeoja-high-school/1/social",
+    "/school/yeonggwangyeoja-high-school/2",
+    "/school/yeonggwangyeoja-high-school/2/english",
+    "/school/yeonggwangyeoja-high-school/2/math",
+    "/school/yeonggwangyeoja-middle-school/1",
+    "/school/yeonggwangyeoja-middle-school/1/english",
+    "/school/yeonggwangyeoja-middle-school/1/korean",
+    "/school/yeonggwangyeoja-middle-school/1/science",
+    "/school/yeonggwangyeoja-middle-school/1/social",
+    "/school/yeonggwangyeoja-middle-school/2/english",
+    "/school/yeonggwangyeoja-middle-school/2/korean",
+    "/school/yeonggwangyeoja-middle-school/2/math",
+    "/school/yeonggwangyeoja-middle-school/2/social",
+    "/school/yeonggwangyeoja-middle-school/3/english",
+    "/school/yeonggwangyeoja-middle-school/3/korean",
+    "/school/yeonggwangyeoja-middle-school/3/math",
+    "/school/yeonggwangyeoja-middle-school/3/science",
+  ],
+};
+
+const PATH_DATE_BY_PATH = new Map(
+  Object.entries(PATH_UPDATED_BY_DATE).flatMap(([date, paths]) => paths.map((p) => [p, date] as const))
+);
+
 const subjectSlugs = new Set(subjects.map((s) => s.slug));
 const gradeSlugs = new Set(grades.map((g) => g.slug));
 const dongSlugs = new Set(dongs.map((d) => d.slug));
@@ -181,7 +449,9 @@ export function getContentKind(path: string): ContentKind {
     case "program":
       return "program";
     case "school":
-      return seg.length === 2 ? "school" : "school-subject";
+      if (seg.length === 2) return "school";
+      if (/^\d$/.test(seg[2])) return seg.length === 3 ? "school-grade" : "school-grade-subject";
+      return "school-subject";
     case "region": {
       if (seg.length === 2) return "region-province";
       if (seg.length === 3) return "region-city";
@@ -205,5 +475,8 @@ export function getContentUpdatedAt(path: string): string {
     const article = guideArticles.find((a) => `/guide/${a.slug}` === path);
     if (article) return article.updatedAt;
   }
-  return PATH_UPDATED[path] ?? KIND_UPDATED[getContentKind(path)];
+  const kindDate = KIND_UPDATED[getContentKind(path)];
+  return [kindDate, PATH_UPDATED[path], PATH_DATE_BY_PATH.get(path)]
+    .filter((d): d is string => Boolean(d))
+    .reduce((a, b) => (b > a ? b : a));
 }
