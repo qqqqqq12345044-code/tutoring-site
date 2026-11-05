@@ -372,6 +372,14 @@ export const importedSchools: School[] = [
   imported("onyang-middle-school", "온양중학교", "asan", undefined, "중학교", "onyang5-dong", { code: "8181011", office: "N10", roadAddress: "충청남도 아산시 온중로 48", legalDong: "용화동", foundation: "공립", coed: "남학교", founded: "1947-05-20" }), // 아산시 온양5동
   imported("yangeop-high-school", "양업고등학교", "cheongju", undefined, "고등학교", "oksan-myeon", { code: "8000090", office: "M10", roadAddress: "충청북도 청주시 흥덕구 옥산면 환희길 277", legalDong: "옥산면", foundation: "사립", coed: "남녀공학", highSchoolType: "특성화고", founded: "1998-03-28" }), // 청주시 흥덕구 옥산면
   imported("oksan-middle-school", "옥산중학교", "cheongju", undefined, "중학교", "oksan-myeon", { code: "8011328", office: "M10", roadAddress: "충청북도 청주시 흥덕구 옥산면 오산1길 41", legalDong: "옥산면", foundation: "공립", coed: "남녀공학", founded: "1969-10-11" }), // 청주시 흥덕구 옥산면
+  imported("hamdeok-high-school", "함덕고등학교", "jeju-si", undefined, "고등학교", "jocheon-eup", { code: "9290103", office: "T10", roadAddress: "제주특별자치도 제주시 조천읍 신흥로 9", legalDong: "조천읍", foundation: "공립", coed: "남녀공학", highSchoolType: "일반고", founded: "1953-04-07" }), // 제주시 조천읍
+  imported("jocheon-middle-school", "조천중학교", "jeju-si", undefined, "중학교", "jocheon-eup", { code: "9296026", office: "T10", roadAddress: "제주특별자치도 제주시 조천읍 신북로 31", legalDong: "조천읍", foundation: "공립", coed: "남녀공학", founded: "1950-06-17" }), // 제주시 조천읍
+  imported("hamdeok-middle-school", "함덕중학교", "jeju-si", undefined, "중학교", "jocheon-eup", { code: "9296027", office: "T10", roadAddress: "제주특별자치도 제주시 조천읍 일주동로 1234", legalDong: "조천읍", foundation: "공립", coed: "남녀공학", founded: "1955-04-27" }), // 제주시 조천읍
+  imported("jejuoegukeo-high-school", "제주외국어고등학교", "jeju-si", undefined, "고등학교", "aewol-eup", { code: "9290068", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 고성남길 34", legalDong: "애월읍", foundation: "공립", coed: "남녀공학", highSchoolType: "특목고(외국어계열)", founded: "2004-03-01" }), // 제주시 애월읍
+  imported("aewol-high-school", "애월고등학교", "jeju-si", undefined, "고등학교", "aewol-eup", { code: "9290086", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 일주서로 6372-20", legalDong: "애월읍", foundation: "공립", coed: "남녀공학", highSchoolType: "일반고", founded: "1953-04-25" }), // 제주시 애월읍
+  imported("sineom-middle-school", "신엄중학교", "jeju-si", undefined, "중학교", "aewol-eup", { code: "9296019", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 일주서로 6711", legalDong: "애월읍", foundation: "공립", coed: "남녀공학", founded: "1971-03-01" }), // 제주시 애월읍
+  imported("aewol-middle-school", "애월중학교", "jeju-si", undefined, "중학교", "aewol-eup", { code: "9296020", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 애월로15길 8", legalDong: "애월읍", foundation: "공립", coed: "남녀공학", founded: "1947-06-18" }), // 제주시 애월읍
+  imported("gwiil-middle-school", "귀일중학교", "jeju-si", undefined, "중학교", "aewol-eup", { code: "9296036", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 항몽로 44", legalDong: "애월읍", foundation: "사립", coed: "남녀공학", founded: "1953-03-17" }), // 제주시 애월읍
 ];
 
 function imported(

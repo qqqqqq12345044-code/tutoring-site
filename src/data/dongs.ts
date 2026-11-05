@@ -227,6 +227,10 @@ export const dongs: AdminDong[] = [
   { slug: "onyang5-dong", code: "4420061000", name: "온양5동", citySlug: "asan", legalDongs: ["기산동", "초사동", "신인동", "용화동", "점양동"] },
   // 2026-11-05 Batch 31 청주 옥산면(양업고·옥산중) (docs/qa/national-school-content-expansion-2026-11-02.md).
   { slug: "oksan-myeon", code: "4311332000", name: "옥산면", citySlug: "cheongju", legalDongs: ["옥산면", "오산리", "덕촌리", "신촌리", "환희리", "가락리", "동림리", "금계리", "장동리", "사정리", "수락리", "장남리", "호죽리", "남촌리", "소로리", "국사리"] },
+  // 2026-11-05 Batch 32 제주 조천읍(함덕고·함덕중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "jocheon-eup", code: "5011025900", name: "조천읍", citySlug: "jeju-si", legalDongs: ["조천읍", "신촌리", "와흘리", "조천리", "함덕리", "신흥리", "대흘리", "북촌리", "와산리", "교래리", "선흘리"] },
+  // 2026-11-05 Batch 32 제주 애월읍(제주외고·애월중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "aewol-eup", code: "5011025300", name: "애월읍", citySlug: "jeju-si", legalDongs: ["애월읍", "용흥리", "중엄리", "어음1리", "어음2리", "귀일리", "어도리", "동귀리", "광령리", "상귀리", "구엄리", "수산리", "신엄리", "장전리", "소길리", "고성리", "하가리", "상가리", "고내리", "애월리", "납읍리", "어음리", "곽지리", "금성리", "봉성리", "하귀1리", "하귀2리", "유수암리", "광령1리", "광령2리", "광령3리"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

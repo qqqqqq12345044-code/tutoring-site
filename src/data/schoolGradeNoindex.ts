@@ -63,4 +63,7 @@ export const schoolGradeNoindexPaths = new Set<string>([
   "/school/geumhoyeoja-middle-school/1",
   "/school/geumhoyeoja-middle-school/2",
   "/school/geumhoyeoja-middle-school/3",
+  // 2026-11-05 Batch 32 제주 조천읍: 함덕고 1·2학년 hub(42%, 두 학년 모두 정기시험 2회·수행 2개 구조가 같음)는 AMBER라 noindex.
+  "/school/hamdeok-high-school/1",
+  "/school/hamdeok-high-school/2",
 ]);
