@@ -380,6 +380,10 @@ export const importedSchools: School[] = [
   imported("sineom-middle-school", "신엄중학교", "jeju-si", undefined, "중학교", "aewol-eup", { code: "9296019", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 일주서로 6711", legalDong: "애월읍", foundation: "공립", coed: "남녀공학", founded: "1971-03-01" }), // 제주시 애월읍
   imported("aewol-middle-school", "애월중학교", "jeju-si", undefined, "중학교", "aewol-eup", { code: "9296020", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 애월로15길 8", legalDong: "애월읍", foundation: "공립", coed: "남녀공학", founded: "1947-06-18" }), // 제주시 애월읍
   imported("gwiil-middle-school", "귀일중학교", "jeju-si", undefined, "중학교", "aewol-eup", { code: "9296036", office: "T10", roadAddress: "제주특별자치도 제주시 애월읍 항몽로 44", legalDong: "애월읍", foundation: "사립", coed: "남녀공학", founded: "1953-03-17" }), // 제주시 애월읍
+  imported("ulsanyeoja-high-school", "울산여자고등학교", "ulsan-nam", undefined, "고등학교", "sinjeong2-dong", { code: "7480026", office: "H10", roadAddress: "울산광역시 남구 삼산로9번길 16", legalDong: "신정동", foundation: "공립", coed: "여학교", highSchoolType: "일반고", founded: "1952-05-06" }), // 남구 신정2동
+  imported("hakseong-high-school", "학성고등학교", "ulsan-nam", undefined, "고등학교", "sinjeong2-dong", { code: "7480029", office: "H10", roadAddress: "울산광역시 남구 문수로 436", legalDong: "신정동", foundation: "공립", coed: "남학교", highSchoolType: "일반고", founded: "1968-11-20" }), // 남구 신정2동
+  imported("ulsanseoyeoja-middle-school", "울산서여자중학교", "ulsan-nam", undefined, "중학교", "sinjeong2-dong", { code: "7501020", office: "H10", roadAddress: "울산광역시 남구 문수로 432", legalDong: "신정동", foundation: "공립", coed: "여학교", founded: "1984-01-30" }), // 남구 신정2동
+  imported("hakseong-middle-school", "학성중학교", "ulsan-nam", undefined, "중학교", "sinjeong2-dong", { code: "7501024", office: "H10", roadAddress: "울산광역시 남구 문수로 426", legalDong: "신정동", foundation: "공립", coed: "남학교", founded: "1968-01-20" }), // 남구 신정2동
 ];
 
 function imported(
