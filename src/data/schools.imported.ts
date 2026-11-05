@@ -365,6 +365,13 @@ export const importedSchools: School[] = [
   imported("wansan-middle-school", "완산중학교", "jeonju", undefined, "중학교", "pyeonghwa1-dong", { code: "8332233", office: "P10", roadAddress: "전북특별자치도 전주시 완산구 덕적골1길 60", legalDong: "평화동1가", foundation: "사립", coed: "남녀공학", founded: "1961-02-11" }), // 전주시 완산구 평화1동
   imported("yeonggwangyeoja-high-school", "영광여자고등학교", "yeongju", undefined, "고등학교", "yeongju1-dong", { code: "8750189", office: "R10", roadAddress: "경상북도 영주시 숫골길23번길 39", legalDong: "영주동", foundation: "사립", coed: "여학교", highSchoolType: "일반고", founded: "1966-11-17" }), // 영주시 영주1동
   imported("yeonggwangyeoja-middle-school", "영광여자중학교", "yeongju", undefined, "중학교", "yeongju1-dong", { code: "8811063", office: "R10", roadAddress: "경상북도 영주시 두서길 120", legalDong: "영주동", foundation: "사립", coed: "여학교", founded: "1965-11-28" }), // 영주시 영주1동
+  imported("poeun-high-school", "포은고등학교", "yeongcheon", undefined, "고등학교", "geumho-eup", { code: "8750655", office: "R10", roadAddress: "경상북도 영천시 금호읍 성천앞길 112-53", legalDong: "금호읍", foundation: "공립", coed: "남녀공학", highSchoolType: "일반고", founded: "1983-11-21" }), // 영천시 금호읍
+  imported("gyeongbukhyumeontekeu-high-school", "경북휴먼테크고등학교", "yeongcheon", undefined, "고등학교", "geumho-eup", { code: "8750776", office: "R10", roadAddress: "경상북도 영천시 금호읍 교대길 8-18", legalDong: "금호읍", foundation: "사립", coed: "남녀공학", highSchoolType: "특성화고", founded: "1993-03-01" }), // 영천시 금호읍
+  imported("geumhoyeoja-middle-school", "금호여자중학교", "yeongcheon", undefined, "중학교", "geumho-eup", { code: "8821056", office: "R10", roadAddress: "경상북도 영천시 금호읍 성천앞길 112-53", legalDong: "금호읍", foundation: "공립", coed: "여학교", founded: "1971-12-29" }), // 영천시 금호읍
+  imported("onyangyonghwa-high-school", "온양용화고등학교", "asan", undefined, "고등학교", "onyang5-dong", { code: "8140229", office: "N10", roadAddress: "충청남도 아산시 용화고길 10", legalDong: "용화동", foundation: "공립", coed: "남녀공학", highSchoolType: "일반고", founded: "2005-03-01" }), // 아산시 온양5동
+  imported("onyang-middle-school", "온양중학교", "asan", undefined, "중학교", "onyang5-dong", { code: "8181011", office: "N10", roadAddress: "충청남도 아산시 온중로 48", legalDong: "용화동", foundation: "공립", coed: "남학교", founded: "1947-05-20" }), // 아산시 온양5동
+  imported("yangeop-high-school", "양업고등학교", "cheongju", undefined, "고등학교", "oksan-myeon", { code: "8000090", office: "M10", roadAddress: "충청북도 청주시 흥덕구 옥산면 환희길 277", legalDong: "옥산면", foundation: "사립", coed: "남녀공학", highSchoolType: "특성화고", founded: "1998-03-28" }), // 청주시 흥덕구 옥산면
+  imported("oksan-middle-school", "옥산중학교", "cheongju", undefined, "중학교", "oksan-myeon", { code: "8011328", office: "M10", roadAddress: "충청북도 청주시 흥덕구 옥산면 오산1길 41", legalDong: "옥산면", foundation: "공립", coed: "남녀공학", founded: "1969-10-11" }), // 청주시 흥덕구 옥산면
 ];
 
 function imported(

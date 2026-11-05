@@ -221,6 +221,12 @@ export const dongs: AdminDong[] = [
   { slug: "pyeonghwa1-dong", code: "5211169100", name: "평화1동", citySlug: "jeonju", legalDongs: ["평화동1가"] },
   // 2026-11-03 Batch 30 영주 영주1동(영광여고·영광여중) (docs/qa/national-school-content-expansion-2026-11-02.md).
   { slug: "yeongju1-dong", code: "4721055000", name: "영주1동", citySlug: "yeongju", legalDongs: ["영주동", "하망동"] },
+  // 2026-11-05 Batch 31 영천 금호읍(포은고·금호여중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "geumho-eup", code: "4723025000", name: "금호읍", citySlug: "yeongcheon", legalDongs: ["금호읍", "교대리", "덕성리", "성천리", "대미리", "석섬리", "원제리", "냉천리", "신월리", "봉죽리", "관정리", "구암리", "약남리", "대곡리", "호남리", "어은리", "오계리", "원기리", "신대리", "남성리", "삼호리", "황정리"] },
+  // 2026-11-05 Batch 31 아산 온양5동(온양용화고·온양중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "onyang5-dong", code: "4420061000", name: "온양5동", citySlug: "asan", legalDongs: ["기산동", "초사동", "신인동", "용화동", "점양동"] },
+  // 2026-11-05 Batch 31 청주 옥산면(양업고·옥산중) (docs/qa/national-school-content-expansion-2026-11-02.md).
+  { slug: "oksan-myeon", code: "4311332000", name: "옥산면", citySlug: "cheongju", legalDongs: ["옥산면", "오산리", "덕촌리", "신촌리", "환희리", "가락리", "동림리", "금계리", "장동리", "사정리", "수락리", "장남리", "호죽리", "남촌리", "소로리", "국사리"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

@@ -59,4 +59,8 @@ export const schoolGradeNoindexPaths = new Set<string>([
   // 2026-11-03 Batch 30 영주 영주1동: 영광여중 2·3학년 hub(37%, 시험 2회 60% + 수행 2개 40% 구조가 같음)는 AMBER라 noindex.
   "/school/yeonggwangyeoja-middle-school/2",
   "/school/yeonggwangyeoja-middle-school/3",
+  // 2026-11-05 Batch 31 영천 금호읍: 금호여중 1~3학년 hub(38%, 세 학년 모두 정기시험 60%·수행 40% 구조가 같음)는 AMBER라 noindex.
+  "/school/geumhoyeoja-middle-school/1",
+  "/school/geumhoyeoja-middle-school/2",
+  "/school/geumhoyeoja-middle-school/3",
 ]);

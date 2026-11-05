@@ -91,7 +91,12 @@ export const BASELINE = {
   // 학년 hub 30(GREEN 12 색인, AMBER 18 noindex) + 학년×과목 124(GREEN 119 색인, 천성중 AMBER 5 noindex) = +237 → 13633 → 13870.
   // 시 허브 jeju-si·yeongju noindex→index, 시·도 허브 제주는 regionNoindex.ts 보류 → sitemap 984 → 1146(+동 5 +동×과목 24 +학년×과목 119
   // +학년 hub 12 +시 허브 2), noindex 12647 → 12722(+조합 54 +AMBER hub 18 +AMBER 학년×과목 5 −시 허브 2).
-  totalRoutes: 13870,
+  // 2026-11-05 Batch 31 = 경북 영천 금호읍(영천 첫 동)·충남 아산 온양5동(아산 첫 동)·충북 청주 옥산면(청주 3번째 동): 학교 7곳 등록
+  // (전국 hub에서 이동, route 0; 경북휴먼테크고는 PDF 공시라 hub만) + 새 도시 조합 route 54(yeongcheon·asan, noindex) + 동 hub 3 +
+  // 동×과목 15(GREEN·색인) + 학년 hub 14(GREEN 11 색인, 금호여중 AMBER 3 noindex) + 학년×과목 58(GREEN·색인) = +144 → 13870 → 14014.
+  // 시 허브 yeongcheon·asan noindex→index → sitemap 1146 → 1235(+동 3 +동×과목 15 +학년×과목 58 +학년 hub 11 +시 허브 2),
+  // noindex 12722 → 12777(+조합 54 +AMBER hub 3 −시 허브 2). Production sitemap 대비 삭제 0.
+  totalRoutes: 14014,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -103,7 +108,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 1146,
-  noindexCount: 12722,
+  sitemapCount: 1235,
+  noindexCount: 12777,
   brokenLinks: 0,
 };
