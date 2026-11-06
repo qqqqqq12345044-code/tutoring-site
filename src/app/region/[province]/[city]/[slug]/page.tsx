@@ -27,6 +27,7 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 import { getDong } from "@/data/dongs";
 import { DongHubView, dongHubMetadata } from "@/components/region/DongPages";
 import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
+import { levelStyle } from "@/lib/levelStyle";
 
 const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
 
@@ -272,17 +273,17 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                   const list = relatedSchools.filter((s) => s.level === level);
                   if (list.length === 0) return null;
                   return (
-                    <div key={level} className="rounded-2xl border border-border-subtle p-6">
-                      <p className="font-bold text-navy">{level}</p>
-                      <ul className="mt-3 flex flex-col gap-1.5">
+                    <div key={level} className={`rounded-2xl border border-border-subtle border-t-4 ${levelStyle(level).top} bg-white p-6`}>
+                      <p className={`text-[17px] font-black ${levelStyle(level).text}`}>{level}</p>
+                      <ul className="mt-2 divide-y divide-border-subtle">
                         {list.map((s) => {
                           // School×subject page when it's indexed, otherwise the school hub.
                           const subjectHref = indexedSchoolSubjectHref(s, ctx.subject.slug);
                           return (
-                            <li key={s.slug}>
+                            <li key={s.slug} className="py-2.5">
                               <Link
                                 href={subjectHref ?? `/school/${s.slug}`}
-                                className="text-sm text-text-main hover:text-brand transition-colors"
+                                className="text-sm font-semibold text-text-main hover:text-brand transition-colors"
                               >
                                 {subjectHref ? `${s.name} ${ctx.subject.name}과외` : `${s.name} 과외`}
                               </Link>
