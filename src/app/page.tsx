@@ -94,7 +94,7 @@ const trustPrinciples = [
   {
     icon: CalendarCheck2,
     title: "출처와 기준 시점을 함께 적습니다",
-    body: "어느 학기 공시를 기준으로 했는지, 원문이 어디에 있는지 페이지마다 함께 표기합니다.",
+    body: "학교·학년·과목별 평가 안내 페이지에는 어느 학기 공시를 기준으로 했는지와 원문 위치를 함께 표기합니다.",
   },
   {
     icon: MessageCircle,
@@ -155,7 +155,7 @@ export default function HomePage() {
                 <span className="text-sm font-black text-brand tabular-nums">{String(i + 1).padStart(2, "0")}</span>
               </div>
               <p className="mt-1 text-[17px] font-extrabold text-navy break-keep">{item.title}</p>
-              <p className="text-sm text-text-main/80 leading-relaxed break-keep">{item.body}</p>
+              <p className="text-sm text-text-main leading-relaxed break-keep">{item.body}</p>
             </div>
           ))}
         </div>
@@ -307,9 +307,10 @@ export default function HomePage() {
       {/* PROBLEM BASED */}
       <section className="bg-navy">
         <div className="container-page py-16 md:py-20">
-          <SectionHeader
-            title={"혹시 이런 고민 때문에\n과외를 찾고 계신가요?"}
-          />
+          {/* Plain h2 instead of SectionHeader: its text-navy title was invisible on this navy background. */}
+          <h2 className="text-center text-2xl md:text-[2.15rem] font-extrabold text-white whitespace-pre-line leading-[1.3] tracking-tight">
+            {"혹시 이런 고민 때문에\n과외를 찾고 계신가요?"}
+          </h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {problemItems.map((item) => (
               <div

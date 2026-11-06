@@ -61,7 +61,7 @@ export default async function SubjectTopicPage(props: PageProps<"/subject/[slug]
           <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
             {ctx.subject.name} {ctx.topic.title} 1:1 맞춤 과외
           </h1>
-          <p className="text-text-main/80 leading-relaxed max-w-2xl">{content?.intro ?? ctx.topic.description}</p>
+          <p className="text-text-main leading-relaxed max-w-2xl">{content?.intro ?? ctx.topic.description}</p>
         </div>
       </section>
 

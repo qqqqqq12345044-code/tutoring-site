@@ -63,7 +63,7 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
             <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight whitespace-pre-line">
               {subject.heroTitle}
             </h1>
-            <p className="mt-4 text-text-main/80 leading-relaxed">{subject.heroDescription}</p>
+            <p className="mt-4 text-text-main leading-relaxed">{subject.heroDescription}</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PrimaryButton href={consultHref({ subject: subject.slug })} size="lg">
                 {subject.name}과외 무료 상담받기

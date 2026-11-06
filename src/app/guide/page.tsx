@@ -115,7 +115,7 @@ export default function GuidePage() {
                 <br />
                 필요한 답부터 찾아보세요
               </h1>
-              <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-text-main/85 break-keep">
+              <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-text-main break-keep">
                 학년별·과목별 공부법부터 계획 세우기, 시험 기간 운영까지 학생과 학부모님이 실제로 많이 궁금해하는
                 주제를 정리했습니다. 교육과정·입시 제도처럼 사실이 필요한 내용은 공식 자료 출처를 함께 적었습니다.
               </p>
@@ -161,7 +161,7 @@ export default function GuidePage() {
                   {categoryName(bigPick.categorySlug)}
                 </span>
                 <h3 className="text-xl md:text-2xl font-extrabold leading-snug text-navy">{bigPick.title}</h3>
-                <p className="text-[15px] leading-relaxed text-text-main/85 break-keep">{bigPick.excerpt}</p>
+                <p className="text-[15px] leading-relaxed text-text-main break-keep">{bigPick.excerpt}</p>
                 <TopicList topics={highlights(bigPick).topics} />
                 <span className="mt-auto inline-flex items-center gap-1.5 pt-2 text-sm font-bold text-brand">
                   처음 읽기 좋은 글
@@ -219,7 +219,7 @@ export default function GuidePage() {
                         className="group flex flex-col gap-3 rounded-2xl border border-border-subtle bg-white p-6 transition-all hover:border-brand hover:shadow-md"
                       >
                         <h4 className="text-lg font-extrabold leading-snug text-navy group-hover:text-brand">{lead.title}</h4>
-                        <p className="text-[15px] leading-relaxed text-text-main/85 line-clamp-3 break-keep">{h.preview}</p>
+                        <p className="text-[15px] leading-relaxed text-text-main line-clamp-3 break-keep">{h.preview}</p>
                         <TopicList topics={h.topics} />
                         <span className="mt-auto inline-flex items-center gap-1 pt-1 text-sm font-bold text-brand">
                           읽어보기

@@ -98,7 +98,7 @@ function NotesGrid({ notes }: { notes: DongNote[] }) {
       {notes.map((n) => (
         <article key={n.title}>
           <h3 className="font-bold text-navy">{n.title}</h3>
-          <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed break-keep">{n.body}</p>
+          <p className="mt-2 text-[15px] text-text-main leading-relaxed break-keep">{n.body}</p>
         </article>
       ))}
     </div>
@@ -215,7 +215,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
                 {getRegionTitleName(ctx.region.slug)} {ctx.dong.name} 과외
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">초·중·고 1:1 맞춤 수업</span>
               </h1>
-              <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
+              <p className="mt-4 text-text-main leading-relaxed break-keep">{content.intro}</p>
               {planBasis && <PlanBasisNote className="mt-3" />}
             </div>
             <div className="hidden md:block overflow-hidden rounded-2xl border border-border-subtle">
@@ -264,7 +264,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
                       {n.title}
                     </Link>
                   </h3>
-                  <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed break-keep">{n.body}</p>
+                  <p className="mt-2 text-[15px] text-text-main leading-relaxed break-keep">{n.body}</p>
                 </article>
               ))}
           </div>
@@ -333,7 +333,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
                 {getRegionTitleName(ctx.region.slug)} {ctx.dong.name} {subject.name}과외
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">{heading}</span>
               </h1>
-              <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
+              <p className="mt-4 text-text-main leading-relaxed break-keep">{content.intro}</p>
               {planBasis && <PlanBasisNote className="mt-3" />}
             </div>
             <div className="hidden md:block overflow-hidden rounded-2xl border border-border-subtle">

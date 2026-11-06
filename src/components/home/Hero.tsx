@@ -39,7 +39,7 @@ export default function Hero() {
           <h1 className="text-3xl md:text-[2.6rem] font-extrabold text-navy leading-[1.3] whitespace-pre-line">
             {"학교 시험을 먼저 이해하고\n1:1 수업을 설계합니다"}
           </h1>
-          <p className="text-text-main/85 text-base md:text-lg leading-relaxed break-keep">
+          <p className="text-text-main text-base md:text-lg leading-relaxed break-keep">
             교과설계소는 학교알리미에 공시된 학교별 평가계획을 직접 읽고 학교·학년·과목별로 정리합니다. 이 정보를
             바탕으로 학생의 현재 수준과 목표에 맞는 국어·영어·수학·사회·과학 1:1 수업을 상담해드립니다.
           </p>

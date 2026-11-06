@@ -30,7 +30,7 @@ export default function LevelTestBanner({ context, showApply = true, className =
         </span>
         <div>
           <p className="text-lg md:text-xl font-extrabold text-navy">무료 레벨테스트로 시작할 수 있습니다</p>
-          <p className="mt-1.5 text-sm text-text-main/80 leading-relaxed">
+          <p className="mt-1.5 text-sm text-text-main leading-relaxed">
             상담을 신청하시면 학생의 현재 수준을 확인하는 레벨테스트를 무료로 받아보실 수 있습니다. 결과를 바탕으로
             수업 방향을 안내해드립니다.
           </p>

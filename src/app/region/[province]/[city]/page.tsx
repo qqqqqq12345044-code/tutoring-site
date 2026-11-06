@@ -83,7 +83,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
             <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
               {getRegionTitleName(region.slug)} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
             </h1>
-            <p className="mt-4 text-text-main/80 leading-relaxed">
+            <p className="mt-4 text-text-main leading-relaxed">
               {buildRegionSchoolIntro(region.slug, region.name, relatedSchools)}
             </p>
           </HeroWithThumbnail>

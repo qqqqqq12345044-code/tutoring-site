@@ -83,7 +83,7 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
             {ctx.fullLabel} 과외{" "}
             <span className="text-text-muted font-medium text-lg md:text-2xl">| {ctx.subGrade.label} 1:1 맞춤 수업</span>
           </h1>
-          <p className="text-text-main/80 leading-relaxed max-w-2xl">{content?.intro ?? ctx.subGrade.note}</p>
+          <p className="text-text-main leading-relaxed max-w-2xl">{content?.intro ?? ctx.subGrade.note}</p>
         </div>
       </section>
 

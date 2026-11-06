@@ -29,7 +29,7 @@ export default function SubjectCard({ subject }: { subject: Subject }) {
         </span>
         <div className="min-w-0">
           <h3 className="text-xl font-black text-navy">{subject.name}과외</h3>
-          <p className="mt-0.5 text-sm text-text-main/80 leading-snug break-keep">{subject.shortDescription}</p>
+          <p className="mt-0.5 text-sm text-text-main leading-snug break-keep">{subject.shortDescription}</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function SubjectCard({ subject }: { subject: Subject }) {
             return (
               <li key={gs.grade} className="flex items-start gap-3 py-2.5">
                 <span className={`shrink-0 rounded-md px-2 py-0.5 text-xs font-black text-white ${ls.solid}`}>{gs.grade}</span>
-                <span className="text-[13px] leading-relaxed text-text-main/85 break-keep">{gs.description}</span>
+                <span className="text-[13px] leading-relaxed text-text-main break-keep">{gs.description}</span>
               </li>
             );
           })}

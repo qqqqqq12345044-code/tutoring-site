@@ -148,7 +148,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 {ctx.region.name} {ctx.subject.name}과외
                 <br className="hidden md:block" /> 초·중·고 1:1 맞춤 수업
               </h1>
-              <p className="mt-4 text-text-main/80 leading-relaxed">
+              <p className="mt-4 text-text-main leading-relaxed">
                 {content?.intro ??
                   `${ctx.subject.name}은 같은 학년이라도 학생마다 막히는 지점이 다릅니다. 현재 개념 이해도와 학교 진도, 목표를 확인하고 필요한 부분부터 1:1로 학습합니다.`}
               </p>
@@ -189,7 +189,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 {content.localNotes.map((n) => (
                   <article key={n.title}>
                     <h3 className="font-bold text-navy">{n.title}</h3>
-                    <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed">{n.body}</p>
+                    <p className="mt-2 text-[15px] text-text-main leading-relaxed">{n.body}</p>
                   </article>
                 ))}
               </div>

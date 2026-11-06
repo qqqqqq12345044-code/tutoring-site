@@ -92,7 +92,7 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
         </Link>
       )}
       <h1 className="mt-3 text-2xl md:text-[2.1rem] font-extrabold text-navy leading-snug break-keep">{article.title}</h1>
-      <p className="mt-4 text-base md:text-lg leading-relaxed text-text-main/85 break-keep">{article.excerpt}</p>
+      <p className="mt-4 text-base md:text-lg leading-relaxed text-text-main break-keep">{article.excerpt}</p>
       <dl className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-sm text-text-muted">
         <div className="flex gap-1.5"><dt className="font-semibold">게시</dt><dd>{fmt(article.publishedAt)}</dd></div>
         {article.updatedAt && article.updatedAt !== article.publishedAt && (

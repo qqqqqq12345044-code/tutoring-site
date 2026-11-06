@@ -54,7 +54,7 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
             <h1 className="mt-3 text-2xl md:text-4xl font-extrabold text-navy leading-tight">
               {grade.label} 1:1 맞춤 과외
             </h1>
-            <p className="mt-4 text-text-main/80 leading-relaxed">{grade.description}</p>
+            <p className="mt-4 text-text-main leading-relaxed">{grade.description}</p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {grade.keywords.map((k) => (
                 <span key={k} className={`rounded-full px-3 py-1 text-xs font-semibold ${ls.soft} ${ls.text}`}>
