@@ -59,13 +59,8 @@ export default function Hero() {
         </div>
 
         <div className="rounded-3xl bg-navy p-6 md:p-8 text-white">
-          <p className="text-sm font-bold text-blue-200">공식 자료로 확인한 정보</p>
-          <p className="mt-2 text-xl md:text-2xl font-extrabold leading-snug">
-            추측이 아니라 학교가 공개한
-            <br />
-            원문을 기준으로 안내합니다
-          </p>
-          <ul className="mt-6 divide-y divide-white/15 border-y border-white/15">
+          <p className="text-lg font-extrabold">교과설계소 학교 자료 현황</p>
+          <ul className="mt-4 divide-y divide-white/15 border-y border-white/15">
             {items.map((item) => (
               <li key={item.label} className="flex items-center gap-4 py-4">
                 <span className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-white/10 text-white">
