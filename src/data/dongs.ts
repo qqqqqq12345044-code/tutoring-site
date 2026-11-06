@@ -236,6 +236,17 @@ export const dongs: AdminDong[] = [
   // 2026-11-06 Batch 34 대구 달서구 도원동 · 부산 동래구 사직제2동 (행정동 코드: data/official/admin-dongs.json)
   { slug: "dowon-dong", code: "2729062800", name: "도원동", citySlug: "daegu-dalseo", legalDongs: ["도원동"] },
   { slug: "sajik2-dong", code: "2626059000", name: "사직제2동", citySlug: "busan-dongnae", legalDongs: ["사직동"] },
+  // 2026-11-06 Batch 35 전국 확장 10개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "ara-dong", code: "5011063000", name: "아라동", citySlug: "jeju-si", legalDongs: ["아라일동", "아라이동", "오등동", "월평동", "영평동"] },
+  { slug: "hangyeong-myeon", code: "5011031000", name: "한경면", citySlug: "jeju-si", legalDongs: ["한경면", "청수리", "용수리", "고산리", "판포리", "금등리", "조수리", "두모리", "신창리", "낙천리", "저지리", "산양리", "한원리", "용당리"] },
+  { slug: "burim-dong", code: "4117356600", name: "부림동", citySlug: "anyang", legalDongs: ["관양동"] },
+  { slug: "tangjeong-myeon", code: "4420033000", name: "탕정면", citySlug: "asan", legalDongs: ["탕정면", "용두리", "명암리", "동산리", "호산리", "매곡리", "갈산리"] },
+  { slug: "ojeong-dong", code: "4119656000", name: "오정동", citySlug: "bucheon", legalDongs: ["오정동", "대장동"] },
+  { slug: "mochung-dong", code: "4311254000", name: "모충동", citySlug: "cheongju", legalDongs: ["모충동"] },
+  { slug: "daehyeon-dong", code: "3114062500", name: "대현동", citySlug: "ulsan-nam", legalDongs: ["야음동"] },
+  { slug: "sinbong-dong", code: "4146553000", name: "신봉동", citySlug: "yongin", legalDongs: ["신봉동"] },
+  { slug: "hupyeong2-dong", code: "5111061000", name: "후평2동", citySlug: "chuncheon", legalDongs: ["후평동"] },
+  { slug: "yeonil-eup", code: "4711125300", name: "연일읍", citySlug: "pohang", legalDongs: ["연일읍", "생지리", "괴정리", "동문리", "오천리", "유강리", "자명리", "학전리", "달전리", "중명리", "중단리", "택전리", "인주리", "우복리"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
