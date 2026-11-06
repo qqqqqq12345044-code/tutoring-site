@@ -247,6 +247,15 @@ export const dongs: AdminDong[] = [
   { slug: "sinbong-dong", code: "4146553000", name: "신봉동", citySlug: "yongin", legalDongs: ["신봉동"] },
   { slug: "hupyeong2-dong", code: "5111061000", name: "후평2동", citySlug: "chuncheon", legalDongs: ["후평동"] },
   { slug: "yeonil-eup", code: "4711125300", name: "연일읍", citySlug: "pohang", legalDongs: ["연일읍", "생지리", "괴정리", "동문리", "오천리", "유강리", "자명리", "학전리", "달전리", "중명리", "중단리", "택전리", "인주리", "우복리"] },
+  // 2026-11-06 Batch 36 전국 확장 8개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "seongsan2-dong", code: "1144073000", name: "성산제2동", citySlug: "mapo", legalDongs: ["성산동", "중동"] },
+  { slug: "mok4-dong", code: "1147054000", name: "목4동", citySlug: "yangcheon", legalDongs: ["목동"] },
+  { slug: "yeon-dong", code: "5011065000", name: "연동", citySlug: "jeju-si", legalDongs: ["연동"] },
+  { slug: "hwabuk-dong", code: "5011060000", name: "화북동", citySlug: "jeju-si", legalDongs: ["화북일동", "화북이동"] },
+  { slug: "ok-dong", code: "3114060000", name: "옥동", citySlug: "ulsan-nam", legalDongs: ["옥동", "두왕동"] },
+  { slug: "samsan-dong", code: "3114057000", name: "삼산동", citySlug: "ulsan-nam", legalDongs: ["달동", "삼산동"] },
+  { slug: "munseong-dong", code: "4413152000", name: "문성동", citySlug: "cheonan", legalDongs: ["성황동", "문화동", "원성동"] },
+  { slug: "musil-dong", code: "5113066000", name: "무실동", citySlug: "wonju", legalDongs: ["단계동", "무실동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

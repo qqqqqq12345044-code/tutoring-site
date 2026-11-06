@@ -111,7 +111,10 @@ export const BASELINE = {
   // 동×과목 48(대현동 영어·과학 없음) + 학년 hub 44(과목 1개 hub 2곳 noindex) + 학년×과목 168 = +324 → 14216 → 14540.
   // 신선여고 1학년 통합사회2는 hub 보류 시 orphan이라 항목을 넣지 않음. sitemap 1381 → 1651(+270 = 신규 268 + 도시 hub 2 전환),
   // noindex 12833 → 12887(+54 = 신규 56(조합 54 + 보류 hub 2) − 전환 2).
-  totalRoutes: 14540,
+  // 2026-11-06 Batch 36 = 전국 확장 8개 동(마포 성산제2동, 양천 목4동, 제주 연동·화북동, 울산 옥동·삼산동, 천안 문성동, 원주 무실동,
+  // 새 도시 없음): 학교 23곳 등록(전국 학교 route 기존) + 동 hub 8 + 동×과목 37 + 학년 hub 24 + 학년×과목 84 = +153 → 14540 → 14693.
+  // sitemap 1651 → 1804(+153, 전부 색인), noindex 12887 유지.
+  totalRoutes: 14693,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -123,7 +126,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 1651,
+  sitemapCount: 1804,
   noindexCount: 12887,
   brokenLinks: 0,
 };
