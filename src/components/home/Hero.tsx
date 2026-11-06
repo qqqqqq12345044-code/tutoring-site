@@ -59,7 +59,7 @@ export default function Hero() {
         </div>
 
         <div className="rounded-3xl bg-navy p-6 md:p-8 text-white">
-          <p className="text-lg md:text-xl font-extrabold leading-snug">교과설계소가 정리한 학교 정보</p>
+          <p className="text-lg md:text-xl font-extrabold leading-snug">교과설계소 학교 자료 현황</p>
           <ul className="mt-5 divide-y divide-white/15 border-y border-white/15">
             {items.map((item) => (
               <li key={item.label} className="flex items-center gap-4 py-4">
