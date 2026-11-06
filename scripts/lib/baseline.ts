@@ -102,7 +102,11 @@ export const BASELINE = {
   // 2026-11-05 Batch 33 = 울산 남구 신정2동(남구 2번째 동): 학교 4곳 등록(학성고·울산서여중은 PDF 평가계획이라 hub만) + 동 hub 1 +
   // 동×과목 5(GREEN·색인) + 학년 hub 5(GREEN 3 색인, 학성중 1·2 AMBER noindex) + 학년×과목 20(GREEN·색인) = +31 → 14067 → 14098.
   // sitemap 1286 → 1315(+29), noindex 12779 → 12781(+2).
-  totalRoutes: 14098,
+  // 2026-11-06 Batch 34 = 대구 달서구 도원동 + 부산 동래구 사직제2동(둘 다 새 도시, --allow-new-city): 학교 9곳 등록(전국 학교 route가
+  // 이미 있어 route 수 변화 없음, 대곡고·사직여고 PDF·동인고·사직여중 zip이라 hub만) + 새 도시 조합 route 54(27×2, noindex) + 동 hub 2 +
+  // 동×과목 10 + 학년 hub 11 + 학년×과목 41(신규 색인 64) = +118 → 14098 → 14216. 도시 hub 2개는 기존 noindex route가 색인으로 전환.
+  // sitemap 1315 → 1381(+66 = 신규 64 + 도시 hub 2), noindex 12781 → 12833(+52 = 신규 54 − 전환 2).
+  totalRoutes: 14216,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -114,7 +118,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 1315,
-  noindexCount: 12781,
+  sitemapCount: 1381,
+  noindexCount: 12833,
   brokenLinks: 0,
 };

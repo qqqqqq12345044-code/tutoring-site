@@ -233,6 +233,9 @@ export const dongs: AdminDong[] = [
   { slug: "aewol-eup", code: "5011025300", name: "애월읍", citySlug: "jeju-si", legalDongs: ["애월읍", "용흥리", "중엄리", "어음1리", "어음2리", "귀일리", "어도리", "동귀리", "광령리", "상귀리", "구엄리", "수산리", "신엄리", "장전리", "소길리", "고성리", "하가리", "상가리", "고내리", "애월리", "납읍리", "어음리", "곽지리", "금성리", "봉성리", "하귀1리", "하귀2리", "유수암리", "광령1리", "광령2리", "광령3리"] },
   // 2026-11-05 Batch 33 울산 남구 신정2동(울산여고·학성중) (docs/qa/national-school-content-expansion-2026-11-02.md).
   { slug: "sinjeong2-dong", code: "3114052000", name: "신정2동", citySlug: "ulsan-nam", legalDongs: ["신정동"] },
+  // 2026-11-06 Batch 34 대구 달서구 도원동 · 부산 동래구 사직제2동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "dowon-dong", code: "2729062800", name: "도원동", citySlug: "daegu-dalseo", legalDongs: ["도원동"] },
+  { slug: "sajik2-dong", code: "2626059000", name: "사직제2동", citySlug: "busan-dongnae", legalDongs: ["사직동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
