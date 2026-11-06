@@ -1,6 +1,7 @@
 import { CheckCircle2, ClipboardList, UserCheck, BookOpenCheck } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import LevelTestBanner from "@/components/LevelTestBanner";
 
 export default function Hero() {
   return (
@@ -30,6 +31,7 @@ export default function Hero() {
             <CheckCircle2 className="w-3.5 h-3.5 text-brand" />
             상담만 받아도 괜찮습니다. 학생의 학년과 고민부터 편하게 알려주세요.
           </p>
+          <LevelTestBanner className="mt-1" stacked />
         </div>
 
         <div className="relative">

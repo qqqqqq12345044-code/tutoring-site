@@ -11,6 +11,7 @@ import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
 import { indexedRegionLinksForSubject } from "@/lib/internalLinks";
 import { JsonLd, faqSchema } from "@/lib/schema";
+import { consultHref } from "@/lib/consultContext";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
@@ -18,6 +19,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import RelatedLinks from "@/components/RelatedLinks";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import LevelTestBanner from "@/components/LevelTestBanner";
 
 export function generateStaticParams() {
   return subjects.map((s) => ({ slug: s.slug }));
@@ -62,14 +64,15 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
             </h1>
             <p className="mt-4 text-text-main/80 leading-relaxed">{subject.heroDescription}</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <PrimaryButton href="/consult" size="lg">
-                {subject.name}과외 상담받기
+              <PrimaryButton href={consultHref({ subject: subject.slug })} size="lg">
+                {subject.name}과외 무료 상담받기
               </PrimaryButton>
               <PrimaryButton href="/regions" variant="outline" size="lg">
                 우리 동네 과외 찾기
               </PrimaryButton>
             </div>
           </div>
+          <LevelTestBanner context={{ subject: subject.slug }} />
         </div>
       </section>
 
