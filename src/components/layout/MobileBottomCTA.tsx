@@ -41,7 +41,7 @@ export default function MobileBottomCTA() {
         href="/consult"
         className="flex-1 inline-flex items-center justify-center rounded-full bg-brand text-white font-semibold py-3 text-sm whitespace-nowrap"
       >
-        무료 상담
+        무료 레벨테스트
       </Link>
     </div>
   );
