@@ -256,6 +256,32 @@ export const dongs: AdminDong[] = [
   { slug: "samsan-dong", code: "3114057000", name: "삼산동", citySlug: "ulsan-nam", legalDongs: ["달동", "삼산동"] },
   { slug: "munseong-dong", code: "4413152000", name: "문성동", citySlug: "cheonan", legalDongs: ["성황동", "문화동", "원성동"] },
   { slug: "musil-dong", code: "5113066000", name: "무실동", citySlug: "wonju", legalDongs: ["단계동", "무실동"] },
+  // 2026-11-06 Batch 37 전국 확장 24개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "munmudaewang-myeon", code: "4713031500", name: "문무대왕면", citySlug: "gyeongju", legalDongs: ["문무대왕면", "어일리", "입천리", "두산리", "송전리", "죽전리", "구길리", "용당리", "봉길리", "권이리", "호암리", "용동리", "와읍리", "안동리", "장항리", "범곡리"] },
+  { slug: "pungsan-eup", code: "4717025000", name: "풍산읍", citySlug: "andong", legalDongs: ["풍산읍", "안교리", "상리리", "하리리", "마애리", "수리", "회곡리", "계평리", "막곡리", "수곡리", "노리", "죽전리", "만운리", "서미리", "신양리", "현애리", "오미리", "괴정리", "매곡리", "소산리"] },
+  { slug: "songha-dong", code: "4717066000", name: "송하동", citySlug: "andong", legalDongs: ["노하동", "송현동"] },
+  { slug: "dunpo-myeon", code: "4420036000", name: "둔포면", citySlug: "asan", legalDongs: ["둔포면", "둔포리", "송용리", "시포리", "신법리", "신남리", "신항리", "관대리", "산전리", "신양리", "봉재리", "운교리", "석곡리", "운용리", "신왕리", "염작리"] },
+  { slug: "onyang3-dong", code: "4420059000", name: "온양3동", citySlug: "asan", legalDongs: ["모종동", "권곡동", "신동"] },
+  { slug: "yeokgok1-dong", code: "4119257000", name: "역곡1동", citySlug: "bucheon", legalDongs: ["역곡동"] },
+  { slug: "bongmyeong-dong", code: "4413155000", name: "봉명동", citySlug: "cheonan", legalDongs: ["봉명동", "쌍용동"] },
+  { slug: "gyo-dong", code: "5111052000", name: "교동", citySlug: "chuncheon", legalDongs: ["교동"] },
+  { slug: "seonsan-eup", code: "4719025000", name: "선산읍", citySlug: "gumi", legalDongs: ["선산읍", "완전리", "동부리", "노상리", "이문리", "죽장리", "내고리", "북산리", "습례리", "교리", "화조리", "원리", "독동리", "생곡리", "신기리", "봉곡리", "포상리", "소재리", "봉남리"] },
+  { slug: "jinryang-eup", code: "4729025300", name: "진량읍", citySlug: "gyeongsan", legalDongs: ["진량읍", "신상리", "선화리", "보인리", "봉회리", "북리", "부기리", "양기리", "상림리", "내리리", "문천리", "평사리(坪沙)", "평사리(平沙)", "다문리", "아사리", "시문리", "현내리", "마곡리", "광석리", "신제리", "대원리", "속초리", "안촌리", "황제리", "당곡리", "가야리"] },
+  // Batch 37 추가 14개 동 (같은 기준)
+  { slug: "buldang2-dong", code: "4413356700", name: "불당2동", citySlug: "cheonan", legalDongs: ["불당동"] },
+  { slug: "bongmyeong2songjeong-dong", code: "4311375600", name: "봉명2.송정동", citySlug: "cheongju", legalDongs: ["봉명동", "송정동"] },
+  { slug: "dong-myeon", code: "5111031000", name: "동면", citySlug: "chuncheon", legalDongs: ["동면", "지내리", "만천리", "장학리", "감정리", "월곡리", "품안리", "품걸리", "신이리", "평촌리", "상걸리"] },
+  { slug: "sandong-eup", code: "4719025600", name: "산동읍", citySlug: "gumi", legalDongs: ["산동읍", "동곡리", "도중리", "적림리", "성수리", "신당리", "봉산리", "임천리", "인덕리", "백현리", "송산리"] },
+  { slug: "seobu1-dong", code: "4729054100", name: "서부1동", citySlug: "gyeongsan", legalDongs: ["옥곡동", "사정동", "옥산동"] },
+  { slug: "dongbu-dong", code: "4729056000", name: "동부동", citySlug: "gyeongsan", legalDongs: ["계양동", "남방동", "내동", "여천동", "유곡동", "신천동", "점촌동", "평산동", "사동", "삼풍동"] },
+  { slug: "pungnam-dong", code: "5211153000", name: "풍남동", citySlug: "jeonju", legalDongs: ["경원동1가", "경원동2가", "경원동3가", "풍남동1가", "풍남동2가", "풍남동3가", "전동", "전동3가", "교동"] },
+  { slug: "junghwasan1-dong", code: "5211167100", name: "중화산1동", citySlug: "jeonju", legalDongs: ["중화산동1가", "중화산동2가"] },
+  { slug: "inhu3-dong", code: "5211356000", name: "인후3동", citySlug: "jeonju", legalDongs: ["인후동1가"] },
+  { slug: "guryongpo-eup", code: "4711125000", name: "구룡포읍", citySlug: "pohang", legalDongs: ["구룡포읍", "구룡포리", "삼정리", "석병리", "성동리", "구평리", "장길리", "하정리", "병포리", "후동리", "눌태리"] },
+  { slug: "daei-dong", code: "4711159000", name: "대이동", citySlug: "pohang", legalDongs: ["대잠동", "이동"] },
+  { slug: "usan-dong", code: "5113060000", name: "우산동", citySlug: "wonju", legalDongs: ["우산동", "가현동"] },
+  { slug: "hyucheon1-dong", code: "4721059000", name: "휴천1동", citySlug: "yeongju", legalDongs: ["휴천동"] },
+  { slug: "gaheung2-dong", code: "4721063000", name: "가흥2동", citySlug: "yeongju", legalDongs: ["가흥동", "고현동", "창진동", "상줄동", "아지동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

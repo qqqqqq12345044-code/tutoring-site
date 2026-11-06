@@ -114,9 +114,14 @@ export const BASELINE = {
   // 2026-11-06 Batch 36 = 전국 확장 8개 동(마포 성산제2동, 양천 목4동, 제주 연동·화북동, 울산 옥동·삼산동, 천안 문성동, 원주 무실동,
   // 새 도시 없음): 학교 23곳 등록(전국 학교 route 기존) + 동 hub 8 + 동×과목 37 + 학년 hub 24 + 학년×과목 84 = +153 → 14540 → 14693.
   // sitemap 1651 → 1804(+153, 전부 색인), noindex 12887 유지.
-  // 2026-11-06 학습 가이드 9편 추가(국어·영어·수학 각 2, 고등 내신·수능·중등 내신 각 1, 전부 색인) = +9 → 14693 → 14702,
-  // sitemap 1804 → 1813, noindex 12887 유지.
-  totalRoutes: 14702,
+  // 2026-11-06 Batch 37 = 전국 확장 24개 동(경주 문무대왕면, 안동 풍산읍·송하동, 아산 둔포면·온양3동, 부천 역곡1동, 천안 봉명동·불당2동,
+  // 춘천 교동·동면, 구미 선산읍·산동읍, 경산 진량읍·서부1동·동부동, 청주 봉명2.송정동, 전주 풍남동·중화산1동·인후3동, 포항 구룡포읍·대이동,
+  // 원주 우산동, 영주 휴천1동·가흥2동; 새 도시 경주·구미·경산): 학교 57곳 등록(전국 학교 route 기존) + 새 도시 조합 route 81(27×3, noindex)
+  // + 동 hub 24 + 동×과목 106 + 학년 hub 56 + 학년×과목 207 = +474 → 14693 → 15167. 도시 hub 3개는 noindex → 색인 전환.
+  // sitemap 1804 → 2200(+396 = 신규 393 + 도시 hub 3), noindex 12887 → 12965(+78 = 조합 81 − 전환 3).
+  // 2026-11-06 학습 가이드 9편 추가(국어·영어·수학 각 2, 고등 내신·수능·중등 내신 각 1, 전부 색인) = +9 → 15167 → 15176,
+  // sitemap 2200 → 2209, noindex 12965 유지.
+  totalRoutes: 15176,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -128,7 +133,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 1813,
-  noindexCount: 12887,
+  sitemapCount: 2209,
+  noindexCount: 12965,
   brokenLinks: 0,
 };
