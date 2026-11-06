@@ -15,7 +15,7 @@ export default function Hero() {
     {
       icon: School,
       value: `${formatCount(stats.planSchools)}개 학교`,
-      label: "학교알리미 평가계획 원문을 직접 읽고 정리",
+      label: "평가계획을 정리한 학교",
     },
     {
       icon: FileText,
@@ -37,11 +37,11 @@ export default function Hero() {
             {siteConfig.tagline}
           </span>
           <h1 className="text-3xl md:text-[2.6rem] font-extrabold text-navy leading-[1.3] whitespace-pre-line">
-            {"학교 시험을 먼저 이해하고\n1:1 수업을 설계합니다"}
+            {"우리 아이 학교 시험에 맞춘\n1:1 과외"}
           </h1>
           <p className="text-text-main text-base md:text-lg leading-relaxed break-keep">
-            교과설계소는 학교알리미에 공시된 학교별 평가계획을 직접 읽고 학교·학년·과목별로 정리합니다. 이 정보를
-            바탕으로 학생의 현재 수준과 목표에 맞는 국어·영어·수학·사회·과학 1:1 수업을 상담해드립니다.
+            다니는 학교의 시험 비율과 수행평가를 확인하고, 학생의 현재 수준에 맞춰 국어·영어·수학·사회·과학 1:1
+            수업을 안내해드립니다.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-1">
@@ -59,13 +59,8 @@ export default function Hero() {
         </div>
 
         <div className="rounded-3xl bg-navy p-6 md:p-8 text-white">
-          <p className="text-sm font-bold text-blue-200">공식 자료로 확인한 정보</p>
-          <p className="mt-2 text-xl md:text-2xl font-extrabold leading-snug">
-            추측이 아니라 학교가 공개한
-            <br />
-            원문을 기준으로 안내합니다
-          </p>
-          <ul className="mt-6 divide-y divide-white/15 border-y border-white/15">
+          <p className="text-lg md:text-xl font-extrabold leading-snug">교과설계소가 정리한 학교 정보</p>
+          <ul className="mt-5 divide-y divide-white/15 border-y border-white/15">
             {items.map((item) => (
               <li key={item.label} className="flex items-center gap-4 py-4">
                 <span className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-white/10 text-white">

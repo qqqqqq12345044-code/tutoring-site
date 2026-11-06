@@ -117,7 +117,7 @@ export default function GuidePage() {
               </h1>
               <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-text-main break-keep">
                 학년별·과목별 공부법부터 계획 세우기, 시험 기간 운영까지 학생과 학부모님이 실제로 많이 궁금해하는
-                주제를 정리했습니다. 교육과정·입시 제도처럼 사실이 필요한 내용은 공식 자료 출처를 함께 적었습니다.
+                주제를 정리했습니다. 교육과정·입시 제도 관련 글에는 참고한 자료를 함께 적었습니다.
               </p>
               <nav aria-label="학습가이드 분류" className="mt-6 flex flex-wrap gap-2">
                 {groups.map((g) => (

@@ -74,7 +74,7 @@ const whyItems = [
     num: "04",
     icon: LineChart,
     title: "지속적인 학습 피드백",
-    body: "수업만 하고 끝나는 것이 아니라 학습 상태와 다음 계획을 꾸준히 점검합니다.",
+    body: "수업 후에도 학습 상태와 다음 계획을 꾸준히 점검합니다.",
   },
 ];
 
@@ -83,23 +83,23 @@ const whyItems = [
 const trustPrinciples = [
   {
     icon: FileSearch,
-    title: "공식 원문만 사용합니다",
-    body: "학교알리미 평가계획, NEIS 학교기본정보, 교육부 자료처럼 공개된 공식 자료에서 확인한 내용만 씁니다.",
+    title: "학교 평가계획 확인",
+    body: "다니는 학교의 지필·수행평가 비율과 과제를 학교알리미 공시에서 먼저 살펴봅니다.",
   },
   {
     icon: ShieldCheck,
-    title: "확인되지 않은 내용은 채우지 않습니다",
-    body: "원문에서 확인되지 않는 일정·비율·범위는 추측해서 적지 않고, 확인할 수 없다고 그대로 안내합니다.",
+    title: "현재 수준 확인",
+    body: "무료 레벨테스트와 상담으로 학생이 어디에서 막히는지 확인합니다.",
   },
   {
     icon: CalendarCheck2,
-    title: "출처와 기준 시점을 함께 적습니다",
-    body: "학교·학년·과목별 평가 안내 페이지에는 어느 학기 공시를 기준으로 했는지와 원문 위치를 함께 표기합니다.",
+    title: "학년·과목별 안내",
+    body: "학교·학년·과목별 안내 페이지에서 기준 학기와 출처를 함께 볼 수 있습니다.",
   },
   {
     icon: MessageCircle,
-    title: "상담 먼저, 결정은 천천히",
-    body: "상담만 받아도 괜찮습니다. 학생의 현재 상황을 듣고 필요한 수업 방향부터 함께 정리합니다.",
+    title: "상담만 받아도 괜찮습니다",
+    body: "학년과 고민을 들려주시면 필요한 수업 방향부터 함께 정리합니다.",
   },
 ];
 
@@ -141,9 +141,8 @@ export default function HomePage() {
       {/* TRUST — how information is handled, before any offer */}
       <section className="container-page py-16 md:py-20">
         <SectionHeader
-          eyebrow="OUR PRINCIPLES"
-          title={"믿고 맡기실 수 있도록\n정보부터 정직하게 다룹니다"}
-          description="과외를 맡기기 전, 이곳이 어떤 기준으로 안내하는지 먼저 확인해보세요."
+          eyebrow="HOW WE WORK"
+          title={"수업 전에\n이런 것부터 확인합니다"}
         />
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {trustPrinciples.map((item, i) => (
