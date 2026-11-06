@@ -20,19 +20,16 @@ interface LevelTestBannerProps {
 export default function LevelTestBanner({ context, showApply = true, className = "", stacked = false }: LevelTestBannerProps) {
   return (
     <div
-      className={`rounded-2xl border-2 border-brand bg-white px-5 py-5 md:px-8 md:py-6 flex flex-col ${stacked ? "" : "md:flex-row md:items-center md:justify-between"} gap-4 shadow-sm ${className}`}
+      className={`rounded-2xl border border-brand/40 bg-white px-5 py-5 md:px-8 md:py-6 flex flex-col ${stacked ? "" : "md:flex-row md:items-center md:justify-between"} gap-4 shadow-sm ${className}`}
       data-analytics-location="level_test_banner"
     >
       <div className="flex items-start gap-3.5">
-        <span className="hidden sm:flex shrink-0 items-center justify-center w-11 h-11 rounded-full bg-brand text-white">
+        <span className="hidden sm:flex shrink-0 items-center justify-center w-11 h-11 rounded-full bg-brand-light text-brand">
           <ClipboardCheck className="w-5 h-5" aria-hidden="true" />
         </span>
         <div>
-          <p className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-brand px-2.5 py-0.5 text-xs font-bold text-white">이벤트</span>
-            <span className="text-lg md:text-xl font-extrabold text-navy">무료 레벨테스트 진행중</span>
-          </p>
-          <p className="mt-1.5 text-sm text-text-main/80 leading-relaxed">
+          <p className="text-lg md:text-xl font-extrabold text-navy">무료 레벨테스트로 현재 수준부터 확인합니다</p>
+          <p className="mt-1.5 text-[15px] text-text-main leading-relaxed">
             상담을 신청하시면 학생의 현재 수준을 확인하는 레벨테스트를 무료로 받아보실 수 있습니다. 결과를 바탕으로
             수업 방향을 안내해드립니다.
           </p>

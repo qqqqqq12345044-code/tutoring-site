@@ -10,25 +10,25 @@ export default function GradeCard({ grade }: { grade: Grade }) {
     >
       <span
         aria-hidden="true"
-        className="text-3xl font-extrabold text-navy/10 group-hover:text-brand/20 transition-colors"
+        className="w-fit rounded-xl bg-navy px-3.5 py-1.5 text-2xl font-black text-white group-hover:bg-brand transition-colors"
       >
         {grade.name}
       </span>
       <div>
-        <h3 className="text-lg font-bold text-navy">{grade.label} 과외</h3>
-        <p className="mt-1.5 text-sm text-text-muted leading-relaxed">{grade.description}</p>
+        <h3 className="text-xl font-extrabold text-navy">{grade.label} 과외</h3>
+        <p className="mt-1.5 text-[15px] text-text-main leading-relaxed">{grade.description}</p>
       </div>
       <div className="flex flex-wrap gap-1.5">
         {grade.keywords.map((k) => (
           <span
             key={k}
-            className="rounded-full bg-brand-light px-2.5 py-1 text-xs font-medium text-brand"
+            className="rounded-full bg-brand-light px-2.5 py-1 text-xs font-bold text-brand"
           >
             {k}
           </span>
         ))}
       </div>
-      <span className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-brand">
+      <span className="mt-auto inline-flex items-center gap-1 text-sm font-bold text-brand">
         {grade.name}과외 확인하기
         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
       </span>

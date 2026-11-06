@@ -12,12 +12,12 @@ export default function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
         </span>
       </div>
       <div>
-        <p className="text-xs font-semibold text-text-muted">고민</p>
-        <p className="mt-1 text-sm text-text-main leading-relaxed">{caseStudy.concern}</p>
+        <p className="text-sm font-extrabold text-navy">고민</p>
+        <p className="mt-1 text-[15px] text-text-main leading-relaxed">{caseStudy.concern}</p>
       </div>
       <div>
-        <p className="text-xs font-semibold text-text-muted">수업 방향</p>
-        <p className="mt-1 text-sm text-text-main leading-relaxed">{caseStudy.approach}</p>
+        <p className="text-sm font-extrabold text-brand">수업 방향</p>
+        <p className="mt-1 text-[15px] text-text-main leading-relaxed">{caseStudy.approach}</p>
       </div>
       <p className="mt-auto pt-2 text-xs text-text-muted border-t border-border-subtle">
         ※ 이해를 돕기 위한 수업 설계 예시입니다.

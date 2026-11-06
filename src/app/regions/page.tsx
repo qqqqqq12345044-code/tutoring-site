@@ -29,7 +29,7 @@ export default function RegionsPage() {
     <section className="container-page py-10 md:py-14">
       <Breadcrumb items={[{ name: "지역별 과외", href: "/regions" }]} />
       <h1 className="mt-4 text-2xl md:text-3xl font-extrabold text-navy">지역별 과외</h1>
-      <p className="mt-2 text-text-main/80 text-sm md:text-base max-w-2xl leading-relaxed">
+      <p className="mt-2 text-text-main text-sm md:text-base max-w-2xl leading-relaxed">
         전국 어디에서든 1:1 과외를 상담할 수 있습니다. 지역명 또는 학교명으로 찾아보세요.
       </p>
 

@@ -62,7 +62,7 @@ export default function NationalSchoolPage({ school }: { school: NationalSchool 
             <dt className="text-text-muted">행정동</dt>
             <dd className="text-text-main">{school.dongName}</dd>
           </dl>
-          <p className="text-xs md:text-sm text-text-muted leading-relaxed break-keep border-l-2 border-brand-light pl-3 max-w-2xl">
+          <p className="text-xs md:text-sm text-text-muted leading-relaxed break-keep border-l-2 border-brand/60 pl-3 max-w-2xl">
             학교 기본 정보는 교육부 NEIS 학교기본정보, 행정동은 도로명주소를 행정안전부 행정동 코드(2026.10.12. 시행)에
             대조해 1곳으로 확인한 값입니다. 이 학교의 학교알리미 평가계획은 아직 정리하지 않아 과목별 평가 비율은 싣지
             않았습니다.

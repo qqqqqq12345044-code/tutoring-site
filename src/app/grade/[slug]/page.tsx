@@ -51,10 +51,10 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
             <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
               {grade.label} 1:1 맞춤 과외
             </h1>
-            <p className="mt-4 text-text-main/80 leading-relaxed">{grade.description}</p>
+            <p className="mt-4 text-text-main leading-relaxed">{grade.description}</p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {grade.keywords.map((k) => (
-                <span key={k} className="rounded-full bg-brand-light px-3 py-1 text-xs font-medium text-brand">
+                <span key={k} className="rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-brand">
                   {k}
                 </span>
               ))}
@@ -79,8 +79,8 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
             >
               <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-navy">{goal.title}</p>
-                <p className="mt-1.5 text-sm text-text-muted leading-relaxed">{goal.description}</p>
+                <p className="text-lg font-extrabold text-navy">{goal.title}</p>
+                <p className="mt-1.5 text-[15px] text-text-main leading-relaxed">{goal.description}</p>
               </div>
             </div>
           ))}
@@ -109,20 +109,25 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
             const published = isSubGradePublished(getSubGradeContent(grade.slug, sg.slug));
             const cardContent = (
               <>
-                <p className="font-extrabold text-navy">{sg.label}</p>
-                <p className="mt-1.5 text-sm text-text-main/80 leading-relaxed">{sg.note}</p>
+                <p className="text-2xl font-black text-navy">{sg.label}</p>
+                <p className="mt-2 text-[15px] text-text-main leading-relaxed">{sg.note}</p>
+                {published && (
+                  <span className="mt-auto pt-3 inline-flex items-center gap-1 text-sm font-bold text-brand">
+                    자세히 보기 →
+                  </span>
+                )}
               </>
             );
             return published ? (
               <Link
                 key={sg.slug}
                 href={`/grade/${grade.slug}/${sg.slug}`}
-                className="rounded-2xl bg-brand-light p-5 transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
+                className="flex flex-col rounded-2xl border border-border-subtle border-t-4 border-t-brand bg-white p-5 transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
               >
                 {cardContent}
               </Link>
             ) : (
-              <div key={sg.slug} className="rounded-2xl bg-brand-light p-5">
+              <div key={sg.slug} className="flex flex-col rounded-2xl border border-border-subtle border-t-4 border-t-navy bg-white p-5">
                 {cardContent}
               </div>
             );

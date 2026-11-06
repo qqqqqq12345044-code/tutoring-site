@@ -79,7 +79,7 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
             {ctx.fullLabel} 과외{" "}
             <span className="text-text-muted font-medium text-lg md:text-2xl">| {ctx.subGrade.label} 1:1 맞춤 수업</span>
           </h1>
-          <p className="text-text-main/80 leading-relaxed max-w-2xl">{content?.intro ?? ctx.subGrade.note}</p>
+          <p className="text-text-main leading-relaxed max-w-2xl">{content?.intro ?? ctx.subGrade.note}</p>
         </div>
       </section>
 
@@ -88,7 +88,7 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
           <SectionHeader align="left" title={`${ctx.subGrade.label} 학습 포인트`} />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {content.notes.map((n) => (
-              <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={n.title} className="border-l-4 border-brand pl-5 py-0.5">
                 <p className="font-bold text-navy">{n.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
               </div>
@@ -103,7 +103,7 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {subjectFocus.map(({ subject, point }) => (
               <div key={subject.slug} className="rounded-2xl border border-border-subtle bg-white p-6">
-                <p className="text-xs font-semibold text-brand">{subject.name}</p>
+                <p className="w-fit rounded-full bg-brand px-2.5 py-0.5 text-xs font-bold text-white">{subject.name}</p>
                 <p className="mt-1 font-bold text-navy">{point.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{point.body}</p>
               </div>

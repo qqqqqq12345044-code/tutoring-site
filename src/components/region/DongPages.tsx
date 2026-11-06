@@ -97,7 +97,7 @@ function NotesGrid({ notes }: { notes: DongNote[] }) {
       {notes.map((n) => (
         <article key={n.title}>
           <h3 className="font-bold text-navy">{n.title}</h3>
-          <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed break-keep">{n.body}</p>
+          <p className="mt-2 text-[15px] text-text-main leading-relaxed break-keep">{n.body}</p>
         </article>
       ))}
     </div>
@@ -109,11 +109,11 @@ function SchoolsByLevel({ list }: { list: School[] }) {
     <div className="mt-8 grid sm:grid-cols-3 gap-6">
       {groupByLevel(list).map((g) => (
         <div key={g.level} className="rounded-2xl border border-border-subtle bg-white p-6">
-          <p className="font-bold text-navy">{g.level}</p>
-          <ul className="mt-3 flex flex-col gap-2">
+          <p className="inline-block rounded-full bg-navy px-3 py-1 text-sm font-extrabold text-white">{g.level}</p>
+          <ul className="mt-3 divide-y divide-border-subtle border-t border-border-subtle">
             {g.list.map((s) => (
-              <li key={s.slug} className="text-sm leading-snug">
-                <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+              <li key={s.slug} className="py-2.5 leading-snug">
+                <Link href={`/school/${s.slug}`} className="text-[15px] font-semibold text-text-main hover:text-brand transition-colors">
                   {s.name} 과외
                 </Link>
                 {s.official && (
@@ -138,13 +138,13 @@ function OtherDongSchools({ code, dongName }: { code?: string; dongName: string 
   return (
     <div className="mt-6 rounded-2xl border border-border-subtle bg-white p-6">
       <p className="text-sm font-bold text-navy">{dongName}의 다른 학교</p>
-      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+      <ul className="mt-3 flex flex-wrap gap-2">
         {list.map((s) => (
-          <li key={s.slug} className="text-sm">
-            <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+          <li key={s.slug} className="rounded-full border border-border-subtle bg-white px-3.5 py-1.5 text-sm">
+            <Link href={`/school/${s.slug}`} className="font-semibold text-text-main hover:text-brand transition-colors">
               {s.name}
             </Link>
-            <span className="ml-1 text-xs text-text-muted">{s.level}</span>
+            <span className="ml-1.5 text-xs font-semibold text-text-muted">{s.level}</span>
           </li>
         ))}
       </ul>
@@ -211,7 +211,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
                 {getRegionTitleName(ctx.region.slug)} {ctx.dong.name} 과외
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">초·중·고 1:1 맞춤 수업</span>
               </h1>
-              <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
+              <p className="mt-4 text-text-main leading-relaxed break-keep">{content.intro}</p>
               {planBasis && <PlanBasisNote className="mt-3" />}
             </div>
             <div className="hidden md:block overflow-hidden rounded-2xl border border-border-subtle">
@@ -260,7 +260,7 @@ export function DongHubView({ ctx }: { ctx: DongCtx }) {
                       {n.title}
                     </Link>
                   </h3>
-                  <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed break-keep">{n.body}</p>
+                  <p className="mt-2 text-[15px] text-text-main leading-relaxed break-keep">{n.body}</p>
                 </article>
               ))}
           </div>
@@ -329,7 +329,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
                 {getRegionTitleName(ctx.region.slug)} {ctx.dong.name} {subject.name}과외
                 <span className="block mt-1 text-text-muted font-medium text-lg md:text-2xl">{heading}</span>
               </h1>
-              <p className="mt-4 text-text-main/80 leading-relaxed break-keep">{content.intro}</p>
+              <p className="mt-4 text-text-main leading-relaxed break-keep">{content.intro}</p>
               {planBasis && <PlanBasisNote className="mt-3" />}
             </div>
             <div className="hidden md:block overflow-hidden rounded-2xl border border-border-subtle">
@@ -365,11 +365,11 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
             {playbooks.map(({ level, playbook }) => {
               const gradeSlug = schoolLevelToGradeSlug[level];
               return (
-                <div key={level} className="border-l-4 border-brand-light pl-5 py-0.5">
+                <div key={level} className="border-l-4 border-brand pl-5 py-0.5">
                   <p className="font-bold text-navy">
                     {level} {subject.name} 학년별 포인트
                   </p>
-                  <ul className="mt-2 flex flex-col gap-1.5 text-sm">
+                  <ul className="mt-2 divide-y divide-border-subtle text-[15px] font-medium [&>li]:py-2">
                     {playbook!.focusPoints.map((p) => (
                       <li key={p.title}>
                         <Link href={subGradeHref(gradeSlug, p.title)} className="text-text-main hover:text-brand transition-colors">
@@ -382,10 +382,10 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
               );
             })}
             {guide && (
-              <div className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div className="border-l-4 border-brand pl-5 py-0.5">
                 <p className="font-bold text-navy">시험 대비 흐름</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{guide.examPlan.map((s) => s.when).join(" → ")}</p>
-                <ul className="mt-2 flex flex-col gap-1.5 text-sm">
+                <ul className="mt-2 divide-y divide-border-subtle text-[15px] font-medium [&>li]:py-2">
                   <li>
                     <Link href={`${cityBase}/${subject.slug}`} className="text-text-main hover:text-brand transition-colors">
                       {getRegionTitleName(ctx.region.slug)} {subject.name}과외: 시험 4주 전부터의 단계별 계획

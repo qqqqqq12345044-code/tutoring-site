@@ -71,7 +71,7 @@ export default async function ProgramPage(props: PageProps<"/program/[slug]">) {
               <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight whitespace-pre-line">
                 {program.heroTitle}
               </h1>
-              <p className="mt-4 text-text-main/80 leading-relaxed">{program.heroDescription}</p>
+              <p className="mt-4 text-text-main leading-relaxed">{program.heroDescription}</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <PrimaryButton href="/consult" size="lg">
                   {program.name}과외 상담받기
@@ -115,7 +115,7 @@ export default async function ProgramPage(props: PageProps<"/program/[slug]">) {
             <div key={topic.title} className="flex gap-4">
               <span
                 aria-hidden="true"
-                className="text-3xl font-extrabold text-brand-light shrink-0 leading-none tabular-nums"
+                className="text-3xl font-black text-brand shrink-0 leading-none tabular-nums"
               >
                 {String(i + 1).padStart(2, "0")}
               </span>

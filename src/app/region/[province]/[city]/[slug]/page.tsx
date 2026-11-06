@@ -147,7 +147,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 {ctx.region.name} {ctx.subject.name}과외
                 <br className="hidden md:block" /> 초·중·고 1:1 맞춤 수업
               </h1>
-              <p className="mt-4 text-text-main/80 leading-relaxed">
+              <p className="mt-4 text-text-main leading-relaxed">
                 {content?.intro ??
                   `${ctx.subject.name}은 같은 학년이라도 학생마다 막히는 지점이 다릅니다. 현재 개념 이해도와 학교 진도, 목표를 확인하고 필요한 부분부터 1:1로 학습합니다.`}
               </p>
@@ -165,7 +165,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 body: g.description,
               }))
             ).map((sec) => (
-              <div key={sec.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={sec.title} className="border-l-4 border-brand pl-5 py-0.5">
                 <p className="font-bold text-navy">{sec.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{sec.body}</p>
               </div>
@@ -188,7 +188,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 {content.localNotes.map((n) => (
                   <article key={n.title}>
                     <h3 className="font-bold text-navy">{n.title}</h3>
-                    <p className="mt-2 text-[15px] text-text-main/85 leading-relaxed">{n.body}</p>
+                    <p className="mt-2 text-[15px] text-text-main leading-relaxed">{n.body}</p>
                   </article>
                 ))}
               </div>
@@ -225,7 +225,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 <SectionHeader align="left" title={`시험 4주 전부터의 ${ctx.subject.name} 학습 계획`} />
                 <ol className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                   {guide.examPlan.map((step) => (
-                    <li key={step.when} className="border-l-4 border-brand-light pl-5 py-0.5">
+                    <li key={step.when} className="border-l-4 border-brand pl-5 py-0.5">
                       <p className="text-sm font-bold text-brand">{step.when}</p>
                       <p className="mt-2 text-sm text-text-main leading-relaxed">{step.focus}</p>
                     </li>
@@ -272,9 +272,9 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                   const list = relatedSchools.filter((s) => s.level === level);
                   if (list.length === 0) return null;
                   return (
-                    <div key={level} className="rounded-2xl border border-border-subtle p-6">
-                      <p className="font-bold text-navy">{level}</p>
-                      <ul className="mt-3 flex flex-col gap-1.5">
+                    <div key={level} className="rounded-2xl border border-border-subtle bg-white p-6">
+                      <p className="inline-block rounded-full bg-navy px-3 py-1 text-sm font-extrabold text-white">{level}</p>
+                      <ul className="mt-3 divide-y divide-border-subtle border-t border-border-subtle">
                         {list.map((s) => {
                           // School×subject page when it's indexed, otherwise the school hub.
                           const subjectHref = indexedSchoolSubjectHref(s, ctx.subject.slug);
@@ -282,7 +282,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                             <li key={s.slug}>
                               <Link
                                 href={subjectHref ?? `/school/${s.slug}`}
-                                className="text-sm text-text-main hover:text-brand transition-colors"
+                                className="block py-2.5 text-[15px] font-semibold text-text-main hover:text-brand transition-colors"
                               >
                                 {subjectHref ? `${s.name} ${ctx.subject.name}과외` : `${s.name} 과외`}
                               </Link>
@@ -393,7 +393,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
               <p className="font-bold text-navy">
                 {ctx.region.name} {levelName}
               </p>
-              <ul className="mt-3 flex flex-col gap-1.5">
+              <ul className="mt-3 divide-y divide-border-subtle border-t border-border-subtle">
                 {levelSchools.map((s) => {
                   // 개별 학교 → 학교별 과외 페이지, 색인 중인 학교×과목 페이지가 있으면 함께 연결.
                   const subjectLinks = subjects.flatMap((subj) => {
@@ -401,8 +401,8 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                     return href ? [{ name: `${subj.name}과외`, href }] : [];
                   });
                   return (
-                    <li key={s.slug} className="text-sm">
-                      <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+                    <li key={s.slug} className="py-2.5 text-sm">
+                      <Link href={`/school/${s.slug}`} className="text-[15px] font-semibold text-text-main hover:text-brand transition-colors">
                         {s.name} 과외
                       </Link>
                       {subjectLinks.map((l) => (

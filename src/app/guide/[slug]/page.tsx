@@ -1,4 +1,7 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Clock } from "lucide-react";
+import { readingMinutes, formatGuideDate } from "@/lib/guideMeta";
 import {
   guideArticles,
   guideCategories,
@@ -70,29 +73,63 @@ export default async function GuideArticlePage(props: PageProps<"/guide/[slug]">
         ]}
       />
       {category && (
-        <span className="mt-4 inline-block rounded-full bg-brand-light px-2.5 py-1 text-xs font-semibold text-brand">
+        <Link
+          href={`/guide#${category.slug}`}
+          className="mt-5 inline-block rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-brand hover:bg-brand hover:text-white transition-colors"
+        >
           {category.name}
-        </span>
+        </Link>
       )}
-      <h1 className="mt-3 text-2xl md:text-3xl font-extrabold text-navy leading-snug">
+      <h1 className="mt-3 text-2xl md:text-[2.1rem] font-extrabold text-navy leading-snug tracking-tight">
         {article.title}
       </h1>
+      <p className="mt-4 text-base md:text-lg text-text-main leading-relaxed">{article.excerpt}</p>
+      <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 border-y border-border-subtle py-3 text-sm font-semibold text-text-muted">
+        <span className="inline-flex items-center gap-1.5">
+          <Clock className="w-4 h-4" aria-hidden="true" />
+          {readingMinutes(article)}분 읽기
+        </span>
+        <span>
+          업데이트 <time dateTime={article.updatedAt}>{formatGuideDate(article.updatedAt)}</time>
+        </span>
+        <span>교과설계소 학습가이드</span>
+      </p>
       <div className="mt-6 overflow-hidden rounded-2xl border border-border-subtle">
         <StudyThumbnail motif={motifForGuideCategory(article.categorySlug)} />
       </div>
-      <div className="mt-6 flex flex-col gap-4">
+      <div className="mt-8 flex flex-col gap-5">
         {article.body.map((p) => (
-          <p key={p} className="text-text-main leading-relaxed">
+          <p key={p} className="text-[17px] text-text-main leading-[1.85]">
             {p}
           </p>
         ))}
       </div>
-      {article.sections.map((section) => (
-        <section key={section.heading} className="mt-10">
-          <h2 className="text-lg md:text-xl font-bold text-navy">{section.heading}</h2>
-          <div className="mt-3 flex flex-col gap-4">
+      {article.sections.length > 1 && (
+        <nav aria-label="이 글의 목차" className="mt-10 rounded-2xl border border-border-subtle bg-white p-6">
+          <p className="text-base font-extrabold text-navy">이 글의 목차</p>
+          <ol className="mt-3 flex flex-col divide-y divide-border-subtle">
+            {article.sections.map((section, i) => (
+              <li key={section.heading}>
+                <a href={`#section-${i + 1}`} className="flex items-start gap-3 py-2.5 text-[15px] font-semibold text-text-main hover:text-brand">
+                  <span className="font-black text-brand tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                  {section.heading}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      {article.sections.map((section, i) => (
+        <section key={section.heading} id={`section-${i + 1}`} className="mt-12 scroll-mt-24">
+          <h2 className="flex items-start gap-3 text-xl md:text-2xl font-extrabold text-navy leading-snug">
+            <span className="flex items-center justify-center w-9 h-9 shrink-0 rounded-lg bg-navy text-sm font-bold text-white tabular-nums">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span className="pt-0.5">{section.heading}</span>
+          </h2>
+          <div className="mt-4 flex flex-col gap-5">
             {section.paragraphs.map((p) => (
-              <p key={p} className="text-text-main leading-relaxed">
+              <p key={p} className="text-[17px] text-text-main leading-[1.85]">
                 {p}
               </p>
             ))}

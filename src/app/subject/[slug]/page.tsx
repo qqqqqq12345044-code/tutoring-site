@@ -62,7 +62,7 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
             <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight whitespace-pre-line">
               {subject.heroTitle}
             </h1>
-            <p className="mt-4 text-text-main/80 leading-relaxed">{subject.heroDescription}</p>
+            <p className="mt-4 text-text-main leading-relaxed">{subject.heroDescription}</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PrimaryButton href={consultHref({ subject: subject.slug })} size="lg">
                 {subject.name}과외 무료 상담받기
@@ -92,20 +92,23 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
       <section className="bg-white border-y border-border-subtle">
         <div className="container-page py-14 md:py-16">
           <SectionHeader align="left" title={`${subject.name}과외, 이렇게 학습합니다`} />
-          <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-8">
+          <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {subject.topics.map((topic, i) => {
               const published = isSubjectTopicPublished(getSubjectTopicContent(subject.slug, topic.slug));
               const topicContent = (
                 <>
                   <span
                     aria-hidden="true"
-                    className="text-3xl font-extrabold text-brand-light shrink-0 leading-none tabular-nums"
+                    className="text-3xl font-black text-brand shrink-0 leading-none tabular-nums"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <p className="font-bold text-navy text-base md:text-lg">{topic.title}</p>
-                    <p className="mt-1.5 text-sm md:text-[15px] text-text-muted leading-relaxed">
+                    <p className="font-extrabold text-navy text-lg">
+                      {topic.title}
+                      {published && <span className="ml-1.5 text-brand" aria-hidden="true">→</span>}
+                    </p>
+                    <p className="mt-1.5 text-[15px] text-text-main leading-relaxed">
                       {topic.description}
                     </p>
                   </div>
@@ -115,12 +118,12 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
                 <Link
                   key={topic.slug}
                   href={`/subject/${subject.slug}/${topic.slug}`}
-                  className="flex gap-4 -m-2 p-2 rounded-xl transition-colors hover:bg-brand-light/40"
+                  className="flex gap-4 rounded-2xl border border-border-subtle bg-white p-5 md:p-6 transition-colors hover:border-brand hover:bg-brand-light/40"
                 >
                   {topicContent}
                 </Link>
               ) : (
-                <div key={topic.slug} className="flex gap-4">
+                <div key={topic.slug} className="flex gap-4 rounded-2xl border border-border-subtle bg-white p-5 md:p-6">
                   {topicContent}
                 </div>
               );
@@ -140,10 +143,10 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
             />
             <div className="mt-8 grid md:grid-cols-3 gap-6">
               {guide.levelDifferences.map((ld) => (
-                <article key={ld.level} className="border-l-4 border-brand-light pl-5 py-0.5">
-                  <span className="text-sm font-bold text-brand">{ld.level}</span>
-                  <h3 className="mt-1 font-bold text-navy">{ld.title}</h3>
-                  <p className="mt-2 text-sm text-text-main leading-relaxed">{ld.body}</p>
+                <article key={ld.level} className="rounded-2xl border border-border-subtle border-t-4 border-t-brand bg-white p-6">
+                  <span className="inline-block rounded-full bg-navy px-3 py-1 text-sm font-extrabold text-white">{ld.level}</span>
+                  <h3 className="mt-3 text-lg font-extrabold text-navy leading-snug">{ld.title}</h3>
+                  <p className="mt-2 text-[15px] text-text-main leading-relaxed">{ld.body}</p>
                 </article>
               ))}
             </div>
@@ -156,12 +159,12 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
                 <ol className="mt-8 flex flex-col gap-5">
                   {guide.conceptPractice.map((step, i) => (
                     <li key={step.title} className="flex gap-4">
-                      <span aria-hidden="true" className="text-xl font-extrabold text-brand-light tabular-nums leading-none">
+                      <span aria-hidden="true" className="flex items-center justify-center w-9 h-9 shrink-0 rounded-full bg-navy text-sm font-bold text-white tabular-nums">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h3 className="font-bold text-navy">{step.title}</h3>
-                        <p className="mt-1 text-sm text-text-muted leading-relaxed">{step.body}</p>
+                        <h3 className="text-lg font-extrabold text-navy">{step.title}</h3>
+                        <p className="mt-1 text-[15px] text-text-main leading-relaxed">{step.body}</p>
                       </div>
                     </li>
                   ))}
@@ -181,9 +184,9 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
           <SectionHeader align="left" title="학년별 학습 방향" />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {subject.gradeStrategies.map((gs) => (
-              <div key={gs.grade} className="border-l-4 border-brand-light pl-5 py-0.5">
-                <span className="text-sm font-bold text-brand">{gs.grade}</span>
-                <p className="mt-2 text-sm text-text-main leading-relaxed">{gs.description}</p>
+              <div key={gs.grade} className="rounded-2xl border border-border-subtle border-t-4 border-t-brand bg-white p-6">
+                <span className="inline-block rounded-full bg-navy px-3 py-1 text-sm font-extrabold text-white">{gs.grade}</span>
+                <p className="mt-3 text-[15px] text-text-main leading-relaxed">{gs.description}</p>
               </div>
             ))}
           </div>

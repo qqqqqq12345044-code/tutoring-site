@@ -82,7 +82,7 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
             <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
               {getRegionTitleName(region.slug)} 과외 <span className="text-text-muted font-medium text-lg md:text-2xl">| 초·중·고 1:1 맞춤 수업</span>
             </h1>
-            <p className="mt-4 text-text-main/80 leading-relaxed">
+            <p className="mt-4 text-text-main leading-relaxed">
               {buildRegionSchoolIntro(region.slug, region.name, relatedSchools)}
             </p>
           </HeroWithThumbnail>
@@ -129,32 +129,38 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
           <SectionHeader align="left" title={`${region.name} 학교별 과외 정보`} />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {schoolsByLevel.map((g) => (
-              <div key={g.level} className="rounded-2xl border border-border-subtle bg-white p-6">
+              <div key={g.level} className="overflow-hidden rounded-2xl border border-border-subtle bg-white">
                 <Link
                   href={`/region/${parent.slug}/${region.slug}/${schoolLevelToGradeSlug[g.level]}`}
-                  className="inline-block py-1 font-bold text-navy hover:text-brand transition-colors"
+                  className="flex items-center justify-between gap-2 bg-navy px-5 py-3.5 text-base font-extrabold text-white hover:bg-brand transition-colors"
                 >
                   {region.name} {g.level}
+                  <span className="text-sm font-bold text-white/90 tabular-nums">{g.list.length}곳</span>
                 </Link>
-                <ul className="mt-3 flex flex-col gap-1.5">
+                <ul className="divide-y divide-border-subtle px-5">
                   {g.list.map((s) => {
                     const subjectLinks = subjects.flatMap((subj) => {
                       const href = indexedSchoolSubjectHref(s, subj.slug);
                       return href ? [{ name: `${subj.name}과외`, href }] : [];
                     });
                     return (
-                      <li key={s.slug} className="text-sm">
-                        <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+                      <li key={s.slug} className="py-2.5">
+                        <Link href={`/school/${s.slug}`} className="text-[15px] font-semibold text-text-main hover:text-brand transition-colors">
                           {s.name} 과외
                         </Link>
-                        {subjectLinks.map((l) => (
-                          <span key={l.href}>
-                            <span aria-hidden="true" className="text-text-muted"> · </span>
-                            <Link href={l.href} className="text-text-muted hover:text-brand transition-colors">
-                              {l.name}
-                            </Link>
+                        {subjectLinks.length > 0 && (
+                          <span className="mt-1.5 flex flex-wrap gap-1.5">
+                            {subjectLinks.map((l) => (
+                              <Link
+                                key={l.href}
+                                href={l.href}
+                                className="rounded-full bg-brand-light px-2.5 py-0.5 text-xs font-bold text-brand hover:bg-brand hover:text-white transition-colors"
+                              >
+                                {l.name}
+                              </Link>
+                            ))}
                           </span>
-                        ))}
+                        )}
                       </li>
                     );
                   })}

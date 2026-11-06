@@ -166,7 +166,7 @@ export default async function RegionFilterSubjectPage(
           <SectionHeader align="left" title={`${ctx.type === "grade" ? ctx.grade.name : ""} ${ctx.subject.name}과외 학습 포인트`} />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {playbook.focusPoints.map((p) => (
-              <div key={p.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={p.title} className="border-l-4 border-brand pl-5 py-0.5">
                 <p className="font-bold text-navy">{p.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{p.body}</p>
               </div>
@@ -180,7 +180,7 @@ export default async function RegionFilterSubjectPage(
           <SectionHeader align="left" title={`${label} ${ctx.subject.name}과외 지역 안내`} />
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {content.regionSpecificNotes.map((n) => (
-              <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={n.title} className="border-l-4 border-brand pl-5 py-0.5">
                 <p className="font-bold text-navy">{n.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
               </div>

@@ -61,7 +61,7 @@ export default async function SubjectTopicPage(props: PageProps<"/subject/[slug]
           <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
             {ctx.subject.name} {ctx.topic.title} 1:1 맞춤 과외
           </h1>
-          <p className="text-text-main/80 leading-relaxed max-w-2xl">{content?.intro ?? ctx.topic.description}</p>
+          <p className="text-text-main leading-relaxed max-w-2xl">{content?.intro ?? ctx.topic.description}</p>
         </div>
       </section>
 
@@ -70,7 +70,7 @@ export default async function SubjectTopicPage(props: PageProps<"/subject/[slug]
           <SectionHeader align="left" title={`${ctx.subject.name} ${ctx.topic.title} 학습 포인트`} />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {content.notes.map((n) => (
-              <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={n.title} className="border-l-4 border-brand pl-5 py-0.5">
                 <p className="font-bold text-navy">{n.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
               </div>

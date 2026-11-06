@@ -64,7 +64,7 @@ export default function SchoolGradeSubjectPage({ ctx }: { ctx: SchoolGradeSubjec
           <SectionHeader align="left" title="시험 준비에서 먼저 볼 점" />
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {content.notes.map((n) => (
-              <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={n.title} className="border-l-4 border-brand pl-5 py-0.5">
                 <p className="font-bold text-navy break-keep">{n.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
               </div>
