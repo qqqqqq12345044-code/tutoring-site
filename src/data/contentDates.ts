@@ -601,6 +601,15 @@ const PATH_UPDATED_BY_DATE: Record<string, string[]> = {
   ],
   // Batch 34 대구 달서구 도원동 · 부산 동래구 사직제2동 신규 sitemap URL
   "2026-11-06": [
+    // 무료 레벨테스트 배너(5fa4514) + 학습 가이드 9편 추가: 홈·상담·과목 hub, 가이드 hub, 관련 학년 hub
+    "/",
+    "/consult",
+    "/guide",
+    "/subject/korean",
+    "/subject/english",
+    "/subject/math",
+    "/grade/middle",
+    "/grade/high",
     "/region/busan/busan-dongnae",
     "/region/busan/busan-dongnae/sajik2-dong",
     "/region/busan/busan-dongnae/sajik2-dong/english",
