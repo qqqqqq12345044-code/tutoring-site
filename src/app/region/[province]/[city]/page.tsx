@@ -21,6 +21,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import HeroWithThumbnail from "@/components/region/HeroWithThumbnail";
+import { levelStyle } from "@/lib/levelStyle";
 
 const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
 
@@ -129,22 +130,22 @@ export default async function CityPage(props: PageProps<"/region/[province]/[cit
           <SectionHeader align="left" title={`${region.name} 학교별 과외 정보`} />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {schoolsByLevel.map((g) => (
-              <div key={g.level} className="rounded-2xl border border-border-subtle bg-white p-6">
+              <div key={g.level} className={`rounded-2xl border border-border-subtle border-t-4 ${levelStyle(g.level).top} bg-white p-6`}>
                 <Link
                   href={`/region/${parent.slug}/${region.slug}/${schoolLevelToGradeSlug[g.level]}`}
-                  className="inline-block py-1 font-bold text-navy hover:text-brand transition-colors"
+                  className={`inline-block py-1 text-[17px] font-black ${levelStyle(g.level).text} hover:underline`}
                 >
                   {region.name} {g.level}
                 </Link>
-                <ul className="mt-3 flex flex-col gap-1.5">
+                <ul className="mt-2 divide-y divide-border-subtle">
                   {g.list.map((s) => {
                     const subjectLinks = subjects.flatMap((subj) => {
                       const href = indexedSchoolSubjectHref(s, subj.slug);
                       return href ? [{ name: `${subj.name}과외`, href }] : [];
                     });
                     return (
-                      <li key={s.slug} className="text-sm">
-                        <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+                      <li key={s.slug} className="py-2.5 text-sm leading-relaxed">
+                        <Link href={`/school/${s.slug}`} className="font-semibold text-text-main hover:text-brand transition-colors">
                           {s.name} 과외
                         </Link>
                         {subjectLinks.map((l) => (

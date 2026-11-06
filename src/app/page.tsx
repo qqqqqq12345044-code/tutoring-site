@@ -9,6 +9,10 @@ import {
   Repeat,
   ClipboardCheck,
   Compass,
+  FileSearch,
+  ShieldCheck,
+  CalendarCheck2,
+  MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -34,6 +38,7 @@ import ConsultForm from "@/components/ConsultForm";
 import FAQAccordion from "@/components/FAQAccordion";
 import SearchBox from "@/components/SearchBox";
 import Hero from "@/components/home/Hero";
+import LevelTestBanner from "@/components/LevelTestBanner";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import TextLink from "@/components/ui/TextLink";
 import StepFlow from "@/components/ui/StepFlow";
@@ -73,6 +78,31 @@ const whyItems = [
   },
 ];
 
+// How the site handles information — each line describes a rule the content already follows
+// (CLAUDE_WORKING_RULES / PlanBasisNote / SourceList), not a marketing promise.
+const trustPrinciples = [
+  {
+    icon: FileSearch,
+    title: "공식 원문만 사용합니다",
+    body: "학교알리미 평가계획, NEIS 학교기본정보, 교육부 자료처럼 공개된 공식 자료에서 확인한 내용만 씁니다.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "확인되지 않은 내용은 채우지 않습니다",
+    body: "원문에서 확인되지 않는 일정·비율·범위는 추측해서 적지 않고, 확인할 수 없다고 그대로 안내합니다.",
+  },
+  {
+    icon: CalendarCheck2,
+    title: "출처와 기준 시점을 함께 적습니다",
+    body: "어느 학기 공시를 기준으로 했는지, 원문이 어디에 있는지 페이지마다 함께 표기합니다.",
+  },
+  {
+    icon: MessageCircle,
+    title: "상담 먼저, 결정은 천천히",
+    body: "상담만 받아도 괜찮습니다. 학생의 현재 상황을 듣고 필요한 수업 방향부터 함께 정리합니다.",
+  },
+];
+
 const processSteps = [
   { step: "01", title: "무료 상담", body: "학년, 과목, 지역, 현재 고민을 확인합니다." },
   { step: "02", title: "학습 상황 확인", body: "현재 수준과 필요한 학습 방향을 파악합니다." },
@@ -108,6 +138,29 @@ export default function HomePage() {
       <JsonLd data={faqSchema(homeFaqs)} />
       <Hero />
 
+      {/* TRUST — how information is handled, before any offer */}
+      <section className="container-page py-16 md:py-20">
+        <SectionHeader
+          eyebrow="OUR PRINCIPLES"
+          title={"믿고 맡기실 수 있도록\n정보부터 정직하게 다룹니다"}
+          description="과외를 맡기기 전, 이곳이 어떤 기준으로 안내하는지 먼저 확인해보세요."
+        />
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {trustPrinciples.map((item, i) => (
+            <div key={item.title} className="flex flex-col gap-3 rounded-2xl border border-border-subtle bg-white p-6">
+              <div className="flex items-center justify-between">
+                <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-navy text-white">
+                  <item.icon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                <span className="text-sm font-black text-brand tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+              </div>
+              <p className="mt-1 text-[17px] font-extrabold text-navy break-keep">{item.title}</p>
+              <p className="text-sm text-text-main/80 leading-relaxed break-keep">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* QUICK SEARCH */}
       <section className="bg-brand-light">
         <div className="container-page py-14 md:py-16 flex flex-col items-center gap-6 text-center">
@@ -141,7 +194,7 @@ export default function HomePage() {
             <div key={item.num} className="relative flex gap-5">
               <span
                 aria-hidden="true"
-                className="text-5xl font-extrabold text-brand-light leading-none shrink-0 select-none tabular-nums"
+                className="text-5xl font-black text-brand leading-none shrink-0 select-none tabular-nums"
               >
                 {item.num}
               </span>
@@ -248,6 +301,7 @@ export default function HomePage() {
         <div className="mt-10">
           <StepFlow steps={processSteps} />
         </div>
+        <LevelTestBanner className="mt-12" />
       </section>
 
       {/* PROBLEM BASED */}

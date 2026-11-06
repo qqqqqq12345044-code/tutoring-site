@@ -20,6 +20,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import LevelTestBanner from "@/components/LevelTestBanner";
+import { levelStyle } from "@/lib/levelStyle";
 
 export function generateStaticParams() {
   return subjects.map((s) => ({ slug: s.slug }));
@@ -72,7 +73,6 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
               </PrimaryButton>
             </div>
           </div>
-          <LevelTestBanner context={{ subject: subject.slug }} />
         </div>
       </section>
 
@@ -92,19 +92,19 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
       <section className="bg-white border-y border-border-subtle">
         <div className="container-page py-14 md:py-16">
           <SectionHeader align="left" title={`${subject.name}과외, 이렇게 학습합니다`} />
-          <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-8">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {subject.topics.map((topic, i) => {
               const published = isSubjectTopicPublished(getSubjectTopicContent(subject.slug, topic.slug));
               const topicContent = (
                 <>
                   <span
                     aria-hidden="true"
-                    className="text-3xl font-extrabold text-brand-light shrink-0 leading-none tabular-nums"
+                    className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-brand text-white text-base font-black tabular-nums"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <p className="font-bold text-navy text-base md:text-lg">{topic.title}</p>
+                    <p className="font-extrabold text-navy text-base md:text-lg">{topic.title}</p>
                     <p className="mt-1.5 text-sm md:text-[15px] text-text-muted leading-relaxed">
                       {topic.description}
                     </p>
@@ -115,12 +115,12 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
                 <Link
                   key={topic.slug}
                   href={`/subject/${subject.slug}/${topic.slug}`}
-                  className="flex gap-4 -m-2 p-2 rounded-xl transition-colors hover:bg-brand-light/40"
+                  className="group flex gap-4 rounded-2xl border border-border-subtle bg-bg-app p-5 transition-colors hover:border-brand hover:bg-white"
                 >
                   {topicContent}
                 </Link>
               ) : (
-                <div key={topic.slug} className="flex gap-4">
+                <div key={topic.slug} className="flex gap-4 rounded-2xl border border-border-subtle bg-bg-app p-5">
                   {topicContent}
                 </div>
               );
@@ -140,9 +140,9 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
             />
             <div className="mt-8 grid md:grid-cols-3 gap-6">
               {guide.levelDifferences.map((ld) => (
-                <article key={ld.level} className="border-l-4 border-brand-light pl-5 py-0.5">
-                  <span className="text-sm font-bold text-brand">{ld.level}</span>
-                  <h3 className="mt-1 font-bold text-navy">{ld.title}</h3>
+                <article key={ld.level} className={`rounded-2xl border border-border-subtle border-t-4 ${levelStyle(ld.level).top} bg-white p-6`}>
+                  <span className={`inline-flex rounded-full px-3 py-1 text-sm font-black text-white ${levelStyle(ld.level).solid}`}>{ld.level}</span>
+                  <h3 className="mt-3 text-[17px] font-extrabold text-navy">{ld.title}</h3>
                   <p className="mt-2 text-sm text-text-main leading-relaxed">{ld.body}</p>
                 </article>
               ))}
@@ -156,7 +156,7 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
                 <ol className="mt-8 flex flex-col gap-5">
                   {guide.conceptPractice.map((step, i) => (
                     <li key={step.title} className="flex gap-4">
-                      <span aria-hidden="true" className="text-xl font-extrabold text-brand-light tabular-nums leading-none">
+                      <span aria-hidden="true" className="flex items-center justify-center w-9 h-9 shrink-0 rounded-full bg-navy text-white text-sm font-black tabular-nums">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
@@ -181,14 +181,18 @@ export default async function SubjectPage(props: PageProps<"/subject/[slug]">) {
           <SectionHeader align="left" title="학년별 학습 방향" />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {subject.gradeStrategies.map((gs) => (
-              <div key={gs.grade} className="border-l-4 border-brand-light pl-5 py-0.5">
-                <span className="text-sm font-bold text-brand">{gs.grade}</span>
+              <div key={gs.grade} className={`rounded-2xl border border-border-subtle border-t-4 ${levelStyle(gs.grade).top} bg-white p-6`}>
+                <span className={`inline-flex rounded-full px-3 py-1 text-sm font-black text-white ${levelStyle(gs.grade).solid}`}>{gs.grade}</span>
                 <p className="mt-2 text-sm text-text-main leading-relaxed">{gs.description}</p>
               </div>
             ))}
           </div>
         </section>
       )}
+
+      <section className="container-page pb-6">
+        <LevelTestBanner context={{ subject: subject.slug }} />
+      </section>
 
       <section className="container-page pb-14 md:pb-16">
         <ConsultCTA

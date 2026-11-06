@@ -14,13 +14,14 @@ interface LevelTestBannerProps {
 }
 
 /**
- * 무료 레벨테스트 안내. Wording stays general on purpose: only "free level test is available" is a confirmed
- * fact — format, duration and target are not stated, so the copy must not invent them.
+ * 무료 레벨테스트 안내. Not an event/promotion: the free level test is part of the regular service (user-confirmed
+ * 2026-11-06), so no "이벤트·진행중" wording. Wording stays general on purpose: format, duration and target are not
+ * stated, so the copy must not invent them. Placed after the trust content, never as the first thing on a page.
  */
 export default function LevelTestBanner({ context, showApply = true, className = "", stacked = false }: LevelTestBannerProps) {
   return (
     <div
-      className={`rounded-2xl border-2 border-brand bg-white px-5 py-5 md:px-8 md:py-6 flex flex-col ${stacked ? "" : "md:flex-row md:items-center md:justify-between"} gap-4 shadow-sm ${className}`}
+      className={`rounded-2xl border border-brand/40 bg-white px-5 py-5 md:px-8 md:py-6 flex flex-col ${stacked ? "" : "md:flex-row md:items-center md:justify-between"} gap-4 shadow-sm ${className}`}
       data-analytics-location="level_test_banner"
     >
       <div className="flex items-start gap-3.5">
@@ -28,10 +29,7 @@ export default function LevelTestBanner({ context, showApply = true, className =
           <ClipboardCheck className="w-5 h-5" aria-hidden="true" />
         </span>
         <div>
-          <p className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-brand px-2.5 py-0.5 text-xs font-bold text-white">이벤트</span>
-            <span className="text-lg md:text-xl font-extrabold text-navy">무료 레벨테스트 진행중</span>
-          </p>
+          <p className="text-lg md:text-xl font-extrabold text-navy">무료 레벨테스트로 시작할 수 있습니다</p>
           <p className="mt-1.5 text-sm text-text-main/80 leading-relaxed">
             상담을 신청하시면 학생의 현재 수준을 확인하는 레벨테스트를 무료로 받아보실 수 있습니다. 결과를 바탕으로
             수업 방향을 안내해드립니다.

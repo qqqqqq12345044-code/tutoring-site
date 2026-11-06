@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+import { levelStyle } from "@/lib/levelStyle";
 import { grades, subGradeFullLabel } from "@/data/grades";
 import { buildMetadata } from "@/lib/metadata";
 import { getIndexability } from "@/lib/indexability";
@@ -26,32 +28,57 @@ export default function GradesPage() {
         ))}
       </div>
 
-      <h2 className="mt-14 text-xl md:text-2xl font-bold text-navy">학년별로 자세히 보기</h2>
-      <div className="mt-6 grid sm:grid-cols-3 gap-5">
-        {grades.map((g) => (
-          <div key={g.slug} className="rounded-2xl border border-border-subtle bg-white p-6">
-            <p className="font-bold text-navy">{g.label}</p>
-            <ul className="mt-3 flex flex-col gap-2">
-              {g.subGrades.map((sg) => {
-                const label = `${subGradeFullLabel(g.slug, sg.slug)} 과외`;
-                // Only link sub-grade pages that are indexed (published content); others show as plain text.
-                const linked = getIndexability("sub-grade", { gradeSlug: g.slug, subGradeSlug: sg.slug }).index;
-                return (
-                  <li key={sg.slug} className="text-sm">
-                    {linked ? (
-                      <Link href={`/grade/${g.slug}/${sg.slug}`} className="text-text-main hover:text-brand transition-colors">
-                        {label}
-                      </Link>
-                    ) : (
-                      <span className="text-text-muted">{label}</span>
-                    )}
-                    <span className="block text-xs text-text-muted">{sg.note}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        ))}
+      <h2 className="mt-16 text-xl md:text-2xl font-extrabold text-navy">학년별로 자세히 보기</h2>
+      <p className="mt-2 text-sm md:text-base text-text-muted">학년을 누르면 그 학년의 학습 포인트와 과목별 안내를 볼 수 있습니다.</p>
+      <div className="mt-6 grid md:grid-cols-3 gap-5">
+        {grades.map((g) => {
+          const ls = levelStyle(g.slug);
+          return (
+            <div key={g.slug} className="overflow-hidden rounded-2xl border border-border-subtle bg-white">
+              <div className={`flex items-center justify-between px-6 py-4 ${ls.solid}`}>
+                <p className="text-lg font-black text-white">{g.label}</p>
+                <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold text-white">
+                  {g.subGrades.length}개 학년
+                </span>
+              </div>
+              <ul className="divide-y divide-border-subtle">
+                {g.subGrades.map((sg) => {
+                  const label = `${subGradeFullLabel(g.slug, sg.slug)} 과외`;
+                  // Only link sub-grade pages that are indexed (published content); others show as plain text.
+                  const linked = getIndexability("sub-grade", { gradeSlug: g.slug, subGradeSlug: sg.slug }).index;
+                  const row = (
+                    <>
+                      <span
+                        className={`flex items-center justify-center w-11 h-11 shrink-0 rounded-xl text-sm font-black ${ls.soft} ${ls.text}`}
+                      >
+                        {sg.label}
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className={`block text-[15px] font-bold ${linked ? "text-navy" : "text-text-main"}`}>{label}</span>
+                        <span className="mt-0.5 block text-[13px] leading-relaxed text-text-muted">{sg.note}</span>
+                      </span>
+                      {linked && <ChevronRight className={`w-4 h-4 shrink-0 ${ls.text}`} aria-hidden="true" />}
+                    </>
+                  );
+                  return (
+                    <li key={sg.slug}>
+                      {linked ? (
+                        <Link
+                          href={`/grade/${g.slug}/${sg.slug}`}
+                          className="flex items-center gap-3.5 px-5 py-4 transition-colors hover:bg-bg-app"
+                        >
+                          {row}
+                        </Link>
+                      ) : (
+                        <div className="flex items-center gap-3.5 px-5 py-4">{row}</div>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

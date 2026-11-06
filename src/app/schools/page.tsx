@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+import { levelStyle } from "@/lib/levelStyle";
 import { schools, type School } from "@/data/schools";
 import { getProvinces, getChildren, getRegionUrl } from "@/data/regions";
 import { buildMetadata } from "@/lib/metadata";
@@ -59,39 +61,52 @@ export default function SchoolsPage() {
 
       {tree.map(({ province, cities }) => (
         <section key={province.slug} id={province.slug} className="mt-12 scroll-mt-24">
-          <h2 className="text-xl font-bold text-navy">
+          <h2 className="border-l-4 border-navy pl-3 text-xl md:text-2xl font-extrabold text-navy">
             <Link href={getRegionUrl(province.slug)} className="hover:text-brand transition-colors">
               {province.name} 학교별 과외
             </Link>
           </h2>
-          <div className="mt-5 flex flex-col gap-5">
+          <div className="mt-5 flex flex-col gap-6">
             {cities.map(({ city, levels }) => (
-              <div key={city.slug} className="rounded-2xl border border-border-subtle bg-white p-6">
-                <h3 className="font-bold text-navy">
-                  <Link href={getRegionUrl(city.slug)} className="inline-block py-1 hover:text-brand transition-colors">
-                    {city.fullName}
-                  </Link>
-                </h3>
-                <div className="mt-4 grid sm:grid-cols-3 gap-5">
-                  {levels.map(({ level, list }) => (
-                    <div key={level}>
-                      <Link
-                        href={`${getRegionUrl(city.slug)}/${schoolLevelToGradeSlug[level]}`}
-                        className="inline-block py-1 text-sm font-semibold text-brand hover:underline"
-                      >
-                        {level}
-                      </Link>
-                      <ul className="mt-2 flex flex-col gap-1.5">
-                        {list.map((s) => (
-                          <li key={s.slug}>
-                            <Link href={`/school/${s.slug}`} className="text-sm text-text-main hover:text-brand transition-colors">
-                              {s.name} 과외
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+              <div key={city.slug} className="overflow-hidden rounded-2xl border border-border-subtle bg-white">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border-subtle bg-bg-app px-6 py-4">
+                  <h3 className="text-lg font-extrabold text-navy">
+                    <Link href={getRegionUrl(city.slug)} className="inline-block py-1 hover:text-brand transition-colors">
+                      {city.fullName}
+                    </Link>
+                  </h3>
+                  <span className="text-sm font-semibold text-text-muted">
+                    학교 {levels.reduce((n, l) => n + l.list.length, 0)}곳
+                  </span>
+                </div>
+                <div className="grid divide-y divide-border-subtle md:grid-cols-3 md:divide-x md:divide-y-0">
+                  {levels.map(({ level, list }) => {
+                    const ls = levelStyle(level);
+                    return (
+                      <div key={level} className="p-5 md:p-6">
+                        <Link
+                          href={`${getRegionUrl(city.slug)}/${schoolLevelToGradeSlug[level]}`}
+                          className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-black text-white ${ls.solid} hover:opacity-90`}
+                        >
+                          {level}
+                          <span className="rounded-full bg-white/25 px-2 text-xs font-bold">{list.length}</span>
+                        </Link>
+                        <ul className="mt-3 divide-y divide-border-subtle">
+                          {list.map((s) => (
+                            <li key={s.slug}>
+                              <Link
+                                href={`/school/${s.slug}`}
+                                className="group flex items-center justify-between gap-2 py-2.5 text-[15px] font-medium text-text-main hover:text-brand transition-colors"
+                              >
+                                <span>{s.name} 과외</span>
+                                <ChevronRight className="w-4 h-4 shrink-0 text-text-muted group-hover:text-brand" aria-hidden="true" />
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}

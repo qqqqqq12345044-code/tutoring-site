@@ -23,6 +23,7 @@ import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import SourceList from "@/components/SourceList";
 import PlanBasisNote from "@/components/PlanBasisNote";
 import StudyThumbnail from "@/components/StudyThumbnail";
+import { levelStyle } from "@/lib/levelStyle";
 
 /**
  * 행정동 hub and 행정동×과목 pages (/region/[province]/[city]/[dong](/[subject])).
@@ -108,12 +109,12 @@ function SchoolsByLevel({ list }: { list: School[] }) {
   return (
     <div className="mt-8 grid sm:grid-cols-3 gap-6">
       {groupByLevel(list).map((g) => (
-        <div key={g.level} className="rounded-2xl border border-border-subtle bg-white p-6">
-          <p className="font-bold text-navy">{g.level}</p>
-          <ul className="mt-3 flex flex-col gap-2">
+        <div key={g.level} className={`rounded-2xl border border-border-subtle border-t-4 ${levelStyle(g.level).top} bg-white p-6`}>
+          <p className={`text-[17px] font-black ${levelStyle(g.level).text}`}>{g.level}</p>
+          <ul className="mt-2 divide-y divide-border-subtle">
             {g.list.map((s) => (
-              <li key={s.slug} className="text-sm leading-snug">
-                <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+              <li key={s.slug} className="py-2.5 text-sm leading-snug">
+                <Link href={`/school/${s.slug}`} className="font-semibold text-text-main hover:text-brand transition-colors">
                   {s.name} 과외
                 </Link>
                 {s.official && (
@@ -138,13 +139,16 @@ function OtherDongSchools({ code, dongName }: { code?: string; dongName: string 
   return (
     <div className="mt-6 rounded-2xl border border-border-subtle bg-white p-6">
       <p className="text-sm font-bold text-navy">{dongName}의 다른 학교</p>
-      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+      <ul className="mt-3 flex flex-wrap gap-2">
         {list.map((s) => (
           <li key={s.slug} className="text-sm">
-            <Link href={`/school/${s.slug}`} className="text-text-main hover:text-brand transition-colors">
+            <Link
+              href={`/school/${s.slug}`}
+              className="inline-flex items-center gap-1.5 rounded-full border border-border-subtle px-3 py-1.5 text-text-main hover:border-brand hover:text-brand transition-colors"
+            >
               {s.name}
+              <span className={`text-xs font-bold ${levelStyle(s.level).text}`}>{s.level}</span>
             </Link>
-            <span className="ml-1 text-xs text-text-muted">{s.level}</span>
           </li>
         ))}
       </ul>
@@ -365,7 +369,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
             {playbooks.map(({ level, playbook }) => {
               const gradeSlug = schoolLevelToGradeSlug[level];
               return (
-                <div key={level} className="border-l-4 border-brand-light pl-5 py-0.5">
+                <div key={level} className="border-l-4 border-brand/70 pl-5 py-0.5">
                   <p className="font-bold text-navy">
                     {level} {subject.name} 학년별 포인트
                   </p>
@@ -382,7 +386,7 @@ export function DongSubjectView({ ctx, subject }: { ctx: DongCtx; subject: Subje
               );
             })}
             {guide && (
-              <div className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div className="border-l-4 border-brand/70 pl-5 py-0.5">
                 <p className="font-bold text-navy">시험 대비 흐름</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{guide.examPlan.map((s) => s.when).join(" → ")}</p>
                 <ul className="mt-2 flex flex-col gap-1.5 text-sm">

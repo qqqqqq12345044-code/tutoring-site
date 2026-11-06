@@ -115,7 +115,7 @@ export default async function ProgramPage(props: PageProps<"/program/[slug]">) {
             <div key={topic.title} className="flex gap-4">
               <span
                 aria-hidden="true"
-                className="text-3xl font-extrabold text-brand-light shrink-0 leading-none tabular-nums"
+                className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-brand text-white text-base font-black tabular-nums"
               >
                 {String(i + 1).padStart(2, "0")}
               </span>

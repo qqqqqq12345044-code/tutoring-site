@@ -120,7 +120,7 @@ export default async function SchoolSubjectPage(props: PageProps<"/school/[schoo
             <SectionHeader align="left" title={`${ctx.school.name} ${ctx.subject.name}과외 안내`} />
             <div className="mt-8 grid sm:grid-cols-2 gap-6">
               {content.schoolSpecificNotes.map((n) => (
-                <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+                <div key={n.title} className="border-l-4 border-brand/70 pl-5 py-0.5">
                   <p className="font-bold text-navy">{n.title}</p>
                   <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
                 </div>

@@ -11,6 +11,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
+import { levelStyle } from "@/lib/levelStyle";
 
 function resolveContext(gradeSlug: string, subGradeSlug: string) {
   const grade = getGradeBySlug(gradeSlug);
@@ -75,6 +76,9 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
               { name: `${ctx.subGrade.label} 과외`, href: `/grade/${ctx.grade.slug}/${ctx.subGrade.slug}` },
             ]}
           />
+          <span className={`inline-flex w-fit rounded-full px-3.5 py-1.5 text-sm font-black text-white ${levelStyle(ctx.grade.slug).solid}`}>
+            {ctx.grade.label} · {ctx.subGrade.label}
+          </span>
           <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
             {ctx.fullLabel} 과외{" "}
             <span className="text-text-muted font-medium text-lg md:text-2xl">| {ctx.subGrade.label} 1:1 맞춤 수업</span>
@@ -88,7 +92,7 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
           <SectionHeader align="left" title={`${ctx.subGrade.label} 학습 포인트`} />
           <div className="mt-8 grid sm:grid-cols-3 gap-6">
             {content.notes.map((n) => (
-              <div key={n.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={n.title} className="border-l-4 border-brand/70 pl-5 py-0.5">
                 <p className="font-bold text-navy">{n.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{n.body}</p>
               </div>
@@ -103,8 +107,8 @@ export default async function SubGradePage(props: PageProps<"/grade/[slug]/[subG
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {subjectFocus.map(({ subject, point }) => (
               <div key={subject.slug} className="rounded-2xl border border-border-subtle bg-white p-6">
-                <p className="text-xs font-semibold text-brand">{subject.name}</p>
-                <p className="mt-1 font-bold text-navy">{point.title}</p>
+                <p className="inline-flex rounded-full bg-brand-light px-2.5 py-1 text-xs font-bold text-brand">{subject.name}</p>
+                <p className="mt-2.5 font-bold text-navy">{point.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{point.body}</p>
               </div>
             ))}

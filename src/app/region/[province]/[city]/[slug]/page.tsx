@@ -165,7 +165,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 body: g.description,
               }))
             ).map((sec) => (
-              <div key={sec.title} className="border-l-4 border-brand-light pl-5 py-0.5">
+              <div key={sec.title} className="border-l-4 border-brand/70 pl-5 py-0.5">
                 <p className="font-bold text-navy">{sec.title}</p>
                 <p className="mt-2 text-sm text-text-muted leading-relaxed">{sec.body}</p>
               </div>
@@ -225,7 +225,7 @@ export default async function RegionFilterPage(props: PageProps<"/region/[provin
                 <SectionHeader align="left" title={`시험 4주 전부터의 ${ctx.subject.name} 학습 계획`} />
                 <ol className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                   {guide.examPlan.map((step) => (
-                    <li key={step.when} className="border-l-4 border-brand-light pl-5 py-0.5">
+                    <li key={step.when} className="border-l-4 border-brand/70 pl-5 py-0.5">
                       <p className="text-sm font-bold text-brand">{step.when}</p>
                       <p className="mt-2 text-sm text-text-main leading-relaxed">{step.focus}</p>
                     </li>

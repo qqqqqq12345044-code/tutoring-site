@@ -14,6 +14,7 @@ import ConsultCTA from "@/components/ConsultCTA";
 import RelatedLinks from "@/components/RelatedLinks";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import { levelStyle } from "@/lib/levelStyle";
 
 export function generateStaticParams() {
   return grades.map((g) => ({ slug: g.slug }));
@@ -41,6 +42,7 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
   if (!grade) notFound();
 
   const relatedArticles = getArticlesByGradeSlug(grade.slug);
+  const ls = levelStyle(grade.slug);
 
   return (
     <>
@@ -48,13 +50,14 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
         <div className="container-page py-8 md:py-10 flex flex-col gap-6">
           <Breadcrumb items={[{ name: "학년별 과외", href: "/grades" }, { name: `${grade.name}과외`, href: `/grade/${grade.slug}` }]} />
           <div className="max-w-2xl">
-            <h1 className="text-2xl md:text-4xl font-extrabold text-navy leading-tight">
+            <span className={`inline-flex rounded-full px-3.5 py-1.5 text-sm font-black text-white ${ls.solid}`}>{grade.label}</span>
+            <h1 className="mt-3 text-2xl md:text-4xl font-extrabold text-navy leading-tight">
               {grade.label} 1:1 맞춤 과외
             </h1>
             <p className="mt-4 text-text-main/80 leading-relaxed">{grade.description}</p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {grade.keywords.map((k) => (
-                <span key={k} className="rounded-full bg-brand-light px-3 py-1 text-xs font-medium text-brand">
+                <span key={k} className={`rounded-full px-3 py-1 text-xs font-semibold ${ls.soft} ${ls.text}`}>
                   {k}
                 </span>
               ))}
@@ -77,7 +80,7 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
               key={goal.title}
               className="flex items-start gap-3 rounded-2xl border border-border-subtle bg-white p-6"
             >
-              <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
+              <CheckCircle2 className={`w-5 h-5 shrink-0 mt-0.5 ${ls.text}`} />
               <div>
                 <p className="font-bold text-navy">{goal.title}</p>
                 <p className="mt-1.5 text-sm text-text-muted leading-relaxed">{goal.description}</p>
@@ -109,20 +112,21 @@ export default async function GradePage(props: PageProps<"/grade/[slug]">) {
             const published = isSubGradePublished(getSubGradeContent(grade.slug, sg.slug));
             const cardContent = (
               <>
-                <p className="font-extrabold text-navy">{sg.label}</p>
-                <p className="mt-1.5 text-sm text-text-main/80 leading-relaxed">{sg.note}</p>
+                <p className={`text-xl font-black ${ls.text}`}>{sg.label}</p>
+                <p className="mt-1.5 text-sm text-text-main leading-relaxed">{sg.note}</p>
+                {published && <p className={`mt-3 text-xs font-bold ${ls.text}`}>자세히 보기 →</p>}
               </>
             );
             return published ? (
               <Link
                 key={sg.slug}
                 href={`/grade/${grade.slug}/${sg.slug}`}
-                className="rounded-2xl bg-brand-light p-5 transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none"
+                className={`rounded-2xl border-l-4 ${ls.border} ${ls.soft} p-5 transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none`}
               >
                 {cardContent}
               </Link>
             ) : (
-              <div key={sg.slug} className="rounded-2xl bg-brand-light p-5">
+              <div key={sg.slug} className={`rounded-2xl border-l-4 ${ls.border} ${ls.soft} p-5`}>
                 {cardContent}
               </div>
             );

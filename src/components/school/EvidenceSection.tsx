@@ -24,7 +24,7 @@ export default function EvidenceSection({
       <SectionHeader align="left" title={title} />
       <div className="mt-8 grid sm:grid-cols-2 gap-6">
         {records.map((r) => (
-          <div key={r.id} className="border-l-4 border-brand-light pl-5 py-0.5">
+          <div key={r.id} className="border-l-4 border-brand/70 pl-5 py-0.5">
             <p className="text-xs font-bold text-brand">{EVIDENCE_LABEL[r.kind]} · {r.sourceKind}</p>
             <p className="mt-1 font-bold text-navy">{r.title}</p>
             <p className="mt-2 text-sm text-text-muted leading-relaxed">{r.summary}</p>
