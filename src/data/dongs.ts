@@ -338,8 +338,20 @@ export const dongs: AdminDong[] = [
   { slug: "hwangseong-dong", code: "4713062100", name: "황성동", citySlug: "gyeongju", legalDongs: ["황성동"] },
   { slug: "nambu-dong", code: "4729053000", name: "남부동", citySlug: "gyeongsan", legalDongs: ["삼남동","서상동","신교동","상방동","백천동"] },
   { slug: "jamsil7-dong", code: "1171072000", name: "잠실7동", citySlug: "songpa", legalDongs: ["잠실동"] },
-  { slug: "ido2-dong", code: "5011054000", name: "이도2동", citySlug: "jeju-si", legalDongs: ["이도이동","도남동"] },
   { slug: "onyang1-dong", code: "4420057000", name: "온양1동", citySlug: "asan", legalDongs: ["온천동"] },
+  // 2026-11-10 Batch 43 전국 확장 (행정동 코드: data/official/admin-dongs.json)
+{ slug: "yongsan2ga-dong", code: "1117052000", name: "용산2가동", citySlug: "yongsan", legalDongs: ["용산동2가","용산동4가"] },
+  { slug: "galhyeon2-dong", code: "1138055200", name: "갈현제2동", citySlug: "eunpyeong", legalDongs: ["갈현동"] },
+  { slug: "daebang-dong", code: "1159066000", name: "대방동", citySlug: "dongjak", legalDongs: ["대방동"] },
+  { slug: "samcheong-dong", code: "1111054000", name: "삼청동", citySlug: "jongno", legalDongs: ["팔판동","삼청동","안국동","소격동","화동","사간동","송현동"] },
+  { slug: "buam-dong", code: "1111055000", name: "부암동", citySlug: "jongno", legalDongs: ["부암동","홍지동","신영동"] },
+  { slug: "gyonam-dong", code: "1111058000", name: "교남동", citySlug: "jongno", legalDongs: ["교남동","평동","송월동","홍파동","교북동","행촌동"] },
+  { slug: "hyehwa-dong", code: "1111065000", name: "혜화동", citySlug: "jongno", legalDongs: ["와룡동","혜화동","명륜1가","명륜2가","명륜4가","명륜3가"] },
+  { slug: "hwayang-dong", code: "1121571000", name: "화양동", citySlug: "gwangjin", legalDongs: ["화양동"] },
+  { slug: "junggok4-dong", code: "1121577000", name: "중곡제4동", citySlug: "gwangjin", legalDongs: ["중곡동"] },
+  { slug: "gwangjang-dong", code: "1121581000", name: "광장동", citySlug: "gwangjin", legalDongs: ["광장동"] },
+  { slug: "jayang3-dong", code: "1121584000", name: "자양제3동", citySlug: "gwangjin", legalDongs: ["자양동"] },
+  { slug: "sinseol-dong", code: "1123051500", name: "신설동", citySlug: "dongdaemun", legalDongs: ["신설동","용두동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

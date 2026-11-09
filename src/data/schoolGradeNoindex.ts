@@ -76,5 +76,6 @@ export const schoolGradeNoindexPaths = new Set<string>([
   "/school/seongsa-middle-school/2",
   "/school/aju-middle-school/2",
   "/school/aju-middle-school/3",
-  "/school/jejujungangyeoja-high-school/1",
+  // 2026-11-10 Batch 43: 대광고 2학년 hub(과목 카드 1개, 실질 note 1개)는 AMBER라 noindex.
+  "/school/daegwang-high-school/2",
 ]);
