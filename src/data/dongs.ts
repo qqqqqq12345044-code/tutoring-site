@@ -304,6 +304,17 @@ export const dongs: AdminDong[] = [
   { slug: "idong-eup", code: "4146125600", name: "이동읍", citySlug: "yongin", legalDongs: ["이동읍", "송전리", "어비리", "묘봉리", "화산리", "시미리", "덕성리", "묵리", "천리", "서리"] },
   { slug: "osong-eup", code: "4311325000", name: "오송읍", citySlug: "cheongju", legalDongs: ["오송읍", "호계리", "상정리", "공북리", "쌍청리", "만수리", "연제리", "궁평리", "오송리", "동평리", "서평리", "봉산리", "정중리", "상봉리"] },
   { slug: "cheongryong-dong", code: "4413158000", name: "청룡동", citySlug: "cheonan", legalDongs: ["구성동", "청수동", "삼룡동", "청당동", "구룡동"] },
+  // 2026-11-09 Batch 40 전국 확장 10개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "gamcheon1-dong", code: "2638062000", name: "감천제1동", citySlug: "busan-saha", legalDongs: ["감천동"] },
+  { slug: "jung1-dong", code: "4119263000", name: "중1동", citySlug: "bucheon", legalDongs: ["중동"] },
+  { slug: "duryu12-dong", code: "2729053500", name: "두류1.2동", citySlug: "daegu-dalseo", legalDongs: ["두류동"] },
+  { slug: "oncheon2-dong", code: "3020054000", name: "온천2동", citySlug: "daejeon-yuseong", legalDongs: ["장대동", "노은동", "죽동", "궁동", "어은동", "구성동"] },
+  { slug: "jungang-dong", code: "4311152500", name: "중앙동", citySlug: "cheongju", legalDongs: ["영동", "북문로2가", "북문로3가", "수동"] },
+  { slug: "sanghyeon3-dong", code: "4146558500", name: "상현3동", citySlug: "yongin", legalDongs: ["상현동"] },
+  { slug: "hwajeong2-dong", code: "4128162200", name: "화정2동", citySlug: "goyang", legalDongs: ["화정동"] },
+  { slug: "bokdae1-dong", code: "4311374100", name: "복대1동", citySlug: "cheongju", legalDongs: ["복대동"] },
+  { slug: "gujeuk-dong", code: "3020058000", name: "구즉동", citySlug: "daejeon-yuseong", legalDongs: ["봉산동", "송강동", "금고동", "대동", "금탄동", "신동", "둔곡동", "구룡동"] },
+  { slug: "jeonmin-dong", code: "3020057000", name: "전민동", citySlug: "daejeon-yuseong", legalDongs: ["문지동", "전민동", "원촌동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
