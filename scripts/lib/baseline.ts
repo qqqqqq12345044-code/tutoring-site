@@ -127,7 +127,10 @@ export const BASELINE = {
   // 2026-11-09 Batch 39 = 전국 확장 10개 동(부산 사하 장림2동·동래 명장2동, 대구 달서 용산2동, 대전 유성 노은2동·노은3동,
   // 부천 중4동, 용인 중앙동·이동읍, 청주 오송읍, 천안 청룡동; 새 도시 없음): 학교 36곳 등록(전국 학교 route 기존)
   // + 동 hub 10 + 동×과목 50 + 학년 hub 56 + 학년×과목 232 = +348 → 15557 → 15905. sitemap 2590 → 2938(+348), noindex 12965 유지.
-  totalRoutes: 15905,
+  // 2026-11-09 Batch 40 = 전국 확장 10개 동(부산 사하 감천1동, 부천 중1동, 대구 달서 두류1.2동, 대전 유성 온천2동·구즉동·전민동,
+  // 청주 중앙동·복대1동, 용인 상현3동, 고양 화정2동; 새 도시 없음): 학교 31곳 등록(전국 학교 route 기존)
+  // + 동 hub 10 + 동×과목 49 + 학년 hub 50 + 학년×과목 210 = +319 → 15905 → 16224. sitemap 2938 → 3257(+319), noindex 12965 유지.
+  totalRoutes: 16224,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -139,7 +142,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 2938,
+  sitemapCount: 3257,
   noindexCount: 12965,
   brokenLinks: 0,
 };

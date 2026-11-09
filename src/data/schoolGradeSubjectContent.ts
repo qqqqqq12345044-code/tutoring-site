@@ -45842,7 +45842,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "진솔한 글(9월 3주)·주장하는 글(10월 4~5주)·문학 카드 뉴스(11월) 각 20% · 2차 시험 40%",
+    summary: "진솔한 글은 활동 참여와 표현에 10점씩, 주장하는 글은 토론을 거친 뒤 쓰며 논술형 반영이 44%에 이릅니다",
     intro:
       "백양중학교 1학년 국어는 수행평가 세 과제가 20%씩 모여 60%이고, 12월 3주 2차 정기시험 한 번이 40%입니다. 9월 3주 진솔한 글 쓰기부터 11월 3~4주 책 대화 카드 뉴스까지 글쓰기 과제가 학기 내내 이어집니다.",
     assessments: [
@@ -45874,7 +45874,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "감상문·그림글자·자료 활용 글·영상매체 제작 각 10% · 1차(10월 1주)·2차(12월 3주) 30%씩",
+    summary: "네 과제가 모두 두 요소를 5점씩 보고, 발표형은 영상매체 하나이며 시험 범위는 사회·문화 문학과 음운 체계입니다",
     intro:
       "백양중학교 2학년 국어는 1차·2차 정기시험이 30%씩, 10점짜리 수행평가 네 개가 합쳐 40%입니다. 수행평가는 9월 1주 감상문 쓰기에서 11월 4주 영상매체 자료 제작까지 한 달에 한 번꼴로 배치되어 있습니다.",
     assessments: [
@@ -45908,7 +45908,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "주장하는 글쓰기(9월 1~2주)·조사 보고서(10월 2~3주) 각 20% · 정기시험 2회 60%",
+    summary: "주장하는 글에는 설득 전략 세 개가 들어가야 하고, 보고서는 체크 항목 개수로 채점하며 2차엔 논술형이 없습니다",
     intro:
       "백양중학교 3학년 국어는 10월 1주 1차와 11월 3주 2차 정기시험이 30%씩, 글쓰기 수행평가 두 개가 20%씩입니다. 두 과제가 모두 1차 시험 전후인 9~10월에 몰려 있습니다.",
     assessments: [
@@ -45940,7 +45940,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "작도 과정 쓰기(9월 5주)·도형 해결 과정 쓰기(10월 5주) 각 20%, 포트폴리오 10% · 시험 1회 50%",
+    summary: "삼각형 작도 세 가지가 4점씩, 입체도형 겉넓이·부피가 12점이며 포트폴리오는 내용 이해 4점부터 봅니다",
     intro:
       "백양중학교 1학년 수학은 12월 3주 2차 정기시험 한 번이 50%이고, 작도·도형 서술 과제 두 개와 포트폴리오가 나머지 50%입니다. 정기시험 평가요소는 기본 도형부터 통계까지 걸쳐 있고, 서술 과제는 9월 5주 작도와 10월 5주 평면·입체도형으로 나뉩니다.",
     assessments: [
@@ -45972,7 +45972,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "도형의 닮음 분석하기 30%(10월 3주)·피타고라스 포트폴리오 10% · 정기시험 1·2차 30%씩",
+    summary: "닮음 과제는 여섯 요소에 5점씩 매기고, 1차 범위는 삼각형·사각형 성질, 포트폴리오는 11월 3주입니다",
     intro:
       "백양중학교 2학년 수학은 정기시험 두 번이 30%씩이고, 수행평가는 도형의 닮음 논술 30%와 피타고라스 정리 포트폴리오 10%입니다. 닮음 과제 하나가 정기시험 한 번과 같은 비중을 차지합니다.",
     assessments: [
@@ -46004,7 +46004,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 및 원의 성질 문제 풀이 30%(9월 4주)·문제 해결 포트폴리오 10% · 시험 2회 60%",
+    summary: "정삼각형 변형 넓이 비교부터 원주각 논술까지 묻고, 논술형 33% 가운데 30%가 수행에서 나옵니다",
     intro:
       "백양중학교 3학년 수학은 10월 1주와 11월 2~3주 정기시험이 30%씩, 9월 4주 삼각비·원의 성질 논술 과제가 30%, 포트폴리오가 10%입니다. 논술 과제가 1차 시험보다 앞선 9월 4주에 잡혀 있고, 두 평가 모두 삼각비와 원의 성질을 다룹니다.",
     assessments: [
@@ -46036,7 +46036,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "용의자 인터뷰하기(9월 3주)·환경 보호 글쓰기·원서 읽고 소개하기 각 20% · 2차 시험 40%",
+    summary: "인터뷰는 질문 작성 8점이 중심이고, 환경 글은 발표로 이어지며 원서 읽기는 독서 일지가 8점입니다",
     intro:
       "백양중학교 1학년 영어는 수행평가 세 개가 20%씩 60%로, 12월 3주 2차 정기시험(40%)보다 비중이 큽니다. 원서 읽기 과제는 9월 2주부터 11월 4주까지 학기 내내 이어지고, 인터뷰와 글쓰기는 각각 9월과 10월 말에 한 번씩 치릅니다.",
     assessments: [
@@ -46068,7 +46068,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "여행지 소개 글 쓰기 20%(10월 4~5주)·문법 활용 문장 쓰기 10% · 정기시험 35%씩 두 번",
+    summary: "여행지 글은 세부 내용이 9점, 문장 쓰기는 조건 4개를 채우면 5점이며 논술형 반영은 33.5%입니다",
     intro:
       "백양중학교 2학년 영어는 정기시험 비중이 70%로 이 학교 세 학년 영어 가운데 가장 크고, 수행평가는 쓰기 과제 두 개 30%입니다. 1차는 선택형 100점, 2차는 선택형 90점·논술형 10점으로 형식이 다릅니다.",
     assessments: [
@@ -46100,7 +46100,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "문장구조 글쓰기(9월 2주)·어휘 및 문장 포트폴리오 각 20% · 9월 5주·11월 3주 시험 30%씩",
+    summary: "문장 배열 5점에 문법 사항 2개 이상 5점, 포트폴리오는 Lesson 5~8 전체를 담고 1차 시험이 9월 5주입니다",
     intro:
       "백양중학교 3학년 영어는 9월 5주 1차와 11월 3주 2차 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 문장구조 글쓰기가 9월 2주로 가장 먼저 오고, 어휘 포트폴리오는 9월 1주부터 10월 4주까지 쌓입니다.",
     assessments: [
@@ -46132,7 +46132,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "상태 변화 설명(9월 2주)·기체 압력과 부피 탐구(10월 1주) 각 20%, 산출물 10% · 시험 50%",
+    summary: "상태 변화 과제는 네 요소를 5점씩, 보일 법칙은 측정·그래프가 8점이며 논술형 반영은 35%입니다",
     intro:
       "백양중학교 1학년 과학은 12월 3주 2차 정기시험 한 번이 50%이고, 상태 변화·기체 성질 수행평가 두 개(각 20%)와 탐구 산출물(10%)이 50%입니다. 기체 과제는 실험과 논술을 함께 평가합니다.",
     assessments: [
@@ -46164,7 +46164,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "영양소와 소화계 설명(9월 3주)·전류·전압·저항 탐구(11월 2주) 각 20% · 시험 30%씩",
+    summary: "영양소 검출 설계 10점과 소화 과정 10점, 전기 회로 실험엔 논술형 10점이 있고 논술형 합계는 33%입니다",
     intro:
       "백양중학교 2학년 과학은 10월 1주·12월 3주 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 소화계 과제는 1차 시험 전, 전기 회로 실험은 2차 시험 전에 놓여 있습니다.",
     assessments: [
@@ -46196,7 +46196,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "에너지 전환 탐구·세포 분열 탐구·탐구 산출물 각 20% · 10월 1주 1차 시험 한 번 40%",
+    summary: "손 발전기를 만드는 에너지 과제, 염색체 모형으로 두 분열을 비교하는 과제에 네 요소 산출물이 더해집니다",
     intro:
       "백양중학교 3학년 과학은 정기시험이 10월 1주 1차 한 번(40%)뿐이고, 수행평가 세 개가 20%씩 60%입니다. 정기시험 평가요소에 없는 생식과 유전 단원은 11월 1주 세포 분열 과제로 평가됩니다.",
     assessments: [
@@ -46228,7 +46228,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "민주주의 이념 글쓰기 40%(10월 2~4주)·사회개념 요약하기 10% · 12월 시험 50%",
+    summary: "사형제도를 주제로 한 40점 글쓰기가 중심이고, 요약 포트폴리오 10점은 두 요소로 나뉩니다",
     intro:
       "백양중학교 1학년 사회는 12월 3주 2차 정기시험이 50%이고, 민주주의 이념 글쓰기 한 과제가 40%를 차지합니다. 나머지 10%는 9월 2주부터 11월 3주까지 쌓는 사회개념 요약 포트폴리오입니다.",
     assessments: [
@@ -46259,7 +46259,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "노래 가사로 중국 왕조 소개(9월 4주)·산업혁명 써클맵(11월 4주) 각 20%, 포트폴리오 10%",
+    summary: "송·원·명·청 사실 6개 이상이면 12점, 써클맵은 배경과 결과를 함께 담고 포트폴리오가 10점입니다",
     intro:
       "백양중학교 2학년 역사는 12월 3주 2차 정기시험이 50%, 수행평가 세 개가 50%입니다. 9월 4주 노래 가사 과제와 11월 4주 써클맵 과제가 20%씩이고, 세계사 포트폴리오 10%는 9월 1주부터 12월 1주까지 이어집니다.",
     assessments: [
@@ -46291,7 +46291,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "경제 현상 분석하기 40%(9월 2~3주)·사회 개념 요약하기 10% · 11월 2~3주 시험 50%",
+    summary: "공정무역 필요성을 다섯 요소로 따지고, 요약 과제는 경제·인구·세계 단원, 시험은 인구·도시·세계화입니다",
     intro:
       "백양중학교 3학년 사회는 11월 2~3주 2차 정기시험 50%와 수행평가 50%로 나뉩니다. 수행 비중의 대부분인 경제 현상 분석하기(40%)가 학기 초 9월 2~3주에 치러집니다.",
     assessments: [
@@ -46459,7 +46459,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["문학"],
-    summary: "현대 소설 비평문·매체 자료 제작 25%(10월 4주) · 작품 해석·감상 20% · 선택형 시험 각 27.5%",
+    summary: "스스로 고른 한국 현대 소설로 비평문을 쓰고, 해석·감상 영역은 탐구 문제와 글쓰기를 이어 갑니다",
     intro:
       "부명고등학교 2학년 문학은 선택형 정기시험 두 번이 각각 27.5%, 수행평가가 45%로 1학년 공통국어2보다 수행 비중이 큽니다. 수행평가는 25%짜리 비평문·매체 자료 제작과 20%짜리 작품 해석·감상 두 영역이고, 둘 다 논술과 포트폴리오로 평가됩니다.",
     assessments: [
@@ -46491,7 +46491,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어Ⅱ"],
-    summary: "온라인 청원서 영작 20%(9월 2주) · 설명 문장 완성 20%(10월 5주) · 시험마다 논술형 10점",
+    summary: "사회 문제 하나를 골라 해결을 촉구하는 청원서를 쓰고, 10월 지문은 해양 인물 전기문과 구독경제입니다",
     intro:
       "부명고등학교 2학년 영어Ⅱ는 정기시험 두 번이 선택형 90점과 논술형 10점으로 구성되어 회차마다 27%와 3%가 반영되고, 수행평가는 20%씩 두 과제입니다. 9월 2주 청원서 영작이 먼저, 1차 시험 뒤 10월 5주에 문장 완성 과제가 이어지는 순서입니다.",
     assessments: [
@@ -46521,7 +46521,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "독서 활동 20%(8~9월) · 품사·단어 짜임 분석 15%(10월 4주) · 주장하는 글 15%(11월 2주)",
+    summary: "독서는 요약 10점과 정서 글쓰기 10점, 문법은 품사와 새말 형성 원리이며 주장하는 글은 출처 표기까지 채점합니다",
     intro:
       "부명중학교 1학년 국어는 1차 정기시험 없이 12월 1주 2차 시험 한 번이 50%이고, 수행평가 네 영역이 나머지 50%입니다. 독서 활동 두 영역이 8월 말~9월에, 문법 분석과 주장하는 글이 10월 말~11월에 나뉘어 있어 시험 전에 수행평가 네 번이 모두 끝납니다.",
     assessments: [
@@ -46555,7 +46555,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각형 작도 설명 15%(9월 2주) · 평면도형 문제 해결 20%(10월 5주) · 정다면체 서술 15%(11월)",
+    summary: "작도는 세 가지 조건을 하나씩 설명해야 하고, 시험이 끝난 뒤 두 과제가 학기 후반을 채웁니다",
     intro:
       "부명중학교 1학년 수학은 정기시험이 10월 1주 1차 한 번(50%)이고 2차 정기시험은 반영되지 않습니다. 시험 이후 10월 5주와 11월 2주에도 수행평가 두 과제(합계 35%)가 남아 있어, 시험이 끝난 뒤의 일정까지 함께 챙겨야 합니다.",
     assessments: [
@@ -46584,7 +46584,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "온도 변화 측정(8월 4주)·부력 측정(9월 4주)·태양계 관광 계획서(10월 4주) 각 20%",
+    summary: "온도와 부력 실험은 보고서 작성이 중심이고, 태양계 계획서는 행성을 소개하고 분류합니다",
     intro:
       "부명중학교 1학년 과학은 수행평가가 60%로 정기시험(12월 1주 2차, 40%)보다 비중이 크고, 수행평가 세 과제가 20%씩 같은 배점입니다. 열, 힘, 태양계 단원마다 한 과제씩 8월·9월·10월에 하나씩 배치되어 있습니다.",
     assessments: [
@@ -46613,7 +46613,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "훈민정음 문자 체계 탐구 20%(9월 3주) · 작품 상황 탐구 15%(8월) · 독서신문 15%(10월)",
+    summary: "훈민정음 제자 원리를 탐구하는 과제가 가장 크고, 8월에는 작품 속 사회·문화적 상황을 봅니다",
     intro:
       "부명중학교 2학년 국어는 12월 1주 2차 정기시험이 50%이고, 수행평가 세 과제 50%가 모두 논술형입니다. 논술형 반영 비율이 정기시험 5%를 더해 55%에 이르러, 시험보다 수행평가 글쓰기 비중이 더 큰 구조입니다.",
     assessments: [
@@ -46642,7 +46642,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "사회 생활 가이드북 26%·지역 균형 제안 24% · 역사 종교 보고서·선언 의미·산업혁명 평가",
+    summary: "사회는 지형·기후 가이드북과 지역 불균형 논술, 역사는 수행 비중이 70%이며 시험 논술형 배점은 과목마다 다릅니다",
     intro:
       "부명중학교 2학년 사회 영역은 사회가 정기시험 50%·수행평가 50%, 역사가 정기시험 30%·수행평가 70%로 두 과목의 비중이 다릅니다. 두 과목 모두 정기시험은 12월 1주 2차 한 번이며, 역사는 9월 4주부터 10월 5주 사이에 수행평가 세 개가 이어집니다.",
     assessments: [
@@ -46679,7 +46679,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "외심·내심 찾기 10%(9월 3주) · 사각형 성질 설명 20%(10월 4주) · 그림자 높이 구하기 20%(11월)",
+    summary: "외심·내심은 삼각형 종류별로 찾고, 사각형과 닮음 단원에는 논술형 과제가 두 개 놓입니다",
     intro:
       "부명중학교 2학년 수학은 10월 1주 1차 정기시험 한 번이 50%이고 2차 정기시험은 반영되지 않습니다. 수행평가 세 과제 중 배점이 큰 두 논술형 과제가 시험 뒤 10월 4주와 11월 2주에 있습니다.",
     assessments: [
@@ -46708,7 +46708,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "스마트 팜 글쓰기 20% · 별까지의 거리 탐구 15%(8월 4주) · 전류·전압·저항 탐구 15%(11월)",
+    summary: "식물 단원은 정리 10%와 글쓰기 20%로 나뉘고, 별 탐구는 연주 시차와 별의 색을 다룹니다",
     intro:
       "부명중학교 2학년 과학은 12월 1주 2차 정기시험이 40%이고, 수행평가 네 과제가 60%를 차지합니다. 식물, 별, 전기 단원에 걸쳐 10~20%짜리 과제가 흩어져 있어 과제마다 단원을 짝지어 두는 것이 필요합니다.",
     assessments: [
@@ -46738,7 +46738,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "건강한 생활 글쓰기 20%(9월 4주) · 실용문 쓰기 20%(10월 5주) · 주제별 학습 결과물 10%(11월)",
+    summary: "두 글쓰기는 조건 맞추기가 핵심이고, 주제별 결과물 10%는 활동지를 완성하는 방식입니다",
     intro:
       "부명중학교 2학년 영어는 12월 1주 2차 정기시험이 50%, 수행평가 세 과제가 50%입니다. 논술형 글쓰기 두 과제가 9월 4주와 10월 5주에 한 달 간격으로 있고, 11월 3주 주제별 학습 결과물이 마지막입니다.",
     assessments: [
@@ -46767,7 +46767,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "시 비평 신문 만들기 30%(9월 2주) · 보고서 쓰기 20%(9월 4주~10월 1주) · 시험 11월 3주",
+    summary: "시 비평 신문은 창작 배경과 오늘의 삶을 잇고, 보고서는 형식·내용·표현 세 기준으로 봅니다",
     intro:
       "부명중학교 3학년 국어는 11월 3주 2차 정기시험 한 번이 50%이고, 수행평가는 논술형 두 과제 50%입니다. 30%짜리 시 비평 신문이 9월 2주에, 보고서 쓰기가 9월 4주~10월 1주에 있어 수행평가가 학기 초반에 끝나는 일정입니다.",
     assessments: [
@@ -46795,7 +46795,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "왕건·광종 가상인터뷰(8월 4주)·고려 뉴스 기사(9월 2주)·조선 관부 구인광고지(10월 4주) 각 20%",
+    summary: "가상인터뷰에는 훈요 10조와 왕권 강화책이 들어가고, 뉴스 기사는 사건 선정과 논리 구조를 봅니다",
     intro:
       "부명중학교 3학년 역사는 11월 3주 2차 정기시험이 40%, 수행평가 세 과제가 20%씩 60%입니다. 고려 건국부터 조선의 통치 제도까지 시대 순서대로 8월 4주, 9월 2주, 10월 4주에 한 과제씩 배치되어 있습니다.",
     assessments: [
@@ -46824,7 +46824,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 문제 해결 20%(9월 3주) · 통계 문제 해결 20%·학습 주제 해결 10%(11월 1주)",
+    summary: "삼각비 과제는 보조선과 넓이를 묻고, 11월 1주에는 통계와 종합 주제가 함께 몰립니다",
     intro:
       "부명중학교 3학년 수학은 11월 3주 2차 정기시험이 50%이고, 수행평가 세 과제가 50%입니다. 9월 3주 삼각비 과제 뒤 11월 1주에 통계와 학습 주제 두 과제가 같은 주에 잡혀 있어, 시험 2주 전이 수행평가가 몰리는 시기입니다.",
     assessments: [
@@ -46853,7 +46853,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "세포 분열 실험·논술 20%(9월 3주) · 별 탐구 논술 20%(10월 3주) · 정기시험 2회 각 30%",
+    summary: "세포 분열은 실험과 논술을 함께 치르고, 별 탐구는 거리와 표면 온도를 다룹니다",
     intro:
       "부명중학교 3학년 과학은 1·2학년과 달리 정기시험을 10월 1주와 11월 3주 두 번 보며 각각 30%, 수행평가는 두 과제 40%입니다. 9월 3주 세포 분열 과제가 1차 시험 전, 10월 3주 별 탐구가 두 시험 사이에 있습니다.",
     assessments: [
@@ -46883,7 +46883,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "한국문화 소개 글쓰기 20%(9월 2~3주) · 실용문 쓰기 20%(10월 3~4주) · 러닝 로그 10%",
+    summary: "한국문화 글쓰기는 단계별 학습지부터 시작하고, 실용문은 묘사와 경험·계획 글로 씁니다",
     intro:
       "부명중학교 3학년 영어는 11월 3주 2차 정기시험이 50%이고, 수행평가 세 과제가 50%입니다. 논술형 두 과제가 9월과 10월에 하나씩, 주제 기반 러닝 로그가 10월 4주에 있어 수행평가가 시험 3주 전까지 모두 끝납니다.",
     assessments: [
@@ -47123,7 +47123,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "한 학기 한 권 읽기 20%(8~11월, 7회) · 논증하는 글 쓰기 20%(9월, 2회) · 1·2차 30%씩",
+    summary: "한 권 읽기는 네 항목을 5점씩 매기고, 논증하는 글은 주장·논거·방법·조직을 따지며 정기시험은 선택형으로만 냅니다",
     intro:
       "대전둔곡중학교 2학년 국어는 10월 1차 시험과 12월 2차 시험이 30%씩, 수행평가 두 개가 20%씩입니다. 한 학기 한 권 읽기는 8월부터 11월까지 7회에 걸쳐 포트폴리오로 쌓이고, 논증하는 글 쓰기는 9월에 2회 평가합니다.",
     assessments: [
@@ -47155,7 +47155,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "문화여행상품 기획서(9월)·정책제안서(11월) 서·논술 30%씩 · 12월 2차 시험 40%",
+    summary: "여행사 직원이 되어 쓰는 기획서로 시작해 기사 요약에서 출발하는 정책 제안으로 이어지고, 인권 단원은 시험 뒤에 배웁니다",
     intro:
       "대전둔곡중학교 1학년 사회는 정기시험이 12월 2차 시험 한 번(40%, 선택형)이고, 서·논술형 수행평가 두 개가 30%씩입니다. 9월에는 문화여행상품 기획서, 11월에는 정책제안서를 씁니다.",
     assessments: [
@@ -47186,7 +47186,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "청원문 작성하기(9월, 산업 혁명기)·역사마인드맵(11월, 제국주의) 30%씩 · 12월 시험 40%",
+    summary: "산업 혁명 시대 사람이 되어 청원을 쓰고, 제국주의의 의미·원인·사례를 한 장의 맵으로 묶는 역사 영역입니다",
     intro:
       "대전둔곡중학교 2학년 사회 영역은 역사 한 과목으로, 12월 2차 시험 한 번이 40%이고 서·논술형 수행평가 두 개가 30%씩입니다. 두 과제 모두 유럽의 산업화와 제국주의 침략을 다루는 [9역04-02]로 평가합니다.",
     assessments: [
@@ -47217,7 +47217,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "사회 체험계획서(9월)·사회문제 마인드맵(11월), 역사 청원문(10월)·역사마인드맵(11월)",
+    summary: "사회는 매력적인 세계 도시 체험 계획과 기후위기 맵을, 역사는 조선 시대 청원과 정치 변동 맵을 다룹니다",
     intro:
       "대전둔곡중학교 3학년은 사회와 역사를 함께 배우며, 두 과목 모두 10월 1차 시험 한 번이 40%이고 서·논술형 수행평가 두 개가 30%씩입니다. 11월에는 사회와 역사 모두 마인드맵 과제가 있어 같은 달에 두 개가 겹칩니다.",
     assessments: [
@@ -47251,7 +47251,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "그래프와 도형 탐구하기 서·논술 30%(9월, 6개 항목 5점씩) · 1·2차 시험 35%씩",
+    summary: "여섯 항목을 5점씩 매기는 단일 과제이고, 작도 문항은 세 가지 조건으로 나눠 서술하게 됩니다",
     intro:
       "대전둔곡중학교 1학년 수학은 10월 1차 시험과 12월 2차 시험이 35%씩이고, 수행평가는 9월 ‘그래프와 도형 탐구하기’ 하나로 30%입니다. 정기시험은 선택형으로만 출제되어 풀이를 서술하는 평가는 이 과제에 모여 있습니다.",
     assessments: [
@@ -47282,7 +47282,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "도형 탐구하기 서·논술 30%(11월, 이등변삼각형~사각형 관계 6항목) · 1·2차 35%씩",
+    summary: "정당화 두 항목에 조건 서술 네 항목이 붙고, 합동·닮음은 3쌍을 모두 찾아야 5점을 받습니다",
     intro:
       "대전둔곡중학교 2학년 수학은 1차(10월)·2차(12월) 시험이 35%씩, 11월 ‘도형 탐구하기’ 서·논술형 수행평가가 30%입니다. 수행평가가 두 시험 사이에 놓여 있습니다.",
     assessments: [
@@ -47313,7 +47313,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 탐구하기(9월)·원의 성질 탐구하기(10월) 서·논술 30%씩 · 10월 1차 시험 40%",
+    summary: "삼각비 과제 배점은 6·8·8·8점이고, 원주각은 중심 위치에 따라 세 경우로 나눠 따집니다",
     intro:
       "대전둔곡중학교 3학년 수학은 10월 1차 시험 한 번이 40%이고, 서·논술형 수행평가 두 개가 30%씩 60%입니다. 9월 삼각비, 10월 원의 성질 과제가 연달아 있어 평가가 9~10월에 모입니다.",
     assessments: [
@@ -47344,7 +47344,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "기체의 압력과 부피 관계 실험하기(9월)·과학 탐구 보고서(11월) 30%씩 · 12월 시험 40%",
+    summary: "실험은 설계·수행·결론에 8점씩, 보고서는 세 단원에 8점씩 배정되며 정기고사는 한 번뿐입니다",
     intro:
       "대전둔곡중학교 1학년 과학은 12월 2차 시험 한 번이 40%이고, 9월 탐구실험과 11월 서·논술형 보고서가 30%씩입니다. 수행평가 비중이 60%로 정기시험보다 큽니다.",
     assessments: [
@@ -47375,7 +47375,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "음식물에 들어있는 영양소 검출하기(9월 실험)·과학 탐구 보고서(11월) 30%씩",
+    summary: "영양소 검출은 소화계 성취기준과 이어지고, 보고서 문항은 네 단원에서 6점씩 출제됩니다",
     intro:
       "대전둔곡중학교 2학년 과학은 12월 2차 시험이 40%, 수행평가 두 개가 30%씩입니다. 9월 영양소 검출 실험은 설계·수행·결론·발표를, 11월 보고서는 네 단원 서술 문항을 평가합니다.",
     assessments: [
@@ -47406,7 +47406,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "가계도 작성 및 해석하기(9월)·과학 탐구 보고서(11월) 30%씩 · 10월 1차 시험 40%",
+    summary: "자신의 형질을 바탕으로 가계도를 그리고, 보고서는 제출이나 발표 가운데 하나로 냅니다",
     intro:
       "대전둔곡중학교 3학년 과학은 10월 1차 시험 한 번이 40%이고, 9월 가계도 과제와 11월 탐구 보고서가 30%씩입니다. 시험이 10월에 끝나 11월 보고서가 마지막 평가입니다.",
     assessments: [
@@ -47437,7 +47437,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "테마 여행 안내서 제작하기(10월, 모둠 제작·개별 채점)·인터뷰하기(11월) 20%씩",
+    summary: "안내서는 초안 2·과제 8·언어 8·성찰 2점이고, 인터뷰는 쓰기와 말하기를 10점씩 나눠 봅니다",
     intro:
       "대전둔곡중학교 1학년 영어는 10월 1차 시험과 12월 2차 시험이 30%씩, 수행평가 두 개가 20%씩입니다. 10월 테마 여행 안내서는 모둠이 함께 만들지만 개인 초안지와 본인이 쓴 글로 100% 개별 평가합니다.",
     assessments: [
@@ -47465,7 +47465,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "도서 추천 글쓰기(9월, 관계대명사·원급 비교)·인터뷰하기(11월) 20%씩 · 시험 30%씩",
+    summary: "추천 글에 들어갈 필수 내용이 다섯 가지이며, 인터뷰는 질문과 대답을 글로 먼저 적어 둡니다",
     intro:
       "대전둔곡중학교 2학년 영어는 1차(10월)·2차(12월) 시험이 30%씩, 9월 도서 추천 글쓰기와 11월 인터뷰하기가 20%씩입니다. 글쓰기가 1차 시험보다 먼저 시행됩니다.",
     assessments: [
@@ -47493,7 +47493,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "단어의 짜임과 형성 설명하기(10월)·주장하는 글 쓰기(11월) 서술 20%씩 · 시험 9월·12월",
+    summary: "새말 형성 단원이 9월~10월에 걸치고, 11월 글쓰기는 [9국03-03] 하나로 평가하며 12월엔 존중하며 말하기가 남습니다",
     intro:
       "대전두리중학교 1학년 국어는 9월 중간고사와 12월 기말고사가 각 30%이고, 10월 ‘단어의 짜임과 형성 설명하기’와 11월 ‘주장하는 글 쓰기’가 서술·논술 수행평가로 20%씩 반영됩니다. 정기시험은 5지 선다형이어서 서술로 답하는 평가는 두 수행 과제에 모여 있습니다.",
     assessments: [
@@ -47525,7 +47525,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "글과 자료 평가하기 한 과제 30%(9월, 서술·논술) · 중간·기말 35%씩으로 시험 70%",
+    summary: "복합양식 자료의 타당성·신뢰성을 따지는 과제 하나이고, 11~12월에는 갈등 조정 대화와 광고 분석을 배웁니다",
     intro:
       "대전두리중학교 2학년 국어는 평가 원칙에서 정기시험 70%·수행평가 30%로 정해 1·3학년(60%·40%)보다 시험 비중이 크고, 9월 중간고사와 12월 기말고사가 35%씩입니다. 수행평가는 9월 ‘글과 자료 평가하기’ 하나(30점 만점)입니다.",
     assessments: [
@@ -47556,7 +47556,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "다양한 관점으로 작품 해석하기(9월)·문장 성분 파악하고 문장 확대하기(11월) 20%씩",
+    summary: "작품 해석 과제는 문학 두 단원을 마친 뒤 치르고, 문장의 짜임 단원은 10월에 시작합니다",
     intro:
       "대전두리중학교 3학년 국어는 9월 중간고사와 11월 기말고사가 각 30%이고, 서술·논술 수행평가 두 개가 20%씩입니다. 9월 ‘다양한 관점으로 작품 해석하기’와 11월 ‘문장 성분 파악하고 문장 확대하기’가 각각 시험과 같은 달에 잡혀 있습니다.",
     assessments: [
@@ -47588,7 +47588,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "민주주의 탐구(9월)·다문화 주제 서술(10월)·다문화 논제 토론(11월) 20%씩 · 기말 40%",
+    summary: "다문화 과제 두 개는 같은 성취기준의 가·나로 나뉘고, 민주주의 탐구는 8월 단원 성취기준을 씁니다",
     intro:
       "대전두리중학교 1학년 사회는 정기시험이 12월 기말고사 한 번(40%, 5지 선다형)이고, 수행평가 세 개가 20%씩 60%를 차지합니다. 9월부터 11월까지 매달 과제가 하나씩 이어지며, 마지막 과제는 토론·토의 방식입니다.",
     assessments: [
@@ -47620,7 +47620,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "사회 지형 탐구·수도권 공간구조 분석 30%씩, 역사 시민혁명·산업혁명 탐구 9월 20%씩",
+    summary: "역사 탐구 과제 두 개가 9월 초·말에 몰리고, 사회 과제는 지형과 수도권을 다루며 시험 횟수는 과목마다 다릅니다",
     intro:
       "대전두리중학교 2학년은 사회와 역사를 함께 배웁니다. 사회는 12월 기말고사 한 번이 40%이고 서술·논술 과제 두 개가 30%씩이며, 역사는 중간·기말고사가 30%씩에 9월 초·말 탐구 과제 두 개가 20%씩입니다.",
     assessments: [
@@ -47655,7 +47655,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "역사 사건 서술(9월)·역사 주제 토론(10월) 30%씩 · 11월 기말고사 한 번 40%",
+    summary: "두 과제 모두 왜란·호란 성취기준에서 나오고, 기말고사 성취기준은 15개입니다",
     intro:
       "대전두리중학교 3학년 사회 영역은 역사 한 과목으로, 11월 기말고사 한 번이 40%이고 수행평가 두 개가 30%씩 60%입니다. 9월에는 서술·논술, 10월에는 토론·토의 방식으로 평가합니다.",
     assessments: [
@@ -47686,7 +47686,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "기본도형 탐구하기(10월)·평면도형과 입체도형의 성질 탐구하기(11월) 서술 20%씩",
+    summary: "10월 과제는 작도와 합동까지, 11월 과제는 다각형부터 입체도형까지이며 통계 단원은 11월~12월에 배웁니다",
     intro:
       "대전두리중학교 1학년 수학은 9월 중간고사와 12월 기말고사가 30%씩, 도형 단원의 서술·논술 수행평가 두 개가 20%씩입니다. 수행평가 성취기준이 모두 도형 영역([9수03-01]~[9수03-08])이어서 좌표평면과 그래프, 통계 단원은 정기시험으로 평가됩니다.",
     assessments: [
@@ -47718,7 +47718,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "도형의 성질 탐구하기(9월)·도형의 닮음 탐구하기(12월) 20%씩 · 시험과 같은 달",
+    summary: "삼각형·사각형의 정당화로 시작해 닮음비부터 피타고라스 정리까지 이어지며, 경우의 수와 확률은 시험으로 봅니다",
     intro:
       "대전두리중학교 2학년 수학은 중간고사(9월)와 기말고사(12월)가 30%씩이고, 서술·논술 수행평가 두 개가 20%씩입니다. 수행평가가 각각 시험과 같은 9월과 12월에 잡혀 있어 시험 준비 기간과 과제 기간이 겹칩니다.",
     assessments: [
@@ -47750,7 +47750,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 탐구하기 8월·원의 성질 탐구하기 10월 서술 20%씩 · 중간 9월, 기말 11월",
+    summary: "8월 진도가 곧 삼각비 범위이고, 원의 성질은 9월~10월 진도, 통계는 기말고사 쪽에서 다룹니다",
     intro:
       "대전두리중학교 3학년 수학은 중간고사(9월)와 기말고사(11월)가 30%씩이고, 서술·논술 수행평가 두 개가 20%씩입니다. 첫 수행평가인 삼각비 탐구하기가 개학 직후 8월에 잡혀 있습니다.",
     assessments: [
@@ -47782,7 +47782,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "용수철의 탄성력 측정하기(9월, 실험)·기체의 압력과 부피 관계 탐구(10월) 20%씩",
+    summary: "탄성력 측정은 ‘여러 가지 힘’ 단원, 기체 과제는 실험 결과를 입자 모형으로 풀며 학기 말은 태양계입니다",
     intro:
       "대전두리중학교 1학년 과학은 중간고사(9월)와 기말고사(12월)가 30%씩, 수행평가 두 개가 20%씩입니다. 9월 용수철의 탄성력 측정하기는 실험·실습과 서술·논술을 함께 보고, 10월 기체 과제는 서술·논술로 평가합니다.",
     assessments: [
@@ -47814,7 +47814,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "별까지의 거리 비교하기(9월)·호흡운동의 원리를 나타내는 모형 만들기(10월) 20%씩",
+    summary: "별 단원이 8월~9월, 호흡 모형은 동물과 에너지 단원에 붙고 전기와 자기는 10월~12월입니다",
     intro:
       "대전두리중학교 2학년 과학은 중간고사(9월)와 기말고사(12월)가 30%씩이고, 수행평가 두 개가 20%씩입니다. 9월에는 연주 시차와 등급으로 별까지의 거리를 비교하는 서술·논술, 10월에는 호흡운동 모형을 만드는 실험·실습이 이어집니다.",
     assessments: [
@@ -47846,7 +47846,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "연주 시차를 이용한 별까지의 거리 구하기(9월)·멘델의 유전 원리 탐구하기(11월) 20%씩",
+    summary: "별까지의 거리를 실험으로 구하고, 유전은 10월에 배운 뒤 11월에 평가하며 에너지 전환 단원이 이어집니다",
     intro:
       "대전두리중학교 3학년 과학은 중간고사(9월)와 기말고사(11월)가 30%씩, 수행평가 두 개가 20%씩입니다. 9월 별까지의 거리 과제는 실험·실습과 서술·논술을 함께 보고, 11월 멘델 과제는 서술·논술로 평가합니다.",
     assessments: [
@@ -47878,7 +47878,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "다른 나라의 음식 소개하는 글쓰기 30%(9월) · 미술 작품 소개하기 구술 10%(10월)",
+    summary: "음식 글쓰기는 Lesson 6과 맞물리고, 미술 작품 소개는 구술로 10점을 봅니다",
     intro:
       "대전두리중학교 1학년 영어는 중간고사(9월)와 기말고사(12월)가 30%씩이고, 수행평가는 9월 글쓰기 30%와 10월 말하기 10%로 비중이 다릅니다. 쓰기 과제 하나가 정기시험 한 번과 같은 30%를 차지합니다.",
     assessments: [
@@ -47910,7 +47910,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "올해의 내 단어를 설명하는 글쓰기 30%(10월) · 우리나라 축제 말하기 10%(11월)",
+    summary: "‘Wonders in Words’ 단원에서 단어 글을 쓰고, 축제 말하기는 Lesson 8과 같은 달에 치릅니다",
     intro:
       "대전두리중학교 2학년 영어는 중간고사(9월)와 기말고사(12월)가 30%씩이고, 10월 글쓰기 30%와 11월 말하기 10%가 수행평가입니다. 두 수행평가 모두 중간고사가 끝난 뒤에 이어집니다.",
     assessments: [
@@ -47942,7 +47942,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "좌우명 소개하는 글쓰기 30%(10월) · 제품 소개하기 구술 10%(9월) · 중간고사 9월",
+    summary: "제품 소개는 광고문 성취기준에 기대고, 좌우명 글은 ‘Words of Wisdom’과 연결되며 기말 시기는 비어 있습니다",
     intro:
       "대전두리중학교 3학년 영어는 중간·기말고사가 30%씩이고, 수행평가는 9월 제품 소개하기(구술·발표 10%)와 10월 좌우명 소개하는 글쓰기(서술·논술 30%)입니다. 1·2학년과 달리 말하기 과제가 글쓰기보다 먼저 옵니다.",
     assessments: [
@@ -47974,7 +47974,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "주장하는 글쓰기 30%(9~10월, 서·논술 30점) · 중간·기말고사 선택형 100점 각 35%",
+    summary: "30점 가운데 20점이 글의 짜임과 표현에 걸려 있고, 근거 자료는 출처까지 밝혀야 만점입니다",
     intro:
       "대전어은중학교 1학년 국어는 중간고사(9.30.~10.1.)와 기말고사(12.14.~16.)가 선택형으로 각 35%이고, 수행평가는 9~10월의 주장하는 글쓰기 한 과제가 30%를 모두 차지합니다. 수행평가가 한 번뿐이어서 이 글쓰기의 채점 요소를 미리 알아 두는 것이 학기 준비의 중심이 됩니다.",
     assessments: [
@@ -48001,7 +48001,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "복합양식 자료를 활용하여 글쓰기 30%(10월) · 정기시험 두 번은 선택형으로 35%씩",
+    summary: "자료 선정 10점은 다섯 항목을 점검하고, 표현하기는 호응 오류 횟수를 기준으로 감점합니다",
     intro:
       "대전어은중학교 2학년 국어의 수행평가는 10월에 치르는 ‘복합양식 자료를 활용하여 글쓰기’ 한 과제로 30%입니다. 나머지 70%는 9.30.~10.1. 중간고사와 12.14.~16. 기말고사가 선택형 100점으로 나눠 가집니다.",
     assessments: [
@@ -48028,7 +48028,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "토론 대본 쓰기 20%(9월) · 나만의 국어 공책 10%(8~10월 수시) · 기말고사는 11.16.~18.",
+    summary: "토론 대본은 쟁점 반박이 6점이고, 국어 공책은 쓰기 과정 완료 횟수에 따라 감점합니다",
     intro:
       "대전어은중학교 3학년 국어는 중간고사와 기말고사가 각 35%이고, 수행평가 30%가 토론 대본 쓰기 20%와 나만의 국어 공책 만들기 10%로 나뉩니다. 기말고사가 11.16.~18.로 1·2학년보다 한 달 가까이 이르다는 점이 일정상 가장 큰 차이입니다.",
     assessments: [
@@ -48056,7 +48056,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "수리논술 문제해결하기 30%(11월) — 정비례·반비례와 다각형·부채꼴 8개 요소",
+    summary: "그래프 그리기 5점, 식 세우기 3점에 도형 쪽 14점이 더해진 정비례·반비례와 다각형·부채꼴 과제입니다",
     intro:
       "대전어은중학교 1학년 수학은 11월의 수리논술 문제해결하기 30%가 유일한 수행평가이고, 중간·기말고사는 선택형으로 35%씩입니다. 수행평가는 좌표와 그래프, 다각형, 부채꼴 성취기준을 한 번에 묻는 서·논술형 30점입니다.",
     assessments: [
@@ -48083,7 +48083,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "외심·내심과 닮음 서술 30%(11월 수리논술) · 무게중심 8점이 단일 요소 중 가장 큼",
+    summary: "외심 6점은 세 종류 삼각형에서 묻고, 닮음 단원이 20점을 차지합니다",
     intro:
       "대전어은중학교 2학년 수학은 중간고사와 기말고사가 선택형으로 35%씩, 11월 수리논술 문제해결하기가 30%입니다. 수리논술은 삼각형의 외심·내심, 닮음비, 닮음 조건, 무게중심을 서술하는 다섯 요소로 채점됩니다.",
     assessments: [
@@ -48110,7 +48110,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비·통계 수리논술 30%(9~10월) · 분산 및 표준편차 6점 · 기말고사 11.16.~18.",
+    summary: "삼각비 15점과 통계 15점이 반반이고, 범위는 성취기준 다섯 개에 걸칩니다",
     intro:
       "대전어은중학교 3학년 수학의 수리논술 문제해결하기(30%)는 9~10월에 삼각비와 대푯값·산포도·상관관계를 함께 묻습니다. 정기시험은 중간고사 9.30.~10.1., 기말고사 11.16.~18.이며 선택형으로 35%씩 반영됩니다.",
     assessments: [
@@ -48137,7 +48137,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "열평형 탐구 20%(9~10월, 실험과정 8·보고서 12) · 과학독서탐구 20%(11월)",
+    summary: "열평형 보고서는 결과 정리와 분석을 6점씩 보고, 독서탐구는 네 요소를 5점씩 매깁니다",
     intro:
       "대전어은중학교 1학년 과학은 중간·기말고사가 30%씩이고 수행평가가 40%로, 국어·수학보다 수행 비중이 큽니다. 수행평가는 열평형 탐구(실험과정 8%, 보고서 12%)와 과학독서탐구(20%) 두 영역입니다.",
     assessments: [
@@ -48166,7 +48166,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "9월에 수행 두 개 — 영양소 검출 실험 20%(실험과정 6·보고서 14), 광합성 탐구 20%",
+    summary: "광합성 탐구는 실험 설계가 8점, 영양소 검출은 결과 정리가 8점이며 두 과제가 9월에 겹칩니다",
     intro:
       "대전어은중학교 2학년 과학은 수행평가 40%가 모두 9월에 몰려 있습니다. 음식물에 들어있는 영양소 검출하기와 환경요인과 광합성의 관계 탐구하기가 20%씩이고, 중간·기말고사는 각 30%입니다.",
     assessments: [
@@ -48195,7 +48195,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "역학적 에너지 탐구 20%(8~9월) · 유전 가계도 분석 20%(10월) · 기말 11.16.~11.18.",
+    summary: "측정값 4개를 얻으면 실험과정 6점이 채워지고, 가계도 과제는 네 부분으로 나뉩니다",
     intro:
       "대전어은중학교 3학년 과학은 8~9월 역학적 에너지 탐구(실험과정 6%, 보고서 14%)와 10월 유전 현상을 가계도로 표현하고 분석하기(20%)가 수행평가입니다. 중간고사와 11.16.~11.18. 기말고사가 30%씩 반영됩니다.",
     assessments: [
@@ -48224,7 +48224,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "설명하는 글쓰기 30%(11월, 2차시) — 관계대명사·현재완료 문장 · 그림 설명 15점",
+    summary: "1차시엔 목표 문법 문장 10점을 쓰고, 2차시 설명하기는 여섯 조건을 지켜야 합니다",
     intro:
       "대전어은중학교 2학년 영어는 중간·기말고사가 선택형으로 35%씩이고, 11월 설명하는 글쓰기 한 과제가 30%입니다. 이 글쓰기는 1차시 문장 준비와 2차시 그림 설명으로 나뉘어 두 차시에 걸쳐 채점됩니다.",
     assessments: [
@@ -48251,7 +48251,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "장소 소개 글쓰기 30%(10월) — 관계부사·분사구문 등 목표 구문 6점, 9문장 이상",
+    summary: "여섯 요소 가운데 6점짜리가 세 개이고, 문장 수와 길이 조건이 붙습니다",
     intro:
       "대전어은중학교 3학년 영어의 수행평가는 10월 장소 소개 글쓰기 하나로 30%이고, 중간고사(9.30.~10.1.)와 기말고사(11.16.~18.)가 선택형 35%씩입니다. 진도표에서는 중간고사 직후인 10월 1~2주 Lesson 6 수업에 이 쓰기 평가가 배치되어 있습니다.",
     assessments: [
@@ -48278,7 +48278,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "민주주의 발전 과정 서술 30%(10월) — 고대·근대·현대 각 10점 · 정기시험 35%씩",
+    summary: "고대·근대·현대 시기마다 특징 세 가지를 쓰고, 기본점수는 11점입니다",
     intro:
       "대전어은중학교 1학년 사회는 중간고사와 기말고사가 선택형으로 35%씩, 10월의 민주주의 발전 과정 서술이 30%입니다. 수행평가는 고대에서 현대까지 민주주의의 특징을 시기별로 서술하는 한 과제입니다.",
     assessments: [
@@ -48305,7 +48305,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "세계사 신문 만들기 30%(9월) — 머리 기사·인물 인터뷰·광고 · 중간·기말 35%씩",
+    summary: "광고가 12점으로 비중이 크고, 머리 기사는 육하원칙에 맞춰 씁니다",
     intro:
       "대전어은중학교 2학년 역사는 9월 세계사 신문 만들기 30%와 선택형 중간·기말고사 35%씩으로 평가합니다. 신문 과제는 시민 혁명을 다루는 성취기준 [9역05-01]에 맞춰 머리 기사, 인물 인터뷰, 광고 세 부분으로 채점됩니다.",
     assessments: [
@@ -48332,7 +48332,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "사회 노트 3회·도시 탐구, 역사 문화유산 광고·왕의 업적 서술 — 두 과목 수행 60%",
+    summary: "사회 노트는 대단원 5·7·8을 다루고, 역사 광고는 기획안과 게시물 15점씩, 업적 서술은 다섯 왕입니다",
     intro:
       "대전어은중학교 3학년은 사회와 역사 모두 정기시험이 11.16.~18. 기말고사 한 번(40%)뿐이고 수행평가가 60%입니다. 사회는 사회 노트 만들기와 살기 좋은 도시 탐구, 역사는 문화유산 광고 제작과 조선시대 왕의 업적 서술하기가 30%씩입니다.",
     assessments: [
@@ -48394,7 +48394,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "9월 시화 제작 20%(반어·역설 표현 7점) · 독서감상문 3회 20% · 정기시험 60%",
+    summary: "시화에서 가장 큰 요소는 반어와 역설이고, 독서감상문은 10월·11월·1월에 나눠 씁니다",
     intro:
       "대전장대중학교 2학년 국어는 11월 중간고사와 1월 기말고사가 30%씩이고, 수행평가 40%는 9월 시화 제작과 세 차례 독서감상문 쓰기가 20%씩입니다. 시화 제작은 서·논술 17점과 프로젝트 3점이 합쳐진 과제입니다.",
     assessments: [
@@ -48422,7 +48422,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "독서감상문 쓰기 30%(9~11월 3회) · 시화 제작 30%(10월, 타이포그래피 포함) · 기말 40%",
+    summary: "감상문 30점은 다섯 요소로 나뉘고, 시화는 타이포그래피 같은 시각 요소가 10점입니다",
     intro:
       "대전장대중학교 3학년 국어는 수행평가가 60%로 1·2학년보다 크고, 정기시험은 11월 기말고사 한 번(40%)입니다. 독서감상문 쓰기와 시화 제작이 각각 30%를 차지합니다.",
     assessments: [
@@ -48477,7 +48477,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각형의 외심과 내심 작도 20% · 평행선과 닮음 문제해결하기 20% · 정기시험 60%",
+    summary: "작도 10점과 문제 해결 10점으로 나뉘고, 무게중심은 과정을 서술해야 합니다",
     intro:
       "대전장대중학교 2학년 수학은 중간고사(11월)와 기말고사(1월)가 30%씩, 수행평가가 40%입니다. 수행평가는 외심·내심을 직접 작도하는 과제와 평행선·닮음을 서술하는 과제로 나뉩니다.",
     assessments: [
@@ -48505,7 +48505,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "이차함수 그래프 탐구 30%(9월) · 삼각비 문제해결 30%(10월) · 기말고사 1회 40%",
+    summary: "포물선의 식 구하기가 10점이고, 삼각비 활용 문항이 네 개 출제됩니다",
     intro:
       "대전장대중학교 3학년 수학은 11월 기말고사 한 번이 40%이고, 9월 이차함수 그래프 탐구하기와 10월 삼각비 문제해결하기가 서·논술형으로 30%씩입니다. 수행평가 비중이 60%라 1·2학년(40%)과 구조가 다릅니다.",
     assessments: [
@@ -48560,7 +48560,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "영양소의 검출과 소화 과정 및 흡수 30%(10월, 6요소 5점씩) · 정기시험 35%씩",
+    summary: "검출부터 흡수까지 여섯 칸을 채우고, 흡수 문항에는 세 조건이 붙습니다",
     intro:
       "대전장대중학교 2학년 과학은 정기시험이 35%씩 70%로 1학년(60%)보다 크고, 수행평가는 10월 영양소의 검출과 소화 과정 및 흡수 한 과제(30%)입니다. 중간고사는 11월, 기말고사는 1월입니다.",
     assessments: [
@@ -48587,7 +48587,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "자극에 대한 반응 실험하기 30%(9월) · 세포 분열 설명하기 30%(10월) · 기말 40%",
+    summary: "반응 실험에서 의식적 반응이 14점이고, 세포 분열은 비교 항목까지 서술합니다",
     intro:
       "대전장대중학교 3학년 과학은 11월 기말고사가 40%이고, 9월 자극에 대한 반응 실험하기와 10월 세포 분열 설명하기가 서·논술형 30%씩입니다.",
     assessments: [
@@ -48642,7 +48642,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "12월 올해의 단어 쓰기 30%·말하기 10% · 11월 중간·1월 기말 30%씩",
+    summary: "쓰기는 70단어 이상, 말하기는 이유를 3개 이상 들어야 합니다",
     intro:
       "대전장대중학교 2학년 영어의 수행평가는 12월에 몰려 있는 쓰기 30%와 말하기 10%입니다. 두 영역 모두 자신을 표현하는 올해의 단어를 고르고 이유를 소개하는 과제이며, 정기시험은 30%씩입니다.",
     assessments: [
@@ -48670,7 +48670,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "자서전 쓰기 30%·미래의 나에 대해 말하기 30%(둘 다 10월) · 기말고사 40%",
+    summary: "20년 뒤를 상상하며 자서전을 쓰고, 말하기는 세 요소를 10점씩 봅니다",
     intro:
       "대전장대중학교 3학년 영어는 10월에 자서전 쓰기와 미래의 나에 대해 말하기를 30%씩 평가하고, 11월 기말고사 한 번을 40% 반영합니다. 말하기 비중이 1·2학년(10%)보다 크게 늘어난 것이 특징입니다.",
     assessments: [
@@ -48724,7 +48724,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "주제 탐구 보고서 Ⅰ·Ⅱ 15%씩(10·11월) · 인물 탐구 보고서 10%(12월) · 시험 30%씩",
+    summary: "보고서 Ⅰ은 시민 혁명, Ⅱ는 제국주의를 다루고 인물 사전에는 두 명을 담습니다",
     intro:
       "대전장대중학교 2학년 역사는 11월 중간고사와 1월 기말고사가 30%씩이고, 10월부터 12월까지 매달 보고서 수행평가가 하나씩 있습니다. 주제 탐구 보고서(Ⅰ)·(Ⅱ)가 15%씩, 인물 탐구 보고서가 10%입니다.",
     assessments: [
@@ -48753,7 +48753,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "사회 권력 분립·시장 가격 분석, 역사 문화유산·인물 탐구 — 과목마다 수행 30%씩 2개",
+    summary: "사회 두 과제는 6점짜리 다섯 항목으로 보고, 역사 두 과제는 배점 순서가 서로 반대입니다",
     intro:
       "대전장대중학교 3학년 사회와 역사는 모두 11월 기말고사 40%에 서·논술형 수행평가 두 개가 30%씩입니다. 사회는 9월 권력 분립, 10월 시장 가격 분석을 하고, 역사는 9~10월 문화유산으로 역사 읽기, 10~11월 인물 탐구 보고서를 합니다.",
     assessments: [
@@ -48783,7 +48783,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통국어2"],
-    summary: "문학 작품 소개하는 글쓰기 30%(10월, 서·논술) · 9월 중간·11월 기말 선택형 각 35%",
+    summary: "‘춘향전’·‘흰 바람벽이 있어’를 배우는 달에 글을 쓰고, 세특은 작품 선정과 소개를 관찰하며 동점이면 기말부터 봅니다",
     intro:
       "대전전민고등학교 1학년 공통국어2는 9월 중간고사와 11월 기말고사가 35%씩이고, 수행평가는 10월 ‘문학 작품 소개하는 글쓰기’ 한 영역으로 30%입니다. 정기시험은 선택형 100점이고 서답형·서술형 칸이 비어 있어, 서·논술형 반영 30%는 모두 이 글쓰기에서 나옵니다.",
     assessments: [
@@ -48814,7 +48814,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통수학2"],
-    summary: "함수의 개념 탐구를 통한 창의적 함수 모델링하기 30%(11월) · 정기시험 선택형 80·서답형 20점",
+    summary: "함수 단원과 같은 11월에 모델링을 하고, 9월 시험 전까지는 도형의 방정식을 배우며 관찰 요소는 세 가지입니다",
     intro:
       "대전전민고등학교 1학년 공통수학2는 정기시험 두 번이 35%씩, 수행평가는 서·논술형 한 영역으로 30%입니다. 중간·기말고사는 각각 선택형 80점과 서답형 20점으로 배점되어 있어, 객관식 외의 답안 작성이 시험에도 들어 있습니다.",
     assessments: [
@@ -48845,7 +48845,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통영어2"],
-    summary: "비소설 서평 쓰기 30%(8~11월, 리딩 저널 5회차 후 서평) · 정기시험 선택형 각 35%",
+    summary: "리딩 저널을 1회차부터 5회차까지 쓴 뒤 서평으로 잇고, 의견의 논리성과 창의성을 관찰하며 교과서는 Lesson 1~4입니다",
     intro:
       "대전전민고등학교 1학년 공통영어2는 정기시험 70%(9월·11월 각 35%), 수행평가 30%이고, 수행평가는 영어 비소설 원서를 읽고 서평을 쓰는 한 영역입니다. 8월에 책을 고른 뒤 11월까지 리딩 저널과 서평 작성이 이어지는 학기 단위 과제입니다.",
     assessments: [
@@ -48876,7 +48876,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["통합사회2", "한국사2"],
-    summary: "통합사회2 현대정의론 모의 정책 분석 30%(9월) · 한국사2 질문 만들기 30%(8~11월)",
+    summary: "통합사회2는 정의 단원 직후 정책 분석, 한국사2 질문은 참여도·완성도·심화탐구를 보며 동점자 기준은 과목마다 다릅니다",
     intro:
       "대전전민고등학교 1학년 통합사회2와 한국사2는 모두 9월·11월 정기시험이 35%씩이고 수행평가는 서·논술형 한 영역 30%입니다. 통합사회2 과제는 9월에 한 번 치르는 반면, 한국사2 질문 만들기는 8월부터 11월까지 매달 이어집니다.",
     assessments: [
@@ -48910,7 +48910,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["통합과학2", "과학탐구실험2"],
-    summary: "통합과학2 조사보고서·중화 반응 실험 각 20%(10월) · 과학탐구실험2 수행 100%(3개 영역)",
+    summary: "통합과학2 수행은 10월에 연달아 있고, 미세먼지 탐구는 네 단계로 보며 아두이노 프로젝트가 40%로 가장 큽니다",
     intro:
       "대전전민고등학교 1학년 통합과학2는 정기시험 60%(9월·11월 각 30%), 수행평가 40%이고 두 수행평가가 모두 10월에 있습니다. 과학탐구실험2는 정기시험 없이 미세먼지 탐구, 안전사고 예방 장치 창안, 아두이노 프로젝트 세 영역 수행평가로만 성적을 냅니다.",
     assessments: [
@@ -49038,7 +49038,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "주장하는 글 쓰기 20%(10~11월)·한 학기 한 권 읽기 20%(9~12월) · 정기시험 선택형 각 30%",
+    summary: "주장하는 글은 네 요소를 5점씩 보고, ‘내 인생의 책’ 독후 활동은 20·17·14·11점 네 단계로 매깁니다",
     intro:
       "대전전민중학교 1학년 국어는 수행평가 두 과제가 20%씩 모두 40%이고, 10월 중간고사와 12월 기말고사가 각 30%입니다. 정기시험은 5지 선택형 문항만으로 출제한다고 적혀 있어, 서술‧논술 평가는 주장하는 글 쓰기와 한 학기 한 권 읽기에서 이뤄집니다.",
     assessments: [
@@ -49070,7 +49070,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "공정한 재판 글쓰기 30%(10~11월, 서술‧논술) · 10월·12월 정기시험 선택형 각 35%",
+    summary: "민사·형사 재판 절차를 8점씩, 판결문 작성은 네 요소를 6점으로 보며 미제출도 기본점수 10점을 받습니다",
     intro:
       "대전전민중학교 1학년 사회는 정기시험 70%, 수행평가 30%이고, 수행평가는 ‘공정한 재판 글쓰기’ 한 과제뿐입니다. 진도표에서는 재판의 의미와 종류를 배우는 10월 수업 끝에 이 과제가 붙어 있습니다.",
     assessments: [
@@ -49101,7 +49101,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "도형의 성질 탐구 30%(11~12월, 다섯 요소 6점씩) · 중간·기말 선택형 각 35%",
+    summary: "합동부터 부피까지 다섯 항목을 묻고, 겉넓이·부피는 기둥·뿔·뿔대·구를 다루며 미제출은 9점입니다",
     intro:
       "대전전민중학교 1학년 수학은 정기시험 두 번이 35%씩이고 수행평가는 서술‧논술형 ‘도형의 성질 탐구’ 하나로 30%입니다. 진도표에서는 입체도형의 성질을 배우는 11월 수업에 이 과제가 들어 있습니다.",
     assessments: [
@@ -49132,7 +49132,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "열의 이동 탐구 20%(9~10월) · 기체의 압력과 부피 관계 실험 수행·서술 각 10% · 정기시험 각 30%",
+    summary: "열의 이동 탐구는 6·7·7점으로 채점하고, 보일 법칙 과제는 실험과 서술을 따로 반영합니다",
     intro:
       "대전전민중학교 1학년 과학은 정기시험 60%, 수행평가 40%입니다. 수행평가는 서술‧논술형 ‘열의 이동 탐구’(20%)와 실험 수행 10%·서술‧논술 10%로 나뉜 ‘기체의 압력과 부피 관계’로 구성됩니다.",
     assessments: [
@@ -49165,7 +49165,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "장래 희망 소개 글쓰기 30%·장래 희망 질문 듣고 답하기 10%(10~11월) · 정기시험 각 30%",
+    summary: "꿈을 소개하는 글은 여섯 항목 5점씩에 제시된 언어형식 두 개가 조건이고, 구술은 질문 3개에 답합니다",
     intro:
       "대전전민중학교 1학년 영어는 정기시험 60%, 수행평가 40%이고, 수행평가 두 과제가 모두 장래 희망을 주제로 10~11월에 이어집니다. 진도표에서는 7과 ‘Find Your Dream’을 배우는 11월에 글쓰기와 구술 평가가 함께 표시되어 있습니다.",
     assessments: [
@@ -49197,7 +49197,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "발표 자료 제작하기 20%·독서 경험을 바탕으로 글 쓰기 20%(9~11월) · 정기시험 각 30%",
+    summary: "발표 자료는 개요 10점에 슬라이드 10점, 독서 글쓰기는 부적절한 요소 수로 감점하고 기본점수는 6점입니다",
     intro:
       "대전전민중학교 2학년 국어는 정기시험 60%, 수행평가 40%이고, 수행평가 두 과제가 9월 수업에서 함께 시작됩니다. 발표 자료 제작하기는 개요와 자료 제작을 나눠 보고, 독서 경험 글쓰기는 직접 고른 책의 독후 활동을 봅니다.",
     assessments: [
@@ -49229,7 +49229,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "사회 독도 홍보 글쓰기 30%(9~10월) · 역사 다큐멘터리 제작 보고서 쓰기 30%(10~11월)",
+    summary: "독도 글에서는 경제적 가치가 따로 8점이고, 역사 보고서가 다루는 주제는 전쟁 범죄와 인권입니다",
     intro:
       "대전전민중학교 2학년은 사회와 역사가 모두 정기시험 70%(중간·기말 각 35%), 수행평가 30% 구조입니다. 수행평가는 과목마다 서술‧논술형 한 과제이고, 사회 독도 홍보 글쓰기가 9~10월, 역사 다큐멘터리 제작 보고서 쓰기가 10~11월로 시기가 다릅니다.",
     assessments: [
@@ -49263,7 +49263,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "도형의 성질 탐구 30%(11월, 외심·내심·사각형·무게중심·피타고라스) · 정기시험 각 35%",
+    summary: "외심·내심부터 피타고라스 정리까지 다섯 항목이 6점씩이며, 사각형 관계는 네 사각형을 따집니다",
     intro:
       "대전전민중학교 2학년 수학은 10월·12월 정기시험이 35%씩이고, 11월 서술‧논술형 ‘도형의 성질 탐구’가 30%입니다. 1학년과 과제 이름은 같지만 범위는 삼각형의 외심·내심부터 피타고라스 정리까지입니다.",
     assessments: [
@@ -49294,7 +49294,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "음식물 속 영양소와 소화 20% · 밀도의 특성 탐구 실험 수행·서술 각 10%(9~10월) · 정기시험 각 30%",
+    summary: "밀도 실험은 측정 4점과 계산·관찰 6점으로 나뉘고, 소화 과제는 6·8·6점 배점입니다",
     intro:
       "대전전민중학교 2학년 과학은 정기시험 60%, 수행평가 40%입니다. 수행평가 두 과제가 모두 9~10월에 몰려 있고, 밀도의 특성 탐구는 실험 수행 10%와 서술‧논술 10%로 나뉘어 반영됩니다.",
     assessments: [
@@ -49327,7 +49327,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "인류애를 실천한 인물의 전기문 쓰기 30%·인물 소개 인터뷰 10%(9~11월) · 정기시험 각 30%",
+    summary: "전기문에 들어갈 네 가지와 문장 길이·개수 조건이 있고, 인터뷰는 내용 5점·유창성 5점입니다",
     intro:
       "대전전민중학교 2학년 영어는 정기시험 60%, 수행평가 40%이고, 두 수행평가가 ‘인류애를 실천한 인물’이라는 한 주제로 묶여 있습니다. 진도표에서는 10월에 전기문 쓰기, 11월에 인물 소개 인터뷰가 표시되어 있습니다.",
     assessments: [
@@ -49359,7 +49359,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "독서 경험을 바탕으로 글 쓰기·주장하는 글 쓰기 각 20%(9~11월) · 10월·11월 정기시험 각 30%",
+    summary: "주장하는 글은 개요 6점과 본문 14점으로 나뉘고, 독서 글쓰기 성취기준은 문학 감상입니다",
     intro:
       "대전전민중학교 3학년 국어는 정기시험 60%, 수행평가 40%이고, 기말고사가 다른 학년보다 이른 11월에 있습니다. 수행평가는 9월 독서 경험 글쓰기와 10월 주장하는 글 쓰기가 20%씩입니다.",
     assessments: [
@@ -49391,7 +49391,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "조선의 정치 세력에 대해 서술하기 30%(9~10월, 훈구·사림·사화·조광조) · 정기시험 각 35%",
+    summary: "훈구파·사림파 서술이 7점씩, 4대 사화는 명칭 5점과 배경 5점으로 나눠 채점합니다",
     intro:
       "대전전민중학교 3학년 역사는 10월 중간고사와 11월 기말고사가 35%씩, 수행평가는 서술‧논술형 ‘조선의 정치 세력에 대해 서술하기’ 하나로 30%입니다. 진도표에서는 9월 수업에 이 과제가 표시되어 있습니다.",
     assessments: [
@@ -49422,7 +49422,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비와 원의 성질 탐구 30%(10~11월, 다섯 항목 6점씩) · 10월·11월 정기시험 각 35%",
+    summary: "삼각비 두 항목과 원 세 항목으로 짜였고, 넓이·원주각은 5개 중 4개 이상 맞히면 6점입니다",
     intro:
       "대전전민중학교 3학년 수학은 정기시험 두 번이 35%씩, 수행평가는 서술‧논술형 ‘삼각비와 원의 성질 탐구’ 한 과제로 30%입니다. 진도표에서는 10월 수업에 이 과제가 표시되어 있습니다.",
     assessments: [
@@ -49453,7 +49453,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "사람의 유전 현상 탐구 20%(10~11월) · 전기에너지의 발생과 전환 실험·보고서 각 10%(9월)",
+    summary: "전기 실험은 수행 4+6점·보고서 6+4점, 가계도는 작성·분석·심화를 6·7·7점으로 봅니다",
     intro:
       "대전전민중학교 3학년 과학은 지필평가 60%, 수행평가 40%입니다. 9월 ‘전기에너지의 발생과 전환’은 실험 수행 10%와 실험 보고서(서술‧논술) 10%로 나뉘고, 10~11월 ‘사람의 유전 현상 탐구’가 서술‧논술 20%입니다.",
     assessments: [
@@ -49486,7 +49486,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "독후 감상문 쓰기 30%·책 소개 인터뷰 10%(9~11월) · 10월·11월 정기시험 각 30%",
+    summary: "감상문은 책 정보 5개가 기준이고 기본점수 6점, 책 소개 인터뷰에서는 질문 4개를 주고받습니다",
     intro:
       "대전전민중학교 3학년 영어는 정기시험 60%, 수행평가 40%이고, 수행평가 두 과제가 한 권의 책을 두고 쓰기와 말하기로 이어집니다. 진도표에는 9월부터 11월까지 매달 독후 감상문 쓰기와 책 소개 인터뷰가 함께 표시되어 있습니다.",
     assessments: [
@@ -49518,7 +49518,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통 국어2"],
-    summary: "시 창작하기 20%(9월)·한글 맞춤법 탐구하기 20%(10월) · 1·2차 선택형 시험 각 30%",
+    summary: "시 창작은 여섯 기준 충족 개수로, 맞춤법 탐구는 표기 규칙 여섯 가지로 보며 동점이면 2차 점수부터 비교합니다",
     intro:
       "대성여자상업고등학교 1학년 공통 국어2는 1~10반이 같은 계획을 따르며, 1·2차 정기시험이 30%씩이고 수행평가 두 과제가 20%씩입니다. 정기시험은 선택형으로 출제하고 서·논술형은 수행평가 과제에 반영한다고 적혀 있어, 글로 쓰는 평가는 9월 시 창작과 10월 맞춤법 탐구에 모여 있습니다.",
     assessments: [
@@ -49550,7 +49550,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통 수학2"],
-    summary: "수학적 모델링 기반 문제해결 20%(2회)·포트폴리오 20%·주제탐구 발표 10% · 시험 각 25%",
+    summary: "모델링 문제해결은 단원 묶음 두 개로 10점씩, 포트폴리오는 활동지 미풀이 횟수로 감점합니다",
     intro:
       "대성여자상업고등학교 1학년 공통 수학2는 정기시험과 수행평가를 50%씩 합산하며, 1·2차 시험이 각 25%이고 수행평가 세 영역이 나머지 50%를 나눕니다. 수행평가 가운데 수학적 모델링 기반 문제해결은 평가 종류표에 2회로 적힌 유일한 영역입니다.",
     assessments: [
@@ -49583,7 +49583,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통 영어2"],
-    summary: "듣기평가 20%(9월)·짧은 글쓰기 20%·어휘 탐구 10%(9월~11월) · 1·2차 시험 각 25%",
+    summary: "듣기 20점은 7·7·6점 세 영역이고, 짧은 글쓰기는 어휘와 어법을 따로 채점합니다",
     intro:
       "대성여자상업고등학교 1학년 공통 영어2는 정기시험 50%, 수행평가 50%로 성적을 냅니다. 수행평가 중 듣기만 9월 한 달에 치르고, 짧은 글쓰기와 어휘 탐구는 9월~11월에 걸쳐 진행됩니다.",
     assessments: [
@@ -49616,7 +49616,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["통합 사회2"],
-    summary: "인권 비평문 15%(10월 2주)·정의로운 사회 탐구 일기 15%(11월 1주)·금융 포트폴리오 설계 20%",
+    summary: "비평문과 탐구 일기는 충족 조건 개수로 단계가 갈리고, 금융 설계는 조건 9~10개가 만점 기준입니다",
     intro:
       "대성여자상업고등학교 1학년 통합 사회2는 1·2차 정기시험 25%씩과 수행평가 세 과제 50%로 구성됩니다. 수행평가는 10월 2주 비평문, 11월 1주 탐구 일기, 11월 4주 포트폴리오 설계 순으로 이어지며 세 과제 모두 글로 작성합니다.",
     assessments: [
@@ -49649,7 +49649,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["통합 과학2"],
-    summary: "탐구보고서 및 발표 20%(9월 3~4주)·에너지 논술 20%(10월 2~3주)·산화환원 보고서 10%",
+    summary: "탐구보고서는 네 묶음을 5점씩 보고, 산화환원 보고서는 산소·전자 이동 예시가 기준이 됩니다",
     intro:
       "대성여자상업고등학교 1학년 통합 과학2는 1·2차 정기시험 각 25%에 수행평가 50%를 더합니다. 수행평가는 9월 3~4주 탐구보고서, 10월 2~3주 논술, 11월 3~4주 산화환원 보고서로 9월부터 석 달 동안 한 달에 한 과제씩 놓여 있습니다.",
     assessments: [
@@ -49682,7 +49682,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["화법과 언어"],
-    summary: "발표 개요 작성하기 20%(9월)→표현 전략을 활용한 발표하기 20%(10월) · 시험 각 30%",
+    summary: "개요는 주제 선정 10점과 내용 조직 10점, 발표는 한 영역 20점을 7단계로 나눠 매깁니다",
     intro:
       "대성여자상업고등학교 2학년 화법과 언어는 1~10반 전체가 듣는 과목으로, 정기시험 60%와 수행평가 40%를 합산합니다. 수행평가 두 과제가 한 발표로 이어져, 9월에 개요를 글로 쓰고 10월에 그 내용을 말로 발표합니다.",
     assessments: [
@@ -49714,7 +49714,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어 독해와 작문"],
-    summary: "듣기 자료 요약 20%(9월)·짧은 글쓰기 20%·어휘 탐구 10% 모두 서술⋅논술 · 시험 각 25%",
+    summary: "들은 내용을 글로 요약하는 과제가 세 채점 영역으로 나뉘고, 어휘 탐구까지 전부 글로 씁니다",
     intro:
       "대성여자상업고등학교 2학년 영어 독해와 작문은 1~10반 전체가 같은 계획을 따르고, 정기시험과 수행평가가 50%씩입니다. 수행평가 세 영역은 평가 방법이 모두 서술⋅논술로 적혀 있으며, 9월에 치르는 듣기 자료 요약도 들은 내용을 글로 요약하는 방식입니다.",
     assessments: [
@@ -49747,7 +49747,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "한 학기 한 권 읽기 30%(9~11월) · 언어생활 탐구 보고서(9월)·품사 사전 만들기(10월) 각 20%",
+    summary: "탐구 보고서는 새말 자료 모으기에서 출발하고, 품사 사전은 구상과 결과물 두 단계, 시험엔 서·논술 40점이 있습니다",
     intro:
       "감천중학교 1학년 국어는 수행평가가 70%이고 정기시험은 12월 2회 고사 한 번(30%)입니다. 수행평가는 9월 언어생활 탐구 보고서, 10월 품사 사전 만들기, 9~11월에 걸친 한 학기 한 권 읽기로 이어집니다.",
     assessments: [
@@ -49779,7 +49779,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "지방 자치 정책 제안서 작성하기(9월)·재판 만화 그리기(10월) 각 30% · 12월 2회 고사 40%",
+    summary: "우리 지역 문제에서 출발하는 정책 제안과, 용어·절차·법 조항을 담는 만화가 과제이며 시험 한 번이 세 단원을 덮습니다",
     intro:
       "감천중학교 1학년 사회는 12월 2회 고사 한 번이 40%, 수행평가 두 과제가 30%씩입니다. 9월에는 지역 사회 문제에 대한 정책 제안서를, 10월에는 형사 재판 상황을 담은 만화를 만듭니다.",
     assessments: [
@@ -49810,7 +49810,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각형 작도하기(10월)·입체도형 리플릿 만들기(11월) 각 20% · 1회 9월·2회 12월 고사",
+    summary: "작도한 삼각형으로 글자를 디자인하고, 리플릿에는 겨냥도·전개도와 겉넓이·부피를 담습니다",
     intro:
       "감천중학교 1학년 수학은 1회 고사(9월)와 2회 고사(12월)가 30%씩, 수행평가 두 과제가 20%씩입니다. 작도 과제는 글자 디자인으로, 입체도형 과제는 건축물 리플릿으로 결과물을 냅니다.",
     assessments: [
@@ -49842,7 +49842,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "물질의 비열 실험 보고서(9월)·기체의 압력과 부피 관계 실험 보고서(10월) 각 20%",
+    summary: "비열 보고서는 온도 변화 기록에서 실생활 예까지, 기체 보고서는 그래프와 입자 모형을 다룹니다",
     intro:
       "감천중학교 1학년 과학은 1회(9월)·2회(12월) 고사가 30%씩, 실험 보고서 두 편이 20%씩입니다. 두 보고서 모두 실험·실습과 서술·논술 방식이고 교사 관찰이 함께 들어갑니다.",
     assessments: [
@@ -49874,7 +49874,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "추론하는 글쓰기(9월)·드림카드 소개하기(10월) 각 20% · 영어듣기능력평가 10%",
+    summary: "사건 현장 수사 일지로 추론하는 글을 쓰고, 드림카드에선 to부정사·접속사로 직업을 소개합니다",
     intro:
       "감천중학교 1학년 영어는 1회·2회 고사가 25%씩이고 수행평가가 50%입니다. 수행평가는 9월 영어듣기능력평가(10%)와 추론하는 글쓰기(20%), 10월 드림카드 소개하기(20%)입니다.",
     assessments: [
@@ -49907,7 +49907,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "매체 자료 분석하기 25%(8~9월)·공감하고 조정하는 대화 20%·한 학기 한 권 읽기 30%",
+    summary: "광고를 읽고 재현 방식을 분석한 뒤, 시나리오와 실천 일기로 대화를 평가하고 독서는 서평까지 씁니다",
     intro:
       "감천중학교 2학년 국어는 수행평가가 75%이고 정기시험은 12월 2회 고사 한 번(25%)입니다. 광고 분석(8~9월), 대화 시나리오(9~10월), 독서(10~11월) 순으로 수행평가 세 영역이 한 학기 동안 이어집니다.",
     assessments: [
@@ -49939,7 +49939,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "식물과 에너지 실험 보고서(8월)·우주 탐사 탐구보고서(11월) 각 20% · 고사 2회",
+    summary: "광합성 실험은 설계 단계부터 보고, 우주 탐사 보고서에는 윤리 문제에 대한 견해를 적습니다",
     intro:
       "감천중학교 2학년 과학은 1회(9월)·2회(12월) 고사가 30%씩이고 보고서 두 편이 20%씩입니다. 첫 보고서는 개학 직후 8월 광합성 실험, 두 번째는 11월 우주 탐사 조사로 학기 앞뒤에 나뉘어 있습니다.",
     assessments: [
@@ -49971,7 +49971,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "정보 묻고 답하는 말하기·감상문 쓰기(9월)·인물 소개하는 말하기(10월) 각 15%",
+    summary: "말하기 두 번은 채점 요소가 서로 다르고, 감상문은 핵심 문법까지 보며 시험은 학기 말 한 번입니다",
     intro:
       "감천중학교 2학년 영어는 정기시험이 12월 2회 고사 한 번(40%)이고, 수행평가 60%를 네 영역이 15%씩 나눕니다. 영어듣기능력평가·정보 묻고 답하는 말하기·감상문 쓰기가 9월에 모여 있고, 인물 소개 말하기만 10월입니다.",
     assessments: [
@@ -50004,7 +50004,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "미디어 속 인구 문제 분석하기·역사노래 만들기·임진왜란 보고서 등 과목별 수행 30%씩",
+    summary: "사회는 미디어로 읽는 인구와 우리 지역 도시 문제를, 역사는 원 간섭기 고려 노랫말과 임진왜란을 다룹니다",
     intro:
       "감천중학교 3학년은 사회(지리)와 역사를 따로 평가하며, 두 과목 모두 11월 정기시험 한 번이 40%이고 수행평가 두 개가 30%씩입니다. 사회는 인구·도시 단원, 역사는 원 간섭기 고려와 임진왜란에 수행평가가 놓입니다.",
     assessments: [
@@ -50038,7 +50038,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 프로젝트(9월)·원의 성질 탐구 보고서(10월) 각 30% · 11월 정기시험 40%",
+    summary: "삼각비로 건물 높이를 구하고, 원의 성질은 미니북 두 권으로 정리하며 시험은 통계까지 한 번에 봅니다",
     intro:
       "감천중학교 3학년 수학은 11월 정기시험 한 번이 40%이고 수행평가 두 과제가 30%씩으로, 수행 비중이 60%입니다. 9월 삼각비, 10월 원의 성질 단원 진도에 맞춰 과제가 하나씩 진행됩니다.",
     assessments: [
@@ -50069,7 +50069,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "체세포 분열 실험(9월)·가계도 분석(10월) 각 30% · 11월 정기시험 40%",
+    summary: "현미경으로 관찰하며 염색체를 그리고, 가계도는 작성과 분석을 나눠 보며 시험은 날씨·유전·우주입니다",
     intro:
       "감천중학교 3학년 과학은 11월 정기시험 40%와 생식과 유전 단원의 수행평가 두 개(각 30%)로 이루어집니다. 두 과제 모두 9~10월에 끝나 시험 전 수행평가가 마무리됩니다.",
     assessments: [
@@ -50100,7 +50100,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "단어 의미망 만들기(10월)·짧은 글 쓰고 말하기(8~10월) 각 25% · 듣기 10%",
+    summary: "사전을 쓰며 어휘를 잇는 의미망, 저널에서 말하기로 이어지는 짧은 글이 과제이고 시험 서·논술형은 40점 이상입니다",
     intro:
       "감천중학교 3학년 영어는 11월 정기시험이 40%, 수행평가가 60%입니다. 수행평가는 9월 영어듣기능력평가 10%, 단어 의미망 만들기와 짧은 글 쓰고 말하기가 25%씩입니다.",
     assessments: [
@@ -50166,7 +50166,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "시조 창작 20%(9월 1~2주) · 설득하는 말하기 20%(10월 2~4주) · 기말 10월 30일~11월 3일",
+    summary: "‘꺼삐딴 리’ 다음 차례에 시조를 짓고, 연설 준비와 구성에 60점이 걸리며 회차마다 서·논술형이 40점입니다",
     intro:
       "구남중학교 3학년 국어는 9월 초 시조 창작과 10월 설득하는 말하기, 두 수행평가가 20%씩이고 정기시험이 60%입니다. 기말시험이 10월 30일~11월 3일로 잡혀 있어 2학기 정기시험 두 번이 모두 11월 초 이전에 끝납니다.",
     assessments: [
@@ -50234,7 +50234,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 실생활 문제 프로젝트 20%(9월 11~16일) · 원의 성질 탐구 보고서 20%(10월 12~16일)",
+    summary: "삼각비 프로젝트는 2단계로 채점하고, 원 보고서는 찾고 설명하고 비교하며 미제출이면 30점입니다",
     intro:
       "구남중학교 3학년 수학은 지필평가 60%, 수행평가 40%로, 수행은 9월 삼각비 프로젝트와 10월 원의 성질 탐구 보고서가 20%씩입니다. 중간시험은 선택형 70점·서술형 30점, 기말시험은 선택형 60점·서술형 40점이고 기말은 10월 30일과 11월 2일~3일에 치릅니다.",
     assessments: [
@@ -50336,7 +50336,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "살기 좋은 도시 만들기 프로젝트 40%(지역 발전 제안서) · 중간·기말 서·논술형 각 40점",
+    summary: "우리 지역에 대한 제안서로 끝나는 프로젝트이고, 탐구 수행과 구성에 60점이 배정됩니다",
     intro:
       "구남중학교 3학년 사회는 수행평가가 ‘살기 좋은 도시 만들기 프로젝트’ 하나로 40%를 차지하고, 정기시험 두 번이 60%입니다. 시험 범위는 인구 변화와 인구 문제부터 환경 문제와 지속 가능한 환경까지 네 대단원입니다.",
     assessments: [
@@ -50403,7 +50403,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "사람 염색체 분석하기 40%(실험실습평가형 3차시) · 중간·기말 서술형 각 40점",
+    summary: "염색체 분석을 세 차시로 진행하며, 핵심질문은 22쌍 상염색체와 1쌍 성염색체입니다",
     intro:
       "구남중학교 3학년 과학은 수행평가 ‘사람 염색체 분석하기’ 하나가 40%이고 지필평가 두 번이 60%입니다. 지필은 회차마다 선택형 60점과 서술형 40점이며, 기말은 10월 30일과 11월 2일~3일에 치릅니다.",
     assessments: [
@@ -50564,7 +50564,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통국어2"],
-    summary: "논설문 쓰기 20%(8~9월)·문학 큐레이션 20%(10월) · 정기시험 2회는 선택형 각 30%",
+    summary: "논설문은 글 15점에 합평 5점, 문학 큐레이션은 근거 제시가 10점이며 성취도는 고정 분할 점수로 냅니다",
     intro:
       "흥덕고등학교 1학년 공통국어2는 수행평가가 논설문 쓰기와 문학 큐레이션 두 과제로 40%, 10월·12월 정기시험이 각 30%입니다. 두 정기시험은 선택형으로만 출제되어, 서·논술형 40%는 모두 이 두 수행평가에서 나옵니다.",
     assessments: [
@@ -50662,7 +50662,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "정보 전달 글쓰기(9월 1주)·주장하는 글쓰기(10월 3주) 20%씩, 글 요약 10% · 12월 시험 50%",
+    summary: "두 글쓰기 과제는 5점짜리 네 칸으로 채점하고, 요약은 삭제와 일반화를 보며 수행 전부가 논술형입니다",
     intro:
       "화정중학교 1학년 국어는 12월 3주 2차 정기시험(50%)과 글쓰기 중심 수행평가 세 개(50%)로 평가합니다. 정보를 전달하는 글쓰기가 9월 1주로 학기 첫 평가이고, 요약 과제는 11월 1주에 치릅니다.",
     assessments: [
@@ -50694,7 +50694,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "소설 비평문 10%(10월 3주)·복합양식 글 쓰고 발표 20%(10월 4주~11월 1주) · 시험 70%",
+    summary: "비평문에서 사회·문화적 상황 서술이 7점, 복합양식 과제 20점 중 13점이 논술형이고 1차 시험에만 논술형이 있습니다",
     intro:
       "화정중학교 2학년 국어는 9월 4주 1차와 12월 3주 2차 정기시험이 35%씩으로 시험 비중이 70%입니다. 수행평가 두 개는 10월 3주부터 11월 1주 사이에 이어서 치릅니다.",
     assessments: [
@@ -50726,7 +50726,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "설득 전략 글쓰기·발표 20%(10월 3~4주)·서평 쓰기 20%(9월 1주~10월 2주) · 시험 30%씩",
+    summary: "설득 과제는 글과 발표가 10점씩이고, 서평은 설계도와 요약까지 5점씩 매기며 논술형 반영은 36%입니다",
     intro:
       "화정중학교 3학년 국어는 9월 4주 1차와 11월 3주 2차 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 서평 쓰기는 9월 1주부터 10월 2주까지 이어지고, 설득 전략 과제는 글쓰기(10월 3주)와 발표(10월 4주)로 나뉩니다.",
     assessments: [
@@ -50758,7 +50758,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "도형 작도 15%(9월 3~4주)·평면도형 20%·입체도형 15% 문제 해결 · 12월 3주 시험 50%",
+    summary: "작도는 다섯 항목 3점씩, 평면도형은 다각형과 부채꼴이 10점씩이며 논술형이 40%를 차지합니다",
     intro:
       "화정중학교 1학년 수학은 12월 3주 2차 정기시험 50%와 도형 단원 수행평가 세 개 50%입니다. 작도(9월 3~4주), 평면도형(10월 3~4주), 입체도형(11월 1~2주) 순으로 한 달 간격을 두고 진행됩니다.",
     assessments: [
@@ -50790,7 +50790,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각형·사각형 성질 10%(9월 2~3주)·닮음·피타고라스·경우의 수 20%(11월 3~4주) · 시험 70%",
+    summary: "첫 수행은 합동과 사각형에 5점씩, 11월 과제는 네 단원을 5점씩 보고 1차 시험 논술형은 5.25%입니다",
     intro:
       "화정중학교 2학년 수학은 9월 5주 1차와 12월 3주 2차 정기시험이 35%씩이고, 수행평가 두 개가 30%입니다. 첫 수행은 1차 시험 전인 9월 2~3주, 두 번째는 2차 시험 전인 11월 3~4주에 있습니다.",
     assessments: [
@@ -50822,7 +50822,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 문제 해결(9월 2주)·통계 문제 해결(10월 3주) 15%씩 · 9월 5주·11월 3주 시험 35%씩",
+    summary: "삼각비 값 8점에 활용 7점, 통계는 분산·표준편차가 8점이며 두 과제 모두 논술형으로 반영됩니다",
     intro:
       "화정중학교 3학년 수학은 정기시험 두 번이 35%씩, 15점짜리 수행평가 두 개가 30%입니다. 삼각비 과제는 9월 2주, 통계 과제는 10월 3주로 2차 시험(11월 3주)보다 먼저 끝납니다.",
     assessments: [
@@ -50854,7 +50854,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "어휘 활용 빈칸 추론 20%(11월 3주)·내 교과서 만들기 10%(9월~12월) · 두 시험 35%씩",
+    summary: "빈칸 추론은 어휘 활용이 8점, 내 교과서는 조건 3가지를 지켜야 하며 논술형 반영은 37%입니다",
     intro:
       "화정중학교 2학년 영어는 9월 5주와 12월 3주 정기시험이 35%씩이고 두 번 모두 선택형 90점·논술형 10점입니다. 수행평가는 11월 3주 어휘 활용 과제(20%)와 학기 내내 만드는 내 교과서(10%)입니다.",
     assessments: [
@@ -50886,7 +50886,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "중학교 생활을 돌아보는 글쓰기 20%(10월 2~3주)·어휘 활용 문장 완성 10% · 시험 70%",
+    summary: "회고 글쓰기는 네 요소를 5점씩 보고, 문장 완성은 6회 활동으로 쌓이며 1차 시험 논술형은 7%입니다",
     intro:
       "화정중학교 3학년 영어는 9월 5주 1차와 11월 3주 2차 정기시험이 35%씩이고, 수행평가는 글쓰기 20%와 어휘 문장 완성 10%입니다. 1차 시험에 논술형 20점이 몰려 있고 2차는 선택형만 냅니다.",
     assessments: [
@@ -50918,7 +50918,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "상태변화와 열에너지 설명(9월 3주)·기체 압력과 부피 분석(10월 4주) 25%씩 · 시험 50%",
+    summary: "상태변화 과제 가운데 20점이 논술형이고, 기체 과제는 실험 결과 해석을 보며 논술형 합계는 45%입니다",
     intro:
       "화정중학교 1학년 과학은 12월 3주 2차 정기시험 50%와 25점짜리 수행평가 두 개(50%)입니다. 9월 3주 상태변화 과제와 10월 4주 기체 실험 과제가 한 번씩 있습니다.",
     assessments: [
@@ -50949,7 +50949,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "호흡 운동 원리 설명(10월 3주)·옴의 법칙 그래프(11월 3주) 15%씩 · 1차 40%·2차 30%",
+    summary: "호흡 모형 과제는 전부 논술형이고, 옴의 법칙은 계산·비교·설명을 보며 1차 시험 비중이 더 큽니다",
     intro:
       "화정중학교 2학년 과학은 9월 5주 1차 정기시험이 40%, 12월 3주 2차가 30%로 두 시험의 비중이 다릅니다. 수행평가는 호흡 운동 모형과 옴의 법칙 실험이 15%씩입니다.",
     assessments: [
@@ -50981,7 +50981,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "세포 분열 분석 10%(9월 1주)·가계도 분석 유전 설명 20%(9월 3주) · 1차 40%·2차 30%",
+    summary: "세포 분열은 관찰 5점과 비교 5점, 가계도는 네 항목 논술형이며 논술형 반영은 31%입니다",
     intro:
       "화정중학교 3학년 과학은 9월 5주 1차 정기시험 40%, 11월 3주 2차 30%이고, 수행평가 두 개(30%)가 모두 9월 안에 끝납니다. 세포 분열 관찰이 9월 1주, 가계도 분석이 9월 3주입니다.",
     assessments: [
@@ -51013,7 +51013,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "기본권 구제 논술 15%(9월 2주)·정치적 무관심 해결책 논술 20%(9월 5주)·독서 개념 15%",
+    summary: "기본권 과제는 사례·요건·구제를 5점씩, 대의제와 정치적 무관심이 20점이며 논술형은 40%입니다",
     intro:
       "화정중학교 1학년 사회는 12월 3주 2차 정기시험 50%와 수행평가 세 개 50%입니다. 두 논술 과제가 9월 2주와 9월 5주에 연달아 있고, 교과 연계 독서 과제는 9월 2주부터 12월 1주까지 이어집니다.",
     assessments: [
@@ -51045,7 +51045,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "신항로개척 주장하는 글쓰기 30%(9월 2주)·제국주의 탐구 글쓰기 20%(10월 3주) · 시험 50%",
+    summary: "신항로 과제에 논술형 20점이 있고, 제국주의 옹호 논리에 반박하는 글을 쓰는 과제가 이어집니다",
     intro:
       "화정중학교 2학년 역사는 12월 3주 2차 정기시험 50%와 글쓰기 수행평가 두 개 50%입니다. 신항로 개척 글쓰기(30%)가 9월 2주, 제국주의 글쓰기(20%)가 10월 3주에 있습니다.",
     assessments: [
@@ -51076,7 +51076,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "사회 인구 이동·인구 문제 분석 50%, 역사 연표·문화 안내 소책자 50% · 과목별 시험 50%",
+    summary: "사회는 인구 유입·유출 네 방향을 5점씩, 역사는 연표 30점 중 논술형 20점이며 논술형은 사회 45%·역사 35%입니다",
     intro:
       "화정중학교 3학년은 사회와 역사가 모두 11월 3주 2차 정기시험 50%, 수행평가 50% 구조입니다. 사회는 인구 단원 과제 두 개(9월 2주, 10월 2~3주), 역사는 역사 연표(10월 1주)와 문화 안내 소책자(10월 4주)를 평가합니다.",
     assessments: [
@@ -51110,7 +51110,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "진솔한 글쓰기 3회(9~11월)·한 학기 한 권 읽기(9~12월) 각 30% · 12월 1주 기말고사 40%",
+    summary: "진솔한 글은 형식을 바꿔 세 번 쓰고, 독서활동은 내용과 성실성을 보며 기말 범위는 성장 소설부터 추론하며 읽기까지",
     intro:
       "삼성중학교 1학년 국어는 12월 1주 기말고사 한 번이 40%, 수행평가 두 영역이 30%씩입니다. 진솔한 글쓰기는 9~11월에 세 번, 독서활동(한 학기 한 권 읽기)은 9~12월에 수시로 평가합니다.",
     assessments: [
@@ -51141,7 +51141,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "학습과정평가 20%(어휘력·독서능력·과제완성도) · 말하기(11월)·듣기(9월) 각 10%",
+    summary: "학습과정평가는 세 갈래를 수시로 모으고, 듣기는 시도교육청 평가이며 시험은 Lesson 5~8에 서답형 40%입니다",
     intro:
       "삼성중학교 1학년 영어는 10월 2주 중간고사와 12월 2주 기말고사가 30%씩이고, 수행평가 40% 중 학습과정평가가 20%로 가장 큽니다. 말하기능력평가와 듣기능력평가는 각각 한 번씩 10%입니다.",
     assessments: [
@@ -51174,7 +51174,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "재판 정리하기 2회(11월)·혁명에 대한 탐구(10월) 등 수행 60% · 사회·역사 기말 각 40%",
+    summary: "사회는 민주주의 비교와 재판 절차 정리를, 역사는 혁명 탐구를 구술·발표로 하며 두 과제는 표마다 시기가 다릅니다",
     intro:
       "삼성중학교 2학년 사회와 역사는 둘 다 12월 기말고사 한 번이 40%이고 수행평가가 60%입니다. 사회는 수행 두 영역이 30%씩, 역사는 중간고사 없이 수행 세 영역이 20%씩입니다.",
     assessments: [
@@ -51209,7 +51209,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "매쓰 오딧세이 3회(11월)·매스 트랙(8~11월 수시) 각 20% · 중간 10월 2주·기말 12월 2주",
+    summary: "매쓰 오딧세이는 수학 독서 프로젝트, 매스 트랙은 노트와 기록지 누적이며 중간은 확률·삼각형, 기말은 닮음입니다",
     intro:
       "삼성중학교 2학년 수학은 중간고사(10월 2주)와 기말고사(12월 2주)가 30%씩, 수행평가가 40%입니다. 수행평가는 독서 활동 중심의 매쓰 오딧세이와 노트·학습 기록 중심의 매스 트랙이 20%씩입니다.",
     assessments: [
@@ -51241,7 +51241,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "탐구실험 30%(9월 1회, 소화계 성취기준)·포트폴리오 30%(수시) · 12월 1주 기말 40%",
+    summary: "탐구실험은 [9과13-01] 하나로 보고, 포트폴리오는 물질의 구성부터 전기까지 이어지며 기말 뒤엔 별과 우주를 배웁니다",
     intro:
       "삼성중학교 2학년 과학은 12월 1주 기말고사 한 번이 40%, 탐구실험과 포트폴리오가 30%씩입니다. 탐구실험은 9월 소화계 단원에서 한 번 실시하고 포트폴리오는 학기 내내 수시로 평가합니다.",
     assessments: [
@@ -51272,7 +51272,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "구술 말하기능력평가(11월)·선택형 듣기능력평가(9월) 각 10% · 학습과정평가는 수시 20%",
+    summary: "매달 핵심 표현을 말하는 활동이 있고, 학습과정평가에는 성취기준 일곱 개가 묶이며 듣기는 9월 전국 평가로 봅니다",
     intro:
       "삼성중학교 2학년 영어는 정기시험 60%(중간 10월 2주·기말 12월 2주 각 30%), 수행평가 40%로 나뉩니다. 수행평가는 수시로 쌓는 학습과정평가 20%에 11월 말하기와 9월 듣기가 10%씩 더해집니다.",
     assessments: [
@@ -51305,7 +51305,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "독서활동(‘키오스크 학교’, 9·10월 3회)·설득하는 글 쓰기(10월 3회) 각 30% · 10월 4주 기말",
+    summary: "선정도서 한 권으로 일지·질의응답지·감상문을 쓰고, 설득하는 글은 계획·고쳐쓰기·발표로 이어집니다",
     intro:
       "삼성중학교 3학년 국어는 10월 4주 기말고사 한 번이 40%, 수행평가 두 영역이 30%씩입니다. 정기시험이 10월에 끝나고, 독서활동과 설득하는 글 쓰기도 9~10월 안에 세 번씩 평가합니다.",
     assessments: [
@@ -51336,7 +51336,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회", "역사"],
-    summary: "인구문제 해결방안 탐구하기(9월)·글로벌 상품 제작 계획서(10월)·독도프로젝트 등",
+    summary: "사회는 통계로 인구 대책을 세우고 다국적 기업 구조로 상품을 구상하며, 역사는 머그컵과 독도알리기 작품을 만듭니다",
     intro:
       "삼성중학교 3학년 사회와 역사는 모두 10월 4주 기말고사 한 번(40%)으로 정기시험을 마치고 수행평가가 60%입니다. 사회는 두 영역이 30%씩, 역사는 중간고사 없이 세 영역이 20%씩입니다.",
     assessments: [
@@ -51371,7 +51371,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "노트 및 학습 과정 활동 보고서(수시 2회)·통계 프로젝트(10월) 각 30% · 10월 4주 기말",
+    summary: "노트 보고서는 두 번 걷고, 통계 프로젝트는 대푯값과 분산을 다루며 기말 뒤에는 산점도와 총정리가 남습니다",
     intro:
       "삼성중학교 3학년 수학은 10월 4주 기말고사 한 번이 40%, 수행평가 두 영역이 30%씩입니다. 통계 프로젝트는 대푯값과 산포도를 배우는 10월에 진행됩니다.",
     assessments: [
@@ -51402,7 +51402,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "탐구실험 30%(9월, 체세포 분열 성취기준)·포트폴리오 30%(수시) · 10월 4주 기말 40%",
+    summary: "9월에 체세포 분열을 관찰하고, 포트폴리오는 신경계 모형부터 쌓으며 기말은 10월에 서답형 40점이 있습니다",
     intro:
       "삼성중학교 3학년 과학은 10월 4주 기말고사가 40%, 탐구실험과 포트폴리오가 30%씩입니다. 기말 평가요소는 자극과 반응의 신경계와 호르몬, 생식과 유전, 역학적 에너지 전환과 보존입니다.",
     assessments: [
@@ -51433,7 +51433,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "학습과정평가 25%(어휘·자기주도학습노트·독서) · 말하기 20%(10월) · 듣기 15%(9월)",
+    summary: "학습과정평가는 노트와 독서까지 아우르고, 말하기는 의견과 경험을 묻고 답하며 기말 범위는 Lesson 5~7입니다",
     intro:
       "삼성중학교 3학년 영어는 10월 4주 기말고사 한 번이 40%이고, 수행평가 세 영역이 25%·20%·15%로 비중이 다릅니다. 정기시험이 10월에 끝나 수행평가 비중이 60%입니다.",
     assessments: [
@@ -51633,7 +51633,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통국어2"],
-    summary: "시조 비평과 창작 20%(8월 4주~9월 1주) · 배움 탐구와 질문 포트폴리오 20% · 1·2차 시험",
+    summary: "시조 과제는 비평 12점과 창작 8점, 포트폴리오는 네 요소를 학기 내내 쌓고 동점자는 포트폴리오부터 비교합니다",
     intro:
       "상현고등학교 1학년 공통국어2는 1차(10월 3주)·2차(12월 3주) 정기시험이 각 30%, 수행평가 두 과제가 각 20%입니다. 정기시험은 선택형 100점으로 배점되어 있고, 논술형 평가 반영 비율 40%는 모두 수행평가에서 나옵니다.",
     assessments: [
@@ -51665,7 +51665,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["화법과 언어"],
-    summary: "토론 영상 분석 및 논증적 비평하기 20%(10월 1주) · 매체 속 음운 변동 10%(8월 4주)",
+    summary: "토론 비평은 진로와 이어진 주제로 하고, 음운 변동은 대중가요 가사에서 찾으며 시험엔 문법과 화법이 함께 나옵니다",
     intro:
       "상현고등학교 2학년 화법과 언어는 정기시험 비중이 70%로, 1차(10월 3주)와 2차(12월 3주)가 각 35%입니다. 수행평가 30%는 토론 영상 비평 20%와 매체 속 음운 변동 탐구 10% 두 과제입니다.",
     assessments: [
@@ -51697,7 +51697,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["공통수학2"],
-    summary: "도형의 방정식 수학적모델링 15%(9월) · 집합과 명제 진로 탐색 15%(11월) · 포트폴리오 10%",
+    summary: "모델링 과제는 세 요소를 5점씩, 진로 탐색 과제는 2차 시험 전 11월에 하며 논술형 반영은 31.8%입니다",
     intro:
       "상현고등학교 1학년 공통수학2는 1차(10월 3주)·2차(12월 3주) 정기시험이 각 30%, 수행평가 세 영역이 40%입니다. 1차 시험에만 논술형 6점이 있고 2차 시험은 선택형 100점으로 배점되어 있습니다.",
     assessments: [
@@ -51730,7 +51730,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["미적분Ⅰ"],
-    summary: "미적분을 활용한 실생활 문제해결 20%(11월 4주) · 함수의 그래프 탐구 10%(10월 5주)",
+    summary: "실생활 문제해결은 네 요소를 5점씩 보고, 그래프 탐구는 1차 시험 직후이며 논술형 반영은 34.5%입니다",
     intro:
       "상현고등학교 2학년 미적분Ⅰ은 정기시험 60%(1차 10월 3주·2차 12월 3주 각 30%)와 수행평가 40%로 평가합니다. 1차 시험은 선택형 85점과 논술형 15점으로, 2차 시험은 선택형 100점으로 배점되어 있습니다.",
     assessments: [
@@ -51763,7 +51763,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어Ⅱ"],
-    summary: "지문기반 주제탐구논술Ⅰ·Ⅱ 각 10% · 상황 분석 및 의견 제시 논술 10% · 포트폴리오 10%",
+    summary: "주제탐구논술 Ⅰ·Ⅱ는 같은 기준으로 채점하고, 포트폴리오는 기록과 문장 분석으로 채웁니다",
     intro:
       "상현고등학교 2학년 영어Ⅱ는 1차(10월 3주)·2차(12월 3주) 정기시험이 각 30%이고, 수행평가 40%가 네 영역에 10%씩 나뉩니다. 정기시험은 선택형 100점이라 논술형 평가 30%는 모두 수행평가의 세 논술 과제에서 나옵니다.",
     assessments: [
@@ -51797,7 +51797,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["한국사2", "통합사회2"],
-    summary: "한국사2 주제 탐구 토론·필사노트 각 20% · 통합사회2 인권·금융생활 탐구 각 15%",
+    summary: "한국사2 토론은 네 요소 5점씩, 통합사회2 두 탐구는 4·4·4·3점 구조이며 논술형 반영은 32%와 30%입니다",
     intro:
       "상현고등학교 1학년 사회 영역은 한국사2와 통합사회2 두 과목이며, 둘 다 정기시험 60%·수행평가 40%입니다. 한국사2는 1·2차 시험마다 논술형 20점이 있고, 통합사회2는 1·2차 시험을 선택형 100점으로 봅니다.",
     assessments: [
@@ -51834,7 +51834,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["통합과학2", "과학탐구실험2"],
-    summary: "통합과학2 중화반응·기상이변 탐구·과학이론 포트폴리오 각 15% · 과학탐구실험2 수행 100%",
+    summary: "과학탐구실험2는 홍보물과 측정 실험으로 이뤄지고, 논술형 반영은 통합과학2 30%, 과학탐구실험2 40%입니다",
     intro:
       "상현고등학교 1학년 과학은 통합과학2와 과학탐구실험2 두 과목입니다. 통합과학2는 정기시험 55%(1·2차 각 27.5%)와 수행평가 45%이고, 과학탐구실험2는 정기시험 없이 수행평가 세 과제가 100%입니다.",
     assessments: [
@@ -51870,7 +51870,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "시평 쓰기 20%(9월 2주~11월 4주) · 한 학기 한 권 읽기 프로젝트 20% · 책 대화하기 10%",
+    summary: "시평은 네 요소를 5점씩, 한 권 읽기에서 논제 의견은 6점이며 책 대화는 해석·근거·말하기를 봅니다",
     intro:
       "상현중학교 1학년 국어는 2학기 정기시험이 12월 3주 2차 시험 한 번이고 반영 비율은 50%입니다. 나머지 50%는 시평 쓰기, 한 학기 한 권 읽기 프로젝트, 책 대화하기 세 수행평가가 나눕니다.",
     assessments: [
@@ -51902,7 +51902,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["사회"],
-    summary: "지위와 역할 분석하기·미디어 미니북 만들기·민주 선거제도 탐구하기 각 20% · 지필 40%",
+    summary: "지위와 역할 분석은 역할갈등 사례가 6점, 미니북에는 허위·과장 정보 사례를 담고 의무 투표제를 논술합니다",
     intro:
       "상현중학교 1학년 사회는 수행평가가 60%로 12월 3주 2차 지필평가(40%)보다 비중이 큽니다. 수행평가는 9월 2주, 9월 4주, 11월 3주에 20%씩 세 번 나뉘어 있습니다.",
     assessments: [
@@ -51934,7 +51934,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "도형의 성질 기술하기 25%(10월 5주~11월 1주) · 입체도형 문제해결 프로젝트 15% · 작도 10%",
+    summary: "작도 배점은 3·3·4점이고, 성질 기술하기는 다섯 문항으로 이뤄집니다",
     intro:
       "상현중학교 1학년 수학은 12월 3주 2차 정기시험 한 번이 50%이고, 수행평가 50%는 10월~11월에 이어지는 세 과제로 나뉩니다. 논술형 평가 반영 비율은 시험 논술형 5%와 도형의 성질 기술하기 25%를 합한 30%입니다.",
     assessments: [
@@ -51966,7 +51966,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "세포 탐구 20%(9월 3~4주) · 기체의 부피 변화 탐구 논술 20%(11월 2주) · 장치 고안 10%",
+    summary: "세포 탐구는 5점 단위 네 요소, 장치 고안은 제안서로 마무리하고 기체 논술은 그래프 해석부터 시작합니다",
     intro:
       "상현중학교 1학년 과학은 12월 3주 2차 정기시험이 50%, 수행평가 세 과제가 50%입니다. 수행평가는 9월 3~4주 세포, 10월 2주 힘, 11월 2주 기체 순으로 진행됩니다.",
     assessments: [
@@ -51998,7 +51998,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["영어"],
-    summary: "환경 보호 촉구 글쓰기 20%(10월 1주) · 희망 직업 소개하기 20%(10월 5주) · 프로세스폴리오 10%",
+    summary: "쓰기와 말하기를 같은 네 요소로 채점하고, 프로세스폴리오가 10점이며 논술형 반영은 45%입니다",
     intro:
       "상현중학교 1학년 영어는 12월 3주 2차 정기시험이 50%이고, 쓰기·말하기·프로세스폴리오 수행평가가 50%입니다. 쓰기는 10월 1주, 말하기는 10월 5주이며 의사소통 프로세스폴리오는 9월~11월에 상시 평가합니다.",
     assessments: [
@@ -52209,7 +52209,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "복합양식 자료 제작 20%(10월 1~2주)·읽기 과정 메모 15%·독서일지 15% · 정기시험 2회 각 25%",
+    summary: "복합양식 자료는 쓰기 과정 네 단계를 5점씩, 메모는 읽기 전·중·후 전략을 보며 독서일지엔 완독 권수도 들어갑니다",
     intro:
       "솔밭중학교 2학년 국어는 정기시험 두 번(각 25%)과 수행평가 세 개(50%)가 같은 비중입니다. 수행평가 세 개가 모두 서·논술형으로 잡혀 있어, 한 학기 환산점의 절반이 쓰기 결과물로 정해집니다.",
     assessments: [
@@ -52242,7 +52242,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["국어"],
-    summary: "인문고전 독서활동 20%(9월)·문장의 짜임 분석하기 20%(10월)·학습활동 10% · 정기시험 1회 50%",
+    summary: "인문고전 독서는 12개 기준으로 10회 평가하고, 문장 분석은 어미의 역할까지 묻습니다",
     intro:
       "솔밭중학교 3학년 국어는 10월 26일~28일 정기시험 한 번이 50%이고, 남은 50%를 인문고전 독서활동, 문장의 짜임 분석하기, 학습활동이 나눕니다. 서·논술형 40%는 독서활동과 문장 분석 두 과제에서 나옵니다.",
     assessments: [
@@ -52274,7 +52274,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "문제해결역량 서·논술 5문항 20%(10월) · 수학적 의사소통 20%(8~12월) · 정기시험 2회 각 30%",
+    summary: "문제해결역량은 문항당 4점, 의사소통은 네 요소에 5점씩이며 2차 시험엔 확률 단원이 더해집니다",
     intro:
       "솔밭중학교 2학년 수학은 10월과 12월 정기시험이 각 30%, 수행평가가 40%입니다. 수행평가는 10월에 한 번 보는 서·논술형 문제해결역량 20%와, 8월부터 12월까지 수시로 쌓는 수학적 의사소통 20%로 나뉩니다.",
     assessments: [
@@ -52306,7 +52306,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["수학"],
-    summary: "삼각비 문제해결역량 20%(9월 3~4주) · 수학적 의사소통 20%(8~10월) · 정기시험 1회 60%",
+    summary: "서·논술형 범위가 삼각비 두 성취기준에 한정되고, 정기시험은 통계 단원까지, 의사소통은 10월에 마감합니다",
     intro:
       "솔밭중학교 3학년 수학은 10월 26~28일 정기시험 한 번이 60%로 가장 크고, 수행평가 40%가 두 영역에 20%씩 배분됩니다. 서·논술형 문제해결역량은 9월 3~4주에 삼각비 단원만으로 치릅니다.",
     assessments: [
@@ -52337,7 +52337,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["역사"],
-    summary: "일상 속 세계사 탐구 20%(5회)·사료 탐구 및 분석 15%(10월)·현대 세계의 변화 서술 15%(12월)",
+    summary: "사료 탐구는 근대 이전 아시아와 시민 혁명, 12월 서술은 세계 대전과 냉전을 다루고 일상 세계사는 독서 자료가 바탕입니다",
     intro:
       "솔밭중학교 2학년 역사는 3회·4회 고사가 각 25%, 수행평가가 50%입니다. 사료 탐구는 3회 고사가 있는 10월에, 현대 세계 서술은 4회 고사가 있는 12월에 배치되고, 일상 속 세계사 탐구는 8월~12월에 5회 이어집니다.",
     assessments: [
@@ -52370,7 +52370,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "주제 탐구 활동 20%(광합성·소화·자기장·별) · 자료 분석 및 해석 20% · 증거로 문제 해결 10%",
+    summary: "주제 탐구는 네 단원 실험을 5점씩, 서술형은 인체 순환과 전기 회로를 10점씩 다룹니다",
     intro:
       "솔밭중학교 2학년 과학은 정기시험 두 번이 각 25%, 수행평가 세 영역이 50%입니다. 세 수행평가 모두 8월~12월 수시로 진행되며, 서·논술형 20%는 순환·호흡·배설과 전기 회로를 서술하는 자료 분석 및 해석에서 나옵니다.",
     assessments: [
@@ -52403,7 +52403,7 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     status: "published",
     planTerm: "2026-2",
     courses: ["과학"],
-    summary: "자료 분석 서·논술 20%(2회)·주제 탐구 실험 20%(2회)·STS 연계 10%(3회) · 정기시험 1회 50%",
+    summary: "서·논술형은 세포 분열과 별로 두 번, 실험은 가계도와 역학적 에너지, STS 활동은 세 편입니다",
     intro:
       "솔밭중학교 3학년 과학은 10월 26일~28일 정기시험 한 번이 50%이고, 수행평가 50%는 모두 8월~10월로 잡혀 있습니다. 횟수도 서·논술형 2회, 실험·실습 2회, 포트폴리오 3회로 표에 정해져 있습니다.",
     assessments: [
