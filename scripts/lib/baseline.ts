@@ -143,7 +143,14 @@ export const BASELINE = {
   // 동 hub 16 + 동×과목 80 + 학년 hub 147 + 학년×과목 611 + city hub 13 = sitemap +867 → 3789 → 4656.
   // totalRoutes 16756 → 17961(+1205 = 854 신규 색인 + 351 조합 noindex), noindex 12965 → 13303(+351 −13).
   // 학습 가이드 +10은 Batch 42 위에 병합: 17961 → 17971, sitemap 4656 → 4666, noindex 13303 유지.
-  totalRoutes: 17971,
+  // 2026-11-09 Batch 43 = 전국 확장 18개 동(안성 안성3동, 충주 호암.직동, 평택 비전2동, 울산 중구 약사동, 울산 북구 농소1동,
+  // 동두천 생연1동, 서울 중랑 중화제1동·망우본동, 강동 상일제1동, 종로 혜화동, 대전 중구 문화1동, 이천 증포동, 증평 증평읍,
+  // 대전 동구 가양2동, 은평 갈현제2동, 구로 수궁동, 금천 독산제1동, 횡성 둔내면; 새 도시 14곳 안성·충주·울산 중구·북구·동두천·
+  // 중랑·강동·종로·이천·증평·은평·구로·금천·횡성): 학교 100곳 등록(전국 학교 route 기존), 콘텐츠는 47교.
+  // 새 도시 14곳 city hub 색인(+14 sitemap), 조합 route 14 × 27 = 378개는 새로 생기되 noindex.
+  // 동 hub 18 + 동×과목 89 + 학년 hub 99 + 학년×과목 376 + city hub 14 = sitemap +596 → 4666 → 5262.
+  // totalRoutes 17971 → 18931(+960 = 582 신규 색인 + 378 조합 noindex), noindex 13303 → 13667(+378 −14).
+  totalRoutes: 18931,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -155,7 +162,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 4666,
-  noindexCount: 13303,
+  sitemapCount: 5262,
+  noindexCount: 13667,
   brokenLinks: 0,
 };
