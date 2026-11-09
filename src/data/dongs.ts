@@ -352,6 +352,21 @@ export const dongs: AdminDong[] = [
   { slug: "gwangjang-dong", code: "1121581000", name: "광장동", citySlug: "gwangjin", legalDongs: ["광장동"] },
   { slug: "jayang3-dong", code: "1121584000", name: "자양제3동", citySlug: "gwangjin", legalDongs: ["자양동"] },
   { slug: "sinseol-dong", code: "1123051500", name: "신설동", citySlug: "dongdaemun", legalDongs: ["신설동","용두동"] },
+  // 2026-11-10 Batch 44 전국 확장 (행정동 코드: data/official/admin-dongs.json)
+{ slug: "myeonmok38-dong", code: "1126057500", name: "면목제3.8동", citySlug: "jungnang", legalDongs: ["면목동"] },
+  { slug: "junghwa1-dong", code: "1126060000", name: "중화제1동", citySlug: "jungnang", legalDongs: ["중화동"] },
+  { slug: "muk1-dong", code: "1126062000", name: "묵제1동", citySlug: "jungnang", legalDongs: ["묵동"] },
+  { slug: "samseon-dong", code: "1129055500", name: "삼선동", citySlug: "seongbuk", legalDongs: ["돈암동","동소문동2가","동소문동3가","동소문동5가","삼선동1가","삼선동2가","삼선동3가","삼선동4가","삼선동5가"] },
+  { slug: "seokgwan-dong", code: "1129081000", name: "석관동", citySlug: "seongbuk", legalDongs: ["석관동"] },
+  { slug: "suyu1-dong", code: "1130561500", name: "수유1동", citySlug: "gangbuk", legalDongs: ["수유동"] },
+  { slug: "chang4-dong", code: "1132051400", name: "창제4동", citySlug: "dobong", legalDongs: ["창동"] },
+  { slug: "junggye1-dong", code: "1135062100", name: "중계1동", citySlug: "nowon", legalDongs: ["중계동"] },
+  { slug: "gusan-dong", code: "1138056000", name: "구산동", citySlug: "eunpyeong", legalDongs: ["구산동"] },
+  { slug: "daejo-dong", code: "1138057000", name: "대조동", citySlug: "eunpyeong", legalDongs: ["대조동"] },
+  { slug: "hongeun2-dong", code: "1141068500", name: "홍은제2동", citySlug: "seodaemun", legalDongs: ["홍은동"] },
+  { slug: "yeonnam-dong", code: "1144071000", name: "연남동", citySlug: "mapo", legalDongs: ["연남동"] },
+  { slug: "guro1-dong", code: "1153052000", name: "구로제1동", citySlug: "guro", legalDongs: ["구로동"] },
+  { slug: "guro5-dong", code: "1153056000", name: "구로제5동", citySlug: "guro", legalDongs: ["구로동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
