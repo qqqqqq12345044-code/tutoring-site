@@ -63176,6 +63176,18258 @@ export const schoolGradeSubjectContents: SchoolGradeSubjectContent[] = [
     ],
     sources: [schoolInfoPlanSource("용산중학교")],
   },
+  // 2026-11-09 Batch 42 전국 확장 16개 동 (학교알리미 2026년 3차 공시 평가계획 근거)
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장하는 글쓰기(10월 1~2주) 30%·삶과 만나는 독서 포트폴리오 30%, 12월 시험 1회",
+    intro:
+      "안일중학교 1학년 국어 성적은 수행평가 60%가 이끕니다. 10월 1~2주에 주장하는 글을 쓰고, 9월부터 11월까지 주 1회 '한 학기 한 권 읽기' 시간에 소설 한 권의 독서 기록을 쌓아 각각 30%를 받습니다. 지필은 12월 3주 2차 정기시험 한 번뿐이며 선택형 36%와 논술형 4%로 나뉩니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 36, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 4, timing: "12월 3주", method: "논술형 10점" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 30, timing: "10월 1주~2주", method: "논술형" },
+      { name: "삶과 만나는 독서하기", kind: "task", weight: 30, timing: "9월~11월", method: "프로세스폴리오" },
+    ],
+    notes: [
+      {
+        title: "주장하는 글은 계획부터 표현까지",
+        body: "주제·목적·독자를 고려한 계획, 출처가 분명한 자료 두 가지 찾기, 서론·본론·결론 개요, 근거를 든 글쓰기, 설득력 있는 표현이 6점씩이고 기본점수는 10점입니다. 교사 관찰에 더해 자기평가와 동료평가도 표시된 [9국03-03] 과제입니다.",
+      },
+      {
+        title: "독서 일지에 낯선 낱말까지",
+        body: "인상적인 부분과 그 까닭, 낯선 낱말이나 개념을 정리한 독서 일지가 10점이고 갈등 파악 10점, 삶과 연관 지은 감상 10점을 더해 프로세스폴리오로 봅니다. 성취기준은 [9국05-02]·[9국05-03]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "기본 도형과 작도(10월 1주) 30%·평면도형의 성질(12월 1주) 30% 논술형, 시험 2회",
+    intro:
+      "안일중학교 1학년 수학 수행평가는 모두 도형 단원입니다. 10월 1주 '기본 도형과 작도', 12월 1주 '평면도형의 성질'이 논술형 30%씩이고, 9월 4주와 12월 3주 정기시험은 회차마다 선택형 18%·논술형 2%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 18, timing: "9월 4주", method: "선택형" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 2, timing: "9월 4주", method: "논술형" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 18, timing: "12월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형" },
+      { name: "기본 도형과 작도 이해하기", kind: "task", weight: 30, timing: "10월 1주", method: "논술형" },
+      { name: "평면도형의 성질 이해하기", kind: "task", weight: 30, timing: "12월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "작도 과제는 맞꼭지각부터 합동까지",
+        body: "점·선·면과 맞꼭지각 개념, 동위각과 엇각 찾기, 삼각형 작도 과정 네 단계 서술, 합동 조건과 그 이유, 합동인 세 쌍 찾기가 6점씩이고 기본점수 12점입니다. 성취기준은 [9수03-01]~[9수03-04]입니다.",
+      },
+      {
+        title: "평면도형은 부채꼴 넓이까지",
+        body: "다각형의 내각·외각과 대각선 개수, 삼각형의 내각, 정다각형 내각과 외각의 크기의 합, 중심각과 호의 관계, 부채꼴의 호의 길이와 넓이를 6점씩 봅니다. 풀이 과정 세 단계와 답 가운데 몇 개를 맞혔는지로 점수가 갈리며 [9수03-05]·[9수03-06]을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "세계 음식 레시피 작성(10월 3~4주) 25%·소개(10월 4~5주) 20%, 상시 글쓰기 15%",
+    intro:
+      "안일중학교 1학년 영어는 정기시험 두 번이 각각 20%(선택형 18%·논술형 2%)이고, 세계 음식 레시피를 쓰고 소개하는 연속 과제와 학기 내내 이어지는 글쓰기가 수행평가로 잡혀 있습니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 18, timing: "9월 4주", method: "선택형" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 2, timing: "9월 4주", method: "논술형" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 18, timing: "12월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형" },
+      { name: "세계 음식 레시피 작성하기", kind: "task", weight: 25, timing: "10월 3~4주", method: "논술형" },
+      { name: "세계 음식 레시피 소개하기", kind: "task", weight: 20, timing: "10월 4~5주", method: "프로젝트" },
+      { name: "생각이나 일상을 표현하는 글쓰기", kind: "task", weight: 15, timing: "8월 4주~11월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "레시피는 쓰기 다음 소개",
+        body: "레시피 작성은 5·7·7·6점 네 항목, 이어지는 소개는 4·10·6점 세 항목으로 채점하며 소개 자료는 캔바로 만듭니다.",
+      },
+      {
+        title: "상시 글쓰기 15%",
+        body: "8월 4주부터 11월 4주까지 생각이나 일상을 영어로 쓰는 과제가 이어지고, 5점씩 세 항목으로 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "독서 신문(10월 2~3주) 25%·주장하는 발표(11월 1~2주) 25%·책 읽기 10%, 시험 2회",
+    intro:
+      "안일중학교 2학년 국어는 9월 4주와 12월 3주 정기시험이 각각 선택형 18%·논술형 2%이고, 수행평가 세 개가 25%·25%·10%입니다. 발표 과제는 구술과 논술을 함께 봅니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 18, timing: "9월 4주", method: "선택형" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 2, timing: "9월 4주", method: "논술형" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 18, timing: "12월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형" },
+      { name: "독서 신문 만들기", kind: "task", weight: 25, timing: "10월 2~3주", method: "논술형" },
+      { name: "주장하는 발표하기", kind: "task", weight: 25, timing: "11월 1주~2주", method: "구술형 및 논술형" },
+      { name: "삶과 만나는 책 읽기", kind: "task", weight: 10, timing: "9월 4주~10월 1주", method: "프로젝트형" },
+    ],
+    notes: [
+      {
+        title: "신문은 기사 세 종류",
+        body: "요약 기사 5점, 상황 기사 10점, 사설 10점으로 구성되며 성취기준은 [9국05-05]입니다.",
+      },
+      {
+        title: "발표는 자료·논증·성찰",
+        body: "자료 10점, 논증 10점, 성찰 5점으로 채점하고, 이 과제 25% 가운데 15%가 논술형 몫으로 잡혀 있습니다. 책 읽기 과제는 3·4·3점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "사회문제 스토리보드(10월 1~2주) 25%·인권 그림책 제작 25%, 12월 시험 1회",
+    intro:
+      "2학년 사회의 수행 50%는 책 읽기와 이어집니다. 10월 1~2주에는 책 속 사회문제를 스토리보드로 옮기고, 이어서 인권 감수성을 담은 그림책을 만드는데 둘 다 논술형 25%입니다. 12월 3주 정기시험 한 번이 나머지 50%(선택형 45%·논술형 5%)입니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형" },
+      { name: "사회문제 스토리보드 작성하기", kind: "task", weight: 25, timing: "10월 1주~2주", method: "논술형" },
+      { name: "인권 감수성을 담은 그림책 제작하기", kind: "task", weight: 25, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "스토리보드 앞에 독후감과 감상평",
+        body: "책에 나타난 사회문제 분석, 독후감, 생활 경험과 잇는 감상평이 5점씩이고 스토리보드 완성도가 10점, 기본점수 9점입니다. 민주주의의 특징과 과제를 다루는 [9사(일사)03-03] 과제입니다.",
+      },
+      {
+        title: "그림책은 장면 설명이 10점",
+        body: "주제 선정·줄거리·콘티와 본문이 5점씩, 인권 감수성이 드러난 장면의 번호를 적고 설명하는 항목이 10점입니다. 성취기준은 [9사(일사)06-01]이며 비율표와 진도표의 실시 주차가 달라 시기는 비워 두었습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심과 내심(10월 2주) 30%·삼각형과 사각형의 성질 표현(10월 4주) 30%, 시험 2회",
+    intro:
+      "10월 2주와 4주, 두 주 간격으로 논술형 수행이 이어집니다. 외심·내심을 작도하는 과정을 쓰는 과제와 삼각형·사각형 성질을 서술하는 과제가 각 30%이고, 정기시험은 9월 4주·12월 3주에 선택형 18%와 논술형 2%씩 치릅니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 18, timing: "9월 4주", method: "선택형" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 2, timing: "9월 4주", method: "논술형" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 18, timing: "12월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형" },
+      { name: "삼각형의 외심과 내심 이해하기", kind: "task", weight: 30, timing: "10월 2주", method: "논술형" },
+      { name: "삼각형과 사각형의 성질 표현하기", kind: "task", weight: 30, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "수직이등분선과 각의 이등분선",
+        body: "외심은 세 변의 수직이등분선, 내심은 세 내각의 이등분선을 조건에 맞게 나타냈는지로 각각 15점을 매기고 기본점수는 6점입니다. 성취기준은 [9수03-10]입니다.",
+      },
+      {
+        title: "사각형 사이의 관계가 8점",
+        body: "직각삼각형 합동조건 5점, 외심의 용어·의미·위치 6점, 내심 4점, 여러 가지 사각형 사이의 관계 8점, 평행사변형이 되는 조건 7점에 기본점수 12점이며 [9수03-09]~[9수03-11]을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "나의 꿈 소개(9월 5주~10월 1주) 20%·상시 글쓰기 20%·듣기(11월 4주) 10%",
+    intro:
+      "안일중학교 2학년 영어는 정기시험 두 번이 각각 25%(선택형 22.5%·논술형 2.5%)이고, 수행평가는 쓰기 두 개 20%씩과 듣기 10%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 22.5, timing: "9월 4주", method: "선택형" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 2.5, timing: "9월 4주", method: "논술형" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 22.5, timing: "12월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 2.5, timing: "12월 3주", method: "논술형" },
+      { name: "담화를 듣고 내용 파악하기", kind: "task", weight: 10, timing: "11월 4주", method: "표현형" },
+      { name: "나의 꿈(장래희망) 소개하기", kind: "task", weight: 20, timing: "9월 5주~10월 1주", method: "논술형" },
+      { name: "자신의 일상 또는 의견을 표현하는 글쓰기", kind: "task", weight: 20, timing: "8월 4주~11월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "꿈 소개는 7문장 이상",
+        body: "장래희망 소개 글은 7문장 이상으로 쓰며 3·7·4·3·3점 다섯 항목으로 채점합니다.",
+      },
+      {
+        title: "상시 글쓰기는 네 주제",
+        body: "일상, 경험, 계획, 의견을 5점씩 평가하고, 듣기 과제는 3·3·4점 세 항목입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "탐구 보고서 쓰기(10월 1~2주) 30%·읽기 과정 점검(10월 5주) 30%, 11월 시험 1회",
+    intro:
+      "논술형 과제 두 개가 모두 10월에 몰린 구성입니다. 1~2주 탐구 보고서와 5주 읽기 과정 점검 글이 각 30%를 차지하고, 지필은 11월 3주 2차 정기시험 하나(선택형 36%·논술형 4%)로 끝납니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 36, timing: "11월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 4, timing: "11월 3주", method: "논술형" },
+      { name: "탐구 보고서 쓰기", kind: "task", weight: 30, timing: "10월 1주~2주", method: "논술형" },
+      { name: "읽기 과정 점검하며 읽기", kind: "task", weight: 30, timing: "10월 5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "보고서는 시각 자료와 출처까지",
+        body: "활동 계획 5점, 탐구 자료 마련 8점(세 가지면 만점), 보고서 쓰기 12점, 쓰기 윤리 5점에 기본점수 8점입니다. 보고서 쓰기는 목적에 맞는 전개, 절차와 결과 제시, 간결한 표현, 시각 자료 활용 네 요소를 몇 개 갖췄는지로 매기고, 인용 자료의 출처를 정확히 밝혀야 쓰기 윤리 5점입니다. [9국03-03]·[9국03-10].",
+      },
+      {
+        title: "읽기 전·중·후를 따로 채점",
+        body: "[9국02-09] 과제는 읽는 목적과 질문 만들기 5점, 각 부분 중심 내용과 글쓴이 의도 파악 10점, 요약과 더 알고 싶은 내용 정리 8점, 읽으며 겪은 문제와 조정 방법을 쓰는 글 7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "우리 고장 지역화 전략(8월 4~5주) 30%·인구 문제 분석 30%, 11월 시험 1회",
+    intro:
+      "지리 단원 두 과제가 60%를 차지합니다. 8월 4~5주 우리 고장 지역화 전략과 인구 문제 분석이 각 30% 논술형이고, 11월 3주 2차 정기시험은 선택형 36%에 논술형 4%를 더해 한 번 치릅니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 36, timing: "11월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 4, timing: "11월 3주", method: "논술형" },
+      { name: "우리 고장의 지역화 전략 개발하기", kind: "task", weight: 30, timing: "8월 4~5주", method: "논술형" },
+      { name: "인구 문제 분석하기", kind: "task", weight: 30, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "브랜드·고유성·장소 마케팅",
+        body: "우리 고장 지역 브랜드 제작, 브랜드에 담긴 고유성 설명, 장소 마케팅 요소 3가지 이상으로 지역 홍보하기가 10점씩이고 기본점수 12점입니다. [9사(지리)11-02]를 평가합니다.",
+      },
+      {
+        title: "선진국과 개발도상국 비교",
+        body: "인구 피라미드로 두 국가의 연령층 분포를 분석하고, 인구 문제와 대책을 각각 2가지 이상 서술하면 항목별 10점 만점입니다. [9사(지리)07-03] 과제이며 실시 주차는 표마다 달라 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수 그래프 그리기 30%·삼각비 이해하기 30% 논술형, 9월·11월 시험",
+    intro:
+      "3학년 수학 수행평가는 이차함수 그래프 그리기와 삼각비 이해하기, 두 논술형 과제가 30%씩입니다. 1차(9월 4주)·2차(11월 3주) 정기시험은 선택형 18%와 논술형 2%로 구성됩니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 18, timing: "9월 4주", method: "선택형" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 2, timing: "9월 4주", method: "논술형" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 18, timing: "11월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 2, timing: "11월 3주", method: "논술형" },
+      { name: "이차함수 그래프 그리기", kind: "task", weight: 30, method: "논술형" },
+      { name: "삼각비 이해하기", kind: "task", weight: 30, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "그래프 과제는 시기 미기재",
+        body: "이차함수 그래프 과제는 10점짜리 세 항목에 기본점수 12점입니다. 비율표와 진도표의 실시 주차가 서로 달라 두 과제 모두 시기는 적지 않았습니다.",
+      },
+      {
+        title: "삼각비는 계산·값·거리 세 단계",
+        body: "특수각의 삼각비 값 계산 8점, 직각삼각형에서 삼각비 6개 구하기 10점, 거리 구하기 풀이 6단계 논술 12점이며 [9수04-17]·[9수04-18]을 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anil-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "세포 분열 논술(9월 3주) 20%·전력량 설명(10월 1주) 20%·롤러코스터 설계 10%",
+    intro:
+      "안일중학교 3학년 과학은 9월 4주와 11월 3주 정기시험이 각각 25%(선택형 22.5%·논술형 2.5%)이고, 수행평가는 논술형 두 개 20%씩과 탐구형 10%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 22.5, timing: "9월 4주", method: "선택형" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 2.5, timing: "9월 4주", method: "논술형" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 22.5, timing: "11월 3주", method: "선택형" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 2.5, timing: "11월 3주", method: "논술형" },
+      { name: "세포 분열의 의의 논술하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "전기에너지 전환과 전력량 설명하기", kind: "task", weight: 20, timing: "10월 1주", method: "논술형" },
+      { name: "롤러코스터 설계하기", kind: "task", weight: 10, timing: "9월 1주", method: "탐구형" },
+    ],
+    notes: [
+      {
+        title: "세포 분열은 5점씩 네 항목",
+        body: "세포 분열 과제는 5점 네 항목으로 [9과21-01]·[9과21-02]를 평가합니다.",
+      },
+      {
+        title: "전력량 과제에 요금 계산",
+        body: "전기에너지 과제도 5점 네 항목이며 전기요금 계산이 들어 있습니다. 롤러코스터 설계는 5점 두 항목으로 [9과22-01]을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안일중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "좋아하는 것 소개 글쓰기(9월 1~2주)·소설 속 갈등 글쓰기(10월 4~5주) 25%씩, 시험 두 번",
+    intro:
+      "안중중학교 1학년 국어는 1차(10월 2주)·2차(12월 2주) 정기시험이 선택형 20%·논술형 5%씩이고, 수행평가 두 과제가 25%씩입니다. 두 수행평가가 모두 논술형으로 반영되어 학기 논술형 비율은 60%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 20, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 5, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 20, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 5, timing: "12월 2주", method: "논술형 20점" },
+      { name: "내가 좋아하는 것 소개하는 글쓰기", kind: "task", weight: 25, timing: "9월 1주~9월 2주", method: "보고서 평가(논술형 25%)" },
+      { name: "소설 속 갈등, 내 삶의 갈등 해결하기", kind: "task", weight: 25, timing: "10월 4주~10월 5주", method: "보고서 평가(논술형 25%)" },
+    ],
+    notes: [
+      {
+        title: "소개하는 글은 설명문 형식이 8점",
+        body: "자기가 좋아하는 것을 설명문 형식으로 쓰는 과제로, 소개 대상 선정·내용 구성 6점, 자료 활용과 출처 밝히기 5점, 문자·도표·그림 결합 6점, 처음-중간-끝 형식과 어법·분량 8점입니다. 성취기준은 [9국03-02]입니다.",
+      },
+      {
+        title: "갈등 과제는 「동백꽃」에서 출발",
+        body: "「동백꽃」 속 ‘나’와 점순이의 갈등 양상 파악 7점, 다른 작품의 갈등 해결 노력과 비교 7점, 자신의 실제 갈등 상황과 해결 노력 쓰기 7점, 형식 4점으로 채점합니다. 진도표 10월 4~5주 ‘갈등을 딛고 크는 우리들’ 단원에 수행평가 연계가 표시되어 있습니다.",
+      },
+      {
+        title: "두 과제 모두 기본점수 10점",
+        body: "수행평가 25점 가운데 기본점수가 10점이고, 수행 활동에 참여했지만 과제를 내지 않으면 요소마다 가장 낮은 단계 점수(3점 또는 1점)를 받습니다. 장기 미인정 결석자는 9점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "여행지 소개 글쓰기(논술형) 25%·우리 학교 신문 만들기(포트폴리오) 25%, 정기시험 두 번",
+    intro:
+      "안중중학교 2학년 국어 수행평가는 여행지 소개 글쓰기와 학교 신문 만들기 두 가지로 각 25%입니다. 정기시험은 10월 2주와 12월 2주 두 번이며 회차마다 선택형 80점(20%)·논술형 20점(5%)으로 구성됩니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 20, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 5, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 20, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 5, timing: "12월 2주", method: "논술형 20점" },
+      { name: "여행지 소개하는 글쓰기", kind: "task", weight: 25, method: "논술형 평가" },
+      { name: "우리 학교 신문 만들기", kind: "task", weight: 25, method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "여행지 글은 자료 활용과 조직이 7점씩",
+        body: "여행지 정보 생성 6점, 소개 글 조직 7점, 사진·지도·표 같은 복합양식 자료 활용 7점, 표현과 완성도 5점입니다. 성취기준 [9국03-07]을 평가하며 기본점수는 9점입니다.",
+      },
+      {
+        title: "신문은 피동·인용 표현이 채점 대상",
+        body: "기사의 형식과 육하원칙 6점, 피동 표현 3회 이상 활용 6점, 직접·간접 인용을 모두 사용 7점, 사진·제목 등 신문 제작 6점입니다. 성취기준은 [9국04-05]이고 평가 방법은 포트폴리오입니다.",
+      },
+      {
+        title: "수행평가 주는 표마다 다릅니다",
+        body: "반영 비율표는 여행지 글쓰기를 9월 2~3주, 신문 만들기를 11월 2~3주로 적었지만, 진도표에서 해당 성취기준을 평가하는 주는 9월 1~2주와 11월 2주로 표시되어 있어 정확한 일정은 학교 안내로 확인해야 합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "미디어 모니터링(9월 2주) 10%·문화 이해 분석(9월 3주) 20%·사형제도 논술(10월 4주) 20%",
+    intro:
+      "안중중학교 1학년 사회는 12월 2주 2차 정기시험 한 번이 50%(선택형 30%·논술형 20%)이고, 수행평가 세 과제가 50%입니다. 앞의 두 과제는 9월 2주와 3주에 이어서 진행됩니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 60점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 20, timing: "12월 2주", method: "논술형 40점" },
+      { name: "문화의 이해 탐색하기", kind: "task", weight: 10, timing: "9월 2주", method: "보고서 평가" },
+      { name: "문화의 이해 분석하기", kind: "task", weight: 20, timing: "9월 3주", method: "보고서 평가" },
+      { name: "인간의 존엄성과 사형제도 분석하기", kind: "task", weight: 20, timing: "10월 4주", method: "논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "탐색 과제는 미디어 모니터링 보고서",
+        body: "문화의 이해 탐색하기(10점)는 미디어를 비판적으로 분석하는 모니터링 보고서를 쓰는 과제로, 대중문화 이해 4점·비판적으로 바라보기 3점·보고서 작성 3점입니다. 성취기준은 [9사(일사)02-02]입니다.",
+      },
+      {
+        title: "분석 과제는 극단적 상대주의까지",
+        body: "문화의 이해 분석하기(20점)는 자료 수집 6점, 제시문으로 바람직한 문화 이해 태도와 극단적 상대주의를 경계할 이유를 분석하는 항목 6점, 의사 표현 8점입니다. 성취기준 [9사(일사)02-03]을 다룹니다.",
+      },
+      {
+        title: "사형제도 과제는 논술형",
+        body: "민주주의 발전 과정의 사례를 바탕으로 우리나라 사형제도에 대한 자신의 의견을 쓰는 과제로, 자료 수집 6점·자료 분석 6점·의사 표현 8점이며 [9사(일사)03-02]를 평가합니다. 정기시험 논술형 20%와 이 과제 20%를 합쳐 논술형 반영비율은 40%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "역사 인물 카드(9월 1주, 프로젝트)·제1차 세계대전 탐구 글(11월 2주, 논술) 20%씩",
+    intro:
+      "안중중학교 2학년 역사는 정기시험 두 번이 60%, 수행평가 두 과제가 40%입니다. 회차마다 선택형 80점(24%)과 논술형 20점(6%)으로 출제한다고 평가 방침과 반영 비율표에 같게 적혀 있습니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 24, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 6, timing: "12월 2주", method: "논술형 20점" },
+      { name: "역사 인물 카드 만들기", kind: "task", weight: 20, timing: "9월 1주", method: "프로젝트 평가" },
+      { name: "제1차 세계대전 탐구하기", kind: "task", weight: 20, timing: "11월 2주", method: "논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "인물 카드는 오스만 제국·근대 유럽",
+        body: "오스만 제국의 성장 또는 유럽 사회의 근대적 변화를 보여주는 인물을 골라 카드로 소개하며, 인물 선정 6점·역사적 평가와 성찰 6점·자료 수집 4점·카드 제작 4점입니다. 성취기준은 [9역04-03]입니다.",
+      },
+      {
+        title: "세계대전 과제는 원인·전개·결과",
+        body: "제1차 세계대전의 원인·전개·결과와 국제 질서 변화를 자료로 분석해 탐구 글을 쓰는 논술형 과제입니다. 역사적 사실 이해 6점, 자료 활용과 근거 6점, 원인과 결과 연결 4점, 서론-본론-결론 구성 4점이며 [9역06-01]을 다룹니다.",
+      },
+      {
+        title: "기본점수는 만점의 40%",
+        body: "평가 방침에서 수행평가 기본점수를 영역 만점의 40%로 정해 두어 두 과제 모두 기본점수가 8점입니다. 논술형 반영비율은 시험 6%씩과 세계대전 과제 20%를 합친 32%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "조선 전기에 편찬된 도서로 포스터를 만들고, 농민 봉기 사례를 뉴스 대본으로 씁니다",
+    intro:
+      "안중중학교 3학년 역사는 1차(10월 2주)·2차(11월 3주) 정기시험이 60%, 수행평가 두 과제가 40%입니다. 수행평가는 9월 2주와 10월 5주에 있어 2차 시험 전에 모두 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 24, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 6, timing: "11월 3주", method: "논술형 20점" },
+      { name: "조선 전기 책 포스터 만들기", kind: "task", weight: 20, timing: "9월 2주", method: "프로젝트" },
+      { name: "역사 뉴스 대본 작성하기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "포스터는 조선 전기 편찬 도서",
+        body: "조선 전기에 편찬된 도서를 골라 유교 문화 보급과 통치 체제 정비를 위한 정부의 노력을 소개하는 포스터를 만듭니다. 책 선정과 역사적 맥락 6점, 유교 문화 보급 노력 분석 6점, 자료 요약 4점, 포스터 제작 4점이며 [9역10-03]을 평가합니다.",
+      },
+      {
+        title: "뉴스 대본은 농민 봉기 사례",
+        body: "홍경래의 난, 임술 농민 봉기 등 세도 정치 시기 농민 봉기를 주제로 뉴스 대본을 씁니다. 배경과 사례 소개 6점, 역사적 의미 분석 6점, 6하원칙과 앵커·기자 형식 4점, 제시된 사료·통계 활용 4점이고 성취기준은 [9역11-02]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비는 네 요소를 5점씩, 원의 성질은 현과 원주각을 보고 산점도는 10점 프로젝트입니다",
+    intro:
+      "안중중학교 3학년 수학은 1차 정기시험(10월 2주)이 선택형만으로 25%, 2차(11월 3주)가 선택형 20%·논술형 5%이고 수행평가 세 과제가 50%입니다. 평가 방침에도 1차는 선택형, 2차는 선택형과 논술형으로 출제한다고 적혀 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 100점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 20, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 5, timing: "11월 3주", method: "논술형 20점" },
+      { name: "삼각비 이해하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형 평가" },
+      { name: "원의 성질 이해하기", kind: "task", weight: 20, timing: "10월 2주", method: "논술형 평가" },
+      { name: "산점도 그리기", kind: "task", weight: 10, timing: "10월 4주", method: "프로젝트 평가" },
+    ],
+    notes: [
+      {
+        title: "삼각비는 네 요소 5점씩",
+        body: "삼각비 활용 문제 해결, 삼각비 값 구하기, 삼각비를 활용한 길이 구하기, 넓이 구하기가 각 5점이며 기본점수는 4점입니다. 성취기준은 [9수04-17]·[9수04-18]입니다.",
+      },
+      {
+        title: "원의 성질은 현과 원주각",
+        body: "원의 중심과 현의 수직이등분선, 중심에서 현까지의 거리와 현의 길이, 원주각과 중심각, 원주각과 호의 길이 사이의 관계를 설명하는 네 요소(각 5점)로 [9수04-19]·[9수04-20]을 평가합니다. 1차 정기시험과 같은 10월 2주에 잡혀 있습니다.",
+      },
+      {
+        title: "산점도는 10점 프로젝트",
+        body: "자료를 산점도로 나타내고 상관관계를 설명하는 과제로, 상관관계 설명 5점·산점도 그래프 그리기 5점이고 기본점수는 2점입니다. 성취기준은 [9수05-08]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "여러 가지 힘 표현(9월 5주)·기체 압력과 부피 관계 설명(11월 2주) 20%씩, 시험 60%",
+    intro:
+      "안중중학교 1학년 과학은 정기시험 두 번이 60%, 수행평가 두 과제가 40%입니다. 수행평가 20점 가운데 10점씩이 논술형으로 반영되어 시험 논술형 6%씩과 합친 논술형 비율은 32%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 24, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 6, timing: "12월 2주", method: "논술형 20점" },
+      { name: "여러 가지 힘 표현하기", kind: "task", weight: 20, timing: "9월 5주", method: "보고서 평가, 논술형 평가" },
+      { name: "기체의 압력과 부피 관계 설명하기", kind: "task", weight: 20, timing: "11월 2주", method: "보고서 평가, 논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "힘 과제는 마찰력 측정이 10점",
+        body: "힘의 크기와 방향 표현 5점, 힘의 평형 설명 5점, 나무 도막이 미끄러지기 시작하는 각도와 마찰력 크기를 실험으로 측정해 관계를 분석하는 항목 10점입니다. 성취기준은 [9과05-01]·[9과05-02]입니다.",
+      },
+      {
+        title: "기체 과제는 생활 속 사례 논술",
+        body: "부피 변화에 따른 압력 변화 설명 5점, 입자 모형으로 설명 5점, 생활 속 기체의 압력과 부피 관계 현상 논술 10점입니다. [9과06-01]·[9과06-02]를 평가하며 기본점수는 8점입니다.",
+      },
+      {
+        title: "1학년도 정기시험 두 번",
+        body: "과학과 방침에 1학년은 2학기에 정기시험을 2회, 선택형과 논술형 문항으로 출제한다고 적혀 있고, 회차마다 선택형 80점(24%)·논술형 20점(6%)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "광합성 실험 설계(8월 5주)·저항·전류·전압 관계(11월 1주) 수행 20%씩",
+    intro:
+      "안중중학교 2학년 과학은 1차(10월 2주)·2차(12월 2주) 정기시험이 60%이고, 수행평가 두 과제가 20%씩입니다. 논술형으로 반영되는 몫은 광합성 과제 10%, 전기 과제 14%로 서로 다릅니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 24, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 6, timing: "12월 2주", method: "논술형 20점" },
+      { name: "식물의 광합성 과정 설명하기", kind: "task", weight: 20, timing: "8월 5주", method: "논술형 평가, 보고서 평가" },
+      { name: "저항, 전류, 전압 사이의 관계 설명하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술형 평가, 보고서 평가" },
+    ],
+    notes: [
+      {
+        title: "광합성 과제는 실험 설계 네 단계",
+        body: "환경 요인과 광합성의 관계를 다루며, 환경 요인 제시·조작 변인과 통제 변인 구분·실험 설계·실험 결과 분석이 5점씩입니다. 성취기준은 [9과12-01]이고 개학 직후인 8월 5주에 평가합니다.",
+      },
+      {
+        title: "전기 과제는 관계 논술이 8점",
+        body: "전류와 전압 설명 6점, 실험 결과를 바탕으로 저항·전류·전압 관계 논술 8점, 옴의 법칙 활용 6점입니다. [9과14-02]를 평가하며 기본점수는 8점입니다.",
+      },
+      {
+        title: "논술형 합계 36%",
+        body: "시험의 논술형 6%씩에 두 수행평가 몫(10%·14%)을 더해 2학년 과학의 논술형 반영비율은 36%로 표에 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "세포분열 보고서는 세 요소로 보고, 에너지 과제는 소비 전력 비교가 14점입니다",
+    intro:
+      "안중중학교 3학년 과학은 정기시험 두 번(10월 2주·11월 3주)이 60%, 수행평가 두 과제가 40%입니다. 세포분열 과제는 보고서로, 에너지 과제는 논술형으로 평가해 논술형 비율은 32%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 24, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 6, timing: "11월 3주", method: "논술형 20점" },
+      { name: "세포분열 표현하기", kind: "task", weight: 20, timing: "9월 2주", method: "보고서 평가" },
+      { name: "여러 가지 에너지 전환과 보존 설명하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "세포분열 보고서는 세 요소",
+        body: "체세포 분열 과정을 그림과 글로 표현 7점, 세포의 부피와 표면적 관계 설명 7점, 세포가 분열해야 하는 까닭에 대한 자신의 생각 6점입니다. 성취기준은 [9과21-02]입니다.",
+      },
+      {
+        title: "에너지 과제는 소비 전력 비교 14점",
+        body: "가정의 가전제품 소비 전력을 3가지 조사해 비교 논술하는 항목이 14점, 전기 에너지를 절약해야 하는 이유와 방법 논술이 6점이며 [9과22-03]을 평가합니다. 이 과제(11월 1주) 2주 뒤인 11월 3주에 2차 정기시험이 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "여행지 소개(9월 2주)·그림 오디오 가이드(10월 3주)·급식 식단(11월 2주) 20%씩",
+    intro:
+      "안중중학교 1학년 영어는 12월 2주 2차 정기시험 한 번이 40%(선택형 32%·논술형 8%)이고, 수행평가 세 과제가 60%입니다. 세 과제 모두 20점 만점이며 기본점수 8점이 같습니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 32, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 8, timing: "12월 2주", method: "논술형 20점" },
+      { name: "여행지 소개하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형 평가" },
+      { name: "그림 소개 오디오 가이드 작성하기", kind: "task", weight: 20, timing: "10월 3주", method: "프로젝트형 평가" },
+      { name: "급식 식단 작성하기", kind: "task", weight: 20, timing: "11월 2주", method: "논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "여행지 소개는 광고지로",
+        body: "‘Walk into Korea’ 단원과 이어지는 9월 2주 과제로, 여행지 소개 내용 구상 7점·광고지 작성 7점·어법과 철자 6점입니다. 성취기준은 [9영02-08]입니다.",
+      },
+      {
+        title: "오디오 가이드는 그림을 말로 안내",
+        body: "‘Beauty of Art’ 단원에서 그림을 소개하는 오디오 가이드를 구성(7점)하고 내용을 구체적으로 쓰며(7점) 문법·어휘(6점)를 평가합니다. 평가 방법은 프로젝트형이고 성취기준은 [9영02-10]입니다.",
+      },
+      {
+        title: "급식 식단은 음식 소개부터",
+        body: "‘Tasty World’ 단원의 11월 2주 과제로, 소개할 음식과 선택 이유 7점, 식단 구성 7점, 문법·어휘 6점이며 [9영02-03]·[9영02-04]를 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "anjung-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "좌우명 글은 의미 설명이 6점이고, 테마 여행은 묘사와 일정을 담습니다",
+    intro:
+      "안중중학교 3학년 영어는 1차(10월 2주)·2차(11월 3주) 정기시험이 60%, 쓰기 수행평가 두 과제가 40%입니다. 두 과제가 모두 논술형이어서 시험 논술형 6%씩과 합친 논술형 비율은 52%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 24, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 6, timing: "11월 3주", method: "논술형 20점" },
+      { name: "나의 좌우명과 그 의미 소개하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형 평가" },
+      { name: "테마 여행 소개하기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "좌우명 글은 의미 설명 6점",
+        body: "‘Words of wisdom’ 단원에서 [9영04-02]를 평가하며, 글의 논리적 구성 4점, 좌우명과 의미 설명 6점, 문법·어휘 6점, 좌우명을 고른 이유를 경험과 관련지어 쓰기 4점입니다.",
+      },
+      {
+        title: "테마 여행은 묘사와 일정",
+        body: "‘Spend wisely’ 단원과 연결된 10월 5주 과제로, 여행지 특징 묘사 4점, 일정과 활동 소개 6점, 문법·어휘 6점, 테마에 맞는 정보 구성 4점입니다. 성취기준은 [9영04-01]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("안중중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장하는 글쓰기 및 발표 30%(10월 2~3주)·국어 발자취 남기기 20%(9월 3주)",
+    intro:
+      "배다리중학교 1학년 국어는 12월 3주 정기시험 한 번이 50%(선택형 45%, 논술형 5%)이고, 프로젝트형 수행평가 두 과제가 50%입니다. 논술형 반영은 시험 5%, 주장하는 글쓰기 24%, 국어 발자취 10%입니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "주장하는 글쓰기 및 발표", kind: "task", weight: 30, timing: "10월 2~3주", method: "프로젝트형" },
+      { name: "국어 발자취 남기기", kind: "task", weight: 20, timing: "9월 3주", method: "프로젝트형" },
+    ],
+    notes: [
+      {
+        title: "주장하는 글쓰기는 근거가 16점",
+        body: "문제 인식과 주장의 명확성 제시 8점, 근거의 타당성 확보와 주장하는 글 쓰기 16점, 주장을 표현하기 6점으로 30점입니다.",
+      },
+      {
+        title: "국어 발자취 남기기는 요약과 독서 기록",
+        body: "글의 구조와 목적을 고려한 내용 요약하기 10점과 독서 활동 기록하기 10점으로 이루어지며, 진도표의 9월 3주 칸에 수행평가가 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "통계 문제 해결 20%(9월 2주)·도형의 기초 문제 해결 20%(10월 4주)·스스로 해결하기 10%",
+    intro:
+      "배다리중학교 1학년 수학은 12월 3주 정기시험 한 번이 50%(선택형 45%, 논술형 5%)이고 수행평가 세 과제가 50%입니다. 포트폴리오인 스스로 해결하기는 8월 2주부터 11월 2주까지 이어집니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "통계 문제 해결하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형 포함" },
+      { name: "도형의 기초 문제 해결하기", kind: "task", weight: 20, timing: "10월 4주", method: "논술형 포함" },
+      { name: "스스로 해결하기", kind: "task", weight: 10, timing: "8월 2주~11월 2주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "통계 과제의 세부 배점",
+        body: "평균·중앙값·최빈값 구하기 5점, 적절한 대푯값을 고르고 이유 설명하기 5점, 줄기와 잎 그림 2점, 히스토그램 2점 등을 합쳐 20점입니다.",
+      },
+      {
+        title: "도형의 기초와 스스로 해결하기",
+        body: "도형의 기초 문제 해결하기는 두 직선의 위치 관계, 평행선의 동위각과 엇각, 삼각형 작도, 삼각형이 정해지기 위한 조건이 5점씩입니다. 스스로 해결하기는 소단원·대단원 마무리 문제 해결과 그 과정 설명이 5점씩입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "음식을 소개하는 글쓰기 30%(11월 3주)·영어 이해 및 활용하기 20%(포트폴리오)",
+    intro:
+      "배다리중학교 1학년 영어는 12월 3주 정기시험 한 번이 50%(선택형 40%, 논술형 10%)이고 수행평가 두 과제가 50%입니다. 음식 소개 글쓰기는 11월 3주이고, 포트폴리오는 8월 2주부터 11월 3주까지 계속됩니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 3주", method: "선택형 80점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 3주", method: "논술형 20점" },
+      { name: "음식을 소개하는 글쓰기", kind: "task", weight: 30, timing: "11월 3주", method: "논술형" },
+      { name: "영어 이해 및 활용하기", kind: "task", weight: 20, timing: "8월 2주~11월 3주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "음식 소개 글쓰기의 세 항목",
+        body: "음식의 특징 쓰기 10점, 비슷한 음식과 비교하기 10점, 적절한 어휘와 정확한 언어형식 활용하기 10점입니다.",
+      },
+      {
+        title: "포트폴리오는 해석이 10점",
+        body: "어휘의 의미 이해·활용 5점, 주요 어법 구문 이해·활용 5점, 글의 내용 이해와 해석 10점으로 20점이며, 진도표에는 8월 2주부터 매주 수행평가 표시가 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "상태 변화 시 출입하는 열에너지 논술 30%(9월 2주)·힘의 특징을 이용한 장치 고안 20%",
+    intro:
+      "배다리중학교 1학년 과학은 12월 3주 정기시험 한 번이 50%(선택형 45%, 논술형 5%), 수행평가 두 과제가 50%입니다. 9월 2주 논술 과제와 10월 3주 탐구형 장치 고안이 이어집니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "상태 변화 시 출입하는 열에너지 논술하기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+      { name: "힘의 특징을 이용한 장치 고안하기", kind: "task", weight: 20, timing: "10월 3주", method: "탐구형" },
+    ],
+    notes: [
+      {
+        title: "상태 변화 논술은 세 항목 10점씩",
+        body: "물질의 세 가지 상태와 확산·증발 현상의 입자 모형 표현, 상태 변화 때의 특징(성질·질량·부피) 논술, 온도 변화 그래프로 상태 변화와 열에너지 출입 관계 설명이 각 10점입니다.",
+      },
+      {
+        title: "장치 고안은 설계가 10점",
+        body: "힘의 특징을 이용한 기구나 장치를 설계하기가 10점이고, 일상생활 사례에서 작용하는 힘과 힘의 평형 관계를 설명하는 항목과 합쳐 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "복합양식 자료 활용 글쓰기 30%(9월 2주~10월 1주)·카드 뉴스 10%·발표 및 듣기 10%",
+    intro:
+      "배다리중학교 2학년 국어는 1차(10월 1주)·2차(12월 3주) 정기시험이 50%, 수행평가 세 과제가 50%입니다. 1차 시험에만 논술형 20점(5%)이 있고, 수행평가는 9월 2주부터 10월 4주까지 연달아 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 100점" },
+      { name: "복합양식 자료 활용하여 글쓰기", kind: "task", weight: 30, timing: "9월2주~10월1주", method: "프로젝트" },
+      { name: "카드 뉴스로 발표 자료 제작하기", kind: "task", weight: 10, timing: "10월 2주", method: "논술형" },
+      { name: "발표 및 듣기", kind: "task", weight: 10, timing: "10월3주~10월4주", method: "구술발표" },
+    ],
+    notes: [
+      {
+        title: "복합양식 글쓰기 여섯 항목",
+        body: "예측하며 읽기와 배경지식 활성화, 읽기 과정 점검·조정, 복합양식 자료의 효과적 활용, 목적과 유형에 맞는 글쓰기, 쓰기 과정과 전략 점검·조정, 고쳐 쓰기가 5점씩이며 이 중 네 항목이 논술형입니다.",
+      },
+      {
+        title: "카드 뉴스에서 발표로 이어집니다",
+        body: "카드 뉴스 과제는 발표 내용의 체계적 조직과 복합양식 자료를 활용한 카드 뉴스 제작이 5점씩(논술형)이고, 이어지는 발표 및 듣기는 발표하기와 발표 듣기가 5점씩입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "함수 문제 해결하기 논술 30%(9월 2주)·도형 탐구하기 포트폴리오 10% · 시험 60%",
+    intro:
+      "배다리중학교 2학년 수학은 1차(10월 1주) 30%, 2차(12월 3주) 30%로 정기시험이 60%이고 수행평가가 40%입니다. 2차 시험에만 논술형 10점(3%)이 들어갑니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 100점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "12월 3주", method: "논술형 10점" },
+      { name: "함수 문제 해결하기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+      { name: "도형 탐구하기", kind: "task", weight: 10, timing: "9월 1주~10월 1주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "함수 과제 다섯 항목 6점씩",
+        body: "직선의 방정식 구하기, 두 변수 관계를 일차함수 식으로 나타내기, 실생활 문제의 답 구하기, 일차함수와 일차방정식의 관계, 두 일차함수와 연립방정식의 관계가 6점씩입니다.",
+      },
+      {
+        title: "도형 탐구는 정리와 발표",
+        body: "도형의 성질과 개념을 정리하고 문제를 해결하는 항목과 그 해결 과정을 발표하는 항목이 5점씩이며, 진도표에도 9월 1주부터 10월 1주까지 수행평가 표시가 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "송과 몽골 제국의 정책·대외 관계 탐구 30%(9월 1주)·역사 내용 활동지 20%(11월 1주)",
+    intro:
+      "배다리중학교 2학년 역사는 12월 3주 정기시험 한 번이 50%(선택형 40%, 논술형 10%)이고, 수행평가 두 과제가 50%입니다. 논술형 반영은 시험 10%와 송·몽골 탐구 30%입니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 3주", method: "선택형 80점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 3주", method: "논술형 20점" },
+      { name: "송과 몽골 제국의 정책과 대외 관계 탐구하기", kind: "task", weight: 30, timing: "9월 1주", method: "논술형" },
+      { name: "역사 내용 활동지 작성하기", kind: "task", weight: 20, timing: "11월 1주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "송·몽골 탐구 두 항목",
+        body: "송나라의 문치주의 정책이 대외 관계와 국방에 미친 영향 분석 15점, 원나라의 몽골인 제일주의 정책과 신분 구조 탐구 15점입니다.",
+      },
+      {
+        title: "활동지와 시험 평가요소",
+        body: "활동지는 역사 핵심 개념을 논리적으로 분석하기 10점과 탐구 활동하기 10점입니다. 시험 평가요소에는 오스만 제국의 성장과 유럽의 근대적 변화, 시민 혁명과 국민 국가 형성, 제국주의 침략에 대한 아시아의 대응이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "호흡과 광합성의 관계 분석하기 논술 30%(8월 4주) · 1차 35%·2차 35%",
+    intro:
+      "배다리중학교 2학년 과학은 정기시험 두 번이 70%를 차지하고, 수행평가는 학기 초인 8월 4주의 논술 한 과제(30%)입니다. 1차(10월 1주)는 선택형 31.5%·논술형 3.5%로 나뉘고, 2차(12월 3주)는 선택형 100점 35%입니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 31.5, timing: "10월 1주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3.5, timing: "10월 1주", method: "논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 3주", method: "선택형 100점" },
+      { name: "호흡과 광합성의 관계 분석하기", kind: "task", weight: 30, timing: "8월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "BTB 용액으로 보는 과제",
+        body: "광합성과 호흡에 따른 BTB 용액 색깔 변화 예상 5점, 설명 10점, 적용 5점, 광합성과 호흡 비교 10점입니다.",
+      },
+      {
+        title: "평가요소에 적힌 탐구 활동",
+        body: "광합성 산물 확인 탐구, 영양소 검출과 침의 소화 작용 실험, 저항·전류·전압 관계 탐구, 전류가 흐르는 코일과 전동기 원리, 우주탐사 계획 세우기가 평가요소로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "읽기 과정에 따라 글 읽고 서평 쓰기 30%(8월 3주) · 1차 35%·2차 35%",
+    intro:
+      "배다리중학교 3학년 국어는 정기시험이 70%이고, 수행평가는 8월 3주 서평 쓰기 한 과제 30%입니다. 1차(10월 1주)는 선택형 100점이고 2차(11월 2주)에 논술형 20점(7%)이 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 1주", method: "선택형 100점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28, timing: "11월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 7, timing: "11월 2주", method: "논술형 20점" },
+      { name: "읽기 과정에 따라 글 읽고 서평 쓰기", kind: "task", weight: 30, timing: "8월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "서평 과제는 세 단계 10점씩",
+        body: "읽기 과정 점검·조정하기, 독서 일기 작성하기, 서평 쓰기가 10점씩입니다. 진도표에서는 8월 3주에 읽기 과정의 단계별 활동 정리와 수행평가가 연계됩니다.",
+      },
+      {
+        title: "시험 평가요소",
+        body: "작품이 창작된 사회·문화적 배경 이해, 청중의 관심과 요구를 고려한 말하기, 문장의 짜임, 다양한 논증 방법 파악, 설득 전략의 비판적 분석이 평가요소로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비와 원의 성질 문제 해결 논술 30%(9월 3주)·함께 배우고 성장하기 10%",
+    intro:
+      "배다리중학교 3학년 수학은 1차(10월 1주)·2차(11월 2주) 정기시험이 60%, 수행평가 두 과제가 40%입니다. 1차 시험에만 논술형 20점(6%)이 있고, 포트폴리오는 8월 2주부터 10월 4주까지 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 2주", method: "선택형 100점" },
+      { name: "삼각비와 원의 성질을 이용해 문제 해결하기", kind: "task", weight: 30, timing: "9월 3주", method: "논술형" },
+      { name: "함께 배우고 성장하기", kind: "task", weight: 10, timing: "8월 2주~10월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "삼각비·원 과제 여섯 항목",
+        body: "특수각의 삼각비, 삼각비로 길이 구하기, 넓이 구하기, 삼각비 표 활용, 원의 현의 성질로 선분 길이 구하기, 원의 접선의 성질로 도형의 넓이 구하기가 5점씩입니다.",
+      },
+      {
+        title: "포트폴리오는 단원 마무리 학습지",
+        body: "단원 마지막에 진행하는 학습지의 문제 해결과 그 과정 설명이 5점씩입니다. 시험 평가요소에는 대푯값·산포도와 산점도·상관관계도 포함되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "이야기 만들기 논술 20%(9월 1주)·어휘 탐구하기 10%(8월 3주~10월 5주) · 시험 70%",
+    intro:
+      "배다리중학교 3학년 영어는 1차(10월 1주)·2차(11월 2주) 정기시험이 70%, 수행평가 두 과제가 30%입니다. 두 시험 모두 선택형 80점과 논술형 20점으로 나뉘어 회차마다 28%와 7%로 반영됩니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 7, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28, timing: "11월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 7, timing: "11월 2주", method: "논술형 20점" },
+      { name: "이야기 만들기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "어휘 탐구하기", kind: "task", weight: 10, timing: "8월 3주~10월 5주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "이야기 만들기 네 항목",
+        body: "일상생활에 관한 그림 묘사하기, 편지 형식의 글 작성하기, 핵심 표현 활용하기, 적절한 어휘와 정확한 언어 형식 활용하기가 5점씩입니다.",
+      },
+      {
+        title: "어휘 탐구는 조사와 표현",
+        body: "단어 조사하기 5점과 일상생활에 관한 자신의 의견이나 감정 표현하기 5점이며, 진도표에도 8월 3주부터 10월 5주까지 매주 수행평가 연계가 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 경제 성찰문 30%·활동지 20% / 역사 독립운동가 탐구 30%(10월 2주)·활동지 20%",
+    intro:
+      "배다리중학교 3학년 사회와 역사는 모두 정기시험 50%·수행평가 50%입니다. 사회는 11월 2주 정기시험 한 번이고, 역사는 1차(10월 1주)·2차(11월 2주) 두 번으로 나뉩니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 40, timing: "11월 2주", method: "선택형 80점", course: "사회" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 10, timing: "11월 2주", method: "논술형 20점", course: "사회" },
+      { name: "경제 성찰문 작성하기", kind: "task", weight: 30, method: "논술형", course: "사회" },
+      { name: "사회 내용 활동지 작성하기", kind: "task", weight: 20, method: "포트폴리오", course: "사회" },
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월1주", method: "선택형 80점", course: "역사" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월1주", method: "논술형 20점", course: "역사" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 20, timing: "11월2주", method: "선택형 80점", course: "역사" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월2주", method: "논술형 20점", course: "역사" },
+      { name: "활동지 작성하기", kind: "task", weight: 20, timing: "8월4주", method: "포트폴리오", course: "역사" },
+      { name: "독립운동가 탐구하기", kind: "task", weight: 30, timing: "10월2주", method: "논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 경제 성찰문과 활동지",
+        body: "경제 성찰문은 가격 외 수요와 공급 변동 요인 분석, 시장 가격 변동 과정과 영향 분석이 15점씩입니다. 활동지 포트폴리오는 경제 핵심 개념의 논리적 서술과 탐구 활동이 10점씩이며, 두 과제 시기는 비율표(10월 2주·11월 2주)와 진도표의 수행평가 연계 주간이 맞지 않아 표에서 확정되지 않습니다.",
+      },
+      {
+        title: "역사 독립운동가 탐구는 업적 평가가 20점",
+        body: "독립운동가 활동 조사 10점, 업적 평가 20점입니다. 8월 4주 역사 활동지는 내용 파악하기와 탐구 활동하기가 10점씩입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "baedari-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "가계도 분석하기 논술 30%(9월 2주) · 1차(10월 1주)·2차(11월 2주) 시험 각 35%",
+    intro:
+      "배다리중학교 3학년 과학의 수행평가는 9월 2주 가계도 분석 하나로 30%이고, 나머지 70%가 10월 1주와 11월 2주 정기시험입니다. 논술형 10점은 1차 시험에만 있어 3.5%로 반영됩니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 31.5, timing: "10월 1주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3.5, timing: "10월 1주", method: "논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 2주", method: "선택형 100점" },
+      { name: "가계도 분석하기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "가계도 과제의 세 항목",
+        body: "유전 형질의 우열 관계 판단, 가족 구성원의 유전자형 추론, 가계도의 유전 과정 분석이 10점씩입니다.",
+      },
+      {
+        title: "평가요소의 범위",
+        body: "모의 유전자 활동으로 자손의 유전형질 표현하기, 가계도 자료 해석, 역학적 에너지 전환의 예 분석, 전기 에너지 사용 예시 분석이 평가요소로 함께 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("배다리중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "갈등과 차별 글쓰기(9월 2주)·헌법 탐구(9월 4~5주) 각 20%, 정치 개념 사전 10%(11월 1주)",
+    intro:
+      "발안중학교 1학년 사회는 11월 3주 2차 정기시험 한 번이 선택형 45%와 논술형 5%로 나뉘어 50%를 차지하고, 수행평가 세 영역이 나머지 50%입니다. 수행평가 두 개가 9월 안에 끝나고 정치 개념 사전 만들기만 11월 1주로 떨어져 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 3주", method: "논술형 10점" },
+      { name: "사회적 갈등과 차별 글쓰기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "정치 개념 사전 만들기", kind: "task", weight: 10, timing: "11월 1주", method: "프로젝트·포트폴리오" },
+      { name: "헌법 탐구하기", kind: "task", weight: 20, timing: "9월 4주~5주", method: "논술형 15점·포트폴리오형 5점" },
+    ],
+    notes: [
+      {
+        title: "헌법 탐구는 논술 15점과 포트폴리오 5점",
+        body: "헌법 탐구하기(20점)는 [9사(일사)06-01]·[9사(일사)06-02]를 평가하며, 인권을 지키기 위한 헌법의 역할을 파악하고 개헌이 필요한 조항을 찾아 논리적으로 작성하는 과제입니다. 반영 비율표에서 이 영역은 논술형 15점과 포트폴리오형 5점으로 나뉘어 있습니다.",
+      },
+      {
+        title: "9월 2주 글쓰기는 사례와 대처 방안",
+        body: "사회적 갈등과 차별 글쓰기는 [9사(일사)01-03]에 따라 우리 사회의 갈등과 차별 사례를 요약하고 문제점을 분석한 뒤 대처 방안을 제안하는 논술형 과제입니다. 11월 1주의 정치 개념 사전 만들기(10%)는 선거의 기능과 기본원칙, 정치 주체의 역할과 정치 과정을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "열에너지 생활 문제 해결(9월 3주, 자료분석 5%+논술 20%)·기체 압력과 부피 탐구 25%(11월 4주)",
+    intro:
+      "발안중학교 1학년 과학은 11월 3주 2차 정기시험이 선택형 40%, 논술형 10%로 모두 50%입니다. 수행평가는 9월 3주 상태 변화 과제와 11월 4주 기체 실험 과제가 25%씩이며, 앞의 과제는 자료분석 5%와 논술형 20%로 나뉘어 반영됩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "11월 3주", method: "논술형 20점" },
+      { name: "상태 변화할 때 출입하는 열에너지를 이용하여 생활 속 문제 해결하기(자료분석)", kind: "task", weight: 5, timing: "9월 3주", method: "자료분석" },
+      { name: "상태 변화할 때 출입하는 열에너지를 이용하여 생활 속 문제 해결하기(논술형)", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "기체의 압력과 부피 관계 탐구", kind: "task", weight: 25, timing: "11월 4주", method: "실험·실습" },
+    ],
+    notes: [
+      {
+        title: "끓는 물의 온도 그래프가 첫 단계",
+        body: "상태 변화 과제는 물이 끓을 때의 온도 변화 측정값을 그래프로 나타내는 자료분석(5점)과, 상태 변화와 열에너지의 관계를 적용해 생활 속 문제를 해결하는 논술형(20점)으로 짜여 있습니다. 성취기준은 [9과04-04]입니다.",
+      },
+      {
+        title: "기체 과제는 측정·관계·입자 모형",
+        body: "11월 4주 기체의 압력과 부피 관계 탐구(25%)는 부피에 따른 압력을 측정하고, 실험 결과에서 두 값의 관계를 찾은 뒤 입자 모형으로 설명하는 실험·실습 평가입니다. 반영 비율표에서 이 영역의 논술형 비율은 따로 잡혀 있지 않습니다.",
+      },
+      {
+        title: "정기시험은 입자 운동부터 알짜힘까지",
+        body: "2차 정기시험 평가 요소에는 입자 운동 추론, 세 가지 상태와 상태 변화의 입자 모형, 힘의 화살표 표현과 힘의 평형 조건, 중력·탄성력·마찰력·부력의 크기와 방향, 알짜힘이 0이 아닐 때의 운동 변화가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "장래희망 소개(9월 3주)·고민 조언(12월 1주)·학습활동 포트폴리오(3회) 각 20%, 수행 합 60%",
+    intro:
+      "발안중학교 1학년 영어는 수행평가 세 영역이 20%씩 60%이고, 11월 3주 2차 정기시험이 선택형 34%와 논술형 6%로 40%입니다. 포트폴리오는 9월 1주·9월 5주·11월 4주 세 시점에 걸쳐 평가됩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 34, timing: "11월 3주", method: "선택형 85점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "11월 3주", method: "논술형 15점" },
+      { name: "고민에 대한 조언하기", kind: "task", weight: 20, timing: "12월 1주", method: "논술형" },
+      { name: "장래희망 소개하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "영어 학습활동 포트폴리오", kind: "task", weight: 20, timing: "9월 1주, 9월 5주, 11월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "장래희망 글은 개요와 초안부터",
+        body: "9월 3주 장래희망 소개하기는 개요 및 초안 작성, 장래희망 설명, to부정사의 부사적 용법과 접속사 that 사용, 올바른 표현 사용을 평가 요소로 둡니다. 12월 1주 고민에 대한 조언하기는 제시문 요약과 고민에 대한 의견 제시에 더해 내용·유창성·정확성을 갖춘 말하기를 봅니다.",
+      },
+      {
+        title: "포트폴리오는 모둠 활동지까지 포함",
+        body: "영어 학습활동 포트폴리오(20%)는 학습 과정 참여, 학습 내용 요약, 모둠 활동 참여와 모둠 활동지 작성이 평가 요소이며 논술형 비율은 0%로 적혀 있습니다. 학기 전체 논술형 비율은 시험 6%와 두 글쓰기·말하기 과제 40%를 합한 46%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "장소감·장소성 표현(9월 3주)·기후변화 대책 분석(10월 3주) 각 20%, 여행 경로 세우기 10%(11월 4주)",
+    intro:
+      "발안중학교 2학년 사회는 지리 단원으로 수행평가 세 영역이 50%, 11월 3주 2차 정기시험이 선택형 45%·논술형 5%로 50%입니다. 9월·10월·11월에 한 과제씩 놓여 있어 달마다 하나씩 준비하는 흐름입니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 3주", method: "논술형 10점" },
+      { name: "장소감과 장소성 표현하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형 10점·프로젝트 10점" },
+      { name: "기후변화의 원인과 대책 분석하기", kind: "task", weight: 20, timing: "10월 3주", method: "논술형" },
+      { name: "여행 경로 세우기", kind: "task", weight: 10, timing: "11월 4주", method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "장소감 과제는 논술과 프로젝트 반반",
+        body: "장소감과 장소성 표현하기(20점)는 반영 비율표에서 논술형 10점과 프로젝트 10점으로 나뉘며, 지역의 장소감과 장소성을 표현하는 것이 평가 요소입니다. 10월 3주 기후변화 과제는 기후변화의 양상을 파악하고 대응 노력을 제시하는 논술형 20점입니다.",
+      },
+      {
+        title: "마지막 과제는 중남부 지역 여행 경로",
+        body: "11월 4주 여행 경로 세우기(10%)는 중남부 지역의 지리적 특성을 설명하고 여행 장소를 탐색하는 프로젝트로, 논술형 비율은 0%입니다. 정기시험 평가 요소에는 행정구역과 주요 도시의 위치, 우리나라의 자연환경, 중부 지역의 지리적 특징이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "질병과 기관계 분석(10월 2주)·나의 별 분석(11월 4주) 논술형 25%씩, 시험 1회 50%",
+    intro:
+      "발안중학교 2학년 과학은 11월 3주 2차 정기시험(선택형 45%·논술형 5%)과 논술형 수행평가 두 개(각 25%)로 구성됩니다. 수행평가 두 과제가 모두 논술형이라 학기 논술형 비율이 55%로 적혀 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 3주", method: "논술형 10점" },
+      { name: "질병과 기관계 상호작용 분석하기", kind: "task", weight: 25, timing: "10월 2주", method: "논술형" },
+      { name: "나의 별 분석하기", kind: "task", weight: 25, timing: "11월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "질병 과제는 개념도와 예방 방안",
+        body: "질병과 기관계 상호작용 분석하기는 기관계의 구조·기능과 질병의 인과관계 분석, 질병 발병 요인 분석과 예방 방안 제시, 기관계 개념도 작성을 평가 요소로 둡니다. 세부 기준의 평가 방법은 논술과 프로젝트에 표시되어 있습니다.",
+      },
+      {
+        title: "나의 별은 연주시차에서 포스터까지",
+        body: "11월 4주 나의 별 분석하기는 연주시차를 활용한 거리 비교, 별의 밝기 비교와 거리 예측, 별의 색과 표면 온도 분석을 거쳐 나의 별 포스터를 만드는 과제입니다. 시험 평가 요소에는 광합성과 호흡, 영양소 검출, 마찰 전기, 전류·전압·저항, 전류가 만드는 자기장이 포함됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각형의 성질 탐구논술(9월 3주)과 수학개념 프로세스폴리오(10월 1주·11월 4주)가 25%씩",
+    intro:
+      "발안중학교 2학년 수학은 11월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 수행평가 두 영역이 25%씩 50%입니다. 프로세스폴리오는 10월 1주와 11월 4주 두 차례에 걸쳐 평가됩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 3주", method: "논술형 10점" },
+      { name: "삼각형의 성질 탐구논술", kind: "task", weight: 25, timing: "9월 3주", method: "논술형" },
+      { name: "수학개념 프로세스폴리오", kind: "task", weight: 25, timing: "10월 1주, 11월 4주", method: "프로젝트·포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "탐구논술은 외심·내심 증명 과정",
+        body: "9월 3주 삼각형의 성질 탐구논술은 [9수03-09]·[9수03-10]에 따라 이등변삼각형의 성질과 삼각형의 외심·내심의 성질을 증명으로 정당화하는 과정, 외심과 내심을 이용한 문제 해결 과정을 논술하게 합니다.",
+      },
+      {
+        title: "프로세스폴리오는 닮음·피타고라스까지",
+        body: "프로세스폴리오의 평가 요소는 사각형의 성질, 닮음비, 삼각형의 닮음 조건, 평행선 사이 선분의 길이의 비, 피타고라스 정리의 정당화와 함께 개념확인 및 자기 성찰입니다. 논술형 비율은 시험 5%와 탐구논술 25%를 합한 30%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "헌신한 인물 소개 글(11월 4주)과 구문활용 문장 만들기(12월 1주) 25%씩, 시험 서술 12점",
+    intro:
+      "발안중학교 2학년 영어는 11월 3주 2차 정기시험이 선택형 44%와 논술형 6%이고, 논술형 수행평가 두 개가 25%씩입니다. 두 수행평가가 시험 직후인 11월 4주와 12월 1주에 이어서 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 44, timing: "11월 3주", method: "선택형 88점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "11월 3주", method: "논술형 12점" },
+      { name: "타인을 위해 헌신한 인물 소개하기", kind: "task", weight: 25, timing: "11월 4주", method: "논술형" },
+      { name: "구문활용 문장 만들기", kind: "task", weight: 25, timing: "12월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "인물 소개는 초고를 거쳐 완성",
+        body: "타인을 위해 헌신한 인물 소개하기는 [9영02-08]을 평가하며, 이타적인 인물에 대한 소개와 업적을 글로 완성하고 초고 작성으로 글의 완성도를 높이는 과정을 봅니다. 다양하고 적절한 어휘와 정확한 언어 형식도 평가 요소입니다.",
+      },
+      {
+        title: "구문활용은 자기 의견을 문장으로",
+        body: "12월 1주 구문활용 문장 만들기([9영02-10])는 주어진 구문을 활용해 드러내고 싶은 의견을 글로 표현하는 과제입니다. 정기시험 평가 요소에는 5형식 동사, 진주어, 목적격 관계대명사, 간접의문문과 스포츠 직업인 인터뷰·국립공원 소개 글 읽기가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "조광조 개혁 상소문(9월 2주)·영조·정조 탕평 정치 평가(10월 4주) 각 25%",
+    intro:
+      "발안중학교 3학년 역사는 11월 3주 2차 정기시험이 선택형 45%·논술형 5%로 50%, 수행평가 두 영역이 25%씩 50%입니다. 상소문 과제는 프로젝트로, 탕평 정치 평가는 논술형으로 치러집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 3주", method: "논술형 10점" },
+      { name: "중종에게 올리는 조광조 개혁 정책 상소문 작성하기", kind: "task", weight: 25, timing: "9월 2주", method: "프로젝트" },
+      { name: "영조·정조의 탕평 정치 평가하기", kind: "task", weight: 25, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "상소문은 훈구·사림 비교에서 출발",
+        body: "상소문 과제([9역10-02])는 훈구와 사림의 특징과 갈등 배경 비교, 조광조의 개혁 정책 설명, 사화의 발생과 사림의 성장 과정 설명을 거쳐 상소문 형식으로 자신의 판단과 근거를 제시하게 합니다. 논술형 비율은 0%로 적혀 있습니다.",
+      },
+      {
+        title: "탕평 정치는 의의와 한계까지 평가",
+        body: "10월 4주 영조·정조의 탕평 정치 평가하기([9역11-01])는 탕평 정치의 등장 배경, 영조와 정조 각각의 주요 정책 분석, 의의와 한계를 종합한 자기 관점의 평가로 이어지는 논술형 25%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "통계자료분석(9월 2주)·삼각비문제해결력(10월 1주) 20%씩, 프로세스폴리오 10%(9월 5주·11월 1주)",
+    intro:
+      "발안중학교 3학년 수학은 11월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%이고, 수행평가 세 영역이 50%입니다. 논술형 수행 두 개가 9월 2주와 10월 1주에 먼저 끝나고, 프로세스폴리오는 9월 5주와 11월 1주에 나뉘어 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 3주", method: "논술형 10점" },
+      { name: "통계자료분석하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "삼각비문제해결력", kind: "task", weight: 20, timing: "10월 1주", method: "논술형" },
+      { name: "수학개념 프로세스폴리오", kind: "task", weight: 10, timing: "9월5주, 11월1주", method: "프로젝트·포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "통계 과제가 학기 첫 수행평가",
+        body: "9월 2주 통계자료분석하기는 [9수05-06]~[9수05-08]에 해당하는 대푯값 문제 해결, 산포도 분석, 산점도와 상관관계 표현을 평가합니다. 10월 1주 삼각비문제해결력은 삼각비의 뜻과 값 서술, 삼각비 표 활용, 삼각비를 이용한 길이·넓이 구하기가 요소입니다.",
+      },
+      {
+        title: "프로세스폴리오는 세 단원의 자기 성찰",
+        body: "수학개념 프로세스폴리오(10%)는 통계·삼각비·원의 성질 문제를 논리적으로 분석해 해결 과정을 제시하고, 개념 확인과 자기 성찰을 기록하는 영역입니다. 논술형 비율은 0%이며, 학기 논술형 비율 45%는 시험 5%와 두 논술형 수행 40%에서 나옵니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "balan-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "대화문 작성(9월 2주)·상황에 맞는 조언(9월 3-4주) 20%씩, 학습 포트폴리오 10%(11월 2주)",
+    intro:
+      "발안중학교 3학년 영어는 11월 3주 2차 정기시험이 선택형 44%와 논술형 6%이고, 수행평가 세 영역이 50%입니다. 두 논술형 과제가 9월 2주부터 4주 사이에 연달아 있어 학기 초반 비중이 큽니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 44, timing: "11월 3주", method: "선택형 88점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "11월 3주", method: "논술형 12점" },
+      { name: "대화문 작성하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "상황에 맞는 조언하기", kind: "task", weight: 20, timing: "9월 3-4주", method: "논술형" },
+      { name: "영어 학습 포트폴리오", kind: "task", weight: 10, timing: "11월 2주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "대화문은 일관성과 응집성을 봅니다",
+        body: "9월 2주 대화문 작성하기는 대화문 초고 완성, 내용의 일관성과 응집성, 문법과 어휘의 정확한 사용, 걱정하는 표현과 의무를 부인하는 표현의 활용이 평가 요소입니다.",
+      },
+      {
+        title: "조언하기는 말하기 요소가 함께",
+        body: "상황에 맞는 조언하기는 상황에 알맞은 표현 사용과 함께 논리적·유창·정확하게 말하기를 평가하며, 세부 기준에는 논술과 구술·발표가 함께 표시되어 있습니다. 11월 2주 포트폴리오(10%)는 문장을 의미 단위로 끊어 읽고 파악한 결과를 꾸준히 기록하는 영역입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("발안중학교")],
+  },
+  {
+    schoolSlug: "beomseo-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "작가 인터뷰 대본(9월)·나만의 시 꾸러미 5편(9~10월) 각 20% · 10월·12월 시험 각 30%",
+    intro:
+      "범서고등학교 1학년 공통국어2는 9월 작가 인터뷰와 9~10월 나만의 시 꾸러미가 수행평가 20%씩이고, 10월·12월 정기시험이 30%씩입니다. 두 수행평가 모두 서술형이며, 서·논술형 문항은 1차 시험에만 배점되어 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "작가 인터뷰", kind: "task", weight: 20, timing: "9월/1회", method: "서술형 평가" },
+      { name: "나만의 시 꾸러미", kind: "task", weight: 20, timing: "9~10월/5회", method: "서술형 평가" },
+    ],
+    notes: [
+      {
+        title: "인터뷰 대본은 다섯 요소를 몇 개 갖췄는지로 채점",
+        body: "작가 인터뷰는 ‘문학의 해석과 생활화’ 단원에서 작가와 작품의 관계를 이해하며 인터뷰 대본을 쓰는 과제입니다. 시대적 배경, 구체적 사건/대사, 인물/작가의 가치관, 특별 질문, 형식 다섯 가지를 모두 충족하면 100점이고, 충족 요소가 하나씩 줄 때마다 87·74·61·48점으로 내려가며 기본점수는 35점입니다.",
+      },
+      {
+        title: "시 꾸러미는 완성한 편 수가 곧 점수",
+        body: "나만의 시 꾸러미는 9~10월 다섯 차례에 걸쳐 한국 현대 시를 문학의 흐름과 주제별로 감상하는 과제입니다. 5편을 모두 완성하면 100점, 4편 87점, 3편 74점, 2편 61점, 1편 48점이며 관련 성취기준은 [10공국2-05-01]입니다.",
+      },
+      {
+        title: "1차 시험에만 서·논술형 40점",
+        body: "반영 비율표에서 10월 1차 정기시험은 선택형 60점과 서·논술형 40점, 12월 2차 정기시험은 선택형 100점(서·논술형 0점)입니다. 동점자 처리에서는 2차 시험이 1순위, 1차 시험이 2순위이고 시 꾸러미가 작가 인터뷰보다 앞섭니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("범서고등학교")],
+  },
+  {
+    schoolSlug: "beomseo-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "독서기반 수학주제 탐구(8회)·토의기반 문제해결 논술(6회) 각 25% · 시험 2회 각 25%",
+    intro:
+      "범서고등학교 1학년 공통수학2는 정기시험 두 번과 수행평가 두 영역이 모두 25%씩입니다. 두 수행 영역은 8월부터 12월까지 학기 내내 각각 8회와 6회로 나뉘어 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월", method: "선택형 80점·단답형 20점" },
+      { name: "독서기반 수학주제 탐구", kind: "task", weight: 25, timing: "8월~12월/8회", method: "탐구활동 평가" },
+      { name: "토의기반 수학문제해결 논술", kind: "task", weight: 25, timing: "8월~12월/6회", method: "논술형 평가" },
+    ],
+    notes: [
+      {
+        title: "독서 탐구는 분량 50점이 가장 큽니다",
+        body: "독서기반 수학주제 탐구는 공통수학2 관련 도서를 골라 선정 동기와 탐구 주제를 밝히고 탐구 내용을 정리하는 과제입니다. 주제의 적합성 20점, 탐구내용 분량 50점(40줄 이상이 A), 탐구내용 완성도 30점으로 나뉘고, 완성도는 주제 선정 이유·내용·결과·반성·적용 및 응용 등 제시된 형식을 따랐는지로 봅니다.",
+      },
+      {
+        title: "논술은 활동지에 기록한 문항 수로 채점",
+        body: "토의기반 수학문제해결 논술은 제시된 문제를 토의해 해결 과정과 근거를 서술하고 수업 시간 안에 제출합니다. 평가요소가 담긴 활동지에서 28문항 이상을 상세하게 기록하면 100점, 24~28문항 미만 91점처럼 4문항 구간마다 9점씩 내려가며 기본점수는 37점입니다.",
+      },
+      {
+        title: "2차 시험은 단답형 20점",
+        body: "1차 시험은 선택형 60점과 서·논술형 40점, 2차 시험은 선택형 80점과 단답형 20점으로 구성됩니다. 관련 성취기준은 1차가 [10공수2-01-01]~[10공수2-02-03], 2차가 [10공수2-02-04]~[10공수2-03-05]로 나뉩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("범서고등학교")],
+  },
+  {
+    schoolSlug: "beomseo-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통 영어 2"],
+    summary: "기자수첩 작성(9월)·혁신가 업적 탐구보고서(11월) 각 20% · 10월 2주·12월 3주 시험 각 30%",
+    intro:
+      "범서고등학교 1학년 공통 영어 2는 10월 2주와 12월 3주 정기시험이 30%씩, 영어 쓰기 수행평가 두 개가 20%씩입니다. 9월 기자수첩은 Lesson 1, 11월 탐구보고서는 Lesson 2와 연결됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "기자수첩 작성하기", kind: "task", weight: 20, timing: "9월/1회", method: "서술.논술" },
+      { name: "혁신가의 업적 탐구보고서 작성하기", kind: "task", weight: 20, timing: "11월/1회", method: "서술.논술" },
+    ],
+    notes: [
+      {
+        title: "기자수첩은 취재 메모 일곱 요소가 40점",
+        body: "Lesson 1 Bonding With Others에서 주어진 자료로 사실 정보를 골라 취재 메모를 쓰고 영어 기사문 형식으로 완성합니다. 취재 메모에 headline·who·what·when·where·why·how 일곱 요소를 빠짐없이 쓰면 40점이고, 기사문 9문장 이상 20점, 사건·배경·결론 세 요소 포함 20점, 어법·철자 오류 3개 이하 20점이 더해집니다.",
+      },
+      {
+        title: "탐구보고서는 업적 메모와 의견 문장 수",
+        body: "Lesson 2 What Keeps Us Moving Forward의 탐구보고서는 혁신가의 기본 정보, 주요 업적 2가지 이상(영어 문장 4개 이상), 업적의 사회적 영향 1문장 이상을 모두 갖춘 탐구 메모가 40점입니다. 이어서 생애와 주요 업적 6문장 이상 20점, 업적에 대한 자신의 의견 4문장 이상 20점, 어법·철자 20점을 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("범서고등학교")],
+  },
+  {
+    schoolSlug: "beomseo-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2"],
+    summary: "인구정책 디자이너·미래 사회 새로운 권리 제정 프로젝트 각 25% · 정기시험 2회 각 25%",
+    intro:
+      "범서고등학교 1학년 통합사회2는 정기시험 두 번과 프로젝트 두 개가 모두 25%씩입니다. 한 국가의 인구 문제를 해결하는 정책 설계와 미래 사회에 필요한 권리를 제안하는 과제가 수행평가의 전부입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 100점" },
+      { name: "인구정책 디자이너", kind: "task", weight: 25, method: "프로젝트 평가" },
+      { name: "미래 사회에 요구되는 새로운 권리 제정", kind: "task", weight: 25, method: "프로젝트 평가" },
+    ],
+    notes: [
+      {
+        title: "인구정책 디자이너는 WHERE·WHAT·WHY·SOLUTION",
+        body: "한 국가를 골라 인구 문제를 분석하고 정책을 제안하는 과제로, 어디에서 나타나는가 20점, 어떤 문제가 나타나는가 20점, 왜 발생했는가 30점, 어떻게 해결할 것인가 30점으로 채점합니다. 원인 분석과 정책 제안이 60점을 차지하며 성취기준은 [10통사2-05-01]입니다.",
+      },
+      {
+        title: "새로운 권리 제정은 제도적 장치 개수까지 봅니다",
+        body: "AI 발전 같은 미래 사회 변동을 자료로 기술(20점)하고 예상되는 사회문제·권리 침해를 분석(20점)한 뒤 새로운 권리를 제안(30점)합니다. 마지막 30점은 제안한 권리의 세부 내용과 실현을 위한 제도적 장치를 4가지 이상 제시하면 만점이고 3가지 25점, 2가지 20점, 1가지 15점입니다.",
+      },
+      {
+        title: "1차 시험만 서·논술형 40점",
+        body: "1차 정기시험은 선택형 60점과 서·논술형 40점, 12월 3주 2차 정기시험은 선택형 100점입니다. 1차 시험과 두 프로젝트의 시기는 평가계획서(10월 3주, 10월 4주)와 교수학습 운영 계획 진도표(중간고사 10월 2주, 수행평가 실시 10월 3·4주)의 표시가 서로 달라 수업 안내로 확인합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("범서고등학교")],
+  },
+  {
+    schoolSlug: "beomseo-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "전자기 유도 탐구 실험·빅데이터 활용 탐구 각 20% · 선택형 중심 시험 2회 각 30%",
+    intro:
+      "범서고등학교 1학년 통합과학2는 정기시험이 30%씩, 수행평가는 전자기 유도 탐구 실험과 빅데이터 활용 탐구가 20%씩입니다. 실험 평가와 서술·논술 평가가 하나씩 배치되어 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "전자기 유도 탐구 실험", kind: "task", weight: 20, method: "탐구 실험 평가" },
+      { name: "빅데이터 활용 탐구", kind: "task", weight: 20, method: "서술, 논술 평가" },
+    ],
+    notes: [
+      {
+        title: "전자기 유도 실험은 다섯 가지 탐구가 기준",
+        body: "자석과 코일의 상대 운동에 따른 검류계 바늘의 움직임을 관찰하고 탐구 보고서를 씁니다. 실험 장치를 구성해 5가지 탐구 실험의 독립변인과 종속변인을 모두 알맞게 설정하면 30점, 5가지 실험 결과를 오류 없이 도출하면 30점이고, 나머지 평가요소가 40점입니다.",
+      },
+      {
+        title: "빅데이터 과제는 기후변화지도와 탄소저감 보고서",
+        body: "인공위성이 제공하는 빅데이터로 기후요소를 분석해 기후변화지도를 작성하고, 탄소저감 과학기술을 고안해 보고서를 쓰는 과제입니다. 성취기준은 [10통과2-03-02]이며 진도표에서는 Ⅲ단원 ‘빅데이터의 활용’ 차시에 조사학습(수행평가)으로 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("범서고등학교")],
+  },
+  {
+    schoolSlug: "beomseo-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["독서와 작문"],
+    summary: "일지는 주장과 근거 서술이 50점이고, 서평과 발표는 40·40·20으로 배점하며 2차 시험은 선택형만 냅니다",
+    intro:
+      "범서고등학교 2학년 독서와 작문은 정기시험 두 번이 30%씩이고, 수행평가 40%가 독서작문일지 10%, 서평쓰기 15%, 주제탐구 발표 15%로 나뉩니다. 세 과제 모두 책을 읽은 뒤 글이나 발표로 정리하는 형식입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, method: "선택형 100점" },
+      { name: "독서작문일지", kind: "task", weight: 10, method: "서술·논술" },
+      { name: "서평쓰기", kind: "task", weight: 15, timing: "10월/1회", method: "서술·논술" },
+      { name: "주제탐구 발표", kind: "task", weight: 15, timing: "12월/1회", method: "구술·발표" },
+    ],
+    notes: [
+      {
+        title: "일지는 주장과 근거 서술이 50점",
+        body: "독서작문 일지는 중심 내용을 요약한 뒤 자신의 주장과 근거를 쓰는 과제로, 선택 동기 10점, 중심 내용 요약 40점, 주장과 근거 서술 50점입니다. 주장과 근거는 주장 제시, 타당한 근거, 주장과 근거의 논리적 관계, 완결된 문장, 맞춤법 다섯 조건을 몇 개 만족했는지에 따라 50점부터 30점까지 매깁니다.",
+      },
+      {
+        title: "서평과 발표는 40·40·20 배점",
+        body: "서평쓰기는 내용 이해 40점, 주체적 감상 40점, 구성 및 표현 20점이고, 주제탐구 발표는 발표 내용 40점, 발표 자료 40점, 발표 태도 20점입니다. 발표는 독서 후 탐구한 결과로 PPT를 만들어 발표하며, 두 과제 모두 기본점수는 56점입니다.",
+      },
+      {
+        title: "2차 시험은 선택형만",
+        body: "10월 2주 1차 정기시험은 선택형 60점과 서·논술형 40점이고, 2차 정기시험은 선택형 100점입니다. 2차 시험 시기는 평가계획서에 12월 2주, 진도표에 12월 3주 기말고사로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("범서고등학교")],
+  },
+  {
+    schoolSlug: "beomseo-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ", "확률과 통계"],
+    summary: "미적분Ⅰ 해설지는 10문항 기준이고 독서 탐구는 결과 정리가 40점, 확률과 통계는 줄 수도 채점 기준입니다",
+    intro:
+      "범서고등학교 2학년 수학은 미적분Ⅰ과 확률과 통계 모두 정기시험 30%씩 두 번과 수행평가 20%씩 두 개로 구성됩니다. 미적분Ⅰ은 독서 탐구를 8월부터 11월까지 8회에 걸쳐 쓰고, 확률과 통계는 10~11월 독서 활동과 11월 보고서가 수행평가입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점", course: "미적분Ⅰ" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점", course: "미적분Ⅰ" },
+      { name: "독서 기반 수학 주제 탐구", kind: "task", weight: 20, timing: "8월~11월/8회", method: "프로젝트 평가", course: "미적분Ⅰ" },
+      { name: "나만의 해설지 만들기", kind: "task", weight: 20, timing: "10월~11월/1회", method: "논술형 평가", course: "미적분Ⅰ" },
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점", course: "확률과 통계" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월", method: "선택형·단답형 100점", course: "확률과 통계" },
+      { name: "수학 독서 활동", kind: "task", weight: 20, timing: "10월~11월/1회", course: "확률과 통계" },
+      { name: "주제 탐구 보고서", kind: "task", weight: 20, timing: "11월/1회", course: "확률과 통계" },
+    ],
+    notes: [
+      {
+        title: "미적분Ⅰ 해설지는 10문항 기준",
+        body: "나만의 해설지 만들기는 교과서나 교사가 제시한 미적분Ⅰ 문제 10문항의 풀이 과정을 단계별로 정리하고 개념·풀이 전략·계산 과정을 설명하는 논술형 과제입니다. 9개 이상 문항에서 해결 과정이 체계적이고 해설이 명확하면 100점, 8개 95점으로 한 문항마다 5점씩 내려갑니다.",
+      },
+      {
+        title: "미적분Ⅰ 독서 탐구는 결과 정리가 40점",
+        body: "독서 기반 수학 주제 탐구는 탐구 주제 및 문제 선정 20점, 선행 연구 검토 및 탐구 계획 수립 25점, 탐구 결과 정리 및 반성 40점, 보고서의 완성도 15점이며 같은 주제로 8회에 걸쳐 보고서를 작성합니다.",
+      },
+      {
+        title: "확률과 통계는 줄 수가 채점 기준에 들어갑니다",
+        body: "수학 독서 활동은 도서 선정 이유, 책의 내용, 인상 깊었던 내용과 이유, 느낀 점을 각각 내용과 분량으로 나눠 채점하며 책의 내용은 6줄 이상이 15점입니다. 주제 탐구 보고서는 주제와 동기 20점, 탐구내용 50점(20줄 이상), 형식에 맞는 정리 30점이고, 2차 시험은 선택형과 단답형으로 100점을 채웁니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("범서고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "질문중심 독서비평(9월 4주)·논제 탐구 개요서·논술하기 각 10% · 시험 2회 각 35%",
+    intro:
+      "비전고등학교 1학년 공통국어2는 1차(10월 1~2주)·2차(12월 2주) 정기시험이 각 35%로 시험 비중이 70%입니다. 수행평가 30%는 세 과제가 10%씩이며 셋 모두 논술형으로 반영됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 1~2주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 2주", method: "선택형 100점" },
+      { name: "질문중심 독서비평", kind: "task", weight: 10, timing: "9월 4주", method: "논술" },
+      { name: "논제 탐구 논술 개요서 쓰기", kind: "task", weight: 10, method: "논술" },
+      { name: "논제 탐구 논술하기", kind: "task", weight: 10, timing: "10월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "독서비평은 핵심 질문 선정부터",
+        body: "질문중심 독서비평은 책의 의미와 가치관을 탐색할 핵심 질문을 선정하는 항목 5점과, 책 내용을 근거로 비평적 관점을 제시하는 항목 5점입니다.",
+      },
+      {
+        title: "개요서에서 논술문으로",
+        body: "개요서 쓰기는 논술 개요서 작성과 내용의 타당성 갖추기가 5점씩이고, 논술하기는 관심 분야 논제의 근거 자료를 조사해 논증 구조에 맞춘 글을 씁니다. 개요서 시기는 비율표에 10월 4주, 진도표의 수행평가 연계 칸에 10월 2주로 달리 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "공통수학2 문제 만들기 30%(11월 3주)·논리로 여러 가지 식 문제 해결 20% · 시험 각 25%",
+    intro:
+      "비전고등학교 1학년 공통수학2는 정기시험 2회(10월 1~2주, 12월 2주)가 각 25%, 수행평가 두 과제가 50%입니다. 논술형 반영은 두 수행평가에 20%씩 모두 40%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주~10월 2주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주", method: "선택형 100점" },
+      { name: "공통수학2 문제 만들기", kind: "task", weight: 30, timing: "11월 3주", method: "논술" },
+      { name: "논리로 여러 가지 식에 대한 문제 해결하기", kind: "task", weight: 20, method: "논술" },
+    ],
+    notes: [
+      {
+        title: "문제 만들기는 여섯 항목 5점씩",
+        body: "출제 기획, 문제 출제, 수학적 조건 설정, 문제 해결, 오개념 분석, 자기 평가가 각 5점이고, 이 가운데 출제 기획·조건 설정·문제 해결·오개념 분석이 논술형으로 표시되어 있습니다.",
+      },
+      {
+        title: "도형의 방정식 풀이 과제",
+        body: "논리로 여러 가지 식에 대한 문제 해결하기는 선분의 내분, 직선의 위치 관계, 점과 직선 사이의 거리, 원의 방정식 풀이가 5점씩입니다. 시기는 반영 비율 표에 9월 4주, 앞쪽 영역별 비율표에 9월 3주로 다르게 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "지속가능발전 문제해결 글쓰기(9월 5주)·문장완성 프로젝트(8월 4주) 각 20%",
+    intro:
+      "비전고등학교 1학년 공통영어2는 1·2차 정기시험이 각 30%, 수행평가 두 과제가 20%씩입니다. 두 과제 모두 논술형으로 반영되며, 문장완성 프로젝트가 8월 4주로 학기 초에 먼저 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1-2주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 100점" },
+      { name: "지속가능발전 문제해결 글쓰기", kind: "task", weight: 20, timing: "9월 5주", method: "논술" },
+      { name: "문장완성 프로젝트", kind: "task", weight: 20, timing: "8월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "글쓰기 20점의 배분",
+        body: "구성요소(정의, 목표, 문제점 및 결과, 실천방안 등) 포함 5점, 행동을 촉구하며 문제 인식을 높이는 내용 8점, 어휘·문법·철자 5점, 초고 작성과 피드백 반영 2점입니다.",
+      },
+      {
+        title: "문장완성 프로젝트와 시험 평가요소",
+        body: "문장완성 프로젝트는 학습한 내용의 세부 정보를 재구성해 문장을 완성하며 내용 이해, 문법, 어휘·철자, 앞뒤 맥락 추론이 5점씩입니다. 1·2차 시험은 세부정보, 주제·요지, 인물의 심정과 의도, 사건의 논리적 관계 파악을 평가요소로 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["한국사2", "통합사회2"],
+    summary: "한국사2 상상 글쓰기·개념 포트폴리오 각 20%·독서 논술 15% / 통합사회2 도시 논술 2개",
+    intro:
+      "비전고등학교 1학년 한국사2는 정기시험 45%·수행평가 55%로 수행 비중이 더 크고, 통합사회2는 정기시험 60%·수행평가 40%입니다. 한국사2는 1차 시험에만 논술형 20점이 있고, 통합사회2는 11월 1·2주에 도시를 주제로 한 논술 두 개가 이어집니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 18, timing: "10월 1주~10월 2주", method: "선택형 80점", course: "한국사2" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 4.5, timing: "10월 1주~10월 2주", method: "논술형 20점", course: "한국사2" },
+      { name: "2차 정기시험", kind: "exam", weight: 22.5, timing: "12월 2주", method: "선택형 100점", course: "한국사2" },
+      { name: "일제강점기 역사 주체로서 글쓰기", kind: "task", weight: 20, timing: "8월 2주~10월 4주", method: "논술, 포트폴리오", course: "한국사2" },
+      { name: "개념 구조화와 창의적 논증 포트폴리오", kind: "task", weight: 20, timing: "8월 2주~12월 1주", method: "포트폴리오", course: "한국사2" },
+      { name: "민주주의 가치 내면화 독서 논술", kind: "task", weight: 15, timing: "10월 2주~11월 4주", method: "논술, 포트폴리오", course: "한국사2" },
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주~10월 2주", method: "선택형 100점", course: "통합사회2" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 100점", course: "통합사회2" },
+      { name: "도시의 지리적 문제와 해결 방안 탐구하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술", course: "통합사회2" },
+      { name: "윤리적 관점에서 지속 가능한 도시 설계의 정당성 탐구하기", kind: "task", weight: 20, timing: "11월 2주", method: "논술", course: "통합사회2" },
+    ],
+    notes: [
+      {
+        title: "한국사2 수행평가 세 과제",
+        body: "일제강점기 인물의 시대 인식을 바탕으로 한 상상 글쓰기는 두 문항이 10점씩이고, 개념 구조화 포트폴리오는 매 수업 핵심 개념 구조화 10점과 3단계 논증식 의견 서술 10점입니다. 민주주의 독서 논술은 가치 논술 10점과 활동지 독서 기록 5점입니다.",
+      },
+      {
+        title: "통합사회2 도시 논술 두 과제",
+        body: "11월 1주 과제는 공간 불평등 현상 사례 조사 8점과 공간적 정의를 위한 실천 방안 제안 12점입니다. 11월 2주 과제는 도시의 핵심 가치 설정 2점, 윤리적 정당성 논증 10점, 윤리적 갈등 분석 4점, 해결 방안 제시 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["화법과 언어"],
+    summary: "사회 문제 토의·정책 제안서(9월 2주)·원 슬라이드 진로 발표 각 20% · 시험 각 30%",
+    intro:
+      "비전고등학교 2학년 화법과 언어는 1차(10월 1~2주)·2차(12월 2주) 정기시험이 각 30%, 수행평가 두 과제가 20%씩입니다. 정책 제안서는 9월 2주, 진로 발표는 10월 4주~11월 1주에 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주~10월 2주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 100점" },
+      { name: "사회 문제 토의 및 정책 제안서 쓰기", kind: "task", weight: 20, timing: "9월 2주", method: "논술, 토의·토론" },
+      { name: "원 슬라이드 진로 발표하기", kind: "task", weight: 20, timing: "10월 4주~11월 1주", method: "논술, 구술발표" },
+    ],
+    notes: [
+      {
+        title: "제안서 과제는 토의와 글쓰기를 함께 채점",
+        body: "문제 상황 분석 및 대안 제시, 대안 분석 및 평가, 사회 문제 진단 및 현황 분석, 정책 제안의 논리적 체계성이 5점씩입니다. 진도표에서는 9월 2~3주 토의 단원이 수행평가와 연계됩니다.",
+      },
+      {
+        title: "진로 발표는 절반이 논술형",
+        body: "발표 주제·자료 선정과 발표문의 응집성이 5점씩 논술형이고, 언어적 표현 전략과 발표 태도가 5점씩입니다. 논술형 반영은 제안서 20%, 발표 10%로 모두 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ"],
+    summary: "수학 논술 평가(10월 2주)·수학 독서 역량 평가·수학적 사고 확장 노트 각 20%",
+    intro:
+      "비전고등학교 2학년 미적분Ⅰ은 1·2차 정기시험이 각 20%이고 수행평가 세 과제가 60%를 차지합니다. 수학 논술 평가(10월 2주), 수학 독서 역량 평가(11월 1주), 수학적 사고 확장 노트(11월 2주)가 20%씩입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "10월 1주~10월 2주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 2주", method: "선택형 100점" },
+      { name: "수학 논술 평가", kind: "task", weight: 20, timing: "10월 2주", method: "논술" },
+      { name: "수학 독서 역량 평가", kind: "task", weight: 20, timing: "11월 1주", method: "논술" },
+      { name: "수학적 사고 확장 노트", kind: "task", weight: 20, timing: "11월 2주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "수학 논술은 롤의 정리와 평균값 정리",
+        body: "롤의 정리 설명 6점·문제해결 4점, 평균값 정리 설명 6점·문제해결 4점으로 20점입니다. 두 정리가 유도되는 과정을 논리적으로 논술하는 과제입니다.",
+      },
+      {
+        title: "독서 평가와 사고 확장 노트의 배점",
+        body: "수학 독서 역량 평가는 도서 선정 이유 글, 실생활 속 수학적 요소 찾기, 융합적 사고, 수학적 실천 계획이 5점씩입니다. 사고 확장 노트는 표지 2점, 목차 2점, 수학 개념 작성 및 문제 만들기 10점, 진로·삶과 연관된 내용 3점, 소감 3점이고 논술형 반영은 6%로 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어II"],
+    summary: "SDGs 이슈 과정 중심 글쓰기·환경 청원 글쓰기 각 15%·관용 표현 10% · 시험 각 30%",
+    intro:
+      "비전고등학교 2학년 영어II는 1·2차 정기시험이 각 30%, 수행평가 세 과제가 40%입니다. 8월 4주~9월 1주의 과정 중심 글쓰기와 9월 3주의 청원 글쓰기가 15%씩, 10월 2~3주 관용 표현 과제가 10%이고 모두 논술형입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주~10월 2주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 100점" },
+      { name: "지속가능발전목표 이슈 탐구 및 과정 중심 글쓰기", kind: "task", weight: 15, timing: "8월 4주~9월 1주", method: "논술, 프로젝트" },
+      { name: "지속가능한 환경을 위한 청원 글쓰기", kind: "task", weight: 15, timing: "9월 3주", method: "논술, 프로젝트" },
+      { name: "영어 관용 표현과 나의 삶 연계하기", kind: "task", weight: 10, timing: "10월 2주~10월 3주", method: "논술, 프로젝트" },
+    ],
+    notes: [
+      {
+        title: "과정 중심 글쓰기는 단계별 5점",
+        body: "국가 지속가능발전목표(K-SDGs)와 연계한 환경 이슈 브레인스토밍, 문단 개요·초안 작성, 자기평가와 AI 검토·첨삭을 통한 완성도 높이기가 각 5점입니다.",
+      },
+      {
+        title: "청원 글쓰기와 관용 표현 과제",
+        body: "청원 글쓰기는 구성의 완결성, 문제통찰력과 논리적 자기표현, 언어의 정확성과 표현의 적절성이 5점씩입니다. 관용 표현 과제는 학습한 관용 표현으로 다이얼로그와 상황별 예문을 창작하는 두 항목이 5점씩입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전고등학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "기본작도와 삼각형 작도 20%(9월 2주)·입체도형 문제해결 논술 30%(11월 3주)",
+    intro:
+      "비전중학교 1학년 수학은 1차(10월 1주)·2차(12월 2주) 정기시험이 각 25%, 수행평가 두 과제가 50%입니다. 논술형 반영은 1차 시험 5%와 입체도형 논술 30%를 합쳐 35%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주", method: "선택형 100점" },
+      { name: "기본작도와 삼각형 작도하기", kind: "task", weight: 20, timing: "9월 2주" },
+      { name: "입체도형의 성질에 대한 문제해결 논술하기", kind: "task", weight: 30, timing: "11월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "작도 과제는 여섯 가지 작도",
+        body: "세 변, 두 변과 끼인각, 한 변과 양 끝 각이 주어진 삼각형 작도와 이등변삼각형·정삼각형·평행선 작도가 채점 요소입니다. 세 변의 길이 작도 3점, 두 변과 끼인각·한 변과 양 끝 각 작도 4점씩, 이등변삼각형 작도 3점입니다.",
+      },
+      {
+        title: "입체도형 논술은 다섯 항목 6점씩",
+        body: "정다면체의 성질 설명, 기둥과 뿔의 겉넓이와 부피, 구의 겉넓이와 부피를 구하고 과정을 설명하는 다섯 항목이 각 6점입니다. 진도표에는 11월 3주에 수행평가 연계가 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "나의 자아정체성 형성 과정 탐구(9월 2주)·대표 선출과 선거 원칙 수립(11월 2주) 각 25%",
+    intro:
+      "비전중학교 1학년 사회는 12월 2주 2차 정기시험 한 번이 50%이고, 수행평가 두 과제가 25%씩입니다. 논술형 반영은 시험 10%, 자아정체성 과제 20%, 선거 과제 25%로 55%입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 2주", method: "선택형 80점 · 논술형 20점" },
+      { name: "나의 자아정체성 형성 과정 탐구하기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형 포함" },
+      { name: "대표 선출 방법과 선거의 원칙 수립하기", kind: "task", weight: 25, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "자아정체성 과제의 세 항목",
+        body: "사회화의 기능 탐구 10점, 나의 자아정체성 표현 5점, 자아정체성 형성에 영향을 미친 사람과 미디어 분석 10점입니다.",
+      },
+      {
+        title: "선거 과제는 원칙 수립이 15점",
+        body: "대표 선출 방법 탐색 10점, 선거의 기본원칙 수립 15점이며, 진도표에서는 선거의 기능과 기본 원칙 단원(11월 2주)에 연계됩니다. 시험 평가요소에는 오세아니아의 공간적 상호작용, 다양한 문화, 민주주의, 법의 의미와 목적이 함께 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "환경 보호 실천을 촉구하는 글쓰기 30%(9월 2주)·영작문 탐구일지 10% · 시험 각 30%",
+    intro:
+      "비전중학교 1학년 영어는 1·2차 정기시험이 각 30%, 수행평가가 40%입니다. 9월 2주 환경 보호 글쓰기가 30%로 수행평가 대부분을 차지하고, 영작문 탐구일지 10%는 9월 4주와 12월 1주에 확인합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 100점" },
+      { name: "환경 보호 실천을 촉구하는 글쓰기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+      { name: "영작문 탐구일지 작성하기", kind: "task", weight: 10, timing: "9월 4주, 12월 1주" },
+    ],
+    notes: [
+      {
+        title: "환경 글쓰기 30점 구성",
+        body: "글을 짜임새 있게 구성하기 10점, 필수 구문을 활용한 글 작성 10점, 다양하고 적절한 어휘와 정확한 언어 형식 5점, 주어진 조건 충족 5점입니다.",
+      },
+      {
+        title: "평가 방침의 논술형 36%",
+        body: "평가 방침에 1학년 논술형 반영이 36%로 적혀 있고, 1차 시험 논술형 6%와 환경 글쓰기 30%가 이를 이룹니다. 탐구일지는 단원별 활동지의 어휘 활용 예문, 어법 오류 찾기와 구문 예시 문장을 5점씩 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "물질의 상태 변화 표현 20%(9월 3주)·기체 압력과 부피 논술 20%·탐구학습일기 10%",
+    intro:
+      "비전중학교 1학년 과학은 1차(10월 1주)·2차(12월 2주) 정기시험이 각 25%이고, 수행평가 세 과제가 50%입니다. 논술형 두 과제가 9월 3주와 10월 4주에 있고, 탐구학습일기는 9월부터 10월까지 네 차례 씁니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주", method: "선택형 100점" },
+      { name: "물질의 상태 변화 표현하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "기체의 압력과 부피 관계 논술하기", kind: "task", weight: 20, timing: "10월 4주", method: "논술형" },
+      { name: "탐구학습일기 작성하기", kind: "task", weight: 10, timing: "9월 1주, 4주, 10월 4주, 10월 5주" },
+    ],
+    notes: [
+      {
+        title: "두 논술 과제의 항목",
+        body: "상태 변화 과제는 세 가지 상태의 입자 모형 설명 5점, 상태 변화의 입자 모형 설명 7점, 실생활 상태 변화 현상 설명 8점입니다. 기체 과제는 압력과 부피 관계의 입자 모형 표현 6점, 부피 변화 자료의 그래프 6점, 관계 추론 8점입니다.",
+      },
+      {
+        title: "탐구학습일기의 주제",
+        body: "비열, 상태 변화와 열에너지 출입, 기체의 온도와 부피 관계, 태양계 천체의 특징과 분류를 주제로 일기를 씁니다. 진도표의 수행평가 연계 표시도 9월 1·3·4주와 10월 4·5주에 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심 종이접기 탐구 15%·확률 탐구 15%·문제 해결 과정 논술 10% · 시험 각 30%",
+    intro:
+      "비전중학교 2학년 수학은 1차(10월 1주)·2차(12월 2주) 정기시험이 각 30%, 수행평가 세 과제가 40%입니다. 문제 해결 과정 논술하기는 8월 4주부터 11월 3주까지 네 번에 걸쳐 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 90점 · 논술형 10점" },
+      { name: "종이접기를 이용한 삼각형의 외심, 내심 탐구하기", kind: "task", weight: 15, timing: "9월 2주", method: "논술형" },
+      { name: "수학적 확률과 통계적 확률 탐구하기", kind: "task", weight: 15, timing: "10월 4주", method: "논술형 포함" },
+      { name: "문제 해결 과정 논술하기", kind: "task", weight: 10, timing: "8월 4주, 9월 3주, 10월 4주, 11월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "종이접기 과제에 수막새가 나옵니다",
+        body: "외심·내심 성질 서술, 종이접기로 외심과 외접원 그리기, 내심과 내접원 그리기가 4점씩이고, 외접원의 성질로 수막새의 사라진 부분을 완성하는 항목이 3점입니다.",
+      },
+      {
+        title: "확률 과제는 실험 뒤 논술",
+        body: "실험으로 통계적 확률 구하기 5점에, 수학적 확률 구하기 3점, 확률의 의미 서술 4점, 실생활 문제 해결 3점이 논술형으로 붙습니다. 논술형 반영은 시험 3%씩과 수행평가 35%를 합쳐 41%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "역사 가짜뉴스 분석하기 30%(9월 2주)·주가 분석 보고서 20%(10월 5주) · 시험 각 25%",
+    intro:
+      "비전중학교 2학년 역사는 1차(10월 1주)·2차(12월 2주) 정기시험이 각 25%, 수행평가 두 과제가 50%입니다. 9월 2주 가짜뉴스 분석과 10월 5주 주가 분석 보고서가 이어지며, 논술형 반영은 32.5%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주", method: "선택형 100점" },
+      { name: "역사 가짜뉴스 분석하기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형 포함" },
+      { name: "주가 분석 보고서 작성하기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "가짜뉴스 과제의 배점",
+        body: "역사적 오류 찾기 5점, 오류 정정 10점, 제작 의도 분석 5점에 가짜 뉴스 댓글 작성과 현대의 가짜뉴스와 연결하기가 논술형 5점씩입니다.",
+      },
+      {
+        title: "주가 분석 보고서와 시험 범위",
+        body: "주가 변동을 열강의 침략과 관련지어 설명, 침략의 결과 설명, 청나라의 근대화 노력을 바탕으로 주가 반등 대안 제시, 현대 문제와 연결하기가 5점씩입니다. 1차 시험은 중국 고대사부터 근대사, 2차는 근대사부터 현대사까지의 이해를 확인합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "존경하는 인물 소개하기 25%·다양한 소재의 지문 분석하기 15% · 시험 1·2차 각 30%",
+    intro:
+      "비전중학교 2학년 영어는 1차(10월 1주)·2차(12월 2주) 정기시험이 각 30%, 수행평가 두 과제가 40%입니다. 논술형은 1차 시험 6%와 인물 소개 글쓰기 25%로 평가 방침의 31%와 같습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주", method: "선택형 100점" },
+      { name: "존경하는 인물 소개하기", kind: "task", weight: 25, method: "논술형" },
+      { name: "다양한 소재의 지문 분석하기", kind: "task", weight: 15 },
+    ],
+    notes: [
+      {
+        title: "인물 소개 글쓰기 25점",
+        body: "개요 작성 5점, 적절한 내용 구성 10점, 정확한 언어 사용 10점입니다. 진도표에서는 10월 2~3주 'The Greatest Love for All' 단원에서 글쓰기 과정 관찰과 피드백이 수행평가와 연계됩니다.",
+      },
+      {
+        title: "지문 분석 과제",
+        body: "어휘 파악, 구문을 활용한 문장 완성, 지문 내용 분석이 5점씩입니다. 비율표 평가 시기 칸에는 10월 2주·10월 3주·11월 3주가 두 과제에 걸쳐 적혀 있어 과제별 시기는 표에서 나뉘지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "전기와 자기 설명하기 25%(9월 2주)·광합성 과정 분석하기 25%(10월 2주) · 시험 각 25%",
+    intro:
+      "비전중학교 2학년 과학은 1차(10월 1주)·2차(12월 2주) 정기시험이 각 25%, 수행평가 두 과제가 25%씩입니다. 논술형 반영은 1차 시험 2.5%, 전기와 자기 25%, 광합성 20%로 47.5%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주", method: "선택형 100점" },
+      { name: "전기와 자기 설명하기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형" },
+      { name: "광합성 과정 분석하기", kind: "task", weight: 25, timing: "10월 2주", method: "논술형 포함" },
+    ],
+    notes: [
+      {
+        title: "전기와 자기 과제는 대전과 정전기 유도",
+        body: "원자의 전기적 특성과 대전 설명하기 15점, 정전기 유도 현상 설명하기 10점으로 25점 전체가 논술형입니다.",
+      },
+      {
+        title: "광합성 과제는 설명이 20점",
+        body: "광합성 과정 설명하기 20점이 논술형이고, 광합성에 영향을 미치는 요인 분석하기가 5점입니다. 평가 방침에는 2차 정기시험을 선택형 문항만으로 본다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "포물선을 그래프로 옮기면 4점, 위·아래로 볼록한 식과 성질은 각 13점이고 중앙값·최빈값·평균·산포도·상관관계는 5점씩",
+    intro:
+      "비전중학교 3학년 수학은 11월 3주 2차 정기시험 한 번이 40%이고, 수행평가 두 과제가 30%씩입니다. 논술형 반영은 시험 4%와 수행평가 56%를 합쳐 60%입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 40, timing: "11월 3주", method: "선택형 90점 · 논술형 10점" },
+      { name: "이차함수 식과 그 성질 서술하기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형 포함" },
+      { name: "통계를 활용한 실생활 문제 해결하기", kind: "task", weight: 30, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "이차함수 과제는 볼록한 방향별 13점",
+        body: "주어진 포물선을 이차함수 그래프로 나타내기 4점에, 아래로 볼록한 포물선과 위로 볼록한 포물선의 식을 구하고 성질을 설명하는 논술형 항목이 13점씩입니다.",
+      },
+      {
+        title: "통계 과제는 여섯 항목 5점씩",
+        body: "중앙값, 최빈값, 평균과 적절한 대푯값, 산포도와 자료 해석, 양의 상관관계, 음의 상관관계 서술이 각 5점입니다. 비율표 시기는 10월 2주인데 진도표의 수행평가 연계 표시는 10월 3~4주 원의 성질 단원에 있어 시기는 표에서 확정되지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bijeon-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "항상성 4점, 호르몬과 신경 비교 6점, 체온·혈당 조절 각 5점이며 던져 올린 물체와의 비교 글쓰기는 10점입니다",
+    intro:
+      "비전중학교 3학년 과학은 1차(10월 1주)·2차(11월 3주) 정기시험이 각 25%이고, 수행평가 두 과제가 9월 1주와 9월 3주에 25%씩 진행됩니다. 1차 시험에는 논술형 10점이 있고 2차 시험은 선택형 100점입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "11월 3주", method: "선택형 100점" },
+      { name: "몸의 기능 조절 과정 탐구하기", kind: "task", weight: 25, timing: "9월 1주", method: "논술형 포함" },
+      { name: "역학적 에너지 전환과 보존 분석하기", kind: "task", weight: 25, timing: "9월 3주", method: "탐구실험형, 논술형 포함" },
+    ],
+    notes: [
+      {
+        title: "호르몬 과제는 조사 보고서와 논술",
+        body: "호르몬 관련 질병 조사 보고서 5점에, 항상성 서술 4점, 호르몬과 신경의 조절 작용 차이 6점, 체온 조절 5점, 혈당 조절 5점의 논술형 항목이 붙습니다.",
+      },
+      {
+        title: "역학적 에너지 과제는 실험 분석부터",
+        body: "자유 낙하 운동 실험 결과 분석 5점, 역학적 에너지 보존법칙 설명 글쓰기 5점, 자유 낙하 물체의 역학적 에너지 나타내기 5점, 자유 낙하와 던져 올린 물체 비교 글쓰기 10점이고 뒤의 세 항목이 논술형입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("비전중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "독서일지 네 조건과 감상 네 조건을 채우고, 주장 글은 근거로 인정되는 자료의 범위가 정해져 있습니다",
+    intro:
+      "보문중학교 1학년 국어는 중간(10월)·기말(12월) 시험이 30%씩, 서·논술형 수행평가 두 영역이 20%씩입니다. 9월 독후감은 독서일지와 감상문, 11월 주장하는 글은 근거와 글의 구성을 각 10점으로 나눠 봅니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "독후감 작성하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 20, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "독서일지 네 조건과 감상 네 조건",
+        body: "[9국02-03] 추론하며 읽기 성취기준입니다. 독서일지 10점은 독서 시간·분량을 담은 계획, 제목·표지로 내용 추측, 이야기 지도나 마인드맵, 새로 알게 된 단어 정리 네 가지를, 추론 및 감상 10점은 필자의 의도·관점 추론, 새 정보 정리, 느낀 점, 문단 구분 네 가지를 봅니다. 평가 횟수는 3회입니다.",
+      },
+      {
+        title: "근거로 인정되는 자료의 범위",
+        body: "주장하는 글은 객관성과 타당성을 갖춘 근거를 3가지 이상 들면 10점, 2가지면 8점입니다. 통계 자료·실제 사례·전문가 의견·논리적 인과관계를 명시해 주장을 뒷받침해야 근거 1가지로 인정되고, 1단계는 AI 포함 인터넷 검색이 가능하지만 2단계는 활동지에 수기로 씁니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "복합양식 글은 개요 단계가 점수의 절반이고, 독후감은 점검·조정하며 읽기를 바탕으로 씁니다",
+    intro:
+      "보문중학교 2학년 국어는 수행평가 두 개가 모두 2학기 앞쪽에 몰려 있습니다. 9월에 복합양식 자료를 활용한 글쓰기, 10월에 독후감을 쓰고, 중간·기말시험은 선택형 100점으로 각 30%를 차지합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "복합양식 자료를 활용하여 글쓰기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "독후감 작성하기", kind: "task", weight: 20, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "개요 단계가 점수의 절반",
+        body: "복합양식 글쓰기([9국03-07])는 내용 생성 및 조직 10점과 글의 형식과 내용 10점입니다. 앞의 10점은 여러 복합양식 자료로 내용을 만들고 글의 유형에 맞춘 구체적 개요를 써야 받고, 자료를 한 가지만 쓰면 8점입니다. 뒤의 10점은 쓰기 계획 반영과 문단 구분이 기준입니다.",
+      },
+      {
+        title: "2학년 독후감은 점검·조정하며 읽기",
+        body: "[9국02-08]에 따라 수준에 맞는 책 선정, 독서 시간·분량 계획, 연상하기로 내용 예측, 요약하며 읽기 점검·조정 네 조건을 독서일지(10점)에 담습니다. 감상문 10점은 새로 알게 된 점, 더 알고 싶은 점, 문단 구분 세 요소이며 AI는 활용하지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "읽기 전략을 스스로 평가하는 독후감을 쓰고, 토론문은 타당성·신뢰성·공정성으로 봅니다",
+    intro:
+      "보문중학교 3학년 국어는 중간시험 10월, 기말시험 11월로 1·2학년보다 학기말 시험이 한 달 이릅니다. 수행평가는 9월 독후감과 11월 토론문이 각 20%이고 둘 다 서·논술형입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "독후감 작성하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "토론문 작성하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "읽기 전략을 스스로 평가하는 독후감",
+        body: "[9국02-09] 성취기준으로, 계획 및 작성 10점에는 읽기 방법·전략을 넣은 독서계획이 포함됩니다. 감상 및 평가 10점은 문단을 나눈 감상문과 함께 자신이 고른 읽기 전략과 과정이 적절했는지를 이유를 들어 평가해야 만점입니다.",
+      },
+      {
+        title: "토론문: 타당성·신뢰성·공정성",
+        body: "[9국01-05] 논박하기와 연결된 과제입니다. 근거의 적절성 10점은 타당성·신뢰성·공정성을 고루 갖춘 근거 3가지 이상이면 10점, 1~2가지면 8점이고, 글의 형식 및 근거 10점은 서론-본론-결론 형식과 명료한 주장을 봅니다. 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "평면도형은 식과 정답을 따로 채점하고, 입체도형은 구까지 다섯 요소를 다룹니다",
+    intro:
+      "보문중학교 1학년 수학은 중간·기말시험 30%씩과 도형 단원 수행평가 두 개(각 20%)입니다. 수행은 모두 수업 시간 안에 교사 관찰 아래 개별 탐구로 끝내며, 식 세우기와 정답을 함께 보는 4점 척도 다섯 문항으로 채점합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "평면도형의 성질 이해하기", kind: "task", weight: 20, timing: "10월", method: "서·논술형" },
+      { name: "입체도형의 성질 이해하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "식과 정답을 따로 봅니다",
+        body: "각 요소는 조건에 맞는 식을 세우고 정답을 구하면 4점, 식은 맞고 답이 틀리면 3점, 식 없이 정답만 맞으면 2점, 둘 다 못하면 1점입니다. 평면도형 과제는 평행선의 동위각·엇각, 다각형의 성질, 부채꼴의 호의 길이와 넓이, 평면도형의 넓이 다섯 요소입니다.",
+      },
+      {
+        title: "입체도형은 구까지 다섯 요소",
+        body: "11월 과제는 정다면체의 뜻, 입체도형의 겉넓이·부피, 구의 겉넓이·부피를 같은 4점 척도로 봅니다([9수03-07]·[9수03-08]). 미제출·미수행은 기본점수 4점(만점의 20%), 장기 미인정결석은 3점이고, 부정행위는 0점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심에서 세 가지 값을 구하고, 닮음 과제는 피타고라스 정리로 마무리합니다",
+    intro:
+      "보문중학교 2학년 수학 수행평가는 10월 삼각형·사각형의 성질, 11월 닮음과 피타고라스 정리로 이어지는 두 과제입니다. 각 20%로 정기시험 두 번(각 30%)과 합쳐 학기 성적을 냅니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "도형의 성질 탐구하기", kind: "task", weight: 20, timing: "10월", method: "서·논술형" },
+      { name: "도형의 닮음 탐구하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "외심·내심은 세 가지 값을 구합니다",
+        body: "도형의 성질 과제는 6개 직각삼각형에서 합동 3쌍과 합동조건 찾기, 외심과 내심의 성질로 각도·변의 길이·외접원(내접원)의 반지름 구하기, 평행사변형이 되는 조건 3가지, 여러 사각형의 성질 다섯 요소를 각 4점으로 봅니다.",
+      },
+      {
+        title: "닮음 과제의 마지막은 피타고라스 정리",
+        body: "SSS·SAS·AA 닮음으로 6개 삼각형에서 닮음 3쌍 찾기, 닮음의 응용, 삼각형과 평행선, 무게중심, 피타고라스 정리를 활용한 문제가 4점씩입니다. 닮음이나 해당 성질을 쓰지 않고 풀면 1점으로 처리합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비는 풀이 없이 답만 맞으면 2점이고, 원의 성질은 다섯 갈래로 나뉩니다",
+    intro:
+      "보문중학교 3학년 수학은 9월 삼각비, 10월 원의 성질 수행평가가 각 20%이고 중간(10월)·기말(11월) 시험이 30%씩입니다. 두 과제 모두 수업 중 개별 탐구로 서술하며, 기말시험이 11월이라 수행과 시험 범위가 가까이 붙어 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "삼각비 탐구하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "원의 성질 탐구하기", kind: "task", weight: 20, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각비: 풀이 없이 답만 맞으면 2점",
+        body: "삼각비의 의미와 구하는 과정, 변의 길이 구하기, 삼각형의 길이와 각 구하기, 실생활 문제, 문제 해결 과정을 식으로 나타내기 다섯 요소가 4점씩입니다([9수04-17]·[9수04-18]). 풀이와 답이 맞으면 4점, 풀이는 맞고 답이 틀리면 3점, 풀이 없이 답만 맞으면 2점입니다.",
+      },
+      {
+        title: "원의 성질 다섯 갈래",
+        body: "원의 현, 원의 접선, 원주각, 원주각의 여러 성질, 원에 내접하는 사각형을 각각 세 요소 포함 여부로 4점까지 매깁니다([9수04-19]·[9수04-20]). AI는 활용하지 않고, 미수행 기본점수는 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "듣기는 시·도교육청 공동 평가 점수를 쓰고, 환경보호 글은 세 기준 10점씩, 12월 말하기는 4·3·3점입니다",
+    intro:
+      "보문중학교 1학년 영어는 정기시험 두 번이 25%씩, 수행평가 세 영역이 50%입니다. 이 가운데 11월 환경보호 쓰기가 30%로 가장 크고, 9월 듣기와 12월 문화유산 말하기는 10%씩입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 25, timing: "12월", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월", method: "영어듣기능력평가" },
+      { name: "환경보호 쓰기", kind: "task", weight: 30, timing: "11월", method: "서·논술형" },
+      { name: "문화유산 말하기", kind: "task", weight: 10, timing: "12월", method: "발표" },
+    ],
+    notes: [
+      {
+        title: "듣기는 시·도교육청 공동 평가 점수",
+        body: "2026년 제2회 전국 16개 시·도교육청 공동 주관 영어듣기능력평가 20문항으로 매깁니다. 20개를 맞히면 10.0점이고 한 문항마다 0.4점씩 내려가 1개 이하는 2.4점, 미응시 기본점수는 2점입니다.",
+      },
+      {
+        title: "환경보호 쓰기 세 기준 각 10점",
+        body: "주제 적합성은 조건 3개 충족, 유창성은 5문장 이상 완성, 어휘와 어법은 철자·어법 오류가 없어야 10점입니다. 오류 2개 이하면 6점, 3개 이상이면 2점으로 차이가 큽니다. 서술형 평가는 이 쓰기 수행으로 전체의 30%를 채웁니다.",
+      },
+      {
+        title: "12월 말하기는 4·3·3점",
+        body: "문화유산 말하기는 주제 적합성 4점, 5~6문장으로 답하는 유창성 3점, 어휘와 어법 3점으로 10점 만점입니다. 기본점수는 2점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "장래희망 글엔 넣어야 할 문법 형식이 있고, 여행경험 말하기는 완전한 문장 5개 이상입니다",
+    intro:
+      "보문중학교 2학년 영어는 중간·기말시험 25%씩에 듣기·말하기·쓰기 수행평가 50%를 더합니다. 장래희망 쓰기 30%는 문법 형식 조건이 붙은 서·논술형이고, 여행경험 말하기는 9~10월에 진행됩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 25, timing: "12월", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월", method: "영어듣기능력평가" },
+      { name: "여행경험 말하기", kind: "task", weight: 10, timing: "9~10월", method: "발표" },
+      { name: "장래희망 쓰기", kind: "task", weight: 30, method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "쓰기에 넣어야 할 문법 형식",
+        body: "과제 완성 10점은 주제 관련 6개 이상의 문장으로 쓰되 관계대명사, 동명사, to-부정사, 현재완료, It~to 가주어·진주어 중 3개 이상을 완전한 문장으로 쓰는 조건입니다. 유창성 10점(4문장 이상)과 언어 사용 10점이 더해지며 성취기준은 [9영02-10]입니다.",
+      },
+      {
+        title: "말하기는 5문장 이상 완전한 문장",
+        body: "여행경험 말하기는 과제 수행 4점, 유창성 3점, 언어 사용 3점입니다. 의미 전달에 영향을 주는 중대한 문법 오류가 없어야 언어 사용 3점을 받습니다. 장래희망 쓰기 시기는 비율표 11~12월, 진도표 11월로 달라 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "관광지 말하기는 사실 정보를 설명하고, 자기소개 글은 구성 항목이 따로 정해져 있습니다",
+    intro:
+      "보문중학교 3학년 영어 수행평가는 9월 듣기, 9~10월 유명관광지 말하기, 10~11월 자기소개 쓰기 순으로 이어집니다. 정기시험은 중간 10월·기말 11월에 25%씩이라 쓰기 과제가 기말시험 직전까지 겹칩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 25, timing: "11월", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월", method: "영어듣기능력평가" },
+      { name: "유명관광지 말하기", kind: "task", weight: 10, timing: "9~10월", method: "구술" },
+      { name: "자기소개 쓰기", kind: "task", weight: 30, timing: "10~11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "관광지 말하기는 사실 정보 설명",
+        body: "[9영02-03] 친숙한 주제의 사실적 정보 설명을 구술로 평가합니다. 5개 이상의 완전한 문장으로 과제를 수행하면 4점, 막힘없이 생각을 표현하면 유창성 3점, 중대한 문법 오류가 없으면 언어 사용 3점입니다.",
+      },
+      {
+        title: "자기소개 쓰기는 구성 항목이 따로",
+        body: "[9영02-02]에 따라 과제 완성 10점(6개 이상 문장, 관계대명사·동명사·to-부정사·현재완료·가주어 진주어 중 3개 이상), 구성 10점(4문장 이상이면 10점, 3~4문장 6점), 언어 사용 10점입니다. 미수행 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "탄성력 그래프는 네 조건을 갖추고, 달의 위상은 가설부터 결론까지 관찰합니다",
+    intro:
+      "보문중학교 1학년 과학은 수행평가가 60%로 정기시험(중간·기말 각 20%)보다 큽니다. 탄성력 서·논술 과제와 달의 위상 변화 실험·실습이 모두 10월에 있어, 중간시험 시기와 수행 두 개가 한 달 안에 겹칩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 20, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 20, timing: "12월", method: "선택형 100점" },
+      { name: "탄성력의 특징 알아보기", kind: "task", weight: 30, timing: "10월", method: "서·논술형" },
+      { name: "달의 위상 변화 관찰하기", kind: "task", weight: 30, timing: "10월", method: "실험·실습" },
+    ],
+    notes: [
+      {
+        title: "탄성력 그래프 네 조건",
+        body: "과학적 사고력 10점은 용수철의 늘어난 길이와 탄성력의 관계 그래프에서 축 명칭, 영점과 일정한 눈금, 데이터 점, 점을 잇는 직선 네 조건을 봅니다. 힘의 방향과 탄성력의 방향 10점, 일상생활에서 탄성력을 이용하는 예 4가지 10점이 더해집니다.",
+      },
+      {
+        title: "달의 위상은 가설부터 결론까지",
+        body: "가설 설정 7점(독립·종속 변인 모두 포함), 모형으로 관찰한 위상 변화 4가지 표현 8점, 자료 해석 2가지 8점, 위상이 달라지는 까닭 서술 7점입니다. 기본점수는 9점(만점의 30%), 장기 미인정결석은 8점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "영양소 실험에는 태도 점수가 있고, 호흡 모형은 실제 기관과 대응시켜 서술합니다",
+    intro:
+      "보문중학교 2학년 과학은 소화와 호흡 단원에서 수행평가 두 개(각 30%)를 9월·10월에 봅니다. 정기시험은 중간 10월·기말 12월에 20%씩이고, 서·논술형은 호흡운동 과제 30%로 채웁니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 20, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 20, timing: "12월", method: "선택형 100점" },
+      { name: "영양소 검출하기", kind: "task", weight: 30, timing: "9월", method: "실험·실습" },
+      { name: "호흡운동의 원리 서술하기", kind: "task", weight: 30, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "영양소 실험에는 태도 점수가 있습니다",
+        body: "음식물 4가지의 영양소 제시 10점, 당 검출 시 가열 이유·증류수 대조군·영양소별 검출 용액·설탕이 반응하지 않는 이유 네 탐구 원리 10점에, 실험 전 준비와 실험 후 정리정돈을 보는 과학적 태도(준비성) 10점이 붙습니다.",
+      },
+      {
+        title: "호흡 모형과 실제 기관 대응",
+        body: "빨대·고무풍선·쇠고리·페트병 속 공간이 실제 어느 기관인지 쓰는 10점, 들숨과 날숨 때 가로막·갈비뼈·흉강 부피·폐 압력 변화 10점, 실제 호흡 기관 구조와 모형의 한계점 1가지 이상 10점입니다([9과13-03]).",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "멘델 사례 5가지는 1점 단위로 보고, 시차 실험은 답과 이유를 함께 씁니다",
+    intro:
+      "보문중학교 3학년 과학은 9월 유전 단원 서·논술 과제와 10월 별의 연주시차 실험·실습이 30%씩이고, 중간·기말시험은 20%씩입니다. 기말시험은 12월이고 수행 두 개는 9월과 10월에 차례로 봅니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 20, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 20, timing: "12월", method: "선택형 100점" },
+      { name: "유전 원리와 가계도 분석하기", kind: "task", weight: 30, timing: "9월", method: "서·논술형" },
+      { name: "별의 연주시차와 거리 구하기", kind: "task", weight: 30, timing: "10월", method: "실험·실습" },
+    ],
+    notes: [
+      {
+        title: "멘델 사례 5가지는 1점 단위",
+        body: "멘델 유전 실험 내용 3가지 설명 10점, 유전 원리가 적용되는 사례 5가지 서술 10점, 주어진 가계도 분석 4가지 10점입니다. 사례 항목은 하나 빠질 때마다 1점씩 내려가 5가지를 모두 틀리면 5점입니다([9과21-04]·[9과21-05]).",
+      },
+      {
+        title: "시차 실험은 답과 이유를 함께",
+        body: "물체의 시차 관측 결과와 해석 3가지 10점, 시차와 거리에 대한 해석 2가지 10점, 별의 거리와 연주시차 적용 문제 10점입니다. 적용 문제는 이유만 맞으면 8점, 답만 맞으면 6점으로 이유 쪽 배점이 더 높습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "초국적 기업의 긍정·부정 영향을 모두 쓰고, 민주주의 과제는 갈등 원인을 진단합니다",
+    intro:
+      "보문중학교 1학년 사회는 중간·기말시험 30%씩, 서·논술형 수행평가 두 영역이 20%씩입니다. 두 과제 모두 정보 활용 4점에 사고력 8점 두 개를 더한 20점 구조라, 출처와 수치 자료를 갖춘 서술이 공통 요구입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "초국적 기업 진출에 따른 지역의 변화와 영향 분석하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "더불어 사는 사회를 위한 민주주의 실천하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "초국적 기업 과제: 긍정·부정 영향 모두",
+        body: "아메리카 지역의 초국적 기업 진출 사례([9사(지리)05-03])를 다룹니다. 기업명·지역명 같은 고유명사와 수치·통계를 2가지 이상 담으면 정보 활용 4점, 긍정적·부정적 영향을 모두 근거와 함께 분석하면 비판적 사고력 8점, 상생 대안 2가지 이상이면 창의적 사고력 8점입니다.",
+      },
+      {
+        title: "민주주의 과제: 갈등 원인 진단",
+        body: "문제 해결력 8점은 갈등 원인을 민주주의 기본 가치와 연결하고 대화·타협·소수 의견 존중 같은 민주적 절차의 해결 방안을 2가지 이상 제시해야 받습니다. 학교·지역사회·디지털 공간에서의 참여 아이디어 2가지 이상이 창의적 사고력 8점 기준입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 지도와 원인 분석을 함께, 역사 글은 출처 표기가 조건이고 인물 소개는 홍보물 발표까지 합니다",
+    intro:
+      "보문중학교 2학년은 사회와 역사를 함께 배우며, 두 과목 모두 중간·기말시험 30%씩과 서·논술형 수행 두 개(각 20%)로 성적을 냅니다. 사회 수행은 11월·12월, 역사 수행은 10월·11월이라 10~12월에 네 과제가 차례로 이어집니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점", course: "사회" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점", course: "사회" },
+      { name: "국토 균형 발전 방안 제시하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형", course: "사회" },
+      { name: "한반도 평화와 통일 미래 구상하기", kind: "task", weight: 20, timing: "12월", method: "서·논술형", course: "사회" },
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점", course: "역사" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점", course: "역사" },
+      { name: "세계사 글쓰기", kind: "task", weight: 20, timing: "10월", method: "서·논술형", course: "역사" },
+      { name: "세계사 인물 소개하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회: 지도와 원인 분석이 함께",
+        body: "국토 균형 발전 과제는 [9사(지리)09-04]에 따라 수도권·비수도권 불균형 실태를 지도로 나타내고, 원인 2가지 이상과 대응 방안 2가지 이상을 써야 문제 해결력 8점입니다. 통일 구상 과제는 국내·동아시아·세계 등 2가지 이상 스케일에서 평화의 중요성을 논하는 비판적 사고력 8점이 핵심입니다.",
+      },
+      {
+        title: "역사 글쓰기는 출처 표기가 조건",
+        body: "세계 대전 중 전쟁 범죄를 다루는 [9역06-02] 과제로, 가해자·피해자 6점, 국제법상 전쟁 범죄 사례 2가지 8점, 국제 사회의 인권 회복·평화 노력 2가지 6점입니다. 출처는 참고 도서명·교과서 단원명·사료명·학술 사이트명 중 1개 이상을 적어야 인정됩니다.",
+      },
+      {
+        title: "인물 소개는 홍보물 발표까지",
+        body: "세계사 인물 소개(평가 횟수 2회)는 이름·국가·생애·직업 4조건 5점, 인물의 활동과 어록 7점, 그림문자를 활용한 홍보물 제작·발표 8점입니다. 제국주의와 냉전 시기 인물이 대상입니다([9역06-03]·[9역07-01]).",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "bomun-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "인물 소개는 세 단계로 배점되고, 만평 의미 풀이는 800자 이상이면 6점입니다",
+    intro:
+      "보문중학교 3학년 역사는 중간(10월)·기말(11월) 시험이 30%씩이고, 9월 한국사 인물 소개하기와 10월 한국사 글쓰기가 20%씩입니다. 인물 소개는 홍보물 발표, 글쓰기는 역사 만평과 그 의미 서술로 형식이 다릅니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "한국사 인물 소개하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "한국사 글쓰기", kind: "task", weight: 20, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "인물 소개의 세 단계 배점",
+        body: "이름·시대·생애·직업 조건을 모두 쓰면 5점, 대표 사건 1가지 이상과 대표 어록을 함께 쓰면 7점, 그림문자를 활용한 홍보물로 제작해 발표하면 8점입니다. 왜란·호란과 정치 운영의 변화를 다루는 단원([9역10-04]·[9역11-01])과 연결되며 평가 횟수는 2회입니다.",
+      },
+      {
+        title: "만평 의미는 800자 이상이 6점",
+        body: "한국사 글쓰기는 시대 상황을 사회적·경제적 변화 두 측면으로 쓰는 6점, 글과 그림으로 역사 만평을 표현하는 8점, 만평의 의미를 논리적 근거와 함께 쓰는 6점입니다. 마지막 항목은 800자 이상 6점, 600~800자 4점, 600자 미만 2점이고 AI는 활용하지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("보문중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "개념 정리·풀이 서술 포트폴리오(8~11월)·좌표평면 디자인(10월 3~4주) 각 20%",
+    intro:
+      "천상고등학교 1학년 공통수학2는 정기시험 두 번이 30%씩, 수행평가 두 개가 20%씩입니다. 개념 정리 포트폴리오는 8월부터 11월까지 진도표의 여러 차시에 수행평가로 표시되어 있고, 좌표평면 디자인은 10월 3~4주에 합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "도형의 방정식과 함수와 그래프의 개념 정리 및 문제 해결 과정 서술하기", kind: "task", weight: 20, timing: "8월,9월,10월,11월", method: "서술논술 평가, 포트폴리오" },
+      { name: "도형의 방정식을 활용한 좌표평면 디자인 하기", kind: "task", weight: 20, timing: "10월 3~4주/1회", method: "서술논술 평가, 프로젝트평가" },
+    ],
+    notes: [
+      {
+        title: "개념 정리는 개수로, 풀이는 절차로",
+        body: "도형의 방정식 개념을 수식과 수학적 언어로 15개 이상 정리하면 30점, 함수와 그래프 개념은 14개 이상이 30점이고, 각 단원의 문제 해결 과정 서술이 20점씩입니다. 이 과제에서는 AI를 사용하지 않습니다.",
+      },
+      {
+        title: "좌표평면 디자인은 필수 확인 항목 5개씩",
+        body: "‘수학 디자인 제작자’가 되어 좌표평면에 디자인을 그리는 과제로, 좌표축과 눈금·직선·원·도형의 이동·모눈종이 설계 다섯 항목을 모두 갖추면 40점입니다. 방정식 분석은 원의 중심과 반지름, 직선의 기울기와 절편, 평행이동, 대칭이동, 10개 이상의 도형 방정식 다섯 항목이 40점이고, 성찰 및 자기평가가 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상고등학교")],
+  },
+  {
+    schoolSlug: "cheonsang-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2", "한국사2"],
+    summary: "통합사회2 불평등 보고서·시장 실패 카드 뉴스 / 한국사2 탐구노트·팝업스토어 기획서",
+    intro:
+      "천상고등학교 1학년 사회 영역은 통합사회2와 한국사2 모두 10월·12월 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 통합사회2는 보고서와 카드 뉴스, 한국사2는 탐구노트와 팝업스토어 기획서가 수행 과제이고 과제마다 AI 활용 범위가 적혀 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점", course: "통합사회2" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점", course: "통합사회2" },
+      { name: "사회 정의와 불평등 탐구 보고서", kind: "task", weight: 20, method: "서술·논술 평가", course: "통합사회2" },
+      { name: "시장 실패 카드 뉴스 제작", kind: "task", weight: 20, method: "프로젝트 평가", course: "통합사회2" },
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점", course: "한국사2" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점", course: "한국사2" },
+      { name: "역사탐구노트", kind: "task", weight: 20, method: "서술논술 평가, 프로젝트평가", course: "한국사2" },
+      { name: "역사 팝업스토어 기획서", kind: "task", weight: 20, method: "서술논술 평가, 프로젝트평가", course: "한국사2" },
+    ],
+    notes: [
+      {
+        title: "통합사회2 — 부정의·불공정 사례 분석이 30점",
+        body: "사회 정의와 불평등 탐구보고서는 정의로운 사회의 의미와 특징 25점, 사회정의 실현 사례 분석 25점, 부정의·불공정 사례 분석 30점, 문제 해결 방안 20점입니다. 시장 실패 카드 뉴스는 개념 이해와 사례 연계 50점, 경제 개념을 활용한 원인 분석·개선 방안 25점, 카드뉴스 완성도 25점입니다.",
+      },
+      {
+        title: "한국사2 — 6월 민주항쟁 이후 현대사",
+        body: "두 과제 모두 Ⅲ단원의 6월 민주항쟁 이후 민주화 과정부터 한반도 분단 극복과 동아시아 평화까지를 다룹니다. 팝업스토어 기획서는 기획요소 반영도 40점·역사적 사실 정확도 30점·분량 적절성 30점, 탐구노트는 탐구 질문 설정과 구체화 30점·탐구 과정 성찰 40점·역사적 맥락에 근거한 해석 30점입니다.",
+      },
+      {
+        title: "수행평가 시기는 진도표와 함께 확인",
+        body: "평가 비율표에는 한국사2 탐구노트 10월, 기획서 11월로 적혀 있지만 진도표는 팝업 프로젝트를 8월 기획부터 학기 말 최종 운영까지 10차시로 잡고 있습니다. 통합사회2 두 과제도 비율표(10월 3주~11월 1주)와 진도표(10월 3~4주, 11월 1~2주)의 표시가 달라 시기를 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상고등학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "독서신문 다섯 면과 주장 글 다섯 항목이 모두 20점씩이며, 시험 시기는 학교 안내를 따릅니다",
+    intro:
+      "천상중학교 1학년 국어는 정기시험 두 번이 30%씩, 수행평가 두 개가 20%씩입니다. 학기 초에는 ‘동백꽃’을 읽고 독서신문을 만들고, 학기 후반에는 주장하는 글을 씁니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, method: "선택형 100점" },
+      { name: "독서신문 만들기", kind: "task", weight: 20, timing: "8월-9월/1회", method: "프로젝트" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 20, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "독서신문은 다섯 면을 20점씩",
+        body: "‘동백꽃’의 줄거리, ‘나’의 일기, 점순이의 관점에서 다시 쓰기, 보조 자료, 감상과 비평을 각각 20점으로 채점합니다. 같은 사건을 인물마다 다른 시선으로 써 보는 구성이 중심입니다.",
+      },
+      {
+        title: "주장하는 글은 다섯 항목 20점씩",
+        body: "주장하는 글쓰기도 다섯 평가 요소를 20점씩 봅니다. 평가 계획표에는 11월로, 진도표에는 10월 5주로 적혀 있어 시기는 적지 않았습니다.",
+      },
+      {
+        title: "정기시험 시기는 학교 안내로 확인",
+        body: "국어 진도표에는 1차 시험이 9월 3주 행, 2차 시험이 12월 2주 행에 표시되어 있어 평가 계획과 대조가 되지 않아 정기시험 시기는 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "가이드북은 지리 정보와 인문·문화가 30점씩이고, 선거원칙은 원칙이 없을 때의 문제부터 짚습니다",
+    intro:
+      "천상중학교 1학년 사회는 10월 2주와 12월 4주 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 9~10월에는 지리 단원 가이드북을, 11월에는 정치 단원 선거원칙 분석을 합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "여행 가이드북 제작하기", kind: "task", weight: 20, timing: "9~10월/1회", method: "프로젝트" },
+      { name: "선거원칙 분석하기", kind: "task", weight: 20, timing: "11월/1회", method: "서술·논술형" },
+    ],
+    notes: [
+      {
+        title: "가이드북은 지리 정보와 인문·문화가 30점씩",
+        body: "지리 정보 30점, 인문·문화 정보 30점, 여행 정보 20점, 구성과 표현 20점입니다. 관광 정보보다 지역의 지리적·문화적 특징을 담는 비중이 큽니다.",
+      },
+      {
+        title: "선거원칙은 원칙이 없을 때의 문제부터",
+        body: "선거원칙이 지켜지지 않을 때의 문제 상황 30점, 상황 분석 20점, 필요한 원칙 찾기 30점, 4대 원칙 정리 20점으로 채점합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "정비례·반비례는 표·순서쌍·관계식·그래프로, 작도는 선분·각부터 삼각형까지 다룹니다",
+    intro:
+      "천상중학교 1학년 수학은 10월 2주·12월 4주 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 학기 초에는 정비례·반비례를 표와 그래프로 정리하고, 10월에는 작도 실습을 합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "정비례와 반비례", kind: "task", weight: 20, timing: "8~9월/1회", method: "프로젝트" },
+      { name: "삼각형의 작도", kind: "task", weight: 20, timing: "10월/1회", method: "실험·실습" },
+    ],
+    notes: [
+      {
+        title: "정비례·반비례는 표·순서쌍·관계식·그래프",
+        body: "정비례와 반비례 각각에 대해 대응표 10점, 순서쌍 10점, 관계식 10점, 그래프 20점을 줍니다. 그래프 배점이 가장 커서 좌표를 정확히 찍는 것이 중요합니다.",
+      },
+      {
+        title: "작도는 선분·각부터 삼각형까지",
+        body: "길이가 같은 선분, 크기가 같은 각, 세 변이 주어진 삼각형, 두 변과 끼인각이 주어진 삼각형 작도 등을 20점씩 채점합니다. 성취기준은 [9수03-03]이고 교사 관찰로 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "상태변화는 곡선 작성과 해석이 50점씩이고, 힘은 화살표 표현 5가지를 갖추면 최상입니다",
+    intro:
+      "천상중학교 1학년 과학은 정기시험 두 번이 30%씩, 탐구 수행평가 두 개가 20%씩입니다. 9월에는 가열·냉각 곡선을, 10월에는 힘을 화살표로 나타내는 과제를 합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "상태변화와 열에너지 탐구하기", kind: "task", weight: 20, timing: "9월/1회" },
+      { name: "물체에 작용하는 힘 탐구하기", kind: "task", weight: 20, timing: "10월/1회" },
+    ],
+    notes: [
+      {
+        title: "상태변화는 곡선 작성과 해석이 50점씩",
+        body: "가열 곡선과 냉각 곡선을 그리면 50점, 그 곡선에서 열에너지의 출입을 해석하면 50점입니다.",
+      },
+      {
+        title: "힘 탐구는 화살표 표현 5가지가 최상",
+        body: "두 평가 요소를 50점씩 채점하며, 물체에 작용하는 힘 5가지를 화살표로 모두 바르게 나타내야 첫 요소에서 50점을 받습니다. 두 힘의 합력과 힘의 평형 조건 설명도 평가 방법에 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "직업 소개 글엔 to부정사와 시간 부사절을, 말하기엔 What do you think of~? 표현을 씁니다",
+    intro:
+      "천상중학교 1학년 영어는 10월 2주·12월 4주 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 두 수행평가가 모두 1차 시험 뒤인 11월과 12월에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "희망 직업을 소개하는 글쓰기", kind: "task", weight: 20, timing: "11월/1회", method: "쓰기 평가" },
+      { name: "의견 묻고/답하기 표현을 활용한 말하기", kind: "task", weight: 20, timing: "12월/1회", method: "말하기 평가" },
+    ],
+    notes: [
+      {
+        title: "직업 소개 글은 to부정사와 시간 부사절",
+        body: "Lesson 7 ‘Find Your Dream’과 연계해 다섯 가지 내용 요소를 갖추면 50점, to부정사와 시간 부사절을 바르게 쓰면 어법 50점입니다.",
+      },
+      {
+        title: "말하기는 What do you think of~? 표현",
+        body: "Lesson 8 ‘Be Smart Online’과 연계해 발음·흐름·의사소통 50점, What do you think of~? 같은 의견 묻고 답하기 표현의 어법 50점으로 채점합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "‘양반전’ 감상문은 30줄 이상이고, 수필은 반어·역설·풍자가 40점입니다",
+    intro:
+      "천상중학교 2학년 국어는 10월 2주·12월 4주 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 두 수행평가가 8월과 9월에 있어 1차 시험 전에 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "사회･문화적 상황을 고려한 작품 감상문 쓰기", kind: "task", weight: 20, timing: "8월/1회", method: "서술·논술" },
+      { name: "개성적인 표현 방법을 활용한 수필 쓰기", kind: "task", weight: 20, timing: "9월/1회", method: "서술·논술" },
+    ],
+    notes: [
+      {
+        title: "감상문은 ‘양반전’, 30줄 이상",
+        body: "‘양반전’을 읽고 작품이 쓰인 사회·문화적 상황을 고려해 감상문을 씁니다. 다섯 평가 요소를 20점씩 채점하며 감상문은 30줄 이상이어야 합니다.",
+      },
+      {
+        title: "수필은 반어·역설·풍자가 40점",
+        body: "준비 단계 20점, 반어·역설·풍자 같은 표현 방법 활용 40점, 글의 짜임 20점, 내용 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "인터뷰는 사실 정확성과 다각적 이해가 40점씩, 신문은 정확성과 시대 맥락이 30점씩입니다",
+    intro:
+      "천상중학교 2학년 역사는 정기시험 두 번이 30%씩, 수행평가 두 개가 20%씩이고 두 과제가 모두 10월에 있습니다. 근현대 인물 인터뷰와 신문 만들기로 시대 맥락을 정리합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "역사 인물 가상 인터뷰 기자단 활동", kind: "task", weight: 20, timing: "10월/1회", method: "논술형" },
+      { name: "역사 신문 만들기", kind: "task", weight: 20, timing: "10월/1회" },
+    ],
+    notes: [
+      {
+        title: "인터뷰는 사실 정확성과 다각적 이해가 40점씩",
+        body: "근현대 인물 4명 가운데에서 인물을 골라 가상 인터뷰를 씁니다. 역사적 사실의 정확성 40점, 인물에 대한 다각적 이해 40점, 오늘날의 시사점 20점입니다.",
+      },
+      {
+        title: "역사 신문은 정확성과 시대 맥락이 30점씩",
+        body: "정확성 30점, 시대 맥락 30점, 구성 20점, 표현 20점이며 진도표에는 여성 참정권을 주제로 한 신문 활동이 잡혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심은 성질 작성이 30점이고, 닮음은 증명 두 개가 40점씩입니다",
+    intro:
+      "천상중학교 2학년 수학은 10월 2주·12월 4주 정기시험이 30%씩, 도형 단원 수행평가 두 개가 20%씩입니다. 10월에 외심과 내심, 11월에 닮음을 다룹니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "삼각형의 외심과 내심 탐구하기", kind: "task", weight: 20, timing: "10월/1회", method: "프로젝트" },
+      { name: "닮음을 활용한 문제해결하기", kind: "task", weight: 20, timing: "11월/1회" },
+    ],
+    notes: [
+      {
+        title: "외심·내심은 성질 작성이 30점",
+        body: "외심 25점, 내심 25점, 외접원과 내접원 작도 20점, 성질 작성 30점입니다.",
+      },
+      {
+        title: "닮음은 증명 두 개가 40점씩",
+        body: "삼각형의 닮음 조건 두 가지를 각각 증명하면 40점씩이고, 평행선의 성질을 이용한 문제 해결이 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "영양소 검출은 실험 설계가 40점, 전기 회로는 두 관계가 40점씩입니다",
+    intro:
+      "천상중학교 2학년 과학은 정기시험 두 번이 30%씩, 실험 수행평가 두 개가 20%씩입니다. 9월에는 영양소 검출 실험을, 10월에는 전기 회로 실험을 합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "음식물에 들어 있는 영양소 검출하기", kind: "task", weight: 20, timing: "9월/1회", method: "실험보고서" },
+      { name: "저항, 전류, 전압 사이의 관계 탐구하기", kind: "task", weight: 20, timing: "10월/1회" },
+    ],
+    notes: [
+      {
+        title: "영양소 검출은 실험 설계가 40점",
+        body: "검출 방법 설명 40점, 실험 설계 40점, 결과 20점으로 채점합니다.",
+      },
+      {
+        title: "전기 회로는 두 관계가 40점씩",
+        body: "전압이 일정할 때 저항과 전류의 관계 40점, 저항이 일정할 때 전압과 전류의 관계 40점, 전류를 모형으로 설명하기 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "슈퍼히어로 글은 관계대명사 5개를, 그날의 이야기는 so ~ that 구문을 넣어 씁니다",
+    intro:
+      "천상중학교 2학년 영어는 10월 2주·12월 4주 정기시험이 30%씩, 쓰기 수행평가 두 개가 20%씩입니다. 두 과제 모두 정해진 문법 구문을 몇 번 쓰는지가 배점의 큰 부분입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 4주", method: "선택형 100점" },
+      { name: "내 마음속 슈퍼히어로", kind: "task", weight: 20, timing: "9월/1회", method: "서술·논술" },
+      { name: "잊지 못할 그날의 이야기", kind: "task", weight: 20, timing: "10월/1회", method: "서술·논술" },
+    ],
+    notes: [
+      {
+        title: "슈퍼히어로 글은 관계대명사 5개",
+        body: "Lesson 5 ‘The City as a Canvas’와 연계해 8문장 이상으로 내용을 채우면 35점, 관계대명사 구문을 5개 쓰면 35점, 문법 정확성 30점입니다.",
+      },
+      {
+        title: "그날의 이야기는 so ~ that 구문",
+        body: "Lesson 6과 연계해 내용 35점, so+형용사/부사+that 구문 활용 35점, 문법 30점으로 채점합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "소설 보고서는 AI 제안 검토가 20점이고, 일기는 문장의 짜임 4가지를 써야 40점입니다",
+    intro:
+      "천상중학교 3학년 국어는 10월 2주 1차 시험과 11월 3주 2차 시험이 30%씩, 수행평가 두 개가 20%씩입니다. 9월 소설 보고서에 이어 10월 문법 단원 일기 쓰기가 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 3주", method: "선택형 100점" },
+      { name: "소설 분석 보고서", kind: "task", weight: 20, timing: "9월(1회)", method: "논술형" },
+      { name: "다양한 문장의 짜임을 활용하여 일기 쓰기", kind: "task", weight: 20, timing: "10월(1회)" },
+    ],
+    notes: [
+      {
+        title: "소설 보고서는 AI 제안 검토가 20점",
+        body: "사회·문화적 배경 해석 30점, AI가 제안한 내용 검토 20점, 주제 20점, 감상 30점입니다. AI의 해석을 그대로 옮기지 않고 따져 보는 단계가 따로 채점됩니다.",
+      },
+      {
+        title: "일기는 문장의 짜임 4가지를 써야 40점",
+        body: "서로 다른 문장의 짜임 4가지를 구분해 쓰면 40점, 문장의 짜임에 대한 질문 설명 30점, 15줄 이상 완성 30점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 용어 사전은 15개 이상이면 50점이고, 역사는 묘호 27명을 카드로 만듭니다",
+    intro:
+      "천상중학교 3학년 사회는 1차 시험이 서·논술형 20%, 2차 시험이 선택형 40%로 회차마다 비중이 다르고, 역사는 두 시험이 30%씩입니다. 두 과목 모두 9월과 10월에 수행평가가 20%씩 하나씩 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "10월 2주", method: "서·논술형 100점", course: "사회" },
+      { name: "2차 정기시험", kind: "exam", weight: 40, timing: "11월 3주", method: "선택형 100점", course: "사회" },
+      { name: "환경영상 소감문 쓰기", kind: "task", weight: 20, timing: "9월(1회)", method: "서술·논술형", course: "사회" },
+      { name: "사회 용어 사전 만들기", kind: "task", weight: 20, timing: "10월(1회)", method: "프로젝트", course: "사회" },
+      { name: "1차 정기시험", kind: "exam", weight: 30, course: "역사" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 3주", course: "역사" },
+      { name: "역사 카드 만들기", kind: "task", weight: 20, timing: "9월(1회)", method: "프로젝트", course: "역사" },
+      { name: "역사 인물 자서전 쓰기", kind: "task", weight: 20, timing: "10월(1회)", method: "논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 — 용어 사전은 15개 이상이 50점",
+        body: "환경영상 소감문은 요약 40점, 소감 30점, 실천 방안 30점입니다. 사회 용어 사전은 계획서에 용어를 15개 이상 정리하면 50점이고, 개념의 정확성 25점과 적용력 25점이 더해집니다.",
+      },
+      {
+        title: "역사 — 묘호 27명을 카드로",
+        body: "역사 카드 만들기는 묘호 27명 정리 30점, 카드 내용 정확성 50점, 인물과 사건 연결 20점입니다. 인물 자서전은 키워드 30점, 자서전 구성 50점, 평가와 견해 20점입니다.",
+      },
+      {
+        title: "역사 1차 시험 시기는 진도표와 함께 확인",
+        body: "역사 진도표에는 단원 정리와 중간고사가 10월 1주에 표시되어 있어 계획표의 10월 2주와 달라 1차 시험 시기는 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수는 그래프 꼴 다섯 개가 20점씩, 통계는 대푯값부터 해석까지 20점씩입니다",
+    intro:
+      "천상중학교 3학년 수학은 10월 2주·11월 3주 정기시험이 30%씩, 논술형 수행평가 두 개가 20%씩입니다. 9월에 이차함수 그래프, 11월에 통계를 다룹니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 3주", method: "선택형 100점" },
+      { name: "이차함수 그래프의 탐구", kind: "task", weight: 20, timing: "9월(1회)", method: "논술형" },
+      { name: "통계를 활용한 자료 정리 및 해석", kind: "task", weight: 20, timing: "11월(1회)", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "이차함수는 그래프 꼴 다섯 개가 20점씩",
+        body: "y=ax², y=ax²+q, y=a(x-p)², y=a(x-p)²+q, y=ax²+bx+c 다섯 꼴의 그래프를 각각 20점으로 채점합니다.",
+      },
+      {
+        title: "통계는 대푯값부터 해석까지 20점씩",
+        body: "대푯값, 평균, 분산, 표준편차, 자료 해석 다섯 항목을 20점씩 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "역학적 에너지 보고서는 해석이 40점, 유전 보고서는 용어와 원리 적용이 40점씩입니다",
+    intro:
+      "천상중학교 3학년 과학은 10월 2주·11월 3주 정기시험이 30%씩, 탐구 보고서 두 개가 20%씩입니다. 9월에 자유 낙하 실험, 10월에 유전 원리 보고서를 씁니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 3주", method: "선택형 100점" },
+      { name: "자유 낙하하는 물체의 역학적 에너지 탐구 보고서", kind: "task", weight: 20, timing: "9월(1회)" },
+      { name: "멘델의 유전 원리 탐구 보고서", kind: "task", weight: 20, timing: "10월(1회)" },
+    ],
+    notes: [
+      {
+        title: "역학적 에너지 보고서는 해석이 40점",
+        body: "측정 30점, 역학적 에너지 계산 30점, 결과 해석 40점입니다.",
+      },
+      {
+        title: "유전 보고서는 용어와 원리 적용이 40점씩",
+        body: "유전 용어 40점, 멘델의 원리 적용 40점, 자료 분석 20점으로 채점합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "cheonsang-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "편지는 가정법 과거와 so that이 40점이고, 대화는 상황 두 개를 50점씩 봅니다",
+    intro:
+      "천상중학교 3학년 영어는 정기시험 두 번이 30%씩이고, 쓰기와 말하기 수행평가가 모두 10월에 20%씩 있습니다. 2차 시험이 11월 3주라 수행평가가 학기 중반에 모여 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 3주", method: "선택형 100점" },
+      { name: "존경하는 인물에게 편지쓰기", kind: "task", weight: 20, timing: "10월(1회)", method: "쓰기평가" },
+      { name: "주어진 주제에 관해 묻고 답하여 대화 완성하기", kind: "task", weight: 20, timing: "10월(1회)", method: "말하기평가" },
+    ],
+    notes: [
+      {
+        title: "편지는 가정법 과거와 so that이 40점",
+        body: "5문장 이상의 내용 30점, 가정법 과거와 so that 구문 활용 40점, 정확성 30점입니다.",
+      },
+      {
+        title: "대화는 상황 두 개, 상황마다 50점",
+        body: "주어진 상황마다 정확성 20점, 유창성 20점, 내용 10점으로 50점씩 채점해 합계 100점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("천상중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "광고 비평하기(9월)·마음의 처방시 감상하기(10월) 각 20% · 선택형 시험 60%",
+    intro:
+      "충남여자고등학교 1학년 공통국어2는 10월 중간시험과 12월 기말시험이 각 30%, 서·논술형 수행평가 두 영역이 20%씩입니다. 정기시험은 선택형 100점으로만 구성되어 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "광고 비평하기", kind: "task", weight: 20, timing: "9월", method: "서‧논술형" },
+      { name: "마음의 처방시 감상하기", kind: "task", weight: 20, timing: "10월", method: "서‧논술형" },
+    ],
+    notes: [
+      {
+        title: "광고 비평문은 일곱 항목",
+        body: "광고 선정 이유 2점, 사회·문화적 배경과 가치 3점, 표현 방법과 효과 3점, 광고의 적절성 분석 5점(3가지 이상), 내용 및 구성 3점, 논리성·타당성 2점, 쓰기 규범 2점입니다. 제시한 분량에 미치지 못하면 각 하위 항목의 최저점을 받습니다.",
+      },
+      {
+        title: "처방시는 8행 이상 필사",
+        body: "자신이나 타인, 사회의 아픔에 대한 증상과 병명 3점, 치유·성찰에 맞는 8행 이상 시 필사 4점, 선정 이유·작품 해석·감상평 8점, 처방시의 기대 효과와 근거 5점입니다. 진도표에는 10월 보건교육과 연계한 과제로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자고등학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2"],
+    summary: "경제 문제 해결을 위한 정부의 시장 개입 논술(9월) 30% · 중간·기말 35%씩",
+    intro:
+      "충남여자고등학교 1학년 통합사회2는 정기시험 70%(10월 중간·12월 기말)와 수행평가 한 영역 30%입니다. 수행평가는 9월에 치르는 정부의 시장 개입 논술이며 전체가 서·논술형입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "경제 문제 해결을 위한 정부의 시장 개입 논술", kind: "task", weight: 30, timing: "9월", method: "서‧논술형" },
+    ],
+    notes: [
+      {
+        title: "수정 자본주의와 신자유주의 정리가 12점",
+        body: "자본주의의 역사적 전개 12점은 수정 자본주의와 신자유주의 각각의 개념, 대표 사상가와 주장 네 항목 중 몇 개를 옳게 썼는지로 12점에서 4점까지 줍니다. 성취기준은 [10통사2-03-01]입니다.",
+      },
+      {
+        title: "한 입장을 골라 해결책 논술",
+        body: "정부의 시장 개입 논술 18점은 우리나라 경제 문제 한 가지 제시, 두 입장 중 하나 선택, 그 입장에서의 해결책 논술, 해결 방안의 현실성, 논리적 타당성 다섯 항목으로 18점에서 8점까지입니다. AI는 활용하지 않으며 기본점수는 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자고등학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "금속의 산화 환원 반응 실험(9월)·미래과학기술 영향 파악하기(10월) 각 20%",
+    intro:
+      "충남여자고등학교 1학년 통합과학2는 중간·기말시험이 30%씩, 수행평가 두 영역이 20%씩입니다. 실험 과제는 반영 비율 20% 중 서·논술형이 10%이고, 미래과학기술 과제는 20% 전부가 서·논술형입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "금속의 산화 환원 반응 실험", kind: "task", weight: 20, timing: "9월", method: "실험・보고서, 서・논술형" },
+      { name: "미래과학기술이 삶에 미치는 영향 파악하기", kind: "task", weight: 20, timing: "10월", method: "서・논술형" },
+    ],
+    notes: [
+      {
+        title: "실험 보고서 다섯 영역",
+        body: "실험 배경 이론 3점, 금속과 수용액을 화학식으로 쓰는 실험 과정 3점, 화학 반응식 표현 4점, 실험 결과 정리 및 분석 5점, 일상생활 산화 환원 사례 탐구 5점(4줄 이상)입니다. 결과 분석에는 색상 변화 관찰과 산화·환원된 물질, 금속의 반응성 분석이 들어갑니다.",
+      },
+      {
+        title: "기사·칼럼으로 미래 기술 분석",
+        body: "인공지능, 가사도우미 로봇 같은 미래 과학 기술 관련 기사나 칼럼을 골라 기사 선정 4점, 자료 분석 6점, 긍정적·부정적 영향 파악 6점, 추가 탐구 4점을 받습니다. 두 과제 모두 AI는 활용하지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자고등학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["독서와 작문"],
+    summary: "독서 비평을 통한 자기 이해와 사회적 소통(9월) 30% · 중간·기말 35%씩",
+    intro:
+      "충남여자고등학교 2학년 독서와 작문은 1~13반이 모두 듣는 과목으로, 정기시험 70%(중간·기말 각 35%), 수행평가 30%입니다. 수행평가는 9월 독서 비평 글쓰기 한 영역입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "독서 비평을 통한 자기 이해와 사회적 소통", kind: "task", weight: 30, timing: "9월", method: "서‧논술형" },
+    ],
+    notes: [
+      {
+        title: "비평 항목이 10점",
+        body: "선정 이유 5점, 핵심 요약 5점, 비평 10점, 조직 5점, 표현 5점입니다. 비평은 저자의 관점과 자신의 관점 비교, 책의 메시지와 자신의 경험 결합, 성찰과 성장 서술 세 요소 충족 개수로 10점에서 4점까지 줍니다.",
+      },
+      {
+        title: "성취기준 네 개가 한 과제에",
+        body: "[12독작01-02] 자료 탐색과 선별, [12독작01-04] 관점과 표현을 평가하며 읽기, [12독작01-10] 정보를 전달하는 글쓰기, [12독작01-15] 소통 문화 참여가 이 과제에 연결되어 있습니다. 진도표에서는 과학·기술 분야 글 읽기를 다루는 9월에 놓여 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자고등학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ"],
+    summary: "도함수로 그려보는 함수의 그래프(11월) 30% · 시험은 선택형 80점·단답형 20점",
+    intro:
+      "충남여자고등학교 2학년 미적분Ⅰ은 지필평가 70%(10월 중간·12월 기말 각 35%), 수행평가 30%입니다. 수행평가는 11월 한 번으로, 삼차·사차함수의 그래프를 도함수로 그리는 서·논술형 과제입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, timing: "10월", method: "선택형 80점 · 단답형 20점" },
+      { name: "기말시험", kind: "exam", weight: 35, timing: "12월", method: "선택형 80점 · 단답형 20점" },
+      { name: "도함수로 그려보는 함수의 그래프", kind: "task", weight: 30, timing: "11월", method: "서‧논술형" },
+    ],
+    notes: [
+      {
+        title: "삼차·사차함수 각 14점",
+        body: "함수마다 도함수 구하기 2점, 조건을 만족하는 값 구하기 3점, 증감표 작성 3점, 극점의 좌표와 절편이 드러나는 그래프 개형 3점, 극값의 개수와 극값 3점으로 14점씩이고, 미분 개념이 들어간 사례 적기 2점이 더해져 30점입니다.",
+      },
+      {
+        title: "서·논술형은 수행평가에만",
+        body: "중간·기말시험의 서·논술형 비율은 0%로 표시되어 있고, 단답형 20점이 회차마다 들어갑니다. 수행평가 범위는 [12미적Ⅰ-01-01]~[12미적Ⅰ-03-05]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자고등학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "Bridging Comprehension and Creative Expression 30%(15점×2회)",
+    intro:
+      "충남여자고등학교 2학년 영어Ⅱ는 정기시험 70%(10월 중간·12월 기말 각 35%)와 수행평가 한 영역 30%입니다. 수행평가는 15점짜리 활동을 두 번 치러 합산합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "Bridging Comprehension and Creative Expression", kind: "task", weight: 30, method: "서‧논술형" },
+    ],
+    notes: [
+      {
+        title: "읽기·영상·쓰기를 2차시에",
+        body: "1차시에는 수업 지문의 주제·요약·구문 분석(Reading 4점)과 관련 영어 영상의 인상 깊은 문장 정리(Listening 2점)를, 2차시에는 주제에 관한 영어 문장 5개 쓰기(Writing 9점)를 합니다. 문장은 주어와 동사가 있고 서로 다른 단어 10개 이상이어야 개수에 들어갑니다.",
+      },
+      {
+        title: "AI는 참고 자료로 허용",
+        body: "영어 영상 탐색, 단어·표현 확인, 내용 이해에 AI를 참고 자료로 쓸 수 있지만 영상 출처를 활동지 서식에 맞게 적어야 합니다. 진도표에는 8월부터 12월까지 매달 이 수행평가가 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자고등학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주제 명료성·글감 적절성·구성 통일성·자기 목소리 표현이 각 5점이고, 형태소 나누기와 어근·접사 특성은 4점씩 서술합니다",
+    intro:
+      "충남여자중학교 1학년 국어는 9월 중간고사와 12월 기말고사가 각 30%이고, 수행평가 두 영역이 20%씩입니다. 정기시험은 선택형 문항으로만 출제되어, 서·논술형은 두 수행평가에서만 평가됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "경험을 바탕으로 한 글쓰기", kind: "task", weight: 20, timing: "8~9월", method: "서술논술" },
+      { name: "우리말의 단어 짜임 탐구", kind: "task", weight: 20, timing: "10~11월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "정서 글쓰기는 네 요소를 5점씩",
+        body: "경험을 바탕으로 한 글쓰기(20점)는 [9국03-05]를 근거로 주제의 명료성, 구체적 경험을 담은 글감의 적절성, 경험과 정서를 엮은 구성의 통일성, 자신만의 목소리가 담긴 표현을 각 5점으로 매깁니다. 과정 피드백은 계획하기부터 고쳐쓰기까지 글쓰기 5단계를 따라 이뤄진다고 적혀 있습니다.",
+      },
+      {
+        title: "단어 짜임 탐구는 다섯 항목 서술",
+        body: "[9국04-02] 성취기준으로 문장을 단어와 형태소로 나누기, 형태소 종류별로 나누기(4종류), 어근의 특성, 접사의 특성, 단어 짜임에 따른 종류 분류(제시된 단어 3개)를 각 4점씩 서술합니다. 진도표에서는 10월 ‘단어의 짜임과 새말’ 단원에 배치되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "독서 신문은 읽은 책 수부터 점수에 들어가고, 문법 탐구는 자음·모음 체계와 창제 원리를 다룹니다",
+    intro:
+      "충남여자중학교 2학년 국어는 정기시험 60%(중간·기말 각 30%), 수행평가 40%로 1학년과 비율이 같고 과제가 독서 신문과 문법 탐구로 바뀝니다. 독서 신문은 반영 비율 20% 가운데 서·논술형이 10%로 표시되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "독서 신문", kind: "task", weight: 20, timing: "9~10월", method: "서술논술, 기타" },
+      { name: "문법 탐구", kind: "task", weight: 20, timing: "11월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "독서 신문은 읽은 책 수부터 점수",
+        body: "작품 선정 능력, 개성적 표현력, 독자를 고려한 서술 능력, 작품 구성력을 각 5점으로 봅니다. 만화·시·단편·교과서 수록 작품·동화를 뺀 책을 3권 이상 읽어야 작품 선정 5점이고, 풍자·반어·역설·속담·관용적 표현을 작품당 1개씩 총 3개 이상 써야 표현력 5점입니다. 구성 방식도 만화와 책표지 만들기를 제외하고 3개 이상이어야 합니다.",
+      },
+      {
+        title: "문법 탐구는 자음·모음 체계와 창제 원리",
+        body: "[9국04-01] 성취기준으로 자음 체계(조음 위치와 조음 방법), 단모음 체계, 자음의 창제 원리와 예시, 모음의 창제 원리와 예시를 각 5점으로 서술합니다. 두 가지 서술이 모두 정확하면 5점, 하나면 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "안은문장 분석이 15점 중 8점이고, 시 비평은 관점별 감상이 6점입니다",
+    intro:
+      "충남여자중학교 3학년 국어는 정기시험 비중이 70%(중간·기말 각 35%)로 1·2학년보다 크고, 수행평가는 두 영역 15%씩 30%입니다. 기말고사는 1·2학년(12월)보다 이른 11월에 치릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형" },
+      { name: "문장의 짜임 탐구", kind: "task", weight: 15, timing: "8~9월", method: "서술논술" },
+      { name: "시 비평하기", kind: "task", weight: 15, timing: "10월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "안은문장 분석이 15점 중 8점",
+        body: "문장의 짜임 탐구는 홑문장·겹문장 이해 4점, 이어진 문장(종속적·대등적) 이해 3점, 안은문장·안긴문장 이해 8점입니다. 마지막 항목은 5개 문장 가운데 오류 없이 분석하고 안긴문장의 역할까지 파악한 문장 수에 따라 8점에서 3점까지 1점씩 내려갑니다.",
+      },
+      {
+        title: "시 비평은 관점별 감상이 6점",
+        body: "[9국05-07] 성취기준의 시 비평하기는 인상 깊은 부분과 이유 4점, 관점에 따른 작품 비평 6점, 효용론적 관점에서 ‘삶에서 실천할 점’ 서술 5점입니다. 비평과 효용론 항목은 타당성과 충실성을 함께 갖춰야 만점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "네 평가요소로 합동을 따지는 과제를 중간고사와 같은 달에 치릅니다",
+    intro:
+      "충남여자중학교 1학년 수학은 수행평가가 ‘합동인 삼각형 찾기’ 한 영역(30%)이고, 중간고사(9월)와 기말고사(12월)가 35%씩입니다. 정기시험은 선택형으로 표시되어 서·논술형 30%는 모두 이 과제에 들어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "합동인 삼각형 찾기", kind: "task", weight: 30, timing: "9월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "합동 과제의 네 평가요소",
+        body: "삼각형의 합동 조건 이해 10점, 문제 이해 5점, 합동인 두 삼각형 찾기 10점, 문제 해결 5점입니다. 세 번째 요소는 정삼각형 조건 이용부터 합동 조건 적기까지 7개 서술 항목 중 몇 개를 바르게 썼는지로 10점에서 3점까지 줍니다.",
+      },
+      {
+        title: "중간고사와 같은 달에 치르는 과제",
+        body: "성취기준은 [9수03-04] 삼각형의 합동 조건이고, 진도표에서 이 수행평가는 9월 중간고사 앞줄에 적혀 있습니다. 인터넷과 AI 활용은 금지되며 주어진 자료를 분석해 서술합니다. 기본점수는 9점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "정당화 과정은 오류 개수만큼 감점하고, 닮음 과제는 5·4·6점으로 짜였습니다",
+    intro:
+      "충남여자중학교 2학년 수학은 정기시험 70%(9월 중간·12월 기말 각 35%)와 서술형 수행평가 두 영역(각 15%)으로 나뉩니다. 첫 과제는 학기 첫 달인 8월, 두 번째 과제는 10월에 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "삼각형의 성질", kind: "task", weight: 15, timing: "8월", method: "서술논술" },
+      { name: "닮음인 삼각형 찾기", kind: "task", weight: 15, timing: "10월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "정당화 과정은 오류 개수로 감점",
+        body: "삼각형의 성질은 [9수03-09]·[9수03-10] 성취기준으로 이등변삼각형의 성질 정당화, 합동인 직각삼각형 찾기(서술 항목 4개), 외심과 내심의 성질 정당화를 각 5점씩 봅니다. 정당화 항목은 오류 1개면 4점, 2개면 3점, 3개 이상이면 2점입니다.",
+      },
+      {
+        title: "닮음 과제는 5·4·6점 구성",
+        body: "닮음인 삼각형 찾기는 삼각형의 닮음 조건 3가지 설명 5점, 닮음 판별하기 4점(서술 항목 3개), 닮음인 삼각형을 찾아 기호로 표현하고 이유를 쓰는 항목 6점(서술 항목 4개)입니다. 성취기준은 [9수03-12]·[9수03-13]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수 탐구는 다섯 단계를 거치고, 삼각비 탐구는 원리 설명이 9점입니다",
+    intro:
+      "충남여자중학교 3학년 수학은 수행평가 두 영역이 모두 9월에 있고, 중간고사(9월)와 11월 기말고사가 35%씩입니다. 서·논술형은 두 탐구 활동에 15%씩 들어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형" },
+      { name: "이차함수 탐구 활동", kind: "task", weight: 15, timing: "9월", method: "서술논술" },
+      { name: "삼각비 탐구 활동", kind: "task", weight: 15, timing: "9월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "이차함수 탐구는 다섯 단계",
+        body: "그래프 위 꼭짓점과 다른 한 점의 좌표 찾기 2점, 그 두 점으로 이차함수 식 구하기 3점, 식 변형하기 4점, 그래프 특징(꼭짓점·절편·축의 방정식) 설명 4점, 조건에 맞게 그래프 그리기 2점으로 15점입니다.",
+      },
+      {
+        title: "삼각비 탐구는 원리 설명이 9점",
+        body: "특수각의 삼각비 원리 설명 5점, 반지름 1인 사분원을 이용한 예각의 사인·코사인·탄젠트 선분 찾기 4점, 삼각비로 길이 구하기 3점, 넓이 구하기 3점입니다. 성취기준은 [9수04-17]·[9수04-18]이고, 넓이 문항은 삼각비를 쓰지 않으면 감점됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "다섯 조건을 모두 채운 소개문이 10점이며, 듣기·말하기 영역에는 인터뷰 제출이 들어 있습니다",
+    intro:
+      "충남여자중학교 1학년 영어는 정기시험 60%(중간·기말 각 30%), 수행평가 40%이고, 수행평가 대부분인 30%가 10월 위인 소개문 쓰기입니다. 듣고 말하기는 구술 평가 10점으로 진도표상 11월에 배치되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "듣고 말하기", kind: "task", weight: 10, timing: "10~11월", method: "구술발표" },
+      { name: "위인 소개문 쓰기", kind: "task", weight: 30, timing: "10월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "소개문은 다섯 조건을 채워야 10점",
+        body: "위인의 직업이나 역할, 업적 1개 이상, because로 이유 표현, look으로 외양 묘사, to부정사로 행동의 목적 표현 다섯 조건을 모두 충족하면 10점입니다. 여기에 내용 및 구성 10점(주제 관련 문장 7개 이상)과 언어 사용 10점(어휘·철자·어법 오류 3개 이하)이 더해집니다.",
+      },
+      {
+        title: "듣고 말하기는 인터뷰 과제 제출 포함",
+        body: "인터뷰 과제의 모든 항목을 작성해 내는 과제 완성 2점, 핵심 표현 사용 4점, 세부 정보를 담은 내용 4점으로 10점입니다. 기본점수는 영역 만점의 30%로 정해 듣고 말하기 3점, 소개문 9점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "추천 글은 조건 7개를 세어 채점하고, 듣고 말하기는 인터뷰 용지 작성부터 시작합니다",
+    intro:
+      "충남여자중학교 3학년 영어도 정기시험 60%·수행평가 40%이지만 기말고사가 11월로 1학년(12월)보다 앞섭니다. 9월 듣고 말하기에 이어 10월에 책이나 영화를 추천하는 글을 씁니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형" },
+      { name: "듣고 말하기", kind: "task", weight: 10, timing: "9월", method: "구술발표" },
+      { name: "추천하고 싶은 책 또는 영화 소개하기", kind: "task", weight: 30, timing: "10월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "추천 글은 조건 7개를 셉니다",
+        body: "제목과 줄거리, 느낀 점, 추천 대상과 추천 이유를 각각 채점하고 It~that 강조구문 1문장, It~for/of…to부정사 1문장을 더해 조건 7개를 모두 채우면 쓰기 과제 수행 10점입니다. 내용 및 구성은 주제 관련 문장 10개 이상, 언어 사용은 오류 2개 이하가 10점입니다.",
+      },
+      {
+        title: "듣고 말하기는 인터뷰 용지 작성부터",
+        body: "개인 생활 관련 인터뷰 용지 작성 2점, 대화의 논리적 구성 4점, 의사소통(어휘·발화 속도·연음과 억양) 4점입니다. 진도표에서 이 평가는 9월 중간고사 전에 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "열에너지 출입 관계 4개 서술 8점, 생활 적용 예 6개 12점이며 압력·부피는 입자 운동 5개 서술에 10점이 걸립니다",
+    intro:
+      "충남여자중학교 1학년 과학은 중간·기말고사 60%와 수행평가 두 영역 40%입니다. 9월 상태 변화 과제는 서·논술형 20%, 10월 기체 실험 과제는 서·논술형 10%로 표시되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "물질의 상태 변화와 열에너지 출입 관계 설명하기", kind: "task", weight: 20, timing: "9월", method: "서술논술" },
+      { name: "기체의 압력과 부피 관계 알아보기", kind: "task", weight: 20, timing: "10월", method: "서술논술, 실험" },
+    ],
+    notes: [
+      {
+        title: "실생활 적용 예 6개가 12점",
+        body: "상태 변화 과제는 상태 변화와 열에너지 출입 관계 4개 서술 8점, 이를 실생활에 적용한 예 6개 서술 12점입니다. 맞게 쓴 예의 개수에 따라 12점에서 6점까지 1점씩 내려갑니다. 진도표에는 9월 21~22일 중간고사 일정이 함께 적혀 있습니다.",
+      },
+      {
+        title: "기체 과제는 입자 운동 서술이 절반",
+        body: "기체의 압력과 부피 관계 4개 서술 6점, 같은 관계를 입자 운동으로 5개 서술 10점, 압력과 부피 변화의 예 2개 4점입니다. 성취기준은 [9과06-02]로 실험 결과를 입자 모형으로 해석하는 내용입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "호흡 모형은 제작보다 원리 서술 비중이 크고, 전기 과제는 네 항목을 5점씩 봅니다",
+    intro:
+      "충남여자중학교 2학년 과학은 1학년과 같이 정기시험 60%, 수행평가 40%입니다. 9월 호흡운동 모형 과제는 실험과 서술을 함께 하고 서·논술형이 10%, 10월 전기 과제는 서·논술형 20%입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "호흡운동의 원리를 확인하는 모형 만들기", kind: "task", weight: 20, timing: "9월", method: "서술논술, 실험" },
+      { name: "저항 전류 전압 사이의 관계 탐구하기", kind: "task", weight: 20, timing: "10월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "모형 제작보다 원리 서술 비중이 큼",
+        body: "부품 위치 설치 3점, 모형 완성 3점, 모형 기능에 해당하는 호흡 기관 설명 4점, 호흡 운동 원리 설명 10점입니다. 원리 설명은 호흡 기관 부분의 이동과 변화 원리 6가지 중 몇 가지를 옳게 썼는지로 10점에서 4점까지 정해집니다.",
+      },
+      {
+        title: "전기 과제는 네 항목 5점씩",
+        body: "[9과14-02] 성취기준으로 저항과 전류 관계(3가지), 전압과 전류 관계(2가지), 전압-전류 그래프를 점과 선으로 표현하기, 저항·전류·전압 세 관계 설명을 각 5점으로 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "감수 분열은 그림 12점과 서술 15점, 사람의 유전은 가계도 해석이 16점입니다",
+    intro:
+      "충남여자중학교 3학년 과학은 수행평가가 60%로 정기시험(중간·기말 각 20%)보다 큽니다. 9월 감수 분열 과제는 서·논술형 30%이고, 10월 유전 과제는 실험 방식으로 표시되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 20, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 20, timing: "11월", method: "선택형" },
+      { name: "감수 분열의 특징 서술하기", kind: "task", weight: 30, timing: "9월", method: "서술논술" },
+      { name: "사람의 유전 분석하기", kind: "task", weight: 30, timing: "10월", method: "실험" },
+    ],
+    notes: [
+      {
+        title: "감수 분열은 그림 12점·서술 15점",
+        body: "감수 분열 과정 4가지를 그림으로 표현 12점, 과정별 특징 9가지 서술 15점, 생식세포와 모세포의 염색체 수 비교 3점입니다. 특징 서술은 맞힌 개수마다 1점씩 차이가 나며, 미응시 기본점수는 12점입니다.",
+      },
+      {
+        title: "가계도 해석이 16점",
+        body: "사람의 유전 분석하기는 가계도 해석 16점(우열 관계, 구성원 (A)~(D)의 유전자형, 자손의 형질 확률 2개 등 7가지), 사람의 유전 연구가 어려운 까닭 4점, 연구 방법 4점, 가계도 연구로 알 수 있는 것 3점, DNA 분석 연구로 알 수 있는 것 3점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "신문 기사를 찾아 일곱 항목을 서술하고, 디지털 도구는 기사 탐색 단계에서만 씁니다",
+    intro:
+      "충남여자중학교 1학년 사회는 정기시험 70%(중간·기말 각 35%)와 수행평가 한 영역 30%입니다. 하나뿐인 수행평가 ‘갈등과 차별 문제 탐구’는 학기 초인 8월 말~9월 초에 서·논술형으로 치릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "갈등과 차별 문제 탐구", kind: "task", weight: 30, timing: "8월 말~9월 초", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "신문 기사를 찾아 일곱 항목 서술",
+        body: "갈등의 의미 3점, 차별의 의미 3점, 갈등·차별 문제를 다룬 신문 기사 요약 6점, 기사 출처(신문사명·기사 제목·기자 이름·기고 일자) 3점, 원인과 문제점 분석 5점, 해결 방안 3가지 이상 5점, 시민의 자질 3가지 이상 5점으로 30점입니다.",
+      },
+      {
+        title: "디지털 도구는 기사 탐색 단계에서만",
+        body: "기사를 모으려고 인터넷·태블릿을 쓸 수 있지만 1단계 신문 기사 탐색에서만 허용되고, AI 활용은 금지되어 적발 시 부정행위로 봅니다. 1학년 사회 수행평가 기본점수는 영역 만점의 30%인 9점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "풍자화가 30점 중 12점이고, 교과서와 주어진 자료만으로 보고서를 씁니다",
+    intro:
+      "충남여자중학교 2학년 역사는 정기시험 두 번이 35%씩이고, 수행평가는 10월 제국주의 탐구 보고서 한 영역이 30%입니다. 보고서는 전체가 서·논술형 30%로 표시되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "제국주의 탐구 보고서", kind: "task", weight: 30, timing: "10월", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "풍자화가 30점 중 12점",
+        body: "[9역05-02] 성취기준의 보고서는 제국주의의 의미와 등장 배경 5점, 열강이 침략에 내세운 두 가지 이론 5점, 제국주의 풍자화 완성과 설명 12점, 제국주의 정책에 대한 자신의 평가 8점입니다. 풍자화는 역사적 오류가 있으면 10점, 설명이 없으면 8점입니다.",
+      },
+      {
+        title: "교과서와 주어진 자료만으로 작성",
+        body: "인터넷과 AI는 쓸 수 없고 주어진 자료를 분석해 서술합니다. 자신의 평가 항목은 논리적 근거와 정해진 분량을 함께 봅니다. 미응시 시 기본점수는 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "chungnamyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 두 과제는 여섯 요소를 5점씩, 역사 가상 자서전은 고려 말·조선 초가 배경이며 사회 기본점수는 40%입니다",
+    intro:
+      "충남여자중학교 3학년은 사회와 역사를 따로 평가합니다. 사회는 중간고사 없이 11월 기말고사 40%와 9월 수행평가 두 영역(각 30%)이고, 역사는 중간·기말 35%씩에 8월 가상 자서전 쓰기 30%입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11월", method: "선택형", course: "사회" },
+      { name: "국제기구 탐구", kind: "task", weight: 30, timing: "9월", method: "서술논술, 기타", course: "사회" },
+      { name: "인구 문제 탐구", kind: "task", weight: 30, timing: "9월", method: "서술논술, 기타", course: "사회" },
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형", course: "역사" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형", course: "역사" },
+      { name: "가상 자서전 쓰기", kind: "task", weight: 30, timing: "8월", method: "서술논술", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 두 과제는 여섯 요소 × 5점",
+        body: "국제기구 탐구는 국제 비정부 기구와 국제 연합 소속 기구의 예 각 3가지, 각 기구의 활동 구호, 구호에 담긴 의미를 각 5점으로 봅니다. 인구 문제 탐구는 선진국·개발도상국의 인구 문제와 정책, 우리나라 저출산·고령화의 원인과 영향, 인구 문제 대책을 각 5점으로 서술합니다. 고유명사 맞춤법이 틀리면 부정확한 내용으로 봅니다.",
+      },
+      {
+        title: "역사 가상 자서전은 고려 말·조선 초",
+        body: "주어진 역사적 키워드로 고려의 멸망과 조선 건국 과정 서술 12점, 새 왕조 건설 찬반 중 한 입장과 이유 9점, 태조~성종 업적 중 유교적 통치이념 관련 업적 6점, 15줄 이상 분량 3점입니다.",
+      },
+      {
+        title: "3학년 사회 기본점수는 40%",
+        body: "사회과 계획은 수행평가 기본점수를 1학년은 영역 만점의 30%, 3학년은 40%로 따로 정해 3학년 사회 두 과제의 기본점수가 12점입니다. 역사 가상 자서전의 기본점수도 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("충남여자중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "설명 방법 선택이 40점인 글과 표현·공유가 40점인 복합양식 글을 쓰며, 시험은 두 단원씩 다룹니다",
+    intro:
+      "대구북중학교 2학년 국어는 9월 하순 중간시험과 12월 기말시험이 60%, 쓰기 수행평가 두 개가 20%씩입니다. 10월에는 설명하는 글을, 11월에는 복합양식 자료를 활용한 글을 써서 두 과제 모두 완성된 글 한 편을 내는 방식입니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 18, timing: "9월 21일 ~ 9월 22일", method: "선택형 60점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 12, timing: "9월 21일 ~ 9월 22일", method: "서·논술형 40점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 18, timing: "12월 7일~12월 9일", method: "선택형 60점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 12, timing: "12월 7일~12월 9일", method: "서·논술형 40점" },
+      { name: "설명하는 글쓰기", kind: "task", weight: 20, timing: "10월", method: "논술형" },
+      { name: "복합양식 자료를 활용하여 주제에 대한 글쓰기", kind: "task", weight: 20, timing: "11월", method: "프로젝트형" },
+    ],
+    notes: [
+      {
+        title: "설명하는 글은 설명 방법 선택이 40점",
+        body: "글에 쓰인 설명 방법을 파악한 뒤, 주제와 설명 방법을 반영한 개요를 짜고 대상의 특성에 맞는 설명 방법으로 한 편의 글을 씁니다. 설명 방법의 적절성 40점, 개요 작성의 체계성 30점, 문장 표현의 정확성 30점이며 성취기준은 [9국02-05]입니다. 진도표에서는 10월 1~2주 ‘광고와 홍보물 분석하기’ 차시에 실시됩니다.",
+      },
+      {
+        title: "복합양식 글쓰기는 표현·공유가 40점",
+        body: "소개하고 싶은 대상을 정하고 보고서에 쓸 복합 양식 자료를 모아 주제에 맞는 글을 완성합니다. 계획 및 내용 생성하기 30점, 내용 조직하기 30점, 표현 및 공유하기 40점으로, 11월 3~4주에 동료평가로 독자 입장에서 이해 가능성을 점검하는 활동이 함께 배치되어 있습니다.",
+      },
+      {
+        title: "시험 범위는 두 단원씩",
+        body: "중간시험은 1~2단원, 기말시험은 3~4단원이며 회차마다 선택형 60점(18%)과 서·논술형 40점(12%)으로 단답형 칸은 비어 있습니다. 두 수행평가에서 AI는 교사가 허용한 범위 안의 자료 검색에만 쓸 수 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "9월 과제는 활용 문제가 40점, 11월 과제는 평행선 사이 선분 비가 40점입니다",
+    intro:
+      "대구북중학교 2학년 수학은 정기시험이 60%, 서·논술형 수행평가 두 개가 20%씩입니다. 정기시험은 회차마다 선택형 65점(19.5%)과 서·논술형 35점(10.5%)으로 나뉘고, 수행평가는 9월과 11월에 하나씩 치릅니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 19.5, timing: "9월 21일 ~ 9월 22일", method: "선택형 65점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10.5, timing: "9월 21일 ~ 9월 22일", method: "서·논술형 35점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 19.5, timing: "12월 7일 ~ 12월 9일", method: "선택형 65점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10.5, timing: "12월 7일 ~ 12월 9일", method: "서·논술형 35점" },
+      { name: "일차함수 그래프와 삼각형의 성질 탐구하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "사각형의 성질과 도형의 닮음 피타고라스 정리 탐구하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "9월 과제는 활용 문제가 40점",
+        body: "두 일차함수의 그래프와 연립일차방정식의 관계로 문제를 푸는 문항 30점, 이등변삼각형과 삼각형의 외심·내심 성질을 설명하는 문항 30점, 그 성질을 활용해 문제를 푸는 문항 40점입니다. 성취기준은 [9수02-17]·[9수02-18]·[9수03-09]·[9수03-10]이고 진도표에서는 9월 2주에 실시됩니다.",
+      },
+      {
+        title: "11월 과제는 평행선 사이 선분 비가 40점",
+        body: "닮음의 성질을 이용한 문제 해결 30점, 평행선 사이의 선분의 길이 비를 이용한 문제 해결 40점, 피타고라스 정리를 이용한 문제 해결 30점으로, 진도표상 11월 1주에 실시됩니다. 두 수행평가 모두 AI 활용을 할 수 없다고 적혀 있습니다.",
+      },
+      {
+        title: "중간·기말 성취기준 범위",
+        body: "중간시험은 [9수02-17]·[9수02-18]과 [9수03-09]~[9수03-11], 기말시험은 [9수03-11]~[9수03-15]와 확률 단원 [9수04-05]·[9수04-06]이 범위입니다. 사각형의 성질([9수03-11])은 두 시험에 모두 걸쳐 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "미래 농업 글은 문제 해결력이 40점, 전기 아이디어는 원리 적용이 40점이며 동물과 에너지는 두 시험에 다 나옵니다",
+    intro:
+      "대구북중학교 2학년 과학은 정기시험 60%(회차별 선택형 60점·서·논술형 40점)와 수행평가 40%입니다. 9월에는 식물과 에너지 단원과 이어진 미래 농업 글쓰기를, 11월에는 전기와 자기 단원의 아이디어 제안을 치릅니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 18, timing: "9월 21일 ~ 9월 22일", method: "선택형 60점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 12, timing: "9월 21일 ~ 9월 22일", method: "서·논술형 40점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 18, timing: "12월 7일 ~ 12월 9일", method: "선택형 60점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 12, timing: "12월 7일 ~ 12월 9일", method: "서·논술형 40점" },
+      { name: "광합성과 미래 농업에 대한 글쓰기", kind: "task", weight: 20, timing: "9월", method: "논술형" },
+      { name: "전기 원리를 적용한 실생활 아이디어 제안하기", kind: "task", weight: 20, timing: "11월", method: "탐구보고서" },
+    ],
+    notes: [
+      {
+        title: "미래 농업 글은 문제 해결력이 40점",
+        body: "광합성 과정과 의의를 핵심 개념으로 설명하고, 전통 농업이 겪는 문제를 조사한 뒤 미래 농업의 구체적 예시와 유용함을 씁니다. 핵심개념탐구 30점, 문제 인식 30점, 문제 해결력 40점이며, 진도표에서는 9월 1주 스마트팜 조사 글쓰기 연계 활동을 거쳐 9월 2주에 실시됩니다.",
+      },
+      {
+        title: "전기 아이디어는 원리 적용이 40점",
+        body: "실생활의 전기 관련 불편함을 찾아 문제를 정하고, 아이디어의 구조와 작동 방식을 시각화해 정전기·옴의 법칙 같은 원리로 설명한 뒤 가치와 한계, 보완 방향을 씁니다. 문제 발견 30점, 구조화 및 과학 원리 적용 40점, 확장하기 30점이며 11월 1주에 실시됩니다.",
+      },
+      {
+        title: "동물과 에너지 단원은 두 시험에 모두",
+        body: "중간시험은 물질의 구성, 식물과 에너지, 동물과 에너지 단원([9과11-04]~[9과13-02]), 기말시험은 동물과 에너지, 전기와 자기, 별과 우주 단원([9과13-02]~[9과15-03])이 범위로, [9과13-02]가 두 시험에 함께 들어 있습니다. 두 수행평가 모두 AI 활용이 전면 금지됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "추천서는 주제와의 연관성이 40점이고, 원어민 교사의 질문에 답하며 시험은 Lesson 두 개씩입니다",
+    intro:
+      "대구북중학교 2학년 영어는 정기시험 60%, 수행평가 40%입니다. 수행평가 중 듣기 10%는 9월 1주 전국 시도교육청 주관 듣기평가로 보고, 책 추천서 쓰기와 이와 연계된 인터뷰가 11월 3주·4주에 15%씩 이어집니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 19.5, timing: "9월 21일 ~ 9월 22일", method: "선택형 65점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10.5, timing: "9월 21일 ~ 9월 22일", method: "서술형 35점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 19.5, timing: "12월 7일 ~ 12월 9일", method: "선택형 65점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10.5, timing: "12월 7일 ~ 12월 9일", method: "서술형 35점" },
+      { name: "영어듣기능력평가", kind: "task", weight: 10, timing: "9월 1주" },
+      { name: "책 추천서 쓰기", kind: "task", weight: 15, timing: "11월", method: "논술형" },
+      { name: "추천하고 싶은 책에 관한 인터뷰하기", kind: "task", weight: 15, timing: "11월", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "추천서는 주제와의 연관성이 40점",
+        body: "추천하고 싶은 책을 골라 내용과 추천 이유를 정리하고, 추천서에 넣을 핵심 표현을 구상한 뒤 주어진 조건에 따라 글을 씁니다. 주제와의 연관성 40점, 언어 형식의 정확성 30점, 과제의 완성도 30점이며 성취기준은 [9영02-04]·[9영02-10]입니다.",
+      },
+      {
+        title: "인터뷰는 원어민 교사의 질문에 답하기",
+        body: "주어진 주제에 대한 답변을 준비하고 발음·억양·표현을 점검하며 연습한 뒤, 원어민 교사의 질문에 답합니다. 주제와의 연관성 30점, 언어 형식의 정확성 30점, 발음 및 유창성 40점으로 말하기 과제에서는 유창성 배점이 가장 큽니다.",
+      },
+      {
+        title: "시험은 Lesson 두 개씩",
+        body: "중간시험은 Lesson 5~6, 기말시험은 Lesson 7~8이 범위이고, 회차마다 선택형 65점(19.5%)과 서술형 35점(10.5%)입니다. 듣기 영역은 EBS 라디오 듣기평가 100점 만점을 반영하며, 세 수행평가 모두 AI 활용이 금지됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "비판 글과 소책자는 같은 채점 틀을 쓰고, 실시 시기는 표마다 한 달씩 어긋납니다",
+    intro:
+      "대구북중학교 2학년 역사는 정기시험 60%와 논술형 수행평가 두 개(각 20%)로 구성됩니다. 첫 과제는 신항로 개척이 가져온 변화를 평가하는 글이고, 두 번째는 시민 혁명의 배경·과정·결과·의의를 담은 소책자입니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 18, timing: "9월 21일 ~ 9월 22일", method: "선택형 60점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 12, timing: "9월 21일 ~ 9월 22일", method: "서·논술형 40점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 18, timing: "12월 7일 ~ 12월 9일", method: "선택형 60점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 12, timing: "12월 7일 ~ 12월 9일", method: "서·논술형 40점" },
+      { name: "역사 사건을 비판하는 글쓰기", kind: "task", weight: 20, method: "논술형" },
+      { name: "시민 혁명 소책자 만들기", kind: "task", weight: 20, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "두 과제의 채점 틀이 같습니다",
+        body: "신항로 개척 글쓰기([9역04-03])와 시민 혁명 소책자([9역05-01]) 모두 역사 사실 및 용어 선정의 적합성 40점, 조건의 충족도 30점, 완성도 30점으로 채점합니다. 소책자는 마인드맵 작성, 자료 조사, 배경·과정·결과·의의 정리 순서로 만들고, 두 과제 모두 AI 활용이 전면 금지됩니다.",
+      },
+      {
+        title: "실시 시기는 표마다 한 달씩 어긋납니다",
+        body: "평가 개요표는 글쓰기를 9월, 소책자를 10월로 적었지만, 진도표에는 글쓰기가 10월 1주, 소책자가 11월 1주에 실시로 표시되어 있습니다. 두 과제 모두 중간시험(9월 21~22일) 뒤에 배치된 셈입니다.",
+      },
+      {
+        title: "중간·기말 범위",
+        body: "정기시험은 회차마다 선택형 60점(18%)과 서·논술형 40점(12%)입니다. 중간시험은 [9역04-03]·[9역05-01]·[9역05-02], 기말시험은 [9역05-02]~[9역05-03]과 [9역06-01]~[9역06-03]이 범위입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "한 학기 한 권 읽고 서평 쓰기 30%(10월 초) · 선택형 70점 정기시험 2회 70%",
+    intro:
+      "대구북중학교 3학년 국어는 정기시험 비중이 70%로 크고, 수행평가는 ‘한 학기 한 권 읽고 서평 쓰기’ 하나가 30%를 차지합니다. 중간시험은 9월 21~22일, 기말시험은 11월 4~6일이고 서평은 그 사이 10월 초에 씁니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 24.5, timing: "9월 21일 ~ 9월 22일", method: "선택형 70점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10.5, timing: "9월 21일 ~ 9월 22일", method: "서·논술형 30점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 24.5, timing: "11월 4일 ~ 11월 6일", method: "선택형 70점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10.5, timing: "11월 4일 ~ 11월 6일", method: "서·논술형 30점" },
+      { name: "한 학기 한 권 읽고 서평 쓰기", kind: "task", weight: 30, timing: "10월 초", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "서평 전에 감상문을 따로 채점합니다",
+        body: "소설 1권을 읽으며 서평용 감상문을 쓰고, 감상문과 자료 검색으로 글감을 마련한 뒤 서평을 완성합니다. 감상문 작성하기 30점, 자료 수집 및 활용의 적절성 20점, 글의 형식적 특성 20점, 글의 내용 완성도 30점이며 성취기준은 [9국05-05]·[9국05-06]입니다. 진도표에서는 10월 1~2주에 서평 개요 작성과 완성이 이어집니다.",
+      },
+      {
+        title: "기말은 네 단원 전체가 범위",
+        body: "중간시험은 1~2단원(문학과 삶, 논증과 설득 전략), 기말시험은 1~4단원으로 문장과 글쓰기, 점검과 조정까지 더해집니다. 회차마다 선택형 70점(24.5%)과 서·논술형 30점(10.5%)이며, 서평 과제에서 AI는 교사가 허용한 자료 검색에만 쓸 수 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "중간시험 없이 기말 60% · 다국적 유통 업체 입점 보고서 20% · 국가기관 분석 보고서 20%",
+    intro:
+      "대구북중학교 3학년 사회(주당 2시간)는 중간시험을 보지 않고 11월 4일~6일 기말시험 한 번이 60%(선택형 65점 39%, 서·논술형 35점 21%)입니다. 나머지 40%는 보고서 형식의 수행평가 두 개가 20%씩 나눕니다.",
+    assessments: [
+      { name: "기말시험 선택형", kind: "exam", weight: 39, timing: "11월 4일 ~ 11월 6일", method: "선택형 65점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 21, timing: "11월 4일 ~ 11월 6일", method: "서·논술형 35점" },
+      { name: "다국적 유통 업체 입점 보고서 작성하기", kind: "task", weight: 20, method: "서술형" },
+      { name: "국가기관 분석 보고서 작성하기", kind: "task", weight: 20, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "유통 업체 보고서는 대안 제시가 40점",
+        body: "다국적 유통 업체 입점에 따른 국내 산업의 변화와 주민 생활의 변화를 서술하고, 입점으로 생길 수 있는 문제의 해결 방안을 씁니다. 개념의 이해와 논리적 표현 30점씩 두 항목과 합리적 대안 제시 40점이며, 성취기준은 [9사(지리)09-03]입니다.",
+      },
+      {
+        title: "국가기관 보고서는 개념 정확성이 40점",
+        body: "가장 중요하다고 생각하는 국가기관 하나를 골라 그 이유를 논리적으로 쓰고, 그 기관의 조직과 기능을 서술합니다. 글의 체계성 30점, 근거의 논리성 30점, 개념의 정확성 40점이며 국회·행정부·법원과 헌법 재판소 성취기준([9사(일사)07-01]~[9사(일사)07-03])에 걸쳐 있습니다.",
+      },
+      {
+        title: "기말 한 번에 네 단원",
+        body: "진도표의 기말시험 범위는 1, 2, 9, 11단원으로 인권과 헌법, 헌법과 국가 기관, 글로벌 경제 활동과 지역 변화, 세계 속의 우리나라입니다. 두 보고서의 시기는 평가 개요표(9월·10월)와 진도표 칸(8월 3주~9월 1주, 9월 4주~10월 3주)이 달라 학교 안내로 확인합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수와 삼각비를 활용한 문제 해결하기 30% · 회차별 선택형 70점 시험 70%",
+    intro:
+      "대구북중학교 3학년 수학은 정기시험 두 번이 70%, 논술형 수행평가 하나가 30%입니다. 수행평가는 이차함수 단원의 오류 수정과 이차함수·삼각비 실생활 문제를 한 과제로 묶었습니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 24.5, timing: "9월 21일 ~ 9월 22일", method: "선택형 70점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10.5, timing: "9월 21일 ~ 9월 22일", method: "서·논술형 30점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 24.5, timing: "11월 4일 ~ 11월 6일", method: "선택형 70점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10.5, timing: "11월 4일 ~ 11월 6일", method: "서·논술형 30점" },
+      { name: "이차함수와 삼각비를 활용한 문제 해결하기", kind: "task", weight: 30, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "오류 수정 문항이 40점",
+        body: "오류가 있는 이차함수 문제를 고쳐 풀고 성질을 설명하는 문항이 40점, 실생활 문제를 이차함수로 해결하는 문항과 삼각비로 해결하는 문항이 30점씩입니다. 성취기준은 [9수03-10]·[9수04-18]이며 AI 활용은 금지됩니다.",
+      },
+      {
+        title: "실시 시기 표기",
+        body: "평가 개요표는 수행평가 시기를 9월 14일~10월 2일로 적었고, 진도표에는 중간시험과 같은 9월 3~4주 칸에 ‘수행평가 실시’가 표시되어 있습니다.",
+      },
+      {
+        title: "삼각비·원의 성질은 두 시험에 모두",
+        body: "중간시험은 3~5단원(이차함수, 삼각비, 원의 성질), 기말시험은 4~6단원(삼각비, 원의 성질, 통계)입니다. 회차마다 선택형 70점(24.5%)과 서·논술형 30점(10.5%)으로 나뉩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daegubuk-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "장애인을 위한 시설 제안하기 40%(10월 1주) · 자극과 반응 중간 / 생식·에너지·우주 기말",
+    intro:
+      "대구북중학교 3학년 과학은 수행평가가 ‘장애인을 위한 시설 제안하기’ 한 과제뿐이지만 40%를 차지합니다. 중간시험은 자극과 반응 단원, 기말시험은 생식과 유전·에너지 전환과 보존·별과 우주 단원이 범위입니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 18, timing: "9월 21일 ~ 9월 22일", method: "선택형 60점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 12, timing: "9월 21일 ~ 9월 22일", method: "서·논술형 40점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 18, timing: "11월 4일 ~ 11월 6일", method: "선택형 60점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 12, timing: "11월 4일 ~ 11월 6일", method: "서·논술형 40점" },
+      { name: "장애인을 위한 시설 제안하기", kind: "task", weight: 40, timing: "10월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "제안서는 시설 제안이 40점",
+        body: "감각기관이나 호르몬 조절의 이상으로 생기는 장애를 설명하고, 장애인을 위한 과학기술을 조사한 뒤 학교에 적용할 수 있는 시설 제안서를 씁니다. 장애의 원인 설명 30점, 과학기술 조사 30점, 시설 제안 40점이며 성취기준은 [9과20-01]~[9과20-03]입니다.",
+      },
+      {
+        title: "중간시험과 같은 단원을 이어서",
+        body: "수행평가는 중간시험 범위인 자극과 반응 단원([9과20-01]~[9과20-03])을 그대로 다루며, 진도표에서 중간시험 다음 주인 10월 1주에 실시됩니다. 정기시험은 회차마다 선택형 60점(18%)과 서·논술형 40점(12%)이고, 수행평가에서 AI 활용은 전면 금지됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구북중학교")],
+  },
+  {
+    schoolSlug: "daeguseobu-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "사회적 의제 협상 20%(9월 3주~10월 3주) · 고전 작품 비교·비평 글 20% · 시험 회차마다 서·논술 35점",
+    intro:
+      "대구서부고등학교 1학년 공통국어2는 정기시험 두 번이 60%, 수행평가 두 과제가 40%입니다. 시험은 회차마다 선택형 65점과 서·논술형 35점으로 짜이고 단답형 칸은 비어 있으며, 수행평가는 협상 과제와 고전 문학 비평 글로 나뉩니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 19.5, timing: "10월 6일~8일", method: "선택형 65점" },
+      { name: "중간시험(서·논술형)", kind: "exam", weight: 10.5, timing: "10월 6일~8일", method: "서·논술형 35점" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 19.5, timing: "12월 4일~9일", method: "선택형 65점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 10.5, timing: "12월 4일~9일", method: "서·논술형 35점" },
+      { name: "이해관계 분석을 통한 사회적 의제 협상하기", kind: "task", weight: 20, timing: "9월 3주~10월 3주", method: "논구술형" },
+      { name: "한국 고전 문학 작품 비교 및 비평하기", kind: "task", weight: 20, timing: "10월 5주~11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "협상 과제는 제안서와 실제 협상이 반씩",
+        body: "사회적 의제의 쟁점을 파악해 정보를 모은 뒤 이해관계를 분석해 협상 제안서를 쓰고, 그 제안서를 들고 협상에 참여하는 3단계 과제입니다. 배점은 제안서의 내용 생성과 조직 30점·언어 구조와 표현 20점, 협상하기의 이해와 분석 30점·사회적 소통 태도 20점이며, AI는 정보 수집 단계에서만 일부 허용됩니다. 진도표에는 9월 14일~28일 제안서 쓰기, 10월 13일~19일 모둠 내 협상이 잡혀 있습니다.",
+      },
+      {
+        title: "고전 비평 글은 두 작품을 골라 비교",
+        body: "수업에서 배운 고전 문학 작품 가운데 두 편을 골라 공통된 인간의 경험을 설정하고, 시어·장면을 근거로 분석한 뒤 갈래와 문학사적·사회문화적 맥락으로 차이를 해석해 비교·비평 글을 씁니다. 작품 이해 및 근거 분석, 문학사적 맥락을 고려한 비교·해석, 주체적 평가 및 현재적 의미 탐구가 각 30점이고 글의 구성 및 표현이 10점이며, 전 과정에서 AI를 쓰지 않습니다.",
+      },
+      {
+        title: "동점자 기준과 결시 처리",
+        body: "동점자 처리 순위는 기말시험, 중간시험, 협상 과제, 비평 과제 순입니다. 수행평가 결시생에게는 추가 응시 기회를 주고, 장기 병결석으로 참여할 수 없으면 30점, 장기 미인정결석이면 0점을 부여한다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구서부고등학교")],
+  },
+  {
+    schoolSlug: "daeguseobu-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2", "한국사2"],
+    summary: "통합사회2 지역화 전략 프로젝트·소비 계획 보고서 / 한국사2 위안부 사례 에세이·국가 구상안 글쓰기",
+    intro:
+      "대구서부고등학교 1학년 사회 영역은 통합사회2와 한국사2 모두 정기시험 60%, 수행평가 40%(과제 2개, 각 20%)입니다. 차이는 시험 칸 구성으로, 한국사2만 회차마다 단답형 5점(1.5%)이 따로 있고 통합사회2는 선택형 65점과 서·논술형 35점으로만 나뉩니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 19.5, timing: "10월 6일~10월 8일", method: "선택형 65점", course: "통합사회2" },
+      { name: "중간시험(서·논술형)", kind: "exam", weight: 10.5, timing: "10월 6일~10월 8일", method: "서·논술형 35점", course: "통합사회2" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 19.5, timing: "12월 4일~12월 9일", method: "선택형 65점", course: "통합사회2" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 10.5, timing: "12월 4일~12월 9일", method: "서·논술형 35점", course: "통합사회2" },
+      { name: "지역화 전략을 활용한 지역 경쟁력 강화 프로젝트", kind: "task", weight: 20, timing: "9월 3-4주", method: "프로젝트", course: "통합사회2" },
+      { name: "합리적 소비 계획 보고서 작성하기", kind: "task", weight: 20, timing: "11월 1주", method: "서·논술형", course: "통합사회2" },
+      { name: "중간시험(선택형)", kind: "exam", weight: 18, timing: "10월 6일~10월 8일", method: "선택형 60점", course: "한국사2" },
+      { name: "중간시험(단답형)", kind: "exam", weight: 1.5, timing: "10월 6일~10월 8일", method: "단답형 5점", course: "한국사2" },
+      { name: "중간시험(서·논술형)", kind: "exam", weight: 10.5, timing: "10월 6일~10월 8일", method: "서·논술형 35점", course: "한국사2" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 18, timing: "12월 4일~12월 9일", method: "선택형 60점", course: "한국사2" },
+      { name: "기말시험(단답형)", kind: "exam", weight: 1.5, timing: "12월 4일~12월 9일", method: "단답형 5점", course: "한국사2" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 10.5, timing: "12월 4일~12월 9일", method: "서·논술형 35점", course: "한국사2" },
+      { name: "일본군 위안부 사례 탐구 성찰 에세이 쓰기", kind: "task", weight: 20, timing: "10월 5주 ~ 11월 1주", method: "서술형", course: "한국사2" },
+      { name: "광복 후 국가 구상안 분석 글쓰기", kind: "task", weight: 20, timing: "10월 3주~5주", method: "서·논술형", course: "한국사2" },
+    ],
+    notes: [
+      {
+        title: "통합사회2 지역화 프로젝트는 사고력 항목이 35점",
+        body: "지역의 자연환경·인문환경·특산물·산업을 조사해 강점과 문제점을 분석한 뒤 장소 마케팅, 지역 브랜드, 지리적 표시제 가운데 맞는 전략을 골라 지역화 전략 보고서를 씁니다. 채점은 개념 이해와 적용 20점, 자료 수집 및 분석 30점, 비판적·창의적 사고력 35점, 논리적·형식적 체계성 15점입니다.",
+      },
+      {
+        title: "소비 계획 보고서는 기회비용 계산부터",
+        body: "최근 일주일 동안 구매했거나 구매할 물건과 대안을 정해 명시적 비용·암묵적 비용을 나누고 기회비용을 계산한 다음, 희망 진로와 관련된 소비 계획 보고서로 정리합니다. 배점은 개념 이해와 적용 30점, 자료수집 및 분석 25점, 비판적·창의적 사고력 25점, 논리적·형식적 체계성 20점이며, AI는 검색어 추천·아이디어 발상·맞춤법 점검에만 쓰고 활용 범위를 보고서에 표시합니다.",
+      },
+      {
+        title: "한국사2 두 글쓰기의 자료 조건",
+        body: "위안부 성찰 에세이는 증언 사례 5개 중 하나를 골라 조원과 정리하고 일본 측 자료를 비판적으로 탐구한 뒤 쓰며, 역사 사실 이해 25점·자료 내용 분석 25점·역사적 연원 파악과 성찰 30점·책임 의식 20점입니다. 국가 구상안 글쓰기는 박헌영·김구·김규식·여운형·이승만 중 한 인물의 구상을 자료 분석표와 가치 오각형으로 정리하고, 제공 자료 3개 이상을 증거로 논증 글을 완성합니다. 두 과제 모두 생성형 AI를 쓰지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구서부고등학교")],
+  },
+  {
+    schoolSlug: "daeguseobu-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["화법과 언어"],
+    summary: "신조어 사전은 분석 40점이 가장 크고, 협상은 3주에 걸쳐 단계별로 진행합니다",
+    intro:
+      "대구서부고등학교 2학년 화법과 언어는 정기시험 두 번이 60%, 수행평가 두 과제가 40%입니다. 두 과제가 모두 9월 3주부터 10월 1주 사이에 놓여 있어, 10월 6~8일 중간시험 전에 단어 탐구와 협상 준비를 함께 진행하게 됩니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 19.5, timing: "10월 6일~8일", method: "선택형 65점" },
+      { name: "중간시험(서·논술형)", kind: "exam", weight: 10.5, timing: "10월 6일~8일", method: "서·논술형 35점" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 19.5, timing: "12월 4일~9일", method: "선택형 65점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 10.5, timing: "12월 4일~9일", method: "서·논술형 35점" },
+      { name: "단어의 형성 원리 탐구 및 신조어 사전 제작·발표", kind: "task", weight: 20, timing: "9월 3~4주", method: "프로젝트" },
+      { name: "공동의 문제에 대해 협상하기", kind: "task", weight: 20, timing: "9월 3주~10월 1주", method: "서논술" },
+    ],
+    notes: [
+      {
+        title: "신조어 사전은 분석 40점이 가장 큼",
+        body: "개념 탐구로 형태소와 단어 형성 방법을 익힌 뒤 신조어 사전을 만들고 발표·상호 피드백을 하는 순서입니다. 이해와 분석 40점, 생성과 조직 35점, 표현 25점이며, AI는 형태소·단어 관련 문법 개념의 추가 예시를 찾는 데만 쓸 수 있습니다. 진도표에서는 2인 1조로 신조어를 어근과 접사로 나눠 파생어·합성어 판별 기준을 들어 서로 점검하는 활동이 함께 진행됩니다.",
+      },
+      {
+        title: "협상 과제는 3주에 걸쳐 단계별 진행",
+        body: "일상 속 공동의 문제를 고르고, 모둠별로 양측 입장과 근원적 동기를 분석해 제안을 마련한 뒤 개인별 협상 계획서를 쓰고 실제 협상을 하며, 마지막에 자기성찰록을 냅니다. 배점은 협상 계획서 작성 50점, 협상 30점, 성찰록 작성 20점입니다. 진도표에는 9월 14~18일 계획서, 9월 21~25일 협상, 9월 28일~10월 2일 성찰록 작성이 차례로 적혀 있습니다.",
+      },
+      {
+        title: "시험 칸과 결시 처리",
+        body: "정기시험은 회차마다 선택형 65점(19.5%)과 서·논술형 35점(10.5%)이고 단답형 칸은 비어 있습니다. 수행평가에 끝까지 참여하지 못한 결시생과 전·편입생에게는 해당 영역 최하점의 40%를 부여하며, 동점자는 기말시험 성적을 먼저 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구서부고등학교")],
+  },
+  {
+    schoolSlug: "daeguseobu-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "에세이에 어휘 학습·작문 연습 40점이 있고, 노래 발표는 STEAL 기법과 다섯 요소를 봅니다",
+    intro:
+      "대구서부고등학교 2학년 영어Ⅱ는 정기시험 50%, 수행평가 50%로 비중이 같습니다. 9월에 듣기평가와 그래프 분석 에세이가 함께 치러지고, 말하기 과제인 노래 가사 발표는 11월 4주에 따로 있습니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 15, timing: "10월 6일 ~ 10월 8일", method: "선택형 60점" },
+      { name: "중간시험(서·논술형)", kind: "exam", weight: 10, timing: "10월 6일 ~ 10월 8일", method: "서·논술형 40점" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 15, timing: "12월 4일 ~ 12월 9일", method: "선택형 60점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 10, timing: "12월 4일 ~ 12월 9일", method: "서·논술형 40점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월 9일", method: "선택형" },
+      { name: "그래프를 보고 분석하는 에세이 쓰기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "가사와 멜로디로 내 인생 이야기 들려주기", kind: "task", weight: 20, timing: "11월 4주", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "에세이 배점에 어휘 학습·작문 연습 40점",
+        body: "브레인스토밍, 그래프 분석 글의 형식 파악과 개요 작성, 초고 피드백, 최종안 작성 순으로 진행됩니다. 평가요소별 배점은 어휘 학습 20점, 작문 연습 20점, 내용 및 구성 30점, 언어 사용 20점, 형식 및 표기법 10점입니다. 초고 단계에서는 문법 점검에 AI를 쓸 수 있지만 총괄평가에서는 금지됩니다.",
+      },
+      {
+        title: "노래 발표는 STEAL 기법과 다섯 요소",
+        body: "선정곡의 가사와 멜로디를 분석하고 STEAL 기법으로 가사를 자신의 삶과 연결한 뒤, 발표 대본과 시각 자료를 만들고 목소리·시선·자세와 제스처·표정·자신감의 Public Speaking 다섯 요소에 맞춰 리허설합니다. 말하기 연습 40점, 내용 및 구성 20점, 언어 사용 및 유창성 20점, 소통 능력 20점이며, 진도표의 실시 주는 11월 23일 주입니다.",
+      },
+      {
+        title: "듣기는 교육청 평가 날짜에 맞춤",
+        body: "듣기 10%는 시·도교육청 주관 영어듣기 능력평가를 그대로 활용하며 2학년은 9월 9일입니다. 결시하면 노래 발표 영역을 기준으로 인정점을 주고, 전·편입생은 원적교 영어듣기능력평가 점수를 반영합니다. 정기시험은 회차마다 선택형 60점과 서·논술형 40점이고 단답형은 없습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대구서부고등학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "자서전은 형식·인용·성찰 세 요소로 보고, 논술형 비중이 학기 성적의 44%입니다",
+    intro:
+      "대경중학교 1학년 국어는 정기시험 두 번이 70%, 수행평가는 자서전 쓰기 한 영역 30%입니다. 1차 시험(10월 2주)이 끝난 뒤 10월 5주부터 11월 2주까지 정서를 표현하는 글쓰기 단원에서 자서전을 쓰고, 12월 3주에 2차 시험을 봅니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 80점(28%)·논술형 20점(7%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 3주", method: "선택형 80점(28%)·논술형 20점(7%)" },
+      { name: "자서전 쓰기", kind: "task", weight: 30, timing: "10월 5주~11월 2주", method: "논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "자서전은 형식·인용·성찰 세 요소로 봅니다",
+        body: "평가 요소는 자서전의 형식을 갖춰 글쓰기, 격언·속담·고사성어 등을 인용하여 경험한 가치를 표현하기, 경험과 성찰을 담아 자서전을 작성하기입니다. 성취기준은 [9국03-05]이고, 진도표에서는 10월 5주에 글쓰기 과정 관찰, 11월 1주에 경험을 바탕으로 쓰는지 관찰, 11월 2주에 정서가 진솔하게 드러나는지 자기 평가가 이어집니다.",
+      },
+      {
+        title: "논술형 비중은 학기 성적의 44%",
+        body: "반영 비율표의 논술형 평가 칸은 1차 7%, 2차 7%, 자서전 30%로 합계 44%입니다. 1차 시험 성취기준에는 [9국01-01]·[9국01-07]·[9국02-03]·[9국05-02] 등 추론하며 듣기·읽기와 토의가, 2차 시험에는 단어의 짜임과 새말, 주장하는 글, 성장소설 관련 기준이 배치되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "대화문을 먼저 쓴 뒤 상황별로 말하고, 감사장은 초안부터 어휘까지 다섯 요소를 봅니다",
+    intro:
+      "대경중학교 1학년 영어는 정기시험과 수행평가가 50%씩이며, 수행평가 두 영역이 각각 25%로 시험 한 회차와 같은 무게입니다. 상황별 대화하기는 학기 첫 주인 9월 1주, 감사장 작성하기는 11월 1주에 치릅니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "상황별 대화하기", kind: "task", weight: 25, timing: "9월 1주", method: "논술형·구술형 25점" },
+      { name: "감사장 작성하기", kind: "task", weight: 25, timing: "11월 1주", method: "논술형 25점" },
+    ],
+    notes: [
+      {
+        title: "대화 과제는 대화문을 먼저 씁니다",
+        body: "상황별 대화하기의 평가 요소는 주제에 맞는 대화문 작성하기와 상황별 대화하기 두 가지로, 진도표에는 논술형·구술형 평가로 표시됩니다. 성취기준은 [9영01-09]·[9영02-10]이며, 논술형 평가 반영 비율 칸에는 이 과제가 10%로 적혀 있습니다.",
+      },
+      {
+        title: "감사장은 초안부터 어휘까지 다섯 요소",
+        body: "감사장 작성하기는 초안 작성, 조건에 맞는 글쓰기, 주제에 맞는 글쓰기, 정확한 언어 형식 사용, 다양하고 적절한 어휘 사용으로 채점되며 25%가 모두 논술형입니다. 11월 1주 진도표 칸에는 올바른 문법과 어휘를 활용한 에세이 평가가 함께 적혀 있어, 학기 논술형 비중은 합계 45%가 됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "포트폴리오는 수학 노트 점검이고, 작도 과제는 합동 판별까지 이어집니다",
+    intro:
+      "대경중학교 1학년 수학은 정기시험 두 번(각 25%)과 수행평가 두 영역(20%·30%)이 반씩 차지합니다. 수행평가 중 문제풀이 포트폴리오는 8월 3주부터 11월 2주까지 수업 노트로 쌓이고, 삼각형의 작도와 합동은 9월 4주 한 번에 평가됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "삼각형의 작도와 합동", kind: "task", weight: 20, timing: "9월 4주", method: "논술형 20점" },
+      { name: "문제풀이 포트폴리오 만들기", kind: "task", weight: 30, timing: "8월 3주~11월 2주", method: "포트폴리오 30점(논술형 0%)" },
+    ],
+    notes: [
+      {
+        title: "포트폴리오는 수학 노트 점검입니다",
+        body: "평가 요소는 수학 노트에 교과서 문제를 스스로 풀고 올바른 풀이 과정을 적은 뒤 자신의 풀이와 비교해 성찰하기입니다. 진도표에는 8월 3주부터 같은 점검이 반복되고, 11월 2주 칸에 매 수업 필기 검사 뒤 받은 도장 개수를 확인한다고 적혀 있습니다.",
+      },
+      {
+        title: "작도 과제는 합동 판별까지 이어집니다",
+        body: "삼각형의 작도와 합동은 주어진 조건으로 삼각형을 작도하고, 합동 조건을 이용해 두 삼각형이 합동인지 판별한 뒤 문제를 해결하는 논술형 20점 과제입니다. 성취기준은 [9수03-03]·[9수03-04]이며, 학기 논술형 비중은 시험 5%씩과 이 과제 20%를 더한 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "논술 프로젝트는 여섯 주제로 나뉘고, 학기 논술형 비중은 58%입니다",
+    intro:
+      "대경중학교 1학년 사회는 정기시험 두 번이 각 35%이고, 회차마다 100점 중 40점이 논술형입니다. 수행평가는 8월 4주 역할 갈등 논술(10%)과 학기 내내 나뉘어 진행되는 논술 프로젝트(20%)로 구성됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 60점(21%)·논술형 40점(14%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 3주", method: "선택형 60점(21%)·논술형 40점(14%)" },
+      { name: "역할 갈등 해결 방안 논술", kind: "task", weight: 10, timing: "8월 4주", method: "논술형 10점" },
+      { name: "논술 프로젝트", kind: "task", weight: 20, timing: "9월 1주, 9월 4주, 10월 5주, 11월 2주, 11월 3주, 12월 1주", method: "논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "논술 프로젝트는 여섯 주제로 나뉩니다",
+        body: "평가 요소에는 갈등과 차별 사례와 시민의 자질, 문화를 이해하는 태도, 민주주의 발전을 위한 제도와 시민의 역할, 사회법이 필요한 이유를 논술하는 주제와 정치 주체 조사·지방자치 시민 참여 활동 발표가 들어 있습니다. 진도표의 ‘논술 프로젝트’ 표시 주차도 9월 1주부터 12월 1주까지 여섯 번입니다.",
+      },
+      {
+        title: "학기 논술형 비중 58%",
+        body: "정기시험의 논술형 14%씩과 두 수행평가를 더하면 논술형 평가는 학기 성적의 58%입니다. 첫 과제인 역할 갈등 해결 방안 논술은 [9사(일사)01-02]에 따라 지위와 역할의 의미를 설명하고 일상 속 역할 갈등 사례와 대응 방안을 서술합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "열 과제엔 입자 모형 표현이 들어가고, 힘 과제는 2차 시험 범위와 겹칩니다",
+    intro:
+      "대경중학교 1학년 과학은 정기시험 60%, 수행평가 40%이며, 정기시험은 회차마다 선택형 50점·논술형 50점으로 나뉩니다. 수행평가 두 과제는 9월 2주와 11월 4주에 하나씩 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 50점(15%)·논술형 50점(15%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 50점(15%)·논술형 50점(15%)" },
+      { name: "열평형과 열의 전달 논술하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형 20점" },
+      { name: "과학에서의 힘 설명하기", kind: "task", weight: 20, timing: "11월 4주" },
+    ],
+    notes: [
+      {
+        title: "열 과제는 입자 모형 표현이 포함됩니다",
+        body: "열평형과 열의 전달 논술하기의 평가 요소는 열평형 및 열의 전달 방법 논술, 입자 모형으로 표현하기, 문장 형태로 자신의 생각 서술하기이며 성취기준은 [9과03-01]·[9과03-02]입니다. 진도표에는 핵심 탐구 내용을 반영한 매체 제작 평가로 적혀 있습니다.",
+      },
+      {
+        title: "힘 과제는 2차 시험 범위와 겹칩니다",
+        body: "과학에서의 힘 설명하기는 힘 표현, 합력과 평형, 여러 가지 힘, 힘의 작용과 운동 상태 변화를 설명하는 과제로 [9과05-01]~[9과05-04]에 걸립니다. 같은 기준이 2차 정기시험 성취기준에도 들어 있으며, 2차 시험에는 기체의 압력·부피·온도 관계([9과06])가 더해집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "보고서는 음운 체계표에서 시작하고, 1차는 읽기·쓰기, 2차는 문법·대화 범위입니다",
+    intro:
+      "대경중학교 2학년 국어는 수행평가가 국어의 음운 체계 탐구 보고서 한 편(30%)이고 정기시험 두 번이 35%씩입니다. 정기시험은 회차마다 선택형 70점·논술형 30점이라 1학년보다 시험 안 논술형 배점이 큽니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 70점(24.5%)·논술형 30점(10.5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 3주", method: "선택형 70점(24.5%)·논술형 30점(10.5%)" },
+      { name: "국어의 음운 체계 탐구 보고서 작성하기", kind: "task", weight: 30, timing: "11월 1주", method: "논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "보고서는 음운 체계표에서 시작합니다",
+        body: "평가 요소는 국어의 음운 체계표 작성하기, 소리 생성 원리 탐구하기, 실생활 발음 적용하기이고 성취기준은 [9국04-01]입니다. 같은 기준이 2차 정기시험 성취기준에도 들어 있어, 11월 1주 보고서 내용이 12월 시험 범위와 이어집니다.",
+      },
+      {
+        title: "1차는 읽기·쓰기, 2차는 문법·대화",
+        body: "1차 시험 평가 요소는 작품의 사회·문화적 상황 이해, 읽기 과정 점검·조정, 복합양식 자료 활용, 독자를 고려한 고쳐쓰기 등입니다. 2차 시험은 음운·문자 체계, 공감하며 대화하기, 갈등 조정하기가 중심이며, 학기 논술형 비중은 10.5%씩과 보고서 30%를 더한 51%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "외모 설명 글은 AI log도 채점 요소이고, 12월 과제는 수업 중 발표 참여로 봅니다",
+    intro:
+      "대경중학교 2학년 영어는 정기시험 70%, 수행평가 30%이며 수행평가는 20%와 10% 두 영역입니다. 9월 3주에 사람의 외모를 설명하는 글을 쓰고, 12월 1주에 어법을 활용한 문장 표현과 영어 구술 발표를 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 80점(28%)·논술형 20점(7%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 3주", method: "선택형 80점(28%)·논술형 20점(7%)" },
+      { name: "사람의 외모 설명하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형 20점" },
+      { name: "어법활용 문장 표현 연습 및 영어 구술 발표하기", kind: "task", weight: 10, timing: "12월 1주", method: "10점(논술형 10%)" },
+    ],
+    notes: [
+      {
+        title: "외모 설명 글은 AI log도 채점 요소",
+        body: "사람의 외모 설명하기의 평가 요소는 초안 작성, AI log 작성, 어법에 맞는 언어 사용, 주어진 목표 언어 형식에 맞게 쓰기, 통일성 있는 내용 구성입니다. 직전 주인 9월 2주에는 Lesson 6에서 인물을 표현하는 어휘와 관계대명사 문장을 연습합니다.",
+      },
+      {
+        title: "12월 과제는 수업 중 발표 참여",
+        body: "어법활용 문장 표현 연습 및 영어 구술 발표하기는 수업 시간 중 상황에 맞게 영어로 발표하기와 목표 언어를 활용한 글쓰기 연습 참여로 평가하며 성취기준은 [9영01-06]·[9영02-02]입니다. 진도표에서는 11월 4주에 연습이 시작되고 12월 1주에 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심과 내심 두 문항으로 위치를 찾고, 합의 법칙과 곱의 법칙으로 문제를 만듭니다",
+    intro:
+      "대경중학교 2학년 수학은 정기시험 두 번이 30%씩, 수행평가 두 영역이 20%씩입니다. 9월 4주 위치 찾기는 삼각형의 외심과 내심을, 12월 1주 문제 만들기는 경우의 수를 다룹니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "위치 찾기", kind: "task", weight: 20, timing: "9월 4주", method: "논술형 20점" },
+      { name: "경우의 수 문제 만들기", kind: "task", weight: 20, timing: "12월 1주" },
+    ],
+    notes: [
+      {
+        title: "위치 찾기는 외심과 내심 두 문항",
+        body: "평가 요소가 외심을 이용하여 위치 찾기와 내심을 이용하여 위치 찾기로 나뉘며 성취기준은 [9수03-10]입니다. 진도표에는 ‘위치 찾기’의 핵심 탐구 내용을 반영한 논술형 평가로 적혀 있고, 이 과제 20%가 학기 논술형 32% 가운데 가장 큰 몫입니다.",
+      },
+      {
+        title: "문제 만들기는 합의 법칙과 곱의 법칙",
+        body: "경우의 수 문제 만들기는 사건 A 또는 사건 B가 일어나는 경우의 수와, 두 사건이 동시에 일어나는 경우의 수를 구하는 문제를 각각 만드는 과제로 [9수04-05]에 해당합니다. 2차 시험 성취기준에도 [9수04-05]·[9수04-06]이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "기사쓰기는 사실과 견해를 나누고, 정책 제안은 세계 대전 단원에서 합니다",
+    intro:
+      "대경중학교 2학년 역사는 정기시험을 한 번만 보고 50%를 반영하며, 나머지 50%는 역사신문 기사쓰기와 국제 평화 정책 제안 두 수행평가입니다. 정기시험 시기는 반영 비율표(12월 3주)와 진도표(10월 2주)에 다르게 적혀 있어 여기서는 시기를 비워 둡니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 50, method: "선택형 80점(40%)·논술형 20점(10%)" },
+      { name: "역사신문 기사쓰기", kind: "task", weight: 20, timing: "10월 3주~4주" },
+      { name: "국제 평화를 위한 정책 제안", kind: "task", weight: 30, timing: "11월 1주", method: "논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "기사쓰기는 사실과 견해를 나눕니다",
+        body: "역사신문 기사쓰기의 평가 요소는 참신한 제목과 정확한 기사 쓰기, 역사적 사실과 자신의 견해를 구분하여 쓰기, 오류를 포함하지 않은 정확한 기사 쓰기입니다. 성취기준은 제국주의 침략에 대한 아시아의 대응을 다루는 [9역05-03]입니다.",
+      },
+      {
+        title: "정책 제안은 세계 대전 단원",
+        body: "국제 평화를 위한 정책 제안은 새로운 무기와 전쟁 양상 분석, 전쟁의 참상과 느낀 점 논술, 전쟁 없는 세계 평화를 위한 정책 제안으로 채점되며 성취기준은 [9역06-01]·[9역06-02]입니다. 이 과제 30%와 정기시험 논술형 10%를 더해 학기 논술형 비중은 40%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "이온 형성은 그림과 화학식까지 쓰고, 전기 회로는 물의 흐름 모형으로 설명합니다",
+    intro:
+      "대경중학교 2학년 과학은 정기시험 두 번 30%씩, 수행평가 두 과제 20%씩이며 두 과제 모두 1차 시험 앞뒤인 9~10월에 몰려 있습니다. 9월 3주 이온 논술, 10월 4주 전기 회로 설명 순서입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "입자 모형을 활용한 이온의 형성 논술하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형 20점" },
+      { name: "전류, 전압, 저항의 관계 설명하기", kind: "task", weight: 20, timing: "10월 4주", method: "20점" },
+    ],
+    notes: [
+      {
+        title: "이온 과제는 그림과 화학식까지",
+        body: "이온 형성 과정 논술하기, 이온 모형을 그림으로 표현하기, 이온을 화학식으로 표현하기가 평가 요소이며 성취기준은 [9과11-04]입니다. 진도표 9월 3주 칸에는 탐구 과정과 안전 수칙 준수 관찰도 함께 적혀 있습니다.",
+      },
+      {
+        title: "전기 회로는 물의 흐름 모형으로 설명",
+        body: "10월 4주 과제는 전기 회로를 물의 흐름 모형에 비유하여 설명하기, 전압과 전류의 관계, 전구의 직렬·병렬 연결 설명하기로 구성됩니다. 같은 주 진도표에는 저항의 직렬연결과 병렬연결의 특징을 비교하는지 관찰한다는 항목이 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "연설은 계획서·수행·평가 세 단계로 하고, 주장 글은 개요부터 점검합니다",
+    intro:
+      "대경중학교 3학년 국어는 정기시험과 수행평가가 50%씩이고, 수행평가는 연설과 주장하는 글쓰기가 25%씩입니다. 2차 정기시험이 11월 4주로 1·2학년보다 앞당겨져 있으며, 주장하는 글쓰기 시기는 반영 비율표와 진도표가 달라 비워 둡니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "11월 4주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "나의 미래를 담아 연설 수행하기", kind: "task", weight: 25, timing: "10월 3주", method: "25점(논술형 20%)" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 25, method: "논술형 25점" },
+    ],
+    notes: [
+      {
+        title: "연설은 계획서·수행·평가 세 단계",
+        body: "나의 미래를 담아 연설 수행하기의 평가 요소는 연설 계획서 작성하기, 연설 수행하기, 연설 평가하기이며 성취기준은 [9국01-06]·[9국01-07]입니다. 1차 시험 바로 다음 주인 10월 3주에 발표 수행평가로 진행됩니다.",
+      },
+      {
+        title: "주장하는 글은 개요부터 점검",
+        body: "주장하는 글쓰기는 개요 쓰기, 타당한 근거를 들어 주장하기, 적절한 표현으로 글쓰기로 채점되며 성취기준은 [9국03-04]입니다. 반영 비율표의 시기는 10월 5주-11월 2주이지만 진도표에는 10월 4주 개요 체크리스트, 11월 1주 초고 체크리스트가 수행평가 연계로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "1주엔 광고 자료를 모으고 2주엔 문의글을 쓰며, 두 시험의 논술형 배점이 다릅니다",
+    intro:
+      "대경중학교 3학년 영어는 정기시험 70%, 수행평가 30%이고 수행평가는 광고·홍보 자료를 분석해 문의글을 쓰는 한 과제뿐입니다. 이 과제가 9월 1~2주에 끝나 학기 후반은 10월 2주와 11월 4주 두 정기시험이 중심입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 80점(28%)·논술형 20점(7%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 4주", method: "선택형 85점(29.75%)·논술형 15점(5.25%)" },
+      { name: "광고·홍보 자료 분석 및 Q&A 문의글 쓰기", kind: "task", weight: 30, timing: "9월 1주 - 2주", method: "논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "1주는 자료 수집, 2주는 문의글",
+        body: "진도표에서 9월 1주에는 광고 이미지와 문구 분석으로 검증 방법을 익히고 검증할 광고 자료를 모아 제출하며, 9월 2주에는 진위 검증을 위한 질문과 Q&A 문의글을 씁니다. 평가 요소에는 주요 주장·세부 정보 파악, 비판적 분석, 정중한 문의 표현 사용이 들어 있습니다.",
+      },
+      {
+        title: "두 시험의 논술형 배점이 다릅니다",
+        body: "1차 시험은 논술형 20점(7%), 2차 시험은 논술형 15점(5.25%)으로 회차마다 배점이 다릅니다. 수행평가 30%가 모두 논술형이어서 학기 논술형 비중은 42.25%이며, 수행 과제 성취기준은 [9영03-03]·[9영04-03]·[9영04-06]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "수학 일지는 매주 학습일지로 쓰고, 탐구 과제는 1차와 2차 범위를 함께 다룹니다",
+    intro:
+      "대경중학교 3학년 수학은 정기시험 두 번이 35%씩, 수행평가가 탐구 과제 20%와 수학 일지 10%입니다. 1차 시험은 선택형 90점·논술형 10점, 2차 시험은 선택형 80점·논술형 20점으로 회차마다 논술형 배점이 다릅니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 90점(31.5%)·논술형 10점(3.5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 4주", method: "선택형 80점(28%)·논술형 20점(7%)" },
+      { name: "삼각비와 원의 성질 탐구하기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형 20점" },
+      { name: "수학 일지", kind: "task", weight: 10, timing: "8월 3주 - 10월 5주" },
+    ],
+    notes: [
+      {
+        title: "수학 일지는 매주 학습일지",
+        body: "진도표의 8월 3주부터 10월 5주까지 매주 칸에 ‘학습일지 작성하기’가 수행평가 연계로 적혀 있습니다. 일지 평가 요소는 삼각비의 뜻과 성질, 원과 직선의 성질, 원주각의 성질 이해와 원의 성질을 활용한 문제 해결입니다.",
+      },
+      {
+        title: "탐구 과제는 1차와 2차 범위를 함께",
+        body: "10월 5주 삼각비와 원의 성질 탐구하기는 [9수04-17]~[9수04-20]을 묶어 평가합니다. 1차 시험은 삼각비와 그 활용, 2차 시험은 원과 직선·원주각과 대푯값·산포도가 범위이며, 학기 논술형 비중은 30.5%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 논술 프로젝트는 다섯 차례, 역사 제안서는 기대효과까지 쓰며 두 과목 모두 논술형이 50% 이상입니다",
+    intro:
+      "대경중학교 3학년은 사회와 역사를 함께 배우며, 사회는 정기시험 70%·수행평가 30%, 역사는 정기시험 50%·수행평가 50%입니다. 두 과목 모두 2차 정기시험이 11월 4주이고, 수행평가는 9월 안에 대부분 시작됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 60점(21%)·논술형 40점(14%)", course: "사회" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 4주", method: "선택형 60점(21%)·논술형 40점(14%)", course: "사회" },
+      { name: "저출산 해결 방안 논술", kind: "task", weight: 10, timing: "9월 1주", method: "논술형 10점", course: "사회" },
+      { name: "논술 프로젝트", kind: "task", weight: 20, timing: "9월1주, 9월4주, 10월3주, 10월4주, 11월2주", method: "논술형 20점", course: "사회" },
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 80점(20%)·논술형 20점(5%)", course: "역사" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "11월 4주", method: "선택형 80점(20%)·논술형 20점(5%)", course: "역사" },
+      { name: "원 간섭기 정책 제안서 작성하기", kind: "task", weight: 20, timing: "8월 4주-9월 1주", method: "논술형 20점", course: "역사" },
+      { name: "왕권과 신권에 대한 의견 작성하기", kind: "task", weight: 30, timing: "9월 4주", method: "논술형 30점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 논술 프로젝트는 다섯 차례",
+        body: "사회의 논술 프로젝트는 9월 1주·9월 4주·10월 3주·10월 4주·11월 2주에 나뉘어 진행되고, 학습 내용을 기반으로 문제에 대한 자신의 생각을 서술합니다. 9월 1주 저출산 해결 방안 논술은 저출산 현상의 문제점을 파악하고 해결 방안을 쓰는 과제로 [9사(지리)07-03]에 해당합니다.",
+      },
+      {
+        title: "역사 제안서는 기대효과까지 씁니다",
+        body: "원 간섭기 정책 제안서는 정책안 제목, 추진 배경, 정책안 내용, 기대효과를 작성하는 과제([9역09-03])입니다. 9월 4주 왕권과 신권에 대한 의견 작성하기는 3사의 역할과 의미, 단종 시기 정치 상황, 신숙주에 대한 서로 다른 관점 비교와 정치적 선택 평가로 채점됩니다.",
+      },
+      {
+        title: "논술형 비중은 두 과목 모두 50% 이상",
+        body: "반영 비율표의 논술형 합계는 사회 58%, 역사 60%입니다. 사회 정기시험은 회차마다 100점 중 40점이 논술형인 반면, 역사 정기시험은 20점이고 수행평가 50%가 모두 논술형으로 잡혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daegyeong-middle-school-pocheon",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "세포 분열은 단계별로 비교하고, 역학적 에너지 과제는 1차 시험 다음 주에 합니다",
+    intro:
+      "대경중학교 3학년 과학은 정기시험 60%, 수행평가 40%이며 두 수행평가가 9월 1주와 10월 3주에 있습니다. 2차 정기시험은 11월 4주로, 별과 우주 단원까지 범위에 들어갑니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 4주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "체세포 분열과 생식세포 분열과정 비교 분석하기", kind: "task", weight: 20, timing: "9월 1주", method: "20점(논술형 10%)" },
+      { name: "역학적에너지 전환과 보존 상황 분석하기", kind: "task", weight: 20, timing: "10월 3주", method: "20점(논술형 10%)" },
+    ],
+    notes: [
+      {
+        title: "세포 분열 과제는 단계별 비교",
+        body: "평가 요소는 염색체와 유전자의 관계 이해, 체세포 분열과 생식세포 분열 과정을 비교하고 의미를 논술하기이며 성취기준은 [9과21-02]입니다. 진도표 9월 1주 칸은 두 분열의 단계별 특징을 정확히 구분해 비교 분석하는 능력을 평가한다고 적고 있습니다.",
+      },
+      {
+        title: "역학적 에너지 과제는 1차 시험 다음 주",
+        body: "10월 3주 과제는 역학적 에너지의 전환 과정 논술하기와 보존 설명하기로 [9과22-01]에 해당합니다. 반영 비율표에서 두 수행평가는 각 20% 중 10%만 논술형으로 잡혀, 학기 논술형 합계는 32%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대경중학교")],
+  },
+  {
+    schoolSlug: "daejeon-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "9월 주제 통합적 읽기·논증하는 글 20% · 10월 매체 소통 문화 글쓰기 20% · 선택형 시험 60%",
+    intro:
+      "대전고등학교 1학년 공통국어2는 중간·기말고사가 선택형으로 30%씩이고, 서·논술형은 수행평가 두 편(20%씩)에서만 봅니다. 9월 논증하는 글과 10월 매체 소통 문화 글 모두 마지막 단계에 15줄 이상 분량 기준이 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "비판적 사고를 위한 주제 통합적 읽기와 논증하는 글 쓰기", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+      { name: "바람직한 매체 소통 문화 조성을 위한 글쓰기", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "지속 가능 발전 목표로 두 글 비교",
+        body: "1단계에서 ‘지속 가능 발전 목표’ 중 하나를 화제로 형식·관점·주제가 다른 글 두 개를 공통점과 차이점 중심으로 비교하고(7점), 평가하지 않는 개요 작성을 거쳐 3단계에서 주장, 이유나 근거 3개 이상, 예상 반론과 반박을 갖춘 논증하는 글을 씁니다(13점).",
+      },
+      {
+        title: "매체 글쓰기는 비판에서 제안으로",
+        body: "가짜 뉴스, 혐오 표현, 악성 댓글 같은 부적절한 매체 자료 사례의 문제점과 원인을 사회·문화적 맥락으로 비판하고(7점), 해결 방안과 긍정적 소통 사례를 담아 바람직한 매체 소통 문화의 방향성을 알리는 글을 씁니다(13점). 범위는 ‘우리말과 매체의 변천’이고 성취기준은 [10공국2-06-02]입니다.",
+      },
+      {
+        title: "AI 활용은 준비 단계에서만",
+        body: "두 과제 모두 평가하지 않는 준비 단계에서만 AI 포함 인터넷 검색이 허용되고, 채점 단계는 활동지 수기 기입이나 배포된 문서 접속만 가능합니다. 기본점수는 8점이며 대상은 1학년 1~12반 전체입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전고등학교")],
+  },
+  {
+    schoolSlug: "daejeon-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "11월 명제 증명 서·논술 20% · 12월 함수 탐구 글쓰기 20% · 시험마다 단답형 20점",
+    intro:
+      "대전고등학교 1학년 공통수학2는 중간·기말고사가 30%씩이고 회차마다 선택형 80점과 단답형 20점으로 출제됩니다. 수행평가는 11월 명제 증명과 12월 함수 탐구가 20%씩이며, 둘 다 서·논술형입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 80점 · 단답형 20점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 80점 · 단답형 20점" },
+      { name: "명제 증명을 통한 논리적 추론 역량 기르기", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점" },
+      { name: "함수 탐구를 통한 실생활 문제 해결 역량 기르기", kind: "task", weight: 20, timing: "12월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "명제 증명은 세 단계",
+        body: "명제 단원 용어 4개의 정의(4점), 귀류법을 이용한 명제의 증명(8점), 대우명제를 이용한 명제의 증명(8점)으로 채점합니다. 수학 기호 사용이 미흡하면 협의회 판단을 거쳐 전체 점수에서 0.5점을 한 번 감점합니다.",
+      },
+      {
+        title: "함수 탐구에는 분량 기준",
+        body: "함수와 그래프 활용에 대한 탐구 주제와 선정 동기(3점), 주제와 관련된 공통수학2 내용(5점), 식이나 그래프를 포함한 탐구 내용 500자 이상(9점), 탐구 후 느낀 점 200자 이상(3점)을 씁니다. 이 과제는 AI 포함 인터넷 활용이 금지됩니다.",
+      },
+      {
+        title: "성취기준 범위",
+        body: "명제 과제는 [10공수2-02-04]~[10공수2-02-07](명제와 조건, 역과 대우, 충분·필요조건, 대우와 귀류법), 함수 과제는 함수·합성함수·역함수를 다루는 [10공수2-03-01]~[10공수2-03-03]입니다. 대상은 1학년 1~12반 전체입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전고등학교")],
+  },
+  {
+    schoolSlug: "daejeon-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "9~11월 AI 기술 쟁점 찬반 의견 발표 25% · 10월 듣기 자료 중심 내용 쓰기 15% · 시험 60%",
+    intro:
+      "대전고등학교 1학년 공통영어2는 중간·기말고사 30%씩에, AI 기술 쟁점 찬반 의견 표현 25%와 영어 듣기 자료 쓰기 15%가 수행평가입니다. 찬반 과제는 9월부터 11월까지 의견 작성, 낭독, 최종 발표 세 단계로 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "AI 기술 쟁점을 주제로 찬반 의견 영어로 표현하기", kind: "task", weight: 25, timing: "9~11월", method: "서·논술형, 구술·발표 25점" },
+      { name: "영어 듣기 자료의 주제 및 중심 내용 쓰기", kind: "task", weight: 15, timing: "10월", method: "서·논술형 15점" },
+    ],
+    notes: [
+      {
+        title: "찬반 과제 단계별 배점",
+        body: "1단계에서 서론·근거 2개·결론 구조의 의견을 150단어 이상 쓰면 5점, 2단계에서 대본 전체를 85 WPM 이상으로 완독하면 5점, 3단계 최종 발표가 유창성·완성도·태도(동료 평가지 3개 제출) 각 5점으로 15점입니다. 발표 대본은 80~100단어로 구성합니다.",
+      },
+      {
+        title: "듣기 15점의 구성",
+        body: "모의고사 듣기 문제 중 임의로 제시되는 15문항을 풀고(5점), 장문 담화 두 개를 듣고 담화마다 질문 세 개에 영어로 답합니다(각 5점, 내용 3점·언어 2점). 서·논술형 반영은 이 과제가 10%, 찬반 과제가 20%입니다.",
+      },
+      {
+        title: "AI 활용과 기본점수",
+        body: "찬반 과제는 1·2단계 준비에서 AI 활용이 가능하지만 3단계 말하기 평가에서는 쓸 수 없습니다. 기본점수는 찬반 과제 10점, 듣기 과제 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전고등학교")],
+  },
+  {
+    schoolSlug: "daejeon-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["한국사2"],
+    summary: "9~10월 독립운동 방법론 논쟁적 글쓰기 20% · 11~12월 민주주의를 향한 노력의 길 찾기 20%",
+    intro:
+      "대전고등학교 1학년 한국사2는 중간·기말고사가 30%씩이고, 9~10월 독립운동 방법론 글쓰기와 11~12월 민주화 운동 글쓰기가 서·논술형 20%씩입니다. 두 과제 모두 단계별로 나눠 개별 평가합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "독립운동 방법론에 대한 논쟁적 글쓰기", kind: "task", weight: 20, timing: "9~10월", method: "서·논술형 20점" },
+      { name: "민주주의를 향한 노력의 길 찾기", kind: "task", weight: 20, timing: "11~12월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "SNS 가상 대화가 들어간 글쓰기",
+        body: "3·1 운동 이후 독립운동 노선 4개 구분, 독립운동가별 주장과 근거 4개 정리, 역사적 상상력·감정이입이 드러나는 SNS 가상 대화 발언 4개, 독립운동 방법론 평가를 바탕으로 한 의견 개진을 각 5점으로 1차시에 평가합니다([10한사2-01-03]).",
+      },
+      {
+        title: "민주화 운동 하나를 골라 쓰기",
+        body: "4·19, 5·18, 6월 민주항쟁 중 하나를 골라 배경·원인·과정·결과 정리(6점), 글쓰기 제목 설정(4점), 서론·본론·결론 형식(4점), 역사적 교훈과 각오의 논리적 연결(6점)을 2차시에 걸쳐 평가합니다([10한사2-02-03]).",
+      },
+      {
+        title: "공통 조건",
+        body: "두 과제 모두 AI 포함 인터넷을 활용하지 않으며 기본점수는 8점입니다. 한국사2는 1학년 1~12반 전체가 대상입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전고등학교")],
+  },
+  {
+    schoolSlug: "daejeon-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["확률과 통계"],
+    summary: "확률이 쓰인 뉴스를 골라 300자 이상 분석하고, 표본평균·모비율로 실생활 탐구를 설계합니다",
+    intro:
+      "대전고등학교 2학년 확률과 통계는 2학년 1~12반 전체가 듣는 과목으로, 중간·기말고사 30%씩(회차마다 선택형 80점·단답형 20점)과 문헌을 바탕으로 한 탐구 수행평가 두 개(20%씩)로 구성됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 80점 · 단답형 20점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 80점 · 단답형 20점" },
+      { name: "확률의 이해를 위한 뉴스·문헌 탐구", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+      { name: "모집단과 표본으로 실생활 적용 및 심화 탐구", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "뉴스·문헌 탐구 두 단계",
+        body: "1단계는 확률 개념이 쓰인 뉴스 기사나 문헌의 제목·발행 날짜, 선택 이유, 교과서 내용과의 연결성(10점), 2단계는 내용 요약과 확률 개념으로 한 분석을 공백 제외 300자 이상(10점)으로 씁니다([12확통02-01]).",
+      },
+      {
+        title: "모집단과 표본 탐구",
+        body: "표본평균·모평균·표본비율·모비율을 활용하는 탐구를 설계하고(주제와 이유, 참고 문헌, 관련 중단원명 10점), 실생활 적용 사례나 심화 이론과 느낀 점을 300자 이상 서술합니다(10점, [12확통03-05]).",
+      },
+      {
+        title: "AI 활용 범위",
+        body: "두 과제 모두 1단계는 AI 포함 인터넷 검색이 가능하고, 2단계는 배부된 활동지에 직접 수기로 기입합니다. 기본점수는 8점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전고등학교")],
+  },
+  {
+    schoolSlug: "daejeon-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어II"],
+    summary: "인터뷰지는 질문 세 문장·답변 여섯 문장 이상이고, 듣기는 모의고사 15문항과 받아쓰기 5개입니다",
+    intro:
+      "대전고등학교 2학년 영어II는 중간·기말고사 30%씩에 수행평가 세 개(25%·10%·5%)가 붙습니다. 중심은 도서나 기사의 저자·기자를 상대로 한 가상 인터뷰지 작성(25%)이고, 10~11월에는 인터뷰를 직접 실연합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "Virtual English Interview 작성을 통한 영어 표현 능력 기르기", kind: "task", weight: 25, timing: "10월", method: "서·논술형 25점" },
+      { name: "영어 듣기 능력 키우기", kind: "task", weight: 10, timing: "9월", method: "교사 관찰 및 기록, 기타 10점" },
+      { name: "가상 인터뷰 실연하기", kind: "task", weight: 5, timing: "10월~11월", method: "서·논술형 5점" },
+    ],
+    notes: [
+      {
+        title: "인터뷰지의 문장 수 기준",
+        body: "인터뷰 소개 세 문장 이상(5점), 질문 세 문장 이상(7점), 논리적 근거를 갖춘 답변 여섯 문장 이상(10점), 개인 성찰 두 문장 이상(3점)이며, 한 문장은 기본 구조와 어순을 지킨 10단어 이상이어야 합니다. 범위는 Lesson 3 Reading, Writing입니다.",
+      },
+      {
+        title: "듣기와 받아쓰기",
+        body: "2024·2025년 모의고사 듣기 문제 중 임의로 제시되는 15문항(5점)과 빈칸 단어 5개 받아쓰기(5점)로 10점이며, 서·논술형 반영은 0%입니다. 진도표에는 9월 칸에 두 번 표시되어 있습니다.",
+      },
+      {
+        title: "실연 5점",
+        body: "스크립트 제출 2점, 유창성과 정확성을 갖춘 인터뷰 실연 3점입니다. 평가표의 서·논술형 학기말 반영 30%는 인터뷰지 25%와 실연 5%로 이루어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전고등학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "개요표와 표현 방법 2가지에 친구 글 댓글 3개까지 보고, 매체 추천 보고서는 근거 2개 이상씩 씁니다",
+    intro:
+      "대전중학교 1학년 국어는 9월 중간시험과 12월 기말시험이 30%씩, 서·논술형 글쓰기 두 과제가 20%씩입니다. 10월 정서 표현 글쓰기와 11월 매체 소개 보고서는 모두 AI를 활용하지 않는 과제이고, 평가표상 각각 3회에 걸쳐 진행됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "정서를 표현하는 글쓰기", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점 · 3회" },
+      { name: "다양한 매체 소개하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점 · 3회" },
+    ],
+    notes: [
+      {
+        title: "정서 표현 글쓰기는 네 항목 5점씩",
+        body: "내용의 진실성(글감을 구체화하는 내용 5~6가지면 5점), 구성의 적절성(세 조건에 맞춘 개요표), 표현의 적절성(표현 방법 2가지 이상 활용), 소통하는 글쓰기(친구 글에 감상 댓글 3개 이상)를 5점씩 봅니다. 성취기준은 [9국05-03]과 [9국03-05]입니다.",
+      },
+      {
+        title: "매체 소개는 추천 보고서",
+        body: "‘나’의 성장에 긍정적인 영향을 준 대중 매체와 개인 인터넷 방송을 골라 분석하고 추천 보고서를 씁니다. 인쇄 매체 콘텐츠, 영상 매체 콘텐츠, 개인 인터넷 방송 채널을 각각 추천 근거 2개 이상으로 소개하면 5점씩이고, 매체 관련 경험담 3가지를 쓴 활동지가 5점입니다([9국06-01]).",
+      },
+      {
+        title: "시험 날짜와 기본점수",
+        body: "중간시험은 9월 21~22일, 1·2학년 기말시험은 12월 14~16일이며 정기시험은 선택형 문항으로 출제합니다. 수업에 참여했지만 결과물을 내지 않으면 기본점수 6점, 장기 미인정 결석은 5점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "동위각·엇각과 합동 조건을 묻는 네 문항, 내각·외각의 합과 대각선 개수를 묻는 네 문항입니다",
+    intro:
+      "대전중학교 1학년 수학은 도형 단원 서·논술형 두 과제가 20%씩이고 중간·기말시험이 30%씩입니다. 두 과제 모두 5점짜리 문항 네 개로 채점되며, 문항마다 평가 요소를 몇 개 갖췄는지에 따라 5~2점이 매겨집니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "평행선의 성질 및 삼각형의 합동 조건 찾기", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점" },
+      { name: "다각형의 성질 문제해결하기", kind: "task", weight: 20, method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "평행선·합동 과제의 네 문항",
+        body: "평행선의 성질 두 문항(동위각·엇각의 성질 찾기, 각의 크기 구하기)과 삼각형의 합동 두 문항(합동 조건 찾기, 기호로 나타내기, 변의 길이나 각의 크기 구하기)이 각 5점입니다. 성취기준은 [9수03-02], [9수03-04]이고 AI 활용은 금지됩니다.",
+      },
+      {
+        title: "다각형 과제와 시기 표기",
+        body: "다각형의 성질 문제해결하기는 내각·외각 크기의 합 두 문항과 n각형 대각선 개수 두 문항으로 20점입니다([9수03-05]). 평가 시기가 평가표에는 10~11월, 진도표에는 10월로 적혀 있습니다.",
+      },
+      {
+        title: "정기시험 일정",
+        body: "중간시험은 9월 21~22일로 도형 과제보다 먼저 있고, 기말시험은 12월 14~16일입니다. 두 수행평가 모두 미제출 시 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "담화 상황 6개 중 3개로 인터뷰하고, 감상문은 that절과 수여동사를 조건대로 넣어야 합니다",
+    intro:
+      "대전중학교 1학년 영어는 수행평가 50%가 듣고 말하기 20%와 읽고 쓰기 30%로 나뉘고, 중간·기말시험은 25%씩입니다. 말하기는 담화 상황을 골라 영어로 답하는 인터뷰, 쓰기는 핵심 문법을 넣은 영어 독서 감상문입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 25, timing: "12월", method: "선택형" },
+      { name: "듣고 말하기", kind: "task", weight: 20, method: "구술·발표, 면접평가 20점" },
+      { name: "읽고 쓰기", kind: "task", weight: 30, method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "인터뷰 점수 계산법",
+        body: "제시된 담화 상황 6개 중 3개를 무작위로 선택해 인터뷰하며, 문항마다 정확성 3점·내용 3점(6점×3문항)에 추가점수 2점을 더해 20점입니다. 진도표에는 원어민교사와의 인터뷰로 9월 칸에, 평가표에는 9월~10월로 적혀 있습니다.",
+      },
+      {
+        title: "감상문의 세 채점 요소",
+        body: "독서 감상문은 정확성 12점(문법·철자 오류 0~1회면 만점), 내용 12점(5~6문장이 모두 주제에 맞으면 만점), 핵심문법 6점(that절과 수여동사를 조건에 맞게 모두 사용)입니다. 평가표 시기는 10월~11월, 진도표 표시는 10월입니다.",
+      },
+      {
+        title: "기본점수와 시험 일정",
+        body: "두 과제 모두 수업에 참여했으나 수행하지 않으면 기본점수 7점이고 AI 사용은 금지됩니다. 중간시험은 9월 21~22일, 기말시험은 12월 14~16일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "4컷 학습만화로 상태변화를 그리고, 부력이 작용하기 전후 물체의 무게를 잽니다",
+    intro:
+      "대전중학교 1학년 과학은 상태변화 단원을 4컷 학습만화로 서술하는 과제와 부력 실험이 20%씩이고, 중간·기말시험이 30%씩입니다. 두 과제 모두 AI를 포함한 인터넷 활용이 금지됩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "물질의 상태변화 학습만화 제작", kind: "task", weight: 20, method: "서·논술형 20점" },
+      { name: "부력 실험", kind: "task", weight: 20, method: "실험형, 서·논술형, 보고서 20점" },
+    ],
+    notes: [
+      {
+        title: "4컷 학습만화 채점",
+        body: "성실도 8점(4컷 중 3~4컷을 성의 있는 그림과 글로 표현), 내용 충실도 7점(3~4컷에 상태변화 관련 20글자 이상 글 포함), 정확성 5점(4컷 모두 과학적 오류 없음)입니다. 관련 성취기준은 [9과04-01]~[9과04-04]입니다.",
+      },
+      {
+        title: "부력 실험은 무게 측정",
+        body: "부력이 작용하기 전과 후 물체의 무게를 측정하는 과제로, 실험도구 사용과 안전수칙 준수 8점, 두 무게의 정확한 기록 7점, 결과 분석과 부력 개념으로 주변 현상 해석 5점입니다([9과05-02]).",
+      },
+      {
+        title: "과제 시기는 표마다 다르게 적혀 있습니다",
+        body: "평가표는 학습만화를 9월~10월, 부력 실험을 10월~11월로 적었지만 진도표에는 각각 9월과 10월에 표시되어 있습니다. 중간시험은 9월 21~22일, 기말시험은 12월 14~16일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "아메리카의 문화 혼종성과 공존 방안, 태평양 환경 문제와 세계시민 의식을 다룹니다",
+    intro:
+      "대전중학교 1학년 사회는 지리 단원 서·논술형 두 과제가 20%씩이고, 9월 중간시험과 12월 기말시험이 30%씩입니다. 두 과제가 모두 8~9월 학기 초에 있어 중간시험과 준비 기간이 겹칩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "아메리카 다문화 박물관 전시 기획", kind: "task", weight: 20, method: "서·논술형 20점" },
+      { name: "태평양 구출 캠페인 계획서 작성", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "박물관 전시 기획의 배점",
+        body: "아메리카의 인구 특징과 역사적 배경 6점, 문화 혼종성 사례와 문화 요소의 융합 원리 6점, 새로운 문화로 인한 영향과 존중·공존 방안 8점입니다([9사(지리)05-02]). 평가표 시기는 8월~9월이고 진도표에는 8월 수업 칸에 표시되어 있습니다.",
+      },
+      {
+        title: "태평양 캠페인 계획서",
+        body: "태평양 환경 문제 사례와 지구 전체에 미치는 영향 6점, 국제 사회 차원의 노력과 개인 실천 방안 6점, 지구적 연결과 소비의 반성 두 관점의 세계시민 의식 8점으로 채점합니다([9사(지리)06-02]).",
+      },
+      {
+        title: "공통 조건",
+        body: "두 과제 모두 AI 포함 인터넷 활용이 금지되고, 결과물 미제출 시 기본점수는 6점입니다. 1학년 사회는 주 3시간이며 중간시험은 9월 21~22일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심 2문항을 포함한 네 문항, 닮음 조건과 무게중심 네 문항을 5점씩 봅니다",
+    intro:
+      "대전중학교 2학년 수학 수행평가는 삼각형·사각형의 성질(9월)과 도형의 닮음(10월) 서·논술형 두 과제로 20%씩이며, 중간·기말시험이 30%씩입니다. 두 과제 모두 조건 제시, 논리적인 풀이 과정, 적절한 답안을 문항별로 확인합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "도형의 성질 문제해결하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+      { name: "도형의 닮음 문제해결하기", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "도형의 성질 과제 구성",
+        body: "직각삼각형의 합동 조건 1문항, 삼각형의 외심과 내심 2문항, 사각형의 성질 1문항을 각 5점으로 채점합니다. 성취기준은 [9수03-09]~[9수03-11]이며 삼각형과 사각형의 성질 문제를 풀고 과정을 기록하는 과제입니다.",
+      },
+      {
+        title: "닮음 과제에는 무게중심 포함",
+        body: "삼각형의 닮음 조건 2문항과 삼각형의 무게중심 2문항이 각 5점입니다. 함께 적힌 성취기준은 [9수03-13] 삼각형의 닮음 조건, [9수03-14] 평행선 사이 선분의 길이의 비입니다.",
+      },
+      {
+        title: "일정과 기본점수",
+        body: "도형의 성질 과제는 중간시험(9월 21~22일)과 같은 달에 있고, 기말시험은 12월 14~16일입니다. 미제출 시 기본점수 6점, 장기 미인정 결석은 5점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "이온의 이동 방향을 기록하는 실험, 영양소의 소화 장소와 효소·흡수 기관을 쓰는 보고서입니다",
+    intro:
+      "대전중학교 2학년 과학은 이온 이동 실험과 음식물의 소화 보고서가 20%씩, 중간·기말시험이 30%씩입니다. 실험 과제는 물질 단원에서, 보고서 과제는 소화계 단원에서 나옵니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "이온 이동 실험", kind: "task", weight: 20, method: "실험형, 서·논술형, 보고서 20점" },
+      { name: "음식물의 소화 보고서 작성하기", kind: "task", weight: 20, timing: "10월", method: "서·논술형, 보고서 20점" },
+    ],
+    notes: [
+      {
+        title: "이온 이동 실험 채점",
+        body: "이온 이동 실험을 설계하고 결과를 해석하는 과제로, 도구 사용과 안전수칙 8점, 두 가지 이온의 이동 방향 기록 7점, 결과 분석과 이온 개념으로 주변 현상 해석 5점입니다([9과11-04]). 시기는 평가표에 9월~10월, 진도표에 9월로 적혀 있습니다.",
+      },
+      {
+        title: "소화 보고서의 다섯 항목",
+        body: "제시된 음식물의 3대 영양소 파악 3점(교과서 202쪽 내용으로 판단), 소화되는 장소 5점, 그 장소에서 작용하는 소화효소 5점, 최종 소화 형태 3점, 흡수되는 곳(암죽관 또는 모세혈관) 4점입니다([9과13-01]).",
+      },
+      {
+        title: "보고서 과제가 실험보다 뒤에",
+        body: "진도표에서 이온 실험은 중간시험(9월 21~22일)이 있는 9월에, 소화 보고서는 10월에 표시되어 있어 두 과제가 시험 전후로 갈립니다. 인터넷과 AI는 두 과제 어디에서도 쓸 수 없고, 결과물을 내지 않으면 7점을 받습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "제국주의가 현대에 미친 영향을 다섯 질문으로 발표하고, 탐구학습 노트를 스스로 정리합니다",
+    intro:
+      "대전중학교 2학년 사회 영역은 역사로, 중간·기말시험 30%씩에 역사 탐구 발표와 탐구과제 해결이 20%씩입니다. 탐구과제 해결은 진도표 10월과 11월 칸에 모두 표시된 2회 과제입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "역사 탐구 발표", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+      { name: "탐구과제 해결", kind: "task", weight: 20, timing: "10~11월", method: "서·논술형 20점 · 2회" },
+    ],
+    notes: [
+      {
+        title: "탐구 발표의 논제",
+        body: "논제는 ‘제국주의가 현대 사회에 미친 영향’입니다. 역사적 사실을 근거로 다섯 질문에 모두 답하면 질문 해결 능력 10점, 정확한 이해를 바탕으로 자기 주장을 논리적으로 발표하면 10점입니다([9역05-02]).",
+      },
+      {
+        title: "탐구학습 노트 정리",
+        body: "탐구과제 해결은 탐구학습 노트의 과제를 스스로 정리해 제출하는 것으로, 역사적 사고력(오류 개수에 따라 10~4점)과 역사적 판단력(당시 상황에 비춘 판단과 자기 의견, 10점)으로 봅니다. 성취기준은 시민 혁명, 두 차례 세계 대전, 냉전([9역05-01], [9역06-01], [9역07-01])입니다.",
+      },
+      {
+        title: "AI 금지와 일정",
+        body: "두 과제 모두 AI 활용이 금지되고 미제출 시 기본점수 6점입니다. 중간시험은 9월 21~22일, 기말시험은 12월 14~16일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "허생전의 비판적 의도를 오늘과 비교하고, 이어진문장·안은문장으로 생활 안내문을 씁니다",
+    intro:
+      "대전중학교 3학년 국어는 서·논술형 프로젝트 두 과제가 20%씩이고, 9월 중간시험과 11월 기말시험이 30%씩입니다. 에세이는 ‘허생전’을 현대적 관점에서 재해석하고, 안내문은 이어진문장과 안은문장을 의도적으로 활용해 씁니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형" },
+      { name: "문학 감상 에세이 쓰기", kind: "task", weight: 20, timing: "8~9월", method: "서·논술형, 프로젝트 20점" },
+      { name: "문장의 짜임을 활용한 실생활 안내문 쓰기", kind: "task", weight: 20, timing: "10월", method: "서·논술형, 프로젝트 20점" },
+    ],
+    notes: [
+      {
+        title: "허생전 에세이 채점",
+        body: "사회·문화적 배경 파악 6점(구체적 근거로 2가지 이상 분석), 작가의 비판적 의도 분석 5점, 오늘날 현실과 비교·재해석 5점, 글의 구성과 표현력 4점입니다([9국05-05]). AI 활용은 금지됩니다.",
+      },
+      {
+        title: "안내문 쓰기의 문법 요소",
+        body: "생활 속 세 상황 중 하나를 골라 5~6문장 안내문을 쓰며, 대등·종속적으로 이어진문장 6점, 서로 다른 안긴문장을 포함한 안은문장 2개 6점, 홑문장 나열과 비교한 표현 효과 4점, 구성과 완성도 4점입니다([9국04-06]).",
+      },
+      {
+        title: "3학년 시험 일정",
+        body: "중간시험은 9월 21~22일, 3학년 기말시험은 11월 9~11일입니다. 에세이 과제는 진도표의 8월과 9월 칸에 모두 표시되어 중간시험 전후까지 걸쳐 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "빛의 굴절 문제에 삼각비를 쓰고, 실생활 자료로 평균·분산을 구해 분석 글을 씁니다",
+    intro:
+      "대전중학교 3학년 수학은 수행평가 40%가 세 과제로 나뉩니다. 9월에 삼각비(20%)와 대푯값·산포도(10%) 서·논술형을 보고, 8월~10월 내내 소단원 핵심문제 해결과정을 포트폴리오(10%)로 모으며, 중간·기말시험은 30%씩입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형" },
+      { name: "소단원 핵심문제 해결과정쓰기", kind: "task", weight: 10, timing: "8월~10월", method: "포트폴리오 10점 · 수시" },
+      { name: "대푯값과 산포도 분석하기", kind: "task", weight: 10, timing: "9월", method: "서·논술형 10점" },
+      { name: "삼각비를 활용한 문제해결하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "포트폴리오는 소단원 개수로 채점",
+        body: "소단원 10개 중 핵심문제 해결과정을 정확한 수학적 표현으로 기록한 소단원이 9개 이상이면 10점, 8개면 9점처럼 하나 줄 때마다 1점씩 내려가고 3개 이하는 4점입니다. 미제출 시 기본점수는 3점입니다.",
+      },
+      {
+        title: "삼각비 과제 20점의 구성",
+        body: "길이 구하기 5점, 넓이 구하기(30°·45°·60° 삼각비의 값) 5점, 빛의 굴절에 관한 문제(굴절률, 굴절각의 크기) 10점이며, 삼각비의 표를 보고 값을 구하는 요소가 여러 문항에 들어갑니다([9수04-18]).",
+      },
+      {
+        title: "대푯값·산포도 과제",
+        body: "실생활 자료에서 평균·중앙값(대푯값 5점)과 분산·표준편차(산포도 5점)를 구하고 통계적으로 분석한 글을 씁니다([9수05-06], [9수05-07]). 3학년 기말시험은 11월 9~11일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "에너지 실험은 개념 적용이 12점이고, 과학3 5~7단원 기술의 유용성과 부작용을 씁니다",
+    intro:
+      "대전중학교 3학년 과학은 수행평가가 60%로 1·2학년(40%)보다 크고, 중간·기말시험은 20%씩입니다. 9월 에너지 실험 보고서와 10월 과학 기술 분석 글이 30%씩입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 20, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 20, timing: "11월", method: "선택형" },
+      { name: "에너지 전환과 보존 탐구하기", kind: "task", weight: 30, timing: "9월", method: "실험·실습형, 서·논술형, 보고서 30점" },
+      { name: "과학 기술 유용성 분석하기", kind: "task", weight: 30, timing: "10월", method: "서·논술형, 보고서 30점" },
+    ],
+    notes: [
+      {
+        title: "에너지 실험 보고서 배점",
+        body: "과학적 태도(안전 수칙) 3점, 실험 과정 6점, 결론 도출 9점, 개념 적용 12점입니다. 개념 적용에서는 제시된 상황의 에너지 크기를 비교하고, 실험 결과를 토대로 에너지 보존 법칙을 오류 없이 설명하는지 봅니다([9과22-01]).",
+      },
+      {
+        title: "과학 기술 유용성 글",
+        body: "과학3 5~7단원 안에서 주제를 고르고 이유를 밝히면 9점, 선정한 기술의 발달 과정과 유용성·부작용 설명이 12점, 활용 방안에 대한 의견과 미래 사회 모습 예측이 9점입니다.",
+      },
+      {
+        title: "기본점수와 일정",
+        body: "두 과제 모두 AI를 활용하지 않으며 미제출 시 기본점수는 11점입니다. 중간시험은 9월 21~22일, 3학년 기말시험은 11월 9~11일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeon-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "편지는 가정법 과거·대과거가 6점이고, 개학 직후 원어민교사와 인터뷰를 합니다",
+    intro:
+      "대전중학교 3학년 영어의 쓰기 과제는 존경하는 인물에게 영어로 편지를 쓰는 것이고, 가정법 과거와 대과거를 넣어야 핵심문법 점수를 모두 받습니다. 학기 성적은 시험 두 번 25%씩, 인터뷰 20%, 편지 30%로 나뉘며 3학년 기말시험은 11월 9~11일입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "9월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 25, timing: "11월", method: "선택형" },
+      { name: "듣고 말하기", kind: "task", weight: 20, method: "구술·발표, 면접평가 20점" },
+      { name: "읽고 쓰기", kind: "task", weight: 30, method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "편지 30점 안의 비중",
+        body: "정확성과 내용이 12점씩으로 편지 점수의 대부분을 차지하고, 가정법 과거·대과거 사용 여부는 6점입니다. 철자·문법 오류가 6회 이상이면 정확성은 3점까지 내려가며, 성취기준은 문장 묘사·경험 쓰기·짧은 글쓰기([9영04-01], [9영04-04], [9영04-05])입니다.",
+      },
+      {
+        title: "인터뷰가 진도표에서 먼저 나옵니다",
+        body: "진도표는 개학 직후 8/9월 칸에 원어민교사와의 인터뷰를 적었고, 평가표는 이 과제를 9~10월로 잡았습니다. 6개 담화 상황 가운데 3개를 골라 답하며 3학년 성취기준은 세부 정보 파악과 의견·감정 표현, 방법과 절차 설명입니다.",
+      },
+      {
+        title: "편지 시기와 미수행 처리",
+        body: "편지 쓰기는 진도표 10월 칸, 평가표 10~11월로 서로 다르게 적혀 있습니다. 중간시험은 9월 21~22일이고, 과제를 하지 않은 경우의 기본점수는 7점(장기 미인정 결석 6점)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "인간의 성장을 다룬 책을 골라 줄거리를 요약하고, 추천 이유 세 가지와 느낀 점을 담아 보고서로 냅니다",
+    intro:
+      "대전봉우중학교 1학년 국어는 중간·기말시험 35%씩과 8~9월 ‘독서 결과물 보고서’ 30%입니다. 서술형 평가는 수행평가에서 하므로 정기시험에서는 서술형을 내지 않는다고 평가 방침에 적혀 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "독서 결과물 보고서", kind: "task", weight: 30, timing: "8~9월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "보고서의 세 평가 요소",
+        body: "책의 핵심 내용이 드러나게 정해진 분량으로 줄거리를 요약하는 항목, 책을 추천하는 이유 3가지를 구체적으로 쓰는 항목, 그리고 책을 통해 성장한 점·책 광고·등장인물이나 작가에게 편지·기억에 남는 내용과 느낀 점 4가지를 담는 결과물 항목으로 나뉩니다.",
+      },
+      {
+        title: "인간의 성장을 다룬 작품",
+        body: "성취기준은 인간의 성장을 다룬 작품을 읽으며 문학의 가치를 내면화하는 [9국05-03]이고, 진도표에는 8월과 9월에 수행평가로 표시됩니다. 기본점수는 9점, 장기 미인정 결석자는 8점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "문항마다 풀이 과정과 정답을 함께 보는 탐구 과제이며, 기본점수는 11점입니다",
+    intro:
+      "대전봉우중학교 1학년 수학은 중간·기말시험 35%씩에 10월 ‘서술형 문제해결 탐구’ 한 영역(30%)이 붙습니다. 정비례·반비례부터 평행선, 삼각형의 합동, 부채꼴까지 여섯 문항을 풀이 과정과 정답 두 요소로 채점합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "서술형 문제해결 탐구", kind: "task", weight: 30, timing: "10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "문항마다 풀이 과정과 정답",
+        body: "정비례 그래프, 반비례 그래프, 평행선의 성질, 삼각형의 합동조건, 부채꼴의 호의 길이, 부채꼴의 넓이가 5점씩입니다. 풀이 과정과 정답이 모두 맞으면 5점, 둘 중 하나에 오류가 있으면 4점 또는 3점, 둘 다 틀리면 2점입니다.",
+      },
+      {
+        title: "기본점수 11점",
+        body: "수업에 참여했으나 백지를 내거나 제출하지 않으면 11점, 장기 미인정 결석자는 10점입니다. 성취기준은 [9수02-07]·[9수03-02]·[9수03-04]·[9수03-06]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "인터뷰 유창성은 네 가지로 보고, 문법을 살린 글은 7문장을 채우면 20점입니다",
+    intro:
+      "대전봉우중학교 1학년 영어 수행평가는 영어인터뷰와 문법 활용 글쓰기가 20점씩이고, 9~10월에 실시합니다. 두 과제 표시는 10월 진도인 Lesson 7 'Think Big, Be Creative!'와 그 앞 단원에 함께 적혀 있으며, 앞 단원에는 비교급·접속사 when 언어형식 연습이 들어 있습니다. 5지 선다형 중간·기말시험은 30%씩입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "영어인터뷰", kind: "task", weight: 20, timing: "9~10월", method: "서·논술, 구술 20점" },
+      { name: "문법 활용 글쓰기", kind: "task", weight: 20, timing: "9~10월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "인터뷰 20점의 배분",
+        body: "사전 구상지 질문의 세부정보를 담는 내용 작성 8점, 어휘·표현·언어형식의 언어 사용 8점, 유창성 4점입니다. 유창성은 발화 속도·발음·억양·연음 네 가지를 모두 갖추면 4점, 하나 이하면 1점입니다. 1학년 인터뷰 성취기준은 연음 식별과 사실적 정보·경험 설명을 다루는 [9영01-01]·[9영02-01]·[9영02-03]·[9영02-04]입니다.",
+      },
+      {
+        title: "일기·편지·이메일 쓰기 기준",
+        body: "문법 활용 글쓰기의 성취기준에는 간단한 일기·편지·이메일 쓰기 [9영02-08]과 상황에 맞게 쓰기 [9영02-10]이 들어 있습니다. 철자·어법·의미 전달·주어진 조건을 모두 지킨 문장이 7개면 20점이고 6개 18점, 5개 16점 순서로 낮아지며, 백지나 미제출은 기본점수 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "문화의 속성 5가지, 이해 태도 3가지, 바람직한 태도 논술이 10점씩입니다",
+    intro:
+      "대전봉우중학교 1학년 사회는 중간·기말시험 35%씩과 8~9월 ‘문화 이해 탐구’ 30%입니다. 문화의 의미와 특징, 문화를 이해하는 바람직한 태도를 다루는 [9사(일사)02-01]·[9사(일사)02-03]을 서·논술로 평가합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "문화 이해 탐구", kind: "task", weight: 30, timing: "8~9월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "세 요소가 10점씩",
+        body: "문화의 속성 5가지 서술, 문화 이해 태도 3가지 서술, 바람직한 문화 이해 태도 3가지 논술이 각 10점입니다. 각 요소는 개수를 맞힌 정도(5점)와 내용의 충실성·용어 사용의 정확성·논리성(5점)으로 나눠 채점합니다.",
+      },
+      {
+        title: "Ⅷ단원을 마치며 보는 과제",
+        body: "진도표에서 과제는 Ⅷ단원 '다양한 문화의 이해'의 문화의 의미와 특징, 미디어와 문화, 문화를 이해하는 태도 차시 뒤에 적혀 있습니다. 수업에는 참여했으나 백지를 내거나 제출하지 않으면 기본점수 11점, 장기 미인정 결석자는 10점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "탄성력 실험은 네 단계로 진행하고, 태양계 행성은 기준 세 가지로 나눠 봅니다",
+    intro:
+      "대전봉우중학교 1학년 과학은 중간·기말시험 30%씩과 수행평가 두 영역 20%씩입니다. 8~9월에는 힘 센서로 용수철의 탄성력을 재는 실험·서·논술 과제가, 9~10월에는 태양계 행성을 두 집단으로 분류하는 서·논술 과제가 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "용수철의 탄성력 측정", kind: "task", weight: 20, timing: "8~9월", method: "실험·실습, 서·논술 20점" },
+      { name: "태양계 행성 분류", kind: "task", weight: 20, timing: "9~10월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "탄성력 실험의 네 단계",
+        body: "늘어난 길이와 힘 센서 측정값 표기, 그래프의 축 제목·단위·눈금과 점·선 표현, 힘 센서에 작용하는 힘과 힘의 평형·길이와 탄성력의 관계 서술, 탄성력 크기 계산·방향·일상생활의 예로 이어집니다. 성취기준은 [9과05-02]입니다.",
+      },
+      {
+        title: "행성 분류 기준 세 가지",
+        body: "행성의 물리적인 값을 막대그래프로 나타내 두 집단으로 나누고 특징을 서술한 뒤, 질량·고리의 유무·표면 상태를 기준으로 다시 구분합니다. 두 과제 모두 기본점수는 7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "창제 정신·자음과 모음 원리·우수성을 담고, 사진이나 그림을 2개 이상 넣어 홍보물을 꾸밉니다",
+    intro:
+      "대전봉우중학교 2학년 국어는 중간·기말시험 35%씩과 8월 말 ‘한글 홍보물 제작’ 30%입니다. 국어의 음운 체계와 문자 체계를 다루는 [9국04-01]을 홍보물 형태의 서·논술로 평가합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "한글 홍보물 제작", kind: "task", weight: 30, timing: "8월 말", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "내용 다섯 항목",
+        body: "한글 창제 정신 3가지, 자음의 창제 원리 3가지(예시 포함), 모음의 창제 원리 2가지, 한글의 우수성 2가지, 현대 국어의 자음 체계와 모음 체계를 홍보물에 담아야 합니다.",
+      },
+      {
+        title: "표현 두 항목",
+        body: "내용에 맞는 사진이나 그림 자료를 2개 이상 넣었는지, 창의성과 완성도를 함께 갖췄는지가 표현 영역입니다. 기본점수는 9점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각형 15점, 사각형 10점, 닮음 5점이고 정답만 맞힌 경우에도 감점이 있습니다",
+    intro:
+      "대전봉우중학교 2학년 수학은 중간·기말시험 35%씩과 9월 ‘기하 문제해결 탐구’ 30%입니다. 삼각형의 성질 세 문항, 사각형의 성질 두 문항, 도형의 닮음 한 문항을 서술합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기하 문제해결 탐구", kind: "task", weight: 30, timing: "9월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "삼각형 15점, 사각형 10점, 닮음 5점",
+        body: "삼각형의 성질 (1)~(3), 사각형의 성질 (1)·(2), 도형의 닮음 문항이 각 5점입니다. 성취기준은 이등변삼각형 [9수03-09], 외심과 내심 [9수03-10], 사각형 [9수03-11], 닮음 [9수03-12]입니다.",
+      },
+      {
+        title: "정답만 맞아도 감점",
+        body: "풀이 과정은 맞지만 답이 틀리면 4점, 풀이 과정에 오류가 있지만 답이 맞으면 3점입니다. 백지·미제출은 기본점수 11점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "네 조건을 갖춘 문장 수로 채점하며, 상대방을 배려하는 태도가 주제입니다",
+    intro:
+      "대전봉우중학교 2학년 영어는 1·3학년과 달리 정기시험 70%(중간·기말 35%씩), 수행평가 30%입니다. 수행평가는 10월 ‘문법 활용 글쓰기’ 한 영역입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "문법 활용 글쓰기", kind: "task", weight: 30, timing: "10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "네 조건을 갖춘 문장 수로 채점",
+        body: "철자와 어법 오류가 없고, 의미가 전달되며, 주어진 문법과 조건을 충족한 문장을 7문장 쓰는 것이 기준이고, 조건을 모두 갖춘 문장이 적을수록 점수가 내려갑니다. 기본점수는 6점, 장기 결석자는 5점입니다.",
+      },
+      {
+        title: "상대방을 배려하는 태도",
+        body: "성취기준에 사실적 정보·경험과 계획 설명 [9영02-03]·[9영02-04], 상황과 목적에 맞는 쓰기 [9영02-10]과 함께 상대방을 배려하는 태도로 쓰기 [9영02-11]이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "중국 근대화 세 운동의 배경·인물·결과를 맵으로 그리고, 사건 두 개를 골라 해설합니다",
+    intro:
+      "대전봉우중학교 2학년 역사는 중간시험 없이 기말시험 40%와 수행평가 두 영역 30%씩입니다. 세계사 해설 글쓰기의 시기는 반영 비율표에 10월, 진도표에 9월로 표기가 다릅니다.",
+    assessments: [
+      { name: "기말시험", kind: "exam", weight: 40, method: "5지 선다형 100점" },
+      { name: "중국 근대화 운동 마인드맵 만들기", kind: "task", weight: 30, timing: "8월", method: "프로젝트 30점" },
+      { name: "세계사 해설하는 글쓰기", kind: "task", weight: 30, method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "세 운동의 배경·인물·결과·개혁",
+        body: "마인드맵 형태 4점에 태평천국 운동·양무운동·변법자강 운동의 배경·중심인물·결과가 4점씩, 태평천국과 양무운동의 개혁 내용이 4점씩, 변법자강 운동의 개혁 내용이 6점입니다. 기본점수는 12점입니다.",
+      },
+      {
+        title: "해설 글은 사건 두 개",
+        body: "선정한 두 역사적 사건마다 시대적 배경과 전개 과정을 구체적으로 썼는지(5점)와 주제 선정의 타당성(7점)을 보고, 글 전체의 체계성이 6점입니다. 크리스트교 세계부터 제국주의와 아시아의 대응까지 성취기준이 넓게 걸려 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "광합성은 선개념에서 환경요인까지, 영양소 검출은 설계·수행·해석 순으로 봅니다",
+    intro:
+      "대전봉우중학교 2학년 과학은 중간·기말시험 30%씩과 수행평가 두 영역 20%씩인데, 두 수행평가가 모두 8월에 잡혀 있습니다. 광합성 과제는 서·논술, 영양소 검출은 서·논술과 실험·실습을 함께 봅니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "광합성에 영향을 미치는 환경요인", kind: "task", weight: 20, timing: "8월", method: "서·논술 20점" },
+      { name: "영양소 검출", kind: "task", weight: 20, timing: "8월", method: "서·논술, 실험·실습 20점" },
+    ],
+    notes: [
+      {
+        title: "광합성: 선개념에서 환경요인까지",
+        body: "주어진 단어로 광합성 개념을 서술하고, 붙임딱지로 광합성 생각그물을 만든 뒤, 광합성에 영향을 주는 환경요인 6문항을 씁니다. 6문항 중 맞힌 수에 따라 점수가 단계별로 나뉩니다.",
+      },
+      {
+        title: "영양소 검출: 설계·수행·해석",
+        body: "검출 시약과 반응 색, 실험군·대조군과 조작·통제 변인 설계, 홈판에 증류수·미지의 용액·시약 배치, 결과 표 작성과 결론, 영양소가 든 음식물 예시까지 단계별로 채점합니다. 두 과제 모두 기본점수는 7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "단어 2·3·4개로 문장 세 개를 만들고, 다섯 가지 문장을 구사해 글을 씁니다",
+    intro:
+      "대전봉우중학교 3학년 국어는 중간·기말시험 35%씩과 9월 말 ‘다양한 짜임의 문장 활용하기’ 30%입니다. 주어진 단어로 문장을 만들어 성분을 분석하고, 여러 짜임의 문장을 써서 한 편의 글로 엮습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "다양한 짜임의 문장 활용하기", kind: "task", weight: 30, timing: "9월 말", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "단어 2·3·4개로 문장 세 개",
+        body: "주어진 단어 중 2가지, 3가지, 4가지를 활용해 정확한 문장 세 개를 만들고, 완성된 세 문장의 문장 성분을 모두 분석하는 네 항목이 첫 요소입니다.",
+      },
+      {
+        title: "다섯 가지 문장 구사와 글쓰기",
+        body: "홑문장, 종속적으로 이어진 문장, 대등적으로 이어진 문장, 안은 문장을 만들고 안긴 문장의 종류를 밝힌 뒤, 그 문장들을 모두 활용해 주제가 명확하고 통일성 있는 글을 완성합니다. 성취기준은 [9국04-06]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비가 20점, 원이 10점으로 나뉜 기하 풀이 과제입니다",
+    intro:
+      "대전봉우중학교 3학년 수학은 중간·기말시험 35%씩과 10월 ‘기하 문제해결 탐구’ 30%입니다. 삼각비 네 문항과 원 두 문항을 풀이 과정과 정답으로 채점합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점" },
+      { name: "기하 문제해결 탐구", kind: "task", weight: 30, timing: "10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "삼각비 20점, 원 10점",
+        body: "삼각비의 값 (1)·(2), 삼각비의 활용 (1)·(2), 원과 직선, 원주각 문항이 각 5점입니다. 성취기준은 [9수04-17]~[9수04-20]이고, 기본점수는 11점입니다.",
+      },
+      {
+        title: "논리적으로 서술하기 네 갈래",
+        body: "진도표의 과제 설명은 삼각비의 값을 구하는 과정, 삼각비를 활용한 문제, 원과 직선 관련 문제, 원주각 관련 문제의 해결 과정을 논리적으로 서술하기입니다. 채점표는 우수·보통·향상 필요로 나뉘고 풀이와 답이 모두 오류 없어야 우수(5점)이며, 과제는 원주각 단원을 배우는 10월에 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "인터뷰는 사전 구상지에서 출발하고, 글쓰기는 20점에서 6점까지 단계로 매깁니다",
+    intro:
+      "3학년 영어 수행평가는 말하기와 쓰기 한 영역씩, 각 20%입니다. 9월 진도 Lesson 7 'Future Changes through Technology'에 영어인터뷰가, 10월 진도 Lesson 8 'Which Is the Best Way?'에 인터뷰와 문법 활용 글쓰기가 함께 표시되어 있습니다. 중간·기말시험은 5지 선다형 100점 만점으로 30%씩 반영됩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "영어인터뷰", kind: "task", weight: 20, timing: "9~10월", method: "서·논술, 구술 20점" },
+      { name: "문법 활용 글쓰기", kind: "task", weight: 20, timing: "10월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "의견·감정과 방법·절차를 말하기",
+        body: "인터뷰 성취기준은 일상생활에 관한 의견이나 감정 표현 [9영02-02]·[9영04-02]와 방법·절차 설명 [9영02-04]입니다. 채점은 사전 구상지 세부정보 8점, 어휘·언어형식 8점, 발화 속도·발음·억양·연음 4점이며 서·논술과 구술을 함께 봅니다.",
+      },
+      {
+        title: "묘사하고 도표를 설명하는 문장",
+        body: "글쓰기는 주변 대상 묘사 [9영04-01], 그림·사진·도표 설명 [9영04-03], 짧고 간단한 글 [9영04-05] 등을 성취기준으로 둡니다. 네 조건을 모두 갖춘 문장 수에 따라 20점부터 2점 간격으로 매기고, 조건을 갖춘 문장 없이 단어만 쓰면 6점입니다. 장기 미인정 결석자는 3점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "롤러코스터에 에너지 원리를 적용하고, 항상성은 혈당·체온·수분량으로 설명합니다",
+    intro:
+      "대전봉우중학교 3학년 과학은 중간·기말시험 30%씩과 수행평가 두 영역 20%씩입니다. 8~9월 항상성 유지 서술과 9~10월 역학적 에너지 실험이 학기 앞쪽에 이어집니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "기말시험", kind: "exam", weight: 30, method: "5지 선다형 100점" },
+      { name: "역학적 에너지 전환과 보존", kind: "task", weight: 20, timing: "9~10월", method: "실험·실습, 서·논술 20점" },
+      { name: "항상성 유지", kind: "task", weight: 20, timing: "8~9월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "롤러코스터로 적용하는 에너지 실험",
+        body: "위치 에너지와 운동 에너지 공식, 실험 과정과 결과, 두 에너지가 가장 큰 지점, 롤러코스터의 위치·운동 에너지 변화, 물체가 오르내릴 때의 에너지 전환과 보존 법칙 설명으로 채점합니다. 성취기준은 [9과22-01]입니다.",
+      },
+      {
+        title: "항상성은 혈당·체온·수분량",
+        body: "고혈당과 저혈당일 때 이자·간·세포에서 일어나는 과정, 체온 조절, 몸속 수분량 조절을 논리적으로 서술합니다. 호르몬의 기능 조절을 다루는 [9과20-03]이 성취기준이며 기본점수는 7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeonbongu-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "인구 보고서엔 공익 광고 10점, 관광 상품은 2박 3일 일정까지, 역사 해설은 사건 두 개를 고릅니다",
+    intro:
+      "대전봉우중학교 3학년 사회 영역은 사회와 역사 두 과목입니다. 사회는 중간시험 없이 기말시험 40%와 8월·10월 수행평가 30%씩이고, 역사는 중간·기말시험 35%씩에 10월 한국사 해설 글쓰기 30%입니다.",
+    assessments: [
+      { name: "기말시험", kind: "exam", weight: 40, method: "5지 선다형 100점", course: "사회" },
+      { name: "인구 문제 보고서", kind: "task", weight: 30, timing: "8월", method: "서·논술 30점", course: "사회" },
+      { name: "관광 상품 개발하기", kind: "task", weight: 30, timing: "10월", method: "프로젝트 30점", course: "사회" },
+      { name: "중간시험", kind: "exam", weight: 35, method: "5지 선다형 100점", course: "역사" },
+      { name: "기말시험", kind: "exam", weight: 35, method: "5지 선다형 100점", course: "역사" },
+      { name: "한국사 해설하는 글쓰기", kind: "task", weight: 30, timing: "10월", method: "서·논술 30점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "인구 문제 보고서에 공익 광고 10점",
+        body: "선진국(우리나라)과 개발도상국의 인구 문제와 대책을 각각 3가지 이상 쓰면 5점씩(20점)이고, 인구 문제 해결을 위한 공익 광고를 포스터나 만화로 만드는 항목이 10점입니다. 성취기준은 [9사(지리)07-03]입니다.",
+      },
+      {
+        title: "관광 상품은 2박 3일 일정까지",
+        body: "드라마나 영화 촬영지 같은 관광지 개발 사례 10점, 지역 관광 상품 4가지 이상 제시 5점, 2박 3일 여행 일정 5점, 지역 특성을 반영한 홍보자료 10점입니다. 사회 두 과제의 기본점수는 11점입니다.",
+      },
+      {
+        title: "역사 해설 글은 사건 두 개를 골라",
+        body: "선정한 두 사건마다 시대적 배경과 전개 과정을 구체적으로 썼는지 5점, 주제 선정의 타당성 7점이고, 글의 체계성이 6점입니다. 조선의 통치 체제 정비부터 국민 국가 건설 노력까지의 성취기준이 범위입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전봉우중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "수필과 논설문 모두 10점 항목이 두 개이고, 논설문은 서론-본론-결론의 균형까지 봅니다",
+    intro:
+      "대전대성중학교 1학년 국어는 정기시험 60%(중간·기말 각 30%), 수행평가 40%입니다. 수행평가는 10월 수필쓰기와 11월 논설문쓰기이고, 두 과제 모두 서·논술형 20%씩입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "수필쓰기", kind: "task", weight: 20, timing: "10월" },
+      { name: "논설문쓰기", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "두 글쓰기 모두 10점 항목 두 개",
+        body: "수필쓰기는 주제의 독창성 및 성찰 10점과 구성 및 표현 10점, 논설문쓰기는 구성과 완성도 10점과 내용과 표현 10점입니다. 각 항목마다 네 가지 요소 중 몇 개를 만족했는지로 10·8·6·4점을 매깁니다.",
+      },
+      {
+        title: "논설문은 서론-본론-결론 균형까지",
+        body: "논설문 구성 요소에는 서론·본론·결론의 외형적 구조, 문단의 소주제 일관성, 분량 배분의 균형, 결론에서의 답변과 전망이 들어가고, 내용 요소에는 논제의 선명성, 논거의 타당성, 객관적 어조와 개념어, 문장 호응이 있습니다. 기본점수는 만점의 30%인 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "시창작은 형식과 표현 방법이 10점씩이고, 독후감은 도서 소개문 요소를 기준으로 채점합니다",
+    intro:
+      "대전대성중학교 2학년 국어는 정기시험 60%와 수행평가 40%로, 시창작과 독후감이 모두 10~11월에 20%씩 잡혀 있습니다. 진도표에는 10월에 독후감, 11월에 시창작이 놓여 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "시창작", kind: "task", weight: 20, timing: "10~11월" },
+      { name: "독후감", kind: "task", weight: 20, timing: "10~11월" },
+    ],
+    notes: [
+      {
+        title: "시창작은 형식과 표현 방법 10점씩",
+        body: "조건으로 제시한 시의 형식 2가지를 모두 충족하면 10점, 제시된 표현 방법 중 2가지를 쓰면 10점이고, 각 항목은 10·8·6점 세 단계입니다. 성취기준에는 운율·비유·상징을 다루는 [9국05-01]과 매체 자료 제작을 성찰하는 [9국06-04]가 함께 적혀 있습니다.",
+      },
+      {
+        title: "독후감 채점 기준은 도서 소개문 요소",
+        body: "독후감은 내용의 정확성 10점(도서 소개문에 필요한 내용 요소 2가지)과 표현의 적절성 10점(형식 요소 3가지)으로 봅니다. 2학년 국어 수행평가 기본점수는 만점의 40%인 8점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "소개하는 말하기는 3분±10초 안에 하고, 독후감은 도서 선정부터 점수에 넣습니다",
+    intro:
+      "대전대성중학교 3학년 국어는 정기시험과 수행평가가 50%씩으로, 1·2학년보다 수행평가 비중이 큽니다. 소개하는 말하기가 학기 초 8월, 독후감 쓰기가 10월이고 중간·기말시험은 25%씩입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 25, method: "선택형" },
+      { name: "소개하는 말하기", kind: "task", weight: 25, timing: "8월" },
+      { name: "독후감 쓰기", kind: "task", weight: 25, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "말하기는 3분±10초",
+        body: "소개하는 말하기는 소개 이유와 대상의 특성을 담은 내용의 적절성 10점, 비언어적·준언어적 표현을 쓰는 유창성 10점, 시간 준수 5점입니다. 주어진 3분±10초를 지키면 5점이고 20초 이상 벗어나면 감점됩니다.",
+      },
+      {
+        title: "독후감 쓰기는 도서 선정부터 채점",
+        body: "BOOKMATCH 전략을 3가지 이상 활용한 도서 선정 10점, 구성요소를 갖춘 독후감 작성 10점, 독서 일지 3회 이상 작성 5점입니다. 기말시험은 반영 비율 표에 12월, 진도표에 11월로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "정비례·반비례는 표·식·그래프 순서로, 다각형은 육각형·칠각형 내각의 합을 구합니다",
+    intro:
+      "대전대성중학교 1학년 수학은 10월 중간시험과 12월 기말시험이 30%씩이고, 서·논술형 수행평가 두 영역이 20%씩입니다. 정기시험은 선택형으로만 출제합니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "정비례와 반비례 탐구", kind: "task", weight: 20, timing: "9월" },
+      { name: "다각형의 내각의 크기의 합 탐구", kind: "task", weight: 20, timing: "10월~11월" },
+    ],
+    notes: [
+      {
+        title: "정비례·반비례는 표·식·그래프 순서",
+        body: "두 변수 관계를 표로 나타내기 4점, 식으로 나타내기 4점, A와 B의 그래프 그리기(점 표시 3점·그래프 2점), 정비례·반비례 판단과 이유 3점, 실생활 상황에서 조건에 맞는 위치 구하기 4점으로 20점입니다.",
+      },
+      {
+        title: "육각형·칠각형 내각의 합",
+        body: "다각형 과제는 선택한 방법으로 육각형을 삼각형으로 분할하기 6점, 육각형 내각의 합을 구하는 과정 7점, 칠각형 내각의 합을 구하는 과정 7점입니다. 성취기준은 [9수03-05]이고 진도표에는 10월 중간시험과 같은 달에 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심 문항과 평행선·넓이 문항을 풀고, 닮음비와 무게중심까지 다룹니다",
+    intro:
+      "대전대성중학교 2학년 수학은 정기시험 60%, 수행평가 40%이며, 두 수행평가가 10월과 11월에 이어집니다. 각 과제는 10점짜리 문항 두 개를 서술하는 형식입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "도형의 성질 탐구", kind: "task", weight: 20, timing: "10월" },
+      { name: "도형의 닮음과 피타고라스 정리 탐구", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "외심 문항과 평행선·넓이 문항",
+        body: "도형의 성질 탐구는 삼각형의 외심 성질을 활용한 문제 10점, 평행선의 성질과 삼각형 넓이 사이의 관계 문제 10점입니다. 문항마다 세 요소를 몇 개 만족했는지로 10·8·6·4점을 줍니다.",
+      },
+      {
+        title: "닮음비와 무게중심까지",
+        body: "11월 과제는 닮음 조건과 닮음비로 선분의 길이를 구하는 문제 10점, 피타고라스 정리·외심·무게중심으로 선분의 길이를 구하는 문제 10점입니다. 성취기준은 [9수03-12]~[9수03-15]이고 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "직각삼각형과 피타고라스 정리로 삼각비 식을 세우고 밑각으로 넓이를 구하며, 삼각비 없이 푼 넓이 풀이는 인정하지 않습니다",
+    intro:
+      "대전대성중학교 3학년 수학은 1·2학년과 같은 정기시험 60%·수행평가 40% 구조이고 기말시험이 11월로 앞당겨져 있습니다. 수행평가는 9월 삼각비, 10~11월 원의 성질입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형" },
+      { name: "삼각비 탐구", kind: "task", weight: 20, timing: "9월" },
+      { name: "원의 성질 탐구", kind: "task", weight: 20, timing: "10~11월" },
+    ],
+    notes: [
+      {
+        title: "삼각비로 정다각형 넓이 구하기",
+        body: "삼각비 원리 설명 10점(직각삼각형, 피타고라스 정리로 나머지 변, 삼각비 식)과 삼각비를 활용한 넓이 구하기 10점(밑각, 삼각형 넓이, 정다각형 넓이)입니다. 삼각비를 쓰지 않은 삼각형 넓이 풀이는 인정하지 않습니다.",
+      },
+      {
+        title: "접선과 원주각 문항",
+        body: "원의 성질 탐구는 원의 접선 성질을 이용한 문제 10점, 원에 내접하는 사각형과 접선·현이 이루는 각의 성질을 이용한 문제 10점입니다. 성취기준은 [9수04-19]·[9수04-20]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "명소 글쓰기 30점에 구성이 따로 있고, 듣기는 20문항 정답 수로 환산합니다",
+    intro:
+      "대전대성중학교 1학년 영어는 정기시험과 수행평가가 50%씩입니다. 중간·기말시험이 25%씩이고, 수행평가는 9월 듣기, 11월 말하기와 명소 소개 글쓰기 세 영역입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 25, timing: "12월", method: "선택형" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월" },
+      { name: "말하기", kind: "task", weight: 10, timing: "11월" },
+      { name: "방문하고 싶은 명소에 관한 글쓰기", kind: "task", weight: 30, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "명소 글쓰기 30점 구성",
+        body: "흥미로운 사실·특징·이유 세 요소를 모두 담으면 20점, 최상급과 to부정사의 명사적 용법을 오류 없이 쓰면 10점입니다. 자료를 내지 않으면 기본점수 12점입니다.",
+      },
+      {
+        title: "듣기는 20문항 정답 수로 환산",
+        body: "듣기 평가는 교육청 주관 선택형 평가로, 18~20개 정답이 10점이고 3문항 구간마다 1점씩 내려가 0~2개는 4점입니다. 말하기는 유창성 및 발음 5점과 언어 사용 5점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "사과 메시지에는 네 요소와 두 문법이 들어가고, 영어 기본점수는 40%입니다",
+    intro:
+      "대전대성중학교 2학년 영어는 1학년처럼 정기시험 50%(중간·기말 25%씩)와 수행평가 50%로 나뉩니다. 쓰기 과제는 사과 메시지 쓰기이고 서·논술형 30점으로 적혀 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 25, timing: "12월", method: "선택형" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월" },
+      { name: "말하기", kind: "task", weight: 10, timing: "10~11월" },
+      { name: "사과 메시지 쓰기", kind: "task", weight: 30, timing: "11~12월" },
+    ],
+    notes: [
+      {
+        title: "사과 메시지 네 요소와 두 문법",
+        body: "주제에 따른 서·논술 15점은 사과 메시지의 대상, 지난 말실수 상황 설명, 사과 내용, 맺음말 가운데 3가지 이상을 담으면 만점입니다. 문장 완성도 15점은 사역동사(make/have/let)+목적어+동사원형 구문과 목적격 관계대명사를 모두 쓰고 쓰기 오류가 0~2개일 때 만점입니다.",
+      },
+      {
+        title: "2학년 영어 기본점수 40%",
+        body: "2학년 영어 수행평가 기본점수는 만점의 40%로, 글쓰기는 12점, 말하기는 4점입니다. 진도표에서 말하기는 10월, 사과 메시지 쓰기는 11월에 놓여 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "중고물품 판매 글엔 문법 두 가지를 넣고, 말하기는 질문 세 가지에 답합니다",
+    intro:
+      "대전대성중학교 3학년 영어는 정기시험 50%, 수행평가 50%이며, 글쓰기가 10월로 1·2학년(11월 이후)보다 이릅니다. 말하기는 11월에 진행됩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 25, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 25, method: "선택형" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월" },
+      { name: "말하기", kind: "task", weight: 10, timing: "11월" },
+      { name: "중고물품 판매에 관한 글쓰기", kind: "task", weight: 30, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "판매 글에 넣을 문법 두 가지",
+        body: "판매하는 물건과 판매 이유를 모두 담으면 주제에 따른 서·논술 15점, as~as 원급 비교와 과거완료시제를 모두 활용하면 문장 완성도 15점입니다. 진도표에 적힌 중간시험 범위는 Special lesson 1과 5~6과의 어휘·본문·어법입니다.",
+      },
+      {
+        title: "말하기 질문 세 가지",
+        body: "진도표의 11월 말하기 문항은 한국 속담 소개와 설명, 무언가 허락 구하기, 중학교 시절 힘들었던 순간 말하기이고, 채점은 유창성 및 발음 5점과 언어 사용 5점입니다. 기말시험 범위는 6~8과로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "힘 과제는 정의와 예를 쓰고, 기체 과제는 그래프와 관계를 서술합니다",
+    intro:
+      "대전대성중학교 1학년 과학은 중간(10월)·기말(12월) 시험 60%와 서·논술형 수행평가 두 영역 40%(각 20%)입니다. 두 과제 모두 10점짜리 평가요소 두 개로 채점됩니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "여러 가지 힘의 특징 탐구하기", kind: "task", weight: 20, timing: "10월" },
+      { name: "기체의 압력과 부피 관계 표현하기", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "힘 과제는 정의와 예",
+        body: "[9과05-02] 성취기준으로 여러 가지 힘 중 제시된 2개의 정의 10점과 예 10점을 봅니다. 두 개 모두 정확하면 10점, 하나만 맞으면 8점, 모두 서술하지 못하면 6점입니다.",
+      },
+      {
+        title: "기체 과제는 그래프와 관계 서술",
+        body: "압력에 따른 기체 부피 그래프를 좌푯값(x축, y축)까지 정확히 그리면 10점, 온도가 일정할 때 압력 증가에 따른 부피 변화와 변하는 이유를 서술하면 10점입니다. 성취기준에는 [9과06-02]와 [9과06-03]이 함께 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "소화 과제는 네 요소 5점씩이고, 니크롬선 그래프에서 직렬·병렬 연결까지 갑니다",
+    intro:
+      "대전대성중학교 2학년 과학은 정기시험 60%와 수행평가 40%입니다. 9월 소화 과제와 11월 전기 과제 사이에 10월 중간시험이 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "영양소의 소화", kind: "task", weight: 20, timing: "9월" },
+      { name: "전류, 전압, 저항 사이의 관계", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "소화 과제 네 요소 5점씩",
+        body: "영양소 검출반응 실험에서 영양소와 최종 분해 물질 확인, 최초 소화관과 소화효소, 소화되지 않는 경우의 원인과 해결 방법, 3대 영양소의 최종 물질과 작은창자 안쪽 벽 구조를 각 5점으로 서술합니다.",
+      },
+      {
+        title: "니크롬선 그래프부터 직렬·병렬까지",
+        body: "전기 과제는 니크롬선 길이에 따른 전류-전압 그래프, 전류·전압·저항 관계 서술, 옴의 법칙 식과 저항 계산, 직렬·병렬연결의 전구 밝기·전체 저항·전류 세기 비교를 각 5점으로 봅니다. 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "상 찾기·초점 맞추기, 배율·그리기, 분열 단계 설명, 정리를 5점씩 보고 전력이 가장 큰·작은 제품 찾기는 5점입니다",
+    intro:
+      "대전대성중학교 3학년 과학은 정기시험 60%(10월 중간·11월 기말)와 수행평가 40%입니다. 9월에는 현미경 관찰 과제, 10월에는 전기 제품 소비 전력 과제가 있습니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형" },
+      { name: "체세포 분열 관찰하기", kind: "task", weight: 20, timing: "9월" },
+      { name: "소비 전력 알아보기", kind: "task", weight: 20, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "현미경 관찰 네 단계",
+        body: "체세포 분열 관찰하기는 현미경 표본 관찰(상 찾기·초점 맞추기), 관찰 결과 확인(배율·그리기), 관찰 결과 설명(분열 단계와 특징), 분석 및 정리를 각 5점으로 봅니다.",
+      },
+      {
+        title: "전기 제품 4개의 에너지 전환",
+        body: "소비 전력 알아보기는 생활 주변 전기 제품 4개의 주된 에너지 전환 서술 10점, 소비 전력이 가장 큰 제품과 가장 작은 제품 찾기 5점, 결과 및 정리 5점입니다. 성취기준은 [9과22-03]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "사회화를 서술하며 문제를 풀고, 문화 탐구는 예시를 든 세 요소로 씁니다",
+    intro:
+      "대전대성중학교 1학년 사회는 정기시험 60%(중간·기말 30%씩), 수행평가 40%입니다. 수행평가 두 영역은 사회화와 문화 단원을 다루며 각각 9월과 10월에 서·논술형으로 봅니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "사회 문제 해결", kind: "task", weight: 20, timing: "9월" },
+      { name: "문화 탐구", kind: "task", weight: 20, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "사회 문제 해결은 사회화 서술",
+        body: "과제명은 ‘사회 문제 해결’이고 성취기준은 [9사01-01] 사회화와 자아 정체성입니다. 사회화 의미 5점, 사회화 기관(가정·또래 집단·학교·직장·미디어) 10점, 자아정체성 의미 5점을 서술합니다.",
+      },
+      {
+        title: "문화 탐구는 예시를 든 세 요소",
+        body: "문화의 특징 2가지 5점, 문화의 속성 4가지 10점, 문화를 이해하는 태도 2가지 5점으로, 모두 예시를 들어 서술해야 만점입니다. 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "신항로 개척은 배경·변화·인물, 프랑스 혁명은 전개·의의·영향을 조사합니다",
+    intro:
+      "대전대성중학교 2학년 역사는 정기시험 60%(10월 중간·12월 기말 각 30%)와 수행평가 40%입니다. 두 과제는 근대 유럽을 다루며 9월과 10월에 서·논술형으로 치릅니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "신항로 개척 조사", kind: "task", weight: 20, timing: "9월" },
+      { name: "프랑스 혁명 탐구", kind: "task", weight: 20, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "신항로 개척은 배경·변화·인물",
+        body: "[9역04-03] 성취기준으로 신항로 개척의 역사적 배경 3가지 7점, 신항로 개척으로 나타난 변화 3가지 7점, 인물 조사(행적·관련 국가·인물에 대한 자신의 평가) 6점입니다.",
+      },
+      {
+        title: "프랑스 혁명은 전개·의의·영향",
+        body: "혁명의 전개 과정 6점, 프랑스 혁명의 의의 7점, 당시 시대적 배경·혁명 이후 프랑스의 변화·유럽 사회에 미친 영향 7점입니다. 역사 수행평가 기본점수는 만점의 40%인 8점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeondaeseong-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사", "사회"],
+    summary: "안내서엔 제작 연대·소재지·역사적 가치 6점, 선정 이유 5점이 있고 피라미드 국가 문제 5점, 도심·부도심 특징 5점을 봅니다",
+    intro:
+      "대전대성중학교 3학년은 역사와 사회를 각각 정기시험 60%·수행평가 40%로 평가합니다. 두 과목 모두 9월과 10월에 서·논술형 과제를 하나씩(각 20%) 두고, 중간시험은 10월입니다.",
+    assessments: [
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형", course: "역사" },
+      { name: "기말시험", kind: "exam", weight: 30, timing: "11월", method: "선택형", course: "역사" },
+      { name: "내가 만드는 문화유산 안내서", kind: "task", weight: 20, timing: "9월", course: "역사" },
+      { name: "조선의 통치 체제 탐구", kind: "task", weight: 20, timing: "10월", course: "역사" },
+      { name: "중간시험", kind: "exam", weight: 30, timing: "10월", method: "선택형", course: "사회" },
+      { name: "기말시험", kind: "exam", weight: 30, method: "선택형", course: "사회" },
+      { name: "인구 문제 분석", kind: "task", weight: 20, timing: "9월", course: "사회" },
+      { name: "도시 경관과 살기 좋은 도시 탐구", kind: "task", weight: 20, timing: "10월", course: "사회" },
+    ],
+    notes: [
+      {
+        title: "역사 과제는 홍보물과 통치 체제 서술",
+        body: "내가 만드는 문화유산 안내서는 제작 연대·소재지·역사적 가치를 담은 완성도 6점, 선정 이유 5점, 이미지 자료 2가지 활용 5점, 홍보 문구와 제목 4점입니다. 조선의 통치 체제 탐구는 국가 기틀 확립 과정 5가지 10점과 정치 기구의 역할 5가지 10점입니다.",
+      },
+      {
+        title: "사회 과제는 인구 피라미드와 도시 문제",
+        body: "인구 문제 분석은 제시된 인구 피라미드 국가의 인구 문제 5점과 해결 방안 5점, 우리나라 인구 문제와 해결 방안 10점입니다. 도시 경관 과제는 도심·부도심·주변 지역 특징 5점, 선진국과 개발도상국의 도시 문제 10점, 살기 좋은 도시의 조건 5점입니다.",
+      },
+      {
+        title: "두 과목의 기본점수 차이",
+        body: "역사 수행평가 기본점수는 만점의 40%(8점), 사회는 30%(6점)로 과목마다 다르게 정해져 있습니다. 역사 기말시험은 11월이고, 사회 기말시험은 반영 비율 표(12월)와 진도표(11월)의 시기가 다르게 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전대성중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "1차시 구상 10점, 2차시 글쓰기 20점이고 주제에서 벗어나면 요소를 채워도 따로 처리합니다",
+    intro:
+      "대전구봉고등학교 1학년 공통국어2의 수행평가는 ‘삶을 성찰하는 글쓰기’ 한 영역(30%)이고, 중간·기말고사는 선택형으로 35%씩입니다. 글쓰기는 10월 정규수업 2차시에 치르며 같은 달에 중간고사가 잡혀 있어, 두 일정을 함께 놓고 보는 것이 출발점입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "삶을 성찰하는 글쓰기", kind: "task", weight: 30, timing: "10월", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "1차시 구상 10점, 2차시 글쓰기 20점",
+        body: "1차시에는 「경설」의 표현 방식을 바탕으로 자주 쓰는 사물을 고르고, 사물에 대한 새로운 관점과 관련 경험을 구상합니다(요소 3개, 10점). 2차시에는 800자 이상 분량, 사물의 특성, 경험, 새로운 관점, 삶과의 연결, 주제의 분명함 등 6개 요소로 성찰 글을 채점합니다(20점). 기본점수는 12점입니다.",
+      },
+      {
+        title: "주제에서 벗어나면 요소 충족과 무관하게 처리",
+        body: "평가 주제와 무관한 내용을 쓰면 다른 요소의 충족 여부와 상관없이 모든 요소를 만족하지 못한 것(12점)으로 처리한다고 적혀 있습니다. AI는 활용하지 않으며, 성취기준은 문학 [10공국2-05-02]와 쓰기 [10공국2-03-01]입니다.",
+      },
+      {
+        title: "서·논술형 30%는 이 과제에서만",
+        body: "평가 종류표에서 중간·기말고사의 서·논술형 학기말 반영 비율은 0%이고, 서·논술형 30%는 성찰 글쓰기 한 영역에서 나옵니다. 수행평가는 학급별 진도에 맞추어 사전 공지한 시기에 실시한다고 평가 방침에 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "보고서 1회는 개념 1점·풀이 1점이고, 진도표상 8월부터 12월까지 매달 냅니다",
+    intro:
+      "대전구봉고등학교 1학년 공통수학2는 수행평가가 수업 중 작성하는 수학 개념 보고서 한 영역(30%)이고, 30회 보고서 점수를 합산해 영역 점수를 냅니다. 중간·기말고사는 회차마다 선택형 80점과 서답형 20점으로 나뉘어 반영됩니다.",
+    assessments: [
+      { name: "중간고사(선택형)", kind: "exam", weight: 28, timing: "10월", method: "선택형 80점" },
+      { name: "중간고사(서답형)", kind: "exam", weight: 7, timing: "10월", method: "서답형(서술형 아님) 20점" },
+      { name: "기말고사(선택형)", kind: "exam", weight: 28, timing: "12월", method: "선택형 80점" },
+      { name: "기말고사(서답형)", kind: "exam", weight: 7, timing: "12월", method: "서답형(서술형 아님) 20점" },
+      { name: "수학 개념 보고서", kind: "task", weight: 30, timing: "수시", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "보고서 1회는 개념 1점·풀이 1점",
+        body: "매회 수학 개념과 원리를 빠짐없이 썼는지 1점, 각 문항의 풀이 과정을 논리적 모순 없이 썼는지 1점으로 매기고, 빠진 개념이나 일부 풀이 누락은 0.5점입니다. 평가 시간에 양식을 받아 그 시간 안에 제출하며, 30회 합산 57점 이상이면 영역 점수 30점이고 기본점수는 11점입니다.",
+      },
+      {
+        title: "정기시험 서답형은 서술형이 아닌 칸",
+        body: "평가 종류표에서 회차별 서답형 20점은 ‘서술형아님’ 칸에 들어가고 서술형 칸은 0점이라, 정기시험의 서·논술형 학기말 반영 비율은 0%입니다. 서·논술형 30%는 개념 보고서에서만 나옵니다.",
+      },
+      {
+        title: "진도표 8월부터 12월까지 매달 보고서",
+        body: "보고서의 성취기준 범위는 선분의 내분점 [10공수2-01-01]부터 무리함수 그래프 [10공수2-03-05]까지 학기 전 범위이고, 진도표에도 8월부터 12월까지 달마다 수행평가 표시가 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "1단계는 검색을 허용하고 2단계는 손으로 쓰며, 개요 10점·내용 12점·어법과 분량 8점입니다",
+    intro:
+      "대전구봉고등학교 1학년 공통영어2는 중간·기말고사가 선택형 35%씩이고, 수행평가는 ‘세상을 바꾸는 작은 아이디어 글쓰기’ 한 영역(30%)입니다. 글쓰기는 10월~11월에 개요 단계와 본문 단계로 나눠 개별 평가합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "세상을 바꾸는 작은 아이디어 글쓰기", kind: "task", weight: 30, timing: "10월~11월", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "1단계 검색 허용, 2단계 수기 작성",
+        body: "1단계에서는 희망 진로나 일상생활과 관련해 세상을 긍정적으로 바꿀 아이디어의 개요를 쓰며 AI 포함 인터넷 검색이 가능합니다. 2단계 본문은 배부한 활동지에 직접 손으로 쓰고 AI 포함 인터넷 활용이 금지됩니다.",
+      },
+      {
+        title: "개요 10점, 내용 12점, 어법·분량 8점",
+        body: "개요를 공란 없이 쓰면 10점, 내용 충실도는 아이디어와 계기, 구체적 실행 방안, 세상에 가져올 긍정적 변화가 각 4점입니다. 관계부사 활용이 4점, 100개 이상 단어 사용이 4점(50~99개 3점)이며, 관계부사가 쓰인 문장은 사소한 어법 오류도 감점합니다.",
+      },
+      {
+        title: "채점에서 빠지는 문장",
+        body: "영어가 아닌 단어가 섞인 문장, 연속된 네 단어 이상이 반복된 부분, 주어와 동사를 갖추지 않은 구 형태의 답변, 질문 의도와 무관한 내용은 채점 대상에서 제외한다고 명시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["한국사2", "통합사회2"],
+    summary: "한국사 타임캡슐은 두 번의 과제를 누적하고, 통합사회2는 기본권 침해와 불평등을 따로 봅니다",
+    intro:
+      "대전구봉고등학교 1학년 사회 영역은 한국사2와 통합사회2 두 과목입니다. 한국사2는 중간·기말고사가 25%씩으로 수행평가가 절반을 차지하고, 통합사회2는 중간·기말 30%씩에 10월·11월 서·논술형 과제가 20%씩 붙습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월", method: "선택형 100점", course: "한국사2" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "12월", method: "선택형 100점", course: "한국사2" },
+      { name: "한국사 타임캡슐", kind: "task", weight: 30, timing: "9월, 11월", method: "서·논술형 30점", course: "한국사2" },
+      { name: "역사 속 인물 탐구보고서", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점", course: "한국사2" },
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점", course: "통합사회2" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점", course: "통합사회2" },
+      { name: "기본권 침해 사례 분석하기", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점", course: "통합사회2" },
+      { name: "사회불평등 현상 탐구하기", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점", course: "통합사회2" },
+    ],
+    notes: [
+      {
+        title: "한국사 타임캡슐은 두 번의 과제를 누적",
+        body: "수업 중 제시된 수행과제를 두 차례 해결해 누적 반영하며, 과제를 70% 이상 해결하면 완성, 30~70%는 부분 완성으로 봅니다. 두 개 모두 완성 30점, 하나 완성·하나 부분 완성 27점 식으로 내려가고 기본점수는 12점입니다. 진도표에는 9월과 11월에 표시됩니다.",
+      },
+      {
+        title: "인물 탐구보고서의 배점 구조",
+        body: "역사 속 인물 탐구보고서(20점)는 한국사 관련 인물을 고른 이유 3점, 생애·시대적 배경·업적 분석이 4점씩 12점이고, 나머지는 인물에 대한 자신의 평가 항목입니다. 주어진 보고서 양식을 지켜 작성합니다.",
+      },
+      {
+        title: "통합사회2 두 과제의 채점 비중",
+        body: "기본권 침해 사례 분석은 사례 선정 6점, 사례 분석 8점, 원인 파악과 대안 제시 6점이며 두 단계 모두 AI 포함 인터넷 활용이 금지됩니다. 사회불평등 현상 탐구는 사례 제시 4점, 원인과 발생 양상 8점, 해결방안 3가지 8점이고 1단계에서만 검색이 허용됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2", "과학탐구실험2"],
+    summary: "산·염기 실험은 과정 4점·보고서 16점이고, 토론 글은 빅데이터 논제이며 과학탐구실험2는 세 영역입니다",
+    intro:
+      "대전구봉고등학교 1학년 과학은 정기시험이 있는 통합과학2와 수행평가만으로 성적을 내는 과학탐구실험2로 나뉩니다. 통합과학2는 중간·기말 30%씩에 실험과 글쓰기가 20%씩이고, 과학탐구실험2는 9월부터 11월까지 세 영역(30·30·40%)을 차례로 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점", course: "통합과학2" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점", course: "통합과학2" },
+      { name: "산과 염기의 성질 관찰", kind: "task", weight: 20, timing: "10월~11월", method: "탐구실험형 20점", course: "통합과학2" },
+      { name: "과학 토론 글쓰기", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점", course: "통합과학2" },
+      { name: "동결 건조 식품의 과학 원리 탐구", kind: "task", weight: 30, timing: "9월", method: "탐구실험형 30점", course: "과학탐구실험2" },
+      { name: "학교 주변의 생물 탐구", kind: "task", weight: 30, timing: "9월~10월", method: "탐구실험형 30점", course: "과학탐구실험2" },
+      { name: "과학소통강연", kind: "task", weight: 40, timing: "10월~11월", method: "문제해결형 탐구 40점", course: "과학탐구실험2" },
+    ],
+    notes: [
+      {
+        title: "산·염기 실험은 과정 4점, 보고서 16점",
+        body: "실험 기구 사용, 실험복·장갑 착용, 정리정돈을 관찰하는 과정 평가가 4점입니다. 보고서는 5가지 물질의 실험 결과 7점, 산·염기 분류와 공통 성질 4가지 6점, 산과 염기를 구분하는 실험 방법 3점이며, 이 중 16%가 서·논술형 학기말 반영 비율로 잡혀 있습니다.",
+      },
+      {
+        title: "과학 토론 글쓰기는 빅데이터 논제",
+        body: "성취기준은 빅데이터 활용 사례와 장점·문제점을 다루는 [10통과2-03-02]입니다. 논제를 과학적으로 분석하는 데 5점이 배정되고, 찬반 입장을 정한 주장에 문제 원인 3가지와 해결 방안 3가지를 과학적 지식을 근거로 제시해야 합니다.",
+      },
+      {
+        title: "과학탐구실험2의 세 영역",
+        body: "동결 건조 식품 탐구는 관찰 5점, 과학 원리 설명 15점, 설명자료 제작 10점입니다. 학교 주변 생물 탐구는 조사 태도 6점과 1·2차 보고서 각 12점으로 외래종이 생물다양성에 미치는 영향까지 씁니다. 과학소통강연(40%)은 계획서, 500자 이상 대본, 소품을 활용한 2분 발표로 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["문학"],
+    summary: "질문 중심 소설 감상 및 논증하는 글 쓰기 30%(11월, 질문 3개 이상) · 시험 70%",
+    intro:
+      "대전구봉고등학교 2학년 문학은 중간·기말고사가 선택형으로 35%씩이고, 수행평가는 11월의 ‘질문 중심 소설 감상 및 논증하는 글 쓰기’ 한 영역(30%)입니다. 소설 한 편을 골라 작가의 의도와 논쟁적 질문을 세운 뒤 서론·본론·결론을 갖춘 글로 씁니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "질문 중심 소설 감상 및 논증하는 글 쓰기", kind: "task", weight: 30, timing: "11월", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "본론 두 부분이 6점씩으로 가장 큽니다",
+        body: "작가의 의도 3점, 질문 생성 5점(조건에 맞는 질문 3개 이상), 서론 5점, 본론(1)·본론(2) 각 6점, 결론 5점이며 기본점수는 8점입니다. 작가의 의도에는 소설이 제기한 문제와 그 해결에 필요한 도덕적 가치를 함께 밝혀야 합니다.",
+      },
+      {
+        title: "본론마다 질문·주장·반론·반박",
+        body: "본론의 각 부분은 앞에서 만든 질문으로 시작하고, 주장과 이유·근거를 갖춘 뒤 예상 반론과 그에 대한 반박까지 써야 세 조건을 모두 충족합니다. 결론에서는 자신의 입장으로 소설을 해석·평가하고 작품의 가치를 적습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["확률과 통계"],
+    summary: "개념·풀이 과정 서술 24회 30%(8~12월) · 중간·기말 각각 선택형 28%·서답형 7%",
+    intro:
+      "대전구봉고등학교 2학년 확률과 통계는 수업 중 평가지에 개념과 풀이 과정을 쓰는 수행평가를 8월부터 12월까지 24회 실시해 30%로 반영합니다. 정기시험은 회차마다 선택형 80점과 서답형 20점으로 나뉘어 각각 28%, 7%가 됩니다.",
+    assessments: [
+      { name: "중간고사(선택형)", kind: "exam", weight: 28, timing: "10월", method: "선택형 80점" },
+      { name: "중간고사(서답형)", kind: "exam", weight: 7, timing: "10월", method: "서답형(서술형 아님) 20점" },
+      { name: "기말고사(선택형)", kind: "exam", weight: 28, timing: "12월", method: "선택형 80점" },
+      { name: "기말고사(서답형)", kind: "exam", weight: 7, timing: "12월", method: "서답형(서술형 아님) 20점" },
+      { name: "수학 개념 및 문제 해결 과정 서술하기", kind: "task", weight: 30, timing: "8~12월", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "한 회 1점, 오류 문항 하나에 0.2점",
+        body: "회마다 모든 문항을 오류 없이 서술하면 1점이고, 오류가 있는 문항이 하나 늘 때마다 0.2점씩 내려가 5개 이상이면 0점입니다. 24회 합계에 기본점수 6점을 더해 최종 점수(만점 30점)를 내며, 해당 시간 안에 쓴 것만 평가합니다.",
+      },
+      {
+        title: "AI·인터넷 없이 손으로 쓰는 평가지",
+        body: "수행평가 중 AI 포함 인터넷 활용은 금지되고 배부한 활동지에 직접 기입합니다. 성취기준은 중복순열 [12확통01-01]부터 공학 도구를 이용한 모평균·모비율 추정 [12확통03-07]까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "SWOT 분석 기반 진로 계획서 쓰기 30%(10~11월, 초안 10·본문 20) · 시험 70%",
+    intro:
+      "대전구봉고등학교 2학년 영어Ⅱ는 중간·기말고사 선택형 35%씩과 ‘SWOT 분석 기반 진로 계획서 쓰기’ 30%로 구성됩니다. SWOT 분석 수업 뒤 10~11월에 2차시 과정중심평가로 초안과 진로 계획서를 차례로 씁니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "SWOT 분석 기반 진로 계획서 쓰기", kind: "task", weight: 30, timing: "10~11월", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "초안은 8개 요소를 표로",
+        body: "구조화된 표에 자신의 장점·단점·기회·위기와 SO·ST·WO·WT 전략을 문장으로 정리하며, 8개 중 7~8개를 명확히 쓰면 10점입니다. 이 단계에서는 SWOT 전략 분석과 영어 표현 수집에 AI 포함 인터넷 검색을 쓸 수 있습니다.",
+      },
+      {
+        title: "본문 20점은 최소 단어 수가 붙습니다",
+        body: "진로 계획서는 서론 3점(10단어 이상 1문장), 본론의 SWOT 분석 4점, 서로 다른 전략 두 가지 각 5점(20단어 이상 1~2문장), 결론 3점(10단어 이상)입니다. 시험지에 직접 쓰며 AI 포함 인터넷 활용은 금지되고, 기본점수는 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["한국지리 탐구", "동아시아 역사 기행"],
+    summary: "인구 정책 제안서·카드뉴스 / 동아시아 교류 분석·기행 콘텐츠 각 30% · 기말 40%",
+    intro:
+      "대전구봉고등학교 2학년 사회 영역의 한국지리 탐구와 동아시아 역사 기행은 둘 다 중간고사 없이 12월 기말고사 40%와 수행평가 두 영역(9월·11월, 각 30%)으로 성적을 냅니다. 두 과목 모두 1~9반이 담당 학급으로 적혀 있습니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월", method: "선택형 100점", course: "한국지리 탐구" },
+      { name: "인구 문제 분석 및 정책 제안서 작성하기", kind: "task", weight: 30, timing: "9월", method: "서·논술형 30점", course: "한국지리 탐구" },
+      { name: "국토균형발전 카드뉴스 만들기", kind: "task", weight: 30, timing: "11월", method: "프로젝트형 30점", course: "한국지리 탐구" },
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월", method: "선택형 100점", course: "동아시아 역사 기행" },
+      { name: "한국과 동아시아 국가의 교류 분석하기", kind: "task", weight: 30, timing: "9월", method: "서·논술형 30점", course: "동아시아 역사 기행" },
+      { name: "역사 기행 콘텐츠 제작하기", kind: "task", weight: 30, timing: "11월", method: "서·논술형 30점", course: "동아시아 역사 기행" },
+    ],
+    notes: [
+      {
+        title: "인구 정책 제안서는 분석·평가가 20점",
+        body: "학생이 고른 인구 문제로 탐구 보고서를 쓰며, 문제 선정과 근거 통계 6점, 원인·해결 과제 분석 10점, 기존 국가 정책 정리와 비판적 평가 10점, 현실적인 정책 제안 4점입니다. 11월 카드뉴스는 지속가능성 위기 지역을 골라 균형발전 사례를 조사하고 4컷으로 만드는 프로젝트형이며, 서·논술형에는 포함되지 않습니다.",
+      },
+      {
+        title: "동아시아 역사 기행은 두 과제 모두 서·논술형",
+        body: "9월 교류 분석은 국가 선정 이유, 정치·경제·사회·문화 교류 내용, 교류에 대한 자신의 평가가 10점씩입니다. 11월 콘텐츠 제작은 선정 이유와 제작 의도, 지역 소개·관련 내용·출처, 대본을 보고서 양식에 맞춰 쓰며, 두 과제가 합쳐 서·논술형 60%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-high-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["지구시스템과학"],
+    summary: "플룸에 관한 실험 보고서 30%(9월) · 생명 가능 지대 탐구 글쓰기 30%(11월) · 기말 40%",
+    intro:
+      "대전구봉고등학교 2학년 지구시스템과학은 1~9반이 듣는 과목으로, 중간고사 없이 12월 기말고사가 40%입니다. 나머지 60%는 9월 플룸 실험 보고서와 11월 외계 행성을 다루는 탐구 글쓰기가 30%씩 나눠 갖습니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월", method: "선택형 100점" },
+      { name: "플룸에 관한 실험 보고서", kind: "task", weight: 30, timing: "9월", method: "탐구실험형 30점" },
+      { name: "생명 가능 지대 탐구 글쓰기", kind: "task", weight: 30, timing: "11월", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "플룸 보고서는 다섯 항목 6점씩",
+        body: "실험의 대응물 파악, 잉크가 상승하는 원리, 뜨거운 플룸의 상승 원인, 열점과 판의 관계, 현재 열점 위치 파악이 각 6점이고 기본점수는 12점입니다. 정해진 평가 시간에 배부된 양식으로 작성하며, 표에서 서·논술형 실시 여부는 X로 표시되어 있습니다.",
+      },
+      {
+        title: "외계 행성 하나를 골라 쓰는 글",
+        body: "생명체 존재 가능성이 큰 외계 행성을 선정하면 5점, 이름의 유래·대기 성분·탐사 원리 등 소개 내용 4가지를 쓰는 탐구 활동이 10점입니다. 이어 생명 가능 지대 조건을 쓰고, 외계 행성을 소개하는 목적을 500자 이상으로 작성합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉고등학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "품사 사전은 열 가지 조건이 17점이고, 주장하는 글은 네 단계를 거쳐 완성합니다",
+    intro:
+      "대전구봉중학교 1학년 국어는 9월 10~11일 중간고사와 11월 30일~12월 2일 기말고사가 30%씩, 서·논술 수행평가 두 영역이 20%씩입니다. 10월 품사 사전과 11월 주장하는 글쓰기가 한 달 간격으로 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "품사 사전 만들기", kind: "task", weight: 20, timing: "10월", method: "서·논술 20점" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 20, timing: "11월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "품사 사전은 열 가지 조건이 17점",
+        body: "앞·뒤표지와 목차 형식이 3점이고, 내용 및 표현 17점은 품사 분류 기준(형태·기능·의미) 설명과 명사·대명사·수사·동사·형용사·조사·관형사·부사·감탄사를 기준에 따라 설명하고 예를 든 10개 조건으로 매깁니다. 성취기준은 [9국04-03]이고 기본점수는 8점입니다.",
+      },
+      {
+        title: "주장하는 글쓰기의 네 단계",
+        body: "우리 주변의 사회 문제와 자신의 주장을 정하는 계획하기 3점, 자료 수집과 근거 마련 3점, 제목·서론·본론·결론 개요를 짜는 내용 조직하기 5점, 주장·근거·문단 구성을 보는 표현하기 9점입니다. 성취기준은 [9국03-03]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "9월엔 좌표·정비례·그래프 해석을, 11월엔 네 단원에서 한 요소씩 골라 씁니다",
+    intro:
+      "대전구봉중학교 1학년 수학은 선택형 중간·기말고사가 30%씩이고, 서·논술 수행평가 두 영역이 20%씩입니다. 좌표평면과 그래프는 중간고사가 있는 9월에, 도형의 성질은 기말고사 직전인 11월에 놓여 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "좌표평면과 그래프 서술하기", kind: "task", weight: 20, timing: "9월", method: "서·논술 20점" },
+      { name: "도형의 성질 서술하기", kind: "task", weight: 20, timing: "11월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "9월 과제는 좌표·정비례·그래프 해석",
+        body: "좌표평면 위의 점의 좌표 구하기, 좌표축 위의 점의 성질로 미지수와 사분면 구하기, 정비례 관계의 빈칸·관계식·그래프 나타내기, 주어진 그래프 해석하기가 5점씩입니다. 성취기준은 [9수02-05]~[9수02-07]이고 기본점수는 4점입니다.",
+      },
+      {
+        title: "11월 과제는 네 단원에서 한 요소씩",
+        body: "맞꼭지각으로 각의 크기 구하기, 삼각형의 합동 조건과 선분·각 구하기, 비례식을 세워 부채꼴의 호의 길이 구하기, 전개도를 그려 입체도형의 겉넓이 구하기가 각 5점입니다. 풀이를 오류 없이 서술한 요소 수로 점수가 정해집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "듣기는 한 문항 0.3점이고, 독후감상문은 문장 수에 10점이 걸려 있습니다",
+    intro:
+      "대전구봉중학교 1학년 영어는 중간·기말고사 30%씩에 수행평가가 듣기 10%와 독후감상문 30%입니다. 두 수행평가 모두 9월에 시작해 중간고사 기간과 겹치므로, 상담에서는 9월 일정부터 정리합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월", method: "선택형 10점" },
+      { name: "독후감상문 쓰기", kind: "task", weight: 30, timing: "9~10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "듣기는 한 문항 0.3점",
+        body: "영어듣기평가 20문항을 맞힌 개수에 따라 한 개당 0.3점으로 점수를 주며, 0개는 기본점수 4점입니다. 세부 정보·중심 내용·화자의 의도 추론 등 [9영01-01]~[9영01-08]이 성취기준입니다.",
+      },
+      {
+        title: "독후감상문은 문장 수가 10점",
+        body: "다섯 단어 이상으로 된 문장을 10개 이상 쓰면 과제완성 10점이고, 줄거리·인상 깊은 내용·느낀 점·논리성의 내용 10점, 서론·본론·결론 형식과 문장 연결의 구성 4점, 언어사용 6점입니다. 자료 수집·검색·원고 작성에는 AI를 활용할 수 있다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "지명 10점과 포스터 10점으로 나뉘고, 맞춤법이 틀리면 오답 처리됩니다",
+    intro:
+      "대전구봉중학교 1학년 사회는 중간·기말고사가 35%씩으로 정기시험 비중이 70%이고, 수행평가는 9월 ‘태평양 지역의 환경문제 탐구하기’ 한 영역(30%)입니다. 오세아니아 단원 성취기준 [9사(지리)06-01]·[9사(지리)06-02]를 평가합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "태평양 지역의 환경문제 탐구하기", kind: "task", weight: 30, timing: "9월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "지명 10점, 포스터 10점",
+        body: "백지도에 태평양 주변 국가의 지명 7개를 적는 항목이 10점(하나 맞을 때마다 1점씩), 환경 문제 3개 이상 서술 5점, 해결 방안 2개 이상 서술 5점, 표어·그림·3색 이상을 갖춘 홍보 포스터가 10점입니다.",
+      },
+      {
+        title: "맞춤법이 틀리면 오답",
+        body: "채점 유의사항에 주요 용어의 맞춤법이 틀리면 오답으로 처리한다고 적혀 있습니다. 기본점수는 12점이고, 장기 미인정 결석으로 점수를 받을 수 없으면 11점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "부력 실험은 측정·기록이 10점, 상태 변화는 입자 모형과 실생활 사례로 씁니다",
+    intro:
+      "대전구봉중학교 1학년 과학은 중간·기말고사 30%씩과 수행평가 두 영역 20%씩입니다. 부력 측정은 실험·실습과 서·논술을 함께 보고 학기 초 8~9월에, 상태 변화 서술은 9~10월에 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "부력 측정하기", kind: "task", weight: 20, timing: "8~9월", method: "실험·실습, 서·논술 20점" },
+      { name: "물질의 상태 변화 서술하기", kind: "task", weight: 20, timing: "9~10월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "부력 실험은 측정·기록이 10점",
+        body: "중력과 부력의 정의(4점), 측정 항목 5개와 실험 결과 2개를 바르게 나타내는 탐구 능력(10점), 부력에 영향을 미치는 요인과 조건에 맞는 물체 선택·근거 설명(6점)으로 나뉩니다. 서·논술형 반영 비율은 이 과제에서 10%로 잡혀 있습니다.",
+      },
+      {
+        title: "상태 변화는 입자 모형과 실생활 사례",
+        body: "물질의 세 상태를 입자 모형으로 나타내는 탐구 능력 6점, 상태 변화의 특징과 실생활 예를 설명하는 문제해결 10점, 실생활 사례를 열에너지 출입과 관련지어 설명하는 의사소통 4점입니다. 성취기준은 [9과04-02]~[9과04-04]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장·이유·근거·예상 반론·반박을 갖추고, 귀납과 연역 가운데 하나를 골라 전개합니다",
+    intro:
+      "대전구봉중학교 2학년 국어는 중간·기말고사 35%씩과 서·논술 수행평가 ‘논증이 담긴 글쓰기’ 30%로 구성됩니다. 글쓰기는 9~10월에 치르며, 논증 개념 정리부터 개요와 완성 글까지 세 부분을 10점씩 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "논증이 담긴 글쓰기", kind: "task", weight: 30, timing: "9~10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "주장·이유·근거·예상 반론·반박",
+        body: "첫 10점은 다섯 논증 요소의 개념을 정확히 서술했는지로 매깁니다. 다음 10점은 주장의 분명함, 근거 3개 이상, 단계별 중심 내용, 사용할 논증 방법, 서론-본론-결론 흐름을 갖춘 개요입니다.",
+      },
+      {
+        title: "귀납·연역 중 하나를 골라 전개",
+        body: "완성 글 10점에는 주제의 통일성, 귀납과 연역 중 한 방법으로 내용을 타당하게 전개했는지, 개요에 맞는 구성, 문장의 자연스러움, 제시된 분량 충족이 들어갑니다. 성취기준은 [9국02-05]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이등변삼각형, 직각삼각형 합동조건, 외심·내심, 보조선을 그은 사각형이 각 5점이고 닮음비와 평행선 사이 선분의 비를 씁니다",
+    intro:
+      "대전구봉중학교 2학년 수학은 선택형 중간·기말고사 30%씩과 서·논술 수행평가 두 영역 20%씩입니다. 삼각형·사각형 과제는 9월이고, 도형의 닮음 과제는 반영 비율표(10월)와 세부 계획(10~11월)의 시기 표기가 달라 시기를 따로 확인해야 합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "삼각형의 성질과 사각형의 성질 서술하기", kind: "task", weight: 20, timing: "9월", method: "서·논술 20점" },
+      { name: "도형의 닮음 서술하기", kind: "task", weight: 20, method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "9월 과제의 네 요소",
+        body: "이등변삼각형의 성질, 직각삼각형의 합동조건(합동인 삼각형 기호·합동조건·길이·넓이), 삼각형의 외심과 내심의 성질, 보조선을 그어 푸는 사각형의 성질이 각 5점입니다. 성취기준은 [9수03-09]~[9수03-11]입니다.",
+      },
+      {
+        title: "닮음 과제의 범위",
+        body: "도형의 닮음 서술하기는 닮음의 뜻과 닮음비 [9수03-12], 평행선 사이의 선분의 길이의 비 [9수03-14]를 평가합니다. 두 과제 모두 기본점수는 4점이고, 전자기기나 부정한 기록물을 쓰면 해당 부분에 척도상 최저점수를 줍니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "초안은 제목 3점에 서론·본론·결론 4점씩, 본 글은 80단어와 7개 요소를 채웁니다",
+    intro:
+      "대전구봉중학교 2학년 영어는 중간·기말고사 30%씩, 듣기 10%, ‘관심사와 연계한 해외여행 계획 쓰기’ 30%입니다. 쓰기는 AI를 보조도구로 쓸 수 있는 초안 단계와 AI 없이 쓰는 글쓰기 단계로 15점씩 나뉩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월", method: "선택형 10점" },
+      { name: "관심사와 연계한 해외여행 계획 쓰기", kind: "task", weight: 30, timing: "9~10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "초안: 제목 3점, 서론·본론·결론 4점씩",
+        body: "자료수집과 영작 보조도구로 AI를 쓸 수 있지만 활동지 서식에 활용 과정을 표기해야 하고, 표기하지 않으면 해당 부분은 척도상 최저점수입니다. AI 입력창에 학번·이름·학교명 같은 개인정보를 넣어서는 안 됩니다.",
+      },
+      {
+        title: "글쓰기: 80단어와 7개 요소",
+        body: "AI 없이 쓰는 글쓰기는 80단어 이상이면 과제완성 5점, 제시된 문법 표현과 내용 요소 7개를 모두 활용하면 내용 6점, 어법·어휘의 언어사용 4점입니다. 같은 표현은 두 번까지만 단어 수에 넣고, 주제와 무관한 내용도 단어 수에서 뺍니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "역사 사실 이해가 6점이고, 네 강령에 표어와 시각적 상징을 붙여 운동을 표현합니다",
+    intro:
+      "대전구봉중학교 2학년 역사는 중간·기말고사가 35%씩이고 수행평가는 10월 ‘인도의 국민 국가 건설 운동 탐구하기’ 한 영역(30%)입니다. 성취기준 [9역05-03]의 아시아 국민 국가 건설 노력을 인도 사례로 서술합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "인도의 국민 국가 건설 운동 탐구하기", kind: "task", weight: 30, timing: "10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "역사 사실 이해 6점",
+        body: "영국의 식민 지배 이후 인도 사회의 변화 4가지를 정확히 서술하면 6점이고, 서술한 개수에 따라 점수가 내려갑니다.",
+      },
+      {
+        title: "네 강령에 표어와 시각적 상징",
+        body: "역사 정보 활용 및 의사소통 24점은 영국 상품 배척, 국산품 애용(스와데시), 자치(스와라지), 민족 교육 네 강령이 6점씩입니다. 강령마다 명칭, 강령에 따른 행동의 구체적 서술, 표어와 시각적 상징의 독창적 표현 세 조건을 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "스마트팜은 광합성 요인이 10점, 별 보고서는 수치를 제시하는 데서 출발합니다",
+    intro:
+      "대전구봉중학교 2학년 과학은 중간·기말고사 30%씩과 수행평가 두 영역 20%씩입니다. 9월 스마트팜 디자인은 광합성 단원의 서·논술, 10~11월 별 탐구 보고서는 실험·실습과 서·논술을 함께 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.30.~12.2.", method: "선택형 100점" },
+      { name: "스마트팜 디자인하기", kind: "task", weight: 20, timing: "9월", method: "서·논술 20점" },
+      { name: "별 탐구 보고서 작성하기", kind: "task", weight: 20, timing: "10~11월", method: "서·논술, 실험·실습 20점" },
+    ],
+    notes: [
+      {
+        title: "스마트팜은 광합성 요인 10점",
+        body: "광합성에 필요한 물질과 생산된 물질 5점, 광합성 장소와 에너지, 빛의 세기·이산화 탄소 농도·온도와 광합성량의 관계를 쓰는 항목 10점, 호흡과 광합성의 관계 5점입니다. 과학 용어의 맞춤법이 틀리면 정답으로 인정하지 않습니다.",
+      },
+      {
+        title: "별 보고서는 수치 제시가 출발",
+        body: "선정한 별의 연주시차, 겉보기 등급과 절대등급, 색과 표면 온도를 조사해 구체적인 수치로 제시하는 데이터 수집이 5점, 데이터 비교 탐구가 5점으로 과학적 탐구 능력 10점을 이룹니다. 이 과제의 서·논술형 반영 비율은 10%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "여섯 주제를 2문장씩 구상한 뒤, 문장 종류별로 3개 이상을 넣어 자기를 소개합니다",
+    intro:
+      "대전구봉중학교 3학년 국어는 9월 10~11일 중간고사와 11월 9~11일 기말고사가 35%씩이고, 수행평가는 ‘문장 활용하여 자기소개서 쓰기’ 30%입니다. 이 과제의 시기는 반영 비율표에 9~10월, 세부 계획에 9월로 적혀 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11.9.~11.11.", method: "선택형 100점" },
+      { name: "문장 활용하여 자기소개서 쓰기", kind: "task", weight: 30, method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "구상 단계는 여섯 주제 2문장씩",
+        body: "자신의 생애·장점·단점·미래 계획·꿈을 위한 노력·앞으로의 각오를 각각 2문장 이상 쓰면 구상 10점입니다. 성취기준은 문장의 짜임과 양상을 다루는 [9국04-06]입니다.",
+      },
+      {
+        title: "문장 종류별로 3개 이상",
+        body: "구상에서 쓴 문장을 활용해 홑문장, 이어진 문장, 안은 문장을 각각 3개 이상 만들면 5점씩이고, 조건과 분량에 맞고 주제에서 벗어나지 않는 자기소개서 완성이 5점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "9월엔 삼각비 세 요소와 이차함수 하나, 10월엔 원에서 각과 길이를 구합니다",
+    intro:
+      "대전구봉중학교 3학년 수학은 중간고사(9월 10~11일)와 기말고사(11월 9~11일)가 30%씩이고, 서·논술 수행평가 두 영역이 20%씩입니다. 9월에 이차함수와 삼각비, 10월에 원의 성질을 서술합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.9.~11.11.", method: "선택형 100점" },
+      { name: "이차함수와 삼각비 서술하기", kind: "task", weight: 20, timing: "9월", method: "서·논술 20점" },
+      { name: "원의 성질 서술하기", kind: "task", weight: 20, timing: "10월", method: "서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "9월 과제: 삼각비 세 요소와 이차함수 하나",
+        body: "피타고라스 정리로 한 변을 구한 뒤 삼각비 값 구하기, 특수각의 삼각비 사칙연산 4문항, 주어진 직각삼각형의 값 구하기가 각 5점이고, 이차함수의 일반형을 표준형으로 바꿔 꼭짓점 좌표를 구하는 요소가 5점입니다.",
+      },
+      {
+        title: "10월 과제: 원에서 각과 길이",
+        body: "원에 내접하는 삼각형의 세 내각, 보조선을 그어 원의 접선과 현이 이루는 각, 현의 수직이등분선 성질로 반지름의 길이, 원주각과 중심각의 관계를 쓰는 요소로 구성됩니다. 성취기준은 [9수04-19]·[9수04-20]이고 기본점수는 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "본 글은 100단어가 분량 기준이고, 초안 15점과 듣기 0.3점 단위 채점이 붙습니다",
+    intro:
+      "대전구봉중학교 3학년 영어는 중간·기말고사 30%씩과 수행평가 40%(듣기 10%, 친환경 제품 소개 글쓰기 30%)입니다. 기말고사가 11월 9~11일로 1·2학년보다 이르고, 두 수행평가는 9~10월에 끝납니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.9.~11.11.", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월", method: "선택형 10점" },
+      { name: "친환경 제품 소개 글쓰기", kind: "task", weight: 30, timing: "9~10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "글쓰기 단계의 분량 기준은 100단어",
+        body: "AI 없이 쓰는 단계에서 주제에 대해 100단어 이상이면 과제완성 5점, 80~99단어 다음 단계, 60단어 미만이 가장 낮은 단계입니다. 제시된 문법 표현과 내용 요소 7개 활용이 6점, 어법·어휘가 4점입니다.",
+      },
+      {
+        title: "초안 15점과 듣기 0.3점 단위",
+        body: "초안은 제목 3점과 서론·본론·결론 활동지 각 4점이며 이 단계에서는 AI 활용 과정을 서식에 표기하고 쓸 수 있습니다. 듣기는 맞힌 개수 하나당 0.3점, 0개가 기본점수 4점입니다. 쓰기 성취기준은 [9영04-04]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 인구 요인 20점·도시 선택 20점, 역사는 공민왕을 다섯 감각으로 그립니다",
+    intro:
+      "대전구봉중학교 3학년 사회와 역사는 모두 중간고사 없이 11월 9~11일 기말고사 40%와 수행평가 두 영역(30%씩)으로 성적을 냅니다. 수행평가가 8월과 9월에 몰려 있어 두 과목 모두 학기 초반에 60%가 결정됩니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11.9~11.11", method: "선택형 100점", course: "사회" },
+      { name: "인구변화와 인구문제 서술하기", kind: "task", weight: 30, timing: "8월", method: "서·논술 30점", course: "사회" },
+      { name: "세계 유명도시 탐구하기", kind: "task", weight: 30, timing: "9월", method: "서·논술, 조사·관찰 보고서 30점", course: "사회" },
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11.9.~11.11.", method: "선택형 100점", course: "역사" },
+      { name: "공민왕의 개혁 정치 탐구하기", kind: "task", weight: 30, timing: "8월", method: "서·논술 30점", course: "역사" },
+      { name: "조선 왕 뇌 구조도 작성하기", kind: "task", weight: 30, timing: "9월", method: "서·논술 30점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회: 인구 요인 20점, 도시 선택 20점",
+        body: "8월 과제는 인구 분포의 자연적·인문사회적 요인과 인구 흡인·배출 요인이 5점씩(20점), 자료를 분석해 인구 문제를 서술하는 3문항이 10점입니다. 9월 과제는 랜드마크로 유명도시 8곳 이름 쓰기 5점, 나라 위치 백지도 표시 5점, 직접 고른 도시 탐구 20점입니다.",
+      },
+      {
+        title: "역사: 공민왕을 다섯 감각으로",
+        body: "공민왕 바디맵은 생각한 것(머리)·본 것(눈)·말한 것(입)·들은 것(귀)·행동한 것(손/다리)이 6점씩이고, 답이 겹치면 1개만 인정합니다. 조선 왕 뇌 구조도는 역사 사실 이해 15점(오류 개수 기준)과 말풍선에 역사 정보 5개 이상을 쓰는 정보 활용 15점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeongubong-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "전기 과제는 전력량 계산이 12점이고, 유전 모의 실험은 두 쌍의 대립 형질을 다룹니다",
+    intro:
+      "대전구봉중학교 3학년 과학은 중간·기말고사 30%씩과 수행평가 두 영역 20%씩입니다. 9~10월 전기 에너지 서술과 10월 유전 모의 실험이 이어지고, 기말고사는 11월 9~11일입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9.10.~9.11.", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11.9.~11.11.", method: "선택형 100점" },
+      { name: "전기 에너지의 효율적인 활용 서술하기", kind: "task", weight: 20, timing: "9~10월", method: "서·논술 20점" },
+      { name: "유전 현상 모의 실험하기", kind: "task", weight: 20, timing: "10월", method: "실험·실습, 서·논술 20점" },
+    ],
+    notes: [
+      {
+        title: "전기 과제는 전력량 계산이 12점",
+        body: "소비 전력과 전력량의 정의 4점, 가전제품의 에너지 전환 설명과 전력량 계산식·값 서술(7개 항목) 12점, 전기 에너지를 효율적으로 쓰는 방법 2가지 4점입니다. 성취기준은 [9과22-03]입니다.",
+      },
+      {
+        title: "유전 실험은 두 쌍의 대립 형질",
+        body: "표현형·유전자형의 의미 4점, 개체의 유전자형과 생식세포 종류, 두 쌍의 대립 형질 교배 결과를 설명하는 탐구 능력 10점, 자손의 모양·색깔별 표현형의 비와 독립적으로 유전되는 현상을 쓰는 문제해결 6점입니다. 서·논술형 반영 비율은 10%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전구봉중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "1차시엔 계획·자료·개요로 16점, 2차시엔 700자 이상 완성 글로 14점을 받습니다",
+    intro:
+      "대전느리울중학교 1학년 국어는 5지 선다형 중간·기말고사가 35%씩이고, 수행평가는 10월 ‘정보 전달하는 글쓰기’ 한 영역(30%)입니다. 1차시에 자료를 모아 개요를 짜고, 2차시에 검색 없이 글을 완성하는 두 단계로 치릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월∼10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "5지 선다형 100점" },
+      { name: "정보 전달하는 글쓰기", kind: "task", weight: 30, timing: "10월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "1차시 16점: 계획·자료·개요",
+        body: "글의 목적·주제·독자를 정하는 계획하기 4점, 주제와 관련된 자료를 3개 이상 마련하는 내용 마련하기 8점, 처음·중간·끝 개요와 자료 배치를 보는 내용 조직하기 4점입니다. 이 차시에는 온라인 자료 검색이 가능하지만 AI 활용은 금지됩니다.",
+      },
+      {
+        title: "2차시 14점은 700자 이상 완성 글",
+        body: "주제에서 벗어난 문장이 없을 것, 문단 내용의 충실함, 자연스러운 흐름, 700자 이상 분량의 네 기준을 몇 개 충족했는지로 14점부터 6점까지 매깁니다. 2차시에는 자료 검색이 금지되고, 기본점수는 9점입니다. 성취기준은 [9국03-02]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "순서쌍과 사분면, 정비례·반비례 관계식과 그래프가 5점씩이고 정팔면체·정십이면체·정이십면체 면의 개수도 5점입니다",
+    intro:
+      "대전느리울중학교 1학년 수학은 중간·기말고사가 30%씩이고 수행평가 두 영역이 20%씩입니다. 좌표평면 탐구는 중간고사 뒤 10월, 도형 탐구는 기말고사와 같은 12월에 있어 학기 후반에 시험과 과제가 겹칩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 ~ 10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "5지 선다형 100점" },
+      { name: "좌표평면과 그래프의 성질 탐구하기", kind: "task", weight: 20, timing: "10월", method: "서술, 프로젝트 20점" },
+      { name: "평면도형과 입체도형의 성질 탐구하기", kind: "task", weight: 20, timing: "12월", method: "서술, 프로젝트 20점" },
+    ],
+    notes: [
+      {
+        title: "좌표평면 탐구 보고서의 네 항목",
+        body: "좌표평면·순서쌍의 구성요소와 사분면의 성질, 수직선과 좌표평면 위의 점의 좌표, 정비례 관계식과 그래프, 반비례 관계식과 그래프가 5점씩입니다. 실생활 문제 상황을 표·관계식·그래프로 나타내는지를 탐구 보고서로 평가합니다.",
+      },
+      {
+        title: "도형 탐구는 합동부터 정다면체까지",
+        body: "합동인 삼각형 3쌍 찾기, 다각형의 대각선 개수와 내각의 크기의 합, 원과 부채꼴로 이루어진 도형의 둘레와 넓이, 정팔면체·정십이면체·정이십면체의 한 꼭짓점에 모이는 면의 개수가 각 5점입니다. 두 과제 모두 기본점수는 7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "필수문법 세 가지와 필수내용 네 가지를 넣고, AI는 1차시 사전활동에서만 쓸 수 있습니다",
+    intro:
+      "대전느리울중학교 1학년 영어는 중간·기말고사 30%씩에 수행평가 40%가 쓰기 30%와 말하기 10%로 나뉩니다. 10월 홍보문 쓰기는 사전활동과 쓰기활동 2차시로, 11월에는 장래 희망에 관한 인터뷰 질문에 답하는 구술평가를 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월~10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "5지 선다형 100점" },
+      { name: "나눔 물건 홍보문 쓰기", kind: "task", weight: 30, timing: "10월", method: "서·논술, 프로젝트 30점" },
+      { name: "듣고 말하기", kind: "task", weight: 10, timing: "11월", method: "구술 10점" },
+    ],
+    notes: [
+      {
+        title: "필수문법 세 가지와 필수내용 네 가지",
+        body: "쓰기활동에서는 to부정사·that절·동사의 과거형을 기능에 맞게 쓰는지 6점, 물건명·구입(소유) 일시와 장소·나눔 이유·물건정보 네 내용을 담았는지 6점, 어법·어휘 오류 수 5점, 10문장 이상 구성 5점을 봅니다. 사전활동(질문 3개 답하기)은 8점입니다.",
+      },
+      {
+        title: "AI는 1차시 사전활동에서만",
+        body: "1차시 사전활동에서만 AI 포함 온라인 검색이 가능하고 2차시 쓰기에서는 금지되며, 2차시 부정행위자는 7점입니다. 듣고 말하기는 질문 3가지에 완전한 문장으로 답하는 과제수행 4점, 발음과 음량·속도 3점, 어휘·어법 3점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "팜플렛 네 칸이 6점씩이고 1차시 사전활동이 6점입니다",
+    intro:
+      "대전느리울중학교 1학년 사회는 정기시험 70%(중간·기말 35%씩)와 10월 ‘국가 소개 팜플렛 만들기’ 30%입니다. 아프리카·아메리카·오세아니아 단원에서 배운 국가 하나를 골라 자연환경과 인문환경을 소개합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월~10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "5지 선다형 100점" },
+      { name: "국가 소개 팜플렛 만들기", kind: "task", weight: 30, timing: "10월", method: "서·논술, 프로젝트 30점" },
+    ],
+    notes: [
+      {
+        title: "팜플렛 네 칸이 6점씩",
+        body: "위치(국가 지도·수도와 주요 도시·국기), 자연환경(지형·기후나 기후 그래프·면적 순위), 인문환경(인구 순위·발달한 산업·랜드마크), 문화(의식주·종교·대표 축제)를 각각 세 요소로 채점해 6점씩 24점입니다. 2차시 제작 활동에서는 온라인 자료 검색이 가능합니다.",
+      },
+      {
+        title: "1차시 사전활동 6점",
+        body: "포트폴리오와 자연환경 또는 인문환경 사진 출력 두 가지를 갖추면 6점입니다. 기본점수는 9점이며, 1차시 부정행위자는 1점, 2차시는 7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "세 상태 특징 5점, 입자 배열 4점, 열에너지 출입 6점, 이용 사례 3가지 5점이며 탄성력 실험은 탐구 설계가 7점입니다",
+    intro:
+      "대전느리울중학교 1학년 과학은 중간·기말고사 30%씩과 수행평가 두 영역 20%씩이며, 두 수행평가가 모두 9~10월에 있습니다. 평가 방침은 수행평가의 50% 이상을 실험(탐구) 평가 결과로 반영한다고 밝히고, 탄성력 측정에 실험·실습이 표시되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9~10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "5지 선다형 100점" },
+      { name: "물질의 상태 변화", kind: "task", weight: 20, timing: "9-10월", method: "서·논술 20점" },
+      { name: "탄성력 측정", kind: "task", weight: 20, timing: "9~10월", method: "서·논술, 실험·실습 20점" },
+    ],
+    notes: [
+      {
+        title: "상태 변화는 열에너지 출입이 6점",
+        body: "물질의 세 상태 특징 5점, 입자 모형과 배열 4점, 상태 변화와 열에너지 출입 관계(흡수·방출하는 상태 변화 포함) 6점, 열에너지 이용 사례 3가지 5점입니다. 성취기준은 [9과04-02]~[9과04-04]입니다.",
+      },
+      {
+        title: "탄성력은 설계부터 결론까지",
+        body: "탐구 과정을 설계해 서술하는 항목이 7점으로 가장 크고, 실험 도구 사용과 늘어난 길이별 힘 측정 6점, 표를 그래프로 바꾸기 4점, 늘어난 길이와 탄성력의 관계·탄성력의 방향 서술 3점입니다. 두 과제 모두 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심의 뜻, 성질 둘, 위치, 외접원·내접원 그리기 등 6가지를 구하고 피타고라스 정리와 무게중심 길이·넓이는 각 5점",
+    intro:
+      "대전느리울중학교 2학년 수학은 중간·기말고사 30%씩과 수행평가 두 영역 20%씩입니다. 9월에 외심·내심 탐구 보고서, 11월에 피타고라스 정리와 닮음을 다루는 서술형 평가가 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 ~ 10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "5지 선다형 100점" },
+      { name: "삼각형의 외심과 내심 찾기", kind: "task", weight: 20, timing: "9월", method: "서술 20점" },
+      { name: "삼각형의 성질과 도형의 닮음 탐구", kind: "task", weight: 20, timing: "11월", method: "서술, 프로젝트 20점" },
+    ],
+    notes: [
+      {
+        title: "외심 10점, 내심 10점",
+        body: "외심과 내심 각각 뜻, 성질 두 가지, 위치 찾기, 외접원·내접원 그리기, 합동인 삼각형 찾기의 6가지를 구하면 10점이고, 하나 줄 때마다 1점씩 내려갑니다. 성취기준은 [9수03-10]입니다.",
+      },
+      {
+        title: "닮음 탐구의 네 요소",
+        body: "피타고라스 정리, 닮음인 삼각형 3쌍 찾기, 닮음비와 닮은 도형의 변의 길이·각의 크기, 삼각형의 무게중심의 뜻과 길이·넓이가 각 5점입니다. 성취기준은 [9수03-12]·[9수03-13]·[9수03-15]이고 기본점수는 7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "관계대명사 두 종류와 지각동사가 필수문법이고, 인터뷰는 자기소개 성격의 질문입니다",
+    intro:
+      "대전느리울중학교 2학년 영어는 중간·기말고사 30%씩, 10월 미술작품 소개 글쓰기 30%, 11월 1:1 인터뷰 형식의 듣고 말하기 10%입니다. 글쓰기는 유명한 미술작품을 조사하는 사전활동과 필수 문법을 넣어 쓰는 쓰기활동으로 나뉩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월∼10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "5지 선다형 100점" },
+      { name: "미술작품 소개하는 글쓰기", kind: "task", weight: 30, timing: "10월", method: "서·논술, 프로젝트 30점" },
+      { name: "듣고 말하기", kind: "task", weight: 10, timing: "11월", method: "구술 10점" },
+    ],
+    notes: [
+      {
+        title: "필수문법은 관계대명사 두 종류와 지각동사",
+        body: "주격 관계대명사, 목적격 관계대명사, 지각동사 5형식 문장을 모두 기능에 맞게 쓰면 6점이고, 작가 소개·그림 묘사·좋은 점·추천 이유의 필수내용이 6점입니다. 오류 3개 이하의 언어 사용 5점, 10문장 이상 구성 5점, 사전활동 8점이 더해집니다.",
+      },
+      {
+        title: "인터뷰는 자기소개 성격의 질문",
+        body: "1:1 인터뷰 질문 3가지에 완전한 문장으로 답하는지(4점), 이해 가능한 발음과 적절한 음량·속도(3점), 어휘·어법 오류 수(3점)를 봅니다. 성취기준은 [9영02-03]·[9영02-06]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "인물 고르기와 사전활동이 5점이고, 질문 한 개당 200자 이상을 씁니다",
+    intro:
+      "대전느리울중학교 2학년 역사는 중간·기말고사 35%씩과 ‘가상인터뷰 기사 작성하기’ 30%입니다. 인터뷰 기사의 시기는 반영 비율표에 11월, 진도표에 10월로 서로 달리 적혀 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9~10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "5지 선다형 100점" },
+      { name: "가상인터뷰 기사 작성하기", kind: "task", weight: 30, method: "서·논술, 프로젝트 30점" },
+    ],
+    notes: [
+      {
+        title: "인물 고르기와 사전활동 5점",
+        body: "송·원·명·청, 일본 무사정권 시기와 신항로 개척 시기에 활동한 인물 한 명을 골라 업적이나 과오가 드러나게 인터뷰 기사를 씁니다. 1차시에는 인물의 활동 시기(국가)와 신분(직업)을 정리하며 5점입니다.",
+      },
+      {
+        title: "질문 한 개당 200자 이상",
+        body: "2차시 25점 중 15점이 질문과 답변의 창의성·타당성으로, 200자 이상인 질문과 답변 5개를 쓰면 15점이고 하나 줄 때마다 2점씩 내려갑니다. 내용의 논리성과 풍부성 5점, 사진·그림 자료 활용 5점이며 기본점수는 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "1차시 12점은 문장 성분과 겹문장, 2차시 18점은 여섯 조건을 채우는 글입니다",
+    intro:
+      "대전느리울중학교 3학년 국어는 중간고사와 11월 기말고사가 35%씩, 9월 ‘문장의 짜임 표현하기’가 30%입니다. 문장 성분과 겹문장을 정리하는 1차시와, 다양한 짜임의 문장으로 글을 쓰는 2차시로 나뉘고 두 차시 모두 검색과 AI가 금지됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월∼10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "5지 선다형 100점" },
+      { name: "문장의 짜임 표현하기", kind: "task", weight: 30, timing: "9월", method: "서·논술 30점" },
+    ],
+    notes: [
+      {
+        title: "1차시 12점은 문장 성분과 겹문장",
+        body: "주성분 4가지와 부속성분 2가지·독립성분 1가지 서술 3점, 주어·관형어·부사어·목적어·서술어를 넣어 완전한 한 문장을 만들고 표시하기 4점, 이어진문장 2가지와 안은문장 5가지의 종류·예문 분류 5점입니다.",
+      },
+      {
+        title: "2차시 18점의 여섯 조건",
+        body: "제목을 홑문장으로, 주어진 안은문장과 이어진문장을 1문장 이상 넣어 밑줄, 호응이 맞는 15문장 이상, 한 가지 중심 내용으로 일관된 전개, 종결 표현과 맞춤법까지 6개 조건을 충족하면 18점입니다. 기본점수는 9점이고 성취기준은 [9국04-06]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비 값 9가지가 8점이고, 두 접선의 길이는 그림과 설명을 4점씩 봅니다",
+    intro:
+      "대전느리울중학교 3학년 수학은 중간·기말고사 30%씩과 서술형 수행평가 두 영역 20%씩입니다. 기말고사가 11월이라 9월 삼각비, 10월 원의 접선과 원주각 과제가 시험 전에 모두 끝납니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 ~ 10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "5지 선다형 100점" },
+      { name: "삼각비 탐구", kind: "task", weight: 20, timing: "9월", method: "서술 20점" },
+      { name: "원의 접선과 원주각", kind: "task", weight: 20, timing: "10월", method: "서술 20점" },
+    ],
+    notes: [
+      {
+        title: "삼각비: 값 9가지가 8점",
+        body: "주어진 각들의 삼각비 값 9가지를 모두 구하면 8점, 직각삼각형에서 나머지 한 변과 삼각비 값 구하기가 6점, 올려본 높이와 내려다본 높이를 구해 타워의 높이를 구하는 문항이 6점입니다. 성취기준은 [9수04-17]·[9수04-18]입니다.",
+      },
+      {
+        title: "두 접선의 길이는 그림과 설명 4점씩",
+        body: "원주각과 중심각의 크기 6점, 접선과 현이 이루는 각 6점에 더해, 두 접선의 길이가 같음을 보이는 그림요소 5개와 설명요소 5개(접점에서의 직각, 반지름의 길이, 두 삼각형의 합동 등)가 각각 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "염색체 행동 6가지가 10점이고, 자유 낙하 실험은 8가지를 측정합니다",
+    intro:
+      "대전느리울중학교 3학년 과학은 중간·기말고사 30%씩과 수행평가 두 영역 20%씩이고, 두 수행평가가 모두 9월에 몰려 있습니다. 기말고사는 11월입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9~10월", method: "5지 선다형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "5지 선다형 100점" },
+      { name: "세포 분열 서술", kind: "task", weight: 20, timing: "9월", method: "서·논술 20점" },
+      { name: "역학적 에너지 전환과 보존", kind: "task", weight: 20, timing: "9월", method: "서·논술, 실험·실습 20점" },
+    ],
+    notes: [
+      {
+        title: "세포 분열은 염색체 행동 6가지가 10점",
+        body: "염색체와 유전자의 정의 4점, 체세포 분열 과정 5가지 설명 6점, 염색체의 행동을 중심으로 한 체세포 분열의 특징 6가지 서술 10점입니다. 성취기준은 [9과21-02]입니다.",
+      },
+      {
+        title: "자유 낙하 실험은 측정 8가지",
+        body: "역학적 에너지 변화를 확인하는 탐구 과정 설계 5점, 물리량 측정·기록과 운동·위치 에너지 식 작성 8가지 10점, 두 에너지의 변화량 비교와 쇠구슬의 역학적 에너지 관계 서술 5점입니다. 기본점수는 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonneuriul-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 주제 탐구는 10회 누적되고, 인구·도시 보고서는 같은 네 기준이며 역사는 고려 시대 인물을 인터뷰합니다",
+    intro:
+      "대전느리울중학교 3학년 사회 영역은 사회와 역사 두 과목입니다. 사회는 11월 기말고사 한 번이 40%이고 수행평가 세 영역이 20%씩으로 60%를 차지하며, 역사는 중간·기말 35%씩과 10월 가상인터뷰 기사 30%입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11월", method: "5지 선다형 100점", course: "사회" },
+      { name: "사회 주제 탐구", kind: "task", weight: 20, timing: "8월~11월", method: "프로젝트, 포트폴리오 20점", course: "사회" },
+      { name: "인구 문제 탐구보고서", kind: "task", weight: 20, timing: "9월", method: "서·논술, 프로젝트 20점", course: "사회" },
+      { name: "도시 문제 탐구보고서", kind: "task", weight: 20, timing: "10월", method: "서·논술, 프로젝트 20점", course: "사회" },
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월~10월", method: "5지 선다형 100점", course: "역사" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "5지 선다형 100점", course: "역사" },
+      { name: "가상인터뷰 기사 작성하기", kind: "task", weight: 30, timing: "10월", method: "서·논술, 프로젝트 30점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 주제 탐구는 10회 누적",
+        body: "수업 정리 시간에 인구 분포, 인구 이동, 도시 경관과 지가, 도시화, 농업의 세계화, 다국적 기업, 서비스업 변화, 기후 변화, 환경 문제 이전, 생활 속 환경 이슈 등 10개 필수 요소를 탐구하며 8월부터 11월까지 진도표에 ①~⑩으로 표시됩니다. 10개를 모두 충족하면 20점, 7~9개 18점입니다.",
+      },
+      {
+        title: "인구·도시 보고서는 같은 네 기준",
+        body: "9월 인구 문제와 10월 도시 문제 보고서 모두 주제의 관련성, 해당 지역(국가)과 발생 원인, 영향(피해), 해결방안 네 기준을 몇 개 충족했는지로 20~12점을 매기며, 백지는 기본점수 8점입니다.",
+      },
+      {
+        title: "역사 인터뷰는 고려 시대 인물",
+        body: "1차시에 인물 선정, 생애 요약, 성품·사상·업적·과오 조사, 질문 구상 네 기준으로 10점을 받고, 2차시에 내용의 풍부성·질문의 창의성·역사적 사실의 정확성·자료 활용 능력을 5점씩 봅니다. 스마트 패드로 포털 검색은 가능하지만 AI 활용은 금지됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전느리울중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "관심사나 사회 문제로 주장 글을 쓰고, 11월엔 아홉 품사를 모두 넣은 편지로 품사 단원을 마무리합니다",
+    intro:
+      "대전여자중학교 1학년 국어는 수행평가 두 과제가 모두 서·논술형 20%이고, 중간·기말고사는 30%씩을 선택형 문항으로만 봅니다. 9월에는 주장하는 글을, 11월에는 품사 단원과 이어진 편지 쓰기를 치르므로 상담은 두 글쓰기 시기와 시험 범위 단원을 함께 놓고 시작합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "주장하는 글 쓰기", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+      { name: "아홉 품사를 포함하여 편지 쓰기", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "9월 과제는 주장하는 글 단원에서 나옵니다",
+        body: "진도표에서 ‘주장하는 글 쓰기’ 수행평가는 9월 [9국03-03](타당한 근거와 적절한 표현을 사용하여 주장하는 글 쓰기) 수업 칸에 놓여 있습니다. 같은 달 앞선 차시에서 자신의 관심사나 사회 문제를 골라 근거를 들어 주장하는 글을 써 보는 적용학습이 먼저 진행됩니다.",
+      },
+      {
+        title: "편지 쓰기는 품사 단원의 마무리 과제",
+        body: "10월에 시작하는 ‘단어의 갈래와 짜임’ 단원에서 [9국04-03] 품사의 종류와 특성을 배우고, 11월 국어 자료로 품사 특성을 탐구한 차시 뒤에 아홉 품사를 포함한 편지 쓰기가 표시되어 있습니다. 이후 12월까지는 같은 단원의 단어의 짜임과 새말 형성([9국04-02])이 이어집니다.",
+      },
+      {
+        title: "시험 일정과 출제 방식",
+        body: "중간고사는 10월 6~7일, 1·2학년 기말고사는 12월 14~16일입니다. 평가 방침에 정기시험은 24~30개의 선택형 문항으로 출제하고 서술형 문항은 내지 않는다고 적혀 있으며, 수행평가 기본점수는 영역 만점의 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "원주율 π를 익힌 뒤 부채꼴 호와 넓이를 구하는 한 과제가 서·논술형 30% 전부를 차지합니다",
+    intro:
+      "대전여자중학교 1학년 수학의 수행평가는 11월 ‘부채꼴의 호의 길이와 넓이 구하기’ 서술형 한 과제(30%)이고, 나머지 70%는 중간·기말고사 35%씩입니다. 상담에서는 부채꼴 단원의 서술형 대비와 두 정기시험의 범위 확인을 나눠서 잡습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "부채꼴의 호의 길이와 넓이 구하기", kind: "task", weight: 30, timing: "11월", method: "서술형 평가 30점" },
+    ],
+    notes: [
+      {
+        title: "서술형 과제는 성취기준 하나에 묶여 있습니다",
+        body: "진도표에서 11월 ‘원과 부채꼴’ 수업 끝에 수행평가가 표시되고, 함께 적힌 성취기준은 [9수03-06] 부채꼴의 중심각과 호의 관계를 이용해 호의 길이와 넓이를 구하는 것 하나입니다. 앞선 차시에서 원주율 π와 중심각·호의 길이·넓이 사이의 관계를 탐구학습으로 다룹니다.",
+      },
+      {
+        title: "학기 진도는 좌표에서 입체도형까지",
+        body: "8월 순서쌍과 좌표([9수02-05])로 시작해 9월 점·선·면과 평행선, 10월 삼각형의 합동과 다각형의 성질, 11월 원과 부채꼴, 다면체와 회전체, 입체도형의 겉넓이와 부피 순으로 진행됩니다. 중간고사는 10월 6~7일, 기말고사는 12월 14~16일입니다.",
+      },
+      {
+        title: "서·논술형 30%는 한 과제에서",
+        body: "정기시험은 26개 선택형 문항, 시험 시간 45분이며 서술형 평가를 출제하지 않습니다. 그래서 평가표의 서·논술형 반영 비율 30%는 모두 부채꼴 과제 몫입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "드라이아이스의 질량과 부피 변화를 본 뒤 서술하고, 용수철 실험 시기는 표와 진도표가 다릅니다",
+    intro:
+      "대전여자중학교 1학년 과학은 서술형 ‘물질의 상태 변화’와 탐구실험 ‘용수철의 탄성력’이 20%씩이고, 중간·기말고사가 30%씩입니다. 두 과제가 입자 단원과 힘 단원에 하나씩 배치되어 있어 상담은 단원별 서술·실험 준비를 나눠 잡는 데서 시작합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "물질의 상태 변화", kind: "task", weight: 20, timing: "9월", method: "서술형 20점" },
+      { name: "용수철의 탄성력", kind: "task", weight: 20, method: "탐구실험 20점(서·논술형 반영 10%)" },
+    ],
+    notes: [
+      {
+        title: "용수철 과제 시기는 표마다 다릅니다",
+        body: "평가 방법 및 시기 표에는 ‘용수철의 탄성력’이 11월로 적혀 있지만, 진도표에서는 10월 ‘힘의 작용’ 단원에서 중력·탄성력을 배우고 용수철의 탄성력을 측정하는 모둠 실험을 한 뒤에 수행평가가 표시되어 있습니다. 이 과제는 서·논술형 반영이 10%로 잡혀 있습니다.",
+      },
+      {
+        title: "상태 변화 서술형은 9월",
+        body: "9월 진도에서 [9과04-02] 물질의 세 가지 상태와 입자 모형, [9과04-03] 상태 변화 관찰을 배우고, 드라이아이스가 상태 변화할 때 질량과 부피 변화를 측정하는 모둠 활동 뒤에 서술형 수행평가가 이어집니다. 이 과제의 서·논술형 반영은 20%입니다.",
+      },
+      {
+        title: "정기시험과 뒤쪽 진도",
+        body: "정기시험은 24~30개의 선택형 문항으로 45분 동안 치르고 서술형은 출제하지 않습니다. 중간고사 10월 6~7일 이후 11월에는 기체의 압력·온도와 부피, 12월에는 태양계와 달의 위상이 기말고사(12월 14~16일)까지 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "일상 문화 사례로 의미와 특징을 끌어낸 뒤 미디어를 탐구하며, 시험엔 서술형이 없습니다",
+    intro:
+      "대전여자중학교 1학년 사회는 수행평가가 ‘미디어와 문화 탐구하기’ 한 과제(30%)이고, 중간·기말고사가 35%씩입니다. 수업은 주 2시간이며 과제는 문화 단원이 시작되는 9월 진도 칸에 들어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "미디어와 문화 탐구하기", kind: "task", weight: 30, method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "과제는 문화 단원과 함께",
+        body: "평가 방법 및 시기 표는 이 과제를 9~10월로, 진도표는 9월 ‘다양한 문화의 이해’ 수업 칸에 적고 있습니다. 같은 달 [9사(일사)02-01] 일상생활의 문화 사례로 문화의 의미와 특징을 도출하는 수업에서 문화의 보편성·특수성·공유성·학습성·축적성·변동성·전체성을 개념으로 다룹니다.",
+      },
+      {
+        title: "두 시험에 걸친 단원 흐름",
+        body: "8월 사회화와 사회적 지위·역할, 9월 갈등과 차별·문화, 10월 정치와 민주주의, 11월 선거와 정치 과정, 12월 법의 의미와 사회법 순으로 나갑니다. 중간고사는 10월 6~7일, 기말고사는 12월 14~16일입니다.",
+      },
+      {
+        title: "서·논술형은 수행평가에만",
+        body: "정기시험은 26개의 선택형 문항으로 출제하고 서술형 평가는 하지 않는다고 평가 방침에 적혀 있습니다. 평가표의 서·논술형 반영 비율 30%는 미디어와 문화 탐구하기 한 과제에서 나옵니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "Lesson 6에서 접속사 that으로 말하고, Lesson 7 감각동사와 비교급으로 문장을 만듭니다",
+    intro:
+      "대전여자중학교 1학년 영어는 중간·기말고사 30%씩에 수행평가 40%가 말하기 10%와 쓰기 30%로 나뉩니다. 쓰기 비중이 말하기의 세 배이고 서·논술형 반영 30%가 모두 쓰기에서 나온다는 점이 상담의 출발점입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "말하기", kind: "task", weight: 10, timing: "10월", method: "구술평가 10점" },
+      { name: "쓰기", kind: "task", weight: 30, timing: "11월", method: "서술형평가 30점" },
+    ],
+    notes: [
+      {
+        title: "말하기는 Lesson 6 진도 중에",
+        body: "10월 진도는 Lesson 6 ‘The Beauty of Art’이고, 접속사 that과 to부정사의 명사적 용법을 언어 형식으로 익힌 뒤 말하기(구술평가)가 표시되어 있습니다. 말하기는 10점 만점이며 서·논술형 반영은 0%입니다.",
+      },
+      {
+        title: "쓰기는 Lesson 7 문법 활용",
+        body: "11월 Lesson 7 ‘Tasty World’에서 감각동사와 비교급을 배우고, 쓰기(서술형평가)는 ‘주요 문법 활용하여 문장 만들기’로 적혀 있습니다. 같은 단원에서 오물렛을 소개하는 글을 읽고 음식을 소개하는 글을 써서 발표하는 활동도 진행됩니다.",
+      },
+      {
+        title: "정기시험 일정",
+        body: "중간고사 10월 6~7일, 기말고사 12월 14~16일이며 정기시험은 26개 선택형 문항으로 서술형 없이 출제됩니다. 기말 범위 쪽 12월 진도는 Lesson 8 ‘Living Together’입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "반어·역설·풍자를 배운 뒤 시를 해석하고, 대중가요 가사로 음운 체계의 쓰임을 살핍니다",
+    intro:
+      "대전여자중학교 2학년 국어는 문학 과제 ‘역설과 반어를 중심으로 시 해석하기’와 문법 과제 ‘노래 가사 속 문법 요소 탐구하기’가 20%씩이고, 중간·기말고사가 30%씩입니다. 학기 첫 단원이 ‘창의적인 발상과 표현’이라 시 해석 과제가 9월에 먼저 옵니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "역설과 반어를 중심으로 시 해석하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형 20점" },
+      { name: "노래 가사 속 문법 요소 탐구하기", kind: "task", weight: 20, method: "서·논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "시 해석 과제 앞의 두 차시 묶음",
+        body: "8월에 반어와 역설의 뜻과 독자에게 주는 영향을, 9월에 풍자의 뜻과 현실의 모순을 풍자해 보는 활동을 다룬 뒤 수행평가가 표시되어 있습니다. 함께 적힌 성취기준은 [9국05-06] 자신의 경험을 개성적인 발상과 표현으로 형상화하기입니다.",
+      },
+      {
+        title: "문법 과제는 음운 체계 단원과 연결",
+        body: "10월 ‘음운과 문자의 체계’([9국04-01])에서 음운 체계에 반영된 원리를 탐구하고 대중가요 가사로 음운 체계의 쓰임을 살펴본 뒤 노래 가사 과제가 이어집니다. 시기는 평가 방법 및 시기 표에 10~11월, 진도표에 10월로 적혀 있습니다.",
+      },
+      {
+        title: "정기시험과 11~12월 진도",
+        body: "두 정기시험 모두 선택형 100점, 서·논술형 0점입니다. 중간고사는 10월 6~7일, 기말고사는 12월 14~16일이고, 그 사이 11~12월에는 매체 자료 평가하며 읽기, 고쳐쓰기, 갈등을 조정하는 대화가 진도에 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "닮음의 뜻과 조건을 원리로 익힌 뒤 풀고, 26문항 45분 시험엔 서술형이 없습니다",
+    intro:
+      "대전여자중학교 2학년 수학은 10월 ‘삼각형의 닮음 이해하기’ 서술형 평가가 수행평가 30% 전부이고, 중간·기말고사가 35%씩입니다. 같은 10월에 중간고사(10월 6~7일)도 있어 닮음 단원 서술 준비와 시험 준비 시기가 맞물립니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "삼각형의 닮음 이해하기", kind: "task", weight: 30, timing: "10월", method: "서술형 평가 30점" },
+    ],
+    notes: [
+      {
+        title: "과제 범위는 닮음 성취기준 두 개",
+        body: "진도표의 수행평가 표시에는 범위가 [9수03-12](닮음의 뜻과 닮은 도형의 성질, 닮음비)~[9수03-13](삼각형의 닮음 조건)으로 적혀 있습니다. 10월 수업에서 삼각형의 닮음 조건을 원리로 익히고 개별 문제 해결로 연습한 뒤 평가합니다.",
+      },
+      {
+        title: "9월부터 12월까지의 단원 순서",
+        body: "8월 이등변삼각형, 9월 평행사변형 등 사각형의 성질과 도형의 닮음, 10월 닮음 조건과 평행선 사이 선분의 길이의 비, 11월 피타고라스 정리와 경우의 수, 12월 확률 순으로 진행됩니다. 기말고사는 12월 14~16일입니다.",
+      },
+      {
+        title: "시험 문항 형식",
+        body: "중간·기말 모두 선택형 100점으로, 26개 문항을 45분 동안 풉니다. 서·논술형 반영 30%는 닮음 과제 하나에 들어 있고, 수행평가 기본점수는 영역 만점의 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "혈액 순환 경로를 종합해 서술하고, 저항·전류·전압 관계는 탐구실험으로 끌어냅니다",
+    intro:
+      "대전여자중학교 2학년 과학은 생명 단원의 ‘순환계’ 서술형과 전기 단원의 ‘옴의 법칙’ 탐구실험이 20%씩이고, 중간·기말고사가 30%씩입니다. 두 과제가 9월과 10월에 연달아 있어 중간고사 전후 일정이 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "순환계", kind: "task", weight: 20, timing: "9월", method: "서술형 20점" },
+      { name: "옴의 법칙", kind: "task", weight: 20, timing: "10월", method: "탐구실험 20점(서·논술형 반영 10%)" },
+    ],
+    notes: [
+      {
+        title: "순환계 서술형은 소화계 다음",
+        body: "9월 진도에서 소화계([9과13-01])에 이어 순환계([9과13-02], 혈액의 순환 경로를 종합하여 발표)를 배우고 바로 서술형 수행평가가 표시됩니다. 이 과제의 서·논술형 반영 비율은 20%입니다.",
+      },
+      {
+        title: "옴의 법칙은 전기 회로 실험",
+        body: "전기 회로에서 저항·전류·전압의 관계를 실험으로 이끌어내는 [9과14-02]와 저항의 직렬·병렬연결([9과14-03]) 진도 중 10월에 탐구실험으로 평가합니다. 서·논술형 반영은 10%로 순환계 과제의 절반입니다.",
+      },
+      {
+        title: "정기시험 형식과 일정",
+        body: "정기시험은 24~30개 선택형 문항·45분이며 서술형은 출제하지 않습니다. 중간고사 10월 6~7일, 기말고사 12월 14~16일이고 11월부터는 연주시차와 우리은하 등 별과 우주 단원이 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "유럽의 산업화와 제국주의를 배우는 10월에 과제가 있고, 기본점수는 만점의 40%입니다",
+    intro:
+      "대전여자중학교 2학년 사회 영역은 역사 과목으로, 중간·기말고사 35%씩과 10월 수행평가 ‘산업혁명’ 30%로 구성됩니다. 역사는 주 3시간 수업이며 과제는 제국주의 단원 진도에 맞춰 놓여 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형 100점" },
+      { name: "산업혁명", kind: "task", weight: 30, timing: "10월", method: "서·논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "산업혁명 과제가 놓인 단원",
+        body: "10월 ‘제국주의 침략과 국민 국가 건설 운동’ 단원에서 Ⅴ.2 유럽의 산업화와 제국주의를 배우는 시기에 수행평가가 표시됩니다. 관련 성취기준은 서양의 산업화와 제국주의 정책이 사회와 생태환경에 미친 영향을 분석하는 [9역05-02]입니다.",
+      },
+      {
+        title: "중간·기말 범위의 시대 흐름",
+        body: "9월 송·몽골 제국 시기 교역권부터 오스만 제국과 시민 혁명까지, 10월 제국주의와 아시아의 국민 국가 건설, 11월 두 차례 세계 대전과 민족 운동, 12월 냉전과 20세기 후반 민주주의로 이어집니다. 중간고사는 10월 6~7일, 기말고사는 12월 14~16일입니다.",
+      },
+      {
+        title: "출제 형식과 기본점수",
+        body: "정기시험은 24~30개 선택형 문항으로 서술형평가가 없습니다. 역사과 수행평가 기본점수는 수업에 참여한 경우 영역 만점의 40%로 정해져 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "인물 묘사 10점과 존경하는 인물 소개 20점, 듣기는 9월 2일에 치릅니다",
+    intro:
+      "대전여자중학교 2학년 영어는 중간·기말고사 30%씩, 9월 듣기 10%, 11월 쓰기 30%입니다. 쓰기 30점은 인물을 묘사하는 글과 존경하는 인물을 소개하는 글 두 편으로 나뉘어 배점됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월", method: "듣기 10점" },
+      { name: "쓰기", kind: "task", weight: 30, timing: "11월", method: "서술형 평가 30점" },
+    ],
+    notes: [
+      {
+        title: "쓰기 30점은 두 편의 글",
+        body: "진도표의 11월 칸에 쓰기 서술형 평가가 ① 인물 묘사하는 글쓰기(10점), ② 존경하는 인물 소개하는 글쓰기(20점)로 적혀 있습니다. 평가표에서 서·논술형 반영 30%가 이 과제입니다.",
+      },
+      {
+        title: "듣기는 날짜까지 정해져 있습니다",
+        body: "듣기 수행평가는 Lesson 5 ‘Be a Detective’ 진도 중 9월 2일(수)로 표시되어 있습니다. 10점 만점이고 서·논술형 반영은 없으며, 같은 단원에서 추리 이야기를 이해하고 범인을 추리하는 글쓰기 활동이 함께 진행됩니다.",
+      },
+      {
+        title: "시험과 단원 배치",
+        body: "정기시험은 26개 선택형 문항으로 서술형이 없습니다. 중간고사 10월 6~7일 전후로 Lesson 6 ‘Discovering Heroes’를, 11월 Lesson 7 ‘Be a Smart Shopper’, 12월 Lesson 8을 배우고 기말고사는 12월 14~16일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "‘음운의 세계’에서 체계와 특성을 서술하고, 중간 뒤 11월엔 연설과 주장 글 단원이 이어집니다",
+    intro:
+      "대전여자중학교 3학년 국어는 수행평가가 10월 ‘음운 탐구’ 서술형 하나(30%)이고 중간·기말고사가 35%씩이어서, 1·2학년(시험 30%씩)보다 시험 비중이 큽니다. 3학년 기말고사는 11월 11~13일로 1·2학년보다 한 달 빠릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형 100점" },
+      { name: "음운 탐구", kind: "task", weight: 30, timing: "10월", method: "서술형 평가 30점" },
+    ],
+    notes: [
+      {
+        title: "음운 탐구가 놓인 단원",
+        body: "10월 ‘정확하게 말하고, 비판적으로 듣고’ 단원의 ‘음운의 세계’에서 [9국04-02] 음운의 체계와 특성을 배우는 진도에 수행평가(서술형 평가)가 표시되어 있습니다. 30점 만점이고 서·논술형 반영 30%가 모두 이 과제입니다.",
+      },
+      {
+        title: "두 시험 사이의 진도",
+        body: "8~9월에는 능동적으로 해결하며 읽기, 토론에서 논박하기, 문학 단원을 다루고, 10월 중간고사(10월 6~7일) 뒤 11월에는 설득 전략이 담긴 연설과 논리적으로 읽기·주장하는 글쓰기가 이어집니다.",
+      },
+      {
+        title: "출제는 선택형만",
+        body: "평가 방침에 정기시험은 24~30개 선택형 문항으로 출제하며 서술형 문항은 내지 않는다고 적혀 있습니다. 두 정기시험 모두 선택형 100점, 서·논술형 0점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "예각의 삼각비 값, 삼각비 표, 길이 구하기를 개별학습으로 연습하고 26개 선택형 문항에 서술형은 출제되지 않습니다",
+    intro:
+      "대전여자중학교 3학년 수학은 학기 초 9월에 ‘삼각비 활용하기’ 서술형 평가(30%)를 보고, 이후 중간고사와 11월 기말고사가 35%씩입니다. 수행평가가 학기 첫 단원에 놓여 있다는 점이 같은 학교 1·2학년과 다릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형 100점" },
+      { name: "삼각비 활용하기", kind: "task", weight: 30, timing: "9월", method: "서술형 평가 30점" },
+    ],
+    notes: [
+      {
+        title: "삼각비 과제의 성취기준",
+        body: "수행평가 표시에는 [9수04-17] 삼각비의 뜻과 간단한 삼각비의 값, [9수04-18] 삼각비를 활용한 문제 해결이 함께 적혀 있습니다. 9월 진도에서 예각의 삼각비 값, 삼각비의 표 이용, 삼각비로 길이 구하기를 개별학습으로 연습한 뒤 평가합니다.",
+      },
+      {
+        title: "삼각비 뒤로 이어지는 단원",
+        body: "9월 말 원의 현과 접선의 성질, 10월 원주각과 중앙값·최빈값·평균, 11월 분산·표준편차와 산점도·상관관계가 기말고사 전까지 이어집니다. 중간고사는 10월 6~7일, 3학년 기말고사는 11월 11~13일입니다.",
+      },
+      {
+        title: "정기시험 조건",
+        body: "정기시험은 26개 선택형 문항, 시험 시간 45분이며 서술형 평가는 출제하지 않습니다. 수행평가에 참여하면 영역 만점의 30%가 기본점수입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "체세포 분열과 가계도 서술, 발전기 만들기에 이어 에너지 보존 실험을 하고 기말고사는 11월에 치릅니다",
+    intro:
+      "대전여자중학교 3학년 과학은 ‘세포분열 및 가계도 분석’ 서술형과 ‘역학적 에너지 전환과 보존’ 탐구실험이 20%씩이고, 중간·기말고사가 30%씩입니다. 3학년 기말고사가 11월이라 두 수행평가가 모두 9~10월에 끝납니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "세포분열 및 가계도 분석", kind: "task", weight: 20, timing: "9월", method: "서술형 20점" },
+      { name: "역학적 에너지 전환과 보존", kind: "task", weight: 20, timing: "10월", method: "탐구실험 20점(서·논술형 반영 10%)" },
+    ],
+    notes: [
+      {
+        title: "유전 단원 서술형",
+        body: "9월 진도는 체세포 분열과 생식세포 형성, 멘델의 유전 원리, 가계도를 이용한 사람의 유전([9과21-02]~[9과21-05])이고, 사람의 유전 연구와 형질 유전 모둠 학습 뒤에 서술형 수행평가가 이어집니다.",
+      },
+      {
+        title: "에너지 실험은 전자기 유도 다음",
+        body: "10월에 전자기 유도와 발전기 만들기, 에너지의 전환과 보존 모둠 학습을 거쳐 탐구실험이 표시되어 있습니다. 서·논술형 반영은 탐구실험이 10%, 서술형 과제가 20%로 표에 적혀 있습니다.",
+      },
+      {
+        title: "시험 일정과 중간 진도",
+        body: "정기시험은 24~30개 선택형 문항·45분입니다. 중간고사 10월 6~7일, 기말고사 11월 11~13일이며 10월 진도에는 별의 거리와 표면 온도, 우리은하, 우주 팽창이 함께 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daejeonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "Lesson 6·7 Writing으로 다른 나라 홍보글과 도움 준 사람 소개글을 쓰고, 서·논술형 반영은 쓰기 30%뿐입니다",
+    intro:
+      "대전여자중학교 3학년 영어는 수행평가가 50%로 1·2학년(40%)보다 크고, 중간·기말고사는 25%씩입니다. 듣기 20%는 9월 영어듣기평가로, 쓰기 30%는 10월 서술형 평가로 치릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "11월", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 20, timing: "9월", method: "영어듣기평가 20점" },
+      { name: "쓰기", kind: "task", weight: 30, timing: "10월", method: "서술형 평가 30점" },
+    ],
+    notes: [
+      {
+        title: "쓰기 과제는 두 종류의 글",
+        body: "진도표에 10월 쓰기 수행평가는 세계의 다른 나라 홍보글과 나에게 도움을 준 사람을 소개하는 글을 작성하는 서술형 평가로 적혀 있습니다. Lesson 6 ‘Meet the World’와 Lesson 7 ‘How to Get Along with People’의 Writing 활동이 같은 달에 묶여 있습니다.",
+      },
+      {
+        title: "듣기 20점",
+        body: "듣기 수행평가는 9월 Lesson 7 진도 칸에 ‘듣기(영어듣기평가)’로 표시되어 있고, 같은 달 9월 1~3일이 영어듣기평가 기간입니다. 서·논술형 반영은 쓰기 30%뿐입니다.",
+      },
+      {
+        title: "3학년 시험 일정",
+        body: "정기시험은 26개 선택형 문항으로 서술형이 없습니다. 중간고사 10월 6~7일, 기말고사 11월 11~13일이며 중간고사 뒤 Lesson 8 ‘Have fun With Art!’, 11월 Lesson 9 순으로 진도가 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대전여자중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "창작 의도 탐구 비평글 25%(9월 4~5주) · 매체 자료 분석·제작 프로젝트 25%(10월 2~3주)",
+    intro:
+      "대평중학교 2학년 국어는 2학기 정기시험이 12월 7~8일 기말시험 한 번(50%)이고, 수행평가 두 과제가 25%씩입니다. 9월 말 문학 비평글, 10월 중순 매체 자료 제작이 차례로 이어져 두 과제가 모두 10월 안에 실시됩니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "12월 7일 ~ 12월 8일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "12월 7일 ~ 12월 8일", method: "서답형 40점" },
+      { name: "작품에 반영된 사회·문화적 상황과 창작 의도 탐구하기", kind: "task", weight: 25, timing: "9월 4주~9월 5주", method: "논술형" },
+      { name: "매체 자료 비판적으로 분석하고 제작하기", kind: "task", weight: 25, timing: "10월 2주~10월 3주", method: "프로젝트형" },
+    ],
+    notes: [
+      {
+        title: "비평글은 배경 탐색부터 성찰까지 4단계",
+        body: "작품 속 사회·문화적 배경 탐색 25점, 작가의 창작 의도 도출 25점, 개요 작성 및 비평글 쓰기 30점, 성찰 및 최종 점검 20점입니다. AI는 1단계에서 시대 배경이나 어휘 뜻을 찾는 단순 검색, 4단계에서 어법 확인에만 제한적으로 허용됩니다. 진도표에는 9월 21일 주와 28일 주에 ①·② 두 차시로 나뉘어 실시됩니다.",
+      },
+      {
+        title: "매체 과제는 분석 50점, 제작 50점",
+        body: "광고·홍보물 같은 매체 자료의 타당성·신뢰성과 표현 방법을 평가(25점)하고 생산자의 의도와 관점을 분석(25점)한 뒤, 자신의 관점을 담은 매체 자료를 만들고(30점) 제작 의도를 설명(20점)합니다. 분석과 설명 단계는 AI를 쓸 수 없고 제작 단계에서만 아이디어 구상용으로 제한 허용됩니다.",
+      },
+      {
+        title: "미제출은 최하점에서 5점 감점",
+        body: "수업에 참여했지만 수행평가에 응시하지 않거나 제출하지 않으면 영역별 채점기준표 최하점에서 5점을 뺀 점수를 받습니다. 기말시험 50%는 선택형 60점(30%)과 서답형 40점(20%)으로 나뉩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심 성질 활용 문제 해결 25%(9월 5주) · 닮음 활용 문제 해결 25%(11월 1주)",
+    intro:
+      "대평중학교 2학년 수학은 12월 7~8일 기말시험 50%와 수행평가 50%입니다. 수행평가는 9월 5주 삼각형의 성질, 11월 1주 도형의 닮음으로 한 달 넘게 떨어져 있습니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "12월 7일 ~ 12월 8일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "12월 7일 ~ 12월 8일", method: "서답형 40점" },
+      { name: "삼각형의 성질을 활용하여 문제 해결하기", kind: "task", weight: 25, timing: "9월 5주", method: "논술형" },
+      { name: "도형의 닮음을 이용하여 여러 가지 문제 해결하기", kind: "task", weight: 25, timing: "11월 1주", method: "서술형" },
+    ],
+    notes: [
+      {
+        title: "삼각형 과제는 근거 제시와 문제 해결이 30점씩",
+        body: "이등변삼각형과 외심·내심의 개념과 성질을 설명하고, 외심·내심 관련 예시에 성질을 적용하는 과정을 설명한 뒤 논리적 근거를 들어 문제를 풉니다. 수학적 개념 및 성질의 정확성 20점, 수학적 근거 제시의 타당성 30점, 외심과 내심의 성질 적용 및 예시의 적절성 20점, 문제 해결 30점이고 AI는 쓰지 않습니다.",
+      },
+      {
+        title: "닮음 과제는 평면과 입체를 모두 다룸",
+        body: "닮음의 뜻과 닮음비를 설명하고, 두 삼각형의 닮음 조건을 근거와 함께 찾은 뒤, 평면도형과 입체도형에서 닮음 관계를 적용하고 결과를 해석합니다. 개념 정확성 20점, 닮음 조건 판단 및 근거 제시 20점, 닮음 관계 적용 및 수학 전략 선택 30점, 문제 해결의 정확성 및 결과 해석 30점입니다. 성취기준은 [9수03-12]·[9수03-13]입니다.",
+      },
+      {
+        title: "기말시험 한 번에 서답형 40점",
+        body: "기말시험은 선택형 60점이 30%, 서답형 40점이 20%로 반영됩니다. 삼각형 과제의 성취기준은 [9수03-09]·[9수03-10]이며 진도표에는 9월 28일~10월 2일 주에 실시로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "간이 전동기 제작·작동 원리 탐구 25%(10월 4주) · 세포 호흡과 기관계 설명 25%(11월 3주)",
+    intro:
+      "대평중학교 2학년 과학은 12월 7~8일 기말시험 50%, 수행평가 두 과제 50%입니다. 10월에는 직접 만든 전동기로 자기장 속 힘을 탐구하고, 11월에는 순환·호흡을 묶어 세포 호흡을 설명하는 과제가 이어집니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "12월 7일 ~ 12월 8일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "12월 7일 ~ 12월 8일", method: "서답형 40점" },
+      { name: "자기장 속 힘을 이용한 전동기 제작 및 탐구하기", kind: "task", weight: 25, timing: "10월 4주", method: "탐구형" },
+      { name: "세포 호흡과 기관계의 통합적 작용 설명하기", kind: "task", weight: 25, timing: "11월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "전동기는 실제로 돌아가야 40점",
+        body: "간이 전동기 세트로 에나멜선을 감아 코일을 만들고 전동기를 완성한 뒤, 그림을 바탕으로 작동 원리를 논술하고 일상생활 활용 사례를 조사해 최종 보고서와 자기 평가를 냅니다. 전동기 제작 및 작동 40점, 작동 원리 분석의 논리성 30점, 실생활 사례 탐구 및 전이 30점이며 AI 활용은 전면 금지입니다.",
+      },
+      {
+        title: "세포 호흡 과제는 그림과 모형으로 설명",
+        body: "순환계 구조를 그림으로 나타내 혈액 순환 경로를 설명(40점)하고, 호흡 운동 모형을 만들어 원리를 설명(30점)한 뒤, 세포 호흡과 기관계의 통합적 작용을 설명(30점)합니다. 진도표에는 10월 12일 주부터 수행평가 연계 형성평가가 이어지고 11월 16~20일 주에 실시됩니다.",
+      },
+      {
+        title: "기말시험 구성",
+        body: "기말시험 50%는 선택형 60점(30%)과 서답형 40점(20%)입니다. 전동기 과제는 진도표상 10월 19~23일 주에 실시로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "존경하는 인물 소개 글 20%(10월 2주) · 상황별 표현 대화하기 20%(11월 3주) · 영어듣기 10%",
+    intro:
+      "대평중학교 2학년 영어는 12월 7~8일 기말시험 50%와 수행평가 50%(영어듣기 10%, 쓰기 20%, 말하기 20%)입니다. 9월 2일 듣기평가로 시작해 10월에 인물 소개 글, 11월에 대화하기가 이어집니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "12월 7~8일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "12월 7~8일", method: "서답형 40점" },
+      { name: "영어듣기", kind: "task", weight: 10, timing: "9월 2일" },
+      { name: "존경하는 인물 소개하는 글쓰기", kind: "task", weight: 20, timing: "10월 2주", method: "논술형" },
+      { name: "상황에 맞는 표현을 활용한 대화하기", kind: "task", weight: 20, timing: "11월 3주", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "인물 소개 글은 어법 40점",
+        body: "존경하는 인물을 정해 본받고 싶은 점을 탐색하고, 친구들과 공유·피드백을 거쳐 소개 글을 씁니다. 어법 사용의 정확성 40점, 언어 사용의 적절성 30점, 내용 및 구성 30점이며, 진도표에는 학기 초부터 주격관계대명사로 역사 속 인물을 소개하는 연습이 이 과제와 연계되어 있습니다. 총괄평가 단계에서는 AI를 쓰지 않습니다.",
+      },
+      {
+        title: "대화하기는 상대 의도 파악부터",
+        body: "대화의 상황과 맥락을 파악해 상대의 의도를 이해하고, 알맞은 표현과 의사소통 전략을 골라 자연스럽게 대화합니다. 언어 사용의 적합성 40점, 발음 및 유창성 30점, 의사소통 전략 30점이고 진도표상 11월 16~20일 주에 실시됩니다.",
+      },
+      {
+        title: "듣기는 EBS 전국 영어듣기평가",
+        body: "영어듣기 10%는 EBS 전국 영어듣기평가로 9월 2일에 치르며 진도표에는 8월 31일~9월 4일 주에 실시로 적혀 있습니다. 기말시험은 선택형 60점(30%)과 서답형 40점(20%)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "산업혁명 영향 분석 글 25%(9월 5주) · 국민 국가 특징 탐구 역사신문 25%(10월 4주)",
+    intro:
+      "대평중학교 2학년 역사는 12월 7~8일 기말시험 50%, 수행평가 두 과제 50%입니다. 9월 5주 산업혁명 분석 글은 수업 시간 안에 손으로 쓰고, 10월 4주 역사신문은 기사·인터뷰·광고 형태로 만듭니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "12월 7일 ~ 12월 8일", method: "선택형 60점", course: "역사" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "12월 7일 ~ 12월 8일", method: "서답형 40점", course: "역사" },
+      { name: "산업혁명의 영향을 분석하는 글쓰기", kind: "task", weight: 25, timing: "9월 5주", course: "역사" },
+      { name: "국민 국가의 특징을 탐구하는 역사신문 만들기", kind: "task", weight: 25, timing: "10월 4주", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "산업혁명 글은 AI 없이 수기 작성",
+        body: "각국 산업 혁명의 내용을 파악하고 역사 자료를 분석해 긍정적·부정적 영향을 정리한 뒤, 자신만의 역사적 평가와 근거를 담아 글을 씁니다. 내용의 정확성 20점, 사례 분석 및 해석 능력 30점, 주장의 논리적 타당도 30점, 관점의 일관성 20점이며 모든 단계에서 AI를 쓰지 않고 수업 시간에 손으로 씁니다. 성취기준은 [9역05-02]입니다.",
+      },
+      {
+        title: "역사신문은 유럽·아메리카와 아시아 사례",
+        body: "국민 국가의 개념을 파악하고 유럽·아메리카의 시민 혁명, 서아시아·인도·동아시아의 국민 국가 건설 과정을 탐구해 신문기사·인터뷰·광고 형태의 역사신문을 만듭니다. 탐구 주제의 적절성 20점, 내용의 정확성 및 논리적 타당성 30점, 인물·정책·사건 분석의 타당성 30점, 국민 국가에 대한 파악 및 표현력 20점이고, AI는 기초 자료 수집 단계에서만 허용됩니다.",
+      },
+      {
+        title: "진도표의 실시 주",
+        body: "산업혁명 글은 9월 28일~10월 2일 주, 역사신문은 10월 19~23일 주에 실시로 적혀 있습니다. 기말시험은 선택형 60점(30%)과 서답형 40점(20%)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "진로 프로젝트는 보고서와 담화 대본 두 편이고, 시 말하기는 해석 방법 적용이 40점입니다",
+    intro:
+      "대평중학교 3학년 국어는 11월 2~4일 기말시험이 50%, 수행평가 두 과제가 25%씩입니다. 진로 탐구 보고서와 설득 담화를 묶은 프로젝트가 9월, 시 해석을 말로 발표하는 구술 과제가 기말시험 직전인 10월 5주에 놓입니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "11월 2일 ~ 11월 4일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "11월 2일 ~ 11월 4일", method: "서답형 40점" },
+      { name: "나의 꿈 탐구 프로젝트", kind: "task", weight: 25, timing: "9월 3주", method: "프로젝트형" },
+      { name: "시 분석하여 말하기", kind: "task", weight: 25, timing: "10월 5주", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "진로 프로젝트는 보고서와 담화 대본 두 편",
+        body: "강점과 흥미에 따라 진로 분야를 정해 조사 계획을 세우고, 자료를 분석해 탐구 보고서를 쓴 뒤 예상 청중을 고려한 설득 담화 대본을 작성합니다. 자료의 비교와 비판적 검토 25점, 탐구 보고서의 구성과 서술 30점, 설득 담화의 구성과 전략 활용 25점, 언어 규범과 쓰기 윤리 준수 20점이며, AI는 분야 탐색과 용어 뜻풀이에만 제한 허용되고 두 쓰기 단계는 금지입니다.",
+      },
+      {
+        title: "시 말하기는 해석 방법 적용 40점",
+        body: "시집을 읽고 해석 방법을 적용할 시를 고른 뒤, 근거의 차이에 따른 여러 해석을 바탕으로 분석해 말로 발표합니다. 다양한 해석 방법 적용 및 분석 40점, 비교 분석 및 종합적 사고 30점, 구술 표현 및 의사소통 30점이며 AI 없이 웹 검색으로 배경 정보만 찾습니다.",
+      },
+      {
+        title: "기말시험은 11월 초",
+        body: "기말시험은 11월 2~4일로 선택형 60점(30%)과 서답형 40점(20%)입니다. 진도표에는 9월 14~18일 주에 진로 프로젝트, 10월 26~30일 주에 시 말하기 실시가 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 두 과제는 앞 두 항목이 30점씩, 역사는 가족 제도 속 여성의 지위와 조선 역사신문을 다룹니다",
+    intro:
+      "대평중학교 3학년 사회와 역사는 모두 11월 2~4일 기말시험 50%와 수행평가 두 과제 25%씩으로 구성이 같습니다. 사회는 인구·도시 단원의 제안서와 계획서, 역사는 고려·조선 시기의 글쓰기와 역사신문을 과제로 합니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "11월 2일 ~ 11월 4일", method: "선택형 60점", course: "사회" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "11월 2일 ~ 11월 4일", method: "서답형 40점", course: "사회" },
+      { name: "저출산 고령화 정책 제안서 작성하기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형", course: "사회" },
+      { name: "살기 좋은 도시 계획서 작성하기", kind: "task", weight: 25, timing: "10월 2주", method: "논술형", course: "사회" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "11월 2일 ~ 11월 4일", method: "선택형 60점", course: "역사" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "11월 2일 ~ 11월 4일", method: "서답형 40점", course: "역사" },
+      { name: "고려와 조선의 가족 제도를 분석하는 글쓰기", kind: "task", weight: 25, timing: "9월 2주", course: "역사" },
+      { name: "조선의 발전을 탐구하는 역사신문 만들기", kind: "task", weight: 25, timing: "10월 3주", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 두 과제는 앞 두 항목이 30점씩",
+        body: "저출산·고령화 정책 제안서는 현황 및 문제 분석 30점, 원인 및 영향 분석 30점, 정책의 적절성 20점, 정책의 구체성 20점입니다. 살기 좋은 도시 계획서는 도시 문제 분석 30점, 문제 해결 사례 조사 30점, 살기 좋은 도시의 조건 제안 20점, 도시 계획의 구체성 20점이고, 두 과제 모두 AI 활용이 전면 금지됩니다.",
+      },
+      {
+        title: "역사 가족 제도 글은 여성의 지위까지",
+        body: "고려와 조선의 혼인·가족 제도 자료를 분석하고 변화 모습을 비교한 뒤, 제도 속에 담긴 당시 여성의 사회적 지위를 파악해 비교·분석하는 글을 씁니다. 자료 분석 및 해석 능력 30점, 내용의 정확성 25점, 근거의 정확성 및 타당도 25점, 관점의 일관성 20점이며 수업 시간에 손으로 작성합니다.",
+      },
+      {
+        title: "조선 역사신문은 정치·외교·문화 분야",
+        body: "조선 전기 정치·외교·문화 분야를 탐구하고 관련 사건과 인물을 조사해 신문 기사·인터뷰·광고 형태로 만듭니다. 탐구 주제의 적절성 20점, 내용의 정확성 및 논리적 타당성 30점, 인물·정책·사건 분석의 타당성 30점, 조선 전기 문화에 대한 파악 및 표현력 20점입니다. 진도표상 역사신문은 10월 12~16일 주, 사회 정책 제안서는 9월 7~11일 주에 실시됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비 과제는 전략 선택과 풀이 과정이 30점씩이고, 원의 성질에는 오류 찾기 30점이 있습니다",
+    intro:
+      "대평중학교 3학년 수학은 11월 2~4일 기말시험 50%, 수행평가 50%입니다. 9월 4주 삼각비 과제는 서술형, 10월 4주 원의 성질 과제는 논술형으로 방식이 다릅니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "11월 2일 ~ 11월 4일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "11월 2일 ~ 11월 4일", method: "서답형 40점" },
+      { name: "삼각비를 활용하여 실생활 속 문제 해결하기", kind: "task", weight: 25, timing: "9월 4주", method: "서술형" },
+      { name: "원의 성질 정당화와 문제 해결하기", kind: "task", weight: 25, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각비 과제는 전략 선택과 풀이 과정이 30점씩",
+        body: "삼각비 개념을 정확히 설명하고 알맞은 수학적 전략을 골라 적용한 뒤, 근거를 들어 풀이 과정을 설명하고 결과를 실생활에 맞게 해석합니다. 개념의 정확성 20점, 수학 전략 선택 30점, 풀이 과정의 정확성 30점, 결과 해석의 적합성 20점입니다. 성취기준은 [9수04-17]·[9수04-18]입니다.",
+      },
+      {
+        title: "원의 성질 과제에는 오류 찾기 30점",
+        body: "원의 현·접선에 관한 성질과 원주각의 성질([9수04-19]·[9수04-20])을 다루며, 개념 설명 40점, 주어진 문제 속 오류를 찾고 근거를 설명하는 항목 30점, 원의 성질로 문제를 해결하는 항목 30점으로 채점합니다. 두 과제 모두 AI 활용은 전면 금지입니다.",
+      },
+      {
+        title: "진도표의 실시 주",
+        body: "삼각비 과제는 9월 21~25일 주, 원의 성질 과제는 10월 19~23일 주에 실시로 적혀 있습니다. 기말시험은 선택형 60점(30%)과 서답형 40점(20%)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "소비전력 과제는 계산이 40점이고, 세포 분열 보고서는 감수 분열이 40점입니다",
+    intro:
+      "대평중학교 3학년 과학은 11월 2~4일 기말시험 50%, 수행평가 50%입니다. 수행평가 두 과제는 9월 3주와 9월 5주로 모두 9월 안에 실시됩니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "11월 2일 ~ 11월 4일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "11월 2일 ~ 11월 4일", method: "서답형 40점" },
+      { name: "가전제품 소비전력 분석하기", kind: "task", weight: 25, timing: "9월 3주", method: "논술형" },
+      { name: "세포 분열 탐구 보고서 작성하기", kind: "task", weight: 25, timing: "9월 5주", method: "탐구형" },
+    ],
+    notes: [
+      {
+        title: "소비전력 과제는 계산 40점",
+        body: "제시문 속 가전제품 A·B의 소비전력, 가격, 사용 조건을 보고 전력량 공식(소비전력×시간)으로 일일·월간 전력량과 예상 전기요금을 계산한 뒤, 추천 제품과 과학적·경제적 이유를 문장틀에 맞춰 논증하고 에너지 절약 방안 하나를 제안합니다. 전력량 계산의 정확성 40점, 과학적 근거에 기반한 논증 30점, 실생활 에너지 절약 방안 30점입니다.",
+      },
+      {
+        title: "세포 분열 보고서는 감수 분열이 40점",
+        body: "체세포 분열 과정 30점, 감수 분열 과정 40점, 체세포 분열과 감수 분열 비교 30점으로 채점하며, 진도표에는 각 분열 과정을 그림으로 나타내고 단계별 특징을 설명하는 활동이 적혀 있습니다. 두 과제 모두 AI 활용은 전면 금지입니다.",
+      },
+      {
+        title: "기말시험 범위는 세 단원",
+        body: "기말시험 관련 대단원은 생식과 유전, 에너지 전환과 보존, 별과 우주이고 선택형 60점(30%)과 서답형 40점(20%)으로 나뉩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "daepyeong-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "말하기 30점은 네 항목에 고르게 나누고, 듣기는 9월 3일 교육청 공동주관 평가입니다",
+    intro:
+      "대평중학교 3학년 영어는 11월 2~4일 기말시험 50%와 수행평가 50%이며, 수행평가는 영어듣기 20%와 말하기 30% 두 영역뿐입니다. 쓰기 과제 없이 듣기와 말하기로만 수행평가를 채우는 구성입니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "11월 2일 ~ 11월 4일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "11월 2일 ~ 11월 4일", method: "서답형 40점" },
+      { name: "영어듣기", kind: "task", weight: 20, timing: "9월 1주" },
+      { name: "기억에 남는 자신의 경험을 말하기", kind: "task", weight: 30, timing: "10월 1주", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "말하기 30점 배분은 네 항목 균등",
+        body: "어휘 사용, 어법 사용, 의사소통능력, 내용 전달이 각 25점입니다. 과제 분석과 말하기 내용 다듬기, 설명 전략과 말하기 구조 익히기, 청중을 고려한 전략 구체화, 발표 원고 작성, AI 개별 피드백으로 발음·문법·표현 개선의 다섯 단계를 거치며 총괄평가 단계에서는 AI를 쓰지 않습니다.",
+      },
+      {
+        title: "듣기는 9월 3일 교육청 공동주관 평가",
+        body: "영어듣기 20%는 2026년 시·도교육청 공동주관 중3 영어듣기평가(9월 3일 목요일)로 매깁니다. 말하기 과제는 진도표상 9월 28일~10월 2일 주에 실시로 적혀 있습니다.",
+      },
+      {
+        title: "기말시험 구성",
+        body: "기말시험은 선택형 60점(30%)과 서답형 40점(20%)으로 11월 2~4일에 치릅니다. 말하기 과제의 성취기준은 [9영02-02]·[9영02-08]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("대평중학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "비평문은 작품 선정부터 자기 성찰까지 쓰고, 논증하는 글은 개요표로 조직합니다",
+    intro:
+      "동남고등학교 1학년 공통국어2는 정기시험 두 번이 25%씩, 수행평가 두 영역이 25%씩으로 시험과 수행이 반반입니다. 정기시험은 선택형으로만 출제되고, 논술형 평가는 문학 비평문(20%)과 논증하는 글쓰기(25%)에서만 이루어집니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "9월 3주-9월 4주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 1주", method: "선택형 100점" },
+      { name: "문학 비평문 작성", kind: "task", weight: 25, timing: "10월 3주", method: "25점(논술형 20%)" },
+      { name: "논증하는 글쓰기", kind: "task", weight: 25, timing: "11월 3주", method: "논술형 25점" },
+    ],
+    notes: [
+      {
+        title: "비평문은 작품 선정부터 자기 성찰까지",
+        body: "문학 비평문 작성의 수행과제는 문학 독서를 바탕으로 비평문 쓰기이며, 작품 선정, 세부 내용 분석을 통한 작가 의도 파악, 작품을 통한 자아 성찰과 비평, 자신의 삶과 연관 짓기가 평가 요소입니다. 성취기준은 [10공국2-02-03]·[10공국2-05-02]입니다.",
+      },
+      {
+        title: "논증하는 글은 개요표로 조직",
+        body: "논증하는 글쓰기는 화제에 대한 견해 제시, 글쓰기 맥락 분석, 주장을 뒷받침하는 자료 찾기와 적절성 점검, 개요표를 활용한 내용 조직으로 채점됩니다. 성취기준은 [10공국2-03-01]·[10공국2-03-02]이고, 진도표 11월 3주 칸에 논술형 평가로 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "두 과제 모두 학생이 직접 문제를 만들고, 방침상 구술면접형·모둠발표형으로 봅니다",
+    intro:
+      "동남고등학교 1학년 공통수학2는 수행평가가 56%로 정기시험(44%)보다 크며, 두 수행평가가 28%씩입니다. 정기시험 두 번은 각 22%이고 선택형으로만 출제됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 22, timing: "9월 3주 ~ 9월 4주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 22, timing: "12월 1주", method: "선택형 100점" },
+      { name: "개념정리 및 문제제작풀이", kind: "task", weight: 28, timing: "9월 1주", method: "논술형 28점" },
+      { name: "문제해결과정 서술 및 문제제작 풀이발표", kind: "task", weight: 28, timing: "11월 1주 ~ 2주", method: "28점(논술형 20%)" },
+    ],
+    notes: [
+      {
+        title: "두 과제 모두 학생이 문제를 만듭니다",
+        body: "개념정리 및 문제제작풀이는 개념 선정·정리, 그 개념으로 문제 제작, 문제 수준 정하기, 답안 제시로 평가하며 도형의 방정식 기준([10공수2-01-01]~[10공수2-01-07])에 걸립니다. 두 번째 과제는 제시 문제 증명(풀이), 범위 내 문제 만들기, 수준 정하기, 풀이 및 발표로 명제 단원([10공수2-02-04]~[10공수2-02-08])을 다룹니다.",
+      },
+      {
+        title: "평가 방침은 구술면접형·모둠발표형",
+        body: "평가 방침 문장에는 수행평가를 구술면접형과 모둠발표형 방법으로 적용한다고 적혀 있습니다. 논술형 비중은 첫 과제 28%, 두 번째 과제 20%로 합계 48%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "첫 과제는 논리적 관계와 정보 전달을 보고, 논술형은 도표 분석과 요약 두 과제에만 있습니다",
+    intro:
+      "동남고등학교 1학년 공통영어2는 정기시험 40%, 수행평가 60%이며 수행평가는 20점 만점 과제 세 개가 20%씩입니다. 9월 1주, 10월 2주, 11월 2주로 한 달 남짓 간격을 두고 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 3주-9월 4주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점" },
+      { name: "설명 영작하기", kind: "task", weight: 20, timing: "9월 1주", method: "20점" },
+      { name: "도표 분석 글쓰기", kind: "task", weight: 20, timing: "10월 2주", method: "논술형 20점" },
+      { name: "주제 요약 글쓰기", kind: "task", weight: 20, timing: "11월 2주", method: "논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "논술형은 뒤의 두 과제",
+        body: "평가 방침 문장은 논술형 평가를 도표 분석 글쓰기와 주제 요약 글쓰기에서 각 20%, 총 40%로 둔다고 밝힙니다. 도표 분석 글쓰기는 글의 세부 정보 파악과 그래프를 분석하는 글의 빈칸에 들어갈 세부 정보 작성으로 채점됩니다.",
+      },
+      {
+        title: "첫 과제는 논리적 관계와 정보 전달",
+        body: "9월 1주 설명 영작하기의 평가 요소는 사건의 논리적 관계 파악과 사실적 정보·지식 전달하기이며 성취기준은 [10공영2-01-04]·[10공영2-02-02]입니다. 주제 요약 글쓰기는 글의 요지 파악과 담화문의 주제·세부 정보 기술을 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["한국사2", "통합사회2"],
+    summary: "한국사2는 학기 첫 달에 수행이 끝나고, 통합사회2 신문은 네 꼭지, 학습지는 정의관을 비교합니다",
+    intro:
+      "동남고등학교 1학년은 한국사2와 통합사회2를 함께 배우며, 한국사2는 정기시험 70%·수행평가 30%, 통합사회2는 정기시험 40%·수행평가 60%로 비중이 반대입니다. 두 과목 모두 정기시험은 선택형으로 9월 3~4주와 12월 1주에 봅니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "9월 3주~4주", method: "선택형 100점", course: "한국사2" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 1주", method: "선택형 100점", course: "한국사2" },
+      { name: "일제 강점기 인권 유린 사례 탐구", kind: "task", weight: 30, timing: "8월 4주", method: "논술형 30점", course: "한국사2" },
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 3주~4주", method: "선택형 100점", course: "통합사회2" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점", course: "통합사회2" },
+      { name: "인권 신문 제작하기", kind: "task", weight: 25, timing: "8월 2주", method: "논술형 25점", course: "통합사회2" },
+      { name: "사회 불평등 탐구하기", kind: "task", weight: 25, timing: "10월 1주~2주", method: "논술형 25점", course: "통합사회2" },
+      { name: "학습지 제작하기", kind: "task", weight: 10, timing: "9월 2주", method: "10점", course: "통합사회2" },
+    ],
+    notes: [
+      {
+        title: "한국사2는 학기 첫 달에 수행이 끝납니다",
+        body: "일제 강점기 인권 유린 사례 탐구는 관련 사례를 조사·분석한 뒤 자신만의 의견을 논술하는 30점 과제로, 성취기준은 일제의 식민 통치 정책을 다루는 [10한사2-01-01]입니다. 8월 4주에 평가하므로 이후는 두 번의 정기시험이 남습니다.",
+      },
+      {
+        title: "통합사회2 신문은 네 꼭지",
+        body: "인권 신문 제작하기는 우리 사회의 인권 쟁점, 인권 신장을 위해 노력한 인물, 매체 속 인권 내용, 인권교육 방법을 기사로 쓰는 과제입니다. 사회 불평등 탐구하기는 불평등 문제 제기, 도입된 정책 설명, 자신의 입장과 근거 3가지 논술로 채점됩니다.",
+      },
+      {
+        title: "학습지 제작은 정의관 비교",
+        body: "9월 2주 학습지 제작하기(10%)는 다양한 정의관을 비교하고 사례를 보충하며 실천 방안을 탐구하는 과제([10통사2-02-02])로, 반영 비율표에서 논술형 비율은 0%입니다. 통합사회2의 논술형 합계는 50%, 한국사2는 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "생물 다양성은 대멸종을 분석하고, 과학기술 과제는 빅데이터의 한계까지 다룹니다",
+    intro:
+      "동남고등학교 1학년 통합과학2는 수행평가가 60%이고 두 과제가 30%씩이며, 정기시험 두 번은 선택형으로 20%씩입니다. 첫 과제는 개학 직후인 8월 3주, 두 번째는 10월 2주에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 3~4주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점" },
+      { name: "지구 환경 변화와 생물 다양성 탐구", kind: "task", weight: 30, timing: "8월 3주", method: "30점(논술형 15%)" },
+      { name: "미래 사회 과학기술 활용 및 윤리적 과제 연구", kind: "task", weight: 30, timing: "10월 2주", method: "논술형 30점" },
+    ],
+    notes: [
+      {
+        title: "생물 다양성 과제는 대멸종 분석",
+        body: "첫 과제의 평가 요소는 대멸종의 원인·영향·시사점 통합 분석, 지질시대 특징 분석, 자연선택설에 따른 진화 과정 설명, 사례를 통한 생물다양성의 종류와 정의 설명입니다. 성취기준은 [10통과2-01-01]·[10통과2-01-02]이며 30% 중 15%가 논술형입니다.",
+      },
+      {
+        title: "과학기술 과제는 빅데이터 한계까지",
+        body: "10월 2주 과제는 미래사회 문제를 골라 과학의 역할을 논증하고 빅데이터의 유용성과 한계를 분석하는 30% 논술형 과제입니다. 진도표에서 9월 3주부터 10월 2주까지 과학 기술의 활용과 쟁점 단원이 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["독서와 작문"],
+    summary: "토론문은 입론·반론·재반론으로 쓰고, 추천서는 문구 해석이 핵심입니다",
+    intro:
+      "동남고등학교 2학년 독서와 작문은 정기시험과 수행평가가 50%씩이고, 수행평가 두 과제가 10월에 이어서 진행됩니다. 정기시험 두 번은 선택형 100점으로 25%씩입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "9월 3주 ~ 9월 4주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 1주", method: "선택형 100점" },
+      { name: "비판적 읽기를 활용한 토론문 작성하기", kind: "task", weight: 25, timing: "10월 1주 ~ 10월 2주", method: "25점(논술형 20%)" },
+      { name: "도서 추천서 쓰기", kind: "task", weight: 25, timing: "10월 4주", method: "25점(논술형 20%)" },
+    ],
+    notes: [
+      {
+        title: "토론문은 입론·반론·재반론",
+        body: "토론문 과제는 글쓴이의 의도를 파악해 토론 주제 선별, 찬반 근거 마련, 입론·반론·재반론에 대한 입장 표명, 작품의 종합적 감상문 작성, 어문 규범 준수로 채점됩니다.",
+      },
+      {
+        title: "추천서는 문구 해석이 핵심",
+        body: "도서 추천서 쓰기는 작품 배경 소개, 동급생 독자를 고려한 요약, 자신의 가치관에 영향을 준 문구 소개와 해석, 비판적 수용을 바탕으로 한 추천 이유 제시로 평가합니다. 두 과제의 논술형 20%씩이 학기 논술형 40%를 이룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ", "직무수학"],
+    summary: "미적분Ⅰ 발표 과제는 11월 3주에 하고, 직무수학은 면담·프로젝트로 표시되어 있습니다",
+    intro:
+      "2학년에서 수학 과목은 미적분Ⅰ과 직무수학 두 가지가 공시되어 있고, 둘 다 1학년 공통수학2와 같은 과제명·비율(시험 44%, 과제 56%)을 이어 씁니다. 차이는 일정으로, 직무수학은 1차 시험이 9월 4~5주이고 과제 기간도 미적분Ⅰ보다 한 주씩 넓습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 22, timing: "9월 3주~4주", method: "선택형 100점", course: "미적분Ⅰ" },
+      { name: "2차 정기시험", kind: "exam", weight: 22, timing: "12월 1주", method: "선택형 100점", course: "미적분Ⅰ" },
+      { name: "개념정리 및 문제제작풀이", kind: "task", weight: 28, timing: "9월 1주", method: "논술형 28점", course: "미적분Ⅰ" },
+      { name: "문제해결과정 서술 및 문제제작 풀이발표", kind: "task", weight: 28, timing: "11월 3주", method: "28점(논술형 20%)", course: "미적분Ⅰ" },
+      { name: "1차 정기시험", kind: "exam", weight: 22, timing: "9월 4~5주", method: "선택형 100점", course: "직무수학" },
+      { name: "2차 정기시험", kind: "exam", weight: 22, timing: "12월 1주", method: "선택형 100점", course: "직무수학" },
+      { name: "개념정리 및 문제제작풀이", kind: "task", weight: 28, timing: "9월 1~2주", method: "논술형 28점", course: "직무수학" },
+      { name: "문제해결과정 서술 및 문제제작 풀이발표", kind: "task", weight: 28, timing: "11월 2~3주", method: "28점(논술형 20%)", course: "직무수학" },
+    ],
+    notes: [
+      {
+        title: "미적분Ⅰ 발표 과제는 11월 3주",
+        body: "미적분Ⅰ 진도표는 9월 1주 칸에 ‘논술형 평가’, 11월 3주 칸에 ‘구술발표’를 수행평가 연계로 표시해, 앞 과제는 글로 쓰는 개념 정리, 뒤 과제는 직접 만든 문제를 풀어 발표하는 형태임을 보여 줍니다. 1·2차 시험은 각각 9월 3주~4주와 12월 1주입니다.",
+      },
+      {
+        title: "직무수학은 면담·프로젝트 표시",
+        body: "직무수학 진도표에는 9월 1~2주에 형성평가·면담, 11월 2~3주에 구술·발표·프로젝트가 수행평가 연계로 표시됩니다. 두 과목 모두 논술형 비중은 첫 과제 28%, 두 번째 과제 20%로 48%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "세 과제는 요구가 조금씩 다르고, 학기 논술형이 60%입니다",
+    intro:
+      "동남고등학교 2학년 영어Ⅱ는 정기시험 40%, 수행평가 60%이며 세 쓰기 과제가 20%씩 모두 논술형입니다. 첫 과제는 개학 직후 8월 4~5주, 마지막 과제는 10월 5주라 수행평가가 10월 안에 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 3주-9월 4주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점" },
+      { name: "영어 설명문 쓰기", kind: "task", weight: 20, timing: "8월 4~5주", method: "논술형 20점" },
+      { name: "통합적 분석 영문 쓰기", kind: "task", weight: 20, timing: "10월 2주", method: "논술형 20점" },
+      { name: "문화분석 영문 리포트 쓰기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "세 과제의 요구가 조금씩 다릅니다",
+        body: "영어 설명문 쓰기는 사실적 정보를 글로 설명하고 의견을 제시하는 과제, 통합적 분석 영문 쓰기는 의견·주장 작성과 재구성 요약, 문화분석 영문 리포트는 사실적 정보 설명과 재구성 요약을 평가합니다.",
+      },
+      {
+        title: "학기 논술형 60%",
+        body: "반영 비율표의 논술형 칸은 세 과제 20%씩으로 합계 60%이고, 정기시험은 선택형으로만 출제됩니다. 진도표에는 10월 5주에 자기평가와 함께 수행평가 연계가 표시됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["정치"],
+    summary: "관점 비교는 언론 사례로, 정치 참여 과제는 신문 기사 분석으로 합니다",
+    intro:
+      "동남고등학교 2학년 정치는 정기시험 두 번(각 25%)과 논술형 수행평가 두 과제(각 25%)로 반반입니다. 두 수행평가가 9월 1주와 10월 1주에 있어 1차 정기시험 앞뒤로 배치됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "9월 3주~4주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 1주", method: "선택형 100점" },
+      { name: "자유주의와 공동체 관점 비교하기", kind: "task", weight: 25, timing: "9월 1주", method: "논술형 25점" },
+      { name: "뉴스로 탐구하는 시민의 정치 참여", kind: "task", weight: 25, timing: "10월 1주", method: "논술형 25점" },
+    ],
+    notes: [
+      {
+        title: "관점 비교는 언론 사례로",
+        body: "자유주의와 공동체 관점 비교하기는 두 관점의 핵심 가치 제시와 비교, 언론에 보도된 구체적 사례 제시, 그 사례에 대한 본인의 견해 제시로 채점됩니다.",
+      },
+      {
+        title: "정치 참여 과제는 신문 기사 분석",
+        body: "10월 1주 과제는 시민의 정치 참여에 맞는 신문 기사를 제시하고 핵심 단어 의미, 정치 참여의 의의, 활성화 방안을 논리적 구조로 쓰는 과제입니다. 두 과제의 논술형 25%씩으로 학기 논술형 비중은 50%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "dongnam-high-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["세포와 물질대사"],
+    summary: "삼투는 그리기와 서술로 보고, 효소 과제는 저해제까지 다룹니다",
+    intro:
+      "동남고등학교 2학년 세포와 물질대사는 정기시험 두 번과 수행평가 두 과제가 25%씩이며, 수행평가는 9월 1주와 2주에 연달아 있습니다. 2차 정기시험 시기는 반영 비율표(12월 3주)와 진도표(12월 1주)가 달라 비워 둡니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "9월 3주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, method: "선택형 100점" },
+      { name: "삼투 현상 관찰하기", kind: "task", weight: 25, timing: "9월 1주", method: "25점(논술형 10%)" },
+      { name: "효소의 특성 이해하기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형 25점" },
+    ],
+    notes: [
+      {
+        title: "삼투 과제는 그리기와 서술",
+        body: "삼투 현상 관찰하기는 삼투가 일어난 세포 모양과 물의 이동 방향 그리기, 농도에 따른 세포 모양 변화 이유와 삼투의 목적, 동물 세포의 삼투 서술로 채점됩니다. 평가 방침에는 탐구형+논술형 평가와 논술형 평가를 한 학기에 1회씩 실시한다고 적혀 있습니다.",
+      },
+      {
+        title: "효소 과제는 저해제까지",
+        body: "효소의 특성 이해하기는 활성화 에너지, 효소의 작용 과정과 영향 요인, 저해제의 종류와 특징, 생활 속 효소 이용 사례를 서술하는 25% 논술형 과제입니다. 학기 논술형 합계는 35%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("동남고등학교")],
+  },
+  {
+    schoolSlug: "eunhaeng-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "시 감상 에세이 15%(9월) · 소설 비평 글쓰기 15%(10월) · 소설 소개 말하기 10%",
+    intro:
+      "은행고등학교 1학년 공통국어2는 1차(10월 2주)·2차(12월 2주∼3주) 정기시험이 선택형 100점으로 30%씩이고, 수행평가 세 개가 15%·15%·10%입니다. 9월 시 감상 에세이와 10월 소설 비평은 서술·논술로, 10월 말 소설 소개는 구술·발표로 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주∼3주", method: "선택형 100점" },
+      { name: "시 감상 에세이 쓰기", kind: "task", weight: 15, timing: "9월 3주", method: "서술·논술" },
+      { name: "소설 비평하는 글쓰기", kind: "task", weight: 15, timing: "10월 4주", method: "서술·논술" },
+      { name: "소설 소개하는 말하기", kind: "task", weight: 10, timing: "10월 5주", method: "구술·발표, 동료평가" },
+    ],
+    notes: [
+      {
+        title: "에세이는 체크리스트 10개",
+        body: "시 감상 에세이([10공국2-05-02])는 작품·글감 선정 2개, 감상 근거 3개, 감상 확장 3개, 형식 2개로 모두 10개 항목을 확인합니다. 10개를 모두 충족하면 15점이고 기본점수는 4점입니다.",
+      },
+      {
+        title: "비평문은 해석과 가치 평가까지",
+        body: "소설 비평하는 글쓰기([10공국2-02-03], [10공국2-05-02])도 10개 항목인데, 질문과 관련된 내용 3개, 자신의 생각과 이유 3개, 경험·사회와 관련지은 해석 2개, 가치 평가 2개로 나뉩니다.",
+      },
+      {
+        title: "말하기 7항목과 동점자 순서",
+        body: "소설 소개하는 말하기는 공통 질문 2개, 선택 질문 2개에 구성, 목소리·속도, 경청을 더한 7개 항목이며 모두 충족하면 10점입니다. 수행평가 동점자는 에세이, 비평, 말하기 순으로 가립니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("은행고등학교")],
+  },
+  {
+    schoolSlug: "eunhaeng-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2", "한국사2"],
+    summary: "인권 독서 저널 25%·불평등 분석 15%(통합사회2), 성찰노트 30%·독립운동가 포스터 20%(한국사2)",
+    intro:
+      "은행고등학교 1학년 사회 영역은 통합사회2와 한국사2 모두 1차(10월 2주)·2차(12월 2주∼3주) 정기시험이 25%씩입니다. 통합사회2는 저널·분석·홍보물 세 과제, 한국사2는 성찰노트와 포스터 두 과제로 수행평가를 치릅니다.",
+    assessments: [
+      { course: "통합사회2", name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 100점" },
+      { course: "통합사회2", name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주∼3주", method: "선택형 100점" },
+      { course: "통합사회2", name: "불평등 분석하기", kind: "task", weight: 15, timing: "10월 4주" },
+      { course: "통합사회2", name: "홍보물 제작하기", kind: "task", weight: 10, timing: "10월 4주" },
+      { course: "통합사회2", name: "인권 독서 저널 작성하기", kind: "task", weight: 25, timing: "9월 3주" },
+      { course: "한국사2", name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 100점" },
+      { course: "한국사2", name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주∼3주", method: "선택형 100점" },
+      { course: "한국사2", name: "역사적이해및문제해결성찰노트작성하기", kind: "task", weight: 30, timing: "11월4주" },
+      { course: "한국사2", name: "잊혀진독립운동가홍보포스터제작하기", kind: "task", weight: 20, timing: "10월 3주∼10월 4주" },
+    ],
+    notes: [
+      {
+        title: "통합사회2 저널은 3회 누적",
+        body: "인권 독서 저널은 1점짜리 항목 5개를 한 번에 보고 총 3회 누적한 합산 15점을 25점으로 반영하며, 논술형 비율이 25%입니다. 불평등 분석하기(9개 항목, 15점)와 홍보물 제작하기(5개 항목, 10점)는 '우리 사회의 불평등과 정의로운 사회 탐구하기' 한 영역(25점)의 두 부분입니다.",
+      },
+      {
+        title: "홍보물 다섯 가지 확인점",
+        body: "홍보물은 제목·구호, 이미지 1개 이상, 문구와 이미지의 표현, 둘의 조화, 시각적 완성도와 창의성을 봅니다.",
+      },
+      {
+        title: "한국사2 성찰노트 3×10점",
+        body: "성찰노트는 단원 정리·형성평가(역사적 이해), 수업에 대한 생각, 한국사 주제 탐구(문제 해결)를 10점씩 봅니다. 독립운동가 포스터는 업적, 역사 사실에 근거한 홍보멘트, 인터뷰, 논설과 제작 소감을 5점씩 매깁니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("은행고등학교")],
+  },
+  {
+    schoolSlug: "eunhaeng-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2", "과학탐구실험2"],
+    summary: "열수지 변동·생태계 평형 탐구 20%씩(통합과학2), 과학기술 윤리 40%(과학탐구실험2)",
+    intro:
+      "은행고등학교 1학년 과학 영역에서 통합과학2는 정기시험 두 번이 30%씩, 서술·논술 탐구 두 개가 20%씩입니다. 과학탐구실험2는 정기시험 없이 수행평가 세 개로만 평가합니다.",
+    assessments: [
+      { course: "통합과학2", name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 100점" },
+      { course: "통합과학2", name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주∼3주", method: "선택형 100점" },
+      { course: "통합과학2", name: "열수지 변동 탐구하기", kind: "task", weight: 20, timing: "11월 1주", method: "서술·논술" },
+      { course: "통합과학2", name: "생태계 평형 회복 과정 탐구하기", kind: "task", weight: 20, timing: "10월 3주", method: "서술·논술" },
+      { course: "과학탐구실험2", name: "과학기술 발전과 윤리 탐구하기", kind: "task", weight: 40, timing: "10월 5주~11월 4주" },
+      { course: "과학탐구실험2", name: "미세먼지 인포그래픽 제작하기", kind: "task", weight: 30, timing: "10월 3주~4주" },
+      { course: "과학탐구실험2", name: "생활 속 유사과학 비평하기", kind: "task", weight: 30, timing: "9월 3주~4주" },
+    ],
+    notes: [
+      {
+        title: "열수지 탐구 배점 8·5·3·4",
+        body: "열수지 변동 탐구([10통과2-02-03])는 6가지 조건의 에너지양 비교 8점, 이산화탄소에 따른 열수지 변동 예상 5점, 열수지 평형 빈칸 3점, 영향과 대처 4점입니다. 생태계 평형 탐구는 [10통과2-02-01], [10통과2-02-02]를 3·3·4·4·3·3점으로 나눠 봅니다.",
+      },
+      {
+        title: "과학탐구실험2는 A/B/C 등급",
+        body: "과학탐구실험2는 수행평가 100%이고 등급은 A/B/C로 냅니다. 가장 큰 과학기술 윤리 탐구(40%)는 연구윤리 사례 10점, 첨단기술 9점, 서약서·중요성 논술 각 5점 등으로 짜였고 논술형 비율이 40%입니다.",
+      },
+      {
+        title: "유사과학 비평은 4컷으로",
+        body: "9월 유사과학 비평하기는 비평 6점, 4컷 계획 4점, 컷 1~4 각 5점입니다. 10월 미세먼지 인포그래픽은 PM10·PM2.5 선그래프에서 시작해 출처 5점, 인포그래픽 5점까지 확인합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("은행고등학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "개요표의 근거 개수가 점수를 가르고, 단어 분석은 제시된 4개 단어로 합니다",
+    intro:
+      "갈월중학교 1학년 국어는 정기시험 60%, 수행평가 40%이며 수행평가는 논술 두 영역이 20%씩입니다. 1차 정기시험(10월 6~7일) 뒤 10월 5주에 주장하는 글을, 11월 3주에 단어의 짜임 분석을 평가하고 12월 15~17일에 2차 시험을 봅니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "12월 3주", method: "논술형 20점" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 20, timing: "10월 5주", method: "논술 20점" },
+      { name: "단어의 짜임 분석하기", kind: "task", weight: 20, timing: "11월 3주", method: "논술 20점" },
+    ],
+    notes: [
+      {
+        title: "개요표에서 근거 개수가 점수를 가릅니다",
+        body: "주장하는 글쓰기 세부 기준의 첫 요소는 주장과 근거가 드러나는 개요표 작성으로, 타당한 근거를 3가지 이상 제시해 전개 순서에 맞게 쓰면 10점, 2가지면 9점입니다. 수행과제는 ‘주장과 근거를 드러내는 주장하는 글 쓰기’이고 교사 관찰과 자기평가가 함께 쓰입니다.",
+      },
+      {
+        title: "단어 분석은 제시된 4개 단어로",
+        body: "단어의 짜임 분석하기는 제시된 단어 4개를 형태소 단위로 분석하기(6점)와 형태소의 종류 구별하기(7점) 등으로 채점되며, 어근과 접사를 구분하는 요소도 들어 있습니다. 이 과제에는 자기평가와 함께 동료평가가 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "합동 논술은 조건별로 문항이 나뉘고, 부채꼴 과제는 1차 시험 직전 주에 봅니다",
+    intro:
+      "갈월중학교 1학년 수학은 정기시험과 수행평가가 반반이고, 수행평가 50% 중 40%가 9월 4주와 10월 1주 두 논술 과제에 몰려 있습니다. 나머지 10%는 8월 4주부터 12월 2주까지 이어지는 포트폴리오입니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 20, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 20점" },
+      { name: "삼각형의 합동 논술하기", kind: "task", weight: 20, timing: "9월 4주", method: "논술 20점" },
+      { name: "부채꼴 분석하기", kind: "task", weight: 20, timing: "10월 1주", method: "논술 20점" },
+      { name: "포트폴리오", kind: "task", weight: 10, timing: "8월 4주~12월 2주", method: "포트폴리오 10점" },
+    ],
+    notes: [
+      {
+        title: "합동 논술은 조건별로 문항이 나뉩니다",
+        body: "세 변의 길이, 두 변과 끼인각, 한 변과 양 끝각이 같은 두 삼각형의 합동을 각각 설명하는 문항으로 구성되며, 세부 기준에서 답과 풀이 과정이 모두 올바르면 문항당 5점입니다. 성취기준은 [9수03-04]입니다.",
+      },
+      {
+        title: "부채꼴 과제는 1차 시험 직전 주",
+        body: "10월 1주 부채꼴 분석하기는 호의 길이와 넓이 구하기, 중심각과 호의 길이·넓이 관계 설명, 부채꼴을 활용한 문제 해결로 이루어진 논술 과제([9수03-06])입니다. 포트폴리오는 학습한 수학적 개념을 정리하는 과제로 [9수03-01]부터 [9수04-04]까지 학기 전체 성취기준에 걸칩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "배운 단어와 문법으로 경험 글을 쓰고, 듣고 말하기는 전달력과 정확성을 봅니다",
+    intro:
+      "갈월중학교 1학년 영어는 1·2차 정기시험이 25%씩이고 수행평가 세 영역이 20%·20%·10%입니다. 경험을 바탕으로 글쓰기는 반영 비율표(11월 3주)와 진도표(11월 2주)의 시기가 달라 시기를 적지 않았습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 2주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "듣고 말하기", kind: "task", weight: 20, timing: "9월 3주", method: "20점" },
+      { name: "경험을 바탕으로 글쓰기(논술형)", kind: "task", weight: 20, method: "논술형 20점" },
+      { name: "포트폴리오", kind: "task", weight: 10, timing: "9월 1주~12월 1주", method: "10점" },
+    ],
+    notes: [
+      {
+        title: "글쓰기 과제는 배운 단어와 문법으로",
+        body: "경험을 바탕으로 글쓰기의 수행과제는 배운 단어와 문법을 활용해 주제에 맞는 글을 완성하는 것이고, 평가 요소는 의미 있는 내용 형성, 매끄러운 문장 조직, 정확한 언어 사용, 조건에 맞는 과제 수행입니다. 성취기준은 [9영02-04]·[9영02-06]입니다.",
+      },
+      {
+        title: "듣고 말하기와 포트폴리오",
+        body: "9월 3주 듣고 말하기는 발화 상황과 맥락을 이해해 의견이나 감정을 적절히 표현하는 과제로 전달력과 정확성을 봅니다. 포트폴리오는 수업 중 주제·요지·줄거리 파악과 의견 표현 과제를 기준에 맞게 수행하는 것으로, 진도표에는 12월 1주에 표시됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "입자 모형으로 상태를 설명하고, 기체는 압력과 온도 두 관계로 풀어 씁니다",
+    intro:
+      "갈월중학교 1학년 과학은 정기시험 50%(선택형 40%·논술형 10%)와 수행평가 50%로, 수행평가는 25%짜리 두 과제입니다. 첫 과제는 1차 시험 직전인 9월 5주~10월 1주, 두 번째는 2차 시험 직전인 12월 1~2주에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 20, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 20점" },
+      { name: "물질의 상태와 상태 변화 설명하기", kind: "task", weight: 25, timing: "9월 5주∼10월 1주", method: "25점(논술형 25%)" },
+      { name: "기체의 부피 변화를 압력과 온도로 설명하기", kind: "task", weight: 25, timing: "12월 1주∼12월 2주", method: "25점" },
+    ],
+    notes: [
+      {
+        title: "첫 과제는 입자 모형으로 설명",
+        body: "물질의 상태와 상태 변화 설명하기는 확산·증발로 입자 운동 추론, 세 가지 상태를 입자 모형으로 표현, 상태 변화와 열에너지 출입 관계를 다루며 성취기준은 [9과04-01]~[9과04-04]입니다. 반영 비율표에서 논술형으로 잡힌 수행평가는 이 과제 하나입니다.",
+      },
+      {
+        title: "기체 과제는 압력·온도 두 관계",
+        body: "12월 과제는 기체의 압력을 입자 운동으로 설명하고, 압력과 부피·온도와 부피 관계를 실험 결과로부터 알아내 입자 모형으로 해석하는 내용([9과06-01]~[9과06-03])입니다. 평가 계획 문장도 정기시험 2회 50%를 선택형 40%, 논술형 10%로 출제한다고 적고 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "독서일지는 진도표에 세 번 표시되고, 기사문은 피동·인용 표현의 의도까지 분석합니다",
+    intro:
+      "갈월중학교 2학년 국어는 정기시험 60%, 수행평가 40%이며 수행평가는 기사문 작성과 독서일지가 20%씩입니다. 독서일지는 9월부터 11월 말까지 이어지고, 기사문은 11월 1주에 한 번 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "12월 3주", method: "논술형 20점" },
+      { name: "피동표현과 인용표현 활용하여 기사문 작성하기", kind: "task", weight: 20, timing: "11월 1주", method: "20점" },
+      { name: "읽기 과정 점검 조정하며 독서일지 작성하기", kind: "task", weight: 20, timing: "9월 1주~11월 4주", method: "20점" },
+    ],
+    notes: [
+      {
+        title: "독서일지는 진도표에 세 번 표시",
+        body: "독서일지 과제는 독서 상황과 수준에 맞는 책 선정, 읽기 과정 점검, 점검 결과에 따른 조정으로 평가되며 성취기준은 [9국02-08]입니다. 진도표에는 9월 3주, 10월 3주, 11월 4주에 수행평가로 표시되어 있습니다.",
+      },
+      {
+        title: "기사문은 표현의 의도까지 분석",
+        body: "11월 1주 기사문 과제는 일상 속 피동·인용 표현 찾기, 그 의도와 효과 분석, 두 표현을 활용한 기사문 작성의 세 단계입니다. 성취기준 [9국04-05]는 2차 정기시험 범위에도 들어 있고, 학기 논술형 비중은 32%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이등변삼각형·외심·내심 설명과 평행선의 선분비·피타고라스 정리 설명마다 수학 사전 만들기가 붙고 논술형 칸은 20%씩",
+    intro:
+      "갈월중학교 2학년 수학은 정기시험 50%, 수행평가 50%이며 두 탐구 과제가 25%씩입니다. 첫 과제가 학기 첫 주인 9월 1주에 있고, 두 번째는 11월 3주입니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 20, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 20점" },
+      { name: "삼각형의 발견과 탐구", kind: "task", weight: 25, timing: "9월 1주", method: "25점(논술형 20%)" },
+      { name: "선분비의 발견과 탐구", kind: "task", weight: 25, timing: "11월 3주", method: "25점(논술형 20%)" },
+    ],
+    notes: [
+      {
+        title: "두 과제 모두 수학 사전 만들기 포함",
+        body: "삼각형의 발견과 탐구는 이등변삼각형의 성질, 외심과 내심을 설명하고 문제를 해결하는 요소에 ‘수학 사전 만들기’가 더해집니다. 선분비의 발견과 탐구도 닮은 도형, 닮음 조건, 평행선의 선분비, 피타고라스 정리 설명과 함께 수학 사전 만들기를 평가합니다.",
+      },
+      {
+        title: "과제마다 25% 중 20%가 논술형",
+        body: "반영 비율표 논술형 칸은 정기시험 5%씩, 두 과제 20%씩으로 합계 50%입니다. 첫 과제는 [9수03-09]·[9수03-10], 두 번째는 [9수03-12]~[9수03-15]가 성취기준입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "광합성은 실험 설계부터 시작하고, 전기 회로 과제는 논술형 칸이 비어 있습니다",
+    intro:
+      "2학년 과학 수행평가는 식물의 광합성 단원과 전기 단원에서 한 과제씩 나오며, 각각 25%로 두 과제를 합치면 정기시험 전체와 같은 무게입니다. 광합성 과제는 10월 6~7일 1차 시험을 앞둔 9월 말~10월 초, 전기 과제는 12월 15~17일 2차 시험을 앞둔 12월 초에 치릅니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 20, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 20점" },
+      { name: "광합성과 호흡 및 양분 설명하기", kind: "task", weight: 25, timing: "9월 5주∼10월 1주", method: "25점(논술형 25%)" },
+      { name: "전기 회로 설명하기", kind: "task", weight: 25, timing: "12월 1주∼12월 2주", method: "25점" },
+    ],
+    notes: [
+      {
+        title: "광합성 과제는 실험 설계부터",
+        body: "광합성과 호흡 및 양분 설명하기는 환경 요인과 광합성의 관계를 탐구하는 실험 설계, 호흡과 광합성의 에너지·물질 출입 분석, 광합성 산물의 저장과 이용을 모형으로 설명하기로 이루어집니다. 성취기준은 [9과12-01]~[9과12-03]입니다.",
+      },
+      {
+        title: "전기 회로 과제는 논술형 칸이 비어 있습니다",
+        body: "반영 비율표 논술형 칸에서 광합성 과제는 25%, 전기 회로 설명하기는 ‘-’로 적혀 있어 학기 논술형 합계가 35%입니다. 전기 과제의 성취기준 [9과14-01]~[9과14-03]은 마찰 전기와 정전기 유도, 전류 모형과 저항·전류·전압, 저항의 직렬·병렬연결이며 2차 시험 범위에도 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "미래의 나에게 의견과 감정을 문장으로 전하고, 인터뷰는 말하기 중심으로 봅니다",
+    intro:
+      "갈월중학교 3학년 영어는 11월 4주(11월 23~25일) 정기시험 한 번이 50%이고, 수행평가 두 과제가 30%·20%입니다. 편지쓰기는 9월 3주, 인터뷰는 10월 2주에 치릅니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 40, timing: "11월 4주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 10, timing: "11월 4주", method: "논술형 20점" },
+      { name: "미래의 나에게 편지쓰기", kind: "task", weight: 30, timing: "9월 3주", method: "30점" },
+      { name: "인터뷰 진행하기", kind: "task", weight: 20, timing: "10월 2주", method: "20점" },
+    ],
+    notes: [
+      {
+        title: "편지쓰기는 의견·감정을 문장으로",
+        body: "미래의 나에게 편지쓰기의 평가 요소는 일상생활에 관한 자신의 의견이나 감정을 표현하기와 그것을 표현하는 문장 쓰기이며 성취기준은 [9영02-02]·[9영04-02]입니다. 수행평가 가운데 비중이 가장 큰 30%입니다.",
+      },
+      {
+        title: "인터뷰는 말하기 중심",
+        body: "10월 2주 인터뷰 진행하기는 일상생활에 관한 의견이나 감정을 표현하는 말하기 과제로 [9영02-02]에 해당합니다. 정기시험은 글을 읽고 세부 정보를 파악하는 [9영03-02]가 성취기준으로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "독서활동은 과학기술과 인류 문명 단원에서, 탐구발표는 학기 전 단원에 걸쳐 합니다",
+    intro:
+      "갈월중학교 3학년 과학은 정기시험이 11월 4주 한 번(50%)이고, 수행평가는 독서활동과 탐구발표가 25%씩입니다. 탐구발표는 8월 5주부터 11월 1주까지 거의 매주 진도표에 표시됩니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 40, timing: "11월 4주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 10, timing: "11월 4주", method: "논술형 20점" },
+      { name: "과학기술 독서활동", kind: "task", weight: 25, timing: "9월 3주", method: "25점(논술형 25%)" },
+      { name: "교과서 탐구발표", kind: "task", weight: 25, timing: "8월 5주∼11월 1주", method: "25점" },
+    ],
+    notes: [
+      {
+        title: "독서활동은 과학기술과 인류 문명 단원",
+        body: "과학기술 독서활동은 도서 속 과학적 내용 이해와 도서 내용을 비판적으로 설명하기로 평가하며 성취기준은 [9과24-01]·[9과24-02]입니다. 반영 비율표에서 논술형으로 잡힌 수행평가는 이 과제 25%입니다.",
+      },
+      {
+        title: "탐구발표는 학기 전 단원에 걸칩니다",
+        body: "교과서 탐구발표의 평가 요소는 발표자료 만들기와 발표하기이고, 성취기준이 [9과21]~[9과23]의 생식과 유전, 에너지 전환, 별과 우주까지 이어집니다. 진도표에는 8월 5주부터 11월 1주까지 매주 ‘탐구발표’가 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "galwol-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "노래는 모둠으로 발표하고, 개념어 사전은 진도표에서 거의 매주 채웁니다",
+    intro:
+      "갈월중학교 3학년 역사는 수행평가가 60%로 정기시험(40%)보다 크며, 세 과제가 20%씩입니다. 역사 개념어 사전은 9월 1주부터 11월 2주까지 이어지고, 노래 만들기는 9월 5주, 독서 탐구는 10월 3주에 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 30, timing: "11월 4주", method: "선택형 75점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 10, timing: "11월 4주", method: "논술형 25점" },
+      { name: "역사 노래 만들기", kind: "task", weight: 20, timing: "9월 5주", method: "20점" },
+      { name: "역사 독서 탐구하기", kind: "task", weight: 20, timing: "10월 3주", method: "20점" },
+      { name: "역사 개념어 사전 만들기", kind: "task", weight: 20, timing: "9월 1주~11월 2주", method: "20점" },
+    ],
+    notes: [
+      {
+        title: "노래 만들기는 모둠 발표",
+        body: "역사 노래 만들기의 평가 요소는 역사적 사실 이해, 가사에 어울리는 시각 자료 구성, 역사적 맥락에 맞는 가사 구성, 모둠 협력 발표이며 성취기준은 [9역09-01]~[9역09-04]입니다.",
+      },
+      {
+        title: "개념어 사전은 진도표 거의 매주",
+        body: "진도표에는 9월 1주부터 11월 2주까지 노래 만들기·독서 탐구 주를 뺀 대부분의 주에 ‘역사 개념어 사전 만들기’가 적혀 있습니다. 독서 탐구는 역사 자료 해석, 도서 속 시대상 분석, 현대 사회와 연결하는 성찰로 채점됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("갈월중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "소설 감상문은 AI 가상 인터뷰가 30점이고, 문제 해결 글은 1000자를 넘겨야 분량 만점입니다",
+    intro:
+      "구영중학교 1학년 국어는 10월 중간고사와 12월 기말고사가 30%씩, 수행평가 두 개가 20%씩입니다. 두 수행평가가 모두 11월에 몰려 있어 중간고사가 끝나면 바로 글쓰기 과제 두 개를 준비하게 됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "질문 기반 소설 감상문 쓰기", kind: "task", weight: 20, timing: "11월/1회", method: "서술·논술" },
+      { name: "문제 해결 글쓰기", kind: "task", weight: 20, timing: "11월/1회", method: "과정형 평가" },
+    ],
+    notes: [
+      {
+        title: "소설 감상문은 AI 가상 인터뷰가 30점",
+        body: "작품을 읽고 질문을 만드는 단계가 20점, AI를 활용한 인물 가상 인터뷰가 30점, 감상문 완성이 50점입니다. 질문을 만들고 인터뷰로 답을 찾은 뒤 그 내용을 감상문에 담는 순서로 진행됩니다.",
+      },
+      {
+        title: "문제 해결 글쓰기는 1000자 이상이 분량 만점",
+        body: "주장하는 글의 논리성 30점, 자료 활용 30점, 개요 20점, 분량 20점으로 채점합니다. 분량은 1000자 이상이면 20점, 800~999자면 15점이라 개요 단계에서 글의 길이까지 계획해 두는 편이 좋습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "보고서는 문화를 대하는 태도 분석이 30점, 팸플릿은 공정한 재판의 원칙과 제도가 40점입니다",
+    intro:
+      "구영중학교 1학년 사회는 10월·12월 정기시험이 30%씩, 프로젝트형 수행평가 두 개가 20%씩입니다. 9월에는 문화 단원 보고서를, 11월에는 재판 단원 팸플릿을 만듭니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "문화 이해 태도 보고서 작성하기", kind: "task", weight: 20, timing: "9월/1회", method: "프로젝트" },
+      { name: "공정 재판 팸플릿 만들기", kind: "task", weight: 20, timing: "11월/1회", method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "보고서는 문화를 대하는 태도 분석이 30점",
+        body: "문화를 이해하는 태도 분석 30점, 문화 상대주의적 자세 20점, 다른 문화 소개 20점, 자료 활용 15점, 자기평가 15점입니다. 다른 문화를 소개하는 데서 그치지 않고 어떤 태도로 바라볼지까지 써야 합니다.",
+      },
+      {
+        title: "팸플릿은 공정한 재판의 원칙과 제도가 40점",
+        body: "공정한 재판을 위한 원칙과 제도 설명이 40점, 문구와 보조 자료가 30점, 국민참여재판 내용이 15점, 자기평가가 15점입니다. 국민참여재판이 별도 항목으로 들어가 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "위치관계는 12가지를 다 찾아야 만점이고, 꼬리 질문 사전엔 다각형 10개와 원·부채꼴 11개가 들어갑니다",
+    intro:
+      "구영중학교 1학년 수학은 중간고사와 기말고사가 30%씩, 도형 단원 수행평가 두 개가 20%씩입니다. 두 과제 모두 정해진 개수 이상을 찾거나 정리했는지로 점수가 갈립니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "위치관계 찾기", kind: "task", weight: 20 },
+      { name: "수학 꼬리 질문 사전 만들기", kind: "task", weight: 20 },
+    ],
+    notes: [
+      {
+        title: "위치관계는 12가지를 찾아야 만점",
+        body: "입체도형과 깎인 입체도형에서 각각 위치관계를 찾아 50점씩 채점합니다. 12가지를 찾으면 50점, 10~11가지는 45점, 7~9가지는 40점이며 성취기준은 [9수03-01]입니다.",
+      },
+      {
+        title: "꼬리 질문 사전은 다각형 10개, 원·부채꼴 11개",
+        body: "다각형 단원에서 꼬리 질문을 10개 이상 만들면 50점, 원과 부채꼴 단원에서 11개 이상 만들면 50점입니다. 성취기준은 [9수03-05]와 [9수03-06]입니다.",
+      },
+      {
+        title: "수행평가 시기는 진도표와 함께 확인",
+        body: "평가 계획표에는 위치관계 찾기가 10월, 꼬리 질문 사전이 11월로 적혀 있지만 진도표에는 각각 8월 5주와 10월 1주에 수행평가 연계 표시가 있어 시기를 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "탄성력은 그래프와 무게 계산이 30점씩, 기체는 입자 모형 그림과 설명이 40점씩입니다",
+    intro:
+      "구영중학교 1학년 과학은 10월·12월 정기시험이 30%씩, 탐구 수행평가 두 개가 20%씩입니다. 힘 단원에서는 그래프와 계산을, 기체 단원에서는 입자 모형 그림과 설명을 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "용수철의 탄성력 탐구", kind: "task", weight: 20 },
+      { name: "기체의 온도와 부피 사이의 관계 탐구", kind: "task", weight: 20, timing: "10월/1회" },
+    ],
+    notes: [
+      {
+        title: "탄성력 탐구는 그래프와 무게 계산이 30점씩",
+        body: "실험 설계 참여 20점, 그래프 작성 30점, 힘의 방향 표시 20점, 물체의 무게 계산 30점입니다. 평가 계획표에는 9월로, 진도표에는 8월 5주로 적혀 있어 시기는 적지 않았습니다.",
+      },
+      {
+        title: "기체 탐구는 입자 모형 그림과 설명이 40점씩",
+        body: "온도에 따른 기체 부피 변화를 입자 모형으로 그리면 40점, 입자 운동으로 설명하면 40점, 일상 속 사례를 들면 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "추론 글은 비교급·최상급이 20점이고, 말하기는 의사소통 기능과 핵심 표현이 30점씩입니다",
+    intro:
+      "구영중학교 1학년 영어 수행평가는 9월 Lesson 5 'Think like Sherlock Holmes!'의 추론 글 25%와 11월 Lesson 7 'Find Your Dream'의 장래희망 말하기 15%입니다. 10월 중간고사는 선택형 60점·서·논술형 40점, 12월 기말고사는 선택형 100점으로 각각 30%를 차지합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "추론하는 글쓰기", kind: "task", weight: 25, timing: "9월/1회", method: "과정형 평가" },
+      { name: "장래희망 소개하기(말하기)", kind: "task", weight: 15, timing: "11월/1회", method: "구술·발표" },
+    ],
+    notes: [
+      {
+        title: "그림 속 단서 5가지 이상",
+        body: "추론하는 글쓰기는 그림의 세부 내용을 5가지 이상 구체적으로 쓰면 30점, 오류 없는 완전한 문장 5문장 이상이면 30점이고, 비교급·최상급 두 형식을 모두 정확히 쓰면 20점, 시각 자료와 논리적 개연성이 20점입니다. 성취기준은 [9영02-05]·[9영02-09]·[9영02-10]·[9영02-11]입니다.",
+      },
+      {
+        title: "대화 3개와 AI 사용 규칙",
+        body: "장래희망 소개는 핵심 의사소통기능을 쓴 대화가 3개 이상이면 30점, 핵심 표현의 정확성 30점, 유창성 20점, 성실성과 활동지 20점입니다. 두 과제 모두 AI는 허용된 범위에서만 쓰고 AI 입력창에 학번·이름 같은 개인정보를 넣으면 안 된다는 유의사항이 붙어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "건의문엔 복합양식 자료 두 항목이 있고, 소설 분석은 인물 카드를 만드는 데서 시작합니다",
+    intro:
+      "구영중학교 2학년 국어는 중간고사와 기말고사가 30%씩, 프로젝트형 수행평가 두 개가 20%씩입니다. 두 과제 모두 다섯 항목을 20점씩 채점합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "건의하는 글쓰기", kind: "task", weight: 20, timing: "9월/1회", method: "프로젝트" },
+      { name: "소설 작품 분석하기", kind: "task", weight: 20, method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "건의문은 복합양식 자료가 두 항목",
+        body: "글쓰기 계획, 형식, 복합양식 자료 선정, 자료와 내용의 연계, 완성도를 20점씩 채점합니다. 성취기준은 [9국03-07]이며 자료를 고르는 것과 글에 연결하는 것이 따로 평가됩니다.",
+      },
+      {
+        title: "소설 분석은 인물 카드부터",
+        body: "인물 카드 작성과 인물의 성격 분석 등 다섯 항목을 20점씩 봅니다. 평가 계획표에는 10월, 진도표에는 9월 4주로 적혀 있어 시기는 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "혁명 신문은 본문과 사설이 30점씩이고, SNS 게시글은 이미지·해시태그·댓글까지 씁니다",
+    intro:
+      "구영중학교 2학년 역사는 10월·12월 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 9월에는 시민 혁명을 신문으로, 11월에는 세계대전을 SNS 게시글 형식으로 표현합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "프랑스 혁명 신문 만들기", kind: "task", weight: 20, timing: "9월/1회", method: "서술·논술" },
+      { name: "세계대전 SNS 게시글 쓰기", kind: "task", weight: 20, timing: "11월/1회", method: "서술·논술" },
+    ],
+    notes: [
+      {
+        title: "혁명 신문은 본문과 사설이 30점씩",
+        body: "신문 제목 20점, 기사 본문 30점, 사설 30점, 삽화 20점입니다. 사건을 전하는 기사와 자기 견해를 담는 사설을 나누어 써야 합니다.",
+      },
+      {
+        title: "SNS 게시글은 이미지·해시태그·댓글까지",
+        body: "이미지 30점, 해시태그 20점, 본문 30점, 댓글 20점으로 게시글의 형식 요소가 각각 채점됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "미니북은 닮음의 실생활 활용이 40점이고, 마인드맵은 피타고라스 정리까지 정리합니다",
+    intro:
+      "구영중학교 2학년 수학은 정기시험 두 번이 30%씩이고 수행평가 두 개가 모두 11월에 20%씩 있습니다. 두 과제 모두 삼각형·사각형·닮음 단원을 정리하는 형식입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "문제해결과정 탐구", kind: "task", weight: 20, timing: "11월/1회", method: "프로젝트" },
+      { name: "마인드맵 만들기", kind: "task", weight: 20, timing: "11월/1회", method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "미니북은 닮음의 실생활 활용이 40점",
+        body: "문제해결과정 탐구는 미니북으로 만들며 삼각형 30점, 사각형의 포섭 관계 30점, 닮음의 실생활 활용 40점입니다.",
+      },
+      {
+        title: "마인드맵은 피타고라스 정리까지",
+        body: "삼각형 30점, 사각형 30점, 피타고라스 정리와 닮음 40점이며 성취기준은 [9수03-09]부터 [9수03-15]까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "원자 모형과 이온식이 30점씩이고, 소화 탐구는 두 번에 걸쳐 결과 분석 40점을 봅니다",
+    intro:
+      "구영중학교 2학년 과학은 중간고사와 기말고사가 30%씩, 수행평가 두 개가 20%씩입니다. 두 과제가 모두 9~10월에 있고, 소화 과정 탐구는 두 번에 나누어 합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "원자와 이온 모형으로 나타내기", kind: "task", weight: 20, timing: "9월/1회" },
+      { name: "소화 과정 탐구", kind: "task", weight: 20, timing: "9, 10월/2회", method: "과정형 평가" },
+    ],
+    notes: [
+      {
+        title: "이온 과제는 원자 모형과 이온식이 30점씩",
+        body: "주기율표 20점, 원자 모형 30점, 이온 모형 20점, 이온식 30점입니다. 모형 그림과 함께 이온식을 정확히 쓰는 것이 배점의 큰 부분입니다.",
+      },
+      {
+        title: "소화 탐구는 결과 분석이 40점",
+        body: "실험 보고서 20점, 결과 분석 40점, 모형 20점, 설명 20점으로 채점합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "홍보 글은 세부 내용과 문장이 30점씩, 말하기는 대화 구성과 핵심 표현이 30점씩입니다",
+    intro:
+      "2학년 영어의 쓰기 과제는 Lesson 7 'Let's Enjoy Festivals'와 연계해 우리나라 여행지를 홍보하는 글로 25%이고, 11월에 한 번 보는 의사소통기능 말하기가 15%입니다. 정기시험은 중간고사(선택형 60점·서·논술형 40점)와 기말고사(선택형 100점)가 30%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "우리나라 여행지 홍보하기", kind: "task", weight: 25 },
+      { name: "의사소통기능 활용 말하기", kind: "task", weight: 15, timing: "11월/1회" },
+    ],
+    notes: [
+      {
+        title: "홍보 글 필수 요소 네 가지",
+        body: "축제명·장소·기간 같은 구체 정보, 여행지로 고른 이유, 그곳의 활동과 행사, 맺음말을 모두 넣어야 세부 내용 30점입니다. 완전한 문장은 7문장 이상이어야 30점이고 언어 형식 20점, 시각 자료 20점이 더해집니다. 평가 계획표에는 10월, 진도표에는 10월 5주~11월 1주로 적혀 있어 시기는 비워 두었습니다.",
+      },
+      {
+        title: "말하기 성취기준 세 가지",
+        body: "의사소통기능 활용 말하기는 사실적 정보 설명 [9영02-03], 경험·계획 설명 [9영02-04], 의견 주장 [9영02-06]을 다룹니다. 홍보 글은 [9영02-06]·[9영02-10]이며, 각 평가요소 하 점수를 더한 기본점수는 50점, 미제출 40점, 미인정 장기 결석자 30점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "소설 보고서는 사회·문화적 배경이 30점이고, 논증 글은 귀납·연역 활용이 40점입니다",
+    intro:
+      "구영중학교 3학년 국어는 10월 중간고사와 11월 기말고사가 30%씩, 수행평가 두 개가 20%씩입니다. 기말고사가 1·2학년보다 이른 11월이라 수행평가도 학기 앞쪽에 모여 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "소설 분석 보고서", kind: "task", weight: 20, method: "프로젝트" },
+      { name: "논증 활용하여 글 쓰기", kind: "task", weight: 20, timing: "9월/1회", method: "서술·논술" },
+    ],
+    notes: [
+      {
+        title: "소설 보고서는 사회·문화적 배경이 30점",
+        body: "질문 기반 포트폴리오 20점, 줄거리 정리와 비판 20점, 사회·문화적 배경 분석 30점, 삶의 태도에 대한 감상문 30점입니다. 평가 계획표는 9~10월, 진도표는 8월 5주로 적혀 있어 시기는 적지 않았습니다.",
+      },
+      {
+        title: "논증 글쓰기는 귀납·연역이 40점",
+        body: "논증 방법 파악 20점, 귀납과 연역 활용 40점, 유추 20점, 분량과 표현 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 인구 피라미드 분석에서 대책 제안까지, 역사는 인터뷰 답변 40점·일기 50점입니다",
+    intro:
+      "구영중학교 3학년 사회 영역은 사회와 역사 모두 10월 중간고사·11월 기말고사가 30%씩, 수행평가 두 개가 20%씩입니다. 사회는 보고서와 광고 기획안, 역사는 인터뷰 시나리오와 역사 일기를 씁니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점", course: "사회" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점", course: "사회" },
+      { name: "인구문제 보고서", kind: "task", weight: 20, method: "보고서 평가", course: "사회" },
+      { name: "살기 좋은 도시 광고 기획안 만들기", kind: "task", weight: 20, timing: "9~10월/1회", course: "사회" },
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점", course: "역사" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점", course: "역사" },
+      { name: "조선 국왕 가상 인터뷰 시나리오 작성하기", kind: "task", weight: 20, timing: "9월/1회", method: "서술·논술", course: "역사" },
+      { name: "풍속화 속 역사 인물이 되어 쓰는 역사 일기", kind: "task", weight: 20, course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 — 인구 피라미드 분석에서 대책 제안까지",
+        body: "인구문제 보고서는 인구 피라미드 분석 20점, 원인과 사회 현상 30점, 국가별 대책과 자료 30점, 우리나라에 맞는 제안 20점입니다. 도시 광고 기획안은 문제 분석력 30점, 조건 제시 20점, 표현의 창의성 30점, 내용 충실성 20점입니다.",
+      },
+      {
+        title: "역사 — 인터뷰는 답변이 40점, 일기는 50점",
+        body: "국왕 가상 인터뷰 시나리오는 탐구 질문 30점, 답변 40점, 역사 용어 30점입니다. 역사 일기는 김홍도 등의 풍속화를 골라 사료 선정 20점, 화가와 풍속화 소개 30점, 일기 50점으로 채점합니다.",
+      },
+      {
+        title: "수행평가 시기는 진도표와 함께 확인",
+        body: "인구문제 보고서는 진도표에 8월 5주로 표시되어 있고, 역사 일기는 평가 계획표 10월과 진도표 9월 4~5주가 달라 두 과제의 시기는 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "꼬리 질문 사전은 이차함수 평행이동 세 갈래이고, 삼각비 탐구는 특수각 문제가 50점씩입니다",
+    intro:
+      "구영중학교 3학년 수학은 중간고사와 기말고사가 30%씩, 수행평가 두 개가 20%씩입니다. 9월에는 이차함수 꼬리 질문 사전을, 10월에는 삼각비 문제 탐구를 합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "수학 꼬리 질문 사전 만들기", kind: "task", weight: 20, timing: "9월/1회" },
+      { name: "삼각비 문제 탐구", kind: "task", weight: 20, timing: "10월/1회" },
+    ],
+    notes: [
+      {
+        title: "꼬리 질문 사전은 이차함수 평행이동 세 갈래",
+        body: "y축 방향 평행이동 30점, x축 방향 평행이동 30점, x축과 y축 방향 평행이동 40점으로 이차함수 그래프 이동을 나누어 정리합니다.",
+      },
+      {
+        title: "삼각비 탐구는 특수각 문제가 50점씩",
+        body: "30°와 60°를 이용한 문제 50점, 45°를 이용한 문제 50점으로 채점합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "체세포 분열과 감수 분열을 비교하고, 가전제품 탐구는 전력량 계산이 40점입니다",
+    intro:
+      "구영중학교 3학년 과학은 10월·11월 정기시험이 30%씩, 탐구 보고서 형식의 수행평가 두 개가 20%씩입니다. 세포 분열 과제는 학기 초에, 가전제품 과제는 10~11월에 합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "세포 분열 과정 표현하기", kind: "task", weight: 20, method: "탐구보고서" },
+      { name: "가전제품의 에너지 전환 및 소비 전력 탐구", kind: "task", weight: 20, timing: "10~11월/1회", method: "탐구보고서" },
+    ],
+    notes: [
+      {
+        title: "세포 분열은 체세포 분열과 감수 분열 비교",
+        body: "체세포 분열 30점, 감수 1분열 20점, 감수 2분열 20점, 두 분열의 차이점 30점입니다. 평가 계획표는 9~10월, 진도표는 8월 5주라 시기는 적지 않았습니다.",
+      },
+      {
+        title: "가전제품 탐구는 전력량 계산이 40점",
+        body: "에너지 전환 30점, 소비 전력과 전력량 40점, 전기 요금 산정 30점으로 실제 가전제품을 놓고 계산하는 과제입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "guyeong-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "설명문은 언어 사용이 25점이고, 경험 발표는 여섯 항목으로 나눠 채점합니다",
+    intro:
+      "구영중학교 3학년 영어는 정기시험이 30%씩이고 수행평가는 쓰기 25%, 발표 15%입니다. 9월 Lesson 5 설명문에 이어 10월 Lesson 6 경험 발표가 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 60점·서·논술형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형 100점" },
+      { name: "설명문 쓰기", kind: "task", weight: 25, timing: "9월/1회", method: "논술" },
+      { name: "경험 발표하기", kind: "task", weight: 15, timing: "10월/1회", method: "발표" },
+    ],
+    notes: [
+      {
+        title: "설명문은 언어 사용이 25점",
+        body: "Lesson 5 ‘The Team Behind the Team’과 연계해 완성도 20점, 내용 20점, 언어 사용 25점, 핵심 문법 20점, 쓰기 과정 15점으로 채점합니다.",
+      },
+      {
+        title: "발표는 여섯 항목으로 나뉩니다",
+        body: "Lesson 6 ‘Stories for All Times’와 연계해 수행 과정 15점, 내용 15점, 완성도 20점, 정확성 25점, 유창성 15점, 발표 태도 10점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("구영중학교")],
+  },
+  {
+    schoolSlug: "gyeonggimulryu-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "독서논술(25%)·한글맞춤법일지(15%)는 학기 내내, 논증하는글쓰기 20%는 10월 3주",
+    intro:
+      "경기물류고등학교 1학년 공통국어2는 12월 2주에 치르는 2차 정기시험 한 번이 40%이고, 수행평가 세 과제가 60%입니다. 독서논술과 논증하는 글쓰기가 논술로 평가되어 학기 성적의 45%가 논술형입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 40, timing: "12월 2주", method: "100점 만점" },
+      { name: "독서논술작성하기", kind: "task", weight: 25, timing: "8월 5주~11월 5주", method: "논술" },
+      { name: "논증하는글쓰기", kind: "task", weight: 20, timing: "10월 3주", method: "논술" },
+      { name: "한글맞춤법일지작성하기", kind: "task", weight: 15, timing: "8월 5주~11월 5주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "독서논술은 8월 말부터 11월 말까지",
+        body: "독서논술작성하기(25%)는 8월 5주~11월 5주에 걸쳐 독서일지를 쓰고 작품을 골라 주체적인 관점에서 감상을 쓰는 과제입니다. 성취기준은 [10공국2-02-01]·[10공국2-02-03]·[10공국2-05-02]이고, 진도표의 단원마다 ‘수행평가연계(논술, 포트폴리오)’가 표시되어 있습니다.",
+      },
+      {
+        title: "논증하는 글쓰기는 의견 전달 단원에서",
+        body: "진도표 10월 3주 ‘효과적으로 의견 전달하기’ 단원에 ‘논증하는글쓰기’ 논술형 평가 실시가 적혀 있습니다. 제시문 이해, 자료 활용, 주장과 근거 제시를 평가요소로 두며 성취기준은 [10공국2-03-02]입니다.",
+      },
+      {
+        title: "맞춤법 일지는 포트폴리오 15%",
+        body: "한글맞춤법일지작성하기는 한글 맞춤법의 원리를 적용한 예문을 쓰며 일지를 쌓아 가는 포트폴리오로 [10공국2-04-02]를 평가합니다. 정기시험은 1회(2차)뿐이고, 수행평가 기본 점수는 30%~36%로 정해져 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("경기물류고등학교")],
+  },
+  {
+    schoolSlug: "gyeonggimulryu-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "직선의 방정식(9월 2~3주)·집합(10월 4주)·명제 발표(11월 2~3주) 수행 20%씩",
+    intro:
+      "경기물류고등학교 1학년 공통수학2는 2차 정기시험(12월 2주) 40%와 단원별 수행평가 세 개 20%씩으로 구성됩니다. 앞의 두 과제는 논술, 마지막 명제 과제는 구술로 평가합니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 40, timing: "12월 2주", method: "100점 만점" },
+      { name: "실생활을 직선의 방정식으로 표현하고 문제 해결하기", kind: "task", weight: 20, timing: "9월 2주~3주", method: "논술" },
+      { name: "관심있는 것을 집합으로 만들고 표현하기", kind: "task", weight: 20, timing: "10월 4주", method: "논술" },
+      { name: "나의 미래를 명제로 표현하고 발표하기", kind: "task", weight: 20, timing: "11월 2~3주", method: "구술" },
+    ],
+    notes: [
+      {
+        title: "좌표평면 단원은 실생활 상황으로",
+        body: "9월 2주~3주 과제는 실생활 상황을 좌표평면으로 표현해 내분점을 구하고, 두 직선의 수직 판별과 점과 직선 사이의 거리 문제를 해결하는 논술입니다. 성취기준은 [10공수2-01-01]~[10공수2-01-03]입니다.",
+      },
+      {
+        title: "집합 과제는 벤 다이어그램까지",
+        body: "10월 4주에는 관심 있는 요소를 집합으로 나타내고 두 집합의 포함관계를 판단한 뒤 벤 다이어그램으로 연산을 수행합니다. 진도표의 같은 주에 ‘관심 있는 것을 집합으로 만들고 표현하는 평가 실시’가 적혀 있습니다.",
+      },
+      {
+        title: "명제 과제는 말로 설명합니다",
+        body: "11월 2~3주 명제 과제는 자신의 미래와 관련된 명제를 만들고 필요조건·충분조건을 판별한 뒤, 표현 과정을 논리적으로 발표하는 구술 평가입니다. 논술형 반영비율은 앞의 두 과제를 합친 40%이고 수행평가 기본 점수는 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("경기물류고등학교")],
+  },
+  {
+    schoolSlug: "gyeonggimulryu-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "상품개발 글쓰기(10월 3주) 25%가 가장 크고, 동물소개 말하기 15%·어휘·어법 포트폴리오 20%",
+    intro:
+      "경기물류고등학교 1학년 공통영어2는 12월 2주 2차 정기시험이 40%, 수행평가 세 영역이 60%입니다. 논술형은 동물소개 말하기의 10%와 상품개발 글쓰기의 25%를 합쳐 학기 성적의 35%입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 40, timing: "12월 2주", method: "100점 만점" },
+      { name: "동물소개말하기", kind: "task", weight: 15, timing: "9월 2주", method: "논술, 구술" },
+      { name: "상품개발글쓰기", kind: "task", weight: 25, timing: "10월 3주", method: "논술" },
+      { name: "맥락에적절한어휘와어법활용하기", kind: "task", weight: 20, timing: "8월 5주~12월 1주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "동물소개는 대본과 발음",
+        body: "9월 2주 동물소개말하기(15점)는 주제에 맞는 말하기 대본을 어순과 문맥에 맞게 쓰고 유창한 발음으로 문장을 구사하는지를 봅니다. 평가 방법에 논술과 구술이 함께 표시되어 있고, 성취기준은 [10공영2-02-04]·[10공영2-02-07]입니다.",
+      },
+      {
+        title: "상품개발 글쓰기는 10월 1~3주 진도와 연결",
+        body: "진도표 10월 1~3주 ‘Humans and Technology’ 단원에 개발하려는 상품의 특징과 사용 방법을 다양한 표현으로 쓰도록 지도한다는 계획이 있고, 평가는 10월 3주입니다. 내용의 타당성, 배운 어휘·문법 활용, 언어 형식이 평가요소입니다.",
+      },
+      {
+        title: "어휘·어법 포트폴리오는 학기 전체",
+        body: "맥락에적절한어휘와어법활용하기(20%)는 8월 5주부터 12월 1주까지 맥락 속 어휘 의미를 파악하고 어휘·어법으로 생각을 정리하는 포트폴리오입니다. 수행평가 기본 점수는 영역별 만점의 28%~35%로 안내되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("경기물류고등학교")],
+  },
+  {
+    schoolSlug: "gyeonggimulryu-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "산화 환원 실험(9월 2~4주)·센서 자동 급수장치 제작(10월 3~5주) 30%씩, 2차 시험 40%",
+    intro:
+      "경기물류고등학교 1학년 통합과학2는 2차 정기시험(12월 2주) 40%와 실험·제작 수행평가 두 개 30%씩입니다. 두 수행평가에 논술형 15%씩이 들어 있어 논술형 반영비율은 30%입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 40, timing: "12월 2주", method: "100점 만점" },
+      { name: "생활속의산화환원반응 실험하기", kind: "task", weight: 30, timing: "9월 2주~9월 4주" },
+      { name: "센서를이용한자동 급수장치를설계및 제작하여식물키우기", kind: "task", weight: 30, timing: "10월 3주~10월 5주" },
+    ],
+    notes: [
+      {
+        title: "산화 환원 실험은 에칭 작품까지",
+        body: "9월 2주~4주 과제는 산화와 환원의 개념, 산소·전자 이동을 산화 환원 반응으로 서술하고 사례를 제시한 뒤, 실험 과정을 수행해 에칭 작품을 완성하고 원리를 설명하는 순서입니다. 성취기준은 [10통과2-01-03]입니다.",
+      },
+      {
+        title: "스마트팜은 설계부터 논증까지",
+        body: "10월 3주~5주에는 스마트팜 아두이노를 설계하고 인포그래픽 설계 자료를 만들어 발표한 뒤, 사물인터넷이 삶에 미칠 영향과 부작용·한계, 극복 방안을 논증합니다. 성취기준은 [10통과2-03-03]이고 진도표 10월 3~5주에 수행평가 연계가 표시되어 있습니다.",
+      },
+      {
+        title: "정기시험은 한 번, 성취기준은 12개",
+        body: "2차 정기시험 성취기준 칸에는 [10통과2-01-01]부터 [10통과2-03-03]까지 12개가 적혀 있어 지질시대, 산과 염기, 생태계, 지구온난화 내용이 함께 들어갑니다. 수행평가 기본 점수는 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("경기물류고등학교")],
+  },
+  {
+    schoolSlug: "gyeongsang-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "그래프 묘사 글쓰기 20%·그래프 분석 구술 10%(10월) · 9월 영어듣기능력평가 10%",
+    intro:
+      "경상고등학교 1학년 공통영어2는 수행평가 40% 가운데 30%가 그래프를 다루는 두 과제(묘사하는 글 20%, 분석해 말하는 구술 10%)에 걸려 있고, 나머지 10%는 9월의 전국 영어듣기능력평가입니다. 1·2차 정기시험은 회차마다 선택형 60점(18%)과 서술형 40점(12%)으로 나뉩니다.",
+    assessments: [
+      { name: "1차시험 선택형", kind: "exam", weight: 18, timing: "10월6일~10월8일", method: "선택형 60점" },
+      { name: "1차시험 서술형", kind: "exam", weight: 12, timing: "10월6일~10월8일", method: "서술형 40점" },
+      { name: "2차시험 선택형", kind: "exam", weight: 18, timing: "12월1일~12월4일", method: "선택형 60점" },
+      { name: "2차시험 서술형", kind: "exam", weight: 12, timing: "12월1일~12월4일", method: "서술형 40점" },
+      { name: "다양한 상황 속 그래프 묘사하기", kind: "task", weight: 20, timing: "10월 중", method: "논술형" },
+      { name: "사회적 담화의 다양한 표현을 이해하고 핵심 내용 파악하기", kind: "task", weight: 10, timing: "9월 중", method: "단답형 및 선택형" },
+      { name: "다양한 상황 속 그래프를 분석하여 설명하기", kind: "task", weight: 10, timing: "10월 중", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "그래프 묘사 글은 두 단계로 나눠 채점",
+        body: "1단계는 학생이 직접 매체에서 찾은 그래프를 묘사하는 형성평가로 어휘 학습 20점과 내용 및 구성 30점이 걸려 있습니다. 2단계는 새로 제시된 그래프를 묘사하는 총괄평가로 내용 및 구성 20점, 언어사용 20점, 문단 형식 및 표기법 10점이며, 도움자료를 받아 응시하면 세 요소의 상한이 12·12·4점으로 제한됩니다.",
+      },
+      {
+        title: "듣기 10%는 시도교육청 공동 평가",
+        body: "‘사회적 담화의 다양한 표현을 이해하고 핵심 내용 파악하기’는 전국 16개 시도 교육청 주관 영어듣기능력평가 20문항을 문항당 5점(100점 만점)으로 매기는 영역입니다. 진도표에는 9월 7일~11일 주에 듣기 전략 학습과 함께 실시가 표시되어 있습니다.",
+      },
+      {
+        title: "구술 과제는 리허설 참여에도 30점",
+        body: "그래프를 분석해 말하는 구술형 과제는 연습 및 리허설 30점, 자료설명 30점, 언어사용 20점, 발표력(비언어적 요소) 20점으로 채점합니다. 담화 연결어와 격식 있는 어휘를 찾기 위한 영단어 사전 검색만 허용되며, 진도표에서는 그래프 묘사 총괄평가(4차시)와 같은 10월 19일 주에 첫 차시가 시작됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("경상고등학교")],
+  },
+  {
+    schoolSlug: "gyeongsang-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2"],
+    summary: "인권 신문 제작 20%(10월) · 지속가능발전 제안 보고서 20%(11월) · 정기시험 2회 60%",
+    intro:
+      "경상고등학교 1학년 통합사회2는 1·2차 정기시험이 60%이고, 인권 신문과 지속가능발전 제안 보고서가 20%씩 나머지를 채웁니다. 두 과제 모두 논술형이며 AI 활용은 금지되고 인터넷 웹서핑으로 자료를 찾도록 안내되어 있습니다.",
+    assessments: [
+      { name: "1차시험 선택형", kind: "exam", weight: 18, method: "선택형 60점" },
+      { name: "1차시험 서답형", kind: "exam", weight: 12, method: "서술형 40점" },
+      { name: "2차시험 선택형", kind: "exam", weight: 18, method: "선택형 60점" },
+      { name: "2차시험 서답형", kind: "exam", weight: 12, method: "서술형 40점" },
+      { name: "인권 문제를 탐색하고 인권 존중 태도를 강조하는 신문 제작하기", kind: "task", weight: 20, timing: "10월 중", method: "논술형" },
+      { name: "생태시민으로서의 책임을 성찰하고 지속가능발전 제안 보고서 작성하기", kind: "task", weight: 20, timing: "11월 중", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "인권 신문은 사례 조사와 성찰을 함께 봅니다",
+        body: "국내·세계 인권 침해 사례를 조사한 뒤 이를 바탕으로 기사와 인권 신문을 만드는 두 단계 과제입니다. 근거 자료 충실성 30점, 내용의 구체성 30점(관련 용어·국제기구 조약·헌법 조항 제시), 내용 조직의 적절성 20점(신문 양식), 인권 가치에 대한 성찰 20점이며 성취기준은 [10통사2-01-01]~[10통사2-01-03]입니다.",
+      },
+      {
+        title: "보고서는 지속가능발전 목표 두 개에서 출발",
+        body: "지속가능발전 목표 중 2가지를 골라 특징을 분석하고, 국제 사례를 조사한 뒤 정책을 제안해 보고서로 정리합니다. 목표 분석 25점, 사례 조사 20점, 정책 제안의 내용 적합성 15점과 실현가능성 10점, 보고서 작성 30점(서론·본론·결론의 연결성)으로 나뉘고, 진도표에서는 11월 2일 주에 실시가 잡혀 있습니다.",
+      },
+      {
+        title: "회차별 시험은 단답형 없이 서술형 40점",
+        body: "평가 개요표에서 정기시험은 회차마다 선택형 60점(18%)과 서술형 40점(12%)이며 단답형 칸은 비어 있습니다. 1차시험 범위는 [10통사2-01-01]~[10통사2-03-04](Ⅰ~Ⅲ단원), 2차시험은 [10통사2-03-01]~[10통사2-05-03](Ⅲ~Ⅴ단원)이고, 시험 시기는 표에 ‘정기시험 일정’으로만 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("경상고등학교")],
+  },
+  {
+    schoolSlug: "gyeongsang-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학탐구실험2"],
+    summary: "정기시험 없이 NFC 교내 공기질 탐구 50%(10~11월)와 연구 문화 논술 50%로 평가",
+    intro:
+      "경상고등학교 1학년 과학탐구실험2는 1학점·3단계 성취도 과목으로, 정기시험 없이 서논술형 수행평가 두 개를 50%씩 반영합니다. 첫 과제는 NFC 태그로 교내 공기질 측정 결과를 공유하는 탐구이고, 두 번째는 연구 윤리 위반 사례를 분석해 논술문을 쓰는 과제입니다.",
+    assessments: [
+      { name: "NFC를 활용한 교내 공기질 탐구", kind: "task", weight: 50, timing: "10~11월 중", method: "서논술형" },
+      { name: "올바른 연구 문화 조성하기", kind: "task", weight: 50, timing: "11월 중", method: "서논술형" },
+    ],
+    notes: [
+      {
+        title: "공기질 탐구는 측정과 개선 방안이 30점씩",
+        body: "NFC의 과학적 원리 이해 및 정보 읽기·쓰기 20점, 공기질 측정 및 측정 결과 분석 30점, NFC를 활용한 공기질 정보 공유 20점, 공기질 저해 요인 탐구 및 개선 방안 제안 30점입니다. 측정 장소와 조건을 정해 반복 측정하고 결과를 표나 그래프로 처리하는지가 측정 영역의 채점 요소입니다.",
+      },
+      {
+        title: "연구 윤리 과제는 사례 조사 뒤 논술",
+        body: "데이터 위조·변조·표절 같은 위반 유형을 배운 뒤 실제 사례를 조사·요약하고, 이를 근거로 연구 윤리의 중요성과 개선 방안을 논술합니다. 매체 사례 분석 20점, 중요성 작성 20점, 원칙 이해 및 적용 30점, 사례 기반 실현 가능한 개선 방안 30점이며, 최종 글쓰기 단계에서는 AI 활용이 금지됩니다.",
+      },
+      {
+        title: "논술 전 개요 확인 단계가 있습니다",
+        body: "진도표에서 연구 윤리 과제는 11월 9일 주부터 세 주에 걸쳐 한 차시씩 진행되고, 두 번째 차시 형성평가로 서론-본론-결론 개요를 작성해 교사에게 확인받은 뒤 논술문을 씁니다. 두 과제 모두 미응시·미제출이나 백지 제출이면 평가 요소 최하점보다 1점 낮은 점수를 받습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("경상고등학교")],
+  },
+  {
+    schoolSlug: "gyeryongdijitek-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "개념 체계화 활동지 5회 통과제 30% · 풀이 서술 적용평가 5문항 30%(12월)",
+    intro:
+      "계룡디지텍고등학교 1학년 공통수학2는 수행평가 두 영역이 각 30%로, 중간·기말고사(각 20%)보다 학기말 비중이 큽니다. 활동지는 학기 내내 다섯 번에 걸쳐 쌓이고, 풀이를 쓰는 적용평가는 기말고사 이전 12월에 따로 치릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 20, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 20, timing: "12월", method: "선택형 100점" },
+      { name: "도형과 집합 및 함수 개념 체계화 활동지 작성", kind: "task", weight: 30, method: "활동지 작성 및 표현(5회)" },
+      { name: "학습내용 적용평가", kind: "task", weight: 30, timing: "12월", method: "서술형 평가(5문항)" },
+    ],
+    notes: [
+      {
+        title: "활동지는 '통과' 횟수로 점수가 정해집니다",
+        body: "활동지 한 회차에서 정답률이 50% 이상이면 통과로 봅니다. 5회 모두 통과하면 30점, 4회 27점, 3회 24점처럼 한 회마다 3점씩 내려가고, 한 번도 통과하지 못하면 15점, 백지 제출은 12점입니다. 평가 요소는 두 점 사이의 거리·내분점부터 유리함수·무리함수까지 13개로, 2학기 범위 전체에 걸쳐 있습니다.",
+      },
+      {
+        title: "적용평가는 풀이가 없으면 틀린 것으로 처리",
+        body: "집합·명제·함수 단원([10공수2-02-01]~[10공수2-03-05])에서 5문항을 서술형으로 풉니다. 풀이 없이 정답만 쓴 경우와 답은 맞았지만 풀이 과정이 틀린 경우 모두 오답이며, 한 문제 틀릴 때마다 27점·24점…으로 내려가 5문제를 모두 틀리면 15점입니다. 학급마다 문항의 수식을 다르게 냅니다.",
+      },
+      {
+        title: "서·논술형은 적용평가 한 영역",
+        body: "평가 기준표의 서·논술형 실시 여부는 중간·기말고사와 활동지가 ×, 학습내용 적용평가만 ○입니다. 동점자 처리 순위는 기말고사, 중간고사, 학습내용 적용평가, 활동지 순입니다. 활동지 시기는 기준표 9-12월, 세부 기준 '개학일~기말고사 이전'으로 표기가 달라 생략했습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("계룡디지텍고등학교")],
+  },
+  {
+    schoolSlug: "gyeryongdijitek-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "한국 문화 소개 영작 30%(11월) · 여행 경험 말하기 20% · 시험은 회차당 25%",
+    intro:
+      "계룡디지텍고등학교 1학년 공통영어2는 중간·기말고사가 25%씩, 말하기와 쓰기 수행평가가 20%·30%입니다. 두 수행 모두 '5단어 이상 문장을 몇 개 완성했는가'로 점수 단계가 나뉘어, 문장 수를 채우는 것이 채점의 출발점입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "12월", method: "선택형 100점" },
+      { name: "기억에 남는 여행 경험 말하기", kind: "task", weight: 20, method: "말하기" },
+      { name: "한국 문화 소개하기", kind: "task", weight: 30, timing: "11월", method: "쓰기(서·논술형)" },
+    ],
+    notes: [
+      {
+        title: "말하기: 5문장 이상이면 20점",
+        body: "[10공영2-02-03]에 따라 기억에 남는 여행 경험을 영어로 말합니다. 5문장 이상 20점, 4문장 18점, 3문장 16점, 2문장 14점, 1문장 12점이고, 각 문장은 5단어 이상·오류 1개 이하여야 인정됩니다. 시기는 비율표에 9월, 진도표에는 10월 Lesson 1 단원에 적혀 있어 생략했습니다.",
+      },
+      {
+        title: "쓰기: 문장 하나에 3점 차이",
+        body: "Read On 단원에서 한국 문화를 소개하는 글을 씁니다([10공영2-02-04]). 5문장 이상 30점, 4문장 27점, 3문장 24점으로 문장 하나마다 3점씩 차이가 나고, 모든 문장이 틀리면 15점, 백지 제출은 12점입니다.",
+      },
+      {
+        title: "서·논술형은 쓰기 과제에만",
+        body: "평가 기준표에서 서·논술형 실시 여부가 ○인 영역은 한국 문화 소개하기 하나뿐이고, 정기시험과 말하기는 ×입니다. 정기시험은 선택형 100점으로 치르고 서술형 칸은 비어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("계룡디지텍고등학교")],
+  },
+  {
+    schoolSlug: "gyeryongdijitek-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2"],
+    summary: "기본권 탐구 보고서·금융 설계 학습지 각 20%(서·논술) · 정기시험 60%",
+    intro:
+      "계룡디지텍고등학교 1학년 통합사회2는 중간·기말고사 30%씩에 서·논술형 수행평가 두 개가 20%씩 붙습니다. 두 과제 모두 5점·5점·10점의 세 요소로 짜여 있어, 마지막 10점 요소(공익 광고, 자산 포트폴리오)의 완성도가 점수 차이를 크게 만듭니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "기본권 보장 방안 탐구하기", kind: "task", weight: 20, method: "서·논술형(보고서)" },
+      { name: "미래 목표 달성을 위한 금융 설계 하기", kind: "task", weight: 20, method: "서·논술형(학습지)" },
+    ],
+    notes: [
+      {
+        title: "기본권 보고서는 공익 광고가 10점",
+        body: "[10통사2-01-02] 성취기준으로, 관련 기본권 5점과 기본권의 종류 5점은 각각 4가지 이상 바르게 제시해야 만점입니다. 나머지 10점은 공익 광고 만들기로, 주제 적합성·논리적 구성·설득력·분량과 형식 네 요소를 모두 충족해야 10점입니다. 보고서 양식은 반별로 정해진 날 1차시 안에 배부·작성합니다.",
+      },
+      {
+        title: "금융 설계는 포트폴리오 구성 이유까지 씁니다",
+        body: "금융 자산의 특징 서술 5점, 환경 변화에 따른 금융 의사 결정 5점, 자산 포트폴리오 구성 10점입니다. 포트폴리오 요소는 미래 목표와 필요한 금액·준비 기간, 자산 관리 원칙과 선택 이유, 목표를 고려한 자산 구성, 구성 이유 설명 네 가지이고 [10통사2-03-03]과 연결됩니다.",
+      },
+      {
+        title: "수행 시기는 표마다 달라 생략",
+        body: "비율표는 두 과제를 9월·11월로 적었지만, 진도표는 8월 '인권 보장과 헌법' 단원과 10월 '금융 생활과 의사 결정' 단원에 수행평가를 표시합니다. 백지 제출은 영역별 7점, 장기 결석·평가 불응은 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("계룡디지텍고등학교")],
+  },
+  {
+    schoolSlug: "gyeryongdijitek-high-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["한국사2"],
+    summary: "가상 일기는 담긴 시대상 개수로 채점하고, 카드 뉴스는 다섯 요소를 갖춥니다",
+    intro:
+      "계룡디지텍고등학교 2학년 한국사2는 중간·기말고사가 각 30%이고, 가상 일기 쓰기(9월)와 카드 뉴스 만들기(11월)가 각 20%입니다. 두 수행 모두 역사적 사실과 다르면 인정하지 않는다는 조건이 붙어, 시대상과 사건의 사실 확인이 채점의 바탕입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "가상 일기 쓰기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "카드 뉴스 만들기", kind: "task", weight: 20, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "가상 일기는 시대상 개수로 채점",
+        body: "1910년대, 1920년대, 1930~40년대 가운데 한 시대를 골라 그 시대 사람의 일기를 씁니다. 역사적 사실에 맞는 특징적 시대상을 5가지 이상 쓰면 20점, 4가지 18점, 3가지 16점이고, 하나도 맞지 않으면 10점, 백지는 8점입니다. 미리 준비한 종이를 보고 쓰면 부정행위로 처리합니다.",
+      },
+      {
+        title: "카드 뉴스 다섯 요소",
+        body: "일제강점기부터 광복 이후 대한민국의 발전까지에서 사건 하나를 골라 4컷 카드 뉴스를 만듭니다. 사건을 대표하는 제목, 배경(원인·근인 중 하나), 과정, 결과(결과·영향 중 하나), 4컷 모두 글과 그림으로 보도하기 다섯 요소를 채우면 20점이고 하나 빠질 때마다 2점씩 내려갑니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("계룡디지텍고등학교")],
+  },
+  {
+    schoolSlug: "gyeryongdijitek-high-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "유도전류 보고서는 다섯 가지를 확인하고, 발전 방식 포트폴리오는 발표까지 이어집니다",
+    intro:
+      "계룡디지텍고등학교 2학년 통합과학2는 중간·기말고사 30%씩과 실험·탐구 수행평가 두 개(각 20%)로 성적을 냅니다. 두 수행은 모두 '에너지 전환과 활용' 단원에서 나와, 전자기 유도 실험과 발전소·신재생에너지 비교가 한 흐름으로 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "자석과 코일을 이용하여 유도전류 분석하기", kind: "task", weight: 20, method: "탐구 실험 보고서" },
+      { name: "에너지 보존과 효율 관점에서 발전 방식과 신재생에너지 분석하기", kind: "task", weight: 20, method: "포트폴리오 제작·발표" },
+    ],
+    notes: [
+      {
+        title: "유도전류 보고서의 다섯 가지 확인 항목",
+        body: "코일 감은 수, 자석 개수, 자석의 움직이는 속력에 따른 검류계 변화를 각각 1가지 이상 설명하고, 전류를 높이는 방법 3가지를 모두 쓰며, 유도전류·코일·자석 용어를 1회 이상 써서 전자기 유도를 설명해야 합니다. 다섯 요소 충족 20점, 하나 모자랄 때마다 2점씩 내려가 모두 불충족이면 10점입니다.",
+      },
+      {
+        title: "발전 방식 포트폴리오는 발표까지",
+        body: "에너지 보존법칙, 에너지 효율, 화력발전소 특징, 핵발전소 특징, 신재생에너지와 그 예를 각각 1가지 이상 설명하는 것이 요소이고, 탐구 과정별 분석을 포트폴리오로 만들어 발표·제출합니다. 성취기준은 [10통과2-02-05]·[10통과2-02-06]입니다.",
+      },
+      {
+        title: "수행 시기는 생략",
+        body: "평가 기준표는 두 과제를 9-10월·10-11월로 적었지만, 진도표에서 수행평가 표시는 11월 '에너지 전환과 활용' 단원의 탐구 활동에만 붙어 있어 시기를 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("계룡디지텍고등학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "독서생각노트는 두 번에 나눠 쓰고, 만화는 진솔하게 글쓰기 단원에서 그리며 서답 7문항은 6·8·10점입니다",
+    intro:
+      "해동중학교 1학년 국어는 9월 4주 중간고사와 12월 2주 기말고사가 각 30%이고, 두 시험 모두 선택 13문항 50점과 서답 7문항 50점으로 나뉩니다. 수행평가는 독서생각노트를 쓰는 한 학기 한 권 읽기 25%와 9월 인상적 경험 만화로 표현하기 15%입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 50점(13문항)·서답 50점(7문항)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 50점(13문항)·서답 50점(7문항)" },
+      { name: "한 학기 한 권 읽기(독서생각노트)", kind: "task", weight: 25, timing: "수시", method: "개별" },
+      { name: "인상적 경험 만화로 표현하기", kind: "task", weight: 15, timing: "9월", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "서답 7문항은 6점·8점·10점",
+        body: "두 정기시험의 서답 50점은 6점 4개, 8점 2개, 10점 1개로 짜여 있고, 선택 50점은 3점 5개, 4점 5개, 5점 3개입니다. 반영 비율로는 회차마다 선택과 서답이 15%씩입니다.",
+      },
+      {
+        title: "독서생각노트는 두 번에 나눠 씁니다",
+        body: "진도표에서 독서생각노트Ⅰ은 8월 4~5주 ‘나를 키우는 문학’ 단원에 2차시, 독서생각노트Ⅱ는 11월 3~4주 ‘추론하며 읽기’ 단원에 1차시로 잡혀 있습니다. 성취기준은 [9국05-03]·[9국02-03]입니다.",
+      },
+      {
+        title: "만화는 진솔하게 글쓰기 단원에서",
+        body: "인상적 경험 만화로 표현하기는 9월 1~2주 ‘진솔하게 글쓰기’ 단원에 2차시로 배정되어 있고, [9국03-05]에 맞춰 경험과 정서가 담긴 글을 서로 평가하는 활동과 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "가짜 뉴스와 문화 여행 상품, 두 과제가 한 단원 안에 있고 기말 서답은 10·9·6점입니다",
+    intro:
+      "해동중학교 1학년 사회는 정기시험이 12월 2주 기말고사 한 번(40%)이고 수행평가 두 개가 30%씩입니다. 가짜 뉴스 분석과 문화 여행 상품 기획이 모두 9월 문화 단원에 놓여 있어, 수행 60%가 학기 초반에 몰립니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월 2주", method: "선택형 60점(16문항)·서답 40점(5문항)" },
+      { name: "가짜 뉴스 분석", kind: "task", weight: 30, timing: "9월", method: "개별" },
+      { name: "문화 여행 상품 기획", kind: "task", weight: 30, timing: "9월", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "두 과제가 한 단원 안에 있습니다",
+        body: "진도표 9월 3~4주 ‘미디어를 통해 경험하는 문화’에서 가짜뉴스 분석이, ‘다양한 문화를 이해하는 태도’에서 문화여행상품기획이 수행평가로 연결됩니다. 성취기준은 각각 [9사(일사)02-02]와 [9사(일사)02-03]입니다.",
+      },
+      {
+        title: "기말고사 서답은 10점·9점·6점",
+        body: "기말고사는 선택형 16문항 60점(반영 24%)과 서답 5문항 40점(반영 16%)이며, 서답은 10점 1문항, 9점 2문항, 6점 2문항입니다. 범위는 사회화와 자아 정체성부터 정치 주체와 정치과정까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "작도와 합동은 그림과 설명으로 풀고, 통계 과제 시기는 표마다 다르게 적혀 있습니다",
+    intro:
+      "해동중학교 1학년 수학은 반영 비율표가 정기시험을 선택과 서답으로 나눠, 중간고사와 기말고사 모두 선택 18%·서답 12%입니다. 수행평가는 통계적 문제해결과 작도와 합동이 20%씩입니다.",
+    assessments: [
+      { name: "중간고사 선택", kind: "exam", weight: 18, timing: "9월 4주", method: "60점(15문항)" },
+      { name: "중간고사 서답", kind: "exam", weight: 12, timing: "9월 4주", method: "40점(7문항)" },
+      { name: "기말고사 선택", kind: "exam", weight: 18, timing: "12월 2주", method: "60점(15문항)" },
+      { name: "기말고사 서답", kind: "exam", weight: 12, timing: "12월 2주", method: "40점(7문항)" },
+      { name: "통계적 문제해결", kind: "task", weight: 20, method: "개별" },
+      { name: "작도와 합동", kind: "task", weight: 20, timing: "11월", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "서답 7문항 구성",
+        body: "회차별 서답 40점은 5점 3개, 6점 3개, 7점 1개이고 선택 60점은 3점 4개, 4점 7개, 5점 4개입니다. 평가 방침에는 정기시험 100점 중 40점 이상을 서·논술형으로 한다고 적혀 있습니다.",
+      },
+      {
+        title: "통계 과제의 시기는 표마다 다릅니다",
+        body: "통계적 문제해결은 [9수04-01]~[9수04-04] 범위로, 반영 비율표에는 10월로, 진도표에는 9월 5주 칸에 적혀 있습니다. 진도표는 문제해결·추론·창의융합·정보처리 역량과 태도 및 실천 역량을 평가한다고 밝힙니다.",
+      },
+      {
+        title: "작도와 합동은 그림과 설명으로",
+        body: "작도와 합동은 [9수03-03]·[9수03-04]에 맞춰 11월 1~2주에 진행되며, 학생의 그림과 설명을 토대로 수학적 정확성과 이해도를 보고 모둠 안의 의사소통 과정도 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "힘의 작용 단원을 마치며 논술하고, 냉각·가열 곡선을 배운 뒤 실험합니다",
+    intro:
+      "해동중학교 1학년 과학은 9월 4주 중간고사와 12월 2주 기말고사가 30%씩이며, 회차마다 선택 15문항 60점과 서답 7문항 40점입니다. 수행평가는 10월 개별 논술과 11월 조별+개별 실험이 20%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 60점(15문항)·서답 40점(7문항)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 60점(15문항)·서답 40점(7문항)" },
+      { name: "힘과 운동 상태 논술", kind: "task", weight: 20, timing: "10월", method: "개별" },
+      { name: "물질의 상태 변화 실험", kind: "task", weight: 20, timing: "11월", method: "조별 + 개별" },
+    ],
+    notes: [
+      {
+        title: "논술은 힘의 작용 단원 마무리와 함께",
+        body: "진도표 10월 1~3주에 힘과 운동 상태 논술이 힘의 작용 대단원 평가와 나란히 수행평가 연계로 적혀 있습니다. 평가 방침은 수행평가를 40% 이상, 그중 실험평가를 20% 이상 실시한다고 정하고 있습니다.",
+      },
+      {
+        title: "냉각·가열 곡선 뒤의 실험",
+        body: "11월 1~2주 상태 변화와 열에너지 차시에서 물질의 냉각·가열 곡선 그리기 탐구활동을 한 뒤 물질의 상태 변화 실험이 이어집니다. 서답 40점은 4점 3개, 6점 3개, 10점 1개로 구성됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "러닝로그는 수업마다 점검하고, 11월 말하기 주제는 인생 로드맵입니다",
+    intro:
+      "해동중학교 1학년 영어는 중간·기말고사 30%씩에 수행평가 40%가 러닝로그 쓰기 20%, 듣기 10%, 말하기 10%로 나뉩니다. 정기시험은 선택 13문항 50점과 서답 9문항 50점으로 반씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 50점(13문항)·서답 50점(9문항)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 50점(13문항)·서답 50점(9문항)" },
+      { name: "듣기", kind: "task", weight: 10, method: "전국중학교 영어듣기능력평가" },
+      { name: "말하기", kind: "task", weight: 10, timing: "11월", method: "개별" },
+      { name: "러닝로그 쓰기", kind: "task", weight: 20, timing: "수시(8월~11월)", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "러닝로그는 수업마다 점검",
+        body: "러닝로그 쓰기는 진도표에 여러 차례 수행평가 연계로 적혀 있으며, 수업 중 수시 점검과 word·dictation·reading·grammar 기록으로 구성됩니다.",
+      },
+      {
+        title: "11월 말하기 주제는 인생 로드맵",
+        body: "말하기평가는 11월 1~2주 진도에 ‘인생 로드맵 소개하기’로 표시되어 있습니다. 듣기 10%는 전국중학교 영어듣기능력평가로 반영하며, 반영 비율표의 9월과 달리 진도표에는 8월 4~5주 칸에 적혀 있어 시기를 따로 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "두 수행이 10월에 겹치고, 서답에는 15점짜리 문항이 하나 있습니다",
+    intro:
+      "해동중학교 2학년 국어는 중간·기말고사가 30%씩이고 회차마다 선택 13문항 50점, 서답 5문항 50점입니다. 수행평가 두 개는 각각 네 차례 활동으로 나뉘어 9월부터 11월까지 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 50점(13문항)·서답 50점(5문항)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 50점(13문항)·서답 50점(5문항)" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 20, timing: "9월~10월", method: "개별" },
+      { name: "우리말 조사 포트폴리오", kind: "task", weight: 20, timing: "10월~11월", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "서답은 15점 문항이 하나",
+        body: "회차별 서답 50점은 5점 1개, 10점 3개, 15점 1개로 문항 수가 다섯 개뿐이고, 선택 50점은 3점 5개, 4점 5개, 5점 3개입니다.",
+      },
+      {
+        title: "두 수행이 10월에 겹칩니다",
+        body: "한 권 읽기는 9월 1~2주에 1차, 10월 4~5주에 4차 활동이 있고, 우리말 조사 포트폴리오는 10월 1~3주 1차에서 11월 3~4주 4차 ‘포트폴리오 공유하기’까지 갑니다. 포트폴리오 2·3차는 계획에 맞춰 내용을 생성하는 단계입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "카드뉴스는 세계적 교역망 단원에서, 신문은 산업 혁명 이후 사회 변화까지 다룹니다",
+    intro:
+      "해동중학교 2학년 사회 영역은 역사 과목으로, 중간·기말고사가 30%씩(선택 16문항 60점·서답 5문항 40점)이고 수행평가 두 개가 20%씩입니다. 카드뉴스와 신문, 두 가지 매체 제작 과제가 9월과 10월에 하나씩 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 60점(16문항)·서답 40점(5문항)", course: "역사" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 60점(16문항)·서답 40점(5문항)", course: "역사" },
+      { name: "신항로개척 카드뉴스 제작하기", kind: "task", weight: 20, timing: "9월", method: "개별", course: "역사" },
+      { name: "산업혁명 신문 제작하기", kind: "task", weight: 20, timing: "10월", method: "개별", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "카드뉴스는 세계적 교역망 단원",
+        body: "신항로개척 카드뉴스는 [9역04-03]에 맞춰 ‘서아시아와 유럽 사회의 변화’ 중 세계적 교역망의 확립과 영향을 다루고, 진도표 9월 1~2주에 수행평가 연계로 적혀 있습니다.",
+      },
+      {
+        title: "신문은 산업 혁명 이후 사회 변화까지",
+        body: "산업혁명 신문 제작하기는 [9역05-02] 범위로 산업 혁명과 자본주의의 등장, 산업 혁명 이후 사회 변화를 담으며 10월 4~5주에 진행됩니다. 정기시험 서답 40점은 6점 2개, 8점 2개, 12점 1개입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심 과제는 중간고사 전에, 닮음 디자인은 11월 1~2주에 합니다",
+    intro:
+      "해동중학교 2학년 수학은 중간·기말고사 30%씩에 9월과 11월 수행평가가 20%씩입니다. 정기시험은 선택 16문항 60점과 서답 5문항 40점으로 나뉩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 60점(16문항)·서답 40점(5문항)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 60점(16문항)·서답 40점(5문항)" },
+      { name: "실생활 속 삼각형의 외심과 내심", kind: "task", weight: 20, timing: "9월", method: "개별" },
+      { name: "닮음을 이용한 나만의 디자인 만들기", kind: "task", weight: 20, timing: "11월", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "외심·내심 과제는 중간고사 전",
+        body: "실생활 속 삼각형의 외심과 내심은 [9수03-10]에 맞춘 과제로 진도표 9월 1~2주에 있고, 9월 4주 중간고사 범위인 삼각형과 사각형의 성질 단원과 겹칩니다.",
+      },
+      {
+        title: "닮음 디자인은 11월 1~2주",
+        body: "닮음을 이용한 나만의 디자인 만들기는 [9수03-12] 범위로 11월 1~2주에 수행평가 연계로 표시되어 있습니다. 서답 40점은 6점 2개, 8점 2개, 12점 1개, 선택 60점은 3점 6개, 4점 8개, 5점 2개입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "영양소 검출은 9월 1~2주에 하고, 별과 우주 포트폴리오는 3단계로 채웁니다",
+    intro:
+      "해동중학교 2학년 과학은 중간·기말고사가 30%씩이고 회차마다 선택 15문항 60점, 서답 6문항 40점입니다. 수행평가는 9월 영양소 검출 실험과 9월~11월 별과 우주 포트폴리오가 20%씩이며, 둘 다 조별+개별로 평가합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 60점(15문항)·서답 40점(6문항)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 60점(15문항)·서답 40점(6문항)" },
+      { name: "음식물에 들어 있는 영양소 검출", kind: "task", weight: 20, timing: "9월", method: "조별 + 개별" },
+      { name: "별과 우주 포트폴리오", kind: "task", weight: 20, timing: "9월~11월", method: "조별 + 개별" },
+    ],
+    notes: [
+      {
+        title: "포트폴리오 3단계의 내용",
+        body: "별과 우주 포트폴리오는 1단계 별과 우리 은하의 특성 이해, 2단계 우주 팽창 원리 분석이 9월 5주에, 3단계 우주 탐사 계획 작성이 11월 1~2주에 놓여 있습니다.",
+      },
+      {
+        title: "영양소 검출은 9월 1~2주",
+        body: "영양소 검출 실험으로 음식물에 들어 있는 영양소를 확인하는 활동이 9월 1~2주 동물과 에너지 단원에 있습니다. 서답 40점은 5점 2개, 7점 3개, 9점 1개입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "말하기는 마인드맵에서 대본 발표까지 이어지고, 러닝로그에는 수업 기록이 쌓입니다",
+    intro:
+      "해동중학교 2학년 영어는 중간·기말고사가 각 30%(선택 13문항 50점·서답 9문항 50점)이고, 수행평가 40% 중 절반이 8월~11월 수시로 쌓이는 러닝로그 쓰기입니다. 말하기와 듣기는 10%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월 4주", method: "선택 50점(13문항)·서답 50점(9문항)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 2주", method: "선택 50점(13문항)·서답 50점(9문항)" },
+      { name: "듣기", kind: "task", weight: 10, method: "전국중학교 영어듣기능력평가" },
+      { name: "말하기", kind: "task", weight: 10, method: "개별" },
+      { name: "러닝로그 쓰기", kind: "task", weight: 20, timing: "수시(8월~11월)", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "말하기는 마인드맵에서 대본 발표까지",
+        body: "말하기 과제는 주변의 직업 소개하기로, 마인드맵, 대본 작성, 대본 발표의 3단계입니다. 반영 비율표의 시기는 10월이지만 진도표에는 9월 5주 칸에 적혀 있습니다.",
+      },
+      {
+        title: "러닝로그에 들어가는 기록",
+        body: "러닝로그 쓰기는 수업 중 수시 점검으로 dictation, word, grammar, reading, 과업 수행을 기록합니다. 서답 50점은 4점 3개, 6점 5개, 8점 1개입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "광고는 설득 전략 단원과 연결되고, 17문항 선택형은 2점부터 배점됩니다",
+    intro:
+      "해동중학교 3학년 국어는 11월 1주 기말고사 한 번이 40%이고, 수행평가 60%를 광고 만들기와 한 학기 한 권 읽기가 30%씩 나눕니다. 기말고사는 선택 17문항 50점과 서답 9문항 50점입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11월 1주", method: "선택 50점(17문항)·서답 50점(9문항)" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 30, timing: "수시", method: "개별" },
+      { name: "설득 전략을 활용한 광고 만들기", kind: "task", weight: 30, timing: "9월", method: "개별" },
+    ],
+    notes: [
+      {
+        title: "광고는 설득 전략 단원과 연결",
+        body: "광고 만들기의 성취기준은 [9국01-09] 설득 전략을 비판적으로 분석하며 듣기이며, 진도표에서는 9월 5주 ‘설득 전략 비판적으로 분석하며 듣기’ 차시 뒤에 수행평가 연계 표시가 있습니다.",
+      },
+      {
+        title: "17문항 선택은 2점부터",
+        body: "기말고사 선택 50점은 2점 5개, 3점 8개, 4점 4개이고, 서답 50점은 4점 3개, 6점 5개, 8점 1개입니다. 한 권 읽기는 [9국05-05]·[9국05-06]에 맞춘 문학과 삶 단원 과제입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 보고서는 인구와 글로벌 경제를 다루고, 역사 수행은 9월 안에 모두 끝납니다",
+    intro:
+      "해동중학교 3학년 사회 영역은 사회와 역사 두 과목이며, 둘 다 11월 1주 기말고사 40%에 수행평가 두 개가 30%씩입니다. 사회는 보고서 두 편, 역사는 팸플렛과 카드뉴스 제작으로 수행을 채웁니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11월 1주", method: "선택형 60점(16문항)·서답형 40점(5문항)", course: "사회" },
+      { name: "인구문제 보고서", kind: "task", weight: 30, timing: "9월", course: "사회" },
+      { name: "다국적 기업 보고서", kind: "task", weight: 30, timing: "10월", course: "사회" },
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11월 1주", method: "선택 60점(16문항)·서답 40점(5문항)", course: "역사" },
+      { name: "조선 전기 문화 팸플렛 제작하기", kind: "task", weight: 30, timing: "8월", method: "개별", course: "역사" },
+      { name: "임진왜란 카드뉴스 제작하기", kind: "task", weight: 30, timing: "9월", method: "개별", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 보고서는 인구와 글로벌 경제",
+        body: "인구문제 보고서는 [9사(지리)07-03]에 맞춰 선진국과 개발도상국의 인구 문제를 비교하는 단원에서, 다국적 기업 보고서는 [9사(지리)09-02] 공간적 분업 체계 단원에서 진행됩니다. 진도표에는 각각 9월 1~2주와 10월 4~5주에 연계 표시가 있습니다.",
+      },
+      {
+        title: "역사 수행은 9월 안에 끝납니다",
+        body: "조선 전기 문화 팸플렛은 [9역10-03] 범위로 8월 4~5주에, 임진왜란 카드뉴스는 [9역10-04] 범위로 9월 1~2주에 진행됩니다. 두 과제 모두 ‘조선의 성립과 발전’ 대단원에 속합니다.",
+      },
+      {
+        title: "두 과목 기말고사 배점 구성",
+        body: "사회 기말고사는 선택형 16문항 60점(24%)과 서답형 5문항 40점(16%)이고 서답은 10점 1문항, 9점 2문항, 6점 2문항입니다. 역사 기말고사도 선택 16문항 60점·서답 5문항 40점이며 서답은 6점 2개, 8점 2개, 12점 1개입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "환경 호르몬 대처 방안을 모둠으로 찾고, 반응 실험은 뉴런 단원과 함께 합니다",
+    intro:
+      "해동중학교 3학년 과학은 11월 1주 기말고사가 40%(선택 12문항 60점·서답 5문항 40점)이고, 수행평가는 환경호르몬 포트폴리오와 자극에 대한 반응 실험보고서가 30%씩입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11월 1주", method: "선택 60점(12문항)·서답 40점(5문항)" },
+      { name: "환경호르몬 포트폴리오", kind: "task", weight: 30, timing: "8~10월" },
+      { name: "자극에 대한 반응 실험보고서", kind: "task", weight: 30, timing: "9월" },
+    ],
+    notes: [
+      {
+        title: "환경 호르몬 대처 방안을 모둠으로",
+        body: "환경호르몬 포트폴리오는 환경 호르몬이 우리 몸에 미치는 영향과 대처 방안을 조사하는 모둠 포트폴리오로, 진도표 8월 4~5주와 10월 두 차례에 걸쳐 표시되어 있습니다.",
+      },
+      {
+        title: "반응 실험은 뉴런 단원",
+        body: "자극에 대한 반응 실험보고서는 9월 1~2주 [9과20-02] 뉴런과 신경계 차시의 모둠 실험 탐구 수업과 연결됩니다. 평가 방침은 수행평가 40% 이상, 그중 실험평가 20% 이상을 정해 두고 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "haedong-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "개학 직후 감사편지를 쓰고, 말하기는 10월 1~3주에 봅니다",
+    intro:
+      "해동중학교 3학년 영어는 11월 1주 기말고사 한 번이 40%이고, 수행평가 60%가 네 과제로 나뉩니다. 감사편지쓰기와 러닝로그쓰기가 20%씩, 말하기 평가와 듣기평가가 10%씩입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "11월 1주", method: "선택 50점(13문항)·서답 50점(9문항)" },
+      { name: "감사편지쓰기", kind: "task", weight: 20, timing: "8월", method: "개별" },
+      { name: "러닝로그쓰기", kind: "task", weight: 20, timing: "수시(8월~10월)", method: "개별" },
+      { name: "말하기 평가", kind: "task", weight: 10, timing: "10월", method: "개별" },
+      { name: "듣기평가", kind: "task", weight: 10, timing: "9월", method: "전국중학교영어듣기능력평가" },
+    ],
+    notes: [
+      {
+        title: "개학 직후 감사편지",
+        body: "감사편지쓰기는 진도표 8월 4~5주에 [9영04-05]·[9영04-06] 성취기준과 함께 표시되어 있어, 2학기 첫 수행평가입니다. 러닝로그는 8월부터 10월까지 수업 중 수시 점검으로 word, dictation, reading, grammar 활동을 기록합니다.",
+      },
+      {
+        title: "말하기는 10월 1~3주",
+        body: "영어말하기평가는 10월 1~3주 진도에 있으며, 능동적 참여와 수행 정도를 관찰하고 친구의 대본과 발표에 피드백을 쓰는 동료·자기평가가 함께 적혀 있습니다. 듣기평가는 9월 1~2주에 전국시도 교육청 주관 영어듣기평가로 연계됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("해동중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "인상 깊은 내용 정리 5점, 글쓴이와 내 경험 비교 5점, 진솔하고 개성 있는 표현 5점, 근거로 뒷받침하기 5점이 있습니다",
+    intro:
+      "하길중학교 1학년 국어는 12월 3주 2차 정기시험이 선택형 47.5%와 논술형 2.5%로 50%이고, 수행평가 세 영역이 50%입니다. 9월에 두 과제가 이어지고 주장하는 글 쓰기가 11월 4주에 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 47.5, timing: "12월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "12월 3주", method: "논술형 5점" },
+      { name: "독서과정평가", kind: "task", weight: 10, timing: "9월 2주" },
+      { name: "경험과 정서를 담은 글 쓰기", kind: "task", weight: 20, timing: "9월 4주", method: "논술형" },
+      { name: "주장하는 글 쓰기", kind: "task", weight: 20, timing: "11월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "독서과정평가는 성장 작품과 내 경험 비교",
+        body: "독서과정평가([9국05-03])는 인간의 성장을 다룬 작품을 읽고 인상 깊은 내용을 정리하기 5점, 글쓴이의 경험과 자신의 경험을 비교하기 5점으로 채점합니다. 논술형 비율은 잡혀 있지 않습니다.",
+      },
+      {
+        title: "두 글쓰기는 글감 선정과 근거 제시",
+        body: "경험과 정서를 담은 글 쓰기([9국03-05])는 삶의 경험과 정서를 떠올려 글감과 내용을 정하는 5점, 진솔하고 개성 있게 표현하는 5점 등으로 채점합니다. 주장하는 글 쓰기([9국03-03])는 주장을 명확하게 드러내기 5점, 타당하고 신뢰할 만한 근거로 뒷받침하기 5점 등이 항목입니다.",
+      },
+      {
+        title: "학기 논술형 42.5%",
+        body: "평가 방침에는 논술형 평가를 학기 성적의 40% 이상 실시한다고 적혀 있고, 반영 비율표의 논술형 합계는 42.5%입니다. 정기시험 평가 요소에는 문학의 가치 내면화, 품사의 종류와 특성, 단어의 짜임 분석이 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "자연환경·인문환경과 초국적 기업 이동에 따른 변화, 헌법 속 기본권의 종류·제한 요건을 각각 5점 항목 다섯 개로 채점",
+    intro:
+      "하길중학교 1학년 사회는 12월 3주 2차 정기시험이 선택형 48%와 논술형 2%로 50%이고, 논술형 수행평가 두 영역이 25%씩입니다. 지리 과제와 일반사회 과제가 10월과 11월에 하나씩 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 48, timing: "12월 3주", method: "선택형 96점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형 4점" },
+      { name: "아메리카 탐구", kind: "task", weight: 25, timing: "10월 2주", method: "논술형" },
+      { name: "인권과 기본권", kind: "task", weight: 25, timing: "11월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "아메리카 탐구는 초국적 기업의 이동까지",
+        body: "아메리카 탐구([9사(지리)05-01]~[9사(지리)05-03])는 아메리카의 자연환경과 인문환경을 파악하고 초국적 기업의 이동에 따른 변화를 서술하는 과제로, 5점 항목 다섯 개로 채점합니다.",
+      },
+      {
+        title: "기본권은 종류와 제한 요건",
+        body: "11월 1주 인권과 기본권([9사(일사)06-01]·[9사(일사)06-02])은 인권의 중요성, 헌법에 담긴 기본권의 종류와 제한 요건을 다루며 역시 5점 항목 다섯 개입니다. 정기시험 평가 요소에는 유럽·아메리카의 국가와 도시, 법의 종류와 재판이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "두 관계의 성질을 표·식·그래프로 나타내고, 합동 조건으로 두 삼각형을 판별한 뒤 다각형의 성질을 따지는 논술형입니다",
+    intro:
+      "하길중학교 1학년 수학은 수행평가 두 영역이 30%씩 60%로, 12월 3주 2차 정기시험(선택형 38%·논술형 2%) 40%보다 큽니다. 두 수행평가가 모두 논술형이라 학기 논술형 비율이 62%로 적혀 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 38, timing: "12월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형 5점" },
+      { name: "정비례와 반비례", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+      { name: "삼각형의 합동과 다각형의 탐구", kind: "task", weight: 30, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "정비례·반비례를 표·식·그래프로",
+        body: "9월 2주 정비례와 반비례([9수02-07])는 두 관계의 성질을 탐구하고 그 관계를 표, 식, 그래프로 나타내는 논술형 과제입니다. 11월 2주 과제는 삼각형의 합동 조건으로 두 삼각형의 합동을 판별하고 다각형의 성질을 탐구합니다([9수03-04]·[9수03-05]).",
+      },
+      {
+        title: "시험은 작도와 부채꼴까지",
+        body: "정기시험 평가 요소에는 점·직선·평면의 위치 관계, 평행선의 동위각과 엇각, 삼각형 작도, 다각형의 성질, 부채꼴의 중심각과 호, 호의 길이와 넓이가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "질문에 답하는 듣기 30점엔 논술형이 0%이고, 미술작품을 소개하는 글 20%와 정기시험 논술 40점을 합쳐 학기 논술형 40%",
+    intro:
+      "하길중학교 1학년 영어는 12월 3주 정기시험 한 번이 선택형 30%와 논술형 20%로 50%이고, 수행평가는 듣기 30%와 미술작품소개 20%입니다. 표에 수행평가 시기가 9월 3주·10월 3주·11월 2주로 적혀 있으나 영역별 대응이 표시되지 않아 시기는 옮기지 않았습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 60점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 20, timing: "12월 3주", method: "논술형 40점" },
+      { name: "듣기", kind: "task", weight: 30 },
+      { name: "미술작품소개", kind: "task", weight: 20, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "시험 안의 논술형이 40점",
+        body: "정기시험 100점 가운데 논술형이 40점으로 학기 성적의 20%를 차지합니다. 미술작품소개 20%와 합쳐 학기 논술형 비율이 40%로 적혀 있고, 듣기 영역의 논술형 비율은 0%입니다.",
+      },
+      {
+        title: "듣기는 세부 정보와 화자의 의도",
+        body: "듣기(30점)는 [9영01-02]·[9영01-06]에 따라 듣고 주어진 질문에 답하는 영역입니다. 미술작품소개는 미술작품을 소개하는 글쓰기로 [9영02-03]·[9영02-08]·[9영02-09]가 걸려 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "용수철 탄성력을 재어 그래프로 그리고 방향은 화살표로 나타내며, 온도·압력에 따른 부피 변화를 입자 운동으로 풉니다",
+    intro:
+      "하길중학교 1학년 과학은 12월 2·3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 수행평가 두 영역이 50%입니다. 10월 4주 기체 과제는 탐구 15%와 자료해석 및 적용하기(논술) 15%로 나뉘어 반영됩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 2, 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 2, 3주", method: "논술형 10점" },
+      { name: "탄성력과 마찰력 탐구하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술" },
+      { name: "기체의 성질 분석하기(탐구)", kind: "task", weight: 15, timing: "10월 4주", method: "탐구" },
+      { name: "기체의 성질 분석하기(자료해석 및 적용하기)", kind: "task", weight: 15, timing: "10월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "용수철 측정과 그래프",
+        body: "탄성력과 마찰력 탐구하기([9과05-02])는 탄성력의 크기와 방향 설명, 용수철의 탄성력 크기를 측정해 그래프로 나타내기, 늘어난 길이와 탄성력의 관계 설명, 마찰력의 크기 비교로 구성되며 탄성력의 방향을 화살표로 나타내는 항목도 있습니다.",
+      },
+      {
+        title: "기체 과제는 입자 운동과 생활 속 예",
+        body: "기체의 성질 분석하기는 온도와 압력에 따른 기체의 부피 변화를 입자 운동으로 설명하고, 각 관계에 해당하는 실생활의 예를 찾아 원리를 적용합니다. 정기시험 평가 요소에는 힘의 평형 조건, 무게와 질량의 구별, 알짜힘과 운동 상태가 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "소설 창작(9월 1주)·발표기획안 작성 및 실행(9월 4주)·복합양식 글(10월 4주) 20%씩",
+    intro:
+      "하길중학교 2학년 국어는 논술형 수행평가 세 영역이 20%씩 60%이고, 12월 3주 2차 정기시험이 선택형 38%·논술형 2%로 40%입니다. 수행평가 세 개가 모두 10월 4주까지 끝납니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 38, timing: "12월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형 5점" },
+      { name: "사회‧문화적 상황을 반영한 소설 창작", kind: "task", weight: 20, timing: "9월 1주", method: "논술" },
+      { name: "발표기획안 작성 및 실행", kind: "task", weight: 20, timing: "9월 4주", method: "논술" },
+      { name: "복합양식 활용하여 글 쓰기", kind: "task", weight: 20, timing: "10월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "소설 창작과 발표는 5점 항목 넷",
+        body: "학기 첫 주의 소설 창작([9국05-05])은 사회·문화적 상황을 반영해 소설을 쓰는 과제이고, 발표기획안 작성 및 실행([9국01-06]·[9국01-11])은 기획안을 쓰고 그에 맞게 발표합니다. 두 과제 모두 5점 항목 네 개로 채점하며, 발표 과제에는 논술과 구술이 함께 표시되어 있습니다.",
+      },
+      {
+        title: "학기 논술형 62%",
+        body: "10월 4주 복합양식 활용하여 글 쓰기는 [9국03-07] 등에 따라 복합양식 자료를 활용해 글을 쓰는 과제입니다. 세 수행평가가 모두 논술형으로 잡혀 학기 논술형 비율이 62%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "산업혁명 탐구(10월 1~2주)·제국주의 풍자화 분석(10월 4주) 논술형 30%씩",
+    intro:
+      "하길중학교 2학년 역사는 수행평가 두 영역이 30%씩 60%이고, 12월 3주 2차 정기시험이 선택형 38%와 논술형 2%로 40%입니다. 두 과제가 모두 10월에 몰려 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 38, timing: "12월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2, timing: "12월 3주", method: "논술형 5점" },
+      { name: "산업혁명 탐구", kind: "task", weight: 30, timing: "10월 1주 ~ 2주", method: "논술" },
+      { name: "제국주의 풍자화 분석하기", kind: "task", weight: 30, timing: "10월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "산업혁명은 지문 분석으로",
+        body: "산업혁명 탐구([9역05-02])는 산업혁명이 영국에서 먼저 시작된 배경과 산업혁명의 긍정적·부정적 영향을 제시된 지문을 분석해 서술하는 논술형 30%입니다.",
+      },
+      {
+        title: "두 풍자화를 관찰하고 해석",
+        body: "제국주의 풍자화 분석하기는 「늑대와 빨간 망토 소녀」와 「벨기에의 콩고 침략 풍자화」를 객관적으로 관찰하고, 그림 속 요소가 나타내는 역사적 사실을 해석하는 과제로 도덕과 성취기준도 함께 걸려 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각형의 외심과 내심(9월 2주)·삼각형과 평행선(11월 2주) 논술형 20%씩, 시험 두 번",
+    intro:
+      "2학년 수학 논술형 수행 두 개는 9월 2주(외심과 내심)와 11월 2주(삼각형과 평행선)에 20%씩 놓여 있습니다. 정기시험은 9월 5주와 12월 3주에 선택형 95점·논술형 5점 구성으로 치르며 회차마다 선택형 28.5%·논술형 1.5%가 반영됩니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "9월 5주", method: "선택형 95점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "9월 5주", method: "논술형 5점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "12월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "12월 3주", method: "논술형 5점" },
+      { name: "삼각형의 외심과 내심", kind: "task", weight: 20, timing: "9월 2주", method: "논술" },
+      { name: "삼각형과 평행선", kind: "task", weight: 20, timing: "11월 2주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "종이접기로 외심·내심 찾기",
+        body: "[9수03-10] 과제는 종이를 접어 외심과 내심을 찾고, 그 과정을 수학적 용어로 서술하며 성질을 설명하는지를 10점씩 봅니다. 모든 조건이 미흡하면 기본점수 8점이고, 교사 관찰과 함께 자기평가가 표시되어 있습니다.",
+      },
+      {
+        title: "평행선 과제는 5점 네 항목",
+        body: "삼각형과 평행선([9수03-14])은 삼각형에서 평행선 사이 선분의 길이의 비, 중점연결정리, 평행선 사이에 있는 선분의 길이의 비, 도형에서 평행선을 이용한 문제 해결을 5점씩 채점합니다. 평가 방침에는 논술형 평가를 학기 성적의 30% 이상 실시한다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "영양소와 소화(9월 2주)·전류·전압·저항 관계 탐구(10월 2주) 논술형 20%씩",
+    intro:
+      "하길중학교 2학년 과학은 9월 5주 1차와 12월 2주 2차 정기시험이 각각 선택형 28.5%·논술형 1.5%로 60%, 논술형 수행평가 두 개가 40%입니다. 두 수행평가가 모두 10월 2주 이전에 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "9월 5주", method: "선택형 95점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "9월 5주", method: "논술형 5점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "12월 2주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "12월 2주", method: "논술형 5점" },
+      { name: "영양소와 소화", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "전류, 전압, 저항 사이의 관계 탐구", kind: "task", weight: 20, timing: "10월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "영양소 검출과 작은창자 구조",
+        body: "영양소와 소화는 우리 몸에 필요한 영양소 제시 4점, 에너지원 영양소의 검출 방법 서술 6점에 소화 과정과 작은창자의 구조적 특징 서술이 이어지는 논술형 과제입니다.",
+      },
+      {
+        title: "전기 과제는 그래프와 수로 모형",
+        body: "전류, 전압, 저항 사이의 관계 탐구는 전압에 따른 전류의 세기 그래프 그리기 3점, 전류와 전압의 관계 설명 2점, 서로 다른 저항 값 비교, 옴의 법칙 설명, 수로 모형과 전기 회로 비교로 구성됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "환경 보호 이메일(9월 3주)·학교 신문 기사(11월 2주) 논술형 25%씩, 시험 두 번 각 25%",
+    intro:
+      "하길중학교 2학년 영어는 9월 5주 1차와 12월 3주 2차 정기시험이 각각 선택형 24%·논술형 1%로 50%이고, 쓰기 수행평가 두 개가 25%씩입니다. 두 쓰기 과제가 같은 배점 구조(10·10·5점)를 씁니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "9월 5주", method: "선택형 96점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 1, timing: "9월 5주", method: "논술형 4점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "12월 3주", method: "선택형 96점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 1, timing: "12월 3주", method: "논술형 4점" },
+      { name: "환경 보호를 위한 이메일 글쓰기", kind: "task", weight: 25, timing: "9월 3주", method: "논술형" },
+      { name: "신문 기사 작성하기", kind: "task", weight: 25, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "이메일은 방안 설명과 응집성 10점씩",
+        body: "환경 보호를 위한 이메일 글쓰기([9영02-04])는 환경 보호 방안과 계획을 설명하기 10점, 응집성과 통일성을 갖춘 글 작성 10점에 5점 항목 하나가 더해집니다.",
+      },
+      {
+        title: "기사는 학교 안 사건을 소재로",
+        body: "11월 2주 신문 기사 작성하기([9영02-10]·[9영01-06])는 학교에서 일어나는 사건에 대한 기사 작성 10점, 언어 형식 활용 10점, 5점 항목 하나입니다. 학기 논술형 비율은 52%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "시 해석하기 20%(9월 3주)·시 소개하기 10%(9월 4주)·보고하는 글 쓰기 20%(10월 4주)",
+    intro:
+      "하길중학교 3학년 국어는 11월 3주 2차 정기시험이 선택형 47.5%와 논술형 2.5%로 50%이고, 수행평가 세 영역이 50%입니다. 시 해석과 시 소개가 9월 3·4주에 이어져 같은 시를 두 번 다룹니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 47.5, timing: "11월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "11월 3주", method: "논술형 5점" },
+      { name: "시 해석하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "시 소개하기", kind: "task", weight: 10, timing: "9월 4주", method: "과정평가" },
+      { name: "보고하는 글 쓰기", kind: "task", weight: 20, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "시 해석은 맥락을 연결해서",
+        body: "시 해석하기([9국05-02]·[9국05-05]·[9국05-07])는 사회·문화적 배경, 작가, 독자, 작품 같은 맥락을 연결해 시를 해석하는 논술형이고, 시 소개하기(10점)는 해석한 내용을 청중에게 발표하는 3·3·2·2점 네 항목입니다.",
+      },
+      {
+        title: "보고서는 일곱 항목으로 채점",
+        body: "10월 4주 보고하는 글 쓰기는 [9국03-03]·[9국03-10] 등을 평가하며 4점 세 항목과 2점 네 항목, 모두 20점으로 채점합니다. 평가 방침에 논술형 평가를 학기 성적의 40% 이상 실시한다고 적혀 있고, 표의 논술형 합계는 42.5%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "시장상황분석(9월 1주)·글로벌 생산 네트워크 분석(10월 4주) 20%씩, 도시 경관 10%(9월 5주)",
+    intro:
+      "하길중학교 3학년 사회는 11월 3주 2차 정기시험이 선택형 47%와 논술형 3%로 50%이고, 수행평가 세 영역이 50%입니다. 경제 과제로 학기를 시작해 지리 과제 두 개가 9월 5주와 10월 4주에 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 47, timing: "11월 3주", method: "선택형 94점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "11월 3주", method: "논술형 6점" },
+      { name: "시장상황분석", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "도시 경관과 도시화", kind: "task", weight: 10, timing: "9월 5주" },
+      { name: "글로벌 생산 네트워크 분석", kind: "task", weight: 20, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "시장상황분석은 6·6·4·4점",
+        body: "학기 첫 주의 시장상황분석([9사(일사)09-03])은 시장 상황을 분석하는 논술 과제로 6점 두 항목과 4점 두 항목입니다. 9월 5주 도시 경관과 도시화([9사(지리)08-02]·[9사(지리)08-03])는 제시된 자료를 분석하는 3·3·4점 과제로 논술형 비율은 잡혀 있지 않습니다.",
+      },
+      {
+        title: "세계 경제활동의 분포와 흐름",
+        body: "10월 4주 글로벌 생산 네트워크 분석([9사(지리)09-01]·[9사(일사)08-02])은 세계 경제활동의 분포와 흐름을 분석하는 논술형 20%입니다. 평가 방침에 따라 정기시험 1회 50%와 세 수행평가로 구성됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수 탐구(9월 2주, 4·6·10점)·원주각의 성질 탐구(10월 4주, 10·10점) 20%씩",
+    intro:
+      "이차함수 탐구(9월 2주)는 1차 정기시험(9월 5주)보다, 원주각의 성질 탐구(10월 4주)는 2차 정기시험(11월 2주)보다 먼저 치릅니다. 하길중학교 3학년 수학은 이 두 논술형 과제가 20%씩이고, 시험은 회차마다 선택형 28.5%와 논술형 1.5%입니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "9월 5주", method: "선택형 95점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "9월 5주", method: "논술형 5점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "11월 2주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "11월 2주", method: "논술형 5점" },
+      { name: "이차함수 탐구", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "원주각의 성질 탐구", kind: "task", weight: 20, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "일반형을 표준형으로 바꾸는 4점",
+        body: "이차함수 탐구([9수03-09]·[9수03-10])는 일반형을 표준형으로 변환 4점, 그래프 모양·축의 방정식·꼭짓점·평행이동한 값 분석 6점, 그래프를 보고 함수식 구하기 10점입니다. 모든 조건이 미흡해도 기본점수 8점이 있습니다.",
+      },
+      {
+        title: "원의 중심 위치에 따라 두 번 증명",
+        body: "원주각 과제([9수04-20])는 원의 중심이 원주각의 내부에 있을 때와 외부에 있을 때로 나눠 성질을 증명하고 관련 문제를 푸는 두 항목이 10점씩입니다. 1차 시험은 특성화고 입학 내신 반영 대상으로 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "지구 온난화 원인 분석(9월 1주)·자유 낙하 운동 분석(9월 3주) 논술형 20%씩",
+    intro:
+      "3학년 과학 수행평가 두 개는 모두 9월 초에 끝납니다. 1주에는 지구 온난화의 원인, 3주에는 자유 낙하 운동을 자료로 분석하는 논술형 과제가 20%씩이고, 정기시험은 9월 5주와 11월 3주에 선택형 95점·논술형 5점으로 봅니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "9월 5주", method: "선택형 95점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "9월 5주", method: "논술형 5점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28.5, timing: "11월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 1.5, timing: "11월 3주", method: "논술형 5점" },
+      { name: "지구 온난화의 원인 분석", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "자유 낙하 운동 분석", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "이산화 탄소와 기온 그래프",
+        body: "온난화 과제([9과18-01])는 온실 효과 개념 4점, 이산화 탄소 농도와 지구 평균 기온의 상관관계 해석 6점, 영향 서술 3점, 온실 기체 감소 방안 3점, 영구 동토층 융해 사례 분석 4점입니다. 평가 방법에 논술과 실험·실습이 함께 표시되어 있습니다.",
+      },
+      {
+        title: "질량이 다른 두 물체 비교",
+        body: "자유 낙하 과제([9과19-02])는 수치 자료 해석 3점, 그래프로 옮기기 5점, 결론 도출 4점, 중력의 크기 비교 3점, 질량이 다른 두 물체의 자유 낙하 설명 5점입니다. 1차 시험과 두 수행평가가 특성화고 입학 내신 반영 대상으로 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hagil-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "덕목 설명문(9월 2주)·일상 묘사 프로젝트 작문(10월 5주) 논술형 25%씩",
+    intro:
+      "하길중학교 3학년 영어는 9월 5주 1차와 11월 3주 2차 정기시험이 각각 선택형 23.75%·논술형 1.25%로 50%이고, 쓰기 수행평가 두 개가 25%씩입니다. 첫 쓰기 과제가 1차 시험 세 주 전에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 23.75, timing: "9월 5주", method: "선택형 95점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 1.25, timing: "9월 5주", method: "논술형 5점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 23.75, timing: "11월 3주", method: "선택형 95점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 1.25, timing: "11월 3주", method: "논술형 5점" },
+      { name: "덕목에 관한 설명문 쓰기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형" },
+      { name: "프로젝트 작문", kind: "task", weight: 25, timing: "10월 5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "덕목 설명문은 선정 이유까지",
+        body: "덕목에 관한 설명문 쓰기([9영04-02])는 자신이 중요하게 여기는 일상 속 덕목을 골라 소개하고 선정 이유를 설명하는 글로, 10·10·5점 세 항목입니다.",
+      },
+      {
+        title: "프로젝트 작문은 묘사하는 문장",
+        body: "10월 5주 프로젝트 작문([9영04-01]·[9영01-06])은 일상생활 주변의 대상이나 상황을 묘사하는 어휘와 문장을 쓰는 과제로 역시 10·10·5점입니다. 학기 논술형 비율은 52.5%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("하길중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장 글은 18줄 이상이면 분량 만점이고, 품사는 아홉 개념 설명이 13점입니다",
+    intro:
+      "한밭중학교 1학년 국어는 9월 중간고사·12월 기말고사가 30%씩이고, 서·논술형 수행평가 두 개(각 20%)가 모두 9월에 몰려 있습니다. 정기시험은 선택형 문항만 출제해 서술형은 수행평가에서만 평가됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "주장하는 글 쓰기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "품사 분석하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "주장하는 글: 18줄 이상이 분량 만점",
+        body: "주장의 명확성 6점, 근거의 타당성 6점(통계 등 객관적 근거는 출처를 밝혀 3가지 이상), 서론-본론-결론과 문단 구분의 글의 구성 4점, 제시 양식 18줄 이상의 내용 풍부성 4점입니다. 앞의 두 요소는 포털 검색이 가능하지만 생성형 AI 결과물은 쓸 수 없습니다.",
+      },
+      {
+        title: "품사는 아홉 개념 설명이 13점",
+        body: "[9국04-03]에 따라 우리말 아홉 품사 각각의 개념을 설명하면 13점이고, 설명한 품사 수가 하나 줄 때마다 1점씩 내려갑니다. 서로 다른 품사의 단어 3개를 골라 분류와 근거를 바르게 쓰는 항목이 7점이며, 모든 요소가 AI·인터넷 활용 금지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "음운 찾기 6점, 두 개념 4점, 자음 체계표 2+3점, 이중 모음 셋 3+2점이고 독서는 책·일지 네 번 지참이 5점",
+    intro:
+      "한밭중학교 2학년 국어는 9월 음운 분석, 10월 한 학기 한 권 읽기를 각 20%로 평가하고 중간(9월)·기말(12월) 고사가 30%씩입니다. 한 권 읽기는 독서 시간마다 책과 독서록을 챙겼는지까지 점수에 들어갑니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "음운의 체계 분석하기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 20, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "음운 과제의 여섯 칸",
+        body: "[9국04-01] 과제로, 제시문에서 뜻을 구별하는 음운 찾기 6점, '뜻 구별'과 '가장 작은 소리의 단위' 두 개념 설명 4점, 자음체계표로 자음 찾기 2점과 그 자음으로 문장 쓰기 3점, 이중 모음 3개 찾기 3점과 문장 쓰기 2점입니다.",
+      },
+      {
+        title: "한 권 읽기는 5점씩 네 항목",
+        body: "독서 시간 4회 모두 책과 독서록을 지참하면 5점, 작품에 드러난 사회·문화적 상황 3개 이상 서술 5점, 작품 속 과거 삶과 자신의 삶 관련짓기 5점, 제시 분량 채우기 5점입니다([9국05-05]). 미제출 기본점수는 8점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "두 관점 이상 해석 6, 배경과 주제 연결 6, 표현 4, 세 차시 4점이며 실연은 성량·시선·몸짓 4, 유창성 3, 시간 3점",
+    intro:
+      "한밭중학교 3학년 국어는 기말고사가 11월로 앞당겨지고, 수행평가 두 개는 9~10월에 끝납니다. 작품 해석 중심의 한 권 읽기와 대본쓰기·실제 말하기로 나뉜 발표 과제가 각 20%입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월", method: "선택형" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 20, timing: "9월", method: "서·논술형" },
+      { name: "청중을 고려하여 말하기", kind: "task", weight: 20, timing: "9~10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "작품·작가·독자 관점 두 가지 이상",
+        body: "한 권 읽기는 근거를 들어 두 가지 이상 관점에서 작품을 해석하면 6점, 창작 당시 사회·문화적 배경과 주제를 연결하면 6점, 감상 표현 4점, 독서 시간 3회 지참 4점입니다. 성취기준은 [9국05-05]·[9국05-06]·[9국05-07]입니다.",
+      },
+      {
+        title: "말하기는 대본 10점, 실연 10점",
+        body: "대본쓰기는 청중의 관심과 요구를 반영한 요소 2개 이상 5점과 통일성·응집성 5점입니다. 실제 말하기는 성량·시선·몸짓 등 청중 반응 고려 4점, 불필요한 휴지 0~1회의 유창성 3점, 제한 시간 활용 3점으로 나뉩니다([9국01-06]·[9국01-07]).",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "개념 정리 20점은 면 단위로 매기고, 활용 문제는 입체도형 3개를 다룹니다",
+    intro:
+      "한밭중학교 1학년 수학은 정기시험 70%(중간 9월·기말 12월 각 35%), 수행평가 30%로 수행은 11월 '수학 개념책 만들기' 하나입니다. 부채꼴부터 구의 부피까지 8개 면을 채우는 개념 정리와 활용 문제 서술로 구성됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "수학 개념책 만들기", kind: "task", weight: 30, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "개념 정리 20점은 면 단위",
+        body: "1면 표지, 2·3면 부채꼴의 중심각과 호, 호의 길이와 넓이, 4면 정다면체, 5면 회전체, 6·7면 기둥·뿔의 겉넓이와 부피, 8면 구의 겉넓이와 부피입니다. 8개 면을 기준대로 쓰면 20점이고 한 면마다 1점씩 내려가 기준에 맞는 면이 없으면 12점입니다.",
+      },
+      {
+        title: "활용 문제는 입체도형 3개",
+        body: "입체도형의 겉넓이와 부피를 활용한 문제 3개를 수학적 오류 없이 서술하면 10점, 2개 8점, 1개 6점, 모두 못하면 4점입니다. 수행 전 과정이 AI·인터넷 활용 금지이며, 미제출 기본점수는 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "표지부터 닮음 성질, 넓이·부피의 비, 닮음 조건, 평행선 비, 무게중심까지 면을 채우고 문제 3개는 하나에 2점 차이",
+    intro:
+      "한밭중학교 2학년 수학 수행평가는 11월 수학 개념책 만들기 30% 하나이며, 닮음 단원([9수03-12]~[9수03-14])을 8개 면으로 정리합니다. 중간(9월)·기말(12월) 고사는 35%씩이고 선택형 문항만 나옵니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "수학 개념책 만들기", kind: "task", weight: 30, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "닮음 개념책 8개 면 구성",
+        body: "표지, 평면도형과 입체도형의 닮음 성질, 닮은 도형의 넓이·부피의 비, 삼각형의 닮음 조건, 삼각형에서 평행선과 선분의 길이의 비, 평행선 사이 선분의 길이의 비, 삼각형의 무게중심 순서입니다. 표지와 닮음 조건 면을 뺀 나머지는 관련 문제와 답도 넣어야 합니다.",
+      },
+      {
+        title: "활용 서술은 닮음 조건 문제",
+        body: "개념 활용 10점은 삼각형의 닮음 조건을 활용한 문제 3개를 오류 없이 서술하는지로 매기며, 하나 맞힐 때마다 2점 차이가 납니다. 개념 정리(20점)와 합쳐 30점 만점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "현의 수직이등분선과 길이, 접선, 원주각·중심각, 내접 사각형, 접선과 현이 이루는 각을 싣고 세 문제는 10/8/6/4점",
+    intro:
+      "한밭중학교 3학년 수학은 10월에 원의 성질을 다룬 수학 개념책 만들기(30%)를 보고, 중간고사 9월·기말고사 11월이 35%씩입니다. 다른 학년보다 수행과 기말고사가 한 달씩 이릅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형" },
+      { name: "수학 개념책 만들기", kind: "task", weight: 30, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "원 단원 8개 면",
+        body: "[9수04-19]·[9수04-20]을 바탕으로 표지, 현의 수직이등분선, 현의 길이, 원의 접선, 원주각과 중심각, 호의 길이와 원주각, 원에 내접하는 사각형, 접선과 현이 이루는 각을 면마다 정리합니다. 8개 면 모두 기준에 맞으면 20점입니다.",
+      },
+      {
+        title: "원주각 활용 문제 3개",
+        body: "개념 활용은 원주각의 성질을 활용한 문제 3개를 서술해 10·8·6·4점으로 나눕니다. 기본점수를 줄 수 없는 경우는 11점, 부정행위는 0점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "위인 소개엔 네 가지 정보가 들어가고, 언어사용과 글의 구성이 7점씩입니다",
+    intro:
+      "한밭중학교 1학년 영어는 5지 선다형 정기시험 두 번(9월·12월, 각 35%)과 10월 쓰기 수행평가 '우리나라 위인 소개하기' 30%입니다. 수행 당일에는 AI를 쓸 수 없지만 준비 차시에는 활용할 수 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "5지 선다형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "5지 선다형" },
+      { name: "우리나라 위인 소개하기", kind: "task", weight: 30, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "위인 소개 네 가지 정보",
+        body: "대상, 업적, 대상에 대한 평가, 본받고 싶은 점을 모두 담으면 내용 8점이고, 이 내용을 5문장 이상으로 쓰면 과제완성 8점입니다. 3~4문장이면 6점으로 내려갑니다. 성취기준은 [9영02-10]입니다.",
+      },
+      {
+        title: "언어사용·글의 구성 7점씩",
+        body: "어법과 어휘 오류가 거의 없으면 언어사용 7점, 주제에 맞게 논리적으로 연결된 글이면 글의 구성 7점입니다. 정기시험은 공동출제 원칙의 5지 선다형 100점 만점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "제목·용도·특징·환경보호 효과를 담고, 구성과 언어를 7점씩 봅니다",
+    intro:
+      "한밭중학교 3학년 영어는 10월 쓰기 수행 '친환경 제품 소개하기'가 30%, 중간(9월)·기말(11월) 고사가 35%씩입니다. 1학년 위인 소개보다 문장 기준이 한 단계 높아 6문장 이상을 써야 과제완성 만점입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "5지 선다형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "5지 선다형" },
+      { name: "친환경 제품 소개하기", kind: "task", weight: 30, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "제목·용도·특징·환경보호 효과",
+        body: "제시된 네 조건을 모두 활용해 제품을 홍보하면 내용 8점, 2~3개면 6점입니다. 과제완성은 6문장 이상 8점, 4~5문장 6점, 3문장 이하 4점이고, 성취기준은 [9영04-02] 의견이나 감정을 표현하는 문장 쓰기입니다.",
+      },
+      {
+        title: "구성과 언어 7점씩",
+        body: "글의 구성과 언어사용이 7점씩으로 총 30점입니다. 미제출·백지 기본점수 12점, 추가 응시에도 미응시하면 11점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "부력 실험은 세 요소가 10점씩이고, 활동지는 손으로 직접 씁니다",
+    intro:
+      "한밭중학교 1학년 과학은 10~11월 부력 측정 실험 한 과제가 수행평가 30%를 차지하고, 중간(9월)·기말(12월) 고사가 35%씩입니다. 진도표에는 이 실험이 모둠 평가로 표시되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "부력 측정 실험하기", kind: "task", weight: 30, timing: "10~11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "부력 실험 세 요소 10점씩",
+        body: "탐구 설계와 안전 수칙 설명, 물질에 작용한 부력의 크기와 그렇게 판단한 이유, 부력을 이용한 실생활 사례 2가지가 각 10점입니다. 둘 다 만족 10점, 한 가지 8점, 모두 미흡 6점의 3단계입니다([9과05-02]).",
+      },
+      {
+        title: "실험 활동지는 수기 작성",
+        body: "모든 평가 요소에서 AI 포함 인터넷 활용이 금지되어 배부한 활동지에 직접 씁니다. 미제출 기본점수는 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "전압·전류를 재어 그래프로 바꾸면 10점, 결론과 저항 10점, 설계와 안전 10점으로 세 칸을 나눕니다",
+    intro:
+      "한밭중학교 2학년 과학은 11월 옴의 법칙 실험 하나가 수행평가 30%이고, 중간(9월)·기말(12월) 고사가 35%씩입니다. 실험은 측정값 기록과 그래프 변환, 결론과 활용 문제까지 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "옴의 법칙 실험하기", kind: "task", weight: 30, timing: "11월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "측정·변환이 한 항목",
+        body: "[9과14-02] 실험에서 전압에 따라 저항에 흐르는 전류를 측정하고 전압-전류 그래프로 바꾸는 항목이 10점입니다. 두 가지 모두 오류 없이 하면 10점, 하나만이면 8점입니다.",
+      },
+      {
+        title: "결론은 저항 크기 계산까지",
+        body: "저항·전압·전류의 관계 설명과 저항 크기 구하기가 결론 도출 및 활용 10점이고, 탐구 설계와 안전 수칙 설명 10점이 더해집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "신경과 호르몬 둘 다로 체온 조절을 쓰면 10점이고, 질병은 이름·증상, 관련 호르몬, 원인을 갖춰 설명합니다",
+    intro:
+      "한밭중학교 3학년 과학 수행평가는 개학 직후 8~9월 '신경계와 호르몬 탐구 실험하기' 30%이고, 중간(9월)·기말(11월) 고사가 35%씩입니다. 진도표에서 이 과제는 호르몬과 신경계, 항상성, 호르몬 관련 질병 활동에 걸쳐 표시됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형" },
+      { name: "신경계와 호르몬 탐구 실험하기", kind: "task", weight: 30, timing: "8~9월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "체온 조절은 두 작용을 모두",
+        body: "자료 해석 10점은 사람의 체온 조절 과정을 신경계와 호르몬 작용을 모두 넣어 설명해야 받고, 하나만이면 8점입니다. 호르몬과 신경이 작용하는 과정의 탐구 설계와 분석 10점이 함께 매겨집니다([9과20-03]).",
+      },
+      {
+        title: "질병 설명의 세 조건",
+        body: "결론 도출 10점은 호르몬 관련 질병을 질병 이름과 증상, 관련 호르몬의 이름과 특징, 발병 원인 세 조건으로 설명하는 항목입니다. 조건 2가지면 8점, 1가지 이하면 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "지위 탐색과 역할 분석이 10점씩이고, 수행 시기는 표마다 다르게 적혀 있습니다",
+    intro:
+      "한밭중학교 1학년 사회는 중간(9월)·기말(12월) 고사가 35%씩, 수행평가 '사회적 지위 탐구하기'가 30%입니다. 개념 설명에서 출발해 자신의 지위와 역할을 직접 분석하고 성찰하는 서·논술형 과제입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "사회적 지위 탐구하기", kind: "task", weight: 30, method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "지위 탐색과 역할 분석이 각 10점",
+        body: "[9사(일사)01-02] 과제입니다. 사회적 지위·사회적 역할·역할 수행의 의미 설명 5점, 자신의 사회적 지위를 6가지 이상 구체적으로 탐색 10점(4~5가지 8점), 지위별 기대 역할과 실제 역할, 자기평가·성찰을 담은 역할 분석 10점, 표현력과 과제 완성도 5점입니다.",
+      },
+      {
+        title: "수행 시기는 표마다 다름",
+        body: "평가 계획표에는 10월로, 진도표에는 9월 단원에 수행평가로 적혀 있어 시기를 적지 않았습니다. 정기시험은 선택형 문항만 출제합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "핵심 용어 3개 이상을 넣어 의의와 한계를 피드 형식으로 씁니다",
+    intro:
+      "한밭중학교 2학년 역사는 10월 '시민 혁명 가상 SNS 피드 만들기' 30%와 중간(9월)·기말(12월) 고사 35%씩입니다. 핵심 용어, 혁명의 의의와 한계, SNS 형식 세 기준이 10점씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "12월", method: "선택형" },
+      { name: "시민 혁명 가상 SNS 피드 만들기", kind: "task", weight: 30, timing: "10월", method: "서·논술형" },
+    ],
+    notes: [
+      {
+        title: "핵심 용어 3개 이상",
+        body: "혁명의 원인과 전개를 설명하며 권리장전, 명예혁명, 보스턴 차 사건, 독립 선언서, 바스티유 감옥, 제3신분, 인권 선언 같은 제시어를 3개 이상 바르게 쓰면 역사적 사실성 10점입니다([9역05-01]).",
+      },
+      {
+        title: "의의와 한계, 그리고 피드 형식",
+        body: "오늘날 민주주의에 미친 영향 1가지 이상과 여성·노예·빈민 등 특정 계층의 권리 제한 같은 한계 1가지 이상을 함께 써야 10점입니다. 형식은 아이콘 1개 이상, 해시태그 3개 이상, 본문 3문장 이상 세 조건입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hanbat-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "인구 이동은 다섯 시기와 가족 사례로, 뇌 구조는 10칸 이상으로 그립니다",
+    intro:
+      "한밭중학교 3학년은 사회와 역사 모두 중간(9월)·기말(11월) 고사 35%씩에 수행평가 30% 한 과제씩입니다. 사회는 9월 인구 이동 분석, 역사는 10월 고려 시대 인물의 뇌 구조 작성으로 한 달 간격입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형", course: "사회" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형", course: "사회" },
+      { name: "인구 이동 분석하기", kind: "task", weight: 30, timing: "9월", method: "서·논술형", course: "사회" },
+      { name: "중간고사", kind: "exam", weight: 35, timing: "9월", method: "선택형", course: "역사" },
+      { name: "기말고사", kind: "exam", weight: 35, timing: "11월", method: "선택형", course: "역사" },
+      { name: "뇌 구조 작성하기", kind: "task", weight: 30, timing: "10월", method: "서·논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "인구 이동: 다섯 시기와 가족 사례",
+        body: "인구 이동의 의미·배출 요인·흡입 요인 10점, 일제강점기·광복 후·6·25전쟁·1960~80년대·1990년대 이후의 이동을 백지도에 표현 5점과 원인·결과 설명 5점, 가족 구성원의 이동 경로와 요인 분석 10점입니다([9사(지리)07-02]).",
+      },
+      {
+        title: "뇌 구조는 10칸 이상",
+        body: "고려 지배 체제와 대외 관계, 원 간섭기 단원([9역09-01]~[9역09-03])의 인물을 골라 뇌 구조를 10개 이상 쓰면 8점, 관련 사건·용어 5개 이상 활용 8점, 사실 오류 없음 8점에 인물 선정 3점과 선정 이유 3점이 붙습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("한밭중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "갈등 숙려 책 대화하기 30%(11월 2~3주, 일지·발표·서평)와 무해한 사전 만들기 10%(9월 4주)",
+    intro:
+      "화성중학교 1학년 국어는 10월 1주 1차, 12월 3주 2차 정기시험이 30%씩이고 수행평가 두 영역이 40%입니다. 수행평가 중 갈등 숙려 책 대화하기 한 영역이 30%로 대부분을 차지합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "무해한 사전 만들기", kind: "task", weight: 10, timing: "9월 4주", method: "기타" },
+      { name: "갈등 숙려 책 대화하기", kind: "task", weight: 30, timing: "11월 2주~3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "책 대화는 일지·발표·서평 10점씩",
+        body: "갈등 숙려 책 대화하기([9국05-02]·[9국01-07])는 갈등을 다룬 소설을 읽고 독서를 성찰하는 일지 작성, 감상 발표, 작품 속 갈등 분석을 바탕으로 한 서평 쓰기가 각각 10점입니다. 이 영역 전체가 논술형 30%로 잡혀 있습니다.",
+      },
+      {
+        title: "무해한 사전은 언어폭력 사례와 카드뉴스",
+        body: "9월 4주 무해한 사전 만들기([9국01-10])는 실제로 널리 쓰이는 언어폭력 사례를 찾고 존중하는 말하기를 담은 카드뉴스를 제작하는 과제로, 4점과 6점 두 항목으로 채점됩니다. 정기시험 평가 요소에는 단어의 짜임과 새말, 품사, 토의 태도, 주장하는 글 쓰기가 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "문화 이해 태도 논술(9월 2주)·민주 시민 용어 사전(10월 3주) 20%씩, 선거 원칙 논술 10%(10월 5주)",
+    intro:
+      "화성중학교 1학년 사회는 12월 3주 2차 정기시험이 선택형 40%와 논술형 10%로 50%, 수행평가 세 영역이 50%입니다. 세 과제가 9월 2주부터 10월 5주 사이에 모두 끝납니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 3주", method: "논술형 20점" },
+      { name: "문화를 이해하는 태도 논술하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "민주 시민 용어 사전 만들기", kind: "task", weight: 20, timing: "10월 3주", method: "프로젝트" },
+      { name: "선거의 기능과 원칙 논술하기", kind: "task", weight: 10, timing: "10월 5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "문화 태도 논술은 마지막 항목이 8점",
+        body: "문화를 이해하는 태도 논술하기([9사(일사)02-03])는 문화 이해 태도 분류 4점, 자문화 중심주의 개념 서술 4점, 문화 사대주의 개념 서술 4점, 바람직한 문화 이해 태도 논술 8점으로 구성됩니다.",
+      },
+      {
+        title: "용어 사전은 4점 항목 다섯 개",
+        body: "민주 시민 용어 사전은 민주주의 발전, 이념과 기본원리, 현대 민주주의, 우리나라 민주주의 발전 관련 용어를 파악해 사전 형식으로 구성하며 4점 항목 다섯 개입니다. 10월 5주 선거 과제(10점)는 기본원칙 분류 3점, 기능 서술 3점, 원칙의 문제점 파악과 수정 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "평면도형의 성질 논술 30%(10월 2주)·입체도형 핵심 내용 포트폴리오 10%(11월 2주)",
+    intro:
+      "화성중학교 1학년 수학은 10월 1주 1차, 12월 3주 2차 정기시험이 30%씩이고 수행평가 두 영역이 40%입니다. 30점짜리 평면도형 논술이 1차 시험 바로 다음 주에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "평면도형의 성질 이해하기", kind: "task", weight: 30, timing: "10월 2주", method: "논술형" },
+      { name: "입체도형의 성질 핵심 내용 정리하기", kind: "task", weight: 10, timing: "11월 2주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "악수 횟수에서 내각의 합 공식까지",
+        body: "평면도형 논술은 악수하는 횟수 같은 실생활 상황을 기하학적으로 해석해 다각형의 변과 대각선 개수의 규칙을 설명하고, 다각형을 삼각형으로 나누어 내각의 크기의 합 공식을 유도하며, 정다각형의 내각과 외각을 구하는 과정을 서술합니다.",
+      },
+      {
+        title: "입체도형 포트폴리오는 모형과 에듀테크",
+        body: "입체도형의 성질 핵심 내용 정리하기는 모형과 에듀테크 도구로 다면체와 회전체의 성질을 탐구해 정리하고, 겉넓이·부피 공식의 유도 원리를 구조화하며, 수학놀이터로 실생활·창의 융합 문제를 해결하는 포트폴리오입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "힘의 합력과 평형 논술(9월 1~2주)·기체 실험(10월 4~5주) 20%씩, 달의 위상 변화 10%",
+    intro:
+      "화성중학교 1학년 과학은 10월 1주 1차, 12월 3주 2차 정기시험이 25%씩이고 수행평가 세 영역이 50%입니다. 수행평가는 9월 초, 10월 말, 11월 말~12월 초로 나뉘어 학기 전체에 걸쳐 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "힘의 표현 및 힘의 합력과 평형", kind: "task", weight: 20, timing: "9월 1~2주", method: "논술형" },
+      { name: "기체의 압력 및 온도와 부피의 관계", kind: "task", weight: 20, timing: "10월 4~5주", method: "실험·실습" },
+      { name: "달의 위상 변화", kind: "task", weight: 10, timing: "11월4주~12월1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "힘 과제는 다섯 항목 20점",
+        body: "힘의 표현 및 힘의 합력과 평형([9과05-01])은 힘을 표현하는 방법 서술, 나란하게 작용하는 두 힘의 합력 구하기, 힘이 평형을 이루는 조건 서술을 4·3·4·4·5점 다섯 항목으로 채점합니다.",
+      },
+      {
+        title: "기체 과제는 생활 속 예를 구분",
+        body: "기체의 압력 및 온도와 부피의 관계([9과06-02]·[9과06-03])는 두 관계를 각각 서술하고 일상생활의 예를 어느 관계에 해당하는지 구분하는 실험·실습 과제로, 논술형 비율은 없습니다. 달의 위상 변화(10점)는 위치 관계에 따른 위상 변화를 나타내고 원인을 서술합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "여행계획 소개하기 논술 30%(초고·최종본·발표)와 핵심 어휘 탐구 포트폴리오 10%",
+    intro:
+      "화성중학교 1학년 영어 수행평가의 무게는 여행계획 소개하기(논술형 30%)에 쏠려 있고, 핵심 어휘 탐구 및 활용 포트폴리오가 10%입니다. 정기시험은 10월 1주와 12월 3주 두 번, 선택형 83점·논술형 17점으로 30%씩이며 수행평가 날짜는 표에 여러 개가 이어 적혀 있어 옮기지 않았습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "여행계획 소개하기", kind: "task", weight: 30, method: "논술형" },
+      { name: "핵심 어휘 탐구 및 활용", kind: "task", weight: 10, method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "여행계획은 일곱 항목으로 채점",
+        body: "[9영02-04] 과제는 브레인스토밍·초고·최종본 제출 4점, 짜임새 있는 구성 6점, 여행 주제·장소·활동 소개 8점, 목표 표현 3점, 어법 2점, 시간 안에 자연스럽게 발표 4점, 발음·어조·목소리 크기·속도의 전달력 3점입니다. 백지 활동지나 자발적 미참여는 기본점수 9점입니다.",
+      },
+      {
+        title: "어휘 포트폴리오는 5점 두 항목",
+        body: "핵심 어휘 탐구 및 활용([9영01-01])은 어구를 듣고 낱말의 의미 파악하기, 문장에서 낱말의 의미 파악하기, 어휘 활용 영어노트 기록을 다루며 5점 항목 두 개로 채점합니다. 정기시험은 세부 정보, 줄거리·주제, 필자의 의도, 사건의 순서 추론을 평가 요소로 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "상황 고려 표현(10월 2~3주)·경험 개성 표현(11월 2~3주) 각 논술형 12%+실습 8%",
+    intro:
+      "화성중학교 2학년 국어는 10월 1주 1차, 12월 3주 2차 정기시험이 30%씩(각 선택형 27%·논술형 3%)이고 수행평가 두 영역이 40%입니다. 두 수행평가는 반영 비율표에 논술형 12%와 실습 8%로 나뉘어 적혀 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 90점(27%)·논술형 10점(3%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 90점(27%)·논술형 10점(3%)" },
+      { name: "상황을 고려하여 표현하기(논술형)", kind: "task", weight: 12, timing: "10월 2~3주", method: "논술형" },
+      { name: "상황을 고려하여 표현하기(실습)", kind: "task", weight: 8, timing: "10월 2~3주", method: "실습" },
+      { name: "경험을 개성 있게 표현하기(논술형)", kind: "task", weight: 12, timing: "11월 2~3주", method: "논술형" },
+      { name: "경험을 개성 있게 표현하기(실습)", kind: "task", weight: 8, timing: "11월 2~3주", method: "실습" },
+    ],
+    notes: [
+      {
+        title: "갈등 장면을 공감적 대화로 다시 쓰기",
+        body: "상황을 고려하여 표현하기는 작품에 반영된 사회·문화적 상황과 그 효과를 파악하고, 등장인물 간 갈등 상황을 공감적 대화로 재구성하며, 쓰기 과정과 전략을 점검·조정하는 과제로 [9국05-05]·[9국01-04]·[9국01-09]·[9국03-08]이 걸려 있습니다.",
+      },
+      {
+        title: "반어·역설·풍자로 경험을 표현",
+        body: "11월의 경험을 개성 있게 표현하기는 반어·역설·풍자 같은 방식으로 경험을 개성 있게 표현하고, 복합양식 매체 자료를 제작해 주제를 전달하며, 독서 지식을 경험과 연결하는 과제입니다. 학기 논술형 비율은 30%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "외심·내심·사각형 탐구 활동지(9월 4주)와 닮음·확률 활용 논술(12월 1주) 20%씩",
+    intro:
+      "화성중학교 2학년 수학은 10월 1주 1차, 12월 3주 2차 정기시험이 30%씩(각 선택형 24%·논술형 6%)이고 수행평가 두 영역이 40%입니다. 포트폴리오형 활동지가 학기 앞쪽, 논술형 과제가 2차 시험 두 주 전에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "삼각형의 외심과 내심, 사각형의 성질에 대한 탐구 활동지 작성", kind: "task", weight: 20, timing: "9월 4주", method: "포트폴리오" },
+      { name: "도형의 닮음과 경우의 수와 확률에 대한 활용", kind: "task", weight: 20, timing: "12월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "활동지는 외심·내심과 사각형",
+        body: "탐구 활동지([9수03-10]·[9수03-11])는 삼각형의 외심과 내심의 성질 설명, 사각형의 성질 이해, 이 성질들을 이용한 문제 해결로 구성된 포트폴리오이며 논술형 비율은 따로 없습니다.",
+      },
+      {
+        title: "12월 논술은 닮음비와 확률",
+        body: "도형의 닮음과 경우의 수와 확률에 대한 활용([9수03-12]·[9수04-06])은 닮음의 뜻과 닮음비 구하기(4점)를 비롯해 닮음의 성질과 확률의 개념을 이용한 문제 해결을 논술형 20%로 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "소화과정 글쓰기(9월 1~2주)·저항·전류·전압 탐구(10월 5주~11월 2주) 20%씩, 별 10%",
+    intro:
+      "화성중학교 2학년 과학은 10월 1주 1차, 12월 3주 2차 정기시험이 25%씩이고 수행평가 세 영역이 50%입니다. 전기 실험은 10월 5주부터 11월 2주까지 세 주에 걸쳐 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "소화과정 글쓰기", kind: "task", weight: 20, timing: "9월 1주~2주", method: "논술형" },
+      { name: "저항, 전류, 전압 사이의 관계 탐구하기", kind: "task", weight: 20, timing: "10월 5주~11월 2주", method: "실험·실습형" },
+      { name: "별의 거리와 밝기 설명하기", kind: "task", weight: 10, timing: "11월 4주~12월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "소화 글쓰기는 식단에서 채식 의견까지",
+        body: "소화과정 글쓰기([9과13-01])는 영양소의 특징을 알고 식단 구상하기, 침의 소화작용 추론하기, 채식주의자에 대한 의견 논술하기 세 항목(6·6·8점)으로 이루어집니다.",
+      },
+      {
+        title: "전기 실험은 회로 연결과 소비 전력",
+        body: "저항·전류·전압 탐구는 회로도에 맞게 올바르게 연결하기 6점, 세 값의 관계 분석 8점, 전기 제품의 소비 전력을 분석해 효율적인 사용 방법 제시 6점입니다. 별의 거리와 밝기(10점)는 연주시차로 거리 비교, 등급과 밝기의 관계 추론이 5점씩입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "함께 만드는 영어 영상 프로젝트(논술형)와 영어 학습 퍼즐(포트폴리오) 20%씩",
+    intro:
+      "2학년 영어는 모둠 영상 프로젝트(논술형)와 영어 학습 퍼즐(포트폴리오)이 각 20%로 수행평가 비중이 같습니다. 10월 1주·12월 3주 정기시험은 선택형 80점·논술형 20점 구성이고 회차별로 선택형 24%·논술형 6%가 반영됩니다. 과제별 실시 날짜는 계획표에서 하나로 나뉘지 않아 비워 두었습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "함께 만드는 영어 영상 프로젝트", kind: "task", weight: 20, method: "논술형" },
+      { name: "영어 학습 퍼즐", kind: "task", weight: 20, method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "영상 프로젝트 네 요소",
+        body: "어휘·언어 표현의 적절성과 정확성 7점, 초안·스토리보드를 반영한 영상 구성 3점, 모둠 안 역할 수행 2점, 핵심 표현을 활용한 영어 발화 8점입니다. 성취기준은 [9영02-03]·[9영02-05]·[9영02-09]·[9영02-10]이고, 평가 방법에 프로젝트와 함께 자기평가·동료평가가 표시되어 있습니다.",
+      },
+      {
+        title: "퍼즐은 문맥 추론 15점 중심",
+        body: "영어 학습 퍼즐([9영01-04]·[9영01-07])은 문맥으로 단어·어구·문장의 의미 추론, 어휘 간 관계 파악, 문장 간 논리적 관계 파악을 다루며 15점과 5점 두 항목입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "철기 시대 여러 나라 비교표(9월 2~3주)·신라 삼국 통일 논술(11월 1~2주) 20%씩, 체제 정비표 10%",
+    intro:
+      "화성중학교 2학년 역사는 12월 3주 2차 정기시험이 선택형 40%와 논술형 10%로 50%, 수행평가 세 영역이 50%입니다. 프로젝트형 비교표 두 개를 거쳐 11월에 논술형 과제로 마무리됩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 3주", method: "논술형 20점" },
+      { name: "철기 시대 여러 나라의 특징 비교표 만들기", kind: "task", weight: 20, timing: "9월 2주~3주", method: "프로젝트" },
+      { name: "삼국의 체제 정비표 만들기", kind: "task", weight: 10, timing: "10월 2주~3주", method: "프로젝트" },
+      { name: "신라의 삼국 통일 논하기", kind: "task", weight: 20, timing: "11월 1주~2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "비교표는 네 나라의 정치·풍습·제천행사",
+        body: "철기 시대 비교표([9역08-01])는 부여, 고구려, 옥저와 동예, 삼한의 정치와 풍습, 제천행사를 탐구해 비교표로 정리합니다. 10월의 삼국 체제 정비표(10점)는 고구려·백제·신라의 통치 체제를 3·4·3점으로 살펴봅니다.",
+      },
+      {
+        title: "삼국 통일은 의의·한계·나의 견해",
+        body: "신라의 삼국 통일 논하기([9역09-01])는 삼국 통일의 역사적 의의 파악 6점, 한계 이해, 통일 평가에 대한 자신의 견해를 논리적으로 설명하는 항목으로 구성된 논술형 20%입니다. 정기시험은 고조선부터 통일신라와 발해의 문화까지를 평가 요소로 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "현대 사회를 담은 시 창작·시인 노트(9월 3주)와 설득 전략 비판적 듣기(10월 4주) 20%씩",
+    intro:
+      "화성중학교 3학년 국어는 10월 1주 1차, 11월 3주 2차 정기시험이 30%씩(각 선택형 24%·논술형 6%)이고 수행평가 두 영역이 40%입니다. 시 창작은 논술형, 설득 전략 과제는 듣기평가로 치러집니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 3주", method: "선택형 80점(24%)·논술형 20점(6%)" },
+      { name: "현대 사회를 담은 시 창작 및 시인 노트 쓰기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "설득 전략 비판적 듣기 및 분석하기", kind: "task", weight: 20, timing: "10월 4주", method: "기타(듣기평가)" },
+    ],
+    notes: [
+      {
+        title: "시를 쓰고 시인 노트로 분석",
+        body: "시 창작 과제([9국05-05])는 지금 시대의 사회·문화적 현상을 포착해 시를 쓰고, 자기 시에 담긴 사회·문화적 배경과 창작 의도, 시어의 의미를 분석하는 시인 노트를 덧붙이는 논술형 20%입니다.",
+      },
+      {
+        title: "설득 전략은 오류 평가와 대안 구성",
+        body: "설득 전략 비판적 듣기([9국01-09])는 담화 속 이성·인성·감성적 설득 전략을 찾아 타당성과 논리적 오류를 평가하고, 청자를 설득할 대안 전략을 구성하는 듣기평가입니다. 반영 비율표의 논술형 비율은 시 창작 20%에만 잡혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 저출산·고령화 논술(9월 1주) 등 수행 60%, 역사는 산업 혁명 논술(10월 3~4주) 등 4개",
+    intro:
+      "화성중학교 3학년 사회 영역은 사회와 역사 두 과목 모두 11월 3주 2차 정기시험이 40%, 수행평가가 60%입니다. 사회는 20%짜리 과제 세 개, 역사는 10%·20%짜리 과제 네 개로 나뉩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 32, timing: "11월 3주", method: "선택형 80점", course: "사회" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 8, timing: "11월 3주", method: "논술형 20점", course: "사회" },
+      { name: "저출산·고령화 사회의 문제점과 해결 방안 서술하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형", course: "사회" },
+      { name: "생애주기별 자산 관리 설계하기", kind: "task", weight: 20, timing: "9월 4주", method: "논술형", course: "사회" },
+      { name: "인구분포와 경제체제 및 시장 가격 결정 활동지 작성하기", kind: "task", weight: 20, timing: "8월 3주~11월 2주", method: "포트폴리오", course: "사회" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 30, timing: "11월 3주", method: "선택형 75점", course: "역사" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "11월 3주", method: "논술형 25점", course: "역사" },
+      { name: "세도 정치와 농민의 항거 학습지 활동", kind: "task", weight: 10, timing: "9월 1주~2주", method: "프로젝트", course: "역사" },
+      { name: "실학 주장 비교표 만들기", kind: "task", weight: 10, timing: "9월4주~10월1주", method: "프로젝트", course: "역사" },
+      { name: "유럽과 아메리카의 시민혁명 사전 구성하기", kind: "task", weight: 20, timing: "9월 2주~3주", method: "프로젝트", course: "역사" },
+      { name: "산업 혁명의 명암 논술하기", kind: "task", weight: 20, timing: "10월 3주~4주", method: "세계사 논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회: 인구 문제와 자산 관리 두 논술",
+        body: "사회의 저출산·고령화 과제([9사(지리)07-03])는 저출산의 원인과 영향, 고령화의 문제점을 서술하고 해결 방안을 제시합니다. 9월 4주 자산 관리 설계는 청소년기부터 노년기까지 재무 목표를 세우고 예금·주식·부동산 같은 자산의 특징과 신용 관리의 중요성을 서술합니다.",
+      },
+      {
+        title: "사회 활동지는 학기 내내 누적",
+        body: "인구분포와 경제체제 및 시장 가격 결정 활동지는 8월 3주부터 11월 2주까지 이어지는 포트폴리오로, 인구 분포의 지리적 요인, 경제체제의 유형, 수요·공급 변화와 시장 가격 결정 과정을 정리합니다.",
+      },
+      {
+        title: "역사: 한국사 둘, 세계사 둘",
+        body: "역사는 한국사 영역의 세도 정치·삼정의 문란·농민의 항거 학습지(4·3·3점)와 실학·성리학 비교표, 세계사 영역의 시민혁명 사전(4점 항목 다섯 개)과 산업 혁명 논술로 나뉩니다. 산업 혁명 논술은 배경, 사료 분석, 측면 서술이 4점씩이고 자신의 의견 논술이 8점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수의 식 구하기 논술(9월 2주)과 개념 정리 포트폴리오(9월~11월 네 차례) 20%씩",
+    intro:
+      "화성중학교 3학년 수학은 10월 1주 1차, 11월 3주 2차 정기시험이 30%씩(각 선택형 25%·논술형 5%)이고 수행평가 두 영역이 40%입니다. 포트폴리오는 9월 2주·10월 1주·10월 5주·11월 2주 네 시점에 평가됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월1주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월3주", method: "선택형 83점(25%)·논술형 17점(5%)" },
+      { name: "수학 개념의 정리와 문제 해결", kind: "task", weight: 20, timing: "9월2주, 10월1주, 10월5주, 11월2주", method: "포트폴리오" },
+      { name: "이차함수의 식 구하기", kind: "task", weight: 20, timing: "9월2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "이차함수 논술은 일반형과 표준형",
+        body: "이차함수의 식 구하기([9수03-09]·[9수03-10])는 꼭짓점과 축의 방정식 구하기, 그래프를 보고 일반형으로 나타내기, 일반형을 표준형으로 바꾸기를 묻는 논술형 20%입니다.",
+      },
+      {
+        title: "포트폴리오는 정리 8점·풀이 6점·선택 문제 6점",
+        body: "수학 개념의 정리와 문제 해결은 학습한 개념을 빠짐없이 정리하기 8점, 제시된 문제를 배운 방법으로 풀기 6점, 「스스로 해결하기」에서 고른 문제 해결 6점입니다. 이차함수, 삼각비, 통계 단원 성취기준이 함께 걸려 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "호르몬 혈당량 조절 논술(9월 1주)·세포 분열 실험(9월 2~3주) 20%씩, 우주 탐사 10%",
+    intro:
+      "화성중학교 3학년 과학은 10월 1주 1차, 11월 3주 2차 정기시험이 25%씩이고 수행평가 세 영역이 50%입니다. 20%짜리 두 과제가 9월 셋째 주까지 끝나고 우주 탐사 과제만 11월에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "11월 3주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "호르몬에 의한 혈당량 조절", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "체세포 분열과 생식세포 분열", kind: "task", weight: 20, timing: "9월 2주 ~ 3주", method: "실험·실습" },
+      { name: "우주 탐사의 목적과 의의", kind: "task", weight: 10, timing: "11월 2주~4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "혈당량이 높을 때와 낮을 때",
+        body: "호르몬에 의한 혈당량 조절([9과20-03])은 혈당량이 높아졌을 때와 낮아졌을 때 각각 호르몬이 조절하는 과정을 서술하는 논술형 과제입니다. 이어지는 세포 분열 실험([9과21-02])은 체세포 분열과 생식세포 분열 과정을 순서대로 나타냅니다.",
+      },
+      {
+        title: "우주 탐사는 주장·생각·우주 쓰레기",
+        body: "우주 탐사의 목적과 의의(10점)는 탐사의 목적과 의의에 대한 주장 서술 4점, 탐사 과정의 의미에 대한 생각 4점, 우주 쓰레기의 문제점 2점입니다. 정기시험 성취기준은 [9과20-02]부터 [9과23-03]까지 13개가 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseong-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "정보 전달 말하기(9월 2주)·공유경제 의견 글쓰기(10월 3주) 20%씩, 설명 글 포트폴리오 10%",
+    intro:
+      "화성중학교 3학년 영어는 10월 1주 1차, 11월 3주 2차 지필평가가 25%씩이고 수행평가 세 영역이 50%입니다. 말하기, 의견 글, 설명 글이 9월·10월·11월에 하나씩 이어집니다.",
+    assessments: [
+      { name: "1차 지필평가", kind: "exam", weight: 25, timing: "10월 1주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "2차 지필평가", kind: "exam", weight: 25, timing: "11월 3주", method: "선택형 80점(20%)·논술형 20점(5%)" },
+      { name: "정보 전달 말하기", kind: "task", weight: 20, timing: "9월 2주", method: "구술·발표" },
+      { name: "의견을 표현하는 글쓰기", kind: "task", weight: 20, timing: "10월 3주", method: "논술형" },
+      { name: "설명하는 글쓰기", kind: "task", weight: 10, timing: "11월 2주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "말하기는 환경 문제 그림·사진 설명",
+        body: "정보 전달 말하기는 교과서 그림과 사진을 보고 환경 문제와 해결 방법을 설명하고, 환경 보호 방법과 효과를 분석해 생각을 말하며, 근거를 든 문장을 발표하는 구술 평가입니다. 동료평가도 함께 표시되어 있습니다.",
+      },
+      {
+        title: "의견 글은 공유경제 장단점에서 출발",
+        body: "의견을 표현하는 글쓰기는 교과서에 나온 공유경제의 장단점을 분석하고, 자신이 공유할 수 있는 물건에 대한 의견을 쓴 뒤 동료 평가 내용을 반영합니다. 11월 설명하는 글쓰기(10%)는 일상생활의 그림·사진·도표를 보고 세부 내용을 쓰는 포트폴리오입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "소설 서평 쓰기(9월 2주)·주장하는 글(10월 5주) 20%씩, 어휘 사전 만들기 10%(11월 4~5주)",
+    intro:
+      "화성상신중학교 1학년 국어는 12월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%이고, 수행평가 세 영역이 50%입니다. 서평과 주장하는 글은 논술형, 어휘 사전은 탐구 활동으로 평가합니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "서평 쓰기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "주장하는 글 쓰기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형" },
+      { name: "어휘 사전 만들기", kind: "task", weight: 10, timing: "11월 4~5주", method: "기타(탐구 및 활동)" },
+    ],
+    notes: [
+      {
+        title: "서평은 소설 한 권의 갈등 과정",
+        body: "서평 쓰기([9국05-02])는 소설 한 권을 읽은 뒤 갈등의 진행과 해결 과정을 중심으로 서평을 쓰는 과제로, 내용 소개, 갈등 과정 파악, 감상 표현, 주제가 드러난 완성된 글이 5점씩입니다.",
+      },
+      {
+        title: "주장하는 글도 5점 네 항목",
+        body: "10월 5주 주장하는 글 쓰기([9국03-03])는 계획과 자료 찾기, 조직하기, 효과적인 표현, 적절한 근거 제시를 5점씩 봅니다. 어휘 사전(10점)은 단어의 짜임과 어휘의 양상을 고려해 주제 어휘를 설명하는 과제로 2·4·4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "시민의 자질과 역할 논술 20%(9월 1주)·세대공감 신조어 카드뉴스 30%(9월 4주)",
+    intro:
+      "화성상신중학교 1학년 사회는 12월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%이고, 수행평가 두 영역이 50%입니다. 두 수행평가가 모두 9월에 끝나고 카드뉴스 과제가 30%로 더 큽니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "시민의 자질과 역할 탐색하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "세대공감 신조어 카드뉴스 제작하기", kind: "task", weight: 30, timing: "9월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "갈등·차별 사례에서 시민의 자질로",
+        body: "시민의 자질과 역할 탐색하기([9사(일사)01-03])는 세대 갈등, 지역 차별, 젠더 갈등, 다문화 차별 같은 사례 가운데 하나를 분석(10점)하고 필요한 시민의 자질을 제시하는 논술형 과제입니다.",
+      },
+      {
+        title: "신조어를 문화적 맥락에서",
+        body: "카드뉴스 과제([9사(일사)02-03])는 인터넷 신조어 사례를 조사해 이해하고(10점), 세대 간 공감을 위한 바람직한 태도를 제시하며, 창의적으로 구성하는 것이 평가 요소입니다. 30점 가운데 논술형 비율은 25%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "도형의 성질과 삼각형의 합동 설명 20%(9월 3주)·자료의 정리와 분석 30%(10월 3주)",
+    intro:
+      "화성상신중학교 1학년 수학은 12월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%이고, 수행평가 두 영역이 50%입니다. 통계 단원의 자료 정리 과제가 30%로 도형 과제보다 큽니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "도형의 성질과 삼각형의 합동 설명하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "자료의 정리와 분석하기", kind: "task", weight: 30, timing: "10월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "기호로 도형을 표현하는 서술",
+        body: "도형 과제([9수03-01]·[9수03-04])는 주어진 점과 기호가 나타내는 도형을 표시하고, 점과 직선의 위치 관계를 수학 기호와 문장으로 표현하며, 삼각형의 변과 각을 이용해 합동을 설명합니다. 20점 중 논술형 비율은 12%입니다.",
+      },
+      {
+        title: "통계 과제는 대푯값부터 상대도수까지",
+        body: "자료의 정리와 분석하기([9수04-01]~[9수04-03])는 총합·평균·중앙값·최빈값, 대푯값, 줄기와 잎 그림·도수분포표·히스토그램, 상대도수를 10·5·10·5점으로 평가하는 논술형 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "힘의 평형과 부력 실험보고서(9월 3주)·과학 기사 탐구 설계 포스터(10월 1주~11월 1주) 25%씩",
+    intro:
+      "화성상신중학교 1학년 과학은 12월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 수행평가 두 영역이 25%씩입니다. 포스터 과제는 10월 1주부터 11월 1주까지 한 달에 걸쳐 진행됩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "과학 기사 기반 탐구 설계 포스터 제작하기", kind: "task", weight: 25, timing: "10월 1주~11월 1주", method: "논술·프로젝트" },
+      { name: "힘의 평형과 부력 탐구 실험보고서 작성하기", kind: "task", weight: 25, timing: "9월 3주", method: "논술·실험·실습" },
+    ],
+    notes: [
+      {
+        title: "포스터는 가설과 변인 설정",
+        body: "탐구 설계 포스터([9과01-01]·[9과01-02])는 과학 기사를 읽고 과학 발전이 인류 문명에 미친 영향을 서술한 뒤, 탐구 문제와 가설, 변인 설정, 탐구 설계로 이어집니다. 25점 중 논술형 비율이 22%입니다.",
+      },
+      {
+        title: "실험보고서는 5점 다섯 항목",
+        body: "힘의 평형과 부력 실험보고서([9과05-01]·[9과05-02])는 실험 결과 기록, 힘의 종류 분석, 힘의 화살표 표현, 힘의 크기 구하기 등을 5점씩 다섯 항목으로 평가하며 논술형 비율은 5%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "Dear Diary 일기(9월 4~5주)·세계시민 문제 입장 표현(11월 2주) 20%씩, 배움일지 10%",
+    intro:
+      "화성상신중학교 1학년 영어는 12월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 수행평가 세 영역이 50%입니다. 일기 쓰기가 9월에, 세계시민 과제와 배움일지가 11월에 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "Dear Diary 일기 쓰기", kind: "task", weight: 20, timing: "9월 4주~5주", method: "논술형" },
+      { name: "세계시민 문제 이해하고 자신의 입장 표현하기", kind: "task", weight: 20, timing: "11월 2주", method: "논술·구술·발표" },
+      { name: "배움일지 쓰기", kind: "task", weight: 10, timing: "11월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "일기는 주말 일을 조건에 맞춰",
+        body: "Dear Diary 일기 쓰기([9영02-04]·[9영02-05]·[9영02-08])는 주말에 있었던 일을 주어진 조건을 충족해 자연스러운 맥락으로 설명하는 글로, 5점 항목 네 개입니다.",
+      },
+      {
+        title: "세계시민 과제는 듣고 읽은 뒤 의견",
+        body: "세계시민 과제([9영01-03]·[9영02-06])는 세계시민 문제를 다룬 지문을 듣고 읽어 주요 내용을 파악한 다음 자료를 바탕으로 자기 의견을 표현하며, 20점 중 논술형 비율은 8%입니다. 배움일지(10점)는 핵심 정보 답하기와 본문 요약이 5점씩입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "음운 체계 구조화 10%(9월 3~4주)·복합양식 자료 활용 글쓰기 30%(10월 5주~11월 1주)",
+    intro:
+      "화성상신중학교 2학년 국어는 9월 5주 1차와 12월 3주 2차 정기시험이 각각 선택형 27%·논술형 3%로 60%, 수행평가 두 영역이 40%입니다. 30점짜리 복합양식 글쓰기가 수행평가의 중심입니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "9월 5주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "9월 5주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "12월 3주", method: "논술형 10점" },
+      { name: "음운 체계 구조화하기", kind: "task", weight: 10, timing: "9월 3~4주", method: "기타(탐구 및 활동)" },
+      { name: "복합양식 자료를 활용한 글 쓰기", kind: "task", weight: 30, timing: "10월 5주~11월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "모음·자음 체계표 완성",
+        body: "음운 체계 구조화하기([9국04-01])는 모음과 자음의 분류 기준을 확인하고 주어진 음운을 알맞은 자리에 배치해 체계표를 완성하는 활동으로 4·3·3점입니다. 논술형 비율은 잡혀 있지 않습니다.",
+      },
+      {
+        title: "자료를 평가하고 주장하는 글로",
+        body: "복합양식 자료를 활용한 글 쓰기([9국02-04]·[9국03-07])는 복합양식 자료를 평가한 뒤 적절한 자료를 골라 목적과 예상 독자를 고려한 주장하는 글을 쓰는 과제로, 30점 중 논술형 비율이 25%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "도형의 성질 문제 해결(9월 3~4주)·닮음과 확률 문제 해결(12월 1주) 25%씩",
+    intro:
+      "화성상신중학교 2학년 수학은 9월 5주 1차와 12월 3주 2차 정기시험이 각각 선택형 22.5%·논술형 2.5%로 50%, 논술형 수행평가 두 개가 25%씩입니다. 수행평가가 두 시험 직전에 하나씩 놓여 있습니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 22.5, timing: "9월 5주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "9월 5주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 22.5, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "도형의 성질을 이용하여 문제 해결하기", kind: "task", weight: 25, timing: "9월 3주~4주", method: "논술형" },
+      { name: "도형의 닮음과 확률에 관한 문제 해결하기", kind: "task", weight: 25, timing: "12월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "직각삼각형 합동으로 각도와 길이",
+        body: "도형의 성질 과제는 직각삼각형의 합동 조건으로 합동인 삼각형을 찾아내고, 합동을 이용해 각도와 길이를 구하는 논술형입니다. 25점 중 논술형 비율은 22%입니다.",
+      },
+      {
+        title: "닮음 조건의 이유를 서술",
+        body: "12월 1주 닮음과 확률 과제는 닮은 두 삼각형을 기호로 나타내고 알맞은 닮음 조건과 그 이유를 서술한 뒤 여러 확률 문제를 해결합니다. 배점표에는 닮음 조건을 이용한 문제 해결 15점, 닮음인 삼각형 기호 10점 항목이 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "광합성과 환경요인 탐구(8월 5주~9월 1주)·영양소 검출 실험(9월 2~3주) 25%씩",
+    intro:
+      "화성상신중학교 2학년 과학은 12월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%이고, 수행평가 두 영역이 25%씩입니다. 두 실험 과제가 개학 직후부터 9월 3주 사이에 모두 끝납니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "광합성과 환경요인 탐구하기", kind: "task", weight: 25, timing: "8월 5주~9월1주", method: "논술·기타(탐구 및 활동)" },
+      { name: "영양소 검출 실험하기", kind: "task", weight: 25, timing: "9월 2주~3주", method: "논술·실험·실습" },
+    ],
+    notes: [
+      {
+        title: "광합성 산물 확인과 환경 요인",
+        body: "광합성과 환경요인 탐구하기는 광합성으로 만들어진 물질을 확인하고, 실험 결과로 필요한 물질과 생성 물질을 설명하며, 광합성에 영향을 미치는 환경 요인을 탐구합니다. 25점 중 논술형 비율은 20%입니다.",
+      },
+      {
+        title: "영양소 검출로 미지의 음식 분석",
+        body: "영양소 검출 실험하기는 음식물 속 영양소의 종류와 기능을 이해하고 검출 실험을 수행·분석한 뒤, 주어진 자료로 미지의 음식물 속 영양소를 추론합니다. 평가에는 자기 평가와 동료 평가도 함께 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "디지털 시민 의견 표현(11월 3주)·배움일지(12월 1주) 20%씩, 진로 듣고 말하기 10%",
+    intro:
+      "화성상신중학교 2학년 영어는 9월 5주 1차와 12월 3주 2차 정기시험이 각각 선택형 22.5%·논술형 2.5%로 50%, 수행평가 세 영역이 50%입니다. 말하기 과제 이후 쓰기 과제 두 개가 11월과 12월에 이어집니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 22.5, timing: "9월 5주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "9월 5주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 22.5, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "진로 지문 듣고 자신의 의견 말하기", kind: "task", weight: 10, timing: "10월 1~2주", method: "구술·발표" },
+      { name: "디지털 시민 지문 이해하고 자신의 의견 표현하기", kind: "task", weight: 20, timing: "11월 3주", method: "논술" },
+      { name: "배움일지 작성하기", kind: "task", weight: 20, timing: "12월 1주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "진로 말하기는 3·3·4점",
+        body: "진로 지문 듣고 자신의 의견 말하기([9영01-03]·[9영02-06])는 진로 관련 지문의 핵심 내용과 세부 정보를 파악한 뒤 주제에 대한 생각을 근거와 함께 말하는 구술 평가로, 3·3·4점 세 항목입니다.",
+      },
+      {
+        title: "디지털 시민과 배움일지가 학기 말",
+        body: "디지털 시민 과제는 디지털 시민의식 자료를 듣고 읽어 핵심 내용을 이해한 다음 근거를 들어 의견을 표현합니다. 12월 1주 배움일지([9영02-03]·[9영02-07])는 학습 내용을 정리하고 이해 정도와 학습 과정을 돌아보는 글로 7·7·6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "보고하는 글 쓰기 20%(10월 1~2주)·문장의 짜임 분석 15%(9월 1~2주)·청중 고려 말하기 15%",
+    intro:
+      "화성상신중학교 3학년 국어는 11월 2주 2차 정기시험이 선택형 45%와 논술형 5%로 50%이고, 수행평가 세 영역이 50%입니다. 9월 초부터 10월 4주까지 문법, 쓰기, 말하기 과제가 차례로 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "문장의 짜임 분석하기", kind: "task", weight: 15, timing: "9월 1주~2주", method: "논술형" },
+      { name: "보고하는 글 쓰기", kind: "task", weight: 20, timing: "10월 1~2주", method: "논술형" },
+      { name: "청중을 고려하여 말하기", kind: "task", weight: 15, timing: "10월 3주~4주", method: "구술·발표" },
+    ],
+    notes: [
+      {
+        title: "문장 분석 4·8·3점, 보고서 3·4·10·3점",
+        body: "문장의 짜임 분석하기([9국04-06])는 세 항목 4·8·3점이고, 보고하는 글 쓰기([9국03-03]·[9국03-10])는 관찰·조사·실험의 절차와 결과가 드러나는 글을 3·4·10·3점 네 항목으로 채점합니다.",
+      },
+      {
+        title: "말하기는 청중의 관심과 요구",
+        body: "청중을 고려하여 말하기([9국01-06]·[9국01-07])는 7·6·2점 세 항목의 구술 평가로 자기평가가 함께 표시되어 있으며, 논술형 비율은 잡혀 있지 않습니다. 학기 논술형 비율은 40%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "인구분포와 인구이동 논술(9월 1주)·지속가능한 우리 마을 설계(10월 4주) 25%씩",
+    intro:
+      "화성상신중학교 3학년 사회는 11월 2주 2차 정기시험이 선택형 45%와 논술형 5%로 50%이고, 수행평가 두 영역이 25%씩입니다. 인구 단원 논술로 학기를 시작해 10월에 도시 설계 과제가 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "인구분포와 인구이동 이해하기", kind: "task", weight: 25, timing: "9월 1주", method: "논술형" },
+      { name: "지속가능한 우리 마을 설계하기", kind: "task", weight: 25, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "인구 논술은 마지막 항목 10점",
+        body: "인구분포와 인구이동 이해하기([9사(지리)07-01]·[9사(지리)07-02])는 인구분포의 특징, 인구분포에 영향을 미치는 요인, 인구이동의 요인 분석, 지역 변화 이해를 5·5·5·10점으로 평가하는 논술형 25%입니다.",
+      },
+      {
+        title: "마을 설계는 조건 제안과 설계도",
+        body: "지속가능한 우리 마을 설계하기([9사(지리)08-04])는 살기 좋은 도시가 갖출 조건을 제안하고 도시 설계도를 그리는 15점·10점 과제로, 논술형 비율은 15%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수 문제해결 30%(9월 1~2주)·자료 분석을 통한 문제해결 20%(10월 1~3주)",
+    intro:
+      "화성상신중학교 3학년 수학은 11월 2주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 논술형 수행평가 두 개가 50%입니다. 두 수행평가가 모두 10월 3주 이전에 끝나 학기 논술형 비율이 55%로 적혀 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "이차함수 문제해결하기", kind: "task", weight: 30, timing: "9월1주~9월2주", method: "논술형" },
+      { name: "자료 분석을 통한 문제해결하기", kind: "task", weight: 20, timing: "10월1주~10월3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "이차함수는 대응표에서 실생활 문제로",
+        body: "이차함수 문제해결하기([9수03-09]·[9수03-10])는 대응표를 해석하고 그래프의 기본 특징을 설명한 뒤 실생활 문제를 해결하는 30점 논술형 과제입니다.",
+      },
+      {
+        title: "상황에 맞는 대푯값 고르기",
+        body: "자료 분석을 통한 문제해결하기([9수05-06]~[9수05-08])는 여러 대푯값을 구하고 상황에 맞는 대푯값을 골라 이유를 설명하며, 통계 자료를 활용해 합리적으로 선택하는 과제입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "감각기관 탐구(9월 1주)·세포분열 실험(9월 4~5주) 25%씩, 둘 다 5·10·10점",
+    intro:
+      "화성상신중학교 3학년 과학은 11월 2주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 수행평가 두 영역이 25%씩입니다. 두 수행평가가 9월 안에 모두 끝납니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "감각기관 탐구하기", kind: "task", weight: 25, timing: "9월 1주", method: "논술형" },
+      { name: "세포분열 실험하기", kind: "task", weight: 25, timing: "9월 4주~5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "두 과제 모두 25점 중 논술형 20%",
+        body: "감각기관 탐구하기([9과20-01])와 세포분열 실험하기([9과21-01]·[9과21-02])는 둘 다 5·10·10점 세 항목이며, 반영 비율표에서 각각 논술형 20%로 잡혀 있습니다. 세포분열 실험에는 자기 평가와 동료 평가도 표시되어 있습니다.",
+      },
+      {
+        title: "시험은 일과 에너지, 유전까지",
+        body: "정기시험 평가 요소에는 일의 양과 역학적 에너지 보존, 신경계와 호르몬, 멘델의 유전 원리와 가계도 분석, 가전제품의 소비전력과 전력량이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hwaseongsangsin-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "세계시민 의견 표현·배움일지(10월 4~5주) 20%씩, 다문화 주제 글쓰기 10%(9월 2주)",
+    intro:
+      "화성상신중학교 3학년 영어는 11월 2주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 수행평가 세 영역이 50%입니다. 20%짜리 두 과제가 10월 4주와 5주에 연달아 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "다문화 주제에 관한 영어 글쓰기", kind: "task", weight: 10, timing: "9월 2주", method: "논술" },
+      { name: "세계시민에 대한 지문 이해하고 자신의 의견 표현하기", kind: "task", weight: 20, timing: "10월 4주", method: "논술·구술·발표" },
+      { name: "배움일지 작성하기", kind: "task", weight: 20, timing: "10월 5주", method: "논술·포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "세계시민 과제는 4점 항목 다섯 개",
+        body: "세계시민에 대한 지문 이해하고 자신의 의견 표현하기는 [9영01-04]·[9영02-02]·[9영03-04]·[9영04-02]가 걸린 20점 과제로 4점 항목 다섯 개이며, 논술형 비율은 8%입니다. 9월 2주 다문화 글쓰기(10점)는 3·3·4점입니다.",
+      },
+      {
+        title: "배움일지는 7·7·6점",
+        body: "배움일지 작성하기([9영04-02]·[9영04-03])는 7·7·6점 세 항목이고 반영 비율표의 논술형 비율은 20%입니다. 정기시험은 세부 정보, 줄거리·주제, 필자의 심정과 의도, 사건의 원인과 결과 추론을 평가 요소로 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("화성상신중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장 글은 근거와 표현이 10점씩이고, 새말 과제는 짜임 분석과 형성 원리를 봅니다",
+    intro:
+      "향남중학교 1학년 국어는 12월 3주 2차 정기시험 한 번이 50%이고, 수행평가 세 영역이 50%입니다. 글쓰기와 문법 과제가 9월과 10월에 하나씩 있고, 어휘 과제는 프로젝트 방식으로 평가됩니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 3주", method: "선택형 80점(40%)·논술형 20점(10%)" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "단어의 짜임과 새말", kind: "task", weight: 20, timing: "10월 3주", method: "논술형 포함" },
+      { name: "어휘의 양상과 쓰임", kind: "task", weight: 10, method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "주장하는 글은 근거와 표현 10점씩",
+        body: "주장하는 글쓰기(20점)는 [9국03-03]에 따라 자신의 주장을 논리적으로 전개하는 글을 쓰며, 주장을 뒷받침하는 타당하고 다양한 근거 들기와 적절하고 효과적인 표현 사용하기가 10점씩입니다.",
+      },
+      {
+        title: "새말 과제는 짜임 분석과 형성 원리",
+        body: "10월 3주 단어의 짜임과 새말은 단어의 짜임과 문법적 개념을 서술하는 과제로, 단어의 짜임 분석과 새말 형성 원리 탐구가 10점씩이고 이 중 논술형 비율은 10%입니다. 어휘의 양상과 쓰임(10%)은 우리말 어휘의 다양한 양상과 생활 속 어휘의 쓰임을 탐구하며, 계획서 표에 시기는 적혀 있지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "설계도는 지위·역할·행동 계획 세 단계이고, 자료 분석은 문화와 민주주의 네 갈래이며 시험엔 선거·법·기본권이 나옵니다",
+    intro:
+      "향남중학교 1학년 사회는 수행평가 두 영역이 30%씩 60%로 정기시험보다 큽니다. 12월 3주 2차 정기시험은 선택형 30%와 논술형 10%로 나뉘어 40%입니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 75점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 3주", method: "논술형 25점" },
+      { name: "나만의 진로 역할 설계도 만들기", kind: "task", weight: 30, timing: "9월 1주", method: "논술형" },
+      { name: "자료 분석을 통한 사회적 판단하기", kind: "task", weight: 30, timing: "10월 3주", method: "기타" },
+    ],
+    notes: [
+      {
+        title: "설계도는 지위·역할·행동 계획 세 단계",
+        body: "학기 첫 주의 나만의 진로 역할 설계도 만들기는 [9사(일사)01-02]를 평가하며 사회적 지위 제시, 역할 분석, 나만의 역할 행동 계획 수립이 10점씩입니다. 이 과제 전체가 논술형 30%로 잡혀 있습니다.",
+      },
+      {
+        title: "자료 분석은 문화와 민주주의 네 갈래",
+        body: "10월 3주 과제는 문화의 의미와 특징 파악, 문화를 이해하는 태도 사례 판단, 민주 정치 발달 과정의 특징 구별, 현대 민주주의의 특징과 한계 자료 분석을 다루고 5점 단위 항목으로 채점합니다. 논술형 비율은 0%입니다.",
+      },
+      {
+        title: "시험 범위는 선거·법·기본권",
+        body: "2차 정기시험 평가 요소에는 선거의 기능과 기본 원칙, 정치 주체의 역할과 정치 과정, 일상생활 사례로 본 법의 의미와 사회법의 도입 배경, 일상의 인권 침해 사례와 기본권 제한의 요건이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "그래프 과제는 상황을 해석해 서술하고, 11월 과제는 다각형과 부채꼴을 다룹니다",
+    intro:
+      "향남중학교 1학년 수학은 12월 3주 2차 정기시험이 선택형 45%와 논술형 5%로 50%, 논술형 수행평가 두 개가 25%씩 50%입니다. 첫 수행평가가 학기 첫 주에 있어 1학기 말 단원과 바로 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 10점" },
+      { name: "좌표평면과 그래프", kind: "task", weight: 25, timing: "9월 1주", method: "논술형" },
+      { name: "평면도형의 성질", kind: "task", weight: 25, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "그래프 과제는 상황을 해석하는 서술",
+        body: "좌표평면과 그래프는 [9수02-05]~[9수02-07]에 걸쳐 수직선과 좌표평면 위의 점 표현, 주어진 상황을 그래프로 나타내고 해석하기, 정비례·반비례 관계 이해를 논술형으로 평가합니다.",
+      },
+      {
+        title: "11월 과제는 다각형과 부채꼴",
+        body: "평면도형의 성질은 다각형과 부채꼴의 성질을 활용해 문제를 해결하는 과제입니다. 정기시험 평가 요소에는 점·직선·평면의 관계, 동위각과 엇각, 삼각형의 합동 판별, 다면체와 회전체의 성질이 함께 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "태양 활동의 영향을 논술하고, 30점 과제엔 위상 변화와 일식·월식이 들어갑니다",
+    intro:
+      "향남중학교 1학년 과학은 12월 3주 2차 정기시험이 선택형 40%와 논술형 10%로 50%이고, 9월에 몰린 수행평가 두 개가 50%입니다. 두 수행평가가 모두 천체 단원이라 9월 한 달 동안 같은 단원으로 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 3주", method: "논술형 20점" },
+      { name: "태양계 탐사하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형 포함" },
+      { name: "지구와 달의 운동 알아보기", kind: "task", weight: 30, timing: "9월 4주", method: "논술형 포함" },
+    ],
+    notes: [
+      {
+        title: "태양 활동의 영향을 논술합니다",
+        body: "태양계 탐사하기([9과07-01]·[9과07-02])는 태양계 천체의 특징과 태양 표면·대기의 현상을 설명하고, 태양 활동이 지구에 미치는 영향을 논술하는 과제로 논술형 비율은 5%입니다.",
+      },
+      {
+        title: "30점 과제에 위상 변화와 일식·월식",
+        body: "지구와 달의 운동 알아보기는 지구의 자전·공전과 별자리 변화, 달·태양·지구의 위치에 따른 달의 위상 변화, 일식과 월식 비교를 다루며 30점 중 논술형 비율이 22%입니다. 정기시험에는 힘의 표현과 평형, 무게와 질량, 탄성력·마찰력·부력이 평가 요소로 나옵니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "두 글쓰기는 내용 10점·어휘 5점·문법 5점이고, 말하기는 정확성 4점에 유창성·태도 3점씩입니다",
+    intro:
+      "향남중학교 1학년 영어는 12월 3주 2차 정기시험(선택형 40%·논술형 10%)이 50%, 수행평가 세 영역이 50%입니다. 쓰기 두 과제가 앞서고 11월 3주에 말하기 과제가 마지막으로 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 3주", method: "논술형 20점" },
+      { name: "기행문 쓰기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "장래 희망에 관한 글쓰기", kind: "task", weight: 20, timing: "10월 4주", method: "논술형" },
+      { name: "일반적인 질문에 답하기", kind: "task", weight: 10, timing: "11월 3주", method: "구술·발표" },
+    ],
+    notes: [
+      {
+        title: "두 글쓰기는 내용 10점·어휘 5점·문법 5점",
+        body: "기행문 쓰기는 여행 경험과 계획을 논리적으로 표현하는 내용 10점에 어휘 5점, 필수 문법 요소 5점이고, 장래 희망에 관한 글쓰기도 내용을 충실히 전달하는 10점에 어휘 5점·문법 5점으로 같은 틀입니다.",
+      },
+      {
+        title: "말하기는 정확성 4점, 유창성·태도 3점씩",
+        body: "일반적인 질문에 답하기([9영02-06]·[9영02-02])는 맥락에 맞게 정확하게 답하기 4점, 자연스럽고 유창하게 발화하기 3점, 자신감 있는 태도로 말하기 3점입니다. 학기 논술형 비율은 50%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "복합양식 자료로 내용을 만들어 6·8·16점 세 항목을 받고, 음운 체계 설명은 3·8·3·6점으로 나뉩니다",
+    intro:
+      "향남중학교 2학년 국어는 10월 1주 1차와 12월 3주 2차 정기시험이 각각 선택형 20%·논술형 5%이고, 논술형 수행평가 두 개가 50%입니다. 30점짜리 글쓰기 과제가 학기 첫 주에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 20, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 3주", method: "논술형 20점" },
+      { name: "짜임새 있는 글 쓰기", kind: "task", weight: 30, timing: "9월 1주", method: "논술형" },
+      { name: "음운 체계 설명하기", kind: "task", weight: 20, timing: "11월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "복합양식 자료로 쓰는 30점 글",
+        body: "짜임새 있는 글 쓰기는 [9국03-07]·[9국03-08]에 따라 복합양식 자료를 활용해 내용을 생성하고 글의 유형을 고려해 체계적으로 조직하는 과제로, 6점·8점·16점 세 항목으로 채점됩니다.",
+      },
+      {
+        title: "음운 체계는 네 항목 20점",
+        body: "11월 3주 음운 체계 설명하기([9국04-01])는 음운의 체계를 알고 특성을 설명하는 과제이며 3·8·3·6점 네 항목입니다. 정기시험 평가 요소에는 작품의 사회·문화적 상황, 대화 상대에 맞는 공감 반응, 읽기 과정 점검과 조정이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이등변·직각 합동이 4점씩이고, 닮음 과제는 부피와 피타고라스의 역까지 다룹니다",
+    intro:
+      "향남중학교 2학년 수학은 정기시험 두 번이 각각 선택형 27%와 논술형 3%로 60%이고, 수행평가 두 영역이 20%씩 40%입니다. 두 수행평가는 1차 시험 전(9월 2주)과 2차 시험 전(11월 3주)에 하나씩 배치되어 있습니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "10월 1주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "10월 1주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "12월 3주", method: "논술형 10점" },
+      { name: "삼각형의 성질", kind: "task", weight: 20, timing: "9월 2주", method: "논술형 포함" },
+      { name: "도형의 닮음과 피타고라스 정리", kind: "task", weight: 20, timing: "11월 3주", method: "논술형 포함" },
+    ],
+    notes: [
+      {
+        title: "삼각형의 성질: 이등변·직각 합동 4점씩",
+        body: "삼각형의 성질([9수03-09]·[9수03-10])은 이등변삼각형의 성질 이해 4점, 직각삼각형의 합동 조건 설명 4점과 삼각형의 외심·내심을 이용한 문제 해결로 구성됩니다. 20점 중 논술형 비율은 12%입니다.",
+      },
+      {
+        title: "닮음 과제는 부피와 피타고라스의 역",
+        body: "도형의 닮음과 피타고라스 정리는 닮음비를 이용한 부피 구하기(4점), 닮은 삼각형 판별, 평행선 사이 선분의 길이의 비, 피타고라스 정리의 역으로 직각삼각형을 판별하는 내용을 다룹니다. 시험 범위에는 경우의 수와 확률도 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "식물에서 출입하는 에너지와 물질을 분석하는 논술형 20%에 이어, 저항 연결별 회로 특징과 소비 전력을 실험으로 견줍니다",
+    intro:
+      "향남중학교 2학년 과학은 10월 1주 1차와 12월 3주 2차 정기시험이 각각 선택형 24%·논술형 6%로 60%, 수행평가 두 영역이 40%입니다. 수행평가 하나는 논술형, 하나는 실험·실습형으로 성격이 다릅니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "12월 3주", method: "논술형 20점" },
+      { name: "광합성과 호흡 비교하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "전기 회로와 에너지 탐구하기", kind: "task", weight: 20, timing: "10월 3주", method: "실험·실습형" },
+    ],
+    notes: [
+      {
+        title: "광합성과 호흡의 에너지·물질 변화",
+        body: "9월 1주 광합성과 호흡 비교하기는 [9과12-02]에 따라 식물의 호흡과 광합성의 관계를 이해하고, 두 과정에서 출입하는 에너지와 물질의 변화를 분석하는 논술형 20%입니다.",
+      },
+      {
+        title: "회로 과제는 저항 연결과 소비 전력",
+        body: "전기 회로와 에너지 탐구하기는 저항의 연결 방법에 따른 회로의 특징을 비교하고 일상 전기 제품의 소비 전력을 비교하는 실험·실습형이며 논술형 비율은 0%입니다. 정기시험 평가 요소에는 소화계와 순환계, 혈액의 순환 경로도 포함됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "혁명 사건을 노래 가사로 옮기고, 산업 혁명은 명암을 비교한 뒤 가상 일기로 씁니다",
+    intro:
+      "향남중학교 2학년 역사는 정기시험 두 번이 각각 선택형 27%와 논술형 3%로 60%, 논술형 수행평가 두 개가 40%입니다. 두 과제 모두 혁명의 시대를 다루며 9월 3주와 11월 1주에 있습니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "10월 1주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "10월 1주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "12월 3주", method: "논술형 10점" },
+      { name: "프랑스 혁명 탐구 및 혁명 노래 가사 만들기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "산업 혁명 탐구하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "혁명 사건을 노래 가사로",
+        body: "프랑스 혁명 과제([9역05-01])는 혁명 중 사건의 배경과 원인을 설명한 뒤, 고른 사건의 시대적 상황과 민중의 요구를 노래 가사로 표현합니다. 노래 가사 형식을 지켰는지도 평가 요소입니다.",
+      },
+      {
+        title: "산업 혁명은 명암 비교 후 가상 일기",
+        body: "산업 혁명 탐구하기([9역05-02]·[9역04-03])는 배경 분석, 영향의 긍정적·부정적 측면 비교, 시대적 배경을 고려한 가상 일기 작성으로 이어집니다. 정기시험은 역사적 사건의 인과관계 추론과 역사 자료 분석·활용을 평가 요소로 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "관찰·조사·실험 절차가 드러난 보고서는 10점 두 항목, 청중의 관심과 요구를 고려한 발표는 30점 중 20%가 논술형",
+    intro:
+      "향남중학교 3학년 국어는 10월 1주 1차와 11월 4주 2차 정기시험이 각각 선택형 20%·논술형 5%로 50%, 수행평가 두 영역이 50%입니다. 발표 과제는 30점으로 보고서 쓰기보다 비중이 큽니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 20, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 5, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 20, timing: "11월 4주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 4주", method: "논술형 20점" },
+      { name: "보고서 쓰기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "청중 특성을 고려한 발표", kind: "task", weight: 30, timing: "10월 3주", method: "논술형 포함" },
+    ],
+    notes: [
+      {
+        title: "보고서는 절차와 결과가 드러나게",
+        body: "보고서 쓰기([9국03-03]·[9국03-10])는 관찰·조사·실험의 절차와 결과가 드러나는 보고서를 쓰는 과제로 10점짜리 항목 두 개로 채점합니다. 세부 기준의 평가 방법에는 논술과 실험·실습이 함께 표시되어 있습니다.",
+      },
+      {
+        title: "발표 30점 중 논술형 20%",
+        body: "청중 특성을 고려한 발표([9국01-06]·[9국01-07])는 청중의 관심과 요구를 고려해 말하는 과제로, 30점 가운데 논술형 비율이 20%로 적혀 있습니다. 정기시험 평가 요소에는 같은 화제의 여러 글 비교, 문장의 짜임, 근거에 따른 작품 해석 비교가 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "역사신문은 네 국왕의 업적을 비교하고, 임진왜란 보고서엔 새 전쟁 명칭을 제안합니다",
+    intro:
+      "향남중학교 3학년 역사는 1차 정기시험 없이 11월 4주 2차 정기시험 한 번(선택형 45%·논술형 5%)과 논술형 수행평가 세 개(50%)로 평가합니다. 수행평가가 9월·10월·11월에 한 번씩 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 4주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 4주", method: "논술형 10점" },
+      { name: "조선 국왕 역사신문 만들기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "임진왜란 보고서 작성하기", kind: "task", weight: 20, timing: "10월 3주", method: "논술형" },
+      { name: "조선시대 사료 탐구하기", kind: "task", weight: 10, timing: "11월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "역사신문은 네 국왕의 업적 비교",
+        body: "조선 국왕 역사신문 만들기는 태조·태종·세종·성종의 주요 업적을 헤드라인과 기사 형식으로 쓰고, 네 명 중 가장 뛰어난 국왕을 골라 역사적 근거를 드는 과제입니다. 업적 제시 8점, 신문 구성과 표현 8점이 배정됩니다.",
+      },
+      {
+        title: "임진왜란 보고서에 새 전쟁 명칭 제안",
+        body: "임진왜란 보고서는 주요 사건 연표 작성 8점, 동아시아에 미친 영향 서술 7점에 더해 동아시아적 관점의 새로운 전쟁 명칭을 논리적으로 제안하게 합니다. 사료 탐구(10점)는 사료 제시 3점, 내용 해석 3점, 역사적 의미 도출 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이차함수는 꼭짓점과 축의 방정식을, 삼각비는 변의 길이와 예각의 크기를 구합니다",
+    intro:
+      "향남중학교 3학년 수학은 10월 1주 1차와 11월 4주 2차 정기시험이 각각 선택형 27%·논술형 3%로 60%, 논술형 수행평가 두 개가 40%입니다. 수행평가 두 개가 모두 10월 3주 이전에 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "10월 1주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "10월 1주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "11월 4주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "11월 4주", method: "논술형 10점" },
+      { name: "이차함수의 이해", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "삼각비의 활용", kind: "task", weight: 20, timing: "10월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "이차함수는 꼭짓점과 축의 방정식",
+        body: "9월 2주 이차함수의 이해([9수03-09]·[9수03-10])는 y=ax²+bx+c의 그래프를 그리고 꼭짓점과 축의 방정식 등 그래프의 성질을 구해 설명하는 논술형 과제입니다.",
+      },
+      {
+        title: "삼각비는 변의 길이와 예각의 크기",
+        body: "삼각비의 활용은 삼각비의 뜻과 값을 이해하고 직각삼각형의 변의 길이와 예각의 크기를 구하는 문제를 해결합니다. 정기시험 평가 요소에는 원의 현과 접선에 관한 성질, 원주각의 성질도 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyangnam-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "반응 속도 차이·자극별 경로·무조건 반사를 6·7·7점으로 쓰고, 염색체 변화 표현 7점·서술 5점·차이점 8점입니다",
+    intro:
+      "향남중학교 3학년 과학은 10월 1주 1차와 11월 4주 2차 정기시험이 각각 선택형 24%·논술형 6%로 60%, 수행평가 두 영역이 40%입니다. 탐구실험형과 논술형 과제가 1차 시험 앞뒤로 나뉘어 있습니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "11월 4주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "11월 4주", method: "논술형 20점" },
+      { name: "자극에 대한 반응 과정 탐구하기", kind: "task", weight: 20, timing: "9월 3주", method: "탐구실험형" },
+      { name: "세포분열 과정 비교하기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "반응 속도와 반응 경로를 서술",
+        body: "자극에 대한 반응 과정 탐구하기([9과20-02])는 자극의 종류에 따라 반응 속도가 다른 이유, 자극별 반응 경로, 무조건 반사의 경로를 서술하는 세 항목(6·7·7점)으로 이루어지며 논술형 비율은 0%입니다.",
+      },
+      {
+        title: "체세포 분열과 감수 분열의 차이",
+        body: "10월 5주 세포분열 과정 비교하기는 체세포 분열의 염색체 변화 표현 7점, 감수 분열의 염색체 변화 서술 5점, 두 분열의 차이점 서술 8점입니다. 정기시험 평가 요소에는 호르몬과 항상성, 멘델의 유전 연구도 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("향남중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "「동백꽃」 갈등 글(8월 4주) 27%·단어의 짜임과 새말 서술(9월 4주) 23%, 시험 1회",
+    intro:
+      "현화중학교 1학년 국어는 10월 3~4주 1차 정기시험 한 번이 50%(선택형 47%·논술형 3%)이고, 논술형 수행평가 두 개가 27%와 23%입니다. 수행평가 배점이 과제마다 다르게 잡혀 있습니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 47, timing: "10월 3~4주", method: "선택형 94점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 3, timing: "10월 3~4주", method: "논술형 6점" },
+      { name: "소설 속 갈등 이해하기", kind: "task", weight: 27, timing: "8월 4주", method: "논술형" },
+      { name: "단어의 짜임과 새말의 형성 원리 이해하기", kind: "task", weight: 23, timing: "9월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "갈등 과제는 다섯 요소",
+        body: "소설 「동백꽃」을 바탕으로 줄거리 요약 6점, 인물 파악 6점, 갈등 원인·유형·해결 과정 6점, 시대적 배경 5점, 감상 글 4점을 채점합니다. 성취기준은 [9국05-02]·[9국05-05]입니다.",
+      },
+      {
+        title: "새말 과제는 형태소부터",
+        body: "형태소의 개념·종류·분석 6점, 단어와 단어 짜임 6점, 단일어·복합어·합성어·파생어 분석 6점, 새말의 의미와 형성 원리 5점으로 [9국04-02]를 평가합니다. 진도표에는 9월 4주에 수행평가가 표시되어 있습니다.",
+      },
+      {
+        title: "시험 논술형은 3%",
+        body: "국어과 방침이 정기시험 논술형 반영 비율을 3% 이상으로 정해 두었고, 1학년은 1차 시험 논술형 6점(3%)이 여기에 맞춰져 있습니다. 두 수행평가를 더한 학기 논술형 비율은 53%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "음운·문자 체계 논술 20%·소설 뒷이야기 창작(9월 1주) 20%, 9월·11월 시험 60%",
+    intro:
+      "현화중학교 2학년 국어는 9월 2주 1차 정기시험(선택형 27%·논술형 3%)과 11월 2주 2차 정기시험(선택형 30%)이 합쳐 60%이고, 논술형 수행평가 두 개가 20%씩입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 27, timing: "9월 2주", method: "선택형 90점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 3, timing: "9월 2주", method: "논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 2주", method: "선택형 100점" },
+      { name: "국어의 음운 체계와 문자 체계의 이해 및 활용하기", kind: "task", weight: 20, method: "논술형" },
+      { name: "소설 뒷이야기 창작하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "음운·문자 과제는 두 항목 10점씩",
+        body: "우리말 소리(음운 체계)와 한글 창제 원리를 연결해 한글의 체계성과 과학성을 설명하는 논술문으로, 자음 분류 기준과 특징 서술 10점, 상형·가획 등 창제 원리 서술 10점입니다. 성취기준은 [9국04-01]입니다.",
+      },
+      {
+        title: "뒷이야기는 시대와 풍자",
+        body: "작품 속 인물·주제·사회·문화적 상황을 파악하고 풍자를 살려 뒷이야기를 쓰며, 시대와 사회·문화적 상황 7점, 웃음과 비판이 드러나는 풍자 7점, 인물 3점, 주제 3점입니다. [9국05-05]를 평가합니다.",
+      },
+      {
+        title: "음운 과제 주는 학교 안내로",
+        body: "반영 비율표에는 음운·문자 체계 과제가 8월 4주로 적혀 있지만 진도표의 8월 4주 수행평가 표시는 소설 단원에 붙어 있어, 이 과제의 정확한 주는 학교 안내로 확인해야 합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장하는 글은 과정·내용·형식을, 시 해석은 관점·시어·근거를 봅니다",
+    intro:
+      "현화중학교 3학년 국어는 수행평가 두 과제가 30%씩으로 시험(40%)보다 비중이 큽니다. 정기시험은 10월 3~4주 한 번이며 선택형 90점(36%)·논술형 10점(4%)으로 나뉩니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 36, timing: "10월 3~4주", method: "선택형 90점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 4, timing: "10월 3~4주", method: "논술형 10점" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 30, timing: "8월 4주", method: "논술형" },
+      { name: "시 해석하기", kind: "task", weight: 30, timing: "9월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "주장하는 글은 과정·내용·형식",
+        body: "문제 상황 발견부터 개요 작성까지의 과정 10점, 문제 상황과 주장, 타당한 근거 2가지 제시 10점, 들여쓰기와 서론-본론-결론 형식 10점입니다. 성취기준은 [9국03-04]이고 진도표 8월 3~4주에 수행평가가 표시되어 있습니다.",
+      },
+      {
+        title: "시 해석은 관점·시어·근거",
+        body: "시를 해석하는 다양한 관점 설명 10점, 시적 상황과 관점에 따른 시어의 상징적 의미 10점, 조건에 맞춘 해석 근거 10점으로 [9국05-07]을 평가합니다. ‘시집 읽고 해석하기’ 단원(9월 3~4주)에서 진행됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "좌표평면·그래프 논술(8월 2주)·위치관계와 합동 논술(9월 2주) 30%씩, 시험 40%",
+    intro:
+      "현화중학교 1학년 수학은 논술형 수행평가 두 개가 30%씩으로 학기 성적의 60%를 차지하고, 10월 3~4주 정기시험 한 번이 40%입니다. 두 수행평가는 8월 2주와 9월 2주로 학기 초반에 몰려 있습니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 36, timing: "10월 3~4주", method: "선택형 90점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 4, timing: "10월 3~4주", method: "논술형 10점" },
+      { name: "좌표평면위 그래프 그리기, 해석하기", kind: "task", weight: 30, timing: "8월 2주", method: "논술형" },
+      { name: "위치관계와 평행선의 성질 파악하기, 합동인 삼각형 찾기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "그래프 과제는 세 항목 10점씩",
+        body: "좌표평면 위 점 찍기와 좌표 읽기, 주어진 그래프의 4개 구간 해석과 상황에 맞는 그래프 그리기, 정비례 상황의 식·표·그래프 완성이 각 10점입니다. 성취기준은 [9수02-05]~[9수02-07]입니다.",
+      },
+      {
+        title: "도형 과제는 근거 서술이 들어갑니다",
+        body: "입체도형의 위치관계와 문장의 참·거짓 판단, 동위각·엇각과 평행한 두 직선 찾기, 합동인 두 쌍의 삼각형과 합동조건 제시가 각 10점이며 항목마다 근거 서술이 포함됩니다. [9수03-01]·[9수03-02]·[9수03-04]를 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "여러 가지 사각형의 성질 논술(9월 4주) 30% 한 과제, 정기시험 두 번이 70%",
+    intro:
+      "현화중학교 2학년 수학은 정기시험 비중이 70%로 크고, 수행평가는 9월 4주 사각형의 성질 논술 한 과제(30%)입니다. 1차 시험(9월 2주)은 선택형 31.5%·논술형 3.5%, 2차 시험(11월 2주)은 선택형 100점으로 35%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 31.5, timing: "9월 2주", method: "선택형 90점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 3.5, timing: "9월 2주", method: "논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 2주", method: "선택형 100점" },
+      { name: "여러 가지 사각형의 성질 이해하기", kind: "task", weight: 30, timing: "9월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "사각형 과제는 조건·성질·관계",
+        body: "주어진 사각형의 조건 정당화 10점, 성질 정당화 10점, 여러 가지 사각형 사이의 관계 문제 10개 해결 10점으로 [9수03-11]을 평가합니다.",
+      },
+      {
+        title: "닮음 단원 초반에 평가",
+        body: "진도표 9월 4주(삼각형의 닮음 조건) 칸에 수행평가가 표시되어 있어, 사각형 단원을 마친 뒤 닮음 단원 초반에 치르는 일정입니다. 1차 정기시험은 그보다 2주 앞선 9월 2주입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비 과제는 높이와 넓이를 구하고, 원 과제는 현·접선·원주각을 10점씩 봅니다",
+    intro:
+      "현화중학교 3학년 수학은 10월 3~4주 1차 정기시험 한 번이 40%이고, 논술형 수행평가 두 개가 30%씩입니다. 두 과제는 9월 1주와 10월 1주로 1차 시험보다 먼저 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 36, timing: "10월 3~4주", method: "선택형 90점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 4, timing: "10월 3~4주", method: "논술형 10점" },
+      { name: "삼각비를 활용하여 실생활 문제 해결하기", kind: "task", weight: 30, timing: "9월 1주", method: "논술형" },
+      { name: "원의 성질과 원주각을 활용하여 문제 해결하기", kind: "task", weight: 30, timing: "10월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각비 과제는 높이와 넓이",
+        body: "빗변이 주어진 직각삼각형의 높이를 삼각비와 삼각비 표로 구하는 항목 10점, 두 삼각형의 높이와 넓이를 근거와 함께 구하는 항목 20점입니다. 성취기준은 [9수04-17]·[9수04-18]입니다.",
+      },
+      {
+        title: "원 과제는 현·접선·원주각 10점씩",
+        body: "원의 현에 관한 성질, 접선에 관한 성질, 원주각의 성질을 각각 적용해 풀이 과정을 논리적으로 전개하고 답을 내는 세 항목(각 10점)으로 [9수04-19]·[9수04-20]을 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "힐링 여행 코스 설계(9월 2주)·우리 문화 도슨트 되기(10월 5주) 논술 25%씩",
+    intro:
+      "현화중학교 1학년 영어는 10월 3~4주 1차 정기시험이 50%(선택형 45%·논술형 5%), 쓰기 중심 수행평가 두 개가 25%씩입니다. 두 과제의 채점표에는 문장 수와 필수 구문 활용이 공통으로 들어갑니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 45, timing: "10월 3~4주", method: "선택형 90점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 5, timing: "10월 3~4주", method: "논술형 10점" },
+      { name: "힐링 여행 코스 설계하기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형" },
+      { name: "우리 문화 도슨트 되기", kind: "task", weight: 25, timing: "10월 5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "힐링 여행은 장소 3곳",
+        body: "힐링 장소 3곳과 추천 근거 6점, 주어와 동사를 갖춘 문장 8개 이상 10점, 필수 구문 4점, 어휘·어법 5점입니다. 성취기준은 [9영02-04]·[9영02-10]입니다.",
+      },
+      {
+        title: "도슨트는 핵심 정보 4가지",
+        body: "대상의 이름·특징·용도·의미 네 가지 핵심 정보 6점에, 문장 8개 이상 10점·필수 구문 4점·어휘·어법 5점이 더해집니다. 성취기준은 [9영02-03]·[9영02-06]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "가이드북은 정보 수집과 작성을, 작가 갤러리 홍보는 자료와 설명을 봅니다",
+    intro:
+      "현화중학교 3학년 영어는 수행평가 두 과제가 영미 문학이라는 한 주제로 이어지며 각 30%입니다. 정기시험은 10월 3~4주 1차 한 번으로 선택형 36%·논술형 4%입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 36, timing: "10월 3~4주", method: "선택형 90점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 4, timing: "10월 3~4주", method: "논술형 10점" },
+      { name: "영미 문학 탐구 가이드북 제작하기", kind: "task", weight: 30, timing: "8월 4주~9월 1주", method: "논술형" },
+      { name: "영미 문학 작가 갤러리 홍보하기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "가이드북은 정보 수집과 작성",
+        body: "작가의 이름·활동 국가·생년월일·대표작·생애와 작품의 특징을 수집하는 항목 15점, 이를 어법에 맞는 문장으로 구성하는 항목 15점입니다. 성취기준은 [9영04-01]·[9영04-02]입니다.",
+      },
+      {
+        title: "갤러리 홍보는 자료와 설명",
+        body: "선정 이유·특징·분석·가치·느낀 점을 담은 홍보 자료 제작 15점과 작가·작품의 특징을 설명하는 홍보하기 15점으로 [9영04-05]를 평가합니다. 세부 기준의 평가 방법에는 논술·구술·발표·프로젝트가 함께 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "달의 위상·일식·월식 논술(11월 2주) 30%·힘의 특징(12월 1주, 탐구과정형) 20%",
+    intro:
+      "현화중학교 1학년 과학은 10월 3~4주 1차 정기시험이 50%이고, 수행평가 두 과제는 시험 뒤인 11월 2주와 12월 1주에 있습니다. 달의 위상 과제는 논술형, 힘 과제는 탐구과정형으로 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 45, timing: "10월 3~4주", method: "선택형 90점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 5, timing: "10월 3~4주", method: "논술형 10점" },
+      { name: "달의 위상변화와 일식과 월식 설명하기", kind: "task", weight: 30, timing: "11월 2주", method: "논술형" },
+      { name: "여러 가지 힘의 특징 이해하기", kind: "task", weight: 20, timing: "12월 1주", method: "탐구과정형" },
+    ],
+    notes: [
+      {
+        title: "달 과제는 위상 표현부터",
+        body: "달의 위상 5~6개 표현 5점, 시간에 따른 위상 변화 순서 3점, 위상 변화 원리와 위상 6가지 설명 8점, 일식 7점, 월식 7점입니다. 성취기준은 [9과07-04]입니다.",
+      },
+      {
+        title: "힘 과제는 네 가지 힘",
+        body: "중력과 탄성력은 크기와 방향을 구하는 항목이 6점씩, 마찰력과 부력은 방향을 구하는 항목이 4점씩입니다. [9과05-02]를 평가하며 이 과제는 논술형 반영이 없습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "순환과 호흡 분석 논술(8월 4주) 30% 한 과제, 9월 2주·11월 2주 시험이 70%",
+    intro:
+      "현화중학교 2학년 과학은 수행평가가 8월 4주 순환과 호흡 분석하기 한 과제(30%)이고, 정기시험 두 번이 70%입니다. 진도는 과학A·과학B로 나뉘어 운영되지만 반영 비율표는 하나입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 31.5, timing: "9월 2주", method: "선택형 90점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 3.5, timing: "9월 2주", method: "논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 2주", method: "선택형 100점" },
+      { name: "순환과 호흡 분석하기", kind: "task", weight: 30, timing: "8월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "순환·호흡 과제는 기체교환 12점",
+        body: "혈액 역류를 막는 구조와 혈관 종류 4점, 온몸순환과 허파순환 경로 8점, 갈비뼈·가로막·흉강의 부피와 압력 6점, 허파 꽈리의 기체교환 과정과 원리 12점입니다. 성취기준은 [9과13-02]·[9과13-03]입니다.",
+      },
+      {
+        title: "2차 시험은 선택형만",
+        body: "1차 정기시험은 선택형 90점·논술형 10점, 2차는 선택형 100점이어서 학기 논술형 비율은 1차 시험 3.5%와 수행평가 30%를 더한 33.5%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "로켓 재사용 과제는 계산 4단계로, 감각 일기는 보고서 형식으로 씁니다",
+    intro:
+      "현화중학교 3학년 과학은 10월 3~4주 1차 정기시험이 50%이며 그 안에 논술형 20점(10%)이 들어 있습니다. 수행평가는 역학적 에너지를 다루는 로켓 재사용하기(30%)와 감각 기관을 다루는 감각 일기 쓰기(20%)입니다.",
+    assessments: [
+      { name: "1차 정기시험 선택형", kind: "exam", weight: 40, timing: "10월 3~4주", method: "선택형 80점" },
+      { name: "1차 정기시험 논술형", kind: "exam", weight: 10, timing: "10월 3~4주", method: "논술형 20점" },
+      { name: "로켓 재사용하기", kind: "task", weight: 30, timing: "9월 1주", method: "논술형" },
+      { name: "감각 일기 쓰기", kind: "task", weight: 20, timing: "10월 2주", method: "보고서형" },
+    ],
+    notes: [
+      {
+        title: "로켓 과제는 계산 4단계",
+        body: "위치 에너지·운동 에너지·처음 역학적 에너지·엔진이 줄여야 하는 에너지를 차례로 구하는 계산 10점, 에너지 전환 과정 8점, 공기 저항의 역할 6점, 역추진 엔진의 역할 6점입니다. 성취기준은 [9과19-03]·[9과22-01]입니다.",
+      },
+      {
+        title: "감각 일기는 보고서형",
+        body: "세 종류 이상의 감각과 감각 기관 연결 7점, 뉴런의 두 핵심 구조를 넣은 신경 전달 과정 8점, 감각을 인지하는 신경계의 역할 5점입니다. [9과20-01]·[9과20-02]를 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "hyeonhwa-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "세계사 SNS(8월 3주)·근대 신문 기사(9월 4주)·여성 인권 논술 글쓰기 20%씩",
+    intro:
+      "현화중학교 2학년 역사는 수행평가 세 과제가 20%씩 60%이고, 11월 2주 2차 정기시험 한 번이 40%(선택형 30%·논술형 10%)입니다. 수행평가 가운데 논술형은 여성 인권 글쓰기 하나입니다.",
+    assessments: [
+      { name: "2차 정기시험 선택형", kind: "exam", weight: 30, timing: "11월 2주", method: "선택형 75점" },
+      { name: "2차 정기시험 논술형", kind: "exam", weight: 10, timing: "11월 2주", method: "논술형 25점" },
+      { name: "근대로의 전환기 세계 역사 SNS 만들기", kind: "task", weight: 20, timing: "8월 3주", method: "만들기형" },
+      { name: "세계 근대 역사 신문 기사 쓰기", kind: "task", weight: 20, timing: "9월 4주", method: "활동형" },
+      { name: "여성 인권의 역사 평가하는 글쓰기", kind: "task", weight: 20, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "SNS와 신문은 역사적 사실 10점",
+        body: "SNS 만들기는 르네상스·명·청 사회·에도 막부·종교개혁·신항로 개척에 대한 역사적 사실 10점, 다양한 입장 표현 6점, SNS 형식 4점입니다. 신문 기사는 시민 혁명·산업화·제국주의 등 근대 사건의 사실 정리 10점, 기사 쓰기 6점, 육하원칙 등 형식 4점입니다.",
+      },
+      {
+        title: "여성 인권 글은 시기 확인",
+        body: "시대별 여성 인권 사례 파악 8점, 변화 과정 종합 6점, 인권 향상 요인에 대한 생각 6점입니다. 반영 비율표는 10월 3주, 진도표는 10월 4주에 이 수행평가를 표시하고 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("현화중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "독서 일지 10점과 감상문 10점, 글쓰기는 준비 7점·본문 8점, 발표는 글을 재구성해 말합니다",
+    intro:
+      "정천중학교 1학년 국어는 12월 1주 2차 정기시험 한 번이 50%이고, 1차는 0%입니다. 수행평가 세 영역 50%는 소설 독서 일지, 주장하는 글쓰기, 그 글을 바탕으로 한 발표가 차례로 이어지는 구조입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "독서 일지 및 갈등 분석하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 15, timing: "10월 2주", method: "논술형" },
+      { name: "청중을 고려하여 주장 발표하기", kind: "task", weight: 15, timing: "10월 4주", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "독서 일지 10점 + 감상문 10점",
+        body: "[9국05-02] 기준 과제로, 독서일지 작성(갈등의 진행과 해결 과정 4점, 등장 인물 행동 평가 3점, 경험담 제시 3점)과 감상문 작성(갈등 양상 4점, 주제 표현 3점, 구성 3점)이 10점씩입니다.",
+      },
+      {
+        title: "글쓰기 15점은 준비 7점, 본문 8점",
+        body: "주장하는 글쓰기는 주장과 이유 분석 2점, 자료 수집 3점, 개요표 작성 2점의 준비 단계와 논리적인 글쓰기 4점, 짜임새 2점, 조건에 맞는 글쓰기 2점으로 나뉘며 자기평가와 동료평가도 함께 씁니다.",
+      },
+      {
+        title: "발표는 글을 재구성해 말하기",
+        body: "10월 4주 발표는 주장하는 글을 재구성해 청중을 고려한 표현으로 발표하는 과제로, 발표 내용 구성 3점, 매체 자료 제작 3점, 논리적으로 말하기 5점, 청중을 고려하여 말하기 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "읽기 포트폴리오는 일지가 7점이고, 풍자 탐구는 탐구 일지부터 씁니다",
+    intro:
+      "정천중학교 2학년 국어는 12월 1주 2차 정기시험 50%와 수행평가 세 영역 50%입니다. 8월 2주부터 9월 2주까지 읽기 포트폴리오를 쌓고, 9월 3주 복합양식 글쓰기와 10월 5주 문학 풍자 탐구가 논술형으로 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "읽기 과정의 점검 및 조정하기", kind: "task", weight: 15, timing: "8월 2주-9월 2주", method: "포트폴리오" },
+      { name: "복합양식 글쓰기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "문학의 사회·문화적 상황과 풍자 탐구하기", kind: "task", weight: 15, timing: "10월 5주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "읽기 포트폴리오는 일지가 7점",
+        body: "읽기 목적 설정 및 내용 예측 2점, 읽기 점검 및 조정 일지 작성 7점, 중심 내용 요약 및 주제 도출 3점, 독서 성찰 및 삶에 적용 3점입니다. 이 영역은 논술형 비율에 들어가지 않습니다.",
+      },
+      {
+        title: "복합양식 글쓰기 20점의 흐름",
+        body: "글쓰기 계획 2점, 복합양식 자료 수집 6점, 글의 구조 설계 4점을 거쳐 실제 글쓰기 8점(내용 조직 및 문단 구성 3점, 매체 활용 표현 및 글의 완성도 5점)으로 채점됩니다.",
+      },
+      {
+        title: "풍자 탐구는 탐구 일지부터",
+        body: "10월 5주 과제는 문학 탐구 일지 기록 5점, 풍자 표현 및 작품의 주제 파악 4점, 사회·문화적 상황 파악 3점, 문학 작품의 주체적 재구성 3점입니다. 논술형 반영 비율은 시험 5%와 수행 35%로 40%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "작품 감상은 독서 일지 9점부터, 주장 글은 근거 제시가 6점이며 1차 시험은 반영하지 않습니다",
+    intro:
+      "정천중학교 3학년 국어는 11월 2·3주 2차 정기시험 50%와 논술형 수행평가 두 영역 25%씩입니다. 논술형 반영 비율이 55%로, 시험 논술형 5%를 빼면 모두 수행 글쓰기에서 나옵니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "11월 2, 3주", method: "선택형 90점 · 논술형 10점" },
+      { name: "과거의 삶이 반영된 작품 감상하기", kind: "task", weight: 25, timing: "9월 2, 3주", method: "논술형" },
+      { name: "주장하는 글 쓰기", kind: "task", weight: 25, timing: "10월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "작품 감상은 독서 일지 9점부터",
+        body: "독서 일지 작성 9점, 작품에 나타난 시대의 사회·문화적 상황 파악 5점, 인물의 삶과 사회·문화적 상황의 관련성 이해 5점, 과거와 오늘날의 삶 비교 3점, 오늘날의 관점에서 감상 3점으로 25점입니다.",
+      },
+      {
+        title: "주장하는 글은 근거 제시가 6점",
+        body: "글쓰기 계획 세우기 2점, 자료 수집 5점, 개요 작성 3점, 주장을 명확하게 제시하기 4점, 타당한 근거 제시하기 6점, 논리적으로 글 전개하기 5점입니다. 기본점수는 9점입니다.",
+      },
+      {
+        title: "1차 시험은 반영하지 않습니다",
+        body: "평가 비율표에서 1차는 0%로 표시되어 있고 2차 정기시험(11월 2·3주)만 50%로 반영됩니다. 시험은 선택형 90점, 논술형 10점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "작품 제작 25점과 다섯 문항 논술이 있고, 논술형 비율은 40%입니다",
+    intro:
+      "정천중학교 1학년 수학은 12월 1주 2차 정기시험 50%와 수행평가 두 영역 25%씩입니다. 10월 1주에는 작도를 활용한 작품 제작, 11월 2주에는 비례와 도형 단원을 묶은 논술이 있습니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "작도와 합동을 이용한 작품제작하기", kind: "task", weight: 25, timing: "10월 1주", method: "프로젝트형, 논술형" },
+      { name: "비례와 도형의 성질 논술하기", kind: "task", weight: 25, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "작품 제작 과제의 25점",
+        body: "합동인 삼각형 작도하기 7점, 두 삼각형이 합동인 이유 설명하기 5점, 작도를 활용한 작품 만들기 4점, 합동인 삼각형을 찾고 기호로 나타내기 9점입니다. 이 영역의 논술형 반영 비율은 10%로 잡혀 있습니다.",
+      },
+      {
+        title: "비례와 도형 논술은 다섯 문항",
+        body: "비례 관계 찾기 4점, 평행선의 동위각과 엇각 6점, 다각형의 대각선 개수와 내각의 크기 6점, 부채꼴의 반지름과 넓이 6점, 정다면체의 뜻과 종류 설명 3점으로 학기 도형 단원 전체가 들어 있습니다.",
+      },
+      {
+        title: "논술형 비율 40%",
+        body: "논술형 반영 비율은 시험 5%, 작품 제작 10%, 비례와 도형 논술 25%로 합계 40%이며, 평가 방침 문장에도 학기 단위 성적의 40%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "닮음 과제에서 무게중심이 10점이고, 회차마다 시험 논술형이 3.5%입니다",
+    intro:
+      "정천중학교 2학년 수학은 9월 4주 1차와 12월 1주 2차 정기시험이 35%씩이고, 수행평가는 논술형 두 영역 30%입니다. 1학년과 달리 시험 두 회차가 모두 반영됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "9월 4주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "삼각형의 성질 문제해결하기", kind: "task", weight: 10, timing: "9월 1주", method: "논술형" },
+      { name: "도형의 닮음 문제해결하기", kind: "task", weight: 20, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각형 과제 10점 구성",
+        body: "이등변삼각형의 성질 정당화하기 5점과 삼각형의 외심 문제 해결하기 5점(중심각의 크기 1점, 외심의 성질 이용 2점, 결론 도출 2점)입니다.",
+      },
+      {
+        title: "닮음 과제는 무게중심이 10점",
+        body: "11월 2주 과제는 선분의 길이 구하기 5점, 삼각형의 무게중심 성질 정당화 5점, 무게중심 문제 해결 5점, 닮은 도형의 닮음비·부피비·부피 5점으로 20점입니다.",
+      },
+      {
+        title: "회차마다 논술형 3.5%",
+        body: "평가 비율표에서 각 회차는 선택형 31.5%, 논술형 3.5%로 나뉘며, 논술형 반영 비율은 시험 7%와 수행 30%로 37%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "문항마다 분석·표현·해결 3단계로 보고, 수행 30% 전체가 논술형이며 2차 시험이 11월로 당겨집니다",
+    intro:
+      "정천중학교 3학년 수학은 1차(9월 4주)·2차(11월 2·3주) 정기시험 35%씩과 수행평가 30%입니다. 수행은 삼각비와 원의 성질을 활용한 문제 해결 한 영역에서 삼각비 20%, 원의 성질 10%로 나뉘어 10월 1∼2주에 치릅니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "9월 4주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 2, 3주", method: "선택형 90점 · 논술형 10점" },
+      { name: "삼각비를 활용한 문제해결하기", kind: "task", weight: 20, timing: "10월 1주∼10월 2주", method: "논술형" },
+      { name: "원의 성질을 활용한 문제 해결하기", kind: "task", weight: 10, timing: "10월 1주∼10월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "문항마다 분석·표현·해결 3단계",
+        body: "세부 기준은 각 문제를 조건 분석 3점, 문제 표현 3점, 해결과 결과 산출 4점으로 나눕니다. 삼각비 부분은 삼각비의 뜻 적용 문제와 삼각비 활용 문제 두 세트(20점), 원의 성질 부분은 원과 직선 문제 한 세트(10점)입니다.",
+      },
+      {
+        title: "수행 30% 전체가 논술형",
+        body: "논술형 반영 비율은 시험 회차별 3.5%와 수행 30%로 37%이며, 평가 방침 문장의 37%와 같습니다.",
+      },
+      {
+        title: "2차 시험이 11월로 당겨집니다",
+        body: "1·2학년의 2차 정기시험은 12월 1주인 반면 3학년은 11월 2·3주라, 수행 과제(10월 초) 뒤 한 달 남짓 만에 2차 시험이 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "두 글쓰기는 공통 채점표에 주제별 내용 조건이 붙고, 포트폴리오는 배움일지를 쌓습니다",
+    intro:
+      "정천중학교 1학년 영어는 12월 1주 2차 정기시험 50%와 수행평가 세 영역 50%입니다. 같은 채점 틀을 쓰는 논술형 글쓰기 두 편이 한 달 간격(9월 5주, 10월 5주)으로 있고, 배움일지 포트폴리오는 8월 2주부터 11월 4주까지 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "환경에 관한 글쓰기", kind: "task", weight: 20, timing: "9월 5주", method: "논술형" },
+      { name: "희망 직업에 관한 글쓰기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형" },
+      { name: "단원별 주제 탐색 및 학습 내용 정리하기", kind: "task", weight: 10, timing: "8월 2주~11월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "두 글쓰기의 공통 채점표",
+        body: "환경 글쓰기와 희망 직업 글쓰기 모두 제시된 내용 조건 구성 8점, 목표 어법 활용 4점, 바른 언어형식 3점, 충실한 내용 구성 3점, 스스로 문장 구성 2점입니다.",
+      },
+      {
+        title: "주제별 내용 조건",
+        body: "환경 글쓰기는 환경의 중요성, 환경문제의 심각성, 개선을 위한 실천 방안을 소개하고, 희망 직업 글쓰기는 직업을 조사해 필요한 요건과 자신의 적성·강점을 씁니다.",
+      },
+      {
+        title: "포트폴리오는 배움일지 누적",
+        body: "단원별 주제 탐색 및 학습 내용 정리하기(10점)는 수업 중 과업을 완수하며 배움일지를 누적 관리하는 과제로, 세부 정보 파악하기 한 항목 10점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "축제 글쓰기는 네 항목 5점씩이고, 시험 논술형이 회차당 20점입니다",
+    intro:
+      "정천중학교 2학년 영어는 9월 4주 1차와 12월 1주 2차 정기시험이 35%씩(각 선택형 28%, 논술형 7%)이고 수행평가는 30%입니다. 논술형 수행은 10월 5주 세계 축제 글쓰기 하나입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "9월 4주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 1주", method: "선택형 80점 · 논술형 20점" },
+      { name: "세계 축제 소개하는 글쓰기", kind: "task", weight: 20, timing: "10월 5주", method: "논술형" },
+      { name: "단원별 주제 탐색하기", kind: "task", weight: 10, timing: "8월 4주 – 10월 5주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "축제 글쓰기는 네 항목 5점씩",
+        body: "세계 축제를 조사·분석해 쓰는 과제로, 세계 축제에 대한 내용 전달, 필수어법 활용, 글 구성, 정확한 표현 사용이 각 5점입니다.",
+      },
+      {
+        title: "포트폴리오 10점",
+        body: "단원별 주제 탐색하기는 단원별 대화나 글의 줄거리, 주제, 요지와 세부 정보를 다루며, 담화나 글의 내용을 파악하여 어법에 맞게 글 완성하기 한 항목 10점입니다.",
+      },
+      {
+        title: "시험 논술형이 회차당 20점",
+        body: "정기시험은 회차마다 선택형 80점과 논술형 20점으로, 국어·수학(논술형 10점)보다 시험 안 서술 비중이 큽니다. 논술형 반영 비율은 시험 14%와 수행 20%로 34%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "글쓰기 주제는 'Hidden Helper'이고, 포트폴리오는 한 항목 10점, 논술형은 34%입니다",
+    intro:
+      "정천중학교 3학년 영어는 1차(9월 4주)·2차(11월 2·3주) 정기시험 35%씩과 수행평가 30%입니다. 논술형 글쓰기는 1차 시험 2주 전인 9월 2주에 치르고, 포트폴리오는 10월 4주에 마감됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "9월 4주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 2,3주", method: "선택형 80점 · 논술형 20점" },
+      { name: "관점과 주장을 담은 글쓰기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "단원별 주제 탐색하기", kind: "task", weight: 10, timing: "10월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "글쓰기 주제는 'Hidden Helper'",
+        body: "사회나 일상 속 드러나지 않는 'Hidden Helper'를 골라 영향력과 필수 자질을 탐구하고 영문 논술문을 씁니다. 내용 조건 충족, 제시된 표현 사용, 자연스러운 글 구성, 적절한 어휘와 어법 사용이 5점씩입니다.",
+      },
+      {
+        title: "포트폴리오는 한 항목 10점",
+        body: "단원별 주제 탐색하기는 담화나 글의 내용을 파악하여 어법에 맞게 글 완성하기(10점)로 채점하며, 기본점수는 4점입니다.",
+      },
+      {
+        title: "논술형 34%",
+        body: "논술형 반영 비율은 시험 회차별 7%와 글쓰기 20%를 합한 34%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "인권 홍보지는 책 속 사례에서 출발하고, 미디어 비평은 다섯 항목이며 시험은 정치·법 단원입니다",
+    intro:
+      "정천중학교 1학년 사회는 12월 1주 2차 정기시험 50%와 수행평가 두 영역 25%씩입니다. 9월 1주 인권 홍보지는 프로젝트, 10월 1주 미디어와 문화 비평은 논술형이라 논술형 비율은 시험 5%를 더해 30%입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 1주", method: "선택형 90점 · 논술형 10점", course: "사회" },
+      { name: "인권 도서 탐색을 통한 인권 홍보지 제작하기", kind: "task", weight: 25, timing: "9월 1주", method: "프로젝트", course: "사회" },
+      { name: "미디어와 문화 비평하기", kind: "task", weight: 25, timing: "10월 1주", method: "논술형", course: "사회" },
+    ],
+    notes: [
+      {
+        title: "인권 홍보지는 책 속 사례에서 출발",
+        body: "책 속 인권 침해 상황 분석 6점, 헌법상 기본권 연결 6점, 실천적 대안 및 다짐 제시 6점, 인권 홍보지 제작 7점으로 25점입니다.",
+      },
+      {
+        title: "미디어 비평은 다섯 항목",
+        body: "문화의 특징 분석 4점, 미디어의 영향 서술 5점, 미디어 리터러시(비판적 수용)의 필요성 제시 6점, 바람직한 미디어 활용 방안 6점, 문화 이해 태도 분석 4점입니다.",
+      },
+      {
+        title: "시험 범위는 정치·법 단원",
+        body: "2차 정기시험 평가 요소에는 정치 과정, 지방 자치, 법의 의미와 종류, 재판과 공정한 재판을 위한 제도, 기본권 제한의 요건과 침해 시 구제 방법이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "근대적 변화는 세 사건을 평가하고, 보고서는 네 주제를 5점씩 보며 시험 논술형이 20점입니다",
+    intro:
+      "정천중학교 2학년 역사는 12월 1주 2차 정기시험 50%(선택형 80점·논술형 20점)와 수행평가 세 영역 50%입니다. 카드뉴스(프로젝트), 학습 활동 보고서(논술형), 근대적 변화 평가(토의·토론)로 평가 방법이 모두 다릅니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 1주", method: "선택형 80점 · 논술형 20점", course: "역사" },
+      { name: "중세 유럽문화 카드뉴스 제작하기", kind: "task", weight: 10, timing: "9월 2주", method: "프로젝트", course: "역사" },
+      { name: "유럽의 근대적 변화 평가하기", kind: "task", weight: 20, timing: "10월 2주", method: "토의·토론", course: "역사" },
+      { name: "유럽과 아시아 역사 학습 활동 보고서 작성하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "토론 과제는 세 사건 평가",
+        body: "유럽의 근대적 변화 평가하기는 신항로 개척, 종교 개혁, 시민혁명을 각각 평가하는 항목 5점씩과 토론활동 참여 5점입니다.",
+      },
+      {
+        title: "보고서는 네 주제 5점씩",
+        body: "학습 활동 보고서는 중국 명·청과 일본 무사정권, 중국과 일본의 근대적 개혁운동, 유럽의 근대적 개혁운동, 제국주의·세계대전·냉전체제에 관한 보고서를 각 5점으로 채점합니다. 카드뉴스는 중세 유럽 문화 두 편을 5점씩 만듭니다.",
+      },
+      {
+        title: "시험 논술형 20점",
+        body: "2차 정기시험은 선택형 80점, 논술형 20점으로 논술형이 성적의 10%를 차지합니다. 평가 요소는 프랑크 왕국과 비잔티움 제국부터 냉전체제의 전개까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 두 과제는 항목이 나뉘고, 역사 주제논술은 세 번에 나눠 쓰며 역사 시험 논술형은 20점입니다",
+    intro:
+      "정천중학교 3학년은 사회와 역사 모두 11월 2·3주 2차 정기시험이 50%이고 1차는 0%입니다. 사회는 수행 두 영역이 25%씩, 역사는 주제논술 30%와 활동지 포트폴리오 20%로 비중이 다릅니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "11월 2, 3주", method: "선택형 90점 · 논술형 10점", course: "사회" },
+      { name: "국제 사회 공존 전략 탐구하기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형", course: "사회" },
+      { name: "세계 경제 뉴스 카드 제작하기", kind: "task", weight: 25, timing: "10월 3주", method: "프로젝트", course: "사회" },
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "11월 2,3주", method: "선택형 80점 · 논술형 20점", course: "역사" },
+      { name: "역사 주제논술 작성하기", kind: "task", weight: 30, timing: "8월 3주, 8월 4주, 9월 2주", method: "논술형", course: "역사" },
+      { name: "역사 활동지 포트폴리오", kind: "task", weight: 20, timing: "8월 3주∼10월 5주", method: "포트폴리오", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 두 과제의 항목",
+        body: "국제 사회 공존 전략 탐구하기는 갈등 사례의 원인과 배경 조사 4점부터 분쟁 해결을 위한 시민의 협력 방안 제안 6점까지 여섯 항목입니다. 세계 경제 뉴스 카드는 농업 생산의 기업화와 세계화 사례 조사 7점, 생산·소비 지역 변화 분석 4점씩, 자료 활용 5점, 뉴스 구성 5점입니다.",
+      },
+      {
+        title: "역사 주제논술은 세 번 나눠 씁니다",
+        body: "8월 3주, 8월 4주, 9월 2주에 아테네 시민의 가상 편지, 중세 봉건사회 구성원의 가상 일기, 신항로 개척의 긍정적·부정적 영향 평가를 10점씩 씁니다. 활동지 포트폴리오는 지중해 세계, 중세 유럽 사회, 르네상스와 종교개혁, 신항로 개척, 시민혁명과 산업혁명 다섯 항목을 4점씩 채점합니다.",
+      },
+      {
+        title: "역사 시험은 논술형 20점",
+        body: "역사 2차 시험은 선택형 80점·논술형 20점으로 사회(90점·10점)보다 논술형이 많습니다. 논술형 반영 비율은 사회 30%, 역사 40%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "소화 과제는 계획서의 오류를 찾고, 전기 과제는 여섯 항목이며 논술형은 38%입니다",
+    intro:
+      "정천중학교 2학년 과학은 9월 4주 1차와 12월 1주 2차 정기시험이 30%씩, 수행평가 두 영역이 40%입니다. 두 과제 모두 실험 수행과 논술을 함께 보는 형식으로, 20점 가운데 실험 4점을 뺀 16점이 논술형입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "9월 4주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형 90점 · 논술형 10점" },
+      { name: "소화 과정 탐구하기", kind: "task", weight: 20, timing: "9월 2주", method: "실험·논술형" },
+      { name: "저항의 연결 방법과 일상생활의 전기 제품 분석하기", kind: "task", weight: 20, timing: "10월 2주", method: "실험·논술형" },
+    ],
+    notes: [
+      {
+        title: "소화 과제: 계획서 오류 찾기",
+        body: "실험 수행 4점, 탐구 계획서 오류 찾기 3점, 계획서 수정 3점에 소화 문제 상황 평가 10점(문제 상황 적용 3점, 소화액의 작용 3점, 소화액의 특징 4점)이 더해집니다.",
+      },
+      {
+        title: "전기 과제는 여섯 항목",
+        body: "저항의 연결 실험 수행 4점, 연결 방법에 따른 회로 변화 설명 3점, 전기 제품의 연결 방법 판단 4점, 전기 에너지 전환 설명 3점, 소비 전력 분석 2점, 효율적인 전기 사용 방법 제안 4점입니다.",
+      },
+      {
+        title: "논술형 38%",
+        body: "논술형 반영 비율은 시험 회차별 3%와 수행 과제별 16%를 합한 38%로, 평가 방침 문장의 38%와 같습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jeongcheon-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "세포 분열은 모형 표현이 10점, 전자기 유도는 발전기의 에너지 전환을 다룹니다",
+    intro:
+      "정천중학교 3학년 과학은 1차(9월 4주)·2차(11월 2·3주) 정기시험 30%씩과 수행평가 40%입니다. 세포 분열 과제는 전부 논술형(20%)이고, 전자기 유도 과제는 실험 수행 10점과 논술 10점으로 나뉩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "9월 4주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "11월 2, 3주", method: "선택형 90점 · 논술형 10점" },
+      { name: "세포 분열 과정 탐구하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "전자기 유도 탐구하기", kind: "task", weight: 20, timing: "9월 4주", method: "실험 수행, 논술형" },
+    ],
+    notes: [
+      {
+        title: "세포 분열은 모형 표현 10점",
+        body: "체세포 분열과 생식세포 분열 과정을 모형으로 표현하기 10점, 분열 결과 염색체 수 변화 비교 4점, 두 분열의 차이점 비교 6점입니다.",
+      },
+      {
+        title: "전자기 유도는 발전기 에너지 전환",
+        body: "발전기에서 에너지 전환 과정 탐구하기 10점, 코일과 자석의 운동에 따른 전류 설명 5점, 유도 전류의 세기에 영향을 미치는 요인 설명 5점입니다. 논술형 반영 비율은 이 과제에서 10%만 잡혀 있습니다.",
+      },
+      {
+        title: "수행 두 과제가 1차 시험 주간까지",
+        body: "세포 분열(9월 2주)과 전자기 유도(9월 4주)가 모두 9월에 있고, 전자기 유도는 1차 정기시험과 같은 9월 4주로 적혀 있습니다. 논술형 반영 비율은 36%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("정천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "디자인 과제는 다각형과 부채꼴의 성질을 쓰고, 통계 보고서는 설문 작성부터 시작합니다",
+    intro:
+      "진천중학교 1학년 2학기는 자유학기로 정기시험이 없고 수학은 수행평가 100%입니다. 기본도형·입체도형 개념평가가 9월~11월 두 번에 걸쳐 50%, 평면도형을 이용한 디자인(프로젝트)과 12월 통계 보고서가 25%씩입니다.",
+    assessments: [
+      { name: "기본도형, 입체도형", kind: "task", weight: 50, timing: "9월~11월", method: "개념평가" },
+      { name: "평면도형을 이용한 디자인", kind: "task", weight: 25, timing: "10월", method: "프로젝트 평가" },
+      { name: "통계 보고서", kind: "task", weight: 25, timing: "12월", method: "보고서 평가" },
+    ],
+    notes: [
+      {
+        title: "디자인 과제는 다각형과 부채꼴의 성질",
+        body: "평면도형을 이용한 디자인([9수03-05]·[9수03-06])은 다각형의 내각·외각·대각선과 부채꼴의 중심각·호의 길이·넓이를 이용해 조건에 맞게 디자인하고 그 원리를 서술합니다. 두 성질을 모두 쓰고 원리를 정확히 서술하면 A, 한 가지 성질만 써서 원리를 정확히 서술하면 B입니다.",
+      },
+      {
+        title: "통계 보고서는 설문 작성부터",
+        body: "통계 보고서([9수04-01]~[9수04-04])는 설문을 작성해 조사한 자료를 공학적 도구로 줄기와 잎 그림, 도수분포표, 히스토그램, 도수분포다각형으로 나타내고 상대도수를 구해 그래프로 해석합니다. 진도표의 자료의 정리와 해석 단원은 11월 5주~12월 5주입니다.",
+      },
+      {
+        title: "개념평가 2회의 범위",
+        body: "개념평가는 [9수03-01]~[9수03-04]와 [9수03-07]~[9수03-08]로, 점·선·면·각과 위치 관계, 평행선의 동위각과 엇각, 작도, 삼각형의 합동 조건, 다면체와 회전체, 입체도형의 겉넓이와 부피를 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "연극과 글쓰기의 평가 요소가 정해져 있고, 꿈 발표는 기준표에 따라 봅니다",
+    intro:
+      "진천중학교 1학년 영어는 자유학기 수행평가 100%로, 10월 설명하는 글쓰기(서술형)가 40%로 가장 크고 9월 영어 연극(시연)과 11월 꿈 발표하기가 30%씩입니다.",
+    assessments: [
+      { name: "영어 연극", kind: "task", weight: 30, timing: "9월", method: "시연" },
+      { name: "설명하는 글쓰기", kind: "task", weight: 40, timing: "10월", method: "서술형" },
+      { name: "꿈 발표하기", kind: "task", weight: 30, timing: "11월", method: "발표" },
+    ],
+    notes: [
+      {
+        title: "연극과 글쓰기의 평가 요소",
+        body: "영어 연극([9영01-04]·[9영02-10])은 유창성과 정확성, 내용 전달력, 발표 태도 및 협동성을 봅니다. 설명하는 글쓰기([9영01-06]·[9영02-04]·[9영02-06])는 개요 작성, 초안 완성, 핵심 언어형식 사용 같은 조건을 채운 과제 완성과 내용의 구체성, 어휘·언어형식의 다양성을 봅니다.",
+      },
+      {
+        title: "글쓰기 척도와 꿈 발표의 기준",
+        body: "설명하는 글쓰기 평가척도에서 A는 제시된 표현을 두 가지 이상 정확하게 사용한 글이고, 한 가지를 정확하게 쓰면 B 기술에 해당합니다. 꿈 발표하기([9영01-09]·[9영02-04])는 내용, 어휘·언어형식, 발표 태도를 보며 연결어 사용과 내용의 응집성이 척도에 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "여행 계획서와 안내 책자를 함께 만들고, 보고서는 네 대륙 백지도를 채웁니다",
+    intro:
+      "진천중학교 1학년 사회는 정기시험 없이 수행평가 100%로, 아시아·유럽·아프리카·아메리카 중 한 나라를 골라 여행 계획서를 쓰는 과제(40%)와 그 계획을 발표하는 과제(40%), 백지도와 자연환경 서술 보고서(20%)로 구성됩니다.",
+    assessments: [
+      { name: "여행 계획 작성", kind: "task", weight: 40, timing: "9월~12월", method: "프로젝트" },
+      { name: "여행 계획 발표", kind: "task", weight: 40, timing: "12월", method: "구술·발표" },
+      { name: "보고서", kind: "task", weight: 20, timing: "9월~12월", method: "서·논술" },
+    ],
+    notes: [
+      {
+        title: "계획서와 안내 책자를 함께 만듭니다",
+        body: "여행 계획 작성은 고른 나라의 자연환경과 사회환경을 고려해 여행 계획서를 쓰고 그에 맞는 여행 안내 책자를 만드는 과제로, 실현 가능한 계획서와 잘 구조화된 책자가 첫 단계 기준입니다. 발표 과제는 계획에 맞춘 발표 자료(PPT)를 만들어 발표합니다.",
+      },
+      {
+        title: "보고서는 네 대륙 백지도",
+        body: "보고서는 아시아, 유럽, 아프리카, 아메리카의 국가와 주요 도시 위치를 백지도에 표시하고 자연환경의 특성을 서술합니다. 세 과제의 성취기준은 모두 [9사(지리)02-01]·[9사(지리)03-01]·[9사(지리)04-01]·[9사(지리)05-01]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "측정값을 표와 그래프로 정리하고, 기체 탐구는 압력 센서와 입자 모형으로 합니다",
+    intro:
+      "진천중학교 1학년 과학은 자유학기 수행평가 100%로, 힘 단원 보고서 평가 40%, 기체 단원 탐구평가 30%, 태양계 단원 개념 평가 30%입니다. 반영 비율 표의 평가 시기 칸에는 10월 3주부터 12월 5주까지가 적혀 있습니다.",
+    assessments: [
+      { name: "탄성력, 부력 측정하기, 일상생활에서 작용하는 힘과 힘의 평형 관계 설명하기", kind: "task", weight: 40, method: "보고서 평가" },
+      { name: "기체의 압력과 부피 관계, 기체의 온도와 부피 관계, 입자 모형 해석하기", kind: "task", weight: 30, method: "탐구평가" },
+      { name: "지구형 행성, 목성형 행성, 지구의 자전과 공전, 달의 위상 변화", kind: "task", weight: 30, method: "개념 평가" },
+    ],
+    notes: [
+      {
+        title: "보고서는 측정값을 표와 그래프로",
+        body: "용수철이 늘어난 길이에 따른 탄성력, 물체가 잠긴 부피에 따른 부력을 측정해 표와 그래프로 나타내고 해석한 결과를 보고서로 정리하며, 장난감이나 놀이 기구에 작용하는 힘과 힘의 평형 관계도 조사합니다. 성취기준은 [9과05-02]·[9과05-04]입니다.",
+      },
+      {
+        title: "기체 탐구는 압력 센서와 입자 모형",
+        body: "탐구평가는 압력 센서로 주사기 속 기체의 압력과 부피 관계를 확인하고, 온도에 따른 기체의 부피 변화를 관찰한 뒤 두 관계를 입자 모형으로 표현하는지 봅니다([9과06-02]·[9과06-03]). 개념 평가는 지구형·목성형 행성 구분, 자전과 공전에 의한 겉보기 운동, 달의 위상 변화를 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "서술형 2회의 평가 요소가 따로 있고, 닮음은 두 시험에 모두 들어갑니다",
+    intro:
+      "진천중학교 2학년 수학은 10월 20~22일 중간고사와 12월 14~16일 기말고사가 30%씩이고, 수행평가 40%는 삼각형과 사각형의 성질·도형의 닮음 서술형 평가(20%)와 피타고라스 정리까지 다루는 개념평가(20%)입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 20~22일", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 14~16일", method: "선택형 100점" },
+      { name: "삼각형과 사각형의 성질, 도형의 닮음", kind: "task", weight: 20, timing: "10월, 11월", method: "서술형평가 20점" },
+      { name: "삼각형과 사각형의 성질, 도형의 닮음과 피타고라스 정리", kind: "task", weight: 20, timing: "8월~12월", method: "개념평가 20점" },
+    ],
+    notes: [
+      {
+        title: "서술형 2회의 평가 요소",
+        body: "서술형 평가는 삼각형의 합동을 이용한 이등변삼각형의 성질 설명, 직각삼각형의 합동을 이용한 사각형의 넓이 구하기, 삼각형의 닮음 조건으로 변의 길이 구하기를 10월과 11월 두 번에 걸쳐 봅니다. 성취기준은 [9수03-09]~[9수03-13]이고 만점 20점, 최저 7점입니다.",
+      },
+      {
+        title: "닮음은 두 시험에 모두 들어갑니다",
+        body: "중간고사는 [9수03-09]~[9수03-13], 기말고사는 [9수03-12]~[9수03-15]와 [9수04-05]~[9수04-06]으로 도형의 닮음 두 성취기준이 겹칩니다. 진도표의 기말고사 정리 차시(12월 2~3주)도 닮음, 평행선 사이의 선분, 피타고라스 정리, 경우의 수, 확률을 함께 묶어 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "존경하는 인물에 관한 전기문을 쓰고, 수시 4회 영역은 평가 요소가 정해져 있습니다",
+    intro:
+      "진천중학교 2학년 영어는 10월 중간고사와 12월 기말고사가 30%씩이고, 수행평가 40%는 전기문 글쓰기 20%와 문장 완성하기·영어 배움 일지 10%씩입니다. 문장 완성하기와 배움 일지는 8월~12월에 각각 네 번 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형 100점" },
+      { name: "문장 완성하기", kind: "task", weight: 10, timing: "8월~12월", method: "형성평가 10점" },
+      { name: "전기문 글쓰기", kind: "task", weight: 20, timing: "9월~10월", method: "서술형 20점" },
+      { name: "영어 배움 일지", kind: "task", weight: 10, timing: "8월~12월", method: "포트폴리오 10점" },
+    ],
+    notes: [
+      {
+        title: "전기문 글쓰기는 존경하는 인물에 관한 글",
+        body: "전기문 글쓰기는 자신의 경험을 표현하는 문장 쓰기와 자신이 존경하는 인물에 관한 짧은 글쓰기로 이루어지고, 성취기준은 [9영02-06]·[9영02-10]입니다. 만점 20점, 최저 5점이며 서·논술형 20%는 이 과제에만 있습니다.",
+      },
+      {
+        title: "두 시험의 성취기준 구성",
+        body: "중간고사 관련 성취기준은 [9영01-02]·[9영01-03]·[9영01-08]·[9영02-01]·[9영02-03]·[9영02-06]·[9영02-07]·[9영02-10]이고, 기말고사에는 진도표의 Lesson 8에 있는 [9영01-05]·[9영02-02]와 Lesson 7·8의 [9영02-04]가 들어 있습니다.",
+      },
+      {
+        title: "수시 4회 영역의 평가 요소",
+        body: "영어 배움 일지는 수업과 활동 내용 묘사, 수업을 통해 생긴 의견이나 감정 표현이 평가 요소이고 만점 10점, 최저 2점입니다. 문장 완성하기는 어휘의 형식과 정확성을 보는 형성평가로 만점 10점, 최저 3점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "세계 문화 탐구는 8월 단원이 중심이고, 서술형은 세계 대전 성취기준 하나로 봅니다",
+    intro:
+      "진천중학교 2학년 사회 영역은 역사 과목으로, 10월 20~22일과 12월 14~16일 정기시험이 각 30%이고 9월 세계 문화 탐구 보고서와 11월 세계 대전과 사회 변동 서술형 평가가 20%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 20일~22일", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 14일~16일", method: "선택형 100점" },
+      { name: "세계 문화 탐구", kind: "task", weight: 20, timing: "9월", method: "보고서 20점" },
+      { name: "세계 대전과 사회 변동", kind: "task", weight: 20, timing: "11월", method: "서술형 20점" },
+    ],
+    notes: [
+      {
+        title: "세계 문화 탐구는 8월 단원이 중심",
+        body: "세계 문화 탐구 보고서의 성취기준은 [9역02-02]~[9역04-02]로, 평가 요소에 고대 그리스·로마 문화, 중국 고대 제국, 인도와 동남아시아의 불교 문화, 수·당 시기 동아시아, 이슬람 문화와 예술, 송·몽골 제국 시기 동서 교류, 명·청과 에도 막부의 문화가 들어 있습니다. 진도표에서 이 단원들은 8월 2주~5주에 다룹니다.",
+      },
+      {
+        title: "서술형은 세계 대전 성취기준 하나",
+        body: "세계 대전과 사회 변동 서술형은 [9역06-01]을 대상으로 제1차 세계 대전의 배경과 전개, 러시아 혁명, 전후 국제 정치와 민주주의 확산, 제2차 세계 대전 이전 정세와 전개 과정을 보며 만점 20점, 최저 3점입니다. 중간고사는 [9역05-01]~[9역05-03], 기말고사는 [9역06-01]~[9역06-03]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "서술형 세 번은 주제가 다르고, 탐구평가는 실험 보고서와 그래프로 봅니다",
+    intro:
+      "진천중학교 2학년 과학은 10월 20~22일 중간고사와 12월 14~16일 기말고사가 30%씩이고, 수행평가 40%가 서술형 20%(세 번)와 탐구평가 20%(두 번)로 나뉩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 20일~22일", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 14일~16일", method: "선택형 100점" },
+      { name: "광합성, 호흡계의 구조와 기능, 전동기의 원리", kind: "task", weight: 20, timing: "8월 5주, 9월 4주, 11월 2주", method: "서술형 20점" },
+      { name: "영양소 검출 실험, 전압, 전류, 저항 사이의 관계", kind: "task", weight: 20, timing: "9월 2주, 11월 1주", method: "탐구평가 20점" },
+    ],
+    notes: [
+      {
+        title: "서술형 세 번의 주제",
+        body: "서술형은 광합성에 영향을 미치는 환경 요인, 호흡 운동이 일어날 때의 변화, 전동기의 원리를 8월 5주·9월 4주·11월 2주에 나누어 보며, 성취기준은 [9과12-01]·[9과13-03]·[9과14-04]입니다. 만점 20점, 최저 7점입니다.",
+      },
+      {
+        title: "탐구평가는 실험 보고서와 그래프",
+        body: "탐구평가는 영양소 검출 실험 보고서와 지시약에 따른 결과 해석([9과13-01]), 저항·전류·전압 관계를 그래프로 나타내고 서술하기와 전압계·전류계의 눈금([9과14-02])으로 구성됩니다. 중간고사 범위는 [9과12-01]~[9과13-05], 기말고사는 [9과14-01]~[9과15-02]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "쓰기 영역은 보고서와 쓰기 윤리를 보고, 시험 관련 성취기준은 네 개입니다",
+    intro:
+      "진천중학교 3학년 국어는 10월 20~22일 2학기 고사 한 번이 60%이고, 수행평가 40%는 쓰기(서술형)와 독서 및 독후활동(프로젝트)이 20%씩입니다.",
+    assessments: [
+      { name: "2학기 고사", kind: "exam", weight: 60, timing: "10월 20일~22일", method: "선택형 100점" },
+      { name: "쓰기", kind: "task", weight: 20, timing: "10월~11월", method: "서술형 20점" },
+      { name: "독서 및 독후활동", kind: "task", weight: 20, timing: "9월~10월", method: "프로젝트 20점" },
+    ],
+    notes: [
+      {
+        title: "쓰기 영역은 보고서와 쓰기 윤리",
+        body: "쓰기([9국03-03]·[9국03-10])는 보고서를 쓰는 방법을 익혀 절차가 드러나는 글을 쓰는지, 자료를 참고하거나 인용할 때의 윤리를 지키는지 봅니다. 진도표의 ‘쓰기 윤리와 보고서 쓰기’ 단원은 10월 3주~11월 2주입니다.",
+      },
+      {
+        title: "시험 관련 성취기준 네 개",
+        body: "2학기 고사는 [9국05-05]·[9국05-06]·[9국02-05]·[9국04-06]으로, 시조 ‘까마귀 눈비 맞아’·‘들판이 적막하다’, 소설 <꺼삐딴 리>, 문장의 짜임, 논증 방법 파악하며 읽기 단원입니다. 독서 및 독후활동도 [9국05-05]·[9국05-06]을 다루며 만점 20점, 최저 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "서술형은 분산·표준편차와 삼각비 활용이고, 원주각은 시험 범위 밖입니다",
+    intro:
+      "진천중학교 3학년 수학은 10월 20~22일 2학기고사가 60%이고, 산포도·삼각비 서술형 평가와 통계·삼각비·원 개념평가가 20%씩입니다. 서술형은 9월과 10월 두 번 봅니다.",
+    assessments: [
+      { name: "2학기고사", kind: "exam", weight: 60, timing: "10월 20~22일", method: "선택형 100점" },
+      { name: "산포도, 삼각비", kind: "task", weight: 20, timing: "9월, 10월", method: "서술형 20점" },
+      { name: "통계, 삼각비, 원", kind: "task", weight: 20, timing: "8월~10월", method: "개념평가 20점" },
+    ],
+    notes: [
+      {
+        title: "서술형은 분산·표준편차와 삼각비 활용",
+        body: "서술형 평가는 [9수04-18]·[9수05-07]을 대상으로 삼각비를 활용한 실생활 문제 해결, 편차·분산·표준편차 구하기, 산포도로 자료의 특징 설명하기를 봅니다. 만점 20점, 최저 7점입니다.",
+      },
+      {
+        title: "원주각은 시험 범위 밖",
+        body: "2학기고사 범위는 [9수04-17]~[9수04-19]와 [9수05-06]~[9수05-08]이고, 원주각의 성질([9수04-20])은 진도표상 10월 4주~11월 1주에 배웁니다. 개념평가는 시험과 같은 범위를 8월~10월 수시로 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "시험은 읽기, 수행은 쓰기 성취기준으로 나뉘고 두 과제의 채점 범위가 다릅니다",
+    intro:
+      "진천중학교 3학년 영어는 10월 4주 2학기 고사가 60%이고, 수행평가는 9월 4주 문장 완성하기(형성평가)와 10월 2주 나라 홍보하는 글쓰기(서술형)가 20%씩입니다.",
+    assessments: [
+      { name: "2학기 고사", kind: "exam", weight: 60, timing: "10월 4주", method: "선택형 100점" },
+      { name: "문장 완성하기", kind: "task", weight: 20, timing: "9월 4주", method: "형성평가 20점" },
+      { name: "나라 홍보하는 글쓰기", kind: "task", weight: 20, timing: "10월 2주", method: "서술형 평가 20점" },
+    ],
+    notes: [
+      {
+        title: "시험은 읽기, 수행은 쓰기 성취기준",
+        body: "2학기 고사 관련 성취기준은 [9영03-01]~[9영03-09]의 읽기 코드이고, 문장 완성하기는 [9영04-03]·[9영04-05], 나라 홍보하는 글쓰기는 [9영04-01]·[9영04-05]의 쓰기 코드입니다.",
+      },
+      {
+        title: "두 수행 과제의 채점 범위",
+        body: "나라 홍보하는 글쓰기는 주어진 조건을 충족한 과제 완성, 내용의 적절성과 구체성, 어휘·언어형식의 다양성과 적절성을 보며 만점 20점, 최저 6점입니다. 문장 완성하기는 어휘와 언어형식의 정확성을 보고 만점 20점, 최저 5점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 문제해결력은 도시 단원 일곱 요소, 역사 두 과제는 고려와 조선 전기를 다룹니다",
+    intro:
+      "진천중학교 3학년은 사회와 역사를 따로 평가하며, 두 과목 모두 10월 20~22일 2학기 고사가 60%입니다. 사회는 9월 문제해결력 평가와 수시 학습과정 평가, 역사는 9월 고려와 조선 탐구(서술형)와 10월 조선 전기 역사 독서(프로젝트)가 20%씩입니다.",
+    assessments: [
+      { name: "2학기 고사", kind: "exam", weight: 60, timing: "10월 20일~22일", method: "선택형 100점", course: "사회" },
+      { name: "문제해결력 평가", kind: "task", weight: 20, timing: "9월 중", method: "서·논술형 20점", course: "사회" },
+      { name: "학습과정 평가", kind: "task", weight: 20, timing: "수시", method: "포트폴리오 20점", course: "사회" },
+      { name: "2학기 고사", kind: "exam", weight: 60, timing: "10월 20일~22일", method: "선택형 100점", course: "역사" },
+      { name: "고려와 조선 탐구", kind: "task", weight: 20, timing: "9월", method: "서술형 평가 20점", course: "역사" },
+      { name: "조선 전기 역사 독서", kind: "task", weight: 20, timing: "10월", method: "프로젝트 평가 20점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 문제해결력은 도시 단원 일곱 요소",
+        body: "사회 문제해결력 평가는 [9사(지리)08-01]~[9사(지리)08-03]을 대상으로 입장·문제점·대안 제시 여부, 내용의 일치성, 용어 선정의 적절성, 수행 참여의 성실성, 조건의 충족성을 봅니다. 사회 2학기 고사 범위는 [9사(지리)07-01]~[9사(지리)09-03]으로 인구, 도시, 글로벌 경제 활동 단원입니다.",
+      },
+      {
+        title: "역사 두 과제는 고려와 조선 전기",
+        body: "고려와 조선 탐구는 원 간섭기 고려 사회의 변화, 공민왕의 개혁과 신진사대부의 성장, 고려의 사회 모습과 문화, 조선의 통치체제 정비를 서술하고, 조선 전기 역사 독서는 대외 관계, 사림 세력의 성장과 집권, 유교 문화 보급 사업까지 다룹니다. 두 과제 모두 만점 20점, 최저 6점이며 역사 시험 범위는 [9역09-03]~[9역10-03]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheon-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "시험은 신경계부터 전기 에너지 생산까지이고, 수행 두 영역은 대상 성취기준이 나뉩니다",
+    intro:
+      "진천중학교 3학년 과학은 10월 20~22일 2학기고사가 60%이고, 서술형과 탐구평가가 각 20%로 두 번씩 나누어 치러집니다.",
+    assessments: [
+      { name: "2학기고사", kind: "exam", weight: 60, timing: "10월 20일~22일", method: "선택형 100점" },
+      { name: "뉴런과 신경계의 구조와 기능, 호르몬과 항상성 유지, 역학적 에너지 전환과 보존", kind: "task", weight: 20, timing: "9월 3주, 10월 3주", method: "서술형 20점" },
+      { name: "체세포 분열 관찰, 세포 분열과 사람의 염색체, 멘델의 유전 법칙", kind: "task", weight: 20, timing: "9월 2주, 10월 3주", method: "탐구평가 20점" },
+    ],
+    notes: [
+      {
+        title: "시험 범위는 신경계부터 전기 에너지 생산까지",
+        body: "2학기고사 범위는 [9과20-02]~[9과22-02]로, 진도표의 8월 2주 뉴런과 신경계부터 10월 2~3주 자석의 운동에 의한 전류 발생까지이며 10월 4주가 내용 정리·피드백 차시입니다.",
+      },
+      {
+        title: "수행 두 영역의 대상 성취기준",
+        body: "서술형은 [9과20-02]·[9과20-03]·[9과22-01], 탐구평가는 [9과21-01]·[9과21-02]·[9과21-04]이며 두 영역 모두 만점 20점, 최저 4점입니다. 서·논술형 20%는 서술형 영역에 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "9월 3주 독서 일지와 9월 말 복합양식 글에 서·논술형이 모이고, 12월엔 <봄길>로 역설을 감상합니다",
+    intro:
+      "진천여자중학교 2학년 국어는 10월 5주 중간고사와 12월 3주 기말고사가 각 30%이고, 수행평가 40%는 한 학기 한 권 읽기와 복합양식 자료를 활용한 글쓰기(각 15%), 학습과정 기록하기(10%)입니다. 서술형 두 과제가 9월 3주부터 5주까지 이어서 잡혀 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 5주", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 15, timing: "9월 3주", method: "서술형 15점" },
+      { name: "복합양식 자료를 활용한 글쓰기", kind: "task", weight: 15, timing: "9월 4~5주", method: "서술형 15점" },
+      { name: "학습과정 기록하기", kind: "task", weight: 10, timing: "8월~12월", method: "포트폴리오 10점" },
+    ],
+    notes: [
+      {
+        title: "서·논술형 30%는 9월 두 과제에 있습니다",
+        body: "서·논술형 반영비율은 한 학기 한 권 읽기 15%와 복합양식 자료를 활용한 글쓰기 15%에만 표시되어 있고, 두 정기시험은 선택형입니다. 진도표에서 9월 3주는 읽고 싶은 책을 골라 독서 일지를 쓰고 책 속 사회·문화적 상황을 파악하는 차시, 9월 4~5주는 주제에 맞는 카드뉴스를 만들어 청중 앞에서 전달하는 차시이며 둘 다 ‘수행평가 연계’로 표시되어 있습니다.",
+      },
+      {
+        title: "회차별 관련 성취기준",
+        body: "중간고사는 [9국05-05](작품에 반영된 사회·문화적 상황)와 [9국04-01](음운 체계와 문자 체계), 기말고사는 [9국04-01]과 [9국05-06](개성적인 발상과 표현)입니다. 학습과정 기록하기는 이 세 성취기준을 8월부터 12월까지 수시로 포트폴리오에 담습니다.",
+      },
+      {
+        title: "기말고사 쪽 진도는 음운에서 반어·역설까지",
+        body: "11월 1~2주 음운의 체계, 11월 3~5주 반어와 풍자(<춘향전> 감상), 12월 1~3주 역설(<봄길> 감상)이 이어지고, 12월 4주 이후에는 복합양식의 글과 자료 읽기, 1분 도전 영상 제작 단원이 남아 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "<허생전>부터 문장의 짜임까지 시험에 들고, 청소년 사회 문제로 주장 글을 쓰며 발표는 말하기 불안부터 다룹니다",
+    intro:
+      "진천여자중학교 3학년 국어는 10월 5주 2학기고사 한 번이 60%이고, 수행평가 40%는 주장하는 글쓰기 20%, 발표하기 10%, 학습과정 기록하기 10%로 나뉩니다. 서·논술형 20%는 주장하는 글쓰기 한 과제에 모여 있습니다.",
+    assessments: [
+      { name: "2학기고사", kind: "exam", weight: 60, timing: "10월 5주", method: "선택형 100점" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 20, method: "서·논술형 20점" },
+      { name: "발표하기", kind: "task", weight: 10, method: "말하기 10점" },
+      { name: "학습과정 기록하기", kind: "task", weight: 10, timing: "8월~10월", method: "포트폴리오 10점" },
+    ],
+    notes: [
+      {
+        title: "시험 관련 성취기준은 세 개",
+        body: "2학기고사는 [9국05-05](작품이 창작된 사회·문화적 배경), [9국05-07](근거에 따른 다양한 해석 비교), [9국04-06](문장의 짜임)이며, 진도표에서는 8월 5주 <허생전>부터 10월 4주 문장의 짜임까지가 이 범위입니다. 학습과정 기록하기도 같은 세 성취기준을 8월~10월에 수시로 봅니다.",
+      },
+      {
+        title: "두 수행 과제는 표와 진도표의 시기가 다릅니다",
+        body: "반영 비율 표에는 주장하는 글쓰기([9국03-04])가 9월-10월, 발표하기([9국01-07]·[9국01-06])가 10월로 적혀 있지만, 진도표에서 ‘자신감 있게 말하기’ 단원은 12월 1~2주, ‘주장하는 글쓰기’ 단원은 1월 1주에 배치되어 있습니다.",
+      },
+      {
+        title: "진도표의 주장하는 글쓰기 순서",
+        body: "청소년과 관련된 사회 문제 하나를 골라 주장으로 구체화하고, 신뢰할 수 있는 자료를 조사해 타당한 근거로 정리한 뒤 글을 쓰고 고쳐쓰기로 보완합니다. 발표 단원은 말하기 불안의 원인 분석, 청중 분석, 발표 원고와 매체 자료 준비, 실전 말하기 순입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "일차함수와 방정식의 관계로 시작해 확률까지 가고, 과정평가 두 영역은 수시로 15점씩 봅니다",
+    intro:
+      "진천여자중학교 2학년 수학은 10월 5주 중간고사와 12월 3주 기말고사가 25%씩이고, 수행평가 50%는 수학탐구(서술형) 20%, 문제해결 15%, 수학적 의사소통 15%입니다. 서·논술형 20%는 11월 수학탐구 한 번에 반영됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월 5주", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 100점" },
+      { name: "수학탐구", kind: "task", weight: 20, timing: "11월", method: "서술형 20점" },
+      { name: "문제해결", kind: "task", weight: 15, timing: "9월~12월", method: "과정평가 15점" },
+      { name: "수학적 의사소통", kind: "task", weight: 15, timing: "9월~12월", method: "과정평가 15점" },
+    ],
+    notes: [
+      {
+        title: "2학기 진도는 일차함수 정리부터 확률까지",
+        body: "진도표는 8월 일차함수와 일차방정식의 관계([9수02-17]·[9수02-18])로 시작해 9월 이등변삼각형·외심과 내심, 9월 5주 사각형, 10월 도형의 닮음과 평행선 사이 선분의 길이의 비, 10월 5주~11월 2주 피타고라스 정리, 11월 3주 이후 경우의 수와 확률로 이어집니다. 12월 3주부터는 2학기 전 단원 복습입니다.",
+      },
+      {
+        title: "과정평가 두 영역은 9월부터 수시로",
+        body: "문제해결과 수학적 의사소통은 각 15점 만점의 과정평가이고 평가 횟수가 ‘수시’로 적혀 있습니다. 진도표의 9~12월 차시에는 형성평가, 서술형평가, 포트폴리오 평가 활동이 함께 적혀 있고, 공개수업 주제는 ‘닮음비로 파헤치는 합리적 소비 의사결정’입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "미니 테스트는 삼각비와 원의 성질만 다루고, 분산·표준편차와 산점도는 반영 비율 표의 성취기준 칸에 없습니다",
+    intro:
+      "진천여자중학교 3학년 수학은 10월 5주 2학기고사 50%와 수행평가 50%로 나뉩니다. 수행평가는 미니 테스트 20%, 수학적 문제 해결(서술형) 20%, 교과서 학습 활동 10%이고, 진도표의 삼각비·원의 성질·대푯값 차시마다 ‘수행평가 연계-교과서 학습활동, 미니 테스트’가 붙어 있습니다.",
+    assessments: [
+      { name: "2학기고사", kind: "exam", weight: 50, timing: "10월 5주", method: "선택형 100점" },
+      { name: "미니 테스트", kind: "task", weight: 20, timing: "9월~10월", method: "과정 평가 20점" },
+      { name: "수학적 문제 해결", kind: "task", weight: 20, timing: "10월", method: "서술형 평가 20점" },
+      { name: "교과서 학습 활동", kind: "task", weight: 10, timing: "9월~10월", method: "과정 평가 10점" },
+    ],
+    notes: [
+      {
+        title: "시험 범위는 삼각비부터 대푯값까지",
+        body: "2학기고사 관련 성취기준은 [9수04-17]~[9수05-06]으로, 진도표의 8월 4주~9월 3주 삼각비와 그 활용, 9월 4주~10월 3주 원의 현·접선·원주각, 10월 4주 대푯값 단원이 여기에 들어갑니다.",
+      },
+      {
+        title: "미니 테스트는 삼각비와 원의 성질만",
+        body: "미니 테스트의 성취기준은 [9수04-17]~[9수04-20]이고, 수학적 문제 해결과 교과서 학습 활동은 [9수04-17]~[9수05-06]입니다. 10월 5주 이후 진도인 분산·표준편차([9수05-07])와 산점도·상관관계([9수05-08])는 반영 비율 표의 성취기준 칸에 적혀 있지 않습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "평가원 듣기 1문항당 0.5점을 환산하고, Lesson 6 Only One Earth 쓰기 차시에서 직업을 소개합니다",
+    intro:
+      "진천여자중학교 2학년 영어는 10월 5주 중간고사와 12월 3주 기말고사가 각 30%이고, 수행평가 40%는 관심 직업 소개하기 20%, 듣기 10%, 학습활동 10%입니다. 듣기는 9월 1주 한 번, 학습활동은 9~12월에 네 번 수시로 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 5주", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월 1주", method: "선택형 10점" },
+      { name: "학습활동", kind: "task", weight: 10, timing: "9월~12월", method: "포트폴리오 10점" },
+      { name: "관심 직업 소개하기", kind: "task", weight: 20, timing: "10월 4주", method: "서술형 20점" },
+    ],
+    notes: [
+      {
+        title: "듣기는 영어듣기능력평가 점수를 환산",
+        body: "듣기 10%는 한국교육과정평가원이 출제하는 2026 중·고등학교 영어듣기능력평가로 보고, 1문항당 0.5점으로 10점에 환산합니다. 이 평가를 시행할 수 없으면 자체 제작한 듣기평가로 대신할 수 있다고 적혀 있습니다.",
+      },
+      {
+        title: "관심 직업 소개하기는 Lesson 6 쓰기 차시",
+        body: "진도표 10월 3~4주 Lesson 6 Only One Earth의 Language Use & Writing 차시에 ‘수행평가: 관심 직업 소개하기(수행평가 연계-쓰기)’가 적혀 있고, 같은 차시에서 현재완료와 접속사 although를 배웁니다. 성취기준은 [9영02-04]·[9영02-06]·[9영02-08]이며 서·논술형 20%는 이 과제에만 있습니다.",
+      },
+      {
+        title: "학습활동 4회는 언어 형식 차시마다",
+        body: "진도표에서 ‘It+for 목적어+to부정사’와 ‘명령문, and/or’, Lesson 6 읽기의 두 언어 형식, ‘want/ask/advise+목적어+to부정사’와 목적격 관계대명사, as ~ as와 so ~ that 차시에 ‘수행평가 연계-학습활동’이 붙어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "Meet the World 단원에서 나라 특징을 담은 홍보 글을 쓰고, 학습활동은 4회 포트폴리오로 모읍니다",
+    intro:
+      "진천여자중학교 3학년 영어는 10월 5주 2학기고사가 60%이고, 수행평가 40%는 나라 홍보 글쓰기 20%, 듣기 10%, 학습활동(포트폴리오) 10%입니다. 서·논술형 반영은 나라 홍보 글쓰기 20% 하나입니다.",
+    assessments: [
+      { name: "2학기고사", kind: "exam", weight: 60, timing: "10월 5주", method: "선택형 100점" },
+      { name: "듣기", kind: "task", weight: 10, timing: "9월 1주", method: "선택형 10점" },
+      { name: "학습활동", kind: "task", weight: 10, timing: "8월~10월", method: "포트폴리오 10점" },
+      { name: "나라 홍보 글쓰기", kind: "task", weight: 20, method: "서술형 20점" },
+    ],
+    notes: [
+      {
+        title: "나라 홍보 글쓰기의 시기 표기",
+        body: "반영 비율 표에는 10월 2주로 적혀 있지만, 진도표에서 나라의 특징을 담은 홍보 글을 쓰고 발표하는 차시는 9월 2주 Lesson 6 Meet the World이고, 10월 1~2주 Lesson 7 쓰기 차시에도 ‘수행평가 연계-쓰기’가 붙어 있습니다. 9월 2주 차시는 특정 나라를 소개·홍보하는 표현을 알맞은 동사로 완성하는 과정중심쓰기입니다.",
+      },
+      {
+        title: "듣기와 학습활동의 운영",
+        body: "듣기는 9월 1주 영어듣기능력평가 한 번을 1문항당 0.5점으로 10점에 환산합니다. 학습활동은 8월~10월 수시 4회 포트폴리오이며, 진도표의 Lesson 6·7 읽기 차시 자기평가에 ‘수행평가 연계-포트폴리오’가 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "시민 혁명과 제국주의, 세계 대전과 대공황을 다루며 서·논술형은 수행영역에서만 20% 이상 봅니다",
+    intro:
+      "진천여자중학교 2학년 사회 영역은 역사 과목으로, 10월 중간고사와 12월 기말고사가 각 25%이고 수행평가 50%가 서·논술형 20%, 역사노트 20%, 학습활동 10%로 나뉩니다. 수행평가 세 영역은 모두 8월부터 12월까지 수시로 이루어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "12월", method: "선택형 100점" },
+      { name: "서·논술형", kind: "task", weight: 20, timing: "8월~12월", method: "서·논술형 20점" },
+      { name: "역사노트", kind: "task", weight: 20, timing: "8월~12월", method: "과정평가 20점" },
+      { name: "학습활동", kind: "task", weight: 10, timing: "8월~12월", method: "포트폴리오 10점" },
+    ],
+    notes: [
+      {
+        title: "두 시험의 성취기준 범위",
+        body: "중간고사는 [9역04-03]~[9역05-03]으로 유럽 사회의 근대적 변화, 시민 혁명, 산업화와 제국주의, 아시아의 국민 국가 건설 운동이고, 기말고사는 [9역06-01]~[9역07-03]으로 두 차례 세계 대전과 민족 운동, 냉전과 세계화까지입니다.",
+      },
+      {
+        title: "서·논술형은 수행영역에서만 봅니다",
+        body: "평가 방침에 서술형·논술형 평가를 한 학기 환산점 100점 중 20% 이상 반영하되 수행영역에서 평가한다고 적혀 있어, 두 정기시험은 선택형 100점 만점으로 출제한 뒤 학기말에 비율을 적용합니다. 수행평가 기본점수는 영역별 만점의 40% 미만입니다.",
+      },
+      {
+        title: "10~11월 세계 대전 단원의 활동",
+        body: "진도표의 세계 대전과 사회 변동 단원은 서양 열강의 경쟁, 러시아 혁명, 세계 대공황과 전체주의 등장을 다루고, 3·1 운동과 5·4 운동의 관련성을 통해 한국사와 세계사의 연관을 살핍니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 세계의 도시와 글로벌 경제를, 역사는 왜란과 호란 단원의 국서 제작 활동까지 다룹니다",
+    intro:
+      "진천여자중학교 3학년은 사회와 역사를 따로 평가하며, 두 과목 모두 10월 2학기고사 한 번이 60%입니다. 수행평가 40%는 사회가 9월 도시 평가와 10월 경제 신문, 역사가 서술형과 ‘조선왕조실록, 가상 인물 인터뷰’ 프로젝트로 20%씩 나뉩니다.",
+    assessments: [
+      { name: "2학기고사", kind: "exam", weight: 60, timing: "10월 5주", method: "선택형 100점", course: "사회" },
+      { name: "도시 평가", kind: "task", weight: 20, timing: "9월", method: "프로젝트 20점", course: "사회" },
+      { name: "경제 신문", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점", course: "사회" },
+      { name: "2학기고사", kind: "exam", weight: 60, timing: "10월", method: "선택형 100점", course: "역사" },
+      { name: "서술형", kind: "task", weight: 20, timing: "9월~10월", method: "서술형 20점", course: "역사" },
+      { name: "조선왕조실록, 가상 인물 인터뷰", kind: "task", weight: 20, timing: "10월", method: "프로젝트 20점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 수행은 도시 단원과 글로벌 경제 단원",
+        body: "도시 평가([9사(지리)08-01]~[9사(지리)08-04])는 9월 진도인 세계의 도시, 도시 경관, 선진국과 개발도상국의 도시화, 살기 좋은 도시 단원과 맞물려 있고, 경제 신문([9사(지리)09-01]~[9사(지리)09-03])은 10월의 농업 기업화, 다국적 기업, 서비스 산업 변화 단원을 다룹니다. 사회의 서·논술형 20%는 경제 신문에 표시되어 있습니다.",
+      },
+      {
+        title: "역사 시험 범위는 원 간섭기부터 세도 정치 시기까지",
+        body: "역사 2학기고사 관련 성취기준은 [9역09-03]~[9역11-02]로, 진도표의 8월 4주 원 간섭기 고려 사회부터 10월 4주 세도 정치 시기 농민 봉기 차시까지입니다. 역사의 서·논술형 20%는 서술형 영역에 표시되어 있습니다.",
+      },
+      {
+        title: "역사 두 과제의 횟수",
+        body: "역사 서술형은 9월~10월 수시로, ‘조선왕조실록, 가상 인물 인터뷰’는 10월에 1회 프로젝트로 봅니다. 진도표 9월 5주~10월 2주 왜란과 호란 단원에는 조선통신사 파견을 위한 ‘국서’ 제작 활동이 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "원자·이온부터 세포 호흡은 중간, 전기와 자기·별과 우주는 기말이며 두 수행은 성취기준이 다릅니다",
+    intro:
+      "진천여자중학교 2학년 과학은 10월 5주 중간고사와 12월 3주 기말고사가 25%씩이고, 수행평가 50%는 서술형・논술형 20%, 탐구활동(자료해석) 20%, 학습과정(과정평가) 10%입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월 5주", method: "선택형 100점" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 100점" },
+      { name: "서술형・논술형", kind: "task", weight: 20, method: "서술형 20점" },
+      { name: "탐구활동", kind: "task", weight: 20, method: "자료해석 20점" },
+      { name: "학습과정", kind: "task", weight: 10, timing: "8월~12월", method: "과정평가 10점" },
+    ],
+    notes: [
+      {
+        title: "중간은 물질·식물·동물, 기말은 전기·우주",
+        body: "중간고사 관련 성취기준은 [9과11-04]~[9과13-05]로 원자·분자·이온, 광합성과 식물의 호흡, 소화·순환·호흡·배설과 세포 호흡이고, 기말고사는 [9과14-01]~[9과15-04]로 전기와 자기, 별과 우주입니다.",
+      },
+      {
+        title: "수행 두 영역의 성취기준과 시기",
+        body: "서술형・논술형은 [9과11-04]·[9과12-02]·[9과13-05]·[9과14-01]·[9과14-04], 탐구활동은 [9과11-04]·[9과12-01]·[9과13-01]·[9과14-02]를 대상으로 합니다. 반영 비율 표의 시기는 각각 9월~10월, 10월~11월이지만 진도표에서 [9과14-04]는 11월, [9과12-01]은 8월 차시로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "jincheonyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "체세포 분열 그림과 멘델 유전, 가계도를 서술하고 등속·자유 낙하 운동은 8월 말 차시에 탐구합니다",
+    intro:
+      "진천여자중학교 3학년 과학은 10월 5주 2학기고사 한 번이 50%이고, 나머지 50%가 서술형・논술형 20%, 탐구활동 20%, 학습과정 10%의 수행평가입니다.",
+    assessments: [
+      { name: "2학기고사", kind: "exam", weight: 50, timing: "10월 5주", method: "선택형 100점" },
+      { name: "서술형・논술형", kind: "task", weight: 20, timing: "9월~10월", method: "서술형 20점" },
+      { name: "탐구활동", kind: "task", weight: 20, method: "자료해석 20점" },
+      { name: "학습과정", kind: "task", weight: 10, timing: "8월~11월", method: "과정평가 10점" },
+    ],
+    notes: [
+      {
+        title: "시험 범위는 운동과 에너지, 생식과 유전, 에너지 전환",
+        body: "2학기고사 관련 성취기준은 [9과19-01]~[9과22-03]으로 등속 운동과 자유 낙하 운동, 일과 에너지, 세포 분열과 유전, 역학적 에너지 보존과 전기 에너지 전환입니다. 진도표에서 이 범위는 8월 4주부터 10월 4주까지이고, 별과 우주 단원은 10월 5주부터입니다.",
+      },
+      {
+        title: "서술형은 생식과 유전 단원",
+        body: "서술형・논술형은 [9과21-01]·[9과21-02]·[9과21-04]·[9과21-05]로 세포 분열, 염색체와 생식세포 형성, 멘델의 유전, 가계도 분석이 대상입니다. 진도표에는 체세포 분열 과정을 그림으로 그리고 설명하는지, 가계도로 혀 말기 유전의 특징을 유전자형으로 나타내는지 평가한다고 적혀 있습니다.",
+      },
+      {
+        title: "탐구활동 대상과 진도",
+        body: "탐구활동은 [9과19-01]·[9과19-02]·[9과22-01]·[9과22-02]가 대상입니다. 표의 시기는 9월~10월이지만 진도표에서 등속·자유 낙하 운동은 8월 4~5주 차시이고, 관련 활동으로 역학적 에너지 보존 실험 보고서와 간이발전기 원리 설명이 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("진천여자중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "시대를 반영한 문학 비평문 20%(9월) · 훈민정음 창제원리와 한글 가치 평가 글 20%(10월)",
+    intro:
+      "평리중학교 2학년 국어는 중간·기말시험이 합쳐 60%, 글쓰기 수행평가 두 편이 40%입니다. 시험은 회차마다 선택형 50점, 단답형 15점, 서·논술형 35점으로 구성되어 서답형 문항이 절반을 차지합니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 15, timing: "10월 13일 ~ 10월 14일", method: "선택형 50점" },
+      { name: "중간시험(단답형)", kind: "exam", weight: 4.5, timing: "10월 13일 ~ 10월 14일", method: "단답형 15점" },
+      { name: "중간시험(서·논술형)", kind: "exam", weight: 10.5, timing: "10월 13일 ~ 10월 14일", method: "서·논술형 35점" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 15, timing: "12월 7일 ~ 12월 9일", method: "선택형 50점" },
+      { name: "기말시험(단답형)", kind: "exam", weight: 4.5, timing: "12월 7일 ~ 12월 9일", method: "단답형 15점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 10.5, timing: "12월 7일 ~ 12월 9일", method: "서·논술형 35점" },
+      { name: "시대를 반영한 문학 비평문 쓰기", kind: "task", weight: 20, timing: "9월", method: "논술형" },
+      { name: "훈민정음 창제원리와 한글의 가치 평가 글쓰기", kind: "task", weight: 20, timing: "10월", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "비평문은 작품과 오늘날 삶의 비교까지",
+        body: "성취기준 [9국05-05]에 따라 작품에 반영된 사회·문화적 맥락을 분석하고, 그 맥락으로 작품의 의미를 해석·평가한 뒤 작품 내용과 오늘날의 삶을 비교·대조하는 비평문을 씁니다. 진도표에서는 9월 7~11일 주에 비평문 작성 계획, 작성, 수정·보완이 한꺼번에 진행되며 수준에 따라 개요 틀과 비평문 틀을 골라 받습니다.",
+      },
+      {
+        title: "한글 가치 글은 세계 문자와 비교",
+        body: "[9국04-01]을 다루는 두 번째 글은 훈민정음의 창제 원리와 문자 구조를 분석하고 세계의 다른 문자 특성을 조사해 비교한 결과를 근거로 오늘날 한글의 가치를 평가합니다. 두 글 모두 이해와 분석 40점, 생성과 조직 40점, 언어의 구조와 표현 20점이며 AI는 자료 조사·사례 탐색·아이디어 구상에만 씁니다.",
+      },
+      {
+        title: "서답형이 회차마다 50점",
+        body: "중간시험(10월 13~14일)과 기말시험(12월 7~9일)은 각각 선택형 50점(15%)에 단답형 15점(4.5%)과 서·논술형 35점(10.5%)이 붙습니다. 두 시험 모두 결시생은 학업성적관리위원회 심의를 거쳐 처리합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각형·사각형 성질 서술 20%(9월 셋째주) · 피타고라스 정리 증명과 문제 해결 20% · 시험 서답형 40점",
+    intro:
+      "평리중학교 2학년 수학은 중간·기말시험 60%, 수행평가 40%입니다. 시험은 회차마다 선택형 60점(18%)과 서답형 40점(12%)으로 나뉘고, 수행평가 두 과제는 도형의 성질과 피타고라스 정리를 각각 다룹니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 18, timing: "10월 13일 ~ 10월 14일", method: "선택형 60점" },
+      { name: "중간시험(서답형)", kind: "exam", weight: 12, timing: "10월 13일 ~ 10월 14일", method: "서답형 40점" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 18, timing: "12월 7일 ~ 12월 9일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 12, timing: "12월 7일 ~ 12월 9일", method: "서답형 40점" },
+      { name: "삼각형과 사각형의 성질 서술하기", kind: "task", weight: 20, timing: "9월 셋째주", method: "서술형" },
+      { name: "피타고라스 정리 증명 및 문제 해결하기", kind: "task", weight: 20, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "도형 성질 서술은 문제해결 40점",
+        body: "이등변삼각형과 여러 가지 사각형의 분류·성질, 삼각형의 내심·외심과 사각형의 계층적 관계를 다루며, 성질이 성립하는 이유와 그 성질을 거꾸로 조건으로 바꿔 쓰는 방법이 핵심 질문입니다. 문제해결 40점, 추론 30점, 의사소통 30점이고 AI 활용은 전면 금지입니다. 진도표에는 9월 14~18일 주에 실시로 적혀 있습니다.",
+      },
+      {
+        title: "피타고라스 과제 시기는 표마다 다름",
+        body: "a² + b² = c²을 만족하는 정수 찾기와 실생활에 적용할 수 있는 사례가 과제 내용이며, 문제 해결 40점·추론 30점·의사소통 30점으로 채점합니다. 평가 개요표에는 10월 네째주, 진도표에는 11월 2~6일 주 실시로 적혀 있어 여기서는 시기를 따로 적지 않았습니다.",
+      },
+      {
+        title: "서답형은 단답형과 서·논술형을 묶은 40점",
+        body: "평가 방법 칸에 서답형이 단답형과 서·논술형으로 나뉘어 있지만 영역 만점은 선택형 60점, 서답형 40점 두 칸으로만 적혀 있습니다. 반영 비율로는 회차마다 선택형 18%, 서답형 12%이며 시험은 10월 13~14일과 12월 7~9일입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "세포호흡과 기관계 관계 글쓰기 20%(10월) · 저항·전압·전류 전기 탐구 보고서 20%(11월)",
+    intro:
+      "평리중학교 2학년 과학은 중간·기말시험이 60%, 수행평가가 40%입니다. 10월에는 소화·순환·호흡·배설을 잇는 글쓰기, 11월에는 전기 탐구 보고서가 이어지고 두 과제 모두 20%씩입니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 18, timing: "10월 13일 ~ 10월 14일", method: "선택형 60점" },
+      { name: "중간시험(서답형)", kind: "exam", weight: 12, timing: "10월 13일 ~ 10월 14일", method: "서답형 40점" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 18, timing: "12월 7일 ~ 12월 9일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 12, timing: "12월 7일 ~ 12월 9일", method: "서답형 40점" },
+      { name: "세포호흡과 기관계의 통합적 관계 글쓰기", kind: "task", weight: 20, timing: "10월", method: "논술형" },
+      { name: "전기 탐구 보고서 작성하기", kind: "task", weight: 20, timing: "11월", method: "탐구보고서형" },
+    ],
+    notes: [
+      {
+        title: "기관계 글쓰기는 세 단계 배점 40·30·30",
+        body: "탄수화물·단백질·지방의 소화와 폐순환·온몸 순환을 설명하는 글이 40점, 폐와 조직 세포의 기체 교환과 오줌 생성(여과·재흡수·분비)을 설명하는 글이 30점, 세포 호흡을 네 기관계의 통합적 관계로 설명하는 글이 30점입니다. 진도표에는 10월 19~23일 주에 실시로 적혀 있습니다.",
+      },
+      {
+        title: "전기 보고서는 측정에서 쓰임새까지",
+        body: "저항에 따른 전압·전류 측정 30점, 전류·전압·저항의 관계 분석 30점, 저항의 연결에 따른 특징과 쓰임새 알아보기 40점으로 채점합니다. 탐구 결과를 그래프로 바꿔 해석하는 기능이 학습 요소에 들어 있고 AI는 쓰지 않으며, 진도표상 실시는 11월 23~27일 주입니다.",
+      },
+      {
+        title: "시험은 회차마다 서답형 40점",
+        body: "중간시험(10월 13~14일)과 기말시험(12월 7~9일)은 선택형 60점과 서답형 40점으로 짜여 각각 18%, 12%가 반영됩니다. 세포호흡 글쓰기는 AI를 자료조사나 아이디어 참고로만 쓸 수 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "미술작품 설명·묘사 글쓰기 20%(10월 중) · 장소 여정 안내 말하기 10% · 듣기 10%(9월 2일)",
+    intro:
+      "평리중학교 2학년 영어는 중간·기말시험 60%, 수행평가 40%이며 수행평가는 듣기 10%, 말하기 10%, 쓰기 20%로 나뉩니다. 말하기는 원어민 보조교사를 청자로 하고, 쓰기는 디지털 교과서의 AI 글쓰기 도우미 피드백을 거친 뒤 마지막 글을 씁니다.",
+    assessments: [
+      { name: "중간시험(선택형)", kind: "exam", weight: 18, timing: "10월 13일 ~ 10월 14일", method: "선택형 60점" },
+      { name: "중간시험(서답형)", kind: "exam", weight: 12, timing: "10월 13일 ~ 10월 14일", method: "서답형 40점" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 18, timing: "12월 7일 ~ 12월 9일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 12, timing: "12월 7일 ~ 12월 9일", method: "서답형 40점" },
+      { name: "영어 듣기", kind: "task", weight: 10, timing: "9월 2일", method: "듣기" },
+      { name: "특정 장소로의 여정을 안내하는 말하기", kind: "task", weight: 10, timing: "9~10월 중", method: "구술형" },
+      { name: "미술작품을 설명하고 묘사하는 글쓰기", kind: "task", weight: 20, timing: "10월 중", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "여정 안내 말하기는 질문 응답까지",
+        body: "모범 안내문을 분석해 표현을 익히고 청자를 고려해 발화를 연습한 뒤, 원어민 보조교사에게 선택된 장소로 가는 여정을 안내하고 이어지는 질문에 답합니다. 내용 및 구성 30점, 언어 사용 30점, 발음 및 유창성 20점, 개념적 이해 20점이며 진도표상 실시는 9월 21~25일 주입니다.",
+      },
+      {
+        title: "미술작품 글은 세 작품을 거쳐 완성",
+        body: "‘미술작품1’ 모범글 분석, ‘미술작품2’ 연습본 작성과 AI 글쓰기 도우미 피드백 수정, ‘미술작품3’ 최종 글쓰기 순서입니다. 정보 조직 20점, 전략 활용 20점, 내용 전달 30점, 언어 사용 30점으로 채점하고, 진도표에는 10월 12~16일 주 실시로 적혀 있습니다.",
+      },
+      {
+        title: "듣기 20문항과 결시 산출",
+        body: "영어 듣기는 문항당 5점, 20문항 100점입니다. 미인정결은 최하점의 차하점(-1)을 받고, 그 밖의 결시는 듣기 외 수행평가 영역 점수 평균에 인정점 비율을 곱해 산출합니다. 정기시험은 회차마다 선택형 60점과 서답형(단답형·서술형) 40점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "사회·문화적 배경 파악 비평문 30%(9월 3-4주) · 음운 체계별 음운 분류 20%(10월) · 기말 1회 50%",
+    intro:
+      "평리중학교 3학년 국어는 2학기 정기시험이 10월 26~28일 기말시험 한 번이고 반영 비율은 50%입니다. 나머지 50%는 비평문 쓰기 30%와 음운 분류 과제 20%로, 비평문이 시험 다음으로 큰 비중입니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 25, timing: "10월 26일~28일", method: "선택형 50점" },
+      { name: "기말시험(단답형)", kind: "exam", weight: 5, timing: "10월 26일~28일", method: "단답형 10점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 20, timing: "10월 26일~28일", method: "서·논술형 40점" },
+      { name: "작품의 사회·문화적 배경을 파악하여 비평문 쓰기", kind: "task", weight: 30, timing: "9월 3-4주", method: "논술형" },
+      { name: "음운 체계 특성에 따라 음운 분류하기", kind: "task", weight: 20, timing: "10월", method: "과제해결형" },
+    ],
+    notes: [
+      {
+        title: "비평문은 인물 태도에 대한 관점 40점",
+        body: "작품의 시대 배경이 나오는 글을 읽고 분석한 뒤 계획·개요·작성·수정의 순서로 비평문을 씁니다. 사회·문화적 맥락을 바탕으로 한 작품 분석 30점, 오늘날 삶과의 비교·대조 30점, 인물의 태도에 대한 자신의 관점 제시 40점이며 AI 활용은 전면 금지입니다. 진도표에는 9월 14~18일 주에 실시로 적혀 있습니다.",
+      },
+      {
+        title: "음운 과제는 분류 40점",
+        body: "우리말 음운 체계의 특성을 파악하고, 주어진 문장을 실제 발음에 따라 분석해 음운을 분류한 뒤, 다른 언어와 구분되는 우리말 음운 체계의 특성을 예를 들어 서술합니다. 구조 분석 30점, 음운의 특성에 따른 분류 40점, 특성 서술 30점이며, 진도표상 실시는 기말시험 직전인 10월 19~23일 주입니다.",
+      },
+      {
+        title: "기말시험 서답형이 50점",
+        body: "한 번뿐인 기말시험은 선택형 50점(25%), 단답형 10점(5%), 서·논술형 40점(20%)으로 구성됩니다. 시험 범위 대단원은 문학과 삶, 논증과 설득 전략, 소중한 우리말이고, 수행평가 두 과제도 문학과 삶·소중한 우리말 단원에서 나옵니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비 활용 문제해결 25%(9월 첫째주) · 원의 성질 정당화와 활용 25% · 10월 말 기말 50%",
+    intro:
+      "평리중학교 3학년 수학은 10월 26~28일 기말시험 한 번이 50%, 수행평가 두 과제가 25%씩입니다. 삼각비 과제가 학기 첫 달에 먼저 치러지고 원의 성질 과제가 이어져, 두 과제 모두 기말시험 전에 끝납니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "10월 26일~28일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "10월 26일~28일", method: "서답형 40점" },
+      { name: "삼각비를 활용하여 문제해결하기", kind: "task", weight: 25, timing: "9월 첫째주", method: "서술형" },
+      { name: "원의 성질을 정당화하고 이를 활용하여 문제해결하기", kind: "task", weight: 25, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각비 과제는 실생활 문제가 40점",
+        body: "삼각비의 뜻과 값을 이해하고 여러 삼각비 값을 구한 뒤, 실생활에서 삼각비가 쓰이는 상황을 조사해 문제를 직접 만들고 풀이 과정을 서술합니다. 삼각비 값 구하기 30점, 간단한 문제 해결 30점, 실생활 문제 해결 40점이며 AI 활용은 전면 금지입니다. 진도표에는 8월 31일~9월 4일 주에 실시로 적혀 있습니다.",
+      },
+      {
+        title: "원의 성질 과제 시기는 표마다 다름",
+        body: "원의 용어와 개념 정당화 30점, 원의 성질을 이용한 길이·각도 계산 30점, 실생활 문제 해결 40점으로 채점합니다. 평가 개요표에는 10월 첫째주, 진도표에는 9월 21~25일 주에 실시로 적혀 있어 시기는 적지 않았습니다. 진도표의 수업에는 원주각과 중심각의 관계, 원에 내접하는 사각형의 성질 형성평가가 함께 있습니다.",
+      },
+      {
+        title: "기말시험은 선택형 60점·서답형 40점",
+        body: "기말시험 50%는 선택형 60점(30%)과 서답형 40점(20%)으로 나뉩니다. 관련 대단원은 삼각비, 원의 성질, 대푯값과 산포도이고, 수행평가 두 과제는 그중 삼각비와 원의 성질 단원에서 나옵니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "세포분열 모형 제작·분석 글쓰기 40%(9월1~2주) · 기말시험 60%(10월 5주)",
+    intro:
+      "평리중학교 3학년 과학은 수행평가가 세포분열 글쓰기 하나로 40%이고, 나머지 60%는 10월 5주 기말시험 한 번입니다. 수행평가는 학기 초인 9월 1~2주에 놓여 있습니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 36, timing: "10월 5주", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 24, timing: "10월 5주", method: "서답형 40점" },
+      { name: "세포분열 분석하는 글쓰기", kind: "task", weight: 40, timing: "9월1~2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "모형 제작과 실생활 적용이 각 30점",
+        body: "세포분열 과정을 모형으로 만들어 단계별 특징을 설명하고, 분열 결과를 분석해 실생활에 적용하는 글을 씁니다. 모형 제작 30점, 개념이해도 20점, 비교분석 20점, 실생활 적용 30점이며 AI 활용은 금지됩니다.",
+      },
+      {
+        title: "체세포분열과 감수분열을 함께 다룸",
+        body: "핵심 질문은 생명체가 왜 체세포분열과 감수분열이라는 두 방식을 쓰는가이고, 모형으로 생명 현상을 설명하거나 예측하는 기능이 학습 요소입니다. 진도표에는 8월 31일~9월 4일 주에 수행평가 내용과 글쓰기 방법 안내, 세포분열 분석 글쓰기가 함께 적혀 있습니다.",
+      },
+      {
+        title: "기말시험 한 번이 60%",
+        body: "10월 5주 기말시험은 선택형 60점(36%)과 서답형 40점(24%)으로 나뉩니다. 서답형은 평가 방법 칸에 단답형과 서·논술형으로 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "장래 직업 소개 글쓰기 35% · 영어 듣기 15%(9월 3일) · 기말 서답형 60점",
+    intro:
+      "평리중학교 3학년 영어는 10월 26~28일 기말시험 50%, 수행평가 50%입니다. 수행평가는 영어 듣기 15%와 장래 직업 소개 글쓰기 35% 두 개뿐이어서 글쓰기 한 과제의 비중이 큽니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 20, timing: "10월 26일~28일", method: "선택형 40점" },
+      { name: "기말시험(단답형)", kind: "exam", weight: 10, timing: "10월 26일~28일", method: "단답형 20점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 20, timing: "10월 26일~28일", method: "서·논술형 40점" },
+      { name: "영어 듣기", kind: "task", weight: 15, timing: "9월 3일", method: "듣기" },
+      { name: "장래 직업 소개하는 글쓰기", kind: "task", weight: 35, method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "직업 소개 글은 내용 전달 40점",
+        body: "관심 있거나 희망하는 직업의 특징, 장·단점, 필요한 자질을 조사하고 초안에 피드백을 반영한 뒤 필수 문장 구조를 넣어 직업 소개 글을 완성합니다. 글의 구조 30점, 내용 전달 40점, 언어사용 및 정확성 30점입니다. 평가 개요표는 9월 3주~4주, 진도표는 9월 14~18일 주와 9월 28일~10월 2일 주에 실시를 적고 있어 시기는 따로 적지 않았습니다.",
+      },
+      {
+        title: "듣기는 EBS 전국 단위 20문항",
+        body: "영어 듣기는 EBS 전국 단위 영어 듣기 평가 20문항(100점)을 그대로 씁니다. 미인정결이면 최하점에 차하점을 주고, 그 밖의 결시는 듣기 외 수행평가 점수 평균에 인정점 비율을 곱해 계산합니다.",
+      },
+      {
+        title: "기말시험은 서답형 60점",
+        body: "기말시험 100점 중 선택형은 40점(20%)이고 단답형 20점(10%)과 서·논술형 40점(20%)이 서답형입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongri-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "고려 시대 역사신문 기사 작성 40%(9월 말～10월 초) · 기말 선택형 65점·서답형 35점",
+    intro:
+      "평리중학교 3학년 역사는 10월 26~28일 기말시험 60%와 고려 시대 역사신문 기사 작성 40%로 이루어집니다. 수행평가가 한 과제뿐이어서 역사신문 하나가 성적의 40%를 차지합니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 39, timing: "10월 26일~28일", method: "선택형 65점", course: "역사" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 21, timing: "10월 26일~28일", method: "서답형 35점", course: "역사" },
+      { name: "고려 시대 역사신문 기사 작성하기", kind: "task", weight: 40, timing: "9월 말～10월 초", method: "논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "역사신문은 다섯 단계",
+        body: "신문 기사의 주제와 기획 의도를 담은 계획서를 쓰고, 자료를 모아 정리한 뒤 인터뷰 기사와 자신의 생각이 드러나는 사설 또는 칼럼을 작성하고, 마지막에 기사를 편집해 역사신문으로 완성합니다. 자료 수집 및 분석의 적절성 30점, 역사적 비판력 및 논리성 40점, 구성 및 표현의 창의성 30점이며 AI 활용은 전면 금지입니다.",
+      },
+      {
+        title: "9월 형성평가가 신문 과제로 이어짐",
+        body: "진도표에서는 9월 7일 주부터 매주 수행평가와 연계된 형성평가가 이어지고, 10월 5~9일 주에 고려 시대 역사신문 기사 작성이 실시됩니다. 성취기준 영역은 고려의 성립과 변천입니다.",
+      },
+      {
+        title: "기말시험은 선택형 39%",
+        body: "기말시험 60%는 선택형 65점(39%)과 서답형 35점(21%)으로 나뉘며 10월 26~28일에 치릅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평리중학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "주제통합적 글쓰기(9월 2주)·문법 탐구하기(11월 4주) 논술 각 20% · 시험 2회 각 30%",
+    intro:
+      "평택고등학교 1학년 공통국어2는 1차(10월 3주)·2차(12월 3주) 정기시험이 각 30%이고, 수행평가 두 과제가 20%씩입니다. 두 수행평가가 모두 논술형으로 반영되어 논술형 비율은 40%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 3주", method: "선택형" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형" },
+      { name: "주제통합적 글쓰기", kind: "task", weight: 20, timing: "9월 2주", method: "논술" },
+      { name: "문법 탐구하기", kind: "task", weight: 20, timing: "11월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "주제통합적 글쓰기는 요약·관점 분석이 15점",
+        body: "동일한 화제를 다루는 서로 다른 글을 요약하여 읽고 관점과 근거를 분석하는 항목이 15점, 자신의 관점을 타당한 근거·이유와 함께 제시하는 항목이 5점입니다. 진도표에서는 9월 2주에 자기성찰 일지로 주제 통합적 읽기 과정을 점검하고 수행평가와 연계합니다.",
+      },
+      {
+        title: "문법 탐구하기는 중세 국어 자료로",
+        body: "중세 문헌 자료를 현대어로 바꾸어 보기, 중세 국어와 현대어 풀이의 음운 차이 탐구, 고전 작품의 중세어를 현대어로 바꾸기, 고전 작품 속 중세 국어 특징과 현대 국어 비교가 5점씩입니다. 11월 4주 진도표 칸에 수행평가 연계가 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "명제를 활용하여 사고하기 20%·수리논술 15%·도형의 방정식 신문 15% · 시험 각 25%",
+    intro:
+      "평택고등학교 1학년 공통수학2는 1차(10월 3주)·2차(12월 3주) 정기시험이 각 25%이고, 수행평가 세 과제가 50%를 차지합니다. 논술형 반영은 명제 과제 20%와 수리논술 15%를 더한 35%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주", method: "선택형" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형" },
+      { name: "명제를 활용하여 사고하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술형" },
+      { name: "수리논술", kind: "task", weight: 15, timing: "11월 2주", method: "논술형" },
+      { name: "도형의 방정식 신문 만들기", kind: "task", weight: 15, timing: "9월 5주~10월 1주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "명제 과제에는 인공지능 검토 항목이 있습니다",
+        body: "명제가 참이기 위한 조건 확인하기 6점, 인공지능의 한계와 보완방법 제시하기 8점, 사고를 논리적으로 쓰기 6점입니다. 학생 유의사항에는 AI를 허용된 범위 안에서만 쓰고, AI 생성물을 출처 표기 없이 그대로 제출하지 않도록 적혀 있습니다.",
+      },
+      {
+        title: "수리논술과 신문 만들기의 항목",
+        body: "수리논술은 도형의 방정식, 집합과 명제, 함수와 그래프 개념을 활용해 논리적으로 해결하는 항목이 5점씩입니다. 9월 5주~10월 1주 신문 만들기는 도형의 방정식 관련 주제 선정, 자기 생각 표현, 기사 작성이 5점씩입니다.",
+      },
+      {
+        title: "진도표에 적힌 정기시험 범위",
+        body: "10월 3주 칸에는 도형의 방정식·집합 관련 문제 해결 역량을, 12월 3주 칸에는 도형의 방정식부터 집합, 명제, 함수, 유리함수·무리함수까지 관련 문제 해결 역량을 평가한다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "그래프 분석하기 30%(11월 1주)·나의 롤모델 소개 20%·문장완성하기 10% · 시험 각 20%",
+    intro:
+      "평택고등학교 1학년 공통영어2는 1·2차 정기시험이 각 20%로 수행평가 60%보다 비중이 작습니다. 수행평가 가운데 논술형으로 반영되는 것은 30%인 그래프 분석하기 하나입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "10월 3주", method: "선택형" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 3주", method: "선택형" },
+      { name: "그래프 분석하기", kind: "task", weight: 30, timing: "11월 1주", method: "논술형" },
+      { name: "나의 롤모델 소개하기", kind: "task", weight: 20, timing: "9월 5주~10월 1주" },
+      { name: "문장완성하기", kind: "task", weight: 10, timing: "9월 1주" },
+    ],
+    notes: [
+      {
+        title: "그래프 분석은 도표 설명이 12점",
+        body: "관심 분야 도표의 정보를 분석해 개요 완성하기 10점, 사실적 정보를 전달하는 글의 구성요소 갖추기 3점, 도표 정보를 분석하여 설명하기 12점, 어휘나 표현 점검 5점으로 30점입니다.",
+      },
+      {
+        title: "롤모델 소개는 같은 틀을 인물에 적용",
+        body: "롤모델 정보를 분석한 개요 5점, 구성요소 3점, 인물 설명 8점, 어휘·표현 점검 4점으로 그래프 과제와 항목 순서가 같습니다. 9월 1주 문장완성하기는 세부 정보 파악 4점, 전개 방식·구조 파악 3점, 요약하여 말하거나 기술하기 3점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2", "한국사2"],
+    summary: "인권 문제·경제 주체 논술 각 25% / 한국사2 사료 분석 논술·AI 쟁점 토론 각 20%",
+    intro:
+      "평택고등학교 1학년 통합사회2와 한국사2는 모두 정기시험 2회가 각 25%, 수행평가가 50%입니다. 통합사회2는 논술 과제 두 개가 25%씩이고, 한국사2는 논술·토론·포트폴리오 세 과제로 나뉩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주", method: "선택형", course: "통합사회2" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형", course: "통합사회2" },
+      { name: "인권 문제 논술하기", kind: "task", weight: 25, timing: "8월 6주", method: "논술형", course: "통합사회2" },
+      { name: "경제 주체의 합리적 선택과 역할 논술하기", kind: "task", weight: 25, timing: "10월 5주", method: "논술형", course: "통합사회2" },
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주", method: "선택형", course: "한국사2" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형", course: "한국사2" },
+      { name: "사료 분석 논술", kind: "task", weight: 20, timing: "9월 3주", method: "논술형", course: "한국사2" },
+      { name: "AI 활용 한국사 쟁점 토론", kind: "task", weight: 20, timing: "10월 4주", method: "논술형", course: "한국사2" },
+      { name: "한국사 배움노트 포트폴리오", kind: "task", weight: 10, timing: "12월 2주", method: "포트폴리오", course: "한국사2" },
+    ],
+    notes: [
+      {
+        title: "통합사회2 논술 두 과제의 배점",
+        body: "인권 문제 논술하기는 인권의 의미 이해 5점, 인권 문제 사례 분석 10점, 해결 방안 논술 10점입니다. 경제 주체 과제는 합리적 선택의 의미 이해 5점에 정부와 소비자의 역할과 책임 논술이 10점씩이고, 두 과제 모두 논술형 반영이 20%입니다.",
+      },
+      {
+        title: "한국사2 쟁점 토론은 AI 근거 검증을 채점",
+        body: "AI 활용 한국사 쟁점 토론은 쟁점 선정·구조화, AI가 제시한 근거의 신뢰성 검증, 다른 관점 검토 후 주장 수정·보완, 최종 주장 논술이 5점씩입니다. 9월 3주 사료 분석 논술은 사료 분석 5점, 역사적 사실을 근거로 한 답변 10점, 핵심 요약·구조화 5점입니다.",
+      },
+      {
+        title: "배움노트는 학기 끝에 한 번",
+        body: "한국사 배움노트 포트폴리오(10%)는 12월 2주에 학습 내용 구조화와 포트폴리오 완성을 5점씩 봅니다. 통합사회2의 인권 논술은 비율표와 진도표 모두 8월 6주로 학기 첫 수행평가입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "과학 윤리 논술 20%(11월 1주)·생물다양성 논술 10%·중화 반응 탐구 10% · 시험 각 30%",
+    intro:
+      "평택고등학교 1학년 통합과학2는 1차(10월 3주)·2차(12월 3주) 정기시험이 각 30%, 수행평가 세 과제가 40%입니다. 9월 2주 생물다양성 논술과 10월 3주 중화 반응 탐구가 10%씩, 11월 1주 과학 윤리 논술이 20%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 3주", method: "선택형" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형" },
+      { name: "과학 관련 사회적 쟁점과 과학 윤리 논술하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술형" },
+      { name: "생물자원의 이용 사례와 생물다양성보전을 위한 실천 방안 논술하기", kind: "task", weight: 10, timing: "9월 2주", method: "논술형" },
+      { name: "산과 염기의 중화 반응 탐구하기", kind: "task", weight: 10, timing: "10월 3주" },
+    ],
+    notes: [
+      {
+        title: "과학 윤리 논술의 네 항목",
+        body: "과학 윤리 원칙 서술 3점, 사례의 핵심 내용 분석 5점, 판단 근거 및 이유 서술 5점, 과학 윤리 개념 서술 7점으로 20점입니다.",
+      },
+      {
+        title: "중화 반응 과제의 논술형은 3%",
+        body: "중화 반응의 입자 모형에서 화학 반응식과 액상을 추론하는 항목이 7점, 일상생활에서 중화 반응의 이용 사례 설명이 3점(논술형)이라 이 과제의 논술형 반영은 3%로 적혀 있습니다. 생물다양성 과제는 생물자원 이용 사례 설명과 보전 실천 방안 논술이 5점씩입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["화법과 언어"],
+    summary: "언어 탐구 논술은 문법 네 영역을 다루고, 발표 과제의 절반은 담화 요약입니다",
+    intro:
+      "평택고등학교 2학년 화법과 언어는 1차(10월 3주)·2차(12월 3주) 정기시험이 각 30%이고 수행평가 두 과제가 20%씩입니다. 논술형 반영은 언어 탐구 논술 20%와 발표 과제 10%를 합친 30%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 3주", method: "선택형" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형" },
+      { name: "언어 탐구 논술", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "담화의 내용과 구조 분석하여 발표하기", kind: "task", weight: 20, timing: "9월 5주~11월 1주" },
+    ],
+    notes: [
+      {
+        title: "언어 탐구 논술은 문법 네 영역",
+        body: "표준 발음법의 원리 탐구, 단어의 품사 구조 파악과 적절성 분석, 문장 구조 파악과 적절성 분석, 단어 간 의미 관계 비교가 5점씩입니다.",
+      },
+      {
+        title: "발표 과제의 절반은 요약",
+        body: "담화의 구조를 고려하여 요약하기가 10점(논술형)이고, 응집력 있는 발표 자료 구성과 언어적·준언어적·비언어적 표현 전략을 활용한 발표가 5점씩입니다. 과제 기간이 9월 5주부터 11월 1주까지여서 1차 정기시험 주간을 사이에 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ"],
+    summary: "공학도구 탐구는 조별 발표와 기록지로 보고, 수리논술 범위와 포트폴리오 배점이 따로 있습니다",
+    intro:
+      "평택고등학교 2학년 미적분Ⅰ은 정기시험 2회가 각 25%, 수행평가 세 과제가 50%입니다. 교과서 포트폴리오가 8월 4주부터 11월 2주까지 이어지고, 11월에 수리논술(1주)과 공학도구 탐구(4주)가 놓여 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주", method: "선택형" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형" },
+      { name: "공학도구를 활용하여 관심 있는 주제 심화 탐구하기", kind: "task", weight: 20, timing: "11월 4주", method: "논술형" },
+      { name: "수리논술", kind: "task", weight: 15, timing: "11월 1주", method: "논술형" },
+      { name: "교과서를 활용한 나만의 포트폴리오 만들기", kind: "task", weight: 15, timing: "8월 4주~11월 2주" },
+    ],
+    notes: [
+      {
+        title: "공학도구 탐구는 조별 발표와 기록지",
+        body: "각 조가 관심 있는 수학 주제를 탐구해 발표하는 항목 10점과 탐구 내용 기록지 작성 10점으로 이루어지며, 이 과제가 논술형 20%로 반영됩니다.",
+      },
+      {
+        title: "수리논술 범위와 포트폴리오 배점",
+        body: "수리논술은 함수의 극한과 연속, 도함수·접선의 방정식, 함수의 그래프 문제를 논리적으로 해결하는 항목이 5점씩입니다. 포트폴리오는 교과서 문항을 꾸준하게 풀이하기 9점, 인상 깊은 수학 문제를 활동지에 작성하고 해결하기 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "pyeongtaek-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "비유·상징·각운 같은 기법으로 가사를 짓고 의도를 발표하며, 논술형은 창작과 문장 완성에만 있습니다",
+    intro:
+      "평택고등학교 2학년 영어Ⅱ는 1·2차 정기시험이 각 25%이고, 수행평가는 영어 가사를 직접 쓰고 발표하는 과제가 중심입니다. 가사 창작과 발표가 20%씩, 문맥 기반 문장 완성하기가 10%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주", method: "선택형" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형" },
+      { name: "영어 가사 창작하기", kind: "task", weight: 20, timing: "9월 4주", method: "논술형" },
+      { name: "창작 가사 발표하기", kind: "task", weight: 20, timing: "10월 5주" },
+      { name: "문맥 기반 문장 완성하기", kind: "task", weight: 10, timing: "9월 2주~11월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "가사 창작과 발표의 채점 요소",
+        body: "가사 창작은 중심 주제와 메시지의 일관성 8점, 비유·상징·각운·두운 등 표현 기법 활용 8점, 정확한 어휘와 언어 형식 4점입니다. 발표는 창작 의도와 메시지 설명 6점, 활용한 6가지 표현·형식 요소의 의미와 효과 설명 6점, 발음·음량·속도 5점, 시각자료 활용 3점입니다.",
+      },
+      {
+        title: "논술형은 창작과 문장 완성에만",
+        body: "논술형 반영은 가사 창작 20%와 문장 완성 10%를 합한 30%이고 발표 과제에는 없습니다. 문장 완성하기는 9월 2주부터 11월 4주까지 이어지며 글의 맥락과 조건에 맞는 내용과 어휘 활용을 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("평택고등학교")],
+  },
+  {
+    schoolSlug: "seodaegu-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "비평·관점 전환 창작물 25% · 한국어와 한글 가치 복합양식 글쓰기 25%(11월 중) · MYP 기준 채점",
+    intro:
+      "서대구중학교 2학년 국어는 12월 2~3일 기말시험 50%와 수행평가 50%로, 시험은 선택형 50점과 서답형 50점이 반씩입니다. 수행평가 두 과제는 IB MYP 평가 기준으로 채점되어 과제마다 두 기준이 50점씩 배정됩니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 25, timing: "12월 2일 ~ 12월 3일", method: "선택형 50점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 25, timing: "12월 2일 ~ 12월 3일", method: "서답형 50점" },
+      { name: "시대의 맥락을 읽는 비평과 관점 전환 창작물 작성하기", kind: "task", weight: 25, method: "프로젝트" },
+      { name: "한국어와 한글의 가치를 알리는 복합양식 글쓰기", kind: "task", weight: 25, timing: "11월 중", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "창작 과제는 A 분석하기·C 텍스트 생산하기",
+        body: "작품에 드러난 시대·사회적 맥락과 화자·서술자·작가의 관점을 분석하고, 작품의 문제의식을 오늘날 청소년의 삶과 연결해 반어·풍자·역설을 살린 비평이나 창작물로 재구성한 뒤 성찰일지를 씁니다. MYP 기준 A(분석하기) 50점과 C(텍스트 생산하기) 50점이며, AI는 브레인스토밍·표현 예시 탐색 같은 보조 수준에서만 쓰고 기록해야 합니다.",
+      },
+      {
+        title: "한글 과제는 B 조직화하기·D 언어 사용하기",
+        body: "두 번째 과제는 맥락과 의도에 맞는 조직 구조와 발표 형식을 갖추는 B(조직화하기) 50점, 어휘·문장 구조·문체·문법을 보는 D(언어 사용하기) 50점으로 채점합니다. 진도표에는 11월 16~20일 주에 실시로 적혀 있습니다.",
+      },
+      {
+        title: "첫 과제 시기는 표마다 다름",
+        body: "비평·창작 과제는 평가 개요표에 9월 말~10월 초, 진도표에는 9월 14~18일 주 실시로 적혀 있어 시기를 따로 적지 않았습니다. AI 활용 내역을 빠뜨리거나 수행 과정을 스스로 설명하지 못하면 감점이나 재작성을 요구할 수 있다고 안내되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("서대구중학교")],
+  },
+  {
+    schoolSlug: "seodaegu-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "도형 성질로 구조물 설계 25%(9월) · 닮음비로 안전한 구조물 설계 25%(10월) · 기말 선택형 60점",
+    intro:
+      "서대구중학교 2학년 수학은 12월 2~3일 기말시험 50%와 수행평가 50%입니다. 두 수행평가 모두 ‘구조물 설계’를 소재로 하며, 9월에는 도형의 성질, 10월에는 닮음비를 씁니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 30, timing: "12월 2일 ~ 12월 3일", method: "선택형 60점" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 20, timing: "12월 2일 ~ 12월 3일", method: "서답형 40점" },
+      { name: "도형의 성질을 이용한 구조물 설계하기", kind: "task", weight: 25, timing: "9월", method: "논술형" },
+      { name: "닮음비를 이용한 안전한 구조물 설계하기", kind: "task", weight: 25, timing: "10월", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "구조물 속 도형 찾기는 A·B 기준",
+        body: "다양한 구조물 안의 도형을 찾고, 도형을 적용한 수학적 이유를 서술한 뒤 패턴 규칙을 정당화합니다. MYP 기준 A(지식과 이해) 50점과 B(패턴분석) 50점이며 AI는 쓰지 않습니다. 성취기준은 [9수03-09]~[9수03-11]입니다.",
+      },
+      {
+        title: "닮음비 과제는 C·D 기준",
+        body: "안전한 구조물을 설치하기 위한 문제 상황을 정리하고 해결 방안을 제시하는 과제로, C(의사소통) 50점과 D(실생활 맥락에 수학 적용하기) 50점입니다. 진도표에는 수학적 언어(표기법·기호·용어) 사용이 함께 적혀 있고, 실시는 10월 19~23일 주입니다.",
+      },
+      {
+        title: "기말시험은 선택형 60점·서답형 40점",
+        body: "기말시험은 선택형 60점(30%)과 서답형(단답형·서술형) 40점(20%)입니다. 첫 과제는 진도표상 9월 7~11일 주에 실시됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("서대구중학교")],
+  },
+  {
+    schoolSlug: "seodaegu-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "인권 유린 성찰 포럼 연설문 25%(10월) · 인간의 존엄성 성찰 연설하기 25%(11월)",
+    intro:
+      "서대구중학교 2학년 역사는 12월 2~3일 기말시험 50%(선택형·서답형 각 25%)와 수행평가 50%입니다. 수행평가는 10월에 연설문을 쓰고 11월에 그 주제로 연설하는 두 단계로 이어집니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 25, timing: "12월 2일 ~ 12월 3일", method: "선택형 50점", course: "역사" },
+      { name: "기말시험(서답형)", kind: "exam", weight: 25, timing: "12월 2일 ~ 12월 3일", method: "서답형 50점", course: "역사" },
+      { name: "배타적 정체성의 사례를 소개하는 인권 유린 성찰 포럼 연설문 작성하기", kind: "task", weight: 25, timing: "10월", method: "논술형", course: "역사" },
+      { name: "역사 속 인간의 존엄성을 성찰하는 연설하기", kind: "task", weight: 25, timing: "11월", method: "구술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "연설문은 MYP 기준 A 하나로 100점",
+        body: "역사 속 배타적 정체성의 사례를 조사하고 관련 용어를 정리한 뒤, 그로 인한 인권 유린 사례를 SEE 기법으로 설명하고 ‘자작자작’ 플랫폼·동료·교사 피드백을 거쳐 최종 연설문을 씁니다. A(알기와 이해하기) 한 기준으로 100점을 매기며, AI를 쓰면 ‘AI활용 내역’란에 프롬프트를 기록해야 합니다.",
+      },
+      {
+        title: "연설은 기준 C 의사소통하기",
+        body: "두 번째 과제는 C(의사소통하기) 100점으로 채점합니다. 진도표에서는 발표 영상을 찍어 체크리스트로 스스로 평가하고 학생끼리 연설문 발표와 피드백을 주고받은 뒤 11월 9~13일 주에 실시합니다.",
+      },
+      {
+        title: "성취기준은 세계 대전과 민족 운동",
+        body: "수행평가 성취기준은 [9역05-03], [9역06-01]~[9역06-03]으로 제국주의 침략에 대한 아시아의 대응, 두 차례 세계 대전, 전쟁 범죄와 평화 실현 노력, 아시아·아프리카 민족 운동을 다룹니다. 연설문은 진도표상 10월 26~30일 주에 실시됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("서대구중학교")],
+  },
+  {
+    schoolSlug: "seodaegu-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주체적 관점 작품 분석 글 30%(9월 중) · 대중가요 현대적 재해석 발표 30%(10월 중)",
+    intro:
+      "서대구중학교 3학년 국어는 11월 4~5일 기말시험이 40%이고 수행평가가 60%로 더 큽니다. 기말시험은 선택형 50점과 서·논술형 50점으로 단답형 없이 나뉘고, 수행평가는 작품 분석 글과 대중가요 재해석 발표가 30%씩입니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 20, timing: "11월 4일 ~ 11월 5일", method: "선택형 50점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 20, timing: "11월 4일 ~ 11월 5일", method: "서·논술형 50점" },
+      { name: "주체적 관점의 작품 분석 글쓰기", kind: "task", weight: 30, timing: "9월 중", method: "논술형" },
+      { name: "대중가요의 현대적 재해석 탐구 발표하기", kind: "task", weight: 30, timing: "10월 중", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "작품 분석 글은 네 편 중 한 편 선택",
+        body: "제시된 문학 작품 4편 가운데 한 편을 골라 인물·사건·배경을 파악하고, 내재적·외재적 관점 중 하나를 적용해 해석한 뒤 근거를 들어 자기 해석을 정당화합니다. MYP 기준 A(분석하기) 50점과 C(텍스트 생산하기) 50점이며, 개요·논지 설계나 해석을 AI에 맡기는 행위는 금지됩니다. 진도표상 실시는 9월 7~11일 주입니다.",
+      },
+      {
+        title: "대중가요 발표는 B·D 기준",
+        body: "두 번째 과제는 구술형 발표로 B(조직화하기) 50점과 D(언어 사용하기) 50점으로 채점하며, 진도표에는 10월 12~16일 주에 실시로 적혀 있습니다.",
+      },
+      {
+        title: "시험보다 수행평가 비중이 큼",
+        body: "기말시험 40%는 선택형 50점(20%)과 서·논술형 50점(20%)이고, 수행평가 두 과제가 합쳐 60%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("서대구중학교")],
+  },
+  {
+    schoolSlug: "seodaegu-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비 원리 탐구·현상 모델링 20%(9월 중~말) · 원의 성질 탐구 20%(10월 중~말) · 기말 60%",
+    intro:
+      "서대구중학교 3학년 수학은 11월 4~5일 기말시험이 60%, 수행평가 두 과제가 20%씩입니다. 기말시험은 선택형 60점과 서·논술형 40점이고, 수행평가는 삼각비와 원의 성질 단원에서 하나씩 나옵니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 36, timing: "11월 4일 ~ 11월 5일", method: "선택형 60점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 24, timing: "11월 4일 ~ 11월 5일", method: "서·논술형 40점" },
+      { name: "삼각비의 원리 탐구 및 현상 모델링하기", kind: "task", weight: 20, timing: "9월 중~9월 말", method: "논술형" },
+      { name: "원의 성질 탐구하기", kind: "task", weight: 20, timing: "10월 중~10월 말", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각비 과제는 B 패턴조사·D 실생활 적용",
+        body: "삼각비의 뜻과 값을 알고 삼각비로 길이를 구하는 문제를 해결하는 과제([9수04-17]·[9수04-18])로, MYP 기준 B(패턴조사하기) 50점과 D(실생활 맥락에 수학 적용하기) 50점입니다. 진도표상 실시는 9월 21~25일 주입니다.",
+      },
+      {
+        title: "원의 성질은 A·C 기준",
+        body: "원의 현에 대한 성질, 접선에 대한 성질, 원주각의 성질 문제를 해결하는 과제로 A(알기 및 이해하기) 50점과 C(의사소통하기) 50점이며, C에는 논리적 구조로 정보를 조직하는 항목이 들어 있습니다. 진도표상 실시는 10월 26~30일 주입니다.",
+      },
+      {
+        title: "기말시험 비중이 60%",
+        body: "기말시험 60%는 선택형 60점(36%)과 서·논술형 40점(24%)으로 나뉘며 관련 대단원은 삼각비와 원의 성질입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("서대구중학교")],
+  },
+  {
+    schoolSlug: "seodaegu-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "설문조사 데이터 구조적 보고서 30% · 선호와 이유 인터뷰 20%(10월 중) · 영어 듣기 10%(9월 3일)",
+    intro:
+      "서대구중학교 3학년 영어는 11월 4~5일 기말시험 40%, 수행평가 60%입니다. 수행평가는 영어 듣기 10%, 설문조사 보고서 30%, 원어민 선생님과의 인터뷰 20%이고 기말시험은 선택형과 서·논술형이 50점씩입니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 20, timing: "11월 4일 ~ 11월 5일", method: "선택형 50점" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 20, timing: "11월 4일 ~ 11월 5일", method: "서·논술형 50점" },
+      { name: "영어 듣기", kind: "task", weight: 10, timing: "9월 3일" },
+      { name: "설문조사 데이터를 활용한 구조적 보고서 쓰기", kind: "task", weight: 30, method: "논술형" },
+      { name: "나의 선호와 그 이유에 대해 인터뷰하기", kind: "task", weight: 20, timing: "10월 중", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "보고서는 도입-분석-결론-제안 구조",
+        body: "예시 보고서의 구조와 표현을 분석하고 도입-분석-결론-제안 형식을 익힌 뒤, 새로 주어지는 설문조사 표나 그래프를 분석해 비교 표현·분사구문·접속사 as 같은 어법을 넣어 보고서를 씁니다. MYP 기준 B(읽기) 50점과 D(쓰기) 50점이며 평가 중에는 AI를 쓰지 않습니다. 개요표의 시기(9월 말)와 진도표의 실시 위치가 달라 시기는 적지 않았습니다.",
+      },
+      {
+        title: "인터뷰는 원어민 선생님과 90초",
+        body: "원어민 선생님과 90초 동안 1:1 인터뷰를 하며 자신의 선호와 이유를 말합니다. A(듣기) 50점과 C(말하기) 50점으로 채점하고, 진도표에는 5W1H로 자세히 말하기 연습이 함께 적혀 있습니다.",
+      },
+      {
+        title: "듣기는 교육청 공동 주관 평가",
+        body: "영어 듣기 10%는 교육청 공동 주관 영어듣기능력평가로 9월 3일에 실시합니다. 기말시험 40%는 선택형 50점(20%)과 서·논술형 50점(20%)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("서대구중학교")],
+  },
+  {
+    schoolSlug: "seodaegu-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회 경제 스토리보드·환경 이슈 카드뉴스 각 20% / 역사 고대인 일기·작가 노트 각 25%(10월)",
+    intro:
+      "서대구중학교 3학년은 사회와 역사 모두 11월 4~5일 기말시험을 보지만 비중이 다릅니다. 사회는 기말시험 60%·수행평가 40%, 역사는 기말시험 50%·수행평가 50%이고, 역사 수행평가 두 과제는 모두 10월에 실시됩니다.",
+    assessments: [
+      { name: "기말시험(선택형)", kind: "exam", weight: 39, timing: "11. 4~11. 5", method: "선택형 65점", course: "사회" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 21, timing: "11. 4~11. 5", method: "서·논술형 35점", course: "사회" },
+      { name: "경제 현상에 관한 스토리보드 작성하기", kind: "task", weight: 20, timing: "9월", method: "프로젝트형", course: "사회" },
+      { name: "환경 이슈 카드뉴스 만들기", kind: "task", weight: 20, timing: "10월", method: "논술형", course: "사회" },
+      { name: "기말시험(선택형)", kind: "exam", weight: 25, timing: "11월 4일 ~ 11월 5일", method: "선택형 50점", course: "역사" },
+      { name: "기말시험(서·논술형)", kind: "exam", weight: 25, timing: "11월 4일 ~ 11월 5일", method: "서·논술형 50점", course: "역사" },
+      { name: "고대인이 되어 문화와 정체성이 드러난 일기 작성하기", kind: "task", weight: 25, timing: "10월", method: "논술형", course: "역사" },
+      { name: "시공간적 특징과 고대인의 생활상을 연결하는 작가 노트 작성하기", kind: "task", weight: 25, timing: "10월", method: "논술형", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 스토리보드와 카드뉴스의 채점 방식",
+        body: "스토리보드는 물가 상승·실업·환율 상승·환율 하락 사례를 조사해 원인과 영향을 분석하고 경제 활동 모습을 그리는 과제로, MYP 기준 A(알기와 이해하기)와 C(의사 소통하기)가 50점씩입니다. 카드뉴스는 자료 수집의 적절성 20점, 문제 상황 분석의 정확성 20점, 문제 해결 방법의 적절성 30점, 논리적 구성력 30점으로 매깁니다.",
+      },
+      {
+        title: "역사 일기는 Step Inside 루틴",
+        body: "삼국·남북국 시대의 탐구 주제와 연구 질문을 정하고 당대 인물의 배경을 구상한 뒤, 고증 자료를 모아 Step Inside 루틴에 따라 역사 일기를 씁니다. 일기는 A(알기와 이해하기)·B(조사하기) 50점씩, 작가 노트는 D(비판적으로 사고하기) 100점입니다. AI로 찾은 사료 정보는 교과서·국립박물관 자료와 교차 검증하고 일기 본문 대필은 금지됩니다.",
+      },
+      {
+        title: "진도표의 실시 주",
+        body: "사회 스토리보드는 9월 14~18일 주, 카드뉴스는 10월 19~23일 주에 실시됩니다. 역사는 일기가 10월 12~16일 주, 작가 노트가 10월 19~23일 주로 한 주 간격입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("서대구중학교")],
+  },
+  {
+    schoolSlug: "seongnam-middle-school-dongjak",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주제에 맞는 글쓰기(도서 감상문 작성) 40%(9~10월) · 10월 중간 30% · 12월 기말 30%",
+    intro:
+      "성남중학교 1학년 국어는 9~10월에 쓰는 '주제에 맞는 글쓰기' 한 과제가 수행평가 40%를 모두 차지하고, 10월 중간고사와 12월 기말고사가 30%씩입니다. 글쓰기의 평가주제는 '함께 사는 세상' 단원과 연결된 도서 감상문 작성입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월" },
+      { name: "주제에 맞는 글쓰기", kind: "task", weight: 40, timing: "9~10월 중", method: "서술·논술 · 개인별 수행 · 100점" },
+    ],
+    notes: [
+      {
+        title: "글쓰기 한 편이 수행평가 전부",
+        body: "수행평가는 개인별 서술·논술 한 과제(100점)뿐이며, 성취기준은 [9국02-08] 읽기 과정 점검·조정, [9국03-08] 쓰기 과정 점검과 고쳐 쓰기, [9국05-02] 갈등의 진행과 해결 과정 감상입니다. 표절이나 부정행위가 적발되면 0점이고, 평가에 참여하지 않아도 0점입니다.",
+      },
+      {
+        title: "진도표에 매달 들어가는 어휘 학습",
+        body: "진도표에는 10월과 12월에 '관용표현과 어휘', 1월에 '어휘'가 [9국04-07]로 배치되어 있고, 11월에는 '단어의 짜임'([9국04-02])과 '추론하며 읽기'([9국02-03])를 배웁니다. 평가 표의 서·논술형 학기말 반영비율은 40%로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("성남중학교")],
+  },
+  {
+    schoolSlug: "seongnam-middle-school-dongjak",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "단원별 형성평가 40%(8~11월 수시) · 10월 중간 30% · 12월 기말 30%",
+    intro:
+      "성남중학교 1학년 수학은 수행평가가 8~11월 수시로 보는 형성평가 하나(40%)이고, 10월 중간고사와 12월 기말고사가 30%씩입니다. 형성평가는 '기본도형과 작도'부터 '자료의 정리와 해석'까지 단원별 문제 해결 능력을 서술·논술로 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월" },
+      { name: "형성평가", kind: "task", weight: 40, timing: "8~11월(수시평가)", method: "서술·논술 · 100점" },
+    ],
+    notes: [
+      {
+        title: "회차마다 갈리는 성취기준",
+        body: "평가 표의 성취기준은 중간고사가 9수03-01~06, 기말고사가 9수03-07~08과 9수04-01~04입니다. 형성평가는 두 범위를 모두 포함한 9수03-01~08, 9수04-01~04를 다룹니다.",
+      },
+      {
+        title: "부정행위는 그 회차에만 최하점",
+        body: "형성평가는 개인별 수행 100점 만점이며, 수업과 평가를 통합해 과정을 중시하는 평가로 운영한다고 적혀 있습니다. 표절 등 부정행위가 적발되면 해당 평가에 최하점을 주고, 여러 번을 합산하는 평가라면 부정행위가 있었던 회차에만 적용합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("성남중학교")],
+  },
+  {
+    schoolSlug: "seongnam-middle-school-dongjak",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "청소년 근로계약서 작성 보고서 40%(11월) · 선택형 중간(10월)·기말(12월) 30%씩",
+    intro:
+      "2학기 1학년 사회의 유일한 수행평가는 개인별로 쓰는 서술·논술 보고서입니다. 10월에 기본권의 제한 요건과 침해 구제 방법을 배우고 11월 '근로자의 권리' 차시에 청소년 근로계약서를 작성하며, 100점 만점 보고서가 40%로 환산됩니다. 정기시험은 10월 중간고사와 12월 기말고사 모두 선택형으로 30%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "청소년 근로계약서 작성", kind: "task", weight: 40, timing: "11월", method: "보고서 100점 · 서술·논술 · 개인별 수행" },
+    ],
+    notes: [
+      {
+        title: "조사는 미리, 작성은 현장에서",
+        body: "자료는 미리 조사해 와도 되지만 보고서 본문은 평가 시간 안에 써야 하고, 내지 않으면 20점이 기본으로 주어집니다. 근로자에게 보장되는 권리와 그 침해에 대처하는 국가·시민의 노력을 다루는 [9사(일사)06-03]이 성취기준입니다.",
+      },
+      {
+        title: "진도는 문화에서 아프리카까지",
+        body: "1학기는 자유학기제 평가계획을 따랐기에 정기시험 60%·수행 40% 환산은 2학기에만 적용됩니다. 진도는 다양한 문화의 이해, 아메리카, 오세아니아와 극지방, 인권과 기본권, 일상생활과 법을 거쳐 12월 아프리카로 이어지고, 시험 범위로는 일반사회 02·05·06과 지리 04·05·06 영역이 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("성남중학교")],
+  },
+  {
+    schoolSlug: "seongnam-middle-school-dongjak",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "힘의 측정 서술형(9월 3주)·보일·샤를 법칙 실험평가(11월 1주) 20%씩 · 선택형 시험 60%",
+    intro:
+      "성남중학교 1학년 과학은 9월 3주 서술형 평가와 11월 1주 서술 실험평가가 20%씩이고, 10월 1차·12월 2차 정기시험이 선택형으로 30%씩입니다. 서술형은 '힘의 작용', 실험평가는 '기체의 성질' 단원에서 나옵니다.",
+    assessments: [
+      { name: "1차(중간고사)", kind: "exam", weight: 30, timing: "10월", method: "선택형" },
+      { name: "2차(기말고사)", kind: "exam", weight: 30, timing: "12월", method: "선택형" },
+      { name: "서술형 평가", kind: "task", weight: 20, timing: "9월 3주", method: "서술·논술 · 50점" },
+      { name: "서술 실험평가", kind: "task", weight: 20, timing: "11월 1주", method: "서술·논술, 실험·실습 · 50점" },
+    ],
+    notes: [
+      {
+        title: "서술형 평가의 주제",
+        body: "힘이 작용할 때 나타나는 현상을 설명하고 힘의 크기를 측정할 수 있는지 보는 평가로, 성취기준은 중력·탄성력·마찰력·부력을 다루는 [9과05-02]입니다. 공정성을 위해 다양한 문제 유형을 만들어 학생이 예측할 수 없도록 시행한다고 적혀 있습니다.",
+      },
+      {
+        title: "실험평가는 생활 속 기체 법칙",
+        body: "서술 실험평가는 생활 속에서 보일 법칙과 샤를 법칙의 예시를 찾아 원리를 설명하는 과제로, [9과06-02]·[9과06-03]이 성취기준입니다. 계획서는 실험평가를 학기 성적의 10~20%로 반영하고, 실험 보고서의 서·논술형 문항은 실험평가와 서·논술형 비율에 함께 넣는다고 밝히고 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("성남중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "개요 5점 뒤에 본문 10점이 붙고, 독서일지 8회가 감상평의 바탕이 됩니다",
+    intro:
+      "시흥은행중학교 1학년 국어는 2차 정기시험 한 번을 선택형 80점분 40%, 논술형 20점분 10%로 나눠 반영합니다. 수행평가는 10월 주장하는 글, 11월 감상평과 우리말 포트폴리오입니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형 80점)", kind: "exam", weight: 40 },
+      { name: "2차 정기시험(논술형 20점)", kind: "exam", weight: 10 },
+      { name: "공동의 문제를 해결하기 위한 주장하는 글 쓰기", kind: "task", weight: 15, timing: "10월 1주" },
+      { name: "갈등과 해결 과정에 대한 감상평 쓰기", kind: "task", weight: 20, timing: "11월 3주" },
+      { name: "우리말 학습 과정 포트폴리오 작성하기", kind: "task", weight: 15, timing: "11월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "개요 5점 뒤에 본문 10점",
+        body: "주장하는 글 쓰기는 개요 5점과 글쓰기 10점으로 나뉩니다.",
+      },
+      {
+        title: "독서일지 8회가 감상평의 바탕",
+        body: "감상평 쓰기는 8회에 걸친 독서일지 10점과 감상평 10점입니다. 우리말 포트폴리오는 단일어·합성어·파생어와 어휘의 양상을 정리하며, 논술형 비율은 0%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "마인드맵 첫 요소가 14점이고, 법 보고서에서는 정의의 여신상을 직접 디자인합니다",
+    intro:
+      "시흥은행중학교 1학년 사회는 정기시험을 선택형 90점분 45%, 논술형 10점분 5%로 반영하고, 9월 마인드맵과 10월 법 탐구 보고서가 25%씩입니다.",
+    assessments: [
+      { name: "정기시험(선택형 90점)", kind: "exam", weight: 45 },
+      { name: "정기시험(논술형 10점)", kind: "exam", weight: 5 },
+      { name: "기본권 식물 마인드맵 만들기", kind: "task", weight: 25, timing: "9월 2주", method: "프로젝트" },
+      { name: "법 탐구 보고서 작성하기", kind: "task", weight: 25, timing: "10월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "마인드맵 첫 요소가 14점",
+        body: "기본권 식물 마인드맵은 14점·3점·3점·5점 네 요소로 25점을 채웁니다.",
+      },
+      {
+        title: "정의의 여신상을 직접 디자인",
+        body: "법 탐구 보고서는 사회법의 목적과 필요성 4점, 사례로 사법·공법·사회법 분류 12점, 나만의 정의의 여신상 디자인 3점, 사회법 관련 시화 6점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "도형 과제는 각각 12개 기준으로, 배움 탐구는 6개 기준으로 봅니다",
+    intro:
+      "시흥은행중학교 1학년 수학은 정기시험이 94점분 47%, 6점분 3%로 나뉩니다. 9월 작도와 합동, 10월 평면도형 과제가 20%씩, 11월 수업 배움 탐구가 10%입니다.",
+    assessments: [
+      { name: "정기시험(94점)", kind: "exam", weight: 47 },
+      { name: "정기시험(6점)", kind: "exam", weight: 3 },
+      { name: "작도와 합동 문제해결하기", kind: "task", weight: 20, timing: "9월 4주" },
+      { name: "평면도형의 성질 문제해결하기", kind: "task", weight: 20, timing: "10월 3주" },
+      { name: "수업 배움 탐구 활동하기", kind: "task", weight: 10, timing: "11월4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "도형 과제는 각 12개 기준",
+        body: "작도와 합동, 평면도형의 성질 두 과제는 각각 12개 채점 기준으로 봅니다. 평면도형 과제에는 n각형의 대각선, 내각, 현과 중심각이 들어갑니다.",
+      },
+      {
+        title: "배움 탐구는 6개 기준",
+        body: "11월 4주 수업 배움 탐구 활동은 6개 기준을 포트폴리오로 확인합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "조건을 모두 담아 편지를 쓰고, 문장 완성은 오류 1개마다 1점씩 깎습니다",
+    intro:
+      "시흥은행중학교 1학년 영어는 정기시험을 90점분 45%, 10점분 5%로 반영하고 쓰기 수행평가 두 개가 25%씩입니다.",
+    assessments: [
+      { name: "정기시험(90점)", kind: "exam", weight: 45 },
+      { name: "정기시험(10점)", kind: "exam", weight: 5 },
+      { name: "감사편지 쓰기", kind: "task", weight: 25, timing: "9월 2주" },
+      { name: "문장 완성하기", kind: "task", weight: 25, timing: "10월 3주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "조건을 모두 담은 편지",
+        body: "감사편지 쓰기는 간단한 일기·편지·이메일을 쓸 때 주어진 조건과 내용을 모두 포함해 어법에 맞게 쓰는지를 한 요소 25점으로 봅니다.",
+      },
+      {
+        title: "오류 1개마다 1점",
+        body: "문장 완성하기([9영02-04])는 여행 계획이나 경험을 표현하도록 주어진 어구를 재배열합니다. 어법·철자 오류가 없으면 25점, 1개면 24점, 2개면 23점처럼 내려갑니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "네 과제 모두 8개 기준을 2점 간격으로 보고, 온도 센서 실험이 들어갑니다",
+    intro:
+      "시흥은행중학교 1학년 과학은 정기시험 없이 수행평가 100%로, 9월 1주부터 11월 4주까지 탐구 과제 네 개를 25%씩 반영합니다.",
+    assessments: [
+      { name: "비열과 열팽창 탐구하기", kind: "task", weight: 25, timing: "9월 1주", method: "논술·실험·실습" },
+      { name: "상태 변화와 열에너지 탐구하기", kind: "task", weight: 25, timing: "9월 5주", method: "논술·실험·실습" },
+      { name: "여러 가지 힘의 특징 탐구하기", kind: "task", weight: 25, timing: "10월 2주", method: "논술·실험·실습" },
+      { name: "기체의 부피 변화 탐구하기", kind: "task", weight: 25, timing: "11월 4주", method: "논술·실험·실습" },
+    ],
+    notes: [
+      {
+        title: "8개 기준, 2점 간격",
+        body: "네 과제는 모두 8개 기준을 쓰며, 전부 충족하면 25점이고 23점, 21점처럼 내려가 기본점수는 9점입니다. 과제마다 논술형 비율이 10%입니다.",
+      },
+      {
+        title: "온도 센서 실험",
+        body: "탐구 과정에는 온도 센서를 활용한 실험이 들어갑니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "읽기 점검과 정서 표현이 10점씩이고, 배움 탐구는 요약과 해석을 봅니다",
+    intro:
+      "시흥은행중학교 2학년 국어는 9월 5주 1차 정기시험이 선택형 100점으로 35%이고, 2차 정기시험은 선택형 70점분 24.5%, 논술형 30점분 10.5%로 나뉩니다. 수행평가는 11월에 두 과제가 이어집니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "9월 5주", method: "선택형 100점" },
+      { name: "2차 정기시험(선택형 70점)", kind: "exam", weight: 24.5 },
+      { name: "2차 정기시험(논술형 30점)", kind: "exam", weight: 10.5 },
+      { name: "독서 배움 활동지 작성하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술" },
+      { name: "수업 배움 탐구하기", kind: "task", weight: 10, timing: "11월 2주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "읽기 점검과 정서 표현 10점씩",
+        body: "독서 배움 활동지는 수준에 맞는 글을 고르고 읽기 과정을 점검·조정하는 10점, 삶과 경험을 바탕으로 정서를 진솔하게 표현하는 글쓰기 10점입니다.",
+      },
+      {
+        title: "요약과 해석",
+        body: "수업 배움 탐구하기는 [9국02-02]와 [9국05-08]에 따라 글을 요약하고 근거를 들어 해석·평가하는 활동을 포트폴리오로 모읍니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각형 과제는 4문항이고, 수학도서 감상은 세 가지를 씁니다",
+    intro:
+      "시흥은행중학교 2학년 수학은 9월 5주 1차 정기시험이 30%, 2차 정기시험이 선택형 27%와 논술형 3%입니다. 수행평가는 9월, 10월, 11월에 한 과제씩입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "9월5주", method: "선택형 100점" },
+      { name: "2차 정기시험(선택형 90점)", kind: "exam", weight: 27 },
+      { name: "2차 정기시험(논술형 10점)", kind: "exam", weight: 3 },
+      { name: "삼각형의 성질 활용하기", kind: "task", weight: 15, timing: "9월3주", method: "논술" },
+      { name: "수학도서 감상하기", kind: "task", weight: 10, timing: "10월3주", method: "실험·실습" },
+      { name: "닮은 도형의 성질 활용하기", kind: "task", weight: 15, timing: "11월2주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "삼각형 과제 4문항",
+        body: "삼각형의 성질 활용하기는 이등변삼각형, 직각삼각형의 합동 조건, 외심, 내접원의 반지름을 묻는 4문항으로 짜였고, 마지막 문항은 풀이 과정을 기호 오류 없이 서술했는지도 봅니다.",
+      },
+      {
+        title: "도서 감상은 세 가지",
+        body: "수학도서 감상하기는 주제와 도서 선정 이유, 내용 요약, 의견과 소감 기록을 확인합니다. 닮은 도형 과제는 닮음비와 삼각형의 닮음 조건을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "아테네 민주정치를 현대와 비교하고, 항해 일지는 네 단계로 씁니다",
+    intro:
+      "시흥은행중학교 2학년 역사는 정기시험을 90점분 45%, 10점분 5%로 반영합니다. 9월 아테네, 10월 신항로 개척 글쓰기에 이어 11월 4주에 나의 역사책을 만듭니다.",
+    assessments: [
+      { name: "정기시험(90점)", kind: "exam", weight: 45 },
+      { name: "정기시험(10점)", kind: "exam", weight: 5 },
+      { name: "아테네 민주정치 분석하는 글쓰기", kind: "task", weight: 20, timing: "9월 2주" },
+      { name: "신항로 개척 항해 일지 쓰기", kind: "task", weight: 20, timing: "10월 3주" },
+      { name: "나의 역사책 만들기", kind: "task", weight: 10, timing: "11월 4주" },
+    ],
+    notes: [
+      {
+        title: "아테네 글은 현대와 비교",
+        body: "아테네 민주정치 글쓰기는 성립 배경과 발전 과정, 주요 제도와 특징, 현대 민주정치와의 비교, 자신의 생각 논술을 5점씩 봅니다.",
+      },
+      {
+        title: "항해 일지 네 단계",
+        body: "신항로 개척 항해 일지는 배경, 과정, 결과, 영향과 자신의 생각을 5점씩 평가합니다. 나의 역사책은 역사적 사실·개념 정리 5점과 변화의 원인·상호 관계 분석 5점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "저출산·고령화 원인 8·문제 8·해결 9점, 실업 유형 8·부정 영향 6·창업 계획 11점, 역사 신문 사설은 5점",
+    intro:
+      "시흥은행중학교 3학년 사회는 정기시험을 94점분 47%, 6점분 3%로, 역사는 90점분 45%, 10점분 5%로 반영합니다. 사회는 과제 두 개가 25%씩, 역사는 세 과제가 20%·20%·10%입니다.",
+    assessments: [
+      { course: "사회", name: "정기시험(94점)", kind: "exam", weight: 47 },
+      { course: "사회", name: "정기시험(6점)", kind: "exam", weight: 3 },
+      { course: "사회", name: "저출산 고령화 분석하기", kind: "task", weight: 25, timing: "9월 2주" },
+      { course: "사회", name: "실업과 창업 탐구하기", kind: "task", weight: 25, timing: "10월 3주" },
+      { course: "역사", name: "정기시험(90점)", kind: "exam", weight: 45 },
+      { course: "역사", name: "정기시험(10점)", kind: "exam", weight: 5 },
+      { course: "역사", name: "역사가상인터뷰 작성하기", kind: "task", weight: 20, timing: "9월 2주" },
+      { course: "역사", name: "역사 신문 만들기", kind: "task", weight: 20, timing: "10월 1주" },
+      { course: "역사", name: "한국사 수업일기 작성하기", kind: "task", weight: 10, timing: "10월 4주" },
+    ],
+    notes: [
+      {
+        title: "창업 계획서 11점",
+        body: "사회의 저출산 고령화 분석은 원인 8점, 문제점 8점, 해결책 9점이고, 실업과 창업 탐구는 실업 유형 8점, 부정적 영향 6점, 창업 계획서 11점입니다.",
+      },
+      {
+        title: "인터뷰는 질문 구성부터",
+        body: "역사가상인터뷰는 인물 선정 2점, 질문 구성·자료 조사·사실 서술 각 5점, 창의적 표현 3점입니다. 역사 신문은 사건 선정 5점, 헤드라인 3점, 사설 5점, 사료 인터뷰 5점, 구성 2점입니다.",
+      },
+      {
+        title: "역사 정기시험은 한 번",
+        body: "역사 계획에는 정기시험이 2학기에 1회라고 적혀 있습니다. 한국사 수업일기는 개념 정리 3점, 역사적 사고 표현 3점, 자료 수집·정리 4점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비의 뜻·넓이·길이 3문항, 접선·원주각·내접 오각형 3문항을 논술로 풀고 배움 탐구는 글·그림·기호로 정리",
+    intro:
+      "시흥은행중학교 3학년 수학은 9월 5주 1차 정기시험 30%, 2차 정기시험 선택형 27%·논술형 3%입니다. 수행 세 과제는 모두 9~10월에 몰려 있습니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "9월 5주", method: "100점" },
+      { name: "2차 정기시험(선택형 90점)", kind: "exam", weight: 27 },
+      { name: "2차 정기시험(논술형 10점)", kind: "exam", weight: 3 },
+      { name: "삼각비 탐구하기", kind: "task", weight: 15, timing: "9월 2주", method: "논술" },
+      { name: "원의 성질 탐구하기", kind: "task", weight: 15, timing: "10월 3주", method: "논술" },
+      { name: "수업배움탐구하기", kind: "task", weight: 10, timing: "10월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "논술 과제는 3문항씩",
+        body: "삼각비 탐구는 삼각비의 뜻과 넓이·길이 문제 해결을, 원의 성질 탐구는 원의 접선, 원주각의 성질, 내접하는 오각형 문제를 각각 3문항으로 묻습니다.",
+      },
+      {
+        title: "글·그림·기호로 정리",
+        body: "수업배움탐구하기는 학습 내용을 글, 그림, 기호로 정리하고 자신의 배움과 생각을 설명하는 포트폴리오입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "논리적 구조, 풍부한 어휘, 오류 없는 문장, 일관된 세부, 맞는 철자를 확인하고 저널엔 공유·요약·소감도 들어갑니다",
+    intro:
+      "시흥은행중학교 3학년 영어는 9월 5주 1차 정기시험을 90점분 31.5%, 10점분 3.5%로 나누고 2차 정기시험을 35%로 반영합니다. 수행평가는 9월 글쓰기 20%와 10월 저널 10%입니다.",
+    assessments: [
+      { name: "1차 정기시험(90점)", kind: "exam", weight: 31.5, timing: "9월 5주" },
+      { name: "1차 정기시험(10점)", kind: "exam", weight: 3.5, timing: "9월 5주" },
+      { name: "2차 정기시험", kind: "exam", weight: 35 },
+      { name: "일상생활 주제별 글쓰기", kind: "task", weight: 20, timing: "9월 3주", method: "논술" },
+      { name: "영어 저널 쓰기", kind: "task", weight: 10, timing: "10월 4주", method: "논술" },
+    ],
+    notes: [
+      {
+        title: "글쓰기 다섯 가지 확인점",
+        body: "일상생활 주제별 글쓰기는 논리적 구조, 풍부한 어휘, 문법 오류 없는 문장, 주제와 일관된 세부사항, 정확한 철자를 봅니다.",
+      },
+      {
+        title: "저널은 교과서·학습지 관리",
+        body: "영어 저널 쓰기는 단원별 교과서와 학습지 관리, 학습 내용 공유 활동 참여, 핵심 내용 요약, 단원별 소감 표현 등 6개 요소로 구성됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "siheungeunhaeng-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "체세포 분열 5, 감수 1·2분열 각 5, 염색체·유전자 2, 특징 3점이고 가계도는 6요소 10점에 논술형 비율 0%",
+    intro:
+      "시흥은행중학교 3학년 과학은 정기시험을 90점분 45%, 10점분 5%로 반영하고 수행평가는 세 과제입니다. 9월에 세포 분열과 가계도, 10월에 역학적 에너지를 다룹니다.",
+    assessments: [
+      { name: "정기시험(90점)", kind: "exam", weight: 45 },
+      { name: "정기시험(10점)", kind: "exam", weight: 5 },
+      { name: "세포 분열 과정 표현하기", kind: "task", weight: 20, timing: "9월 2주" },
+      { name: "가계도 그리기", kind: "task", weight: 10, timing: "9월 5주" },
+      { name: "역학적 에너지 표현하기", kind: "task", weight: 20, timing: "10월 2주" },
+    ],
+    notes: [
+      {
+        title: "체세포·감수 분열 5점씩",
+        body: "세포 분열 과정 표현하기는 체세포 분열 5점, 감수 1분열 5점, 감수 2분열 5점, 염색체와 유전자 2점, 특징 3점입니다.",
+      },
+      {
+        title: "가계도는 6개 요소",
+        body: "9월 5주 가계도 그리기는 6개 요소로 10점을 매기며 논술형 비율은 0%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("시흥은행중학교")],
+  },
+  {
+    schoolSlug: "songu-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "청중을 고려하여 발표하기 30%(9월 1~3주) · 한글 맞춤법 적용 20%(10월 4~5주) · 시험 1회 50%",
+    intro:
+      "송우고등학교 1학년 공통국어2는 정기시험이 12월 2~3주 2차 시험 한 번(선택형, 50%)이고, 수행평가는 발표 30%와 맞춤법 탐구 20%입니다. 발표는 9월 1~3주, 맞춤법 과제는 10월 4~5주에 평가합니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 2주 - 12월 3주", method: "선택형 100점" },
+      { name: "청중을 고려하여 발표하기", kind: "task", weight: 30, timing: "9월 1주- 9월 3주", method: "30점(논술형 20%)" },
+      { name: "한글 맞춤법 생활 속에 적용하기", kind: "task", weight: 20, timing: "10월 4주 - 10월 5주", method: "20점(논술형 10%)" },
+    ],
+    notes: [
+      {
+        title: "발표는 질의응답까지 포함",
+        body: "청중을 고려하여 발표하기의 평가 요소는 청중을 분석하여 발표 자료 구성하기, 청중의 특성을 고려하며 발표하기, 발표를 듣고 질문 작성하기입니다. 진도표에도 내용을 구성해 발표한 뒤 질의응답 하기가 수행평가로 적혀 있습니다.",
+      },
+      {
+        title: "맞춤법 과제는 실생활 단어로",
+        body: "한글 맞춤법 생활 속에 적용하기는 한글 맞춤법을 이해한 뒤 실생활에서 쓰는 단어에 적용해 탐구하는 과제로, 평가 요소는 맞춤법 탐구와 국어 생활 개선입니다. 학기 논술형 비중은 두 과제를 합쳐 30%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우고등학교")],
+  },
+  {
+    schoolSlug: "songu-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "맥락 기반 어휘 이해 평가 25%(9월 3주·10월 4주) · 영어 독서 서평 프로젝트 25%(11월)",
+    intro:
+      "송우고등학교 1학년 공통영어2는 학기당 정기시험을 한 번(2차, 50%)만 보고, 수행평가 두 영역이 25%씩입니다. 어휘 평가는 9월 3주와 10월 4주 두 차례, 독서 서평은 11월 1~2주에 진행됩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 2주 - 12월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 2주 - 12월 3주", method: "논술형 20점" },
+      { name: "맥락 기반 어휘 이해 평가", kind: "task", weight: 25, timing: "9월3주, 10월 4주", method: "25점" },
+      { name: "영어 독서 서평 프로젝트", kind: "task", weight: 25, timing: "11월 1주 – 11월 2주", method: "25점(논술형 20%)" },
+    ],
+    notes: [
+      {
+        title: "어휘 평가는 유의어·반의어까지",
+        body: "맥락 기반 어휘 이해 평가는 어휘 의미와 맥락 이해, 유의어·반의어 확장 능력을 보는 영역으로 반영 비율표에서 논술형 비율은 없습니다. 평가 계획 문장은 수행평가를 2개 영역 50점 만점으로 운영한다고 적고 있습니다.",
+      },
+      {
+        title: "서평은 단어 수 조건을 지킵니다",
+        body: "영어 독서 서평 프로젝트는 내용 요소와 언어 조건, 글 작성 조건을 반영해 서평을 쓰고, 제시된 단어 수를 지켜 자신의 생각을 표현하는 과제입니다. 정기시험은 5지선다형 중심이며 최종 성적은 2차 정기시험 50%와 수행평가 50%로 산출합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우고등학교")],
+  },
+  {
+    schoolSlug: "songu-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "도형의 방정식 논술·개념 설명·탐구 노트 2개 각 10% · 정기시험 2회 60%",
+    intro:
+      "송우고등학교 1학년 공통수학2는 정기시험 60%, 수행평가 40%이며 수행평가는 10%짜리 네 영역으로 나뉩니다. 정기시험은 회차마다 선택형 90점·논술형 10점이고 10월 3주와 12월 2~3주에 봅니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "10월 3주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "10월 3주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "12월 2주 - 12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "12월 2주 - 12월 3주", method: "논술형 10점" },
+      { name: "도형의 방정식에 관한 논술", kind: "task", weight: 10, timing: "9월 2주 - 9월 3주", method: "논술형 10점" },
+      { name: "수학적 개념 설명 및 의사소통", kind: "task", weight: 10, timing: "9월 1주 - 11월 4주", method: "10점" },
+      { name: "도형과 집합 탐구 노트", kind: "task", weight: 10, timing: "9월 1주 - 9월 4주", method: "10점(논술형 10%)" },
+      { name: "명제와 함수 탐구 노트", kind: "task", weight: 10, timing: "10월 1주 - 11월 4주", method: "10점(논술형 10%)" },
+    ],
+    notes: [
+      {
+        title: "논술은 선분·원·도형의 이동",
+        body: "도형의 방정식에 관한 논술은 선분과 직선, 원의 방정식, 도형의 이동 문제를 해결하는 과정을 논리적으로 표현하는 과제이며 진도표에도 같은 내용이 수행평가로 적혀 있습니다.",
+      },
+      {
+        title: "탐구 노트는 단원별 두 권",
+        body: "도형과 집합 탐구 노트는 9월 1~4주, 명제와 함수 탐구 노트는 10월 1주~11월 4주에 걸치고, 수학적 개념 설명 및 의사소통은 용어와 기호로 개념을 설명하는 영역으로 9월 1주부터 11월 4주까지 이어집니다. 학기 논술형 합계는 36%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우고등학교")],
+  },
+  {
+    schoolSlug: "songu-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2"],
+    summary: "인권 정책·헌법과 인권 보장 제도 탐구 15%(9월 1주) · 기후 변화 지속가능 발전 탐구 15%(11월 3주)",
+    intro:
+      "송우고등학교 1학년 통합사회2는 정기시험 70%, 수행평가 30%이며 두 수행평가가 15%씩 모두 논술형입니다. 정기시험은 10월 3주와 12월 2~3주에 선택형으로 35%씩 반영됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 3주", method: "선택형 100점(35%)·논술형 0점(0%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 2주 - 12월 3주", method: "선택형 100점(35%)·논술형 0점(0%)" },
+      { name: "내가 만드는 인권 정책 및 헌법과 인권 보장 제도 탐구하기", kind: "task", weight: 15, timing: "9월 1주", method: "논술형 15점" },
+      { name: "기후 변화에 대한 지속가능한 발전 탐구하기", kind: "task", weight: 15, timing: "11월 3주", method: "논술형 15점" },
+    ],
+    notes: [
+      {
+        title: "인권 과제는 기본권 사례에서 제도 제안으로",
+        body: "9월 1주 과제의 평가 요소는 사례를 통해 기본권의 종류와 의미 파악하기, 인권 문제 해결을 위한 제도 제안하기입니다. 진도표에는 헌법 조항과 구체적 사례를 조사해 사회 문제 해결을 위한 실천 방안을 제안하는 논술 평가로 적혀 있습니다.",
+      },
+      {
+        title: "기후 변화 과제는 원인과 노력 두 축",
+        body: "11월 3주 과제는 기후 변화의 원인과 인간에게 끼치는 영향, 지속 가능한 발전을 위한 노력을 논술합니다. 평가 계획 문장은 지필평가 70%·수행평가 30%이며 학기 점수의 30%를 논술형으로 실시한다고 밝히는데, 이 30%가 두 수행평가입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우고등학교")],
+  },
+  {
+    schoolSlug: "songu-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "산 염기 중화 반응 실험 20%(9월 3주) · 기후 변화 시나리오 15% · 과학의 역할 탐구 15%",
+    intro:
+      "송우고등학교 1학년 통합과학2는 정기시험과 수행평가가 50%씩이고, 수행평가는 20%·15%·15% 세 과제입니다. 실험 과제는 9월 3주, 기후 변화 시나리오는 11월 1주, 과학의 역할 탐구는 11월 3주에 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주 - 12월 3주", method: "선택형 100점" },
+      { name: "산 염기 중화 반응 실험", kind: "task", weight: 20, timing: "9월 3주", method: "20점(논술형 10%)" },
+      { name: "기후 변화 시나리오", kind: "task", weight: 15, timing: "11월 1주", method: "논술형 15점" },
+      { name: "미래 사회 문제 해결을 위한 과학의 역할 탐구", kind: "task", weight: 15, timing: "11월 3주", method: "15점(논술형 10%)" },
+    ],
+    notes: [
+      {
+        title: "실험 과제는 지시약 색 변화까지",
+        body: "산 염기 중화 반응 실험은 실험 진행과 결과 기록, 산과 염기의 정의, 액성에 따른 지시약 색 변화, 중화 반응의 의미와 실생활 예시 설명으로 채점됩니다. 수행평가 중 비중이 가장 큰 20%입니다.",
+      },
+      {
+        title: "11월에 두 과제가 이어집니다",
+        body: "기후 변화 시나리오는 온실효과와 지구 온난화, 엘니뇨와 사막화를 설명하고 시나리오를 작성하는 과제이고, 과학의 역할 탐구는 보고서 작성과 발표로 이루어집니다. 학기 논술형 합계는 35%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우고등학교")],
+  },
+  {
+    schoolSlug: "songu-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["독서와 작문"],
+    summary: "삶을 성찰하는 글쓰기 20% · 읽고 쓰는 힘 15% · 사회 문제 읽고 말하기 15% · 시험 1회 50%",
+    intro:
+      "송우고등학교 2학년 독서와 작문은 12월 2~3주 정기시험 한 번이 50%이고, 수행평가 세 과제가 15%·20%·15%입니다. 세 과제가 9월 2주부터 10월 4주 사이에 모두 끝납니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 42.5, timing: "12월 2주 - 12월 3주", method: "선택형 85점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 7.5, timing: "12월 2주 - 12월 3주", method: "논술형 15점" },
+      { name: "읽고 쓰는 힘을 기르기", kind: "task", weight: 15, timing: "9월 2주~9월 4주", method: "논술형 15점" },
+      { name: "삶을 성찰하는 글쓰기", kind: "task", weight: 20, timing: "9월 4주, 10월 1주", method: "논술형 20점" },
+      { name: "사회 문제를 읽고 말하기", kind: "task", weight: 15, timing: "10월 4주", method: "15점" },
+    ],
+    notes: [
+      {
+        title: "성찰 글쓰기는 혐오 경험을 다룹니다",
+        body: "삶을 성찰하는 글쓰기의 평가 요소는 혐오 경험 및 관점 형성 과정 쓰기, 관점의 재해석과 자기 성찰, 실천계획 쓰기, 글쓰기 전략입니다. 읽고 쓰는 힘을 기르기는 사실적·추론적·비판적 읽기를 평가합니다.",
+      },
+      {
+        title: "말하기 과제는 상호작용 포함",
+        body: "10월 4주 사회 문제를 읽고 말하기는 질문 의도 파악과 답변, 타당한 근거를 활용한 논증, 참신한 표현, 청자를 고려한 전달, 상호작용을 통한 생각 확장으로 채점됩니다. 학기 논술형 합계는 42.5%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우고등학교")],
+  },
+  {
+    schoolSlug: "songu-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "매체의 비판적 이해와 소통하기 30%(10월 4~5주) · 문맥 탐색 어휘 노트 10%(9월·11월)",
+    intro:
+      "송우고등학교 2학년 영어Ⅱ는 정기시험 두 번(30%씩)과 수행평가 40%로, 수행평가는 30점짜리 쓰기 과제와 10점짜리 어휘 노트입니다. 어휘 노트는 9월 4주와 11월 4주 두 번 점검합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "10월 3주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "10월 3주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "12월 2주 - 12월 3주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "12월 2주 - 12월 3주", method: "논술형 10점" },
+      { name: "매체의 비판적 이해와 소통하기", kind: "task", weight: 30, timing: "10월 4주/10월 5주", method: "논술형 30점" },
+      { name: "문맥 탐색 어휘 노트", kind: "task", weight: 10, timing: "9월 4주/11월 4주", method: "10점" },
+    ],
+    notes: [
+      {
+        title: "쓰기 과제는 항의 메일 서식",
+        body: "매체의 비판적 이해와 소통하기는 매체에 드러난 혐오의 객관적 사실 정보를 바탕으로 주장을 제시하고, 항의 메일 서식에 맞게 목표 언어형식을 사용해 쓴 뒤 쓰기 윤리를 지켜 고쳐 쓰는 과제입니다. 1차 시험 다음 주부터 2주에 걸쳐 진행됩니다.",
+      },
+      {
+        title: "어휘 노트는 주요 표현 기억과 활용",
+        body: "문맥 탐색 어휘 노트의 평가 요소는 주요 어휘와 표현을 기억하고 활용하기입니다. 평가 계획 문장은 수행평가를 30점·10점 두 분야, 최종 성적을 1차 30%·2차 30%·수행평가 40%로 산출한다고 적고 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우고등학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장 글에는 자료 수집 단계가 있고, 품사 과제는 네 가지 활동으로 이뤄집니다",
+    intro:
+      "송우중학교 1학년 국어는 정기시험과 수행평가가 반반이며, 수행평가는 주장하는 글쓰기 30%와 국어 자료의 품사 분석하기 20%입니다. 주장하는 글은 학기 초 8월 4주부터 9월 3주까지, 품사 분석은 11월 1주에 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 23, timing: "10월 2주", method: "선택형 92점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 2, timing: "10월 2주", method: "논술형 8점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 23, timing: "12월 2주", method: "선택형 92점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2, timing: "12월 2주", method: "논술형 8점" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 30, timing: "8월 4주 ~ 9월 3주", method: "30점(논술형 20%)" },
+      { name: "국어 자료의 품사 분석하기", kind: "task", weight: 20, timing: "11월 1주", method: "20점(논술형 10%)" },
+    ],
+    notes: [
+      {
+        title: "주장하는 글은 자료 수집 단계가 있습니다",
+        body: "수행과제는 신뢰성과 타당성을 갖춘 근거를 마련하여 주장하는 글쓰기이며, 평가 요소는 글 계획하기, 신뢰성 있는 자료 수집하기, 알맞은 형식과 타당한 근거를 갖추어 쓰기입니다. 성취기준 [9국03-03]은 1차 정기시험 범위에도 들어 있습니다.",
+      },
+      {
+        title: "품사 과제는 네 가지 활동",
+        body: "11월 1주 품사 분석하기는 의미에 따라 품사 분류하기, 용언을 찾고 분석하기, 두 품사를 비교하여 특성 설명하기, 특정 품사를 포함하여 문장 만들기로 채점됩니다. 진도표의 같은 주에는 품사 분석 조건을 안내한다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "장래 희망은 여섯 가지 조건으로 쓰고, 어휘 과제는 Lesson 5 쓰기 단원에서 합니다",
+    intro:
+      "송우중학교 1학년 영어는 정기시험 50%, 수행평가 50%이며 수행평가 중 장래 희망 소개하기 한 영역이 35%를 차지합니다. 9월 2~3주에 핵심어휘 문장 만들기, 11월 1~2주에 장래 희망 소개하기를 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 22.5, timing: "10월 2주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "10월 2주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 22.5, timing: "12월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "12월 2주", method: "논술형 10점" },
+      { name: "핵심어휘를 활용하여 문장 만들기", kind: "task", weight: 15, timing: "9월 2-3주", method: "논술형 15점" },
+      { name: "장래 희망 소개하기", kind: "task", weight: 35, timing: "11월 1-2주", method: "논술형 25점(25%)·구술형 10점(10%)" },
+    ],
+    notes: [
+      {
+        title: "장래 희망은 여섯 가지 조건으로 씁니다",
+        body: "장래 희망 소개하기는 영역 만점 35점으로, 글의 내용 항목은 희망 직업명, 그 직업이 하는 일, 희망하는 이유 3가지 이상 등 조건 6개를 모두 포함하면 15점입니다. 쓴 글을 말하기로 옮기는 구술형 10점에서는 정확한 어휘·문장구조와 비언어적 요소 활용을 봅니다.",
+      },
+      {
+        title: "어휘 과제는 Lesson 5 쓰기 단원",
+        body: "핵심어휘를 활용하여 문장 만들기는 조건에 맞는 문장 쓰기, 정확한 어휘와 문장구조, 핵심어휘의 적절한 활용으로 채점되며 성취기준은 [9영02-03]·[9영02-10]입니다. 진도표에서는 9월 2주와 3주 ‘Think Green, Live Green’ 단원에 논술형 평가로 표시됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "생물은 5계 구분과 다양성 보존을, 기체는 그래프 해석까지 다룹니다",
+    intro:
+      "송우중학교 1학년 과학은 정기시험 60%, 수행평가 40%이며 두 수행평가가 20%씩 모두 논술형입니다. 생물 단원 과제는 9월 5주, 기체 단원 과제는 11월 5주에 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "10월 2주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "10월 2주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "12월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "12월 2주", method: "논술형 10점" },
+      { name: "생물의 구성 분류하기", kind: "task", weight: 20, timing: "9월 5주", method: "논술형 20점" },
+      { name: "기체의 성질 탐구하기", kind: "task", weight: 20, timing: "11월 5주", method: "논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "생물 과제는 5계 구분과 다양성 보존",
+        body: "생물의 구성 분류하기는 유기적 구성 단계 비교, 식물·동물 세포의 구조 차이, 생물 분류 5계 구분, 변이와 생물 다양성의 관계, 보존 방법 제시로 채점되며 성취기준은 [9과02-01]~[9과02-04]입니다. 진도표 9월 5주에는 단원 내용을 총괄한 논술형 수행평가로 적혀 있습니다.",
+      },
+      {
+        title: "기체 과제는 그래프 해석 포함",
+        body: "11월 5주 기체의 성질 탐구하기는 압력과 부피, 온도와 부피 관계를 해석하고 각 사례를 제시하며, 압력과 온도에 따른 부피 변화 그래프를 해석하는 과제([9과06-01]~[9과06-03])입니다. 학기 논술형 합계는 46%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 일기 형식과 사례 분석을 쓰고, 역사 과제는 기간이 길게 잡혀 있습니다",
+    intro:
+      "송우중학교 2학년 사회와 역사는 모두 정기시험을 12월 2주 2차 시험 한 번(50%)만 보고, 수행평가 두 과제가 25%씩입니다. 수행평가는 두 과목 모두 9월~10월에 몰려 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 48, timing: "12월 2주", method: "선택형 96점", course: "사회" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2, timing: "12월 2주", method: "논술형 4점", course: "사회" },
+      { name: "민주주의의 발전 과정 일기 쓰기", kind: "task", weight: 25, timing: "9월 4주 ~ 9월 5주", method: "논술형 25점", course: "사회" },
+      { name: "정치 과정과 시민의 역할 분석하기", kind: "task", weight: 25, timing: "10월 3주~10월 4주", method: "논술형 25점", course: "사회" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 48, timing: "12월 2주", method: "선택형 96점", course: "역사" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2, timing: "12월 2주", method: "논술형 4점", course: "역사" },
+      { name: "세계 유산 답사 시나리오 논술", kind: "task", weight: 25, timing: "9월 1주~10월 2주", method: "논술형 25점", course: "역사" },
+      { name: "유럽 사회의 변화 논술", kind: "task", weight: 25, timing: "9월 4주~10월 5주", method: "논술형 25점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회 과제는 일기 형식과 사례 분석",
+        body: "민주주의의 발전 과정 일기 쓰기는 발전 과정을 이해하고 일기로 작성하는 과제([9사(일사)03-02])입니다. 정치 과정과 시민의 역할 분석하기는 선거 사례로 유권자의 정치 참여 방식을 분석하고, 정치 과정 단계별 명칭과 정치 주체의 역할을 쓰는 과제([9사(일사)04-01]·[9사(일사)04-02])입니다.",
+      },
+      {
+        title: "역사 과제는 기간이 깁니다",
+        body: "세계 유산 답사 시나리오 논술은 9월 1주~10월 2주, 유럽 사회의 변화 논술은 9월 4주~10월 5주로 두 과제 기간이 겹칩니다. 앞 과제는 유라시아·인도양 교역권과 아시아 제국의 변화, 뒤 과제는 오스만 제국과 시민 혁명, 국민 국가 형성을 근거를 들어 서술합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "첫 과제는 정당화가 중심이고, 두 번째 과제는 무게중심까지 다룹니다",
+    intro:
+      "송우중학교 2학년 수학은 정기시험 70%, 수행평가 30%이며 수행평가 두 과제가 15%씩입니다. 두 과제 모두 1차 시험(10월 2주) 뒤에 있어, 10월 3주와 11월 2주에 차례로 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 2주", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "삼각형과 사각형의 성질 탐구하기", kind: "task", weight: 15, timing: "10월 3주", method: "논술형 15점" },
+      { name: "도형의 닮음과 피타고라스 정리 탐구하기", kind: "task", weight: 15, timing: "11월 2주", method: "논술형 15점" },
+    ],
+    notes: [
+      {
+        title: "첫 과제는 정당화 중심",
+        body: "삼각형과 사각형의 성질 탐구하기는 이등변삼각형의 성질, 외심과 내심의 성질, 여러 가지 사각형의 성질을 정당화하고 적용하는 과제로 성취기준은 [9수03-09]~[9수03-11]입니다.",
+      },
+      {
+        title: "두 번째 과제는 무게중심까지",
+        body: "도형의 닮음과 피타고라스 정리 탐구하기는 닮음 조건 탐구, 무게중심의 성질 정당화, 피타고라스 정리의 논리적 정당화로 이루어집니다([9수03-12]~[9수03-15]). 진도표에서 11월 2주 피타고라스 정리 단원에 수행평가 연계로 표시됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "설계도와 힘의 방향을 그린 뒤 전동기를 만들고, 2차 시험 범위는 우주 단원까지입니다",
+    intro:
+      "송우중학교 2학년 과학은 정기시험 70%, 수행평가 30%이며 수행평가는 간이 전동기를 설계하고 제작하는 두 단계로 나뉩니다. 두 단계 모두 11월 1주에 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 31.5, timing: "10월 2주", method: "선택형 90점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3.5, timing: "10월 2주", method: "논술형 10점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 31.5, timing: "12월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3.5, timing: "12월 2주", method: "논술형 10점" },
+      { name: "간이 전동기 설계하기", kind: "task", weight: 10, timing: "11월 1주", method: "10점(논술형 10%)" },
+      { name: "간이 전동기 제작하기", kind: "task", weight: 20, timing: "11월 1주", method: "20점(논술형 14%)" },
+    ],
+    notes: [
+      {
+        title: "설계는 설계도와 힘의 방향",
+        body: "간이 전동기 설계하기의 평가 요소는 설계도 제작하기와 힘의 작용 방향 표현하기입니다. 제작하기는 실험 수칙 준수, 간이 전동기 제작, 보고서 작성으로 채점되며, 두 단계 모두 자기장 속 전류가 받는 힘을 다루는 [9과14-04]가 성취기준입니다.",
+      },
+      {
+        title: "2차 시험 범위는 우주 단원까지",
+        body: "2차 정기시험 성취기준은 [9과13-01]~[9과13-04], [9과14-01]~[9과14-04], [9과15-01]~[9과15-02]로 순환·호흡·배설, 전기와 자기, 별과 우주를 포함합니다. 학기 논술형 합계는 31%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "8개 주제로 경험을 말하고, 요약문은 어법과 철자까지 봅니다",
+    intro:
+      "송우중학교 2학년 영어는 정기시험 70%, 수행평가 30%이며 수행평가는 경험 표현하기 20%와 요약하기 10%입니다. 요약하기는 반영 비율표(11월 4-5주)와 진도표(11월 2주 연계)의 시기가 달라 시기를 비워 둡니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 2주", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "경험 표현하기", kind: "task", weight: 20, timing: "9월 2주", method: "20점(논술형 20%)" },
+      { name: "다양한 내용 요약하기", kind: "task", weight: 10, method: "10점(논술형 10%)" },
+    ],
+    notes: [
+      {
+        title: "경험 표현은 8개 주제 말하기",
+        body: "경험 표현하기의 평가 요소는 8개의 주어진 주제에 대해 자신의 경험을 나타내는 문장 말하기, 핵심 어법 구조 사용, 정확한 발음입니다. 성취기준은 [9영02-04]입니다.",
+      },
+      {
+        title: "요약문은 어법과 철자까지",
+        body: "다양한 내용 요약하기는 주어진 내용의 핵심을 담은 요약문 쓰기와 정확한 어법·철자를 사용한 문장 구성으로 채점되며 성취기준은 [9영02-07]입니다. 진도표에는 Unit 8 ‘Clever Spending’ 단원에서 요약 활동과 체크리스트 자기평가가 수행평가 연계로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "글쓰기는 주장 정하기부터 하고, 말하기는 비언어적 표현도 채점합니다",
+    intro:
+      "송우중학교 3학년 국어는 정기시험 70%, 수행평가 30%이며 수행평가는 같은 주제를 글과 말로 펼치는 두 과제가 15%씩입니다. 두 과제가 모두 9월 4~5주에 있고, 2차 정기시험은 3학년 일정인 11월 3주입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 3주(3학년)", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 15, timing: "9월 4~5주", method: "논술형 15점" },
+      { name: "주장하는 말하기", kind: "task", weight: 15, timing: "9월 4~5주", method: "15점(논술형 15%)" },
+    ],
+    notes: [
+      {
+        title: "글쓰기는 주장 정하기부터",
+        body: "주장하는 글쓰기는 주제에 대한 자신의 주장 명확히 정하기, 타당한 근거 마련하기, 적절한 표현으로 글쓰기로 채점되며 성취기준은 [9국03-04]입니다. 진도표에서는 ‘타당한 근거를 들어 글 쓰기’ 단원의 9월 4주와 5주에 서술·논술 수행평가로 표시됩니다.",
+      },
+      {
+        title: "말하기는 비언어적 표현도 채점",
+        body: "주장하는 말하기는 논제에 대한 입장을 근거를 들어 표현하기, 비언어적·반언어적 표현 활용, 청중을 고려한 표현으로 평가하며 성취기준은 [9국01-05]입니다. 1차 시험 성취기준에도 [9국01-05]·[9국03-04]가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 수요·공급 단원에 수행 50%가 몰리고, 역사는 갈등 해결과 홍보물을 다룹니다",
+    intro:
+      "송우중학교 3학년 사회는 11월 3주 정기시험 한 번이 50%이고, 역사는 정기시험 두 번이 60%입니다. 사회 수행평가는 9월 3주와 5주에 끝나고, 역사는 9월 3주와 10월 4주에 하나씩 있습니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 47.5, timing: "11월 3주", method: "선택형 95점", course: "사회" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2.5, timing: "11월 3주", method: "논술형 5점", course: "사회" },
+      { name: "시장가격 결정 탐구하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형 20점", course: "사회" },
+      { name: "시장가격 변동 분석하기", kind: "task", weight: 30, timing: "9월 5주", method: "논술형 30점", course: "사회" },
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 27, timing: "10월 2주", method: "선택형 90점", course: "역사" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 3, timing: "10월 2주", method: "논술형 10점", course: "역사" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 27, timing: "11월 3주(3학년)", method: "선택형 90점", course: "역사" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 3, timing: "11월 3주(3학년)", method: "논술형 10점", course: "역사" },
+      { name: "역사 갈등 해결하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형 20점", course: "역사" },
+      { name: "조선시대 홍보물 제작하기", kind: "task", weight: 20, timing: "10월 4주", method: "논술형 20점", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회는 수요·공급 단원에 수행 50%",
+        body: "시장가격 결정 탐구하기는 수요·공급 법칙 탐구와 시장가격 결정 과정 분석([9사(일사)09-02]), 시장가격 변동 분석하기는 수요·공급 변동 요인과 가격 변동 원리를 분석하고 자신의 삶에서 나타나는 변동 원리를 논술하는 과제([9사(일사)09-03])입니다.",
+      },
+      {
+        title: "역사 과제는 갈등과 홍보물",
+        body: "역사 갈등 해결하기는 역사적 사건과 갈등을 이해하고 해결 방안을 제시하는 과제([9역10-04]), 조선시대 홍보물 제작하기는 조선시대 인물과 유물의 특징을 이해하고 고른 자료를 홍보하는 과제([9역10-01]~[9역10-04])입니다. 평가 계획 문장도 3학년 역사 정기시험을 매 학기 2회로 적고 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "보고서는 진로 스토리텔링으로 쓰고, 삼각비 과제와 1차 시험 범위가 같습니다",
+    intro:
+      "송우중학교 3학년 수학은 정기시험 70%, 수행평가 30%이며 수행평가 두 과제가 15%씩입니다. 1차 시험 다음 주인 10월 3주에 삼각비 탐구, 10월 5주~11월 1주에 수학·진로 융합 보고서를 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 32.9, timing: "10월 2주", method: "선택형 94점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 2.1, timing: "10월 2주", method: "논술형 6점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 32.9, timing: "11월 3주(3학년)", method: "선택형 94점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 2.1, timing: "11월 3주(3학년)", method: "논술형 6점" },
+      { name: "삼각비 탐구하기", kind: "task", weight: 15, timing: "10월 3주", method: "논술형 15점" },
+      { name: "수학·진로 융합 보고서 작성하기", kind: "task", weight: 15, timing: "10월 5주 ~ 11월 1주", method: "논술형 15점" },
+    ],
+    notes: [
+      {
+        title: "보고서는 진로 스토리텔링",
+        body: "수학·진로 융합 보고서 작성하기는 삼각비와 원의 현·접선에 관한 성질 같은 수학 이론 설명하기, 수학과 직업의 연계성 이해하기, 진로 스토리텔링 하기로 채점됩니다. 성취기준은 [9수04-17]~[9수04-19]입니다.",
+      },
+      {
+        title: "삼각비 과제와 1차 시험 범위가 같습니다",
+        body: "삼각비 탐구하기는 삼각비의 뜻과 값, 예각의 삼각비 활용 문제 해결이 평가 요소로 [9수04-17]·[9수04-18]에 해당하며, 1차 시험 성취기준과 같습니다. 2차 시험은 원의 현·접선과 원주각의 성질([9수04-19]·[9수04-20])이 범위입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "가계도 과제는 세포 분열부터 다루고, 과학적 사고하기는 네 가지 기능을 봅니다",
+    intro:
+      "송우중학교 3학년 과학은 정기시험 60%, 수행평가 40%이며 가계도 분석과 과학적 사고하기가 20%씩입니다. 가계도 분석은 9월 2주부터 5주까지 생식과 유전 단원에서, 과학적 사고하기는 수시로 평가합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 2주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 2주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "11월 3주(3학년)", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "11월 3주(3학년)", method: "논술형 20점" },
+      { name: "가계도 분석하기", kind: "task", weight: 20, timing: "9월 2주 ~ 9월 5주", method: "논술형 20점" },
+      { name: "과학적 사고하기", kind: "task", weight: 20, timing: "수시" },
+    ],
+    notes: [
+      {
+        title: "가계도 과제는 세포 분열부터",
+        body: "가계도 분석하기의 평가 요소는 세포 분열 과정 설명, 생물의 성장 과정 설명, 유전 원리 찾기, 가계도 분석하기이며 성취기준은 [9과21-02]~[9과21-05]입니다. 진도표의 9월 2주, 3주, 4~5주 생식과 유전 단원에 수행평가 연계가 표시됩니다.",
+      },
+      {
+        title: "과학적 사고하기는 네 가지 기능",
+        body: "수시로 평가하는 과학적 사고하기는 과학 개념 정의, 과학 모형 활용, 실험 결과 분석, 일상생활에 적용하기로 채점되며 성취기준이 [9과21]부터 [9과23]까지 걸칩니다. 반영 비율표에서 이 과제는 논술형으로 잡혀 있지 않아 학기 논술형 합계는 32%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "songu-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "건물 소개는 묘사하는 문장을 쓰고, 어휘 글쓰기는 주어진 목록을 활용합니다",
+    intro:
+      "송우중학교 3학년 영어는 정기시험 70%, 수행평가 30%이며 수행평가는 어휘 활용 글쓰기 10%와 세계 유명 건물 소개하기 20%입니다. 2차 정기시험은 3학년 일정에 따라 11월 3주에 봅니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "11월 3주(3학년)", method: "선택형 94점(32.9%)·논술형 6점(2.1%)" },
+      { name: "어휘 활용 글쓰기", kind: "task", weight: 10, timing: "9월 2주", method: "논술형 10점" },
+      { name: "세계 유명 건물 소개하기", kind: "task", weight: 20, timing: "10월 3주~10월 4주", method: "논술형 20점" },
+    ],
+    notes: [
+      {
+        title: "건물 소개는 묘사하는 문장 쓰기",
+        body: "세계 유명 건물 소개하기는 일상생활 속 대상이나 상황을 묘사하는 문장 쓰기와 주변의 사람·사물·장소 묘사하기로 평가하며 성취기준은 [9영04-01]입니다. 진도표 10월 3주에 과정중심쓰기 수업과 함께 논술형 수행평가 연계로 적혀 있습니다.",
+      },
+      {
+        title: "어휘 글쓰기는 주어진 목록 활용",
+        body: "9월 2주 어휘 활용 글쓰기는 주어진 어휘 목록으로 문장을 완성하고 철자·문장 구조 등 어법에 맞게 쓰는 과제([9영03-09]·[9영04-05])입니다. 수행평가 30%가 모두 논술형이어서 학기 논술형 합계는 34.2%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("송우중학교")],
+  },
+  {
+    schoolSlug: "sorae-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "직선과 원 대수적 해석 20%(9월 4~5주) · 독서 기반 심화 탐구 20% · 논술 중심 수행",
+    intro:
+      "소래고등학교 1학년 공통수학2는 1차(10월 3주)·2차(12월 3주) 정기시험이 선택형 100점으로 30%씩입니다. 수행평가는 9월 좌표평면 해석 논술과 독서 기반 심화 탐구가 20%씩입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 3주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "좌표평면에서 만나는 직선과 원에 대하여 대수적 해석하기", kind: "task", weight: 20, timing: "9월 4~5주", method: "논술" },
+      { name: "독서 기반 심화 탐구", kind: "task", weight: 20, method: "논술·구술" },
+    ],
+    notes: [
+      {
+        title: "직선 8점, 원 8점, 이동 4점",
+        body: "좌표평면 과제는 직선에 대한 해석 8점, 원에 대한 해석 8점, 도형의 이동 4점으로 20점을 구성합니다.",
+      },
+      {
+        title: "독서 탐구는 표현 형식을 고른다",
+        body: "독서 기반 심화 탐구는 도서 선정과 선정 이유 6점, 개념 해석 8점, 소감 6점입니다. 개념 해석은 만화·에세이·시 가운데 한 형식으로 풀어냅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래고등학교")],
+  },
+  {
+    schoolSlug: "sorae-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "진로 연계 영화 리뷰 글쓰기 30%(9월 5주) · 워드업 10% · 배움 성찰 에세이 10%(11월)",
+    intro:
+      "소래고등학교 1학년 공통영어2는 정기시험 두 번이 25%씩이고, 수행평가 가운데 9월 5주 진로 연계 영화 리뷰 글쓰기가 30%로 가장 큽니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주", method: "선택형 100점" },
+      { name: "워드업", kind: "task", weight: 10, timing: "9월 3주", method: "기타(서술)" },
+      { name: "진로 연계 영화 리뷰 글쓰기", kind: "task", weight: 30, timing: "9월 5주", method: "논술" },
+      { name: "배움 성찰 에세이 쓰기", kind: "task", weight: 10, timing: "11월 2주", method: "논술·포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "영화 리뷰는 세 단계 초안",
+        body: "영화 리뷰는 한글 초안 10점(7~9문장), 영문 초안 10점(10~15문장), 최종본 10점으로 나뉩니다. 최종본은 내용 5점(14~15문장)과 문법 5점(오류 0~2개)으로 다시 쪼개 봅니다.",
+      },
+      {
+        title: "워드업 50단어",
+        body: "9월 3주 워드업은 50개 단어를 확인하며, 46~50개를 맞히면 최고 단계 점수입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래고등학교")],
+  },
+  {
+    schoolSlug: "sorae-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2", "한국사2"],
+    summary: "직업 딜레마 원고·발표 25%·기회비용 논술 15%(통합사회2), 서평 20%·사진 보고서 15%(한국사2)",
+    intro:
+      "소래고등학교 1학년 통합사회2와 한국사2는 모두 정기시험 두 번이 30%씩입니다. 통합사회2는 원고 작성과 발표를 한 영역으로 묶은 것이, 한국사2는 11월에 서평과 사진 보고서가 함께 진행되는 것이 특징입니다.",
+    assessments: [
+      { course: "통합사회2", name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 3주", method: "선택형" },
+      { course: "통합사회2", name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형" },
+      { course: "통합사회2", name: "직업 세계의 딜레마 탐구 및 분배적 정의 대안 도출하기(원고작성)", kind: "task", weight: 15, timing: "9월 4주~5주" },
+      { course: "통합사회2", name: "직업 세계의 딜레마 탐구 및 분배적 정의 대안 도출하기(발표)", kind: "task", weight: 10, timing: "10월 4주" },
+      { course: "통합사회2", name: "기회비용과 무역이론 논술하기", kind: "task", weight: 15, timing: "11월 2주" },
+      { course: "한국사2", name: "1차 정기시험", kind: "exam", weight: 30 },
+      { course: "한국사2", name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주~3주" },
+      { course: "한국사2", name: "서평 쓰기", kind: "task", weight: 20, timing: "11월 1주~4주" },
+      { course: "한국사2", name: "현대사 사진 보고서 작성", kind: "task", weight: 15, timing: "11월 4주" },
+      { course: "한국사2", name: "역사 자료 재구성", kind: "task", weight: 5, timing: "10월 2주~5주" },
+    ],
+    notes: [
+      {
+        title: "발표는 시간 준수도 3점",
+        body: "직업 세계 딜레마 영역의 원고는 3개 요소를 5점씩, 발표는 논리 전개 4점, 청중 교감 3점, 시간 준수 3점(예: 110초~130초)으로 봅니다. 11월 논술은 기회비용·합리적 선택 7점, 비교우위·교역조건 8점입니다.",
+      },
+      {
+        title: "한국사2 서평은 6개 기준",
+        body: "서평 쓰기는 6개 기준을 모두 충족하면 20점, 5개면 18점입니다. 현대사 사진 보고서는 개요 5점(3개 기준)과 보고서 제작 10점(6개 기준), 역사 자료 재구성은 포트폴리오 2개 기준 5점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래고등학교")],
+  },
+  {
+    schoolSlug: "sorae-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "과학 관련 사회적 쟁점 논증 30%(10월 4~5주) · 생활 속 화학 반응 탐구 20%(9월 3주)",
+    intro:
+      "소래고등학교 1학년 통합과학2는 1차(10월 3주)·2차(12월 3주) 정기시험이 25%씩입니다. 수행은 9월 화학 반응 탐구와 10월 말 사회적 쟁점 논증 두 과제입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 3주" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 3주" },
+      { name: "과학 관련 사회적 쟁점 논증하기", kind: "task", weight: 30, timing: "10월4주 ~ 10월 5주" },
+      { name: "생활 속 화학 반응 탐구 하기", kind: "task", weight: 20, timing: "9월 3주" },
+    ],
+    notes: [
+      {
+        title: "조사 10점 위에 논증 20점",
+        body: "사회적 쟁점 과제는 과학 기술 조사 10점과 논술형으로 쓰는 사회적 쟁점 논증 20점으로 이루어집니다.",
+      },
+      {
+        title: "화학 반응 네 갈래",
+        body: "생활 속 화학 반응 탐구는 반응식 3점, 산화·환원 8점, 중화점 5점, 지시약 4점으로 20점을 채웁니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래고등학교")],
+  },
+  {
+    schoolSlug: "sorae-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["독서와 작문"],
+    summary: "독서로 사회 문제 탐구하기 20%(9월 3주) · 독서 포트폴리오와 논증하는 글 20%(9~11월)",
+    intro:
+      "소래고등학교 2학년 독서와 작문은 1차(10월 3주)·2차(12월 3주) 정기시험이 30%씩, 수행평가 두 개가 20%씩입니다. 두 수행 모두 9월 3주에 시작하며 포트폴리오 과제는 11월 2주까지 이어집니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 3주", method: "선택형 100점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "독서를 통해 우리 사회의 문제 탐구하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술" },
+      { name: "통합적 읽기와 주체적 관점을 담은 독서 포트폴리오와 논증하는 글 쓰기", kind: "task", weight: 20, timing: "9월 3주~11월 2주" },
+    ],
+    notes: [
+      {
+        title: "800자 이상, 5개 요소",
+        body: "사회 문제 탐구 과제는 5개 요소를 4점씩 보며 800자 이상으로 씁니다.",
+      },
+      {
+        title: "포트폴리오 20점 중 15점이 논술형",
+        body: "독서 포트폴리오 과제는 감상 정리 5점에 논술형 4개 요소를 3점씩 더한 구성이라 20점 가운데 15점이 논술형입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래고등학교")],
+  },
+  {
+    schoolSlug: "sorae-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ"],
+    summary: "미분으로 실생활 데이터 분석 15%(10월 5주) · 독서 미적분 탐구 15%(11월) · 과제 탐구 10%",
+    intro:
+      "소래고등학교 2학년 미적분Ⅰ은 정기시험 두 번이 30%씩이고, 수행평가는 세 과제가 15%·15%·10%입니다. 10월 5주 데이터 분석과 11월 4주 독서 탐구가 큰 비중을 차지합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 3주" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주" },
+      { name: "미분을 통한 실생활 데이터 분석하기", kind: "task", weight: 15, timing: "10월 5주" },
+      { name: "독서를 통한 미적분 탐구하기", kind: "task", weight: 15, timing: "11월 4주" },
+      { name: "미적분 과제 수행 및 탐구하기", kind: "task", weight: 10, method: "프로젝트·포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "삼차함수 모델링 2·5·5·3점",
+        body: "실생활 데이터 분석은 삼차함수로 데이터를 모델링하는 과제로, 네 요소를 2점·5점·5점·3점으로 배점합니다.",
+      },
+      {
+        title: "독서 탐구 3·4·5·3점",
+        body: "독서를 통한 미적분 탐구 15점은 3점·4점·5점·3점 네 요소로 나뉘고, 과제 수행 및 탐구 10점은 프로젝트·포트폴리오로 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래고등학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "근거 3개면 만점이고, 문학 감상은 독서 활동과 감상문이 반반입니다",
+    intro:
+      "소래중학교 1학년 국어는 12월 2주 2차 정기시험 한 번이 선택형 45%와 논술형 5%로 나뉘어 반영됩니다. 수행평가는 9월 주장하는 글, 10월 단어의 짜임 탐구, 11월 문학작품 감상으로 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 2주", method: "선택형 90점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 2주", method: "논술형 10점" },
+      { name: "주장하는 글 쓰기", kind: "task", weight: 20, timing: "9월 1주" },
+      { name: "문학작품 감상하기", kind: "task", weight: 20, timing: "11월 2주" },
+      { name: "단어의 짜임 탐구하기", kind: "task", weight: 10, timing: "10월 5주", method: "실험·실습" },
+    ],
+    notes: [
+      {
+        title: "근거 3개면 만점",
+        body: "주장하는 글 쓰기는 근거를 3개 이상 들어야 20점을 받습니다.",
+      },
+      {
+        title: "독서 활동과 감상문 반반",
+        body: "11월 문학작품 감상하기는 독서 활동 10점과 감상문 10점입니다. 10월 단어의 짜임 탐구는 [9국04-02] 성취기준을 실험·실습 방식으로 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "지위·역할 구분이 10점이고, 세 가지 문화 태도를 구분해 논술합니다",
+    intro:
+      "소래중학교 1학년 사회는 2차 정기시험(12월 2주)을 선택형 45%, 논술형 5%로 나눠 반영합니다. 9월 역할 갈등, 10월 문화 이해 태도 과제가 20%씩이고 포트폴리오는 9월부터 11월까지 이어집니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 45, timing: "12월 2주" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 5, timing: "12월 2주" },
+      { name: "역할 갈등 해결하기", kind: "task", weight: 20, timing: "9월 1주" },
+      { name: "문화 이해 태도 논술하기", kind: "task", weight: 20, timing: "10월 1주" },
+      { name: "사회탐구 포트폴리오 글쓰기", kind: "task", weight: 10, timing: "9월 3주 ~ 11월 1주" },
+    ],
+    notes: [
+      {
+        title: "지위·역할 구분 10점",
+        body: "역할 갈등 해결하기는 지위와 역할 구분 10점, 합리적 의사결정 10점으로 봅니다.",
+      },
+      {
+        title: "세 가지 문화 태도 구분",
+        body: "문화 이해 태도 논술은 자문화중심주의·문화사대주의·문화상대주의를 구분하는 10점과 그 중요성을 쓰는 10점입니다. 사회탐구 포트폴리오는 5점 두 요소입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "제품 고안까지 세 요소를 10점씩 보고, 보고서는 네 주제로 씁니다",
+    intro:
+      "소래중학교 1학년 과학은 2차 정기시험(12월 2주)이 선택형 94점분 47%, 논술형 6점분 3%로 나뉩니다. 수행평가는 9월 상태 변화 과제 30%와 탐구보고서 20%입니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형 94점)", kind: "exam", weight: 47, timing: "12월 2주" },
+      { name: "2차 정기시험(논술형 6점)", kind: "exam", weight: 3, timing: "12월 2주" },
+      { name: "상태 변화와 열에너지 활용하기", kind: "task", weight: 30, timing: "9월 4주" },
+      { name: "탐구보고서 쓰기", kind: "task", weight: 20, method: "프로젝트·포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "제품 고안까지 3×10점",
+        body: "상태 변화와 열에너지 활용하기는 세 요소를 10점씩 보며, 마지막 요소에서 상태 변화를 이용한 제품을 고안합니다.",
+      },
+      {
+        title: "보고서 네 주제",
+        body: "탐구보고서는 확산·증발, 물질의 세 상태 모형, 합력과 힘의 평형, 태양계 천체 네 주제를 5점씩 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "한 달에 한 과제씩 이어지고, 정기시험마다 논술형이 12점입니다",
+    intro:
+      "소래중학교 1학년 영어는 1차(9월 4주)·2차(12월 2주) 정기시험을 각각 선택형 88점분 30.8%, 논술형 12점분 4.2%로 반영합니다. 수행평가 세 개는 10%씩입니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형 88점)", kind: "exam", weight: 30.8, timing: "9월 4주" },
+      { name: "1차 정기시험(논술형 12점)", kind: "exam", weight: 4.2, timing: "9월 4주" },
+      { name: "2차 정기시험(선택형 88점)", kind: "exam", weight: 30.8, timing: "12월 2주" },
+      { name: "2차 정기시험(논술형 12점)", kind: "exam", weight: 4.2, timing: "12월 2주" },
+      { name: "주어진 그림 묘사하기", kind: "task", weight: 10, timing: "10월 1주" },
+      { name: "나눔하고 싶은 물건 소개하기", kind: "task", weight: 10, timing: "11월 1주" },
+      { name: "영어탐구 포트폴리오 작성하기", kind: "task", weight: 10, timing: "11월 3주", method: "논술·포트폴리오, 자기평가" },
+    ],
+    notes: [
+      {
+        title: "회차마다 논술형 12점",
+        body: "1차와 2차 정기시험은 모두 선택형 88점과 논술형 12점으로 출제되며, 표에는 두 부분의 반영 비율이 30.8%와 4.2%로 따로 적혀 있습니다.",
+      },
+      {
+        title: "한 달에 한 과제씩",
+        body: "수행평가는 10월 1주 그림 묘사, 11월 1주 나눔 물건 소개, 11월 3주 포트폴리오 순으로 이어지며, 포트폴리오에는 자기평가가 함께 들어갑니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "복합양식 자료로 내용을 생성하고, 독서 기록은 책 선정과 점검·조정을 봅니다",
+    intro:
+      "소래중학교 2학년 국어는 9월 1주 주장하는 글쓰기가 30%로 가장 큰 수행평가이고, 11월 독서 활동 기록이 20%입니다. 12월 2주 2차 정기시험은 선택형 47%, 논술형 3%로 나뉩니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형 94점)", kind: "exam", weight: 47, timing: "12월 2주" },
+      { name: "2차 정기시험(논술형 6점)", kind: "exam", weight: 3, timing: "12월 2주" },
+      { name: "주장하는 글쓰기", kind: "task", weight: 30, timing: "9월 1주" },
+      { name: "독서 활동 기록하기", kind: "task", weight: 20, timing: "11월 2주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "복합양식 자료로 내용 생성",
+        body: "주장하는 글쓰기는 복합양식 자료로 내용을 생성하는 10점과, 논증 방법을 활용한 논술문 20점으로 구성됩니다.",
+      },
+      {
+        title: "책 선정과 점검·조정",
+        body: "독서 활동 기록하기는 책 선정과 읽기 점검·조정 10점, 활동지 10점을 포트폴리오로 모읍니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "닮음 탐구는 8·6·6점이고, 성장 스토리는 세 단원에 걸칩니다",
+    intro:
+      "소래중학교 2학년 수학은 1차(9월 4주)·2차(12월 2주) 정기시험을 선택형 84점분 29.4%, 논술형 16점분 5.6%로 나눠 반영합니다. 수행평가는 닮음 탐구 20%와 학기 내내 쓰는 성장 스토리 10%입니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형 84점)", kind: "exam", weight: 29.4, timing: "9월 4주" },
+      { name: "1차 정기시험(논술형 16점)", kind: "exam", weight: 5.6, timing: "9월 4주" },
+      { name: "2차 정기시험(선택형 84점)", kind: "exam", weight: 29.4, timing: "12월 2주" },
+      { name: "2차 정기시험(논술형 16점)", kind: "exam", weight: 5.6, timing: "12월 2주" },
+      { name: "사각형과 도형의 닮음 탐구하기", kind: "task", weight: 20, timing: "11월 2주" },
+      { name: "수학 성장 스토리 작성하기", kind: "task", weight: 10, timing: "9월 1주 ~ 11월 5주", method: "구술·발표, 포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "닮음 탐구 8·6·6점",
+        body: "닮음 탐구는 [9수03-11], [9수03-13], [9수03-14] 세 성취기준을 8점·6점·6점으로 평가합니다.",
+      },
+      {
+        title: "성장 스토리 세 단원",
+        body: "수학 성장 스토리는 외심·내심 3점, 닮음 조건 3점, 확률 4점으로 구성되고 구술·발표와 포트폴리오를 함께 씁니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "영양소 검출·소화과정과 주기율표·이온의 전하가 각각 5·10·10점 세 요소로 25점을 이루며 영역이 나뉩니다",
+    intro:
+      "소래중학교 2학년 과학은 수행평가 두 개가 25%씩입니다. 12월 2주 2차 정기시험은 94점분 47%, 6점분 3%로 나뉩니다.",
+    assessments: [
+      { name: "2차 정기시험(94점)", kind: "exam", weight: 47, timing: "12월 2주" },
+      { name: "2차 정기시험(6점)", kind: "exam", weight: 3, timing: "12월 2주" },
+      { name: "영양소 검출 및 소화과정 탐구", kind: "task", weight: 25, timing: "9월 1주" },
+      { name: "주기율표 해석 및 이온이 전하를 띠는 과정 설명하기", kind: "task", weight: 25, timing: "10월 3주" },
+    ],
+    notes: [
+      {
+        title: "두 과제 모두 5·10·10점",
+        body: "영양소 검출 및 소화과정 탐구와 주기율표·이온 과제는 각각 5점·10점·10점 세 요소로 25점을 이룹니다.",
+      },
+      {
+        title: "생명에서 물질로",
+        body: "9월 1주에는 영양소와 소화를, 10월 3주에는 주기율표와 이온의 전하를 다뤄 두 과제의 영역이 나뉩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "설득 글은 소재가 정해져 있고, 두 포트폴리오는 8월부터 쌓습니다",
+    intro:
+      "소래중학교 3학년 국어는 11월 3주 2차 정기시험이 선택형 47%, 서답형 3%로 나뉩니다. 수행은 독서신문 20%, 설득 글 10%, 독서·수업 활동 포트폴리오 10%씩입니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형 94점)", kind: "exam", weight: 47, timing: "11월 3주" },
+      { name: "2차 정기시험(서답형 6점)", kind: "exam", weight: 3, timing: "11월 3주" },
+      { name: "독서신문 만들기", kind: "task", weight: 20, timing: "9월 2주" },
+      { name: "설득 전략을 활용한 글 쓰기", kind: "task", weight: 10, timing: "10월 3주" },
+      { name: "국어 탐구 포트폴리오 작성하기(독서 활동 포트폴리오)", kind: "task", weight: 10, timing: "8월 3주~10월 5주" },
+      { name: "국어 탐구 포트폴리오 작성하기(수업 활동 포트폴리오)", kind: "task", weight: 10, timing: "8월 3주~10월 5주" },
+    ],
+    notes: [
+      {
+        title: "설득 글의 소재",
+        body: "10월 3주 설득 전략 글은 언어폭력 경험과 말의 어원을 다룹니다.",
+      },
+      {
+        title: "포트폴리오는 8월부터",
+        body: "국어 탐구 포트폴리오는 독서 활동과 수업 활동 두 갈래로 나뉘어 8월 3주부터 10월 5주까지 쌓으며, 각각 10%로 따로 반영됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "국제사회 갈등은 6·15·9점, 역사 두 과제는 똑같이 9·8·8점으로 나눕니다",
+    intro:
+      "소래중학교 3학년 사회와 역사는 모두 11월 3주 2차 정기시험을 선택형 45%, 논술형 5%로 반영합니다. 사회는 9월과 10월에 과제가 하나씩, 역사는 8월 말부터 두 과제가 겹쳐 진행됩니다.",
+    assessments: [
+      { course: "사회", name: "2차 정기시험(선택형 90점)", kind: "exam", weight: 45, timing: "11월 3주" },
+      { course: "사회", name: "2차 정기시험(논술형 10점)", kind: "exam", weight: 5, timing: "11월 3주" },
+      { course: "사회", name: "국제거래 이해하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술·구술·토의" },
+      { course: "사회", name: "국제사회 갈등과 해결 방안 찾아보기", kind: "task", weight: 30, timing: "10월 1주", method: "논술·프로젝트" },
+      { course: "역사", name: "2차 정기시험(선택형 90점)", kind: "exam", weight: 45, timing: "11월 3주" },
+      { course: "역사", name: "2차 정기시험(논술형 10점)", kind: "exam", weight: 5, timing: "11월 3주" },
+      { course: "역사", name: "조선시대 주제탐구 보고서 작성하기", kind: "task", weight: 25, timing: "8월 5주 ~ 9월1주" },
+      { course: "역사", name: "역사개념 탐구하기", kind: "task", weight: 25, timing: "8월 5주 ~ 10월 5주", method: "구술·포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "사회 국제사회 과제 6·15·9점",
+        body: "국제사회 갈등과 해결 방안 찾아보기는 6점·15점·9점 세 요소로 30점이고, 국제거래 이해하기는 10점 두 요소입니다.",
+      },
+      {
+        title: "역사 두 과제 모두 9·8·8점",
+        body: "역사의 조선시대 주제탐구 보고서와 역사개념 탐구는 똑같이 9점·8점·8점으로 25점을 나눕니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sorae-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "숨은 영웅 소개는 정확한 표현이 7점이고, 포트폴리오는 5점씩 세 칸입니다",
+    intro:
+      "소래중학교 3학년 영어는 1차(9월 4주)·2차(11월 3주) 정기시험을 88점분 30.8%, 12점분 4.2%로 나눠 반영합니다. 수행평가는 숨은 영웅 소개와 포트폴리오가 15%씩입니다.",
+    assessments: [
+      { name: "1차 정기시험(88점)", kind: "exam", weight: 30.8, timing: "9월 4주" },
+      { name: "1차 정기시험(12점)", kind: "exam", weight: 4.2, timing: "9월 4주" },
+      { name: "2차 정기시험(88점)", kind: "exam", weight: 30.8, timing: "11월 3주" },
+      { name: "2차 정기시험(12점)", kind: "exam", weight: 4.2, timing: "11월 3주" },
+      { name: "우리 학교 숨은 영웅 소개하기", kind: "task", weight: 15, timing: "9월 5주" },
+      { name: "영어탐구 포트폴리오 작성하기", kind: "task", weight: 15, timing: "8월 3주 ~ 10월 4주" },
+    ],
+    notes: [
+      {
+        title: "정확한 표현이 7점",
+        body: "숨은 영웅 소개하기는 초안·수정 3점, 내용 구성 5점, 정확한 표현 7점입니다.",
+      },
+      {
+        title: "포트폴리오 5점씩 세 칸",
+        body: "영어탐구 포트폴리오는 세 요소를 5점씩 보며 8월 3주부터 10월 4주까지 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소래중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "주장하는 글 쓰기 20%(9월 3주)·매체 분석과 언어 습관 성찰 20%(11월 2주)",
+    intro:
+      "소사벌중학교 1학년 국어는 10월 2주와 12월 3주 정기시험이 30%씩, 논술형 수행평가 두 과제가 20%씩입니다. 1차 시험에만 논술형 20점이 들어 있어 논술형 반영은 시험 6%와 수행평가 40%를 합친 46%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "주장하는 글 쓰기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "매체 분석하고 언어 습관 성찰하기", kind: "task", weight: 20, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "주장하는 글은 근거와 구성이 함께 채점",
+        body: "타당한 근거 들기 5점에 서론·본론·결론 각 5점을 더해 20점이며, 진로연계교육으로 미래 사회에 필요한 직업과 역량을 주제로 씁니다.",
+      },
+      {
+        title: "매체 분석 과제의 네 요소",
+        body: "매체 자료의 특징 파악 6점, 소통 맥락 분석 6점, 소통 표현 4점, 자신의 언어 습관 성찰 4점으로 구성됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "좌표평면과 그래프 논술 25%(9월 4주)·도형과 삼각형 작도 15%(10월 5주)",
+    intro:
+      "소사벌중학교 1학년 수학은 10월 2주와 12월 3주 정기시험이 30%씩이고, 두 회차 모두 선택형 90점·논술형 10점입니다. 수행평가는 논술형 과제 25%와 작도 실습 15%로 40%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 90점 · 논술형 10점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 90점 · 논술형 10점" },
+      { name: "좌표평면을 이해하고 두 변수의 관계를 식과 그래프로 나타내기", kind: "task", weight: 25, timing: "9월 4주", method: "논술형" },
+      { name: "간단한 도형과 삼각형 작도하기", kind: "task", weight: 15, timing: "10월 5주", method: "프로젝트, 실험･실습" },
+    ],
+    notes: [
+      {
+        title: "좌표평면 과제는 다섯 항목 5점씩",
+        body: "좌표평면 위의 점을 기호로 나타내기와 정비례·반비례 관계를 각각 관계식, 순서쌍과 그래프로 나타내고 해석하기까지 다섯 항목이 5점씩입니다.",
+      },
+      {
+        title: "작도는 직접 그려 보는 실습",
+        body: "주어진 선분과 길이가 같은 선분, 주어진 각과 크기가 같은 각을 작도하는 항목이 3점씩이고, 세 변·두 변과 끼인각·한 변과 양 끝 각이 주어진 삼각형 작도까지 다섯 항목으로 15점을 채웁니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "기체의 성질 설명하기 20%(11월 2주)·단원별 핵심 개념 포트폴리오 10%(12월 1주)",
+    intro:
+      "소사벌중학교 1학년 과학은 10월 2주와 12월 3주 정기시험이 35%씩이고 수행평가가 30%입니다. 1차 시험은 논술형이 30점이라 시험 안에서 10.5%가 논술형으로 반영됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 70점 · 논술형 30점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 3주", method: "선택형 100점" },
+      { name: "기체의 성질 설명하기", kind: "task", weight: 20, timing: "11월 2주", method: "논술형" },
+      { name: "단원별 핵심 지식과 개념 이해하기", kind: "task", weight: 10, timing: "12월 1주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "기체 과제는 입자 모형 해석이 12점",
+        body: "기체의 성질을 입자 모형으로 해석하는 부분이 12점, 생활 속 사례 두 가지를 들어 설명하는 부분이 8점입니다.",
+      },
+      {
+        title: "포트폴리오는 세 단원을 정리",
+        body: "힘의 작용, 기체의 성질, 태양계 단원의 지식 정리 5점과 핵심 개념 이해 5점으로 10점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "우정과 성장 글쓰기 25%(9월 2주)·예술가 설명 글쓰기 25%(11월 4주)·포트폴리오 10%",
+    intro:
+      "소사벌중학교 1학년 영어는 정기시험 두 번이 20%씩으로 시험보다 수행평가 비중(60%)이 큽니다. 논술형 글쓰기 두 과제가 25%씩이고, 단원별 포트폴리오는 세 차례 나누어 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "10월 2주", method: "선택형 70점 · 논술형 30점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 3주", method: "선택형 100점" },
+      { name: "우정과 성장에 관한 글쓰기", kind: "task", weight: 25, timing: "9월 2주", method: "논술형" },
+      { name: "예술가를 설명하는 글쓰기", kind: "task", weight: 25, timing: "11월 4주", method: "논술형" },
+      { name: "단원별 개념 이해하기", kind: "task", weight: 10, timing: "9월 3주, 10월 4주, 11월 3주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "예술가 글쓰기의 분량 기준",
+        body: "어휘 5점, 어법에 맞는 문장 10점, 글쓰기 10점이며 어휘 8~10개를 활용해 8~10문장으로 씁니다.",
+      },
+      {
+        title: "포트폴리오는 듣기와 문장 만들기",
+        body: "단원별 개념 이해하기는 듣고 의미 파악하기 5점, 문장 만들기 5점으로 구성되고 9월·10월·11월에 한 번씩 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "복합양식으로 소통하기 20%(9월 4주)·책 광고 만들기 20%(10월 5주)",
+    intro:
+      "소사벌중학교 2학년 국어는 10월 2주와 12월 3주 정기시험이 30%씩이고, 두 회차 모두 선택형 80점·논술형 20점입니다. 수행평가는 논술형 비평문과 책 광고 제작 프로젝트가 20%씩입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 80점 · 논술형 20점" },
+      { name: "복합양식으로 소통하기", kind: "task", weight: 20, timing: "9월 4주", method: "논술형" },
+      { name: "책 광고 만들기", kind: "task", weight: 20, timing: "10월 5주", method: "프로젝트, 실험･실습" },
+    ],
+    notes: [
+      {
+        title: "복합양식 과제는 평가와 비평문",
+        body: "복합양식 자료의 내용과 표현을 평가하는 부분 10점, 삼단 구성의 비평문 쓰기 10점으로 나뉩니다.",
+      },
+      {
+        title: "책 광고는 표현 요소의 효과까지",
+        body: "책의 핵심 내용 재현 10점, 활용한 매체 표현 요소와 효과 설명 5점, 이미지·색상·글자·배치 5점으로 채점합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "신항로 개척 토론문 25%(9월 1주)·중국 근대화 인물 가상 선거 캠페인 25%(10월 3주)",
+    intro:
+      "소사벌중학교 2학년 역사는 정기시험이 12월 3주 한 번(50%)이고, 수행평가 두 과제가 25%씩입니다. 시험은 선택형 80점·논술형 20점입니다.",
+    assessments: [
+      { name: "2차 정기시험", kind: "exam", weight: 50, timing: "12월 3주", method: "선택형 80점 · 논술형 20점" },
+      { name: "신항로 개척에 대한 토론문 작성하기", kind: "task", weight: 25, timing: "9월 1주", method: "논술형" },
+      { name: "중국 근대화 운동 인물 ‘가상 선거’ 캠페인 만들기", kind: "task", weight: 25, timing: "10월 3주", method: "제작형" },
+    ],
+    notes: [
+      {
+        title: "최종 토론문이 9점",
+        body: "신항로 개척의 이동 경로에 해당하는 인물 찾기 4점, 긍정적 영향 서술 6점, 부정적 영향 서술 6점, 양측 주장을 종합해 자신의 관점으로 최종 토론문 쓰기 9점입니다.",
+      },
+      {
+        title: "가상 선거 캠페인의 배점",
+        body: "후보 선정 및 참여 운동, 후보 약력, 출마 배경, 선거 구호 만들기의 네 요소가 5·6·7·7점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "일차함수의 식 구하기 15%(9월 2주)·삼각형과 사각형의 성질 25%(10월 4주)",
+    intro:
+      "소사벌중학교 2학년 수학은 10월 2주와 12월 3주 정기시험이 30%씩이고, 논술형 20점은 1차 시험에만 있습니다. 수행평가는 구술·발표 15%와 논술형 25%로 40%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "일차함수의 식 구하기", kind: "task", weight: 15, timing: "9월 2주", method: "구술·발표" },
+      { name: "삼각형과 사각형의 성질", kind: "task", weight: 25, timing: "10월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "일차함수는 그래프 8점·식 7점",
+        body: "그래프 나타내기 8점(절편 이용 4점, 기울기와 절편 4점)과 일차함수의 식 구하기 7점을 말로 설명하며 평가받습니다.",
+      },
+      {
+        title: "사각형 사이 관계에 12점",
+        body: "삼각형과 사각형의 성질 과제는 외심과 내심 8점, 평행사변형이 되는 조건 5점, 여러 가지 사각형 사이의 관계 12점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "코일이 받는 힘 글쓰기 20%(10월 3주)·단원별 핵심 개념 포트폴리오 10%",
+    intro:
+      "소사벌중학교 2학년 과학은 10월 2주와 12월 3주 정기시험이 35%씩이고 1차 시험에 논술형 30점이 있습니다. 수행평가는 논술형 글쓰기 20%와 네 단원을 따라가는 포트폴리오 10%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 35, timing: "10월 2주", method: "선택형 70점 · 논술형 30점" },
+      { name: "2차 정기시험", kind: "exam", weight: 35, timing: "12월 3주", method: "선택형 100점" },
+      { name: "자기장 안에서 전류가 흐르는 코일이 받는 힘 글쓰기", kind: "task", weight: 20, timing: "10월 3주", method: "논술형" },
+      { name: "단원별 핵심 지식과 개념 이해하기", kind: "task", weight: 10, timing: "8월 4주/9월 2주, 10월 1주/10월 5주, 11월 3주/12월 1주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "코일 글쓰기는 전동기 예시까지",
+        body: "코일이 받는 힘의 크기와 방향에 대한 글쓰기 12점, 전동기 등 일상 예시 두 가지의 원리 설명 8점입니다.",
+      },
+      {
+        title: "포트폴리오가 다루는 단원",
+        body: "식물과 에너지, 동물과 에너지, 전기와 자기, 별과 우주 단원의 핵심 개념을 학기 내내 나누어 정리합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "sosabeol-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "어휘 추론 및 문장 완성 15%(9월 4주, 11월 4주)·환경 보호 글쓰기 25%(11월 2주)",
+    intro:
+      "소사벌중학교 2학년 영어는 10월 2주와 12월 3주 정기시험이 30%씩이고 1차 시험에 논술형 20점이 들어갑니다. 수행평가는 포트폴리오 15%와 논술형 글쓰기 25%입니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형 80점 · 논술형 20점" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 3주", method: "선택형 100점" },
+      { name: "어휘 추론 및 문장 완성하기", kind: "task", weight: 15, timing: "9월 4주, 11월 4주", method: "포트폴리오" },
+      { name: "환경 보호에 관한 글쓰기", kind: "task", weight: 25, timing: "11월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "어휘 과제는 두 번 나누어",
+        body: "어휘의 의미와 쓰임 10점, 문장 완성 5점으로 구성되며 9월 4주와 11월 4주에 실시합니다.",
+      },
+      {
+        title: "환경 글쓰기는 동료평가 포함",
+        body: "환경 문제 설명, 해결 방안 제시, 어법과 어휘를 살린 문장 완성, 서론·본론·결론 전개가 6·6·7·6점이고, 교사 관찰과 함께 동료평가를 합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("소사벌중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "한 권 읽기 책은 「달러구트 꿈백화점」이고, 수필은 의미 있는 장면 고르기부터 시작합니다",
+    intro:
+      "태종대중학교 1학년 국어는 10월 2주 중간고사와 12월 1주 기말고사가 각 30%이고, 수행평가는 9월 수필 쓰기 20%와 수시로 이어지는 독서 융합 활동(한 학기 한 권 읽기) 20%입니다. 두 시험 모두 선택형과 서답형을 함께 내며 서답형이 40점입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "자신의 경험과 정서를 담아 수필 쓰기", kind: "task", weight: 20, timing: "9월" },
+      { name: "독서 융합 활동(한 학기 한 권 읽기)", kind: "task", weight: 20, timing: "수시" },
+    ],
+    notes: [
+      {
+        title: "한 권 읽기 책은 「달러구트 꿈백화점」",
+        body: "진도표의 독서 융합 활동은 「달러구트 꿈백화점」을 읽고 줄거리와 자신의 감상을 담아 독서일지와 독서감상문을 쓰는 논술형 평가로, 8월부터 11월까지 여러 주에 걸쳐 표시되어 있습니다. 성취기준은 [9국05-03]입니다.",
+      },
+      {
+        title: "수필은 의미 있는 장면 고르기부터",
+        body: "9월 1~2주 ‘진솔한 글 쓰기’ 단원에서 자신의 삶과 경험 가운데 의미 있는 장면을 고르고, 정서를 진솔하고 개성 있게 표현했는지를 논술형으로 평가합니다. 쓰기 과정은 학습지로 정리하고 교사 관찰도 함께 합니다. 성취기준은 [9국03-05]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "근거자료와 비교해 뉴스를 가리고, 인권 침해 상황을 분석해 법률상담 보고서를 씁니다",
+    intro:
+      "태종대중학교 1학년 사회는 중간·기말고사가 각 30%이고 서답형이 50점으로 배점의 절반입니다. 수행평가는 9월 가짜뉴스 판별하기와 11월 인권변호사의 법률상담 보고서가 20%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 50점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 50점" },
+      { name: "가짜뉴스 판별하기", kind: "task", weight: 20, timing: "9월" },
+      { name: "인권변호사의 법률상담 보고서", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "근거자료와 비교해 뉴스를 가립니다",
+        body: "가짜뉴스 판별하기는 9월 1~2주 ‘다양한 문화의 이해’ 단원의 [9사(일사)02-02]에 맞춘 산출물 평가로, 뉴스 속 사실 확인 문제를 찾아 근거자료와 비교해 가짜뉴스를 가려냅니다.",
+      },
+      {
+        title: "인권 침해 상황을 분석한 보고서",
+        body: "11월 2~3주 ‘인권과 기본권’ 단원에서 인권 침해 상황을 분석하고 구제 방법을 담은 보고서를 씁니다. 같은 시기에 헌법상 기본권 종류를 구분하는 진위 평가도 있고, 성취기준은 [9사(일사)06-01]·[9사(일사)06-02]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "다각형의 정의·성질과 부채꼴 속 도형을 10월에 모으고, 구의 부피·겉넓이 차시엔 교사 관찰로 과정을 평가합니다",
+    intro:
+      "태종대중학교 1학년 수학은 10월 2주 중간고사와 12월 1주 기말고사가 30%씩이며 서답형이 40점입니다. 수행평가는 10월 평면도형 포트폴리오와 11월 입체도형 탐구 프로젝트로, 두 과제 모두 2학기 도형 단원에서 나옵니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "평면도형의 성질 포트폴리오", kind: "task", weight: 20, timing: "10월" },
+      { name: "입체도형의 성질 탐구 프로젝트", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "포트폴리오는 다각형과 부채꼴",
+        body: "10월 2~3주 평면도형 단원정리 시기에 다각형의 정의와 성질, 부채꼴에서 찾을 수 있는 도형의 개념을 익히는 활동이 포트폴리오로 연결됩니다. 성취기준은 [9수03-05]·[9수03-06]입니다.",
+      },
+      {
+        title: "회전체 겉넓이·부피로 탐구 프로젝트",
+        body: "11월 1~2주 ‘구의 부피와 겉넓이’ 차시에 회전체의 겉넓이와 부피를 구하는 활동이 탐구 프로젝트와 이어지고, 교사 관찰로 학습 과정을 평가합니다. 성취기준은 [9수03-07]·[9수03-08]이며, 정기시험 평가요소는 기본 도형과 작도부터 자료의 정리와 해석까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "자전·공전과 계절별 별자리, 일식·월식을 모형으로 설명하고 냉장고·증발 사례로 열에너지 출입의 논리성과 적용력을 봅니다",
+    intro:
+      "태종대중학교 1학년 과학은 중간·기말고사가 각 30%(서답형 40점)이고, 수행평가 두 개가 20%씩입니다. 지구와 달의 운동 탐구는 개학 직후 8월~9월에, 상태 변화와 열에너지 탐구는 11월에 진행됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "지구와 달의 운동 탐구하기", kind: "task", weight: 20, timing: "8월~9월" },
+      { name: "상태 변화와 열에너지 탐구하기", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "모형 활동과 달 위상 기록",
+        body: "8월 3~4주 태양계 단원에서 모형 활동으로 자전·공전과 계절별 별자리 변화를 설명하는 보고서, 달의 위상을 관찰해 정리하는 포트폴리오, 모형으로 일식·월식을 설명하는 보고서가 지구와 달의 운동 탐구로 묶여 있습니다. 성취기준은 [9과07-03]·[9과07-04]입니다.",
+      },
+      {
+        title: "열 출입 실험과 생활 사례",
+        body: "11월 2~3주 상태 변화와 열에너지 탐구는 [9과04-04]에 맞춰 실험으로 열에너지 출입을 확인하고, 냉장고·증발 같은 생활 사례와 연결해 설명의 논리성과 적용력을 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "Lesson 6 초고는 교사 피드백 뒤 완성본으로 내고, Lesson 7에선 대본·연습 영상·자기 수정을 거쳐 학급 앞에서 발표합니다",
+    intro:
+      "태종대중학교 1학년 영어는 중간·기말고사가 각 30%이고 서답형이 50점입니다. 수행평가 40%는 9월 영어듣기평가 10%, 9월 설명하는 글쓰기 15%, 10월 태종 1분 말하기 15%로 나뉩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 50점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 50점" },
+      { name: "영어듣기평가", kind: "task", weight: 10, timing: "9월" },
+      { name: "설명하는 글쓰기", kind: "task", weight: 15, timing: "9월" },
+      { name: "태종 1분 말하기", kind: "task", weight: 15, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "초고에 피드백을 받아 완성하는 글",
+        body: "설명하는 글쓰기는 9월 3~4주 Lesson 6 ‘Good for the Earth, Good for Us’ 시간에 진행되며, 수업 중 어휘평가와 초고 작성 뒤 교사 피드백을 받아 완성본을 냅니다. 평가요소는 내용, 형식, 과제완성입니다.",
+      },
+      {
+        title: "친구의 꿈을 소개하는 1분",
+        body: "태종 1분 말하기는 Lesson 7 ‘Find Your Dream’에서 친구의 꿈을 소개하는 대본을 쓰고, 연습 영상을 찍어 스스로 고친 뒤 학급 앞에서 발표합니다. 유창성, 정확성, 내용을 보며 성취기준은 [9영02-03]·[9영02-10]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "창제 원리를 먼저 점검한 뒤 소책자를 만들고, 한 권 읽기에는 독자 대화가 있습니다",
+    intro:
+      "태종대중학교 2학년 국어는 중간·기말고사 30%씩(서답형 40점)에 수행평가 두 개가 20%씩입니다. 9월에는 한글 원리를 담은 홍보 소책자를 만들고, 독서 융합 활동은 8월부터 11월까지 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "한글 홍보 소책자 만들기", kind: "task", weight: 20, timing: "9월" },
+      { name: "독서 융합 활동(한 학기 한 권 읽기)", kind: "task", weight: 20, timing: "8월~11월" },
+    ],
+    notes: [
+      {
+        title: "창제 원리를 먼저 점검합니다",
+        body: "9월 1~3주 한글 단원에서 한글 창제 배경과 자음·모음의 창제 원리를 학습지와 질문하기로 확인하고, 체크리스트로 스스로 학습 정도를 점검한 뒤 소책자 과제로 이어집니다. 성취기준은 [9국04-01]입니다.",
+      },
+      {
+        title: "독자 대화가 있는 한 권 읽기",
+        body: "한 권 읽기는 작품을 읽으며 생각을 학습지에 적고, 주요 쟁점에 대한 의견과 근거를 내놓은 뒤 다른 독자의 관점을 고려해 생각을 조정하는 독자 대화로 진행됩니다. 진도표에는 8월 3~5주, 9월 4~5주, 10월 4~5주, 11월 4~5주에 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "포트폴리오는 거의 격주로 쌓이고, 중간고사 직후 한국 미술 글쓰기와 말하기가 이어집니다",
+    intro:
+      "태종대중학교 2학년 영어는 중간·기말고사가 30%씩(서답형 50점)이고, 수행평가는 단원별 학습활동 포트폴리오 10%, 한국 미술 작품 소개 글쓰기 15%, 1분 영어 말하기 15%입니다. 글쓰기와 말하기는 10월 3주와 4주에 연달아 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 50점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 50점" },
+      { name: "단원별 학습활동 포트폴리오", kind: "task", weight: 10, timing: "8~11월" },
+      { name: "한국 미술 작품 소개 글쓰기", kind: "task", weight: 15, timing: "10월 3주" },
+      { name: "1분 영어 말하기", kind: "task", weight: 15, timing: "10월 4주" },
+    ],
+    notes: [
+      {
+        title: "포트폴리오는 거의 격주로 쌓입니다",
+        body: "단원별 학습활동 포트폴리오는 진도표에서 8월 3~5주부터 11월 4~5주까지 여덟 차례 수행평가 연계로 표시되어 있어, 학기 내내 활동 결과를 모으는 방식입니다.",
+      },
+      {
+        title: "중간고사 직후 글쓰기와 말하기",
+        body: "한국 미술 작품 소개 글쓰기는 [9영02-03]·[9영02-06]·[9영02-10], 1분 영어 말하기는 [9영01-09]·[9영02-01]·[9영02-03]에 맞춰 있고, 진도표에는 둘 다 10월 2~4주에 놓여 있습니다. 말하기 평가요소에는 연음·축약된 소리를 활용해 말하기와 존중하는 태도로 말하고 듣기가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "종이접기 관찰과 구술평가로 성질을 탐구하고, 닮음 조건 설명에서 선분 길이까지 갑니다",
+    intro:
+      "태종대중학교 2학년 수학은 중간·기말고사가 각 30%이며 서답형이 40점입니다. 수행평가는 9월~10월 삼각형과 사각형의 성질 탐구하기와 11월~12월 도형의 닮음 프로젝트가 20%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "삼각형과 사각형의 성질 탐구하기", kind: "task", weight: 20, timing: "9월~10월" },
+      { name: "도형의 닮음 프로젝트", kind: "task", weight: 20, timing: "11월~12월" },
+    ],
+    notes: [
+      {
+        title: "종이접기 관찰과 구술평가",
+        body: "삼각형과 사각형의 성질 탐구하기는 9월 2~3주에 종이접기로 외심과 내심이 존재함을 이해하는지 관찰하고, 10월 2~3주에 사각형 용어의 뜻과 성질을 구술평가로 확인합니다. 성취기준은 [9수03-10]·[9수03-11]입니다.",
+      },
+      {
+        title: "닮음 조건 설명에서 선분 길이까지",
+        body: "도형의 닮음 프로젝트는 11월 3~4주 삼각형의 닮음 관계를 찾고 닮음 조건을 설명하는 활동, 11월 4~5주 평행선 사이의 선분 길이를 구하는 활동으로 관찰평가합니다. 성취기준은 [9수03-13]·[9수03-14]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "연표는 산업 혁명과 국민 국가 건설 운동, 뉴스는 제2차 세계 대전 단원에서 만듭니다",
+    intro:
+      "태종대중학교 2학년 사회 영역은 역사 한 과목으로, 중간·기말고사가 각 30%(서답형 40점)이고 수행평가 두 개가 20%씩입니다. 9~10월에는 비주얼 연표를, 11월에는 세계대전을 다룬 역사 뉴스를 만듭니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 40점", course: "역사" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 40점", course: "역사" },
+      { name: "역사 비주얼 연표 제작하기", kind: "task", weight: 20, timing: "9~10월", course: "역사" },
+      { name: "세계대전 역사 뉴스 제작하기", kind: "task", weight: 20, timing: "11월", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "연표는 산업 혁명과 국민 국가 건설 운동",
+        body: "진도표 9월 1~2주에는 산업 혁명의 과정과 특징을, 9월 3~4주에는 아시아의 국민 국가 건설 운동을 빙고 퀴즈 모둠 활동과 학습지로 정리하며 비주얼 연표 제작과 연결합니다.",
+      },
+      {
+        title: "제2차 세계 대전 단원의 뉴스 제작",
+        body: "세계대전 역사 뉴스는 11월 1~2주 제2차 세계 대전의 전개 과정을 배우며 만들고, 그 시기를 살았던 인물에 감정이입하도록 읽기·시각 자료를 활용한 논술형 평가가 함께 적혀 있습니다. 정기시험 평가요소에는 냉전의 전개와 제3 세계까지 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "입자 모형 탐구는 중간고사 직전이고, 전기와 자기는 저항 연결에서 자기장까지 다룹니다",
+    intro:
+      "태종대중학교 2학년 과학은 중간·기말고사 30%씩(서답형 40점)과 수행평가 두 개 20%씩입니다. 10월 입자 모형 탐구는 1~3단계로, 11월 전기와 자기 현상 탐구는 세 단계를 두 차례에 나눠 진행합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월 2주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월 1주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "물질의 구성 입자 모형 탐구", kind: "task", weight: 20, timing: "10월" },
+      { name: "전기와 자기 현상 탐구", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "전기와 자기는 저항 연결에서 자기장까지",
+        body: "전기와 자기 현상 탐구는 11월 2~3주 1~2단계에서 저항의 연결 방법에 따른 특징을 표현했는지 교사 관찰로 보고, 11월 4~5주 3단계에서 자기장의 변화를 관찰해 결과를 분석하는 실험평가로 마무리합니다.",
+      },
+      {
+        title: "입자 모형 탐구는 중간고사 직전",
+        body: "물질의 구성 입자 모형 탐구는 진도표 10월 1~2주에 1~3단계로 표시되어 있고, 성취기준은 [9과11-04]입니다. 중간고사 평가요소는 지권의 변화와 물질의 구성입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "남북한 언어 차이의 원인과 극복 방안을 보고서로 쓰고, 기말 평가요소는 다섯 가지입니다",
+    intro:
+      "태종대중학교 3학년 국어는 2학기 정기시험이 10월 5주 기말고사 한 번(40%, 서답형 40점)이고, 수행평가 60%는 남북한 언어 보고서 쓰기와 한 학기 한 권 읽기가 30%씩입니다. 수행 두 개가 모두 기말고사 전인 8월~10월에 끝납니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월 5주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "남북한 언어 보고서 쓰기", kind: "task", weight: 30, timing: "9월" },
+      { name: "독서 융합 활동(한 학기 한 권 읽기)", kind: "task", weight: 30, timing: "8~10월" },
+    ],
+    notes: [
+      {
+        title: "차이의 원인과 극복 방안을 보고서로",
+        body: "9월 1~2주에 남북한 언어에 차이가 생긴 까닭과 극복 방안을 학습지로 정리하고, 언어 차이를 극복하기 위해 지녀야 할 태도를 토의하며 동료평가를 거쳐 보고서로 이어집니다. 성취기준은 [9국04-09]입니다.",
+      },
+      {
+        title: "기말고사 평가요소 다섯 가지",
+        body: "기말고사 평가요소는 다양한 해석과 감상, 논증 방법 파악하며 읽기, 설득 전략 분석하며 듣기, 과거의 삶과 오늘날의 삶, 남북한 언어의 차이와 극복 방안입니다. 한 권 읽기는 8월 3~5주부터 10월까지 학습지와 질문하기로 진행됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "도시 문제를 조사해 조건을 제시하고, 입지 분석으로 다국적 기업의 분업 체계를 설명합니다",
+    intro:
+      "태종대중학교 3학년 사회는 10월 5주 기말고사 한 번이 40%(서답형 50점)이고 수행평가 두 개가 30%씩입니다. 도시 단원의 프로젝트가 9월, 글로벌 경제 단원의 설계 과제가 10월에 있습니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월 5주", method: "선택형+서답형 · 서답형 50점", course: "사회" },
+      { name: "좋은 도시 만들기 프로젝트", kind: "task", weight: 30, timing: "9월", course: "사회" },
+      { name: "다국적 기업의 공간적 분업 설계하기", kind: "task", weight: 30, timing: "10월", course: "사회" },
+    ],
+    notes: [
+      {
+        title: "도시 문제 조사에서 조건 제시까지",
+        body: "좋은 도시 만들기 프로젝트는 9월 3~4주 [9사(지리)08-03] 차시에 도시의 문제를 조사·분석해 살기 좋은 도시가 되기 위한 조건을 제시하는 산출물 평가입니다. 이어지는 차시에서 [9사(지리)08-04] 살기 좋은 도시 사례 조사로 넘어갑니다.",
+      },
+      {
+        title: "입지 분석으로 분업 체계를 설명",
+        body: "다국적 기업 과제는 10월 2~3주 [9사(지리)09-02] 차시에 다국적 기업의 공간적 분업 체계를 세계 지도에서 찾고, 공간별 입지 분석으로 공간적 분화를 설명하는 산출물 평가입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비가 쓰인 상황을 직접 찾고, 원과 직선·원주각을 포트폴리오로 정리합니다",
+    intro:
+      "태종대중학교 3학년 수학은 10월 5주 기말고사 40%(서답형 40점)와 수행평가 두 개 30%씩으로 구성됩니다. 삼각비 과제는 9월, 원의 성질 포트폴리오는 10월 대단원 학습점검 때 진행됩니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월 5주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "삼각비를 활용한 실생활 문제 해결하기", kind: "task", weight: 30, timing: "9월" },
+      { name: "원의 성질 포트폴리오", kind: "task", weight: 30, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "삼각비가 쓰인 상황을 직접 찾습니다",
+        body: "삼각비 단원에서는 일상생활 속 삼각비가 사용된 문제를 스스로 찾아 해결하게 하고, 예를 찾는 과정과 의사소통 태도를 관찰평가합니다. 수행평가는 9월 1~2주 대단원 학습점검 때 표시되어 있고 성취기준은 [9수04-17]·[9수04-18]입니다.",
+      },
+      {
+        title: "원과 직선, 원주각을 정리하는 포트폴리오",
+        body: "원의 성질 포트폴리오는 10월 2~3주 대단원 학습점검에 놓이고 범위는 [9수04-19]·[9수04-20]입니다. 평가요소는 원과 직선, 원주각이며, 기말고사는 삼각비와 원의 성질 두 단원을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "양파 뿌리 실험과 염색체 스티커 모형, 실험 프로그램으로 놀이기구 에너지를 측정합니다",
+    intro:
+      "태종대중학교 3학년 과학은 10월 5주 기말고사가 40%(서답형 40점)이고, 수행평가는 문제 해결 평가인 놀이기구 역학적 에너지 탐구와 실험 및 탐구 평가인 세포 분열 탐구가 30%씩입니다. 두 수행 모두 진도표상 8월 말~9월 초에 몰려 있습니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월 5주", method: "선택형+서답형 · 서답형 40점" },
+      { name: "놀이기구의 역학적 에너지 보존 탐구하기", kind: "task", weight: 30, method: "문제 해결 평가" },
+      { name: "세포 분열 탐구", kind: "task", weight: 30, method: "실험 및 탐구 평가" },
+    ],
+    notes: [
+      {
+        title: "양파 뿌리 실험과 염색체 스티커 모형",
+        body: "세포 분열 탐구는 1단계로 양파 뿌리를 이용한 체세포 분열 실험 보고서를 쓰고, 이어 염색체 스티커로 체세포 분열과 감수 분열을 단계에 맞게 표현하는 모형평가를 합니다. 성취기준은 [9과21-01]·[9과21-02]입니다.",
+      },
+      {
+        title: "실험 프로그램으로 에너지를 측정",
+        body: "놀이기구 과제는 [9과22-01]에 맞춰 에너지 전환 과정을 익힌 뒤, 자바 실험 프로그램으로 물체의 에너지를 측정하는 탐구와 놀이기구의 역학적 에너지를 분석하는 자료 해석을 보고서로 평가합니다. 기말고사는 자극과 반응, 생식과 유전, 에너지 전환과 보존을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "taejongdae-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "감상문은 9월 4~5주에 쓰고, 1분 말하기는 전달력과 표현력을 봅니다",
+    intro:
+      "태종대중학교 3학년 영어는 10월 5주 기말고사 한 번이 40%(서답형 50점)이고, 수행평가 60%가 듣기 15%, 쓰기 25%, 말하기 20%로 나뉩니다. 쓰기 과제인 미술작품 감상문 비중이 가장 큽니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월5주", method: "선택형+서답형 · 서답형 50점" },
+      { name: "영어 듣기평가", kind: "task", weight: 15, timing: "9월", method: "듣기 평가" },
+      { name: "미술작품 감상문 쓰기", kind: "task", weight: 25, timing: "9월", method: "쓰기 평가" },
+      { name: "태종 1분 말하기", kind: "task", weight: 20, timing: "10월", method: "말하기 평가" },
+    ],
+    notes: [
+      {
+        title: "감상문은 9월 4~5주",
+        body: "미술작품 감상문 쓰기는 진도표 9월 4~5주에 [9영04-01]·[9영04-02]와 함께 표시되어 있고, 평가요소는 내용·표현·언어 형식입니다. 기말고사 범위에는 Lesson 8 ‘The Joseon Dynasty Through Paintings’가 들어 있습니다.",
+      },
+      {
+        title: "말하기는 전달력과 표현력",
+        body: "태종 1분 말하기는 10월 2~3주 [9영02-01]과 연결되어 있고 유창성, 전달력, 표현력으로 평가합니다. 영어 듣기평가는 9월 1~2주에 표시되어 있으며 식별, 이해, 세부 내용 파악을 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("태종대중학교")],
+  },
+  {
+    schoolSlug: "ulsansangeop-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "시조 창작(8월 4주)·청중 고려 발표(9월 2~3주) 각 30% · 9월 5주·12월 1주 시험 각 20%",
+    intro:
+      "울산상업고등학교 1학년 공통국어2는 전학과 공통 계획으로, 수행평가 두 개가 30%씩 60%이고 정기시험은 9월 5주와 12월 1주에 20%씩입니다. 수행평가가 8월 4주와 9월 2~3주에 있어 1차 시험 전에 두 과제가 모두 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 5주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점" },
+      { name: "가치있는 경험으로 시조 창작하기", kind: "task", weight: 30, timing: "8월 4주/1회", method: "서·논술형" },
+      { name: "청중을 고려하여 발표하기", kind: "task", weight: 30, timing: "9월 2주~3주/1회", method: "구술·발표, 포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "시조 창작은 형식과 경험 반영이 40점씩",
+        body: "홍랑의 ‘묏버들 갈ᄒᆡ 것거’를 배운 뒤 노동·인권·금융 등 제시된 주제와 관련된 자신의 경험을 시조로 씁니다. 3장 6구와 종장 첫 구 3음절을 지키면 형식 40점, 경험이나 생각을 구체적으로 반영하면 40점, 어휘 선택이 적절하고 맞춤법 오류가 없으면 표현 20점입니다.",
+      },
+      {
+        title: "발표는 다섯 단계가 20점씩",
+        body: "청중 분석 및 내용 선정, 발표 개요서 작성, 발표 전략 활용, 질의응답 준비, 발표하기를 각 20점으로 채점하고 발표 장면은 음성이나 영상으로 남깁니다. 질의응답은 질문 2개에 대한 답변 준비, 발표하기는 시간 조절이 기준이며, 내용 선정 단계에서는 AI와 대화하며 아이디어를 구체화하는 활용이 허용됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("울산상업고등학교")],
+  },
+  {
+    schoolSlug: "ulsansangeop-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "도표 설명문(10월 2주)·표현 활용 쓰기 학습지 4회(8~10월) 각 30% · 정기시험 각 20%",
+    intro:
+      "울산상업고등학교 1학년 공통영어2는 쓰기 수행평가 두 개가 30%씩이고, 9월 5주·12월 1주 정기시험이 20%씩입니다. 표현 활용 쓰기는 8월 3주부터 10월 4주까지 네 번에 나누어 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 5주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점" },
+      { name: "도표 설명문 작성", kind: "task", weight: 30, timing: "10월 2주/1회", method: "서술·논술" },
+      { name: "표현 활용 쓰기", kind: "task", weight: 30, timing: "8월 3주~10월 4주/4회", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "도표 설명문은 구성 순서가 70점",
+        body: "그래프 소개, 최상위 항목, 다른 항목, 최하위 항목 순서의 구성 요소를 모두 갖추면 논리적 구성 70점이고, 한 부분이 빠질 때마다 57·44·31·18점으로 내려갑니다. 어휘와 문법을 정확하게 쓰면 표현 30점, 오류가 1~2개면 27점입니다.",
+      },
+      {
+        title: "표현 활용 쓰기는 학습지 4장, 장마다 25점",
+        body: "학습활동지 4장을 장마다 25점으로 채점하며, 한 장은 완성도 15점과 맥락에 맞는 어휘 사용 10점(부적절한 어휘 1~2개면 8점)으로 나뉩니다. 성취기준은 [10공영2-02-06]과 [10공영2-02-08]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("울산상업고등학교")],
+  },
+  {
+    schoolSlug: "ulsansangeop-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2"],
+    summary: "연소 근로자 근로 계약서(9월 3주)·자본주의 전개 과정 서술(10월 2주) 각 30%",
+    intro:
+      "울산상업고등학교 1학년 통합사회2는 서술형 수행평가 두 개가 30%씩, 9월 5주와 12월 1주 정기시험이 20%씩입니다. 9월에는 근로 계약서 작성, 10월에는 자본주의 정리표와 서술이 이어집니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 5주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점" },
+      { name: "연소 근로자 근로 계약서 작성하기", kind: "task", weight: 30, timing: "9월 3주/1회", method: "서술논술" },
+      { name: "자본주의 전개과정 특징 서술하기", kind: "task", weight: 30, timing: "10월 2주/1회", method: "서술논술" },
+    ],
+    notes: [
+      {
+        title: "근로 계약서는 12개 항목을 채웁니다",
+        body: "‘아르바이트를 시작하려는 청소년’ 역할로 주휴수당 미지급 같은 상황을 다루며, 2차시 수업 안에서 근로기준법을 배운 뒤 계약서를 씁니다. 근로 개시일·종료일·근무 장소·업무 내용 30점, 근로 시간·휴게 시간·근무일·휴일 30점, 시급·지급 방법·임금 지급일·특약 사항 40점이며 묶음마다 네 가지를 모두 맞게 써야 만점입니다.",
+      },
+      {
+        title: "자본주의 과제는 자료·표·서술 순서",
+        body: "자본주의 전개 과정, 특징, 사상가들의 주장을 중심으로 자료를 모으면 30점, 시대순 정리표를 오류 없이 만들면 30점, 역사적 사건과 사상가를 중심으로 특징을 서술하면 40점입니다. 정리표는 오류 하나마다 5점씩 내려가며 성취기준은 [10통사2-03-01]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("울산상업고등학교")],
+  },
+  {
+    schoolSlug: "ulsansangeop-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "지질시대 신문(9월 1주)·발전소 영향 조사(10월 3주) 프로젝트 각 30% · 시험 각 20%",
+    intro:
+      "울산상업고등학교 1학년 통합과학2는 프로젝트 두 개가 30%씩, 정기시험 두 번이 20%씩입니다. 학기 첫 주에 지질시대 신문을 만들고, 10월 3주에 발전소 조사를 합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 20, timing: "9월 5주", method: "선택형 60점·서·논술형 40점" },
+      { name: "2차 정기시험", kind: "exam", weight: 20, timing: "12월 1주", method: "선택형 100점" },
+      { name: "지질시대 신문 만들기", kind: "task", weight: 30, timing: "9월 1주/1회", method: "프로젝트" },
+      { name: "발전소가 인간생활에 미치는 영향 조사하기", kind: "task", weight: 30, timing: "10월 3주/1회", method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "지질시대 신문은 그림이 40점",
+        body: "지질시대 하나를 골라 환경 특징과 바다·육지 생물을 조사하고 그림을 넣어 신문을 완성합니다. 환경 특징 4개 이상 조사 30점, 생물 4개 이상 조사 30점, 시대 환경·바다 생물·육지 생물 그림 4개 이상 40점이 만점 기준입니다.",
+      },
+      {
+        title: "발전소 조사는 지도 표시와 신재생 사례",
+        body: "우리나라 발전소의 이름과 종류를 조사해 지도에 위치를 표시하고(30점), 화력발전소와 핵발전소의 특징·장점·단점(30점), 신재생 에너지 기술의 실제 활용 사례(40점)를 조사합니다. 항목마다 4개 이상을 찾으면 만점이고, 사례는 국내와 해외 모두 쓸 수 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("울산상업고등학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "내분점 곡선 모델링 논술 10월 3~4주·명제와 대우 추론 11월 1~2주 각 25% · 시험 2회 50%",
+    intro:
+      "영복여자고등학교 1학년 공통수학2는 1차·2차 정기시험이 25%씩이고, 수행평가 두 과제가 25%씩 절반을 차지합니다. 10월 1~2주 1차 시험 직후 10월 3~4주에 내분점 논술이, 11월 초에 명제 추론 과제가 이어지므로 수업은 이 순서에 맞춰 단원을 정리합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주~10월 2주", method: "선택형 80점(20문항) · 논술형 20점(2문항)" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주", method: "선택형 80점(20문항) · 논술형 20점(2문항)" },
+      { name: "곡선 모델링에 활용된 내분점 분석", kind: "task", weight: 25, timing: "10월 3주~4주", method: "논술형" },
+      { name: "명제와 대우를 이용한 추론", kind: "task", weight: 25, timing: "11월 1주~2주" },
+    ],
+    notes: [
+      {
+        title: "내분점 과제는 세 점의 좌표가 관건",
+        body: "곡선 모델링 과제는 내분점 개념 확인 10점, 곡선 모델링에 맞는 내분점 구하기 10점, 문제해결력 5점입니다. 변수에 따른 P, Q, R 세 점의 좌표를 모두 구하면 10점, 두 점이면 8점으로 내려가며, 기본점수는 9점입니다.",
+      },
+      {
+        title: "명제 과제의 배점 구조",
+        body: "명제와 대우를 이용한 추론은 명제의 참·거짓 판별 10점, 참이 되기 위한 조건 구하기 10점, 명제와 대우로부터 추론하기 5점으로 나뉩니다. 마지막 항목은 대우를 기호로 설명하고 삼단논법으로 새 명제를 도출해야 5점을 받습니다.",
+      },
+      {
+        title: "시험 범위는 회차마다 단원이 다릅니다",
+        body: "1차 시험은 [10공수2-01-01]~[10공수2-02-03]으로 도형의 방정식과 집합 앞부분을, 2차 시험은 [10공수2-02-01]~[10공수2-03-05]로 명제·절대부등식과 함수, 유리·무리함수를 다룹니다. 논술형 반영 비율은 정기시험 10%, 수행평가 25%를 합해 35%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2"],
+    summary: "법적 관점 사회 문제 분석 9월 2주·금융 생활 설계 11월 1주 논술 · 지속가능 포트폴리오 15%",
+    intro:
+      "영복여자고등학교 1학년 통합사회2는 1차·2차 정기시험이 각 25%이고, 수행평가 세 영역이 50%입니다. 논술형 두 과제(법적 관점 15%, 금융 생활 설계 20%)와 학기 내내 쌓는 포트폴리오 15%로 나뉘어, 수업은 9월 2주 인권 단원 논술부터 대비합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 25, timing: "10월 1주~2주", method: "선택형 80점(22문항) · 논술형 20점(2문항)", course: "통합사회2" },
+      { name: "2차 정기시험", kind: "exam", weight: 25, timing: "12월 2주~3주", method: "선택형 80점(22문항) · 논술형 20점(2문항)", course: "통합사회2" },
+      { name: "투자 성향을 바탕으로 금융 생활 설계하기", kind: "task", weight: 20, timing: "11월 1주", method: "논술형", course: "통합사회2" },
+      { name: "법적 관점에서 사회 문제 분석하기", kind: "task", weight: 15, timing: "9월 2주", method: "논술형", course: "통합사회2" },
+      { name: "지속가능한 미래를 위한 해결 방안 기록하기", kind: "task", weight: 15, timing: "8월 2주~12월 1주", method: "포트폴리오", course: "통합사회2" },
+    ],
+    notes: [
+      {
+        title: "금융 생활 설계 논술의 20점 구성",
+        body: "투자 성향을 바탕으로 금융 생활 설계하기가 10점, 거시 환경 변화가 금융 의사 결정에 미치는 영향 분석 5점, 서론·본론·결론의 논술 형식 5점입니다. 관련 성취기준은 [10통사2-03-03]이며 진도표에서도 11월 1주 국제 무역 단원 수업에 함께 표시되어 있습니다.",
+      },
+      {
+        title: "법적 관점 과제는 인권 단원과 연결",
+        body: "9월 2주 과제는 사회 문제를 법적 관점에서 분석하기(쟁점이 되는 권리 분석) 5점, 해결 방안 제시 5점, 논술 형식 5점으로 15점입니다. 성취기준은 [10통사2-01-01]~[10통사2-01-03]으로 1차 시험 범위의 인권 단원과 겹칩니다.",
+      },
+      {
+        title: "포트폴리오는 다섯 단원 개념을 모읍니다",
+        body: "지속가능한 미래를 위한 해결 방안 기록하기는 8월 2주부터 12월 1주까지 이어지며, 논리적 주장을 담은 결과물 5점, 핵심 개념의 체계적 제시 5점, 포트폴리오 형식과 체계 5점으로 채점됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2", "과학탐구실험2"],
+    summary: "화학변화 핵심논술·과학 창의 연구 발표 각 20% · 과학탐구실험2는 동결 건조·유사과학·신재생 수행 100%",
+    intro:
+      "영복여자고등학교 1학년 과학은 통합과학2와 과학탐구실험2 두 과목입니다. 통합과학2는 1차·2차 정기시험 각 30%와 수행 두 과제 40%이고, 과학탐구실험2는 정기시험 없이 세 과제(30%·35%·35%)로만 성적이 나옵니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1~2주", method: "선택형 80점(24문항) · 논술형 20점(2문항)", course: "통합과학2" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2~3주", method: "선택형 80점(24문항) · 논술형 20점(2문항)", course: "통합과학2" },
+      { name: "화학변화 핵심논술", kind: "task", weight: 20, timing: "8월 4주 ~ 9월3주", method: "논술형", course: "통합과학2" },
+      { name: "과학 창의 연구 발표", kind: "task", weight: 20, timing: "8월 2주 ~ 11월3주", method: "구술・발표", course: "통합과학2" },
+      { name: "동결 건조 식품에 적용된 과학 원리", kind: "task", weight: 30, timing: "9월 1주", method: "논술형", course: "과학탐구실험2" },
+      { name: "유사과학 탐색 및 비평", kind: "task", weight: 35, timing: "10월 3주", method: "논술형", course: "과학탐구실험2" },
+      { name: "신재생 에너지와 친환경 도시 평가", kind: "task", weight: 35, timing: "11월 1주~11월 2주", course: "과학탐구실험2" },
+    ],
+    notes: [
+      {
+        title: "핵심논술은 산·염기 중화 반응 네 항목",
+        body: "통합과학2 화학변화 핵심논술은 [10통과2-01-04] 기준으로 산과 염기의 분류, 참여 이온과 비참여 이온 구분, 액성 변화와 지시약 색 변화, 이온 수 변화 그래프 분석을 각 5점씩 봅니다. 발표 과제도 발표 자세, 자료 준비, 경청 태도, 발표 후 스스로의 피드백이 5점씩입니다.",
+      },
+      {
+        title: "과학탐구실험2의 논술형은 65%",
+        body: "동결 건조 과제(30점)와 유사과학 과제(35점)가 논술형이라 과목 성적의 65%가 서술로 채점됩니다. 유사과학 과제는 제시 자료의 유사과학 여부 판단 15점, 관심 분야 사례 제시 10점, 생활 속 사례 조사 5점, 판단 활동의 필요성 서술 5점입니다.",
+      },
+      {
+        title: "신재생 과제는 관측 자료 해석이 15점",
+        body: "11월 1~2주 신재생 에너지와 친환경 도시 평가에서 가장 큰 항목은 자연환경적 특성을 고려한 신재생 에너지원 찾기(15점)로, 관측 자료의 수치를 근거로 도시와 에너지원을 고르고 발전 방식을 서술해야 합니다. 과학탐구실험2 성취도는 A 80% 이상, B 60% 이상 구간으로 나뉩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["독서와 작문"],
+    summary: "8월 4주 사실적·추론적 글쓰기, 9월 3주 비판적·창의적 글쓰기(각 15%), 10월 3주 글 구조 설계 10%",
+    intro:
+      "영복여자고등학교 2학년 독서와 작문은 1차·2차 정기시험이 30%씩, 수행평가 세 과제가 40%입니다. 수행 세 과제가 8월 4주, 9월 3주, 10월 3주로 1차 시험 앞뒤에 몰려 있어 수업은 학기 초 자료 선정부터 함께 준비합니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주~2주", method: "선택형 90점(23~30문항) · 논술형 10점(1~3문항)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주~3주", method: "선택형 90점(23~30문항) · 논술형 10점(1~3문항)" },
+      { name: "사실적 이해와 추론적 글쓰기", kind: "task", weight: 15, timing: "8월 4주", method: "논술형" },
+      { name: "비판적 분석과 창의적 글쓰기", kind: "task", weight: 15, timing: "9월 3주", method: "논술형" },
+      { name: "논리적인 글의 구조 설계하기", kind: "task", weight: 10, timing: "10월 3주", method: "기타" },
+    ],
+    notes: [
+      {
+        title: "두 글쓰기 과제는 자료 선별 5점 + 글쓰기 10점",
+        body: "사실적 이해와 추론적 글쓰기는 선정한 지문의 원문 제출과 문단 정리 5점, 중심 내용·전개 방식 정리와 자신의 경험 연결 10점입니다. 비판적 분석과 창의적 글쓰기는 지문 대신 논문을 골라 정리(5점)하고, 비판 대상과 이유·대안·대안 선택 이유를 갖춘 글(10점)을 씁니다.",
+      },
+      {
+        title: "구조 설계 과제는 지문 2개 분석",
+        body: "10월 3주 논리적인 글의 구조 설계하기는 사전에 안내된 독서 지문 2개를 핵심 단어, 핵심 문장, 문단 구조화, 요약하기, 주제 찾기 조건으로 분석합니다. 조건 9개 이상을 정확히 쓰면 10점, 7개 이상이면 그다음 단계입니다.",
+      },
+      {
+        title: "시험은 분야별 글 읽기 중심",
+        body: "정기시험 평가 요소는 추론적 읽기, 분석적·비판적 읽기와 인문·예술, 사회·문화, 과학·기술 분야의 글 읽기입니다. 2차 시험에는 글의 관점과 표현 방법, 필자의 의도 파악이 더해지며, 논술형 반영 비율은 시험 6%와 수행 30%를 합쳐 36%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ"],
+    summary: "수학신문 프로젝트 10월 3주 25%·미분과 적분 문제해결 전략 11월 2주 15% · 시험 2회 60%",
+    intro:
+      "영복여자고등학교 2학년 미적분Ⅰ은 1차·2차 정기시험이 30%씩이고 수행평가는 수학신문 프로젝트(25%)와 미분과 적분의 문제해결 전략(15%)입니다. 1차 시험 뒤 10월 3주에 신문 프로젝트가 있어, 극한·미분 단원을 시험과 신문 원고에 함께 씁니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주 ~ 2주", method: "선택형 90점(20문항) · 논술형 10점(2문항)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주 ~ 3주", method: "선택형 90점(20문항) · 논술형 10점(2문항)" },
+      { name: "수학신문 프로젝트", kind: "task", weight: 25, timing: "10월 3주", method: "논술형" },
+      { name: "미분과 적분의 문제해결 전략", kind: "task", weight: 15, timing: "11월 2주" },
+    ],
+    notes: [
+      {
+        title: "수학신문은 실생활 사례와 진로 글쓰기가 20점",
+        body: "수학신문 프로젝트는 미적분Ⅰ 수학 개념의 용어·기호 사용 5점, 개념이 실생활에 활용되는 사례 연구 10점, 자신의 진로에 수학을 적용하는 글쓰기(수학 적용하기) 10점이며 기본점수는 10점입니다.",
+      },
+      {
+        title: "문제해결 전략 과제는 학습지 세 칸",
+        body: "11월 2주 과제는 미분과 적분 단원의 기본 개념 학습지를 작성하고 관련 문제를 푸는 방식으로, 미분 개념정리 5점, 적분 개념정리 5점, 문제해결 전략 5점입니다.",
+      },
+      {
+        title: "회차별 시험 범위",
+        body: "1차 시험은 [12미적Ⅰ-01-01]~[12미적Ⅰ-02-05]로 함수의 극한과 연속, 미분계수와 도함수, 접선의 방정식 등을 다루고, 2차 시험은 [12미적Ⅰ-02-06]~[12미적Ⅰ-03-06]으로 그래프 활용부터 부정적분·정적분, 넓이와 속도·거리까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "시사 영어 발표와 토론 9월 1주·영어 인물탐구 에세이 11월 2주 각 20% · 시험 2회 60%",
+    intro:
+      "영복여자고등학교 2학년 영어Ⅱ는 1차·2차 정기시험이 30%씩이고, 수행평가는 영어 인물탐구 에세이 쓰기와 시사를 다루는 영어 발표와 토론이 20%씩입니다. 정기시험은 회차마다 선택형 95점에 논술형 5점(1문항)만 들어가 서술 평가는 대부분 수행에서 이뤄집니다.",
+    assessments: [
+      { name: "1차 정기시험", kind: "exam", weight: 30, timing: "10월 1주~2주", method: "선택형 95점(20~27문항) · 논술형 5점(1문항)" },
+      { name: "2차 정기시험", kind: "exam", weight: 30, timing: "12월 2주~3주", method: "선택형 95점(20~27문항) · 논술형 5점(1문항)" },
+      { name: "영어 인물탐구 에세이 쓰기", kind: "task", weight: 20, timing: "11월2주", method: "논술형" },
+      { name: "시사를 다루는 영어 발표와 토론", kind: "task", weight: 20, timing: "9월1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "에세이는 주제 영작 10점 + 어법 10점",
+        body: "영어 인물탐구 에세이 쓰기는 사회생활, 학업, 지역 및 세계 공동체와 관련된 일반적 주제에 관해 영작하기 10점과 어법에 맞춰 영작하기 10점으로 채점됩니다.",
+      },
+      {
+        title: "발표와 토론도 먼저 글을 씁니다",
+        body: "9월 1주 시사 영어 발표와 토론은 쓰기 활동과 말하기 활동을 함께 보는 과제로, 관심 분야에 대해 영작하기 10점과 작성한 에세이를 바탕으로 발표 및 토론하기 10점입니다. 평가 방법에도 서술·논술과 구술·발표가 모두 표시되어 있습니다.",
+      },
+      {
+        title: "논술형 비중 43% 중 40%가 수행",
+        body: "평가 비율표에서 논술형 반영 비율은 정기시험 3%(회차당 1.5%)와 수행평가 40%를 합한 43%입니다. 수행평가 기본점수는 영역 만점의 30%(±10) 내외로 정해져 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "정서 표현 글은 장면 선정 15점과 글쓰기 15점, 발표는 사례 제시와 바꿔 말하기를 봅니다",
+    intro:
+      "영복여자중학교 1학년 국어는 12월 2주 2차 정기시험 한 번(선택형 40%, 논술형 10%)과 수행평가 두 영역 50%로 성적을 냅니다. 9월 2주 정서 표현 글 쓰기가 30%로 가장 큰 단일 항목이라, 학기 초 수업은 자신의 경험에서 글감을 고르는 데서 시작합니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 2주", method: "논술형 20점" },
+      { name: "정서 표현 글 쓰기", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+      { name: "언어폭력의 문제점 발표하기", kind: "task", weight: 20, timing: "10월 5주", method: "구술·발표" },
+    ],
+    notes: [
+      {
+        title: "정서 표현 글은 장면 선정 15점 + 글쓰기 15점",
+        body: "[9국03-05] 기준 과제로, 삶과 경험에서 의미 있는 장면을 골라 깨달음과 다짐까지 쓰면 장면 선정 15점, 정서를 진솔하고 개성 있게 표현하며 서론·본론·결론을 갖추면 글쓰기 15점입니다. 기본점수는 12점입니다.",
+      },
+      {
+        title: "발표는 사례 제시와 바꿔 말하기",
+        body: "언어폭력의 문제점 발표하기는 일상 속 언어폭력 사례와 문제점을 짜임새 있게 발표하는 항목 10점, 실제 사례를 서로 존중하는 표현으로 바꾸어 발표하는 항목 10점입니다. 바꾼 표현을 2가지 이상 발표해야 10점이고 1가지면 8점입니다.",
+      },
+      {
+        title: "2차 시험의 성취기준",
+        body: "시험 관련 성취기준은 [9국02-03], [9국03-03], [9국04-02], [9국04-07], [9국05-03]으로 추론하며 읽기, 주장하는 글 쓰기, 새말 형성 원리, 세대·분야·매체별 어휘, 인간의 성장을 다룬 작품 읽기가 범위입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "글쓰기 20점은 내용 생성과 조직이 반반이고, 영상 제작은 한 항목 10점입니다",
+    intro:
+      "영복여자중학교 2학년 국어는 정기시험 비중이 70%로 크고, 수행평가는 복합양식 자료를 활용한 글 쓰기(20%)와 영상 매체 자료 제작하기(10%) 두 영역입니다. 글쓰기 과제가 학기 첫 달인 8월 4주에 있어 개학 직후 바로 자료 수집에 들어갑니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 7, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 7, timing: "12월 2주", method: "논술형 20점" },
+      { name: "복합양식 자료를 활용한 글 쓰기", kind: "task", weight: 20, timing: "8월 4주", method: "논술형" },
+      { name: "영상 매체 자료 제작하기", kind: "task", weight: 10, timing: "11월 1주", method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "글쓰기 20점은 내용 생성과 조직 반반",
+        body: "복합양식 자료를 활용한 글 쓰기([9국03-07])는 복합양식 자료를 활용해 내용 생성하기 10점, 글의 유형을 고려해 내용 조직하기 10점입니다. 기본점수는 8점, 백지 제출은 7점으로 정해져 있습니다.",
+      },
+      {
+        title: "영상 제작은 한 항목 10점",
+        body: "11월 1주 영상 매체 자료 제작하기는 [9국06-03] 기준으로 복합양식적 요소를 활용해 의미 전달이 효과적인 영상을 만들면 10점, 특정 요소에 편중되면 8점입니다.",
+      },
+      {
+        title: "시험 범위 성취기준",
+        body: "정기시험 관련 성취기준은 [9국02-04], [9국04-01], [9국05-06], [9국05-05], [9국01-04]로 복합양식 글 읽기, 음운·문자 체계, 경험의 개성적 형상화, 작품의 사회·문화적 상황, 공감하며 대화하기입니다. 두 회차 모두 선택형 80점과 논술형 20점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "보고서는 다섯 요소를 한 번에 채점하고, 발표는 시청각 자료와 시간 배분을 보며 2차는 소설 단원 중심입니다",
+    intro:
+      "영복여자중학교 3학년 국어는 1차(10월 1주)·2차(11월 3주) 정기시험이 70%, 수행평가 30%입니다. 보고서쓰기는 진학을 희망하는 고등학교를 조사해 쓰는 과제로 8월 3주에 먼저 치르고, 10월 2주에 청중을 고려한 발표가 이어집니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 7, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 7, timing: "11월 3주", method: "논술형 20점" },
+      { name: "보고서쓰기", kind: "task", weight: 20, timing: "8월 3주", method: "논술형" },
+      { name: "발표하기", kind: "task", weight: 10, timing: "10월 2주", method: "발표형" },
+    ],
+    notes: [
+      {
+        title: "보고서는 다섯 요소를 한 번에 채점",
+        body: "보고서쓰기는 다양한 자료 활용, 관찰·조사 절차와 결과의 체계적 서술, 서론·본론·결론 형식, 원고지 표기법과 맞춤법, 자료 출처 표기를 묶어 A 20점부터 F 10점까지 단계로 매깁니다. 기본점수는 8점입니다.",
+      },
+      {
+        title: "발표는 시청각 자료와 시간 배분",
+        body: "발표하기([9국01-06], [9국01-07])는 적절한 시청각 자료 활용, 청중 반응을 살피며 주어진 시간 지키기, 말의 빠르기와 목소리 크기·높낮이를 보고 A 10점, B 8점, C 6점으로 나뉩니다.",
+      },
+      {
+        title: "2차 시험은 소설 단원 중심",
+        body: "진도표에서 2차 정기시험(3학년)은 11월 3주이며, 이 시기 수업은 [9국05-06] 과거의 삶이 반영된 작품을 오늘날의 삶에 비추어 감상하는 소설 단원입니다. 시험 평가 요소에는 설득 전략 분석하며 듣기, 논증 방법 파악, 문장의 짜임 탐구도 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "기본 도형 과제는 세 항목, 작도·합동은 이유 설명에 10점이 걸려 있습니다",
+    intro:
+      "영복여자중학교 1학년 수학은 12월 2주 2차 정기시험 한 번이 50%(선택형 40%, 논술형 10%)이고, 수행평가 세 영역이 나머지 50%입니다. 9월 1주와 10월 1주에 서술형 과제가 한 달 간격으로 이어지고 11월 1주 제작 과제로 끝납니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 2주", method: "논술형 20점" },
+      { name: "기본 도형의 성질 이해 및 서술하기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "삼각형 작도와 합동의 성질 이해 및 서술하기", kind: "task", weight: 20, timing: "10월 1주", method: "논술형" },
+      { name: "정다각형 제작하기", kind: "task", weight: 10, timing: "11월 1주" },
+    ],
+    notes: [
+      {
+        title: "기본 도형 과제의 세 항목",
+        body: "점·선·면·각 용어를 기호로 나타내기 5점, 점·직선·평면의 위치 관계를 실생활 상황과 연결해 설명하기 10점, 평행선에서 동위각과 엇각의 크기를 구하는 과정 설명 5점입니다.",
+      },
+      {
+        title: "작도·합동 과제는 이유 설명에 10점",
+        body: "삼각형 작도와 합동의 성질 이해 및 서술하기는 주어진 삼각형과 모양이 같은 삼각형 작도 5점, 합동 조건과 그 이유 설명 10점, 합동인 삼각형을 기호로 나타내고 수학 용어로 이유 쓰기 5점입니다.",
+      },
+      {
+        title: "제작 과제의 실제 내용",
+        body: "정다각형 제작하기(10점)의 수행과제는 정다면체를 만들고 설명서를 제작하는 것으로, 정다면체의 이름과 뜻, 공통점과 차이점까지 설명하면 10점입니다. 이 영역의 논술형 반영 비율은 0%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이등변삼각형과 외심·내심, 평행사변형과 여러 사각형을 서술하며 시험은 경우의 수까지입니다",
+    intro:
+      "영복여자중학교 2학년 수학은 정기시험 60%(1차·2차 각 선택형 24%, 논술형 6%)와 수행평가 40%입니다. 수행 두 과제가 모두 9월에 몰려 있어 1차 시험 전 도형 단원에서 서술 연습을 함께 합니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "12월 2주", method: "논술형 20점" },
+      { name: "삼각형의 성질 이해 및 서술", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "사각형의 성질 이해 및 서술", kind: "task", weight: 20, timing: "9월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각형 과제: 이등변삼각형과 외심·내심",
+        body: "삼각형의 성질 이해 및 서술은 이등변삼각형의 성질을 정의와 성질을 근거로 논리적으로 서술하기 10점, 외심과 내심의 성질이 성립하는 이유 서술 10점입니다. 진도표에서도 9월 1주에 외심과 내심의 성질을 비교하는 수행평가로 안내되어 있습니다.",
+      },
+      {
+        title: "사각형 과제: 평행사변형과 여러 사각형",
+        body: "9월 4주 과제는 평행사변형의 성질을 정의를 활용해 서술하기 10점, 직사각형·마름모·정사각형·사다리꼴 등 여러 가지 사각형의 성질 서술 10점으로 나뉩니다.",
+      },
+      {
+        title: "시험 범위는 닮음·피타고라스·경우의 수까지",
+        body: "정기시험 평가 요소에는 수행 범위인 삼각형·사각형 성질 외에 도형의 닮음과 닮음 조건, 평행선 사이 선분의 길이의 비, 피타고라스 정리, 경우의 수가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비 논술은 평가 요소가 정해져 있고, 원의 성질은 작도와 근거 설명이며 2차에 통계가 들어갑니다",
+    intro:
+      "영복여자중학교 3학년 수학은 1차(10월 1주)·2차(11월 3주) 정기시험이 60%, 수행평가 두 영역이 40%입니다. 삼각비 논술은 9월 1∼3주, 원의 성질은 컴퍼스와 자를 쓰는 프로젝트로 10월 2∼3주에 진행됩니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 24, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 6, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 24, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 6, timing: "11월 3주", method: "논술형 20점" },
+      { name: "삼각비 논술", kind: "task", weight: 20, timing: "9월 1∼3주", method: "논술형" },
+      { name: "원의 성질", kind: "task", weight: 20, timing: "10월 2∼3주", method: "프로젝트" },
+    ],
+    notes: [
+      {
+        title: "삼각비 논술의 평가 요소",
+        body: "반지름이 1인 사분원으로 예각의 삼각비 구하기, 기본도형으로 30˚·45˚·60˚ 삼각비 유도하기, 도형에서 새 직각삼각형을 찾아 삼각비 구하기, 삼각비로 길이와 넓이 구하기 등을 묶어 A 20점부터 F 10점까지 매깁니다.",
+      },
+      {
+        title: "원의 성질은 작도와 근거 설명",
+        body: "원의 성질 과제는 컴퍼스와 자로 원의 접선, 원주각과 중심각을 작도하고, 원주각과 중심각·호의 길이 관계와 접선과 현이 이루는 각의 성질을 사례나 근거로 설명합니다. 이 영역은 프로젝트로 분류되어 논술형 반영 비율에 들어가지 않습니다.",
+      },
+      {
+        title: "2차 시험에 통계가 들어갑니다",
+        body: "2차 정기시험 평가 요소는 원주각의 성질과 함께 중앙값·최빈값·평균, 분산과 표준편차 구하기입니다. 1차 시험은 삼각비의 뜻과 활용, 원의 현과 접선에 관한 성질을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "사회화 논술은 12점과 13점으로 나뉘고, 그림문자 과제도 설명이 절반입니다",
+    intro:
+      "영복여자중학교 1학년 사회는 12월 2주 2차 정기시험 한 번(선택형 40%, 논술형 10%)과 수행평가 두 영역 25%씩으로 구성됩니다. 논술형 수행은 9월 2주 사회화 과제 하나이고, 10월 3주 그림문자 제작은 논술형 비율이 0%입니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 2주", method: "논술형 20점" },
+      { name: "사회화와 자아 정체성 이해 및 논술", kind: "task", weight: 25, timing: "9월 2주", method: "논술형" },
+      { name: "민주주의 이해 및 그림문자 제작", kind: "task", weight: 25, timing: "10월 3주" },
+    ],
+    notes: [
+      {
+        title: "사회화 논술은 12점 + 13점",
+        body: "[9사(일사)01-01] 기준 과제로, 사회화의 의미와 기능 논술하기 12점, 사회화 과정에서의 자아 정체성 형성 과정 논술하기 13점입니다. 사회화 기관을 설명하고 긍정적 자아 정체성의 중요성을 논리적 근거로 쓰면 13점입니다.",
+      },
+      {
+        title: "그림문자 과제도 설명이 절반",
+        body: "민주주의 이해 및 그림문자 제작은 민주주의의 발전 과정과 이념 설명하기 12점, 이념과 가치를 그림 문자로 나타내기 13점입니다. 그림 문자 항목도 단어를 고른 이유를 함께 써야 높은 점수를 받습니다.",
+      },
+      {
+        title: "시험 범위는 다섯 단원",
+        body: "2차 정기시험 성취기준은 [9사(일사)01-01]~[9사(일사)05-03]으로 사회적 지위와 역할, 문화와 미디어, 정치와 선거, 지방 자치, 법과 재판까지 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "방향제 과제는 설명과 관찰이 10점씩, 상태 변화 분석은 세 항목을 10점씩 봅니다",
+    intro:
+      "영복여자중학교 1학년 과학은 12월 2주 2차 정기시험(선택형 40%, 논술형 10%)과 수행평가 50%입니다. 수행 두 과제가 8월 3주와 9월 2주로 학기 초에 끝나며, 방향제 제작은 실험실습형, 상태 변화 분석은 논술형입니다.",
+    assessments: [
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 40, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 10, timing: "12월 2주", method: "논술형 20점" },
+      { name: "확산 현상 탐구와 방향제 제작", kind: "task", weight: 20, timing: "8월 3주", method: "실험실습형" },
+      { name: "상태 변화와 열에너지 출입 분석", kind: "task", weight: 30, timing: "9월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "방향제 과제는 설명과 관찰 각 10점",
+        body: "방향제를 사용하는 까닭을 증발·확산과 입자의 운동으로 설명하기 10점, 제작 과정의 온도·향기 변화, 향기의 퍼짐, 재료의 상태 변화 관찰 10점입니다.",
+      },
+      {
+        title: "상태 변화 분석은 세 항목 10점씩",
+        body: "가열·냉각 곡선의 구간 분석, 상태 변화별 열에너지 흡수·방출 구분, 실생활 현상에 적용해 설명하기가 각 10점입니다. 이 과제 하나가 수행평가 논술형 비율 30%를 모두 차지합니다.",
+      },
+      {
+        title: "시험 범위는 힘과 기체까지",
+        body: "2차 정기시험 평가 요소에는 수행 단원인 상태 변화 외에 힘과 힘의 평형 관계 설명, 기체의 압력과 부피 관계 분석이 들어 있고, 성취기준은 [9과05-01]~[9과05-04], [9과06-01]~[9과06-03]입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "광합성은 설계 5점·보고서 5점이고, 혈액 순환은 경로 구분에 15점이 걸립니다",
+    intro:
+      "영복여자중학교 2학년 과학은 1차·2차 정기시험이 35%씩(각 선택형 28%, 논술형 7%)으로 70%이고 수행평가는 30%입니다. 광합성 실험 설계는 포트폴리오, 혈액 순환 탐구는 논술형이며 두 과제 모두 1차 시험 전에 끝납니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 7, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28, timing: "12월 2주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 7, timing: "12월 2주", method: "논술형 20점" },
+      { name: "광합성에 필요한 물질과 산물 탐구", kind: "task", weight: 10, timing: "8월 3주", method: "포트폴리오" },
+      { name: "혈액 순환 경로와 혈액 종류 탐구", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "광합성 과제는 설계 5점, 보고서 5점",
+        body: "이산화탄소·물·빛과 녹말·산소를 확인하는 실험 설계 5점, 실험 결과를 변인에 따라 정리하고 광합성 원리와 연결한 보고서 5점입니다.",
+      },
+      {
+        title: "혈액 순환은 경로 구분에 15점",
+        body: "혈액 순환 경로와 혈액 종류 탐구는 체순환과 폐순환 경로를 구분하고 물질 교환 특징을 심장 구조와 연결하기 15점, 각 경로의 혈액이 동맥혈인지 정맥혈인지 구별하기 5점입니다.",
+      },
+      {
+        title: "두 회차 시험의 단원",
+        body: "1차 시험은 [9과12-01]~[9과13-05]의 광합성·호흡과 소화·순환·호흡·배설, 2차 시험은 [9과14-01]~[9과15-04]의 전기와 별·우주 단원입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongbokyeoja-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "편지는 형식과 가정법 과거를 보고, 활동지는 단원 퀴즈와 연결됩니다",
+    intro:
+      "영복여자중학교 3학년 영어는 1차(10월 1주)·2차(11월 3주) 정기시험이 70%, 수행평가 30%입니다. 수행 두 영역이 8월 4주부터 9월 3주 사이에 이어서 끝나므로 학기 첫 한 달 동안 편지 쓰기와 단원 활동지를 함께 챙깁니다.",
+    assessments: [
+      { name: "1차 정기시험(선택형)", kind: "exam", weight: 28, timing: "10월 1주", method: "선택형 80점" },
+      { name: "1차 정기시험(논술형)", kind: "exam", weight: 7, timing: "10월 1주", method: "논술형 20점" },
+      { name: "2차 정기시험(선택형)", kind: "exam", weight: 28, timing: "11월 3주", method: "선택형 80점" },
+      { name: "2차 정기시험(논술형)", kind: "exam", weight: 7, timing: "11월 3주", method: "논술형 20점" },
+      { name: "롤모델에게 편지쓰기", kind: "task", weight: 20, timing: "8월 4주~9월 1주", method: "논술형" },
+      { name: "활동지 작성하기", kind: "task", weight: 10, timing: "9월 2주~3주" },
+    ],
+    notes: [
+      {
+        title: "편지는 형식과 가정법 과거",
+        body: "롤모델에게 편지쓰기는 greeting, body, closing, signature를 갖춘 편지글 형식, 존경하는 인물의 구체적 묘사, 가정법 과거형 문장, 인물에게 묻거나 하고 싶은 말, 문법 오류 없는 흐름을 묶어 단계별로 채점합니다.",
+      },
+      {
+        title: "활동지는 단원 퀴즈와 연결",
+        body: "활동지 작성하기(10점)는 교과서 단원별 활동지와 시험지를 완성하는 과제로, 진도표에는 9월 2주와 3주에 퀴즈로 학습 내용 이해 정도를 평가한다고 적혀 있습니다. 논술형 반영 비율은 0%입니다.",
+      },
+      {
+        title: "회차별 평가 요소",
+        body: "1차 시험은 세부 정보 파악, 필자의 심정·태도 추론, 대상이나 상황을 묘사하는 문장 쓰기를, 2차 시험은 줄거리·주제·요지 파악, 사건의 순서 추론, 그림·사진·도표를 설명하는 문장 쓰기를 평가 요소로 둡니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영복여자중학교")],
+  },
+  {
+    schoolSlug: "yeongdeungpo-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "토의 프로젝트는 14개 항목으로 보고, 주장하는 글은 청소년 문제를 다룹니다",
+    intro:
+      "영등포중학교 1학년 국어는 9월 중간고사와 12월 기말고사가 30%씩이고, 수행평가 40%는 10월 토의 프로젝트 20%, 11월 주장하는 글 쓰기 10%, 수시 독후 활동 포트폴리오 10%입니다. 정기시험은 서·논술형 0점, 그 외 유형 100점으로 표시되어 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "그 외 유형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "그 외 유형 100점" },
+      { name: "프로젝트 1(공동의 문제를 해결하는 토의하기)", kind: "task", weight: 20, timing: "10월", method: "서·논술형 · 논술, 토의·토론, 프로젝트" },
+      { name: "프로젝트 2(주장하는 글 쓰기)", kind: "task", weight: 10, timing: "11월", method: "서·논술형 · 논술, 프로젝트" },
+      { name: "포트폴리오(독후 활동)", kind: "task", weight: 10, timing: "수시", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "토의 프로젝트는 14개 항목",
+        body: "공동의 문제를 해결하는 토의하기는 일상생활 속 공동의 문제를 찾아 대안을 마련하고 토의록을 쓰는 과제로, 문제 발견부터 토의록의 완결성까지 14개 기준을 모두 충족하면 20점, 하나 부족할 때마다 1점씩 내려가며 기본점수는 6점입니다.",
+      },
+      {
+        title: "주장하는 글은 청소년 문제",
+        body: "프로젝트 2는 청소년 문제와 관련한 상황에 대해 주장하는 글을 쓰며, 주장의 타당성·구성의 체계성·표현의 적절성에 걸친 6개 항목으로 10점(기본점수 4점)을 매깁니다. 미응시·미제출은 영역 배점의 20%를 받습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영등포중학교")],
+  },
+  {
+    schoolSlug: "yeongdeungpo-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "서논술형은 6문항 30점이고, 포트폴리오는 평균 성취율에 따라 점수를 매깁니다",
+    intro:
+      "영등포중학교 1학년 수학은 수업 중 푸는 서논술형 평가가 30%로 수행평가의 대부분을 차지하고, 포트폴리오가 10%입니다. 정기시험은 9월 중간고사와 12월 기말고사가 30%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "그 외 유형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "그 외 유형 100점" },
+      { name: "포트폴리오", kind: "task", weight: 10, timing: "8월 - 12월", method: "포트폴리오" },
+      { name: "서논술형평가", kind: "task", weight: 30, timing: "9월 - 12월", method: "서술·논술" },
+    ],
+    notes: [
+      {
+        title: "서논술형은 6문항 30점",
+        body: "서논술형 평가는 기본도형, 평면도형과 입체도형, 통계 단원에서 총 6문항 30점으로, 문항당 5점(기본점수 2점)입니다. 풀이과정과 답이 모두 맞으면 5점, 풀이과정이 60% 이상 맞으면 4점, 10% 이상이면 3점입니다.",
+      },
+      {
+        title: "포트폴리오는 평균 성취율 구간",
+        body: "포트폴리오는 매 수업시간에 활동하고 중간·기말고사 전에 활동지를 수합해, 활동 평균 성취율이 90% 이상이면 10점, 40% 미만이면 기본점수 4점을 줍니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영등포중학교")],
+  },
+  {
+    schoolSlug: "yeongdeungpo-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "증명과 실생활 문제, 닮음 조건 활용을 10% 구간으로 채점하고 오답노트를 내면 한 번 재도전합니다",
+    intro:
+      "영등포중학교 2학년 수학은 서·논술형 평가 두 번이 15%씩, 포트폴리오가 10%이고 9월 중간고사와 12월 기말고사가 30%씩입니다. 서·논술형 1은 10월 2주 '삼각형과 사각형의 성질', 서·논술형 2는 11월 2주 '도형의 닮음과 피타고라스 정리' 단원에서 봅니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "9월", method: "그 외 유형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "그 외 유형 100점" },
+      { name: "서･논술형 1", kind: "task", weight: 15, timing: "10월 2주", method: "서·논술형 15점" },
+      { name: "서･논술형 2", kind: "task", weight: 15, timing: "11월 2주", method: "서·논술형 15점" },
+      { name: "포트폴리오", kind: "task", weight: 10, timing: "8월~12월", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "두 서·논술형의 과제",
+        body: "서·논술형 1은 도형의 성질 증명과 실생활 문제 해결, 서·논술형 2는 삼각형의 닮음 조건을 활용한 문제해결력 평가입니다. 두 평가 모두 15점 만점에 기본점수 6점이고, 풀이를 정확히 서술한 비율에 따라 10% 단위 구간으로 점수를 줍니다.",
+      },
+      {
+        title: "닮음 평가의 재도전",
+        body: "서·논술형 2는 결과 발표 후 오답노트를 작성해 교사가 인정하면 원하는 문항을 1회 재도전할 수 있습니다. 재도전은 해결 방법이 유사한 다른 문항으로 하고, 채점 점수에서 1점을 뺀 값이 이전 점수와 관계없이 최종 점수가 됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영등포중학교")],
+  },
+  {
+    schoolSlug: "yeongdeungpo-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "온도가 다른 두 물체로 열평형을 재는 실험 뒤, 합력 0 조건과 상태변화 그래프를 서술합니다",
+    intro:
+      "영등포중학교 1학년 과학은 2학기 지필평가가 12월 기말고사 한 번(40%)이고, 수행평가 세 과제가 20%씩 60%를 차지합니다. 9월 실험평가, 10월 서·논술형1, 11월 서·논술형2 순서로 진행됩니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월", method: "그 외 유형 100점" },
+      { name: "서･논술형1", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점" },
+      { name: "서･논술형2", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점" },
+      { name: "실험평가", kind: "task", weight: 20, timing: "9월", method: "실험 20점" },
+    ],
+    notes: [
+      {
+        title: "실험평가는 네 항목 5점씩",
+        body: "실험평가는 온도가 다른 두 물체를 접촉할 때의 온도 변화를 측정하는 과제로, 실험 수행 및 자료 수집, 시간-온도 그래프 작성, 온도 변화와 열평형 해석, 입자 모형을 이용한 설명을 각 5점으로 채점합니다(기본점수 4점).",
+      },
+      {
+        title: "서·논술형은 채점 요소 5개",
+        body: "서·논술형1(합력이 0이 되는 조건 찾기)과 서·논술형2(상태변화가 일어날 때의 온도 변화를 그래프로 나타내기)는 채점 요소 다섯 가지를 모두 만족하면 20점, 하나 모자랄 때마다 2점씩 내려가며 기본점수는 10점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영등포중학교")],
+  },
+  {
+    schoolSlug: "yeongdeungpo-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "혈액 순환을 이야기와 비유로 풀고, 연주 시차와 별의 특성, 저항·전류·전압 실험을 차례로 봅니다",
+    intro:
+      "영등포중학교 2학년 과학도 12월 기말고사 40%에 수행평가 60%이지만, 실험평가가 서·논술형1과 같은 10월에 몰려 있습니다. 서·논술형2는 11월 '별과 우주' 단원입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월", method: "그 외 유형 100점" },
+      { name: "서･논술형1", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점" },
+      { name: "서･논술형2", kind: "task", weight: 20, timing: "11월", method: "서·논술형 20점" },
+      { name: "실험평가", kind: "task", weight: 20, timing: "10월", method: "실험 20점" },
+    ],
+    notes: [
+      {
+        title: "혈액 순환은 비유로 설명",
+        body: "서·논술형1은 혈액의 순환경로를 이야기로 설명하는 과제로, 순환계의 구조와 기능 7점, 온몸 순환과 허파 순환 경로 7점, 비유를 활용한 과학적 의사소통 6점입니다(기본점수 8점).",
+      },
+      {
+        title: "별 과제와 회로 실험",
+        body: "서·논술형2는 연주 시차 구하기, 연주시차와 별의 거리, 거리에 따른 빛의 밝기, 표면 온도와 색, 별의 물리적 특성 비교의 다섯 요소로 채점합니다. 실험평가는 저항, 전류, 전압 사이의 관계를 탐구하며 회로 구성과 측정 과정을 봅니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영등포중학교")],
+  },
+  {
+    schoolSlug: "yeongdeungpo-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "6과에서 정해진 주제로 쓰는 글은 구성이 12점이고, 5~8과 대화문으로 인터뷰 문항 5개에 답합니다",
+    intro:
+      "영등포중학교 1학년 영어는 중간고사 20%보다 기말고사 40%의 비중이 크고, 기말고사 100점 안에 듣기 25점이 들어 있습니다. 수행평가는 10월 쓰기 30%와 11월 말하기 10%입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 20, timing: "9월", method: "그 외 유형 100점" },
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월", method: "그 외 유형 75점 · 듣기 25점" },
+      { name: "쓰기(서논술형)", kind: "task", weight: 30, timing: "10월", method: "서·논술형 30점" },
+      { name: "말하기", kind: "task", weight: 10, timing: "11월", method: "개인별 인터뷰 10점" },
+    ],
+    notes: [
+      {
+        title: "쓰기는 내용·구성·언어 사용",
+        body: "쓰기 평가는 Lesson 6에서 주어진 주제로 글을 쓰며, 내용 9점, 구성 12점, 언어 사용 9점으로 30점이고 기본점수는 9점입니다. 글쓰기 주제는 상황에 따라 바뀔 수 있다고 적혀 있습니다.",
+      },
+      {
+        title: "말하기는 개인별 인터뷰",
+        body: "말하기는 5~8과 대화문을 바탕으로 한 개인별 인터뷰로, 인터뷰 문항 5개를 2점씩 매겨 10점입니다(기본점수 2.5). 질문 내용을 이해하고 정확한 표현으로 유창하게 말하면 문항당 2점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영등포중학교")],
+  },
+  {
+    schoolSlug: "yeongdeungpo-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "Lesson 5 어법 문장 5개, Lesson 6 주제 글, Lesson 7 제품 추천 리뷰 발표로 이어집니다",
+    intro:
+      "영등포중학교 2학년 영어는 수행평가 40%가 9월 쓰기1(10%), 10월 쓰기2(20%), 11월 말하기(10%)로 매달 하나씩 이어집니다. 정기시험은 9월 중간고사 20%, 12월 기말고사 40%입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 20, timing: "9월", method: "그 외 유형 100점" },
+      { name: "기말고사", kind: "exam", weight: 40, timing: "12월", method: "그 외 유형 75점 · 듣기 25점" },
+      { name: "쓰기1(서논술형)", kind: "task", weight: 10, timing: "9월", method: "서·논술형 10점" },
+      { name: "쓰기2(서논술형)", kind: "task", weight: 20, timing: "10월", method: "서·논술형 20점" },
+      { name: "말하기", kind: "task", weight: 10, timing: "11월", method: "개인별 구술 발표 10점" },
+    ],
+    notes: [
+      {
+        title: "쓰기1과 쓰기2의 차이",
+        body: "쓰기1은 Lesson 5에서 제시된 어법에 맞게 문장 5개를 완성하고(기본점수 2.5점), 쓰기2는 Lesson 6에서 친숙한 주제로 글을 써 내용 6점·구성 8점·언어 사용 6점을 받습니다(기본점수 6점).",
+      },
+      {
+        title: "말하기는 제품 추천 리뷰",
+        body: "말하기는 Lesson 7에서 제품 추천 리뷰를 만들어 개인별로 구술 발표하며, 기본점수는 3점입니다. 기말고사 100점은 그 외 유형 75점과 듣기 25점으로 나뉩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영등포중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "한 권 읽기는 요약·평가·자기 삶 연결의 세 요소이고, 성찰 글은 개요부터 씁니다",
+    intro:
+      "영도제일중학교 1학년 국어는 10월 중간고사와 11월~12월 기말고사가 각 30%이고, 수행평가는 한 학기 한 권 읽기 30%와 성찰하는 글쓰기 10%입니다. 두 수행 모두 ‘삶과 갈등’ 단원에 묶여 있어, 같은 작품 학습이 독서 과제와 글쓰기로 이어집니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월~12월", method: "선택형+서답형 100점" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 30, timing: "8~10월" },
+      { name: "성찰하는 글쓰기", kind: "task", weight: 10, timing: "10~11월" },
+    ],
+    notes: [
+      {
+        title: "요약·평가·자기 삶 연결의 세 요소",
+        body: "한 학기 한 권 읽기의 평가요소는 요약하기, 평가하기, 자기 삶과 연결 짓기입니다. 8월 진도에 작품 전체 줄거리를 요약하고 각자의 관점에서 비판적으로 평가한 뒤 자기 삶과 연결하는 수행평가가 적혀 있고, 성취기준은 [9국05-02]·[9국05-03]입니다.",
+      },
+      {
+        title: "성찰하는 글쓰기는 개요부터",
+        body: "10월 진도의 성찰하는 글쓰기는 자기 경험을 의미화해 내용을 만들고 개요를 짠 뒤 표현하는 순서로, 평가요소는 글감 찾기, 내용 조직하기, 표현하기입니다. 성취기준은 [9국03-05]입니다.",
+      },
+      {
+        title: "중간과 기말의 평가요소",
+        body: "중간고사는 갈등의 진행과 해결 과정 파악, 단어의 짜임과 새말 형성 원리를, 기말고사는 토의로 문제 해결하기와 품사의 종류와 특성을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "갈등과 차별 사례를 분석해 대처 방법을 내고, 포스터는 학기 말 프로젝트 수업에서 만듭니다",
+    intro:
+      "영도제일중학교 1학년 사회는 10월 중간고사와 12월 기말고사가 30%씩이고, 수행평가 두 개가 20%씩입니다. 정기시험이 민주주의와 시민부터 인권과 기본권까지를 다루는 동안, 수행은 갈등과 차별, 문화 단원에서 따로 나옵니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형+서답형 100점" },
+      { name: "생활 속 갈등과 차별 사례 탐구", kind: "task", weight: 20, timing: "10월" },
+      { name: "문화 소개 포스터 만들기", kind: "task", weight: 20 },
+    ],
+    notes: [
+      {
+        title: "사례 분석 뒤 대처 방법 제시",
+        body: "갈등과 차별 과제는 [9사(일사)01-03]에 맞춰 10월 진도에서 두 차시로 나뉩니다. 먼저 생활 속 갈등과 차별 사례를 분석하고, 다음 차시에 대처하는 구체적인 방법을 제시합니다.",
+      },
+      {
+        title: "포스터는 학기 말 프로젝트 수업",
+        body: "문화 소개 포스터 만들기는 [9사(일사)02-03] 프로젝트 수업으로, 진도표에서 11월 4주에 문화 사례를 조사·분석하고 11월 30일~12월 4일 주에 문화를 이해하는 바람직한 태도를 제시합니다. 반영 비율표의 시기는 11월로 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "표·식·그래프 세 가지로 관계를 표현하고, 작도에는 공학적 도구도 함께 씁니다",
+    intro:
+      "영도제일중학교 1학년 수학은 중간·기말고사가 30%씩이고 수행평가는 8월~9월과 9월~10월에 하나씩 있습니다. 두 수행이 모두 중간고사 전에 시작해, 기말고사가 있는 11월~12월에는 정기시험만 남습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월~12월", method: "선택형+서답형 100점" },
+      { name: "정비례와 반비례 관계 표현하기", kind: "task", weight: 20, timing: "8월~9월" },
+      { name: "삼각형 작도하기", kind: "task", weight: 20, timing: "9월~10월" },
+    ],
+    notes: [
+      {
+        title: "표·식·그래프 세 가지로 표현",
+        body: "정비례와 반비례 과제는 [9수02-07]에 맞춰 실제 상황의 관계를 표, 식, 그래프로 나타내게 하고, 식과 그래프로 옮기는 과정을 평가합니다. 개학 직후 8월 진도에 수행평가로 표시되어 있습니다.",
+      },
+      {
+        title: "작도는 공학적 도구도 함께",
+        body: "삼각형 작도하기는 [9수03-03] 범위로 9월 진도에서 작도의 개념을 설명하고 주어진 조건에 맞게 도형을 작도하는 과정을 평가하며, 작도 과정에서 공학적 도구 활용의 유용성을 인식하도록 지도합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "네 가지 힘과 용수철 측정, 압력·온도와 부피를 입자로 설명하는 과정을 봅니다",
+    intro:
+      "영도제일중학교 1학년 과학은 중간·기말고사가 30%씩이고, 수행평가 두 개가 모두 실험과정평가(20%씩)입니다. 힘의 작용은 9월, 기체의 성질은 10월에 실험으로 평가합니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월~12월", method: "선택형+서답형 100점" },
+      { name: "힘의 작용 실험과정평가", kind: "task", weight: 20, timing: "9월" },
+      { name: "기체의 성질 실험과정평가", kind: "task", weight: 20, timing: "10월" },
+    ],
+    notes: [
+      {
+        title: "네 가지 힘과 용수철 측정",
+        body: "힘의 작용 실험과정평가는 [9과05-02]에 맞춰 중력, 탄성력, 마찰력, 부력의 뜻과 크기·방향을 설명하고 용수철의 탄성력 크기를 측정하는 활동으로, 진도표에 탐구실험평가와 구술·발표가 함께 적혀 있습니다.",
+      },
+      {
+        title: "압력·온도와 부피를 입자로",
+        body: "기체의 성질 실험과정평가는 [9과06-02] 범위로 기체의 압력과 부피, 온도와 부피 관계를 실험으로 확인하고 입자 운동으로 나타냅니다. 기말고사 평가요소는 기체의 성질과 태양계입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "역할극에는 네 가지 표현을 쓰고, 영어 독서는 요약과 느낀 점을 적습니다",
+    intro:
+      "영도제일중학교 1학년 영어는 중간·기말고사 30%씩에 수행평가 40%가 세 과제로 나뉩니다. 9월 영어듣기 능력평가 10%, 10월 영어 독서 10%, 10월~11월 실생활 의사소통 역할극 20%입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월~12월", method: "선택형+서답형 100점" },
+      { name: "영어듣기 능력평가", kind: "task", weight: 10, timing: "9월" },
+      { name: "영어 독서", kind: "task", weight: 10, timing: "10월" },
+      { name: "실생활 의사소통 역할극", kind: "task", weight: 20, timing: "10월~11월" },
+    ],
+    notes: [
+      {
+        title: "역할극에 쓰는 네 가지 표현",
+        body: "실생활 의사소통 역할극의 평가요소는 도움 요청하고 답하기, 거절의 이유 말하기, 관심 묻고 답하기, 장래 희망 묻고 답하기입니다. 10월 진도에서는 to부정사의 명사적 용법과 접속사 that을, 11월에는 부사적 용법과 접속사 when을 함께 다룹니다.",
+      },
+      {
+        title: "영어 독서는 요약과 느낀 점 쓰기",
+        body: "영어 독서는 [9영01-10]·[9영02-07]에 맞춰 영어 도서를 읽고 주요 내용을 요약한 뒤 자신의 생각이나 느낀 점을 쓰는 서술·논술 과제이며, 자신의 말로 간결하게 요약하도록 지도한다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "작품 속 사회·문화적 상황을 읽고, 발표 전·중·후를 스스로 점검합니다",
+    intro:
+      "영도제일중학교 2학년 국어는 10월 중간고사와 12월 기말고사가 30%씩이고, 수행평가는 한 학기 한 권 읽기 25%와 11월 발표 15%입니다. 읽기 과제가 중간고사 전에, 발표 과제가 기말고사 전에 놓입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형+서답형 100점" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 25, timing: "8월~10월" },
+      { name: "청중을 고려하여 발표하기", kind: "task", weight: 15, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "작품 속 사회·문화적 상황 읽기",
+        body: "한 학기 한 권 읽기는 [9국05-05]에 맞춰 작품 속 인물의 삶과 주요 사건을 통해 작품에 반영된 사회·문화적 상황을 파악하는 과제로, 8월 진도부터 수행평가로 표시되어 있습니다.",
+      },
+      {
+        title: "발표 전·중·후를 스스로 점검",
+        body: "청중을 고려하여 발표하기는 [9국01-06] 범위의 모둠·문제해결 학습으로, 다양한 자료로 발표 내용을 체계적으로 구성하고 발표 전·중·후 자신의 말하기 과정과 보완할 점을 점검합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "송·원·명·청 가운데 한 나라로 포스터를 만들고, 역사일기는 8월부터 차시마다 씁니다",
+    intro:
+      "영도제일중학교 2학년 사회 영역은 역사 과목으로, 10월 중간고사와 12월 기말고사가 30%씩입니다. 수행평가는 10월 역사영화포스터 제작과 학기 내내 수시로 쓰는 역사일기가 20%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점", course: "역사" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형+서답형 100점", course: "역사" },
+      { name: "역사영화포스터 제작하기", kind: "task", weight: 20, timing: "10월", course: "역사" },
+      { name: "역사일기", kind: "task", weight: 20, timing: "수시", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "송·원·명·청 중 한 나라로 포스터",
+        body: "역사영화포스터 제작하기는 10월 진도에서 송, 원, 명, 청 가운데 한 나라를 골라 그 나라 내용으로 영화 포스터를 만드는 모둠수업 과제이며, [9역04-01]·[9역04-02]와 연결됩니다.",
+      },
+      {
+        title: "역사일기는 8월부터 차시마다",
+        body: "역사일기는 8월 재정·군사 국가 개념 차시에 처음 수행평가로 표시되고, 이후 미국·프랑스 혁명, 제국주의, 세계 대전, 냉전, 세계화 차시까지 11월에 걸쳐 수행평가 표시가 이어집니다. 범위는 Ⅳ단원부터 Ⅶ 현대 세계의 전개와 과제까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "사각형 관계를 정당화하며 탐색하고, 닮음 단원에서 길이를 재고 그 과정을 서술합니다",
+    intro:
+      "영도제일중학교 2학년 수학은 10월 중간고사와 11월~12월 기말고사가 30%씩이고, 도형 단원 수행평가 두 개가 20%씩입니다. 사각형 성질 탐색은 대단원 평가와 함께, 닮음 과제는 11월에 진행됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "11월~12월", method: "선택형+서답형 100점" },
+      { name: "삼각형과 사각형의 성질 탐색하기", kind: "task", weight: 20 },
+      { name: "닮음을 활용하여 길이 재기", kind: "task", weight: 20, timing: "11월" },
+    ],
+    notes: [
+      {
+        title: "사각형 관계를 정당화하는 탐색",
+        body: "삼각형과 사각형의 성질 탐색하기는 다양한 사각형의 성질을 이해하고 정당화하며 여러 사각형 사이의 관계를 탐색하는 차시에 대단원 평가와 함께 표시되어 있습니다. 진도표 위치는 9월 28일~10월 2일 주이고 반영 비율표의 시기는 10월입니다.",
+      },
+      {
+        title: "닮음 단원의 길이 재기와 정당화 서술",
+        body: "닮음을 활용하여 길이 재기는 11월 진도의 피타고라스 정리 차시에 놓여 있고, 증명 방법이 다양함을 소개한 뒤 개인 수준에 맞는 정당화 과정을 서술하도록 지도한다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "가상 실험 데이터로 옴의 법칙을 찾고, 과학 독서는 독서 일지에서 생태 포스터까지 이어집니다",
+    intro:
+      "영도제일중학교 2학년 과학은 10월 중간고사와 12월 기말고사가 30%씩이고, 수행평가는 9월 전기 탐구와 8월~11월 과학 독서가 20%씩입니다. 전기 탐구는 디지털 도구로 데이터를 모으는 단계형 과제입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형+서답형 100점" },
+      { name: "저항, 전류, 전압 사이의 관계 탐구하기", kind: "task", weight: 20, timing: "9월" },
+      { name: "과학 독서", kind: "task", weight: 20, timing: "8-11월" },
+    ],
+    notes: [
+      {
+        title: "가상 실험 데이터로 옴의 법칙",
+        body: "전기 탐구는 [9과14-02]에 맞춰 1단계에서 가상 실험 데이터를 수집하고, 2·3단계에서 그래프를 분석해 옴의 법칙을 이끌어 냅니다. 디지털 도구로 데이터를 수집하는 능력도 평가 항목으로 적혀 있습니다.",
+      },
+      {
+        title: "독서 일지에서 생태 포스터까지",
+        body: "과학 독서는 ‘환경과 생태 쫌 아는 10대’를 읽고 일지를 쓰는 활동을 8월에 서술형 평가로 시작해, 11월에 독서 감상문과 생태환경 포스터 만들기로 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "인포그래픽을 바탕으로 독립운동가 전기문을 쓰고, 축제 추천 이메일은 시기가 따로 적혀 있습니다",
+    intro:
+      "영도제일중학교 2학년 영어는 중간·기말고사가 30%씩이고, 수행평가는 9월 영어듣기 능력평가 10%와 쓰기 과제 두 개 15%씩입니다. 9월에는 전기문, 학기 후반에는 이메일을 씁니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "선택형+서답형 100점" },
+      { name: "영어듣기 능력평가", kind: "task", weight: 10, timing: "9월" },
+      { name: "독립운동가 일대기 인포그래픽 및 전기문 작성하기", kind: "task", weight: 15, timing: "9월" },
+      { name: "지역 축제 추천 이메일 작성하기", kind: "task", weight: 15 },
+    ],
+    notes: [
+      {
+        title: "인포그래픽을 바탕으로 전기문",
+        body: "전기문 과제는 독립운동가 인포그래픽 작성, 전기문 쓰기 준비, 인포그래픽을 바탕으로 한 전기문 쓰기 순서입니다. 같은 시기에 전기문의 주요 어휘를 맥락으로 추론하고 낭독으로 읽기 유창성을 확인하는 활동도 수행평가로 적혀 있습니다.",
+      },
+      {
+        title: "이메일 과제의 시기",
+        body: "지역 축제 추천 이메일은 반영 비율표에는 11월, 진도표에는 10월 26일~30일 주로 적혀 있습니다. 성취기준에는 [9영02-08] 일기·편지·이메일 쓰기가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "한 권 읽기는 진로 글쓰기와 연결되고, 인터뷰는 작품의 사회·문화적 배경에서 출발합니다",
+    intro:
+      "영도제일중학교 3학년 국어는 10월 5주 기말고사 한 번이 40%이고, 수행평가 두 개가 30%씩입니다. 가상 인터뷰와 한 권 읽기 모두 8~9월에 진행되어 수행 60%가 기말고사 전에 마무리됩니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월 5주", method: "선택형+서답형 100점" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 30, timing: "8~9월" },
+      { name: "작품 속 인물과의 가상 인터뷰 작성하기", kind: "task", weight: 30, timing: "8~9월" },
+    ],
+    notes: [
+      {
+        title: "한 권 읽기는 진로 글쓰기와 연결",
+        body: "한 학기 한 권 읽기는 책을 골라 읽은 뒤 독서 일지를 쓰고, 자신의 진로와 관련된 글쓰기로 이어집니다. 성취기준은 [9국02-01]·[9국03-01]로, 쓰기가 문제 해결 과정임을 다루는 차시와 함께 8월 진도에 표시되어 있습니다.",
+      },
+      {
+        title: "인터뷰는 작품의 사회·문화적 배경에서",
+        body: "가상 인터뷰 작성하기는 [9국05-05]·[9국05-06]에 맞춰 작품이 창작된 사회·문화적 배경을 바탕으로 감상하는 차시에 8월과 9월 두 번 표시되어 있습니다. 기말고사는 문학과 삶, 논증과 설득 전략, 문장의 짜임, 읽기 과정 점검 네 단원을 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "환경 프로젝트는 조사에서 실천 방안까지, 상장 과제는 조선 시대 인물 업적 조사부터 합니다",
+    intro:
+      "영도제일중학교 3학년 사회 영역은 사회와 역사 두 과목으로, 둘 다 10월 기말고사가 40%입니다. 사회는 10월 환경 문제 해결 프로젝트 하나에 40%가 걸려 있고, 역사는 수행 두 개가 30%씩입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월", method: "선택형+서답형 100점", course: "사회" },
+      { name: "살기 좋은 도시 설계하기", kind: "task", weight: 20, timing: "9월~10월", course: "사회" },
+      { name: "환경 문제 해결 프로젝트", kind: "task", weight: 40, timing: "10월", course: "사회" },
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월 5주", method: "선택형+서답형 100점", course: "역사" },
+      { name: "조선 시대 인물에게 상장 수여하기", kind: "task", weight: 30, timing: "9월", course: "역사" },
+      { name: "역사 영화 포스터 제작하기", kind: "task", weight: 30, course: "역사" },
+    ],
+    notes: [
+      {
+        title: "환경 프로젝트는 조사에서 실천 방안까지",
+        body: "환경 문제 해결 프로젝트는 [9사(지리)10-01]·[9사(지리)10-03]에 맞춰 10월에 기후 변화와 환경 문제 사례를 조사·분석하고, 이어 자신의 의견을 정리해 구체적인 실천 방안을 제안합니다. 살기 좋은 도시 설계하기는 [9사(지리)08-04] 범위로 우리 지역을 살기 좋은 도시로 만들 조건과 방법을 제시합니다.",
+      },
+      {
+        title: "상장 과제는 인물 업적 조사부터",
+        body: "역사의 상장 수여하기는 9월 사림과 붕당 단원에서 인물의 업적을 미리 조사하고, 상장을 주고 싶은 인물의 업적을 정리해 상장을 제작합니다. 영화 포스터는 9월 진도에서 제목과 문구를 예고한 뒤 10월 영조·정조 개혁 정책 차시에 제작합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "삼각비 문제해결력을 평가하고, 기말고사는 세 단원을 다룹니다",
+    intro:
+      "영도제일중학교 3학년 수학은 10월 기말고사 한 번이 40%이고, 수행평가 두 개가 30%씩입니다. 이차함수 과제가 개학 직후 8월, 삼각비 과제가 9월이라 수행이 학기 앞쪽에 몰려 있습니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "이차함수의 그래프 그리기", kind: "task", weight: 30, timing: "8월" },
+      { name: "삼각비의 성질 문제 해결하기", kind: "task", weight: 30, timing: "9월" },
+    ],
+    notes: [
+      {
+        title: "기말고사는 세 단원",
+        body: "기말고사 평가요소는 이차함수, 삼각비, 원의 성질 세 단원이고, 수행평가는 그중 이차함수([9수03-10])와 삼각비([9수04-17]·[9수04-18])에서 하나씩 나옵니다.",
+      },
+      {
+        title: "삼각비 문제해결력 평가",
+        body: "삼각비의 성질 문제 해결하기는 9월 문제해결학습 차시에 삼각비 문제해결력 평가로 적혀 있고, 이차함수의 그래프 그리기는 8월 진도에서 그래프 그리기 평가로 진행됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "유전 형질 가계도 문제를 풀고, 자유 낙하로 역학적 에너지를 측정합니다",
+    intro:
+      "영도제일중학교 3학년 과학은 10월 기말고사 40%와 수행평가 두 개 30%씩으로 구성됩니다. 가계도 분석은 8월, 운동과 에너지 탐구실험은 9월에 있습니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "가계도 분석하기", kind: "task", weight: 30, timing: "8월" },
+      { name: "운동과 에너지", kind: "task", weight: 30, timing: "9월" },
+    ],
+    notes: [
+      {
+        title: "유전 형질 가계도 문제",
+        body: "가계도 분석하기는 [9과21-05]에 맞춰 사람의 다양한 유전 형질에 대한 가계도 문제를 해결하는 과제로, 8월 문제해결학습 차시에 표시되어 있습니다.",
+      },
+      {
+        title: "자유 낙하로 역학적 에너지 측정",
+        body: "운동과 에너지는 9월 탐구실험으로 자유 낙하하는 물체의 역학적 에너지를 측정하고 역학적 에너지 보존과 관련지어 설명하는지 봅니다. 기말고사 평가요소는 운동과 에너지, 자극과 반응, 에너지 전환과 보존, 별과 우주입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdojeil-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "인터뷰 두 번은 진도에 맞춰 나뉘고, 듣기는 2회 영어듣기능력평가로 봅니다",
+    intro:
+      "영도제일중학교 3학년 영어는 10월 기말고사 한 번이 40%이고, 수행평가 60% 가운데 50%를 영어 인터뷰 두 번이 25%씩 차지합니다. 나머지 10%는 영어듣기능력평가입니다.",
+    assessments: [
+      { name: "기말고사", kind: "exam", weight: 40, timing: "10월", method: "선택형+서답형 100점" },
+      { name: "영어듣기능력평가", kind: "task", weight: 10 },
+      { name: "영어인터뷰 1", kind: "task", weight: 25, timing: "8~9월" },
+      { name: "영어인터뷰 2", kind: "task", weight: 25, timing: "9~10월" },
+    ],
+    notes: [
+      {
+        title: "인터뷰 두 번의 진도",
+        body: "영어 인터뷰1은 개학 직후 진도에서 불만족 표현하기와 다짐 말하기를 배우는 차시에, 인터뷰2는 Lesson 5 ‘A Journey into Your Mind’에서 관계부사 문장 만들기와 접속부사 연결을 배우는 차시에 놓여 있습니다. 두 번 모두 영어 인터뷰로 의사소통 능력을 확인합니다.",
+      },
+      {
+        title: "듣기는 2회 영어듣기능력평가",
+        body: "듣기 10%의 평가요소는 2026학년도 2회 영어듣기능력평가이며, 반영 비율표에는 9월로, 진도표에는 개학 첫 주 칸에 적혀 있어 시기를 따로 적지 않았습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도제일중학교")],
+  },
+  {
+    schoolSlug: "yeongdoyeoja-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "한 학기 한 권 읽기 25%(10~11월, 3단계)·한국문학 탐사일지 15%(수시) · 중간·기말 각 30%",
+    intro:
+      "영도여자고등학교 1학년 공통국어2는 10월 중간고사와 12월 기말고사가 각 30%이고, 수행평가는 한 학기 한 권 읽기 25%와 한국문학 탐사일지 15%입니다. 두 시험 모두 100점 가운데 30점이 서·논술형이라, 문학 감상문을 쓰는 수행과 시험 서술 문항을 함께 놓고 준비 범위를 잡게 됩니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "100점(서·논술형 30점)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "100점(서·논술형 30점)" },
+      { name: "한 학기 한 권 읽기", kind: "task", weight: 25, timing: "10월~11월", method: "문학작품 감상, 내용 파악 및 정리, 문학감상문 작성(3단계)" },
+      { name: "한국문학 탐사일지", kind: "task", weight: 15, timing: "학기 중 수시", method: "작품 감상 및 분석, 탐사일지 작성, 발표 및 질의응답" },
+    ],
+    notes: [
+      {
+        title: "한 권 읽기는 세 단계로 감상문까지",
+        body: "한 학기 한 권 읽기는 단계(횟수)가 3으로 적혀 있고, 작품을 감상한 뒤 내용을 파악·정리하고 마지막에 문학감상문을 쓰는 순서입니다. 성취기준은 [10공국2-02-02]·[10공국2-02-03]·[10공국2-03-03]·[10공국2-05-02] 네 개이며, 평가요소에는 주제에 맞는 책 읽기와 원고지 작성이 들어 있습니다.",
+      },
+      {
+        title: "탐사일지는 첫 단원부터 시작됩니다",
+        body: "진도표 8월 ‘제망매가 / 시조 두 수’ 단원에 한국문학 탐사일지 작성과 발표가 수행평가 연계로 표시되어 있습니다. 교과서 작품과 관련된 다른 문학작품을 찾아 자기만의 일지를 만들고 발표·질의응답까지 거치는 과제로, 기간은 학기 중 수시입니다.",
+      },
+      {
+        title: "동점일 때는 기말고사가 1순위",
+        body: "평가 영역별 표의 동점자 처리 기준은 기말고사 1순위, 중간고사 2순위, 한 권 읽기 3순위, 탐사일지 4순위입니다. 기말고사 평가요소에는 논증의 방법과 과정, 국어 역사와 한글 맞춤법이 포함됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongdoyeoja-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "도형의 방정식 프로젝트 25%·집합과 명제, 함수 포트폴리오 25%(8~11월) · 시험 각 25%",
+    intro:
+      "영도여자고등학교 1학년 공통수학2는 수행평가 비중이 50%로, 도형의 방정식 프로젝트와 집합과 명제·함수 포트폴리오가 25%씩입니다. 10월 중간고사와 12월 기말고사도 각 25%이며, 두 시험은 100점 중 서·논술형이 30점입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월", method: "100점(서·논술형 30점)" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "12월", method: "100점(서·논술형 30점)" },
+      { name: "도형의 방정식 프로젝트", kind: "task", weight: 25, timing: "8월~11월", method: "수업 활동 평가" },
+      { name: "집합과 명제, 함수 포트폴리오", kind: "task", weight: 25, timing: "8월~11월", method: "수업 활동 평가" },
+    ],
+    notes: [
+      {
+        title: "포트폴리오에는 개념 카드가 들어갑니다",
+        body: "포트폴리오의 평가요소는 수업 중 학습지에 개념과 문제 풀이를 작성하는 것과, 단원별 핵심 개념을 설명하는 개념 카드 만들기입니다. 진도표에서는 9월부터 11월까지 ‘수학 개념 카드 만들기’가 수행평가 연계로 이어지고, 범위는 [10공수2-02-01]~[10공수2-03-03]입니다.",
+      },
+      {
+        title: "프로젝트는 11월에 표시",
+        body: "도형의 방정식 프로젝트의 성취기준은 [10공수2-01-01]~[10공수2-01-07]이고, 그림을 보고 도형의 방정식을 찾아 문제를 해결하는 것이 평가요소입니다. 평가 개요의 시기는 8월~11월이며 진도표에는 11월에 프로젝트 연계 표시가 있습니다.",
+      },
+      {
+        title: "시험 범위는 원의 방정식에서 겹칩니다",
+        body: "중간고사 평가요소는 평면좌표와 직선의 방정식, 원의 방정식이고, 기말고사는 원의 방정식, 도형의 이동, 유리함수와 무리함수입니다. 평가 방침에는 서·논술형을 매 정기시험 만점의 30% 반영한다고 적혀 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongdoyeoja-high-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통영어2"],
+    summary: "논리적 영어 글쓰기 15%·한국문화 홍보하기 15%·9월 영어듣기 10% · 중간·기말 각 30%",
+    intro:
+      "영도여자고등학교 1학년 공통영어2는 수행평가 40%가 9월 영어듣기 10%와 3단계 글쓰기 과제 두 개(각 15%)로 나뉩니다. 10월 중간고사와 12월 기말고사는 각 30%이고 100점 중 서·논술형이 30점입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "100점(서·논술형 30점)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "100점(서·논술형 30점)" },
+      { name: "영어듣기", kind: "task", weight: 10, timing: "9월", method: "전국16개 시도교육청 공동 주관 영어듣기능력평가(고1)" },
+      { name: "논리적 영어 글쓰기 활동", kind: "task", weight: 15, timing: "8월~12월", method: "어휘 준비도, 신문기사 내용파악 및 분석, 자기주장 글쓰기(3단계)" },
+      { name: "한국문화 홍보하기", kind: "task", weight: 15, timing: "8월~12월", method: "어휘 학습 확인, 주요 구문 문장 완성, 글쓰기(3단계)" },
+    ],
+    notes: [
+      {
+        title: "신문기사를 읽고 쓰는 주장 글",
+        body: "논리적 영어 글쓰기 활동은 어휘 준비도 확인, 영어신문 기사 내용 파악과 분석, 근거를 활용한 자기주장 글쓰기의 3단계로 수시 진행됩니다. 성취기준은 [10공영2-02-01~08]입니다.",
+      },
+      {
+        title: "홍보 글은 구문 연습 뒤에 씁니다",
+        body: "한국문화 홍보하기도 3단계로, 어휘 학습 확인 평가와 주요 구문 문장 완성 평가를 거친 뒤 한국의 문화를 홍보하는 글을 씁니다. 성취기준은 [10공영2-02-01~04]와 [10공영2-02-07~08]이고 기간은 8월~12월입니다.",
+      },
+      {
+        title: "듣기 10%는 연합 듣기평가 한 번",
+        body: "영어듣기는 9월에 한 번 치르는 전국16개 시도교육청 공동 주관 영어듣기능력평가(고1)로 반영되며, 인정점은 학업성적관리규정에 따릅니다. 정기시험 평가요소에는 함축적 의미 추론과 올바른 어법·어휘 판단이 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongdoyeoja-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합사회2", "한국사2"],
+    summary: "통합사회2 재무설계·지속가능 탐구 각 20%, 한국사2 자유주제 탐구·글쓰기 각 20%(10월)",
+    intro:
+      "영도여자고등학교 1학년 사회 영역은 통합사회2와 한국사2 두 과목이며, 두 과목 모두 중간·기말고사 30%씩에 수행평가 두 개 20%씩입니다. 통합사회2 수행은 11월~12월에, 한국사2 수행 두 개는 10월에 모여 있습니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "100점(서·논술형 30점)", course: "통합사회2" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "100점(서·논술형 30점)", course: "통합사회2" },
+      { name: "재무관리와 자산 투자 설계", kind: "task", weight: 20, timing: "11월", method: "서술·논술, 포트폴리오, 교사 관찰 및 기록, 자기평가", course: "통합사회2" },
+      { name: "미래사회 예측과 지속가능한 발전 전략 탐구", kind: "task", weight: 20, timing: "11월~12월", method: "탐구보고서 작성", course: "통합사회2" },
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "100점(서·논술형 30점)", course: "한국사2" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "100점(서·논술형 30점)", course: "한국사2" },
+      { name: "한국사 자유주제 탐구", kind: "task", weight: 20, timing: "10월 중 1회 실시", method: "1단계 탐구 계획서 작성, 2단계 탐구 활동(개별)", course: "한국사2" },
+      { name: "한국사 글쓰기", kind: "task", weight: 20, timing: "10월 중 1회 실시", method: "글쓰기", course: "한국사2" },
+    ],
+    notes: [
+      {
+        title: "재무설계 과제의 두 평가요소",
+        body: "통합사회2 재무관리와 자산 투자 설계는 [10통사2-03-03] 하나에 맞춘 2단계(1회) 과제로, 소비 패턴과 금융 자산을 비교 분석해 문제를 설명하는 부분과 합리적 선택의 경제적 기준으로 재무설계를 하는 부분을 평가합니다.",
+      },
+      {
+        title: "에너지 자원에서 출발하는 탐구보고서",
+        body: "미래사회 예측과 지속가능한 발전 전략 탐구는 [10통사2-05-02]를 근거로 에너지 자원의 분포와 소비 실태를 파악한 뒤 지속가능 발전 전략을 세우는 탐구보고서 과제입니다. 기간은 11월~12월, 2단계입니다.",
+      },
+      {
+        title: "한국사2 수행은 10월에 두 개",
+        body: "한국사 자유주제 탐구는 개별로 계획서를 쓰고 탐구 활동을 하는 2단계 과제이고, 한국사 글쓰기는 [10한사2-02-01]·[10한사2-03-01]에 맞춘 1회 글쓰기입니다. 진도표 10월 칸에 두 과제가 함께 수행평가 연계로 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongdoyeoja-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2", "과학탐구실험2"],
+    summary: "통합과학2 지질시대 탐구·중화반응 실험 각 20%, 과학탐구실험2 프로젝트·장치 실험 각 50%",
+    intro:
+      "영도여자고등학교 1학년 과학 영역은 통합과학2와 과학탐구실험2입니다. 통합과학2는 중간·기말고사 30%씩에 탐구 수행 두 개가 20%씩이고, 과학탐구실험2는 정기시험 없이 9월 프로젝트 발표와 10월 장치 제작 실험이 50%씩입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "100점(서·논술형 30점)", course: "통합과학2" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "100점(서·논술형 30점)", course: "통합과학2" },
+      { name: "지질시대 탐구활동", kind: "task", weight: 20, timing: "8월~9월", method: "모둠별 탐구활동 및 탐구보고서 작성, 발표(2단계)", course: "통합과학2" },
+      { name: "중화반응 탐구실험 및 보고서 작성", kind: "task", weight: 20, timing: "11월", method: "중화반응 실험 수행 및 보고서 작성(2단계)", course: "통합과학2" },
+      { name: "생활 속 과학 원리 프로젝트 발표", kind: "task", weight: 50, timing: "9월", method: "개별 탐구 주제 조사 및 보고서 작성", course: "과학탐구실험2" },
+      { name: "충격 흡수 장치 제작 및 실험", kind: "task", weight: 50, timing: "10월", method: "1단계 장치 설계, 2단계 실험 수행 및 보고서 작성", course: "과학탐구실험2" },
+    ],
+    notes: [
+      {
+        title: "통합과학2 수행은 학기 앞뒤로 나뉩니다",
+        body: "지질시대 탐구활동은 [10통과2-01-01]에 맞춰 8월~9월에 모둠 탐구와 보고서·발표로 진행되고, 중화반응 탐구실험은 [10통과2-01-04]에 맞춰 11월에 실험 수행과 보고서 작성으로 평가됩니다. 결시 후 재시험에도 응시하지 않거나 참여하지 못한 경우의 기본점수는 40점입니다.",
+      },
+      {
+        title: "충격 흡수 장치는 보고서 네 종류",
+        body: "과학탐구실험2의 충격 흡수 장치 제작 및 실험 평가요소는 개인 설계 보고서, 모둠 설계 보고서, 모둠 실험 및 개선 보고서, 개인 결과 분석 및 문제 해결입니다. 성취기준은 [10과탐2-01-03]이고 10월에 2단계로 진행됩니다.",
+      },
+      {
+        title: "프로젝트 발표는 과학 원리 설명이 중심",
+        body: "생활 속 과학 원리 프로젝트 발표는 [10과탐2-01-01]·[10과탐2-01-02]에 맞춘 개별 과제로, 과학 원리의 이해와 설명, 사례와 원리의 연계, 자료 조사와 근거 활용, 원리의 적용과 확장을 봅니다. 과학탐구실험2에서 참여하지 않은 경우의 기본 점수는 30점입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongdoyeoja-high-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["미적분Ⅰ", "확률과 통계"],
+    summary: "한 문제를 두 가지 방법으로 풀고, 11월엔 그래프로 물품을 디자인하며 확률과 통계 발표는 세 갈래입니다",
+    intro:
+      "영도여자고등학교 2학년 수학은 전 학급이 듣는 미적분Ⅰ과 확률과 통계 두 과목입니다. 미적분Ⅰ은 중간·기말 30%씩에 수행 두 개가 20%씩이고, 확률과 통계는 중간·기말이 25%씩으로 낮은 대신 주제 탐구 보고서·발표 30%와 수업과정 활동지 20%를 둡니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "100점(서·논술형 30점)", course: "미적분Ⅰ" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "100점(서·논술형 30점)", course: "미적분Ⅰ" },
+      { name: "풀이 전략 비교·분석하기", kind: "task", weight: 20, timing: "10월", method: "두 가지 풀이 전략 비교·분석 및 수학적 근거 설명(1회)", course: "미적분Ⅰ" },
+      { name: "미적분 실생활 프로젝트", kind: "task", weight: 20, timing: "11월", method: "다항함수의 그래프를 이용한 실생활 물품 디자인(1회)", course: "미적분Ⅰ" },
+      { name: "중간고사", kind: "exam", weight: 25, timing: "10월", method: "100점(서·논술형 30점)", course: "확률과 통계" },
+      { name: "기말고사", kind: "exam", weight: 25, timing: "12월", method: "100점(서·논술형 30점)", course: "확률과 통계" },
+      { name: "확률과 통계 관련 주제 탐구 활동 보고서 및 발표", kind: "task", weight: 30, method: "주제탐구 보고서, 주제탐구 발표, 유사문제 탐구 발표(3단계)", course: "확률과 통계" },
+      { name: "수업과정 활동지", kind: "task", weight: 20, timing: "학기중 수시", method: "교과서·학습지 문제해결 과정 수시 점검", course: "확률과 통계" },
+    ],
+    notes: [
+      {
+        title: "한 문제를 두 가지 방법으로",
+        body: "미적분Ⅰ 풀이 전략 비교·분석하기는 제시된 문제를 서로 다른 두 풀이 전략으로 해결하고, 각 풀이의 개념과 방법을 비교한 뒤 문제 조건에 더 맞는 전략을 수학적 근거로 설명하는 과제입니다. 범위는 [12미적Ⅰ-01-01]~[12미적Ⅰ-02-08]로 중간고사 범위와 같습니다.",
+      },
+      {
+        title: "그래프로 물품을 디자인하는 11월 과제",
+        body: "미적분 실생활 프로젝트는 [12미적Ⅰ-02-04]·[12미적Ⅰ-02-07]·[12미적Ⅰ-02-08]에 맞춰 다항함수 그래프로 실생활 물품을 디자인합니다. 평가요소는 다항함수의 구성과 그래프 표현, 극값 계산의 정확성, 디자인의 완성도입니다.",
+      },
+      {
+        title: "확률과 통계는 발표가 세 갈래",
+        body: "주제 탐구 활동은 주제탐구 보고서, 주제탐구 발표, 수업 중 수시로 하는 유사문제 탐구 발표의 3단계입니다. 유사문제 발표는 9월~11월, 보고서와 발표는 10월~11월로 적혀 있지만 반영 비율 표에는 9~12월로 되어 있습니다. 수업과정 활동지는 문제해결 과정을 수시로 점검해 해결 비율을 산출합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongdoyeoja-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "표현활동은 소리 내어 읽기부터 하고, 글쓰기는 어휘 준비가 함께 평가됩니다",
+    intro:
+      "영도여자고등학교 2학년 영어Ⅱ는 중간·기말고사 30%씩에 수행평가 40%가 영어 글쓰기 15%, 영어 듣기 10%, 영어 표현활동 15%로 나뉩니다. 글쓰기와 표현활동은 8월부터 12월까지 단계별로 이어지고, 듣기는 9월 한 번입니다.",
+    assessments: [
+      { name: "중간고사", kind: "exam", weight: 30, timing: "10월", method: "100점(서·논술형 30점)" },
+      { name: "기말고사", kind: "exam", weight: 30, timing: "12월", method: "100점(서·논술형 30점)" },
+      { name: "영어 글쓰기", kind: "task", weight: 15, timing: "8월~12월", method: "과정 중심 글쓰기 및 어휘 활용도 평가(3단계)" },
+      { name: "영어 듣기", kind: "task", weight: 10, timing: "9월", method: "전국16개 시도교육청 공동 주관 영어듣기능력평가(1회)" },
+      { name: "영어 표현활동", kind: "task", weight: 15, timing: "8월~12월", method: "과정 중심 영어 표현하기 학습 활동 평가(4단계)" },
+    ],
+    notes: [
+      {
+        title: "표현활동은 소리 내어 읽기부터",
+        body: "영어 표현활동의 평가요소는 어휘 학습지 작성, 소리 내어 문장 읽기, 문장 의미 파악, 음성 언어로 자신의 생각 표현하기로 4단계입니다. 진도표에서는 12월에 ‘음성언어로 자신의 생각 표현하기’가 수행평가 연계로 잡혀 있습니다.",
+      },
+      {
+        title: "글쓰기는 어휘 준비가 함께 평가됩니다",
+        body: "영어 글쓰기는 [12영Ⅱ-02-02~06]에 맞춘 과정 중심 글쓰기로, 어휘 준비 및 활용도와 영어 문장 구성하기가 평가요소입니다. 진도표에는 8·9·11·12월에 어휘 준비도 확인이, 11월에 글쓰기 활동이 표시되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영도여자고등학교")],
+  },
+  {
+    schoolSlug: "yeongjin-high-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통국어2"],
+    summary: "학교 건의문 쓰고 발표하기 20% · 매체 비평 자료 제작·발표 20% · 지필 2회 60%",
+    intro:
+      "영진고등학교 1학년 공통국어2는 지필평가 두 번이 60%, 논구술형 수행평가 두 개가 20%씩입니다. 두 과제 모두 글을 쓴 뒤 발표까지 하는 구조이고, 계획서에 AI 활용 전면 금지가 명시되어 있습니다.",
+    assessments: [
+      { name: "1차(중간고사) 선택형", kind: "exam", weight: 18, timing: "10월 14일 ~ 10월 19일", method: "선택형 60점" },
+      { name: "1차(중간고사) 서답형", kind: "exam", weight: 12, timing: "10월 14일 ~ 10월 19일", method: "서술형 40점" },
+      { name: "2차(기말고사) 선택형", kind: "exam", weight: 18, timing: "12월 17일 ~ 12월 22일", method: "선택형 60점" },
+      { name: "2차(기말고사) 서답형", kind: "exam", weight: 12, timing: "12월 17일 ~ 12월 22일", method: "서술형 40점" },
+      { name: "더 나은 우리 학교를 만들기 위한 건의문 작성하고 발표하기", kind: "task", weight: 20, method: "논구술형" },
+      { name: "매체 비평 자료 제작하고 발표하기", kind: "task", weight: 20, method: "논구술형" },
+    ],
+    notes: [
+      {
+        title: "건의문은 글 50점, 발표 50점",
+        body: "학교나 지역 사회의 문제를 찾아 해결 방안을 담은 건의문을 쓰고 발표한 뒤 자기 성찰로 마무리합니다. 글 쪽은 문제 상황 분석과 쟁점 파악, 해결 방안의 타당성, 처음-중간-끝 형식의 조직, 통계·기사·설문 같은 자료 활용을 보고, 발표 쪽은 전달력, 청중과의 상호작용, 매체 활용, 발표 성실성을 봅니다.",
+      },
+      {
+        title: "매체 비평은 분석과 논리가 30점씩",
+        body: "매체 자료를 골라 제작 배경·출처·대상을 파악하고, 핵심 메시지·표현 기법·편향성·사회문화적 함의를 분석해 서론-본론-결론 글로 쓴 다음 발표합니다. 내용 및 표현 분석 30점, 논리 및 표현력 30점, 비평의 가치 및 독창성 20점, 형식 및 발표 20점입니다.",
+      },
+      {
+        title: "두 과제의 시기는 표마다 다릅니다",
+        body: "평가 개요표는 건의문을 10월 중, 매체 비평을 9월 중으로 적었지만, 진도표에는 건의문이 6주(9월 21~25일), 매체 비평이 7주(9월 28일~10월 2일)에 연달아 배치되어 있습니다. 정기시험은 두 회차 모두 단답형 없이 선택형 60점과 서술형 40점으로 구성됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영진고등학교")],
+  },
+  {
+    schoolSlug: "yeongjin-high-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["공통수학2"],
+    summary: "우리 학교 안전 지도 만들기 25%(10월 5주) · 학급 진로 성향 집합 분석 25%(11월 3주)",
+    intro:
+      "영진고등학교 1학년 공통수학2는 정기시험과 수행평가를 50%씩 반영합니다. 두 수행 과제는 모두 학교생활을 소재로 한 프로젝트형으로, 10월 5주와 11월 3주에 하나씩 배치되어 있습니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 15, timing: "10월 14일 ~ 10월 19일", method: "선택형 60점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10, timing: "10월 14일 ~ 10월 19일", method: "서·논술형 40점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 15, timing: "12월 17일 ~ 12월 22일", method: "선택형 60점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10, timing: "12월 17일 ~ 12월 22일", method: "서·논술형 40점" },
+      { name: "좌표평면과 원의 방정식을 활용한 우리 학교 안전 지도 만들기", kind: "task", weight: 25, timing: "10월 5주", method: "프로젝트형" },
+      { name: "집합과 연산을 활용한 학급 구성원 진로 성향 분석하기", kind: "task", weight: 25, timing: "11월 3주", method: "프로젝트형" },
+    ],
+    notes: [
+      {
+        title: "안전 지도는 원의 방정식으로 사각지대를 찾습니다",
+        body: "학교 배치도를 좌표평면에 옮겨 소화기·비상구·응급함·CCTV 위치를 표시하고, 시설물의 유효 반경을 원의 방정식으로 나타낸 뒤 점과 직선 사이의 거리와 원과 직선의 위치 관계로 사각지대를 찾습니다. 주제의 참신성 20점, 개념 이해의 정확성 30점, 수학적 근거 제시의 논리성 30점, 안전 지도 구성의 체계성 20점이며 성취기준은 [10공수2-01-03]~[10공수2-01-05]입니다.",
+      },
+      {
+        title: "진로 성향 분석은 벤 다이어그램 보고서",
+        body: "관심 계열·희망 진로·선호 활동 같은 조사 항목을 집합으로 나타내고, 합집합·교집합·여집합·차집합으로 관계를 분석해 학급 진로 활동 프로그램을 제안합니다. 조사 설계 20점, 개념 이해 30점, 수학적 근거 30점, 보고서 구성 20점이며, AI는 진로 분류 아이디어나 원소 개수 검산 용도로만 허용됩니다.",
+      },
+      {
+        title: "중간은 도형·집합, 기말은 명제·함수",
+        body: "정기시험은 회차마다 선택형 60점(15%)과 서·논술형 40점(10%)입니다. 중간시험 범위는 [10공수2-01-01]~[10공수2-02-04](도형의 방정식, 집합과 명제), 기말시험은 [10공수2-02-05]~[10공수2-03-05](집합과 명제, 함수와 그래프)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영진고등학교")],
+  },
+  {
+    schoolSlug: "yeongjin-high-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["한국사2", "통합사회2"],
+    summary: "한국사2 영화 시나리오 재구성·탐방로 팜플렛 / 통합사회2 지구촌 이슈 보고서·2050 인권 제안서",
+    intro:
+      "영진고등학교 1학년 사회 영역은 한국사2와 통합사회2 모두 정기시험 60%, 수행평가 40%(과제 2개, 각 20%)입니다. 통합사회2는 두 수행평가가 9월 중순부터 9월 5주 사이에 이어지고, 한국사2는 영화 시나리오 재구성 뒤 11월 말 팜플렛 제작이 따라옵니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 20, timing: "10월 14일 ~ 10월 19일", method: "선택형 66점", course: "한국사2" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10, timing: "10월 14일 ~ 10월 19일", method: "서·논술형 34점", course: "한국사2" },
+      { name: "기말시험 선택형", kind: "exam", weight: 20, timing: "12월 17일 ~ 12월 22일", method: "선택형 66점", course: "한국사2" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10, timing: "12월 17일 ~ 12월 22일", method: "서·논술형 34점", course: "한국사2" },
+      { name: "강제 동원의 역사, 그날의 기억을 다시 그리다: 역사 영화 시나리오 재구성하기", kind: "task", weight: 20, method: "논술형", course: "한국사2" },
+      { name: "동네 속 살아있는 역사: 도심 문화 탐방로 안내 팜플렛 제작하기", kind: "task", weight: 20, timing: "11월 말", method: "논술형", course: "한국사2" },
+      { name: "중간시험 선택형", kind: "exam", weight: 19.2, timing: "10월 14일 ~ 10월 19일", method: "선택형 64점", course: "통합사회2" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10.8, timing: "10월 14일 ~ 10월 19일", method: "서·논술형 36점", course: "통합사회2" },
+      { name: "기말시험 선택형", kind: "exam", weight: 19.2, timing: "12월 17일 ~ 12월 22일", method: "선택형 64점", course: "통합사회2" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10.8, timing: "12월 17일 ~ 12월 22일", method: "서·논술형 36점", course: "통합사회2" },
+      { name: "세계화의 관점으로 지구촌 이슈 탐구 보고서 작성하기", kind: "task", weight: 20, timing: "9월 중순 ~ 말", method: "논술형", course: "통합사회2" },
+      { name: "2050 미래 인권 제안서 작성하기", kind: "task", weight: 20, timing: "9월 5주", method: "논술형", course: "통합사회2" },
+    ],
+    notes: [
+      {
+        title: "한국사2는 영화 비교와 현장 탐방 설계",
+        body: "시나리오 과제는 전시 총동원 체제 아래 한국인의 삶을 다룬 영화를 보고 역사적 사실과 영화 속 재현을 비교해 시나리오를 다시 짜는 것으로, 역사적 사실 이해 20점, 비교 및 분석 능력 40점, 시나리오 재구성 40점입니다. 팜플렛 과제는 도심 한 곳의 근대 문화유산을 조사해(3곳 이상이 상위 기준) 탐방 경로를 짜는 것으로 지역 선정 및 조사 40점, 탐방로 구성 40점, 팜플렛 제작 20점입니다.",
+      },
+      {
+        title: "통합사회2 보고서는 활동지가 30점",
+        body: "세계화를 주제로 브레인스토밍한 뒤 지구촌 이슈를 골라 주제 탐색 활동지를 쓰고, 개인별 탐구 주제로 해결책을 제안하는 보고서와 알리는 산출물을 만듭니다. 주제 탐색 활동지 30점, 세부 탐구 주제의 적절성 20점, 자료 수집 및 분석 20점, 합리적 대안 제시 20점, 산출물 작성 10점이며, 진도표에서는 5주(9월 14~18일)에 실시됩니다.",
+      },
+      {
+        title: "2050 인권 제안서와 시험 배점",
+        body: "미래사회의 변화에서 인권 문제를 찾아 기존 인권과 비교하고 보장 방안을 제안하는 과제로, 미래사회 예측 15점, 인권 문제 분석 25점, 기존 인권과의 연계 20점, 새로운 인권에 대한 판단 25점, 사회적 보장 방안 15점입니다. 정기시험은 통합사회2가 회차별 선택형 64점(19.2%)·서·논술형 36점(10.8%), 한국사2가 선택형 66점(20%)·서·논술형 34점(10%)입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영진고등학교")],
+  },
+  {
+    schoolSlug: "yeongjin-high-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["통합과학2"],
+    summary: "과학의 유용성 논설문·발표 25% · 일상 속 에너지 출입 사례 탐구 25% · 정기시험 50%",
+    intro:
+      "영진고등학교 1학년 통합과학2는 정기시험 50%, 수행평가 50%입니다. 논술형 과제(과학의 유용성을 주장하는 논설문과 발표)와 프로젝트형 과제(일상생활 속 에너지 출입 사례 탐구)가 25%씩입니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 15, timing: "10월 14일 ~ 10월 19일", method: "선택형 60점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10, timing: "10월 14일 ~ 10월 19일", method: "서·논술형 40점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 15, timing: "12월 17일 ~ 12월 22일", method: "선택형 60점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10, timing: "12월 17일 ~ 12월 22일", method: "서·논술형 40점" },
+      { name: "자신의 삶에서 과학의 유용성을 주장하는 논설문을 작성하여 발표하기", kind: "task", weight: 25, method: "논술형" },
+      { name: "일상생활에 이용된 에너지의 출입 사례 탐구하기", kind: "task", weight: 25, method: "프로젝트형" },
+    ],
+    notes: [
+      {
+        title: "논설문 과제는 원리 선정이 45점",
+        body: "과학 원리 선정하기가 1~3회에 걸쳐 45점, 논설문 작성 20점, 발표 25점, 연구 윤리 준수 10점입니다. 발표에서는 고른 3가지 기술 또는 원리 중 1가지에 집중해 제한 시간 안에 말해야 하고, AI는 자료 조사와 아이디어 참고까지만 허용되며 쓴 경우 원문 출처를 다시 확인해 참고문헌에 밝혀야 합니다.",
+      },
+      {
+        title: "에너지 출입 탐구는 보고서와 발표 자료",
+        body: "일상 속 에너지 출입 사례를 고르고 흡수·방출 원리를 탐구한 뒤 생활 속 이용 사례를 분석해 발표 자료와 결과 보고서를 만듭니다. 사례 선정 및 원리 탐구 35점, 이용 사례 분석 및 논리적 정리 35점, 발표 자료 제작 및 결과 보고서 작성 30점입니다.",
+      },
+      {
+        title: "수행 시기는 표마다 다르게 적혀 있습니다",
+        body: "평가 개요표는 논설문을 9월 중순·10월 중순, 에너지 탐구를 11월 초~11월 중순으로 적었지만 진도표의 실시 표시는 이와 다른 주에 흩어져 있습니다. 정기시험은 중간·기말 모두 Ⅰ~Ⅲ 대단원에서 선택형 60점(15%)과 서·논술형 40점(10%)으로 출제됩니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영진고등학교")],
+  },
+  {
+    schoolSlug: "yeongjin-high-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["문학"],
+    summary: "패러디 시는 원작과의 연관성이 절반이고, 발표는 내재적·외재적 관점을 함께 쓰며 시험은 66점·34점입니다",
+    intro:
+      "영진고등학교 2학년 문학(3학점)은 정기시험 60%와 수행평가 40%로, 수행평가는 패러디 시 창작과 통합적 관점 발표가 20%씩입니다. 패러디 시는 9월 초(3주차)에 실시되고, 작품 발표는 9월부터 12월까지 진도 내내 이어지도록 배치되어 있습니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 20, timing: "10월 14일 ~ 10월 19일", method: "선택형 66점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10, timing: "10월 14일 ~ 10월 19일", method: "서·논술형 34점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 20, timing: "12월 17일 ~ 12월 22일", method: "선택형 66점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10, timing: "12월 17일 ~ 12월 22일", method: "서·논술형 34점" },
+      { name: "삶의 의미를 담은 패러디 시 창작하기", kind: "task", weight: 20, timing: "9월", method: "논술형" },
+      { name: "문학 작품 통합적 관점에서 발표하기", kind: "task", weight: 20, timing: "9월~12월", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "패러디 시는 원작과의 연관성이 절반",
+        body: "수업에서 배운 시(예: 박목월 「산이 날 에워싸고」)나 자유 선택 작품을 원작으로 삼아 형식과 주제를 분석하고, 바꿀 지점을 정해 패러디 시를 쓴 뒤 원작과의 관계를 설명합니다. 내용의 연관성 50점, 내용의 참신성 30점, 성실한 태도 20점이며 AI 활용은 전면 금지됩니다.",
+      },
+      {
+        title: "발표는 내재적·외재적 관점을 함께",
+        body: "스스로 고른 문학 작품 한 편을 맥락에 맞게 조사하고 통합적 관점에서 해석해 청중 앞에서 발표합니다. 작품의 이해 50점, 작품 선정 및 주제 추출 30점, 발표 태도 20점이며, 수행 과정이나 추가 질문으로 자신의 수행을 입증하지 못하면 사전 안내 기준에 따라 점수가 매겨집니다.",
+      },
+      {
+        title: "시험은 회차마다 66점·34점",
+        body: "중간시험(1~3단원)과 기말시험(3~4단원) 모두 선택형 66점(20%)과 서·논술형 34점(10%)으로 나뉩니다. 표절이나 AI 작성이 적발되면 두 수행평가 모두 평가 요소 배점의 차하점이 주어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영진고등학교")],
+  },
+  {
+    schoolSlug: "yeongjin-high-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어Ⅱ"],
+    summary: "웹툰 비평은 쓰기 윤리에 30점, 뉴스 발표는 요약문과 대본이 35점입니다",
+    intro:
+      "영진고등학교 2학년 영어Ⅱ(3학점)는 정기시험 두 번이 60%, 수행평가 두 개가 20%씩입니다. 9월 말 웹툰 비평문은 서·논술형, 학기 말 건강 뉴스 요약 발표는 구술형으로 치릅니다.",
+    assessments: [
+      { name: "중간시험 선택형", kind: "exam", weight: 19.8, timing: "10월 14일~10월 19일", method: "선택형 66점" },
+      { name: "중간시험 서답형", kind: "exam", weight: 10.2, timing: "10월 14일~10월 19일", method: "서·논술형 34점" },
+      { name: "기말시험 선택형", kind: "exam", weight: 19.8, timing: "12월 17일~12월 22일", method: "선택형 66점" },
+      { name: "기말시험 서답형", kind: "exam", weight: 10.2, timing: "12월 17일~12월 22일", method: "서·논술형 34점" },
+      { name: "영어 웹툰에 대한 비평 작성하기", kind: "task", weight: 20, timing: "9월 5주 ~ 10월 1주", method: "서논술형" },
+      { name: "건강 관련 뉴스 요약 발표하기", kind: "task", weight: 20, timing: "11월 6주 ~ 12월 1주", method: "구술형" },
+    ],
+    notes: [
+      {
+        title: "웹툰 비평은 쓰기 윤리에도 30점",
+        body: "영어 웹툰을 골라 줄거리와 문화적 관점·주제를 탐구하고, 초안을 쓴 뒤 고쳐 써서 비평 보고서로 제출합니다. 웹툰 분석 및 문화적 관점 탐구 35점, 비평문 구성 및 논리적 표현 35점, 쓰기 윤리 준수 및 고쳐 쓰기 30점이며, 진도표에서는 7주(9월 28일~10월 2일)에 실시됩니다.",
+      },
+      {
+        title: "뉴스 발표는 요약문과 대본이 35점",
+        body: "건강 관련 뉴스 기사를 골라 핵심 정보를 뽑아 요약문을 쓰고, 시각 자료를 넣은 대본으로 구술 발표를 합니다. 기사 선정 및 핵심 정보 분석 30점, 요약문 작성 및 논리적 대본 구성 35점, 시각 자료 활용 및 구술 발표 수행 35점이며, 진도표상 실시 전 주에 요약문의 어조를 동료 피드백으로 점검합니다.",
+      },
+      {
+        title: "정기시험은 66점·34점 구성",
+        body: "중간시험(1~2단원)과 기말시험(3~4단원)은 회차마다 선택형 66점(19.8%)과 서·논술형 34점(10.2%)입니다. 수행평가 중 웹툰 비평은 1단원, 뉴스 발표는 3단원과 연결되어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("영진고등학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 1,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "정서 글은 계획과 표현을, 주장 글은 근거의 타당성을 보며 독서 영역은 포트폴리오 6점과 방송 시나리오 4점입니다",
+    intro:
+      "율현중학교 1학년 국어는 11월 2주 정기시험 1회가 50%(선택형 45%, 논술형 5%), 수행평가 세 영역이 50%입니다. 논술형 글쓰기 두 편이 8월 4주와 9월 3주에 이어지고, 독서 포트폴리오는 8월 1주부터 10월 4주까지 이어 갑니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "정서를 표현하는 글 쓰기", kind: "task", weight: 20, timing: "8월 4주", method: "논술형" },
+      { name: "주장을 담은 글 쓰기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "독서 후 매체로 표현하기", kind: "task", weight: 10, timing: "8월 1주~10월 4주", method: "독서 포트폴리오 6점 · 개인 인터넷 방송 시나리오 작성하기 4점" },
+    ],
+    notes: [
+      {
+        title: "두 글쓰기의 평가 요소",
+        body: "정서를 표현하는 글 쓰기([9국03-05])는 글쓰기 계획, 주제를 명료하게 밝히기, 적절한 표현, 문법에 맞게 쓰기를 봅니다. 주장을 담은 글 쓰기([9국03-03])는 주장 명료성, 타당한 근거 제시, 글의 구성과 조직이 더해집니다.",
+      },
+      {
+        title: "독서 영역은 두 칸으로 나뉩니다",
+        body: "독서 후 매체로 표현하기 10점은 성장을 다룬 작품을 읽고 자신의 삶을 성찰한 독서 포트폴리오 6점과, 대중매체와 개인 인터넷 방송을 비교하며 쓰는 방송 시나리오 4점으로 구성됩니다. 진도표에는 10월 4주 매체 단원 끝에 수행평가가 표시되어 있습니다.",
+      },
+      {
+        title: "시험 범위 성취기준",
+        body: "정기시험 관련 성취기준은 [9국05-03], [9국04-02], [9국04-07], [9국02-03]으로 성장 문학, 새말 형성 원리, 세대·분야·매체별 어휘, 추론하며 읽기입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 2,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "영상 기획안에서 스토리보드로 이어지고, 시험엔 「별」·「먼 후일」과 「양반전」의 풍자가 나옵니다",
+    intro:
+      "율현중학교 2학년 국어는 11월 2주 정기시험 한 번이 50%이고, 수행평가는 스토리보드 작성, 서평 쓰기, 서평 발표 세 영역 50%입니다. 서평 쓰기는 7월 5주부터 9월 4주까지 이어지고 바로 다음 주인 10월 1주에 같은 서평으로 발표합니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "영상 제작을 위한 스토리보드 작성하기", kind: "task", weight: 20, timing: "8월 3주", method: "논술형" },
+      { name: "독서 후 서평 쓰기", kind: "task", weight: 20, timing: "7월 5주~9월 4주", method: "논술형" },
+      { name: "서평 발표하기", kind: "task", weight: 10, timing: "10월 1주" },
+    ],
+    notes: [
+      {
+        title: "스토리보드는 기획안부터",
+        body: "8월 3주 과제는 [9국06-03] 기준으로 영상 제작 기획안 작성, 스토리보드 작성, 맞춤법에 맞게 작성하기를 평가 요소로 둡니다.",
+      },
+      {
+        title: "서평은 포트폴리오와 함께",
+        body: "독서 후 서평 쓰기([9국02-08])는 독서 포트폴리오 작성과 서평 쓰기, 맞춤법을 평가합니다. 서평 발표하기(10%)는 [9국01-06]이 관련 성취기준이며 논술형 비율에는 들어가지 않습니다.",
+      },
+      {
+        title: "시험에 나오는 작품과 문법",
+        body: "정기시험 평가요소에는 시 「별」, 「먼 후일」 감상, 「양반전」의 풍자와 그 효과, 읽기 과정 점검, 음운의 개념과 국어의 자음·모음 체계, 한글 창제 원리가 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 3,
+    subjectSlug: "korean",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["국어"],
+    summary: "입론과 연설문은 설득 단원의 두 과제이고, 독후활동은 요약과 의견 표현을 보며 논술형 칸이 없습니다",
+    intro:
+      "율현중학교 3학년 국어는 11월 2주 정기시험 50%와 수행평가 50%입니다. 수행은 토론 입론(10%), 연설문(20%), 독후활동(20%) 순으로 8월 2주, 9월 1주, 10월 3주에 한 달 남짓 간격으로 배치되어 있습니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "토론 입론 쓰기", kind: "task", weight: 10, timing: "8월 2주", method: "논술형" },
+      { name: "설득 전략을 활용한 연설문 쓰기", kind: "task", weight: 20, timing: "9월 1주", method: "논술형" },
+      { name: "독후활동", kind: "task", weight: 20, timing: "10월 3주" },
+    ],
+    notes: [
+      {
+        title: "입론과 연설문은 설득 단원 두 과제",
+        body: "토론 입론 쓰기는 논제에 대한 주장 표현, 타당한 근거 제시, 조건에 맞는 글쓰기를 봅니다. 연설문 쓰기는 연설 목적에 맞는 내용 구성, 다양한 설득 전략 활용, 글에 쓴 설득 전략 설명을 평가 요소로 둡니다.",
+      },
+      {
+        title: "독후활동은 논술형 칸이 없습니다",
+        body: "10월 3주 독후활동(20%)은 [9국02-01], [9국02-03], [9국02-08] 기준으로 글의 내용 요약, 세부 내용 파악 후 의견 표현, 다양한 자료를 찾아 참고하며 읽기를 평가합니다. 논술형 반영 비율은 시험 5%, 입론 10%, 연설문 20%에만 잡혀 있습니다.",
+      },
+      {
+        title: "시험 범위",
+        body: "정기시험 평가요소는 문학 작품의 심미적 인식, 과거의 삶이 반영된 작품 감상, 음운의 체계와 특성, 글에 사용된 논증 방법 파악, 배경 지식을 활용한 읽기입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 1,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "정비례·반비례로 그래프 값을 해석하고, 작도는 두 가지 조건, 시험엔 줄기와 잎 그림까지 나옵니다",
+    intro:
+      "율현중학교 1학년 수학은 11월 2주 정기시험 1회 50%와 수행평가 세 영역 50%입니다. 수행이 8월 2주, 9월 2주, 9월 4주로 모두 9월 안에 끝나고, 시험은 그 뒤 도형과 통계 단원을 넓게 다룹니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "좌표평면과 그래프 문제 해결하기", kind: "task", weight: 20, timing: "8월 2주", method: "논술형" },
+      { name: "삼각형 작도하기", kind: "task", weight: 10, timing: "9월 2주" },
+      { name: "도형의 성질 문제 해결하기", kind: "task", weight: 20, timing: "9월 4주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "첫 과제는 정비례·반비례",
+        body: "8월 2주 좌표평면과 그래프 문제 해결하기는 [9수02-05]~[9수02-07] 기준으로 그래프의 x, y값 해석, 정비례 관계와 반비례 관계를 이용한 문제 해결을 봅니다.",
+      },
+      {
+        title: "작도는 두 가지 조건",
+        body: "삼각형 작도하기(10%)는 두 변의 길이와 그 끼인각을 알 때, 한 변의 길이와 그 양 끝 각을 알 때 삼각형을 작도하는 과제입니다. 9월 4주 도형의 성질 과제는 직선과 평면의 위치 관계, 삼각형의 합동 조건, 다각형의 성질을 다룹니다.",
+      },
+      {
+        title: "시험은 통계 단원까지",
+        body: "정기시험은 [9수03-01], [9수03-02], [9수03-04]~[9수03-08], [9수04-01]~[9수04-03]이 범위로, 평면·입체도형의 성질과 함께 대푯값, 줄기와 잎 그림, 도수분포표와 히스토그램, 상대도수 분포 해석이 들어 있습니다. 논술형 반영 비율은 시험 5%와 수행 40%로 45%입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 2,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "이등변삼각형 성질 증명과 평행사변형 조건을 다루고, 시험은 닮음비부터 확률까지입니다",
+    intro:
+      "율현중학교 2학년 수학은 11월 2주 정기시험 50%와 논술형 수행평가 세 영역 50%입니다. 수행은 삼각형(8월 4주), 사각형(9월 2주), 닮음(10월 2주) 순서로 교과서 도형 단원을 따라가며, 세 영역 모두 논술형이라 논술형 비율이 55%에 이릅니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "삼각형의 성질 탐구와 문제 해결하기", kind: "task", weight: 20, timing: "8월 4주", method: "논술형" },
+      { name: "사각형의 성질 탐구와 문제 해결하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "도형의 닮음 문제 해결하기", kind: "task", weight: 10, timing: "10월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "삼각형 과제의 범위",
+        body: "이등변삼각형의 성질 증명, 이등변삼각형·직각삼각형 문제 해결, 외심과 내심의 성질 정리와 각각의 문제 해결이 평가 요소입니다.",
+      },
+      {
+        title: "사각형과 닮음 과제",
+        body: "사각형 과제는 평행사변형이 되는 조건, 여러 가지 사각형 사이의 관계, 변의 길이·각의 크기·넓이 구하기를 봅니다. 10월 2주 닮음 과제는 서로 닮은 삼각형을 찾고 닮음을 이용해 길이를 구합니다.",
+      },
+      {
+        title: "시험은 닮음 이후 단원 중심",
+        body: "정기시험 성취기준은 [9수03-12]~[9수03-15], [9수04-05], [9수04-06]으로 닮음비·넓이비·부피비, 중점연결정리, 무게중심, 피타고라스 정리, 경우의 수와 확률입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 3,
+    subjectSlug: "math",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["수학"],
+    summary: "y=a(x-p)²+q 꼴로 바꿔 꼭짓점을 구하고, 삼각비로 길이와 넓이를 구하며 시험엔 분산까지 듭니다",
+    intro:
+      "율현중학교 3학년 수학은 11월 2주 정기시험 50%와 수행평가 50%입니다. 논술형 과제 두 개(이차함수, 삼각비)와 8월 2주~10월 2주에 걸쳐 쌓는 문제해결과정 포트폴리오로 나뉩니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "이차함수의 그래프 분석하기", kind: "task", weight: 20, timing: "8월 2주", method: "논술형" },
+      { name: "삼각비를 활용한 문제 해결하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "문제해결과정 탐구하기", kind: "task", weight: 10, timing: "8월 2주 ~ 10월 2주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "이차함수 과제의 평가 요소",
+        body: "8월 2주 과제([9수03-10])는 y=ax²+bx+c를 y=a(x-p)²+q 꼴로 바꾸기, 꼭짓점과 축 구하기, 그래프로 나타내기, 그래프를 보고 이차함수식 구하기로 이어집니다.",
+      },
+      {
+        title: "삼각비 과제와 포트폴리오",
+        body: "삼각비 과제([9수04-17], [9수04-18])는 삼각비의 값, 예각의 삼각비, 삼각비로 길이와 넓이 구하기를 봅니다. 포트폴리오는 이차함수 그래프, 삼각비, 원의 현·접선 성질과 원주각의 성질까지 문제해결과정을 탐구해 모읍니다.",
+      },
+      {
+        title: "시험에는 통계도 포함",
+        body: "정기시험 성취기준은 [9수03-10], [9수04-17]~[9수04-20], [9수05-06], [9수05-07]로 수행 범위에 더해 중앙값·최빈값·평균·분산·표준편차의 의미와 계산이 들어갑니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 1,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "롤 모델의 노력과 자신의 실천 계획을 쓰고, 북 리포트는 인물과 주제를 다루며 논술형은 35%입니다",
+    intro:
+      "율현중학교 1학년 영어는 11월 2주 정기시험 50%와 수행평가 세 영역 50%입니다. 목표 어휘 활용하기(20%)는 8월 1주부터 10월 4주까지 이어지고, 논술형 과제인 롤 모델 소개와 북 리포트가 9월 3주와 10월 3주에 들어 있습니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "목표 어휘 활용하기", kind: "task", weight: 20, timing: "8월 1주∼10월 4주" },
+      { name: "롤 모델 소개하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형" },
+      { name: "북 리포트 작성하기", kind: "task", weight: 10, timing: "10월 3주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "어휘 영역은 학기 전체",
+        body: "목표 어휘 활용하기는 목표 단어와 어구를 철자에 맞게 쓰기, 의미 이해, 문맥으로 의미 유추, 목표 어휘로 문장 작성하기를 봅니다. 논술형 반영 비율에는 들어가지 않습니다.",
+      },
+      {
+        title: "롤 모델 글과 북 리포트",
+        body: "롤 모델 소개하기는 장래희망과 롤 모델 소개, 롤 모델의 훌륭한 점과 노력, 선정 이유와 자신의 실천 계획을 씁니다. 북 리포트는 등장인물의 특징과 글의 주제, 자신의 생각과 느낌을 작성하며 진도표에서도 10월 3주 수행평가로 표시됩니다.",
+      },
+      {
+        title: "논술형 35% 구성",
+        body: "논술형 반영 비율은 정기시험 5%, 롤 모델 소개하기 20%, 북 리포트 10%로 합계 35%입니다. 시험 평가요소는 세부 정보와 중심 내용 파악, 의미와 의도 추론, 내용 요약입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 2,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "지각동사와 so~that으로 상황을 묘사하고, 전기문은 인류애를 실천한 인물을 5형식 문장으로 씁니다",
+    intro:
+      "율현중학교 2학년 영어는 11월 2주 정기시험 50%와 수행평가 세 영역 50%입니다. 1학년과 달리 목표 어휘 활용하기가 8월 3주 한 번에 논술형으로 치러지고, 10월 1주 전기문 쓰기로 수행이 끝납니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "목표 어휘 활용하기", kind: "task", weight: 20, timing: "8월 3주", method: "논술형" },
+      { name: "영어 표현 탐구하기", kind: "task", weight: 10, timing: "9월 3주" },
+      { name: "전기문 쓰기", kind: "task", weight: 20, timing: "10월 1주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "영어 표현 탐구는 지각동사와 so~that",
+        body: "9월 3주 영어 표현 탐구하기는 지각동사를 포함한 문장으로 상황 묘사하기와 so~that 표현으로 사건의 논리적 관계 설명하기가 평가 요소입니다.",
+      },
+      {
+        title: "전기문은 인류애를 실천한 인물",
+        body: "전기문 쓰기는 인류애를 실천한 인물과 업적 소개, 5형식 문장 구조로 상황 묘사, 사건의 인과관계 설명, 완성도 있는 글쓰기를 봅니다.",
+      },
+      {
+        title: "시험 평가요소",
+        body: "정기시험은 세부 정보와 중심 내용, 사건의 논리적 관계, 화자·필자의 의도, 함축적 의미 추론을 평가합니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 3,
+    subjectSlug: "english",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["영어"],
+    summary: "편지엔 wish 가정법과 간접의문문을 쓰고, 북리포트는 인상 깊은 장면과 주제를 담으며 시험은 추론 중심입니다",
+    intro:
+      "율현중학교 3학년 영어는 11월 2주 정기시험 50%와 수행평가 50%입니다. 8월 4주 소원 편지 쓰기와 10월 2주 북리포트가 논술형 20%씩이고, 목표 어휘 활용하기는 8월 4주~9월 4주에 10%로 진행됩니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "나의 소원 편지 쓰기", kind: "task", weight: 20, timing: "8월 4주", method: "논술형" },
+      { name: "목표 어휘 활용하기", kind: "task", weight: 10, timing: "8월4주~9월 4주" },
+      { name: "북리포트 작성하기", kind: "task", weight: 20, timing: "10월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "편지에는 wish 가정법과 간접의문문",
+        body: "나의 소원 편지 쓰기는 편지글 형식, 소원과 그 이유 제시, wish 가정법 구문, 의문사가 없는 의문문의 간접의문문 구문, 문법적 오류 없는 글쓰기를 평가 요소로 둡니다.",
+      },
+      {
+        title: "북리포트의 평가 요소",
+        body: "10월 2주 북리포트는 등장인물의 특징·성격과 인상 깊은 장면 묘사, 필자의 생각과 의도를 추측한 주제 제시, 자신의 생각과 느낌을 이유와 함께 서술하기입니다.",
+      },
+      {
+        title: "시험은 읽기 추론 중심",
+        body: "정기시험 평가요소는 그림·사진·도표에 관한 글 이해, 문맥 유추로 글의 흐름 파악, 줄거리·주제·요지, 필자의 의도, 사건의 원인과 결과 추론입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 1,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회"],
+    summary: "갈등과 미디어를 분석하고, 시민 참여 과제는 정치 참여 표어까지 만들며 시험은 기본권까지입니다",
+    intro:
+      "율현중학교 1학년 사회는 11월 2주 정기시험 50%와 수행평가 세 영역 50%입니다. 논술형 두 과제가 15%씩이고, 10월 3주 정치 주체와 시민 참여 과제가 20%로 가장 큽니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점", course: "사회" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점", course: "사회" },
+      { name: "사회적 갈등을 분석하고 해결 방안 제안하기", kind: "task", weight: 15, timing: "8월 4주", method: "논술형", course: "사회" },
+      { name: "미디어 정보를 비판적으로 해석하기", kind: "task", weight: 15, timing: "9월 3주", method: "논술형", course: "사회" },
+      { name: "정치 주체의 역할과 시민 참여 이해하기", kind: "task", weight: 20, timing: "10월 3주", course: "사회" },
+    ],
+    notes: [
+      {
+        title: "갈등과 미디어 과제",
+        body: "8월 4주 과제는 사회적 갈등의 원인 분석, 갈등 해결에 필요한 시민의 자질, 실천 방안 제안을 씁니다. 9월 3주 과제는 미디어 콘텐츠 탐색, 정보의 비판적 분석, 올바른 이용 태도 제시입니다.",
+      },
+      {
+        title: "시민 참여 과제는 표어까지",
+        body: "10월 3주 정치 주체의 역할과 시민 참여 이해하기는 정치 주체의 역할과 정치과정의 의미를 설명하고, 정치적 무관심의 원인과 해결 방안을 제시한 뒤 정치 참여의 중요성을 담은 표어를 만듭니다.",
+      },
+      {
+        title: "시험 범위는 법과 기본권까지",
+        body: "정기시험 성취기준은 [9사(일사)01-01]부터 [9사(일사)06-01]까지로 사회화, 문화, 민주주의와 선거, 법과 재판, 기본권의 의미와 종류가 평가요소에 들어 있습니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 2,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["역사"],
+    summary: "원나라를 여행하는 가상 인물의 편지, 산업혁명 뉴스 대본, 인물 보고서가 이어지고 시험은 세계대전까지입니다",
+    intro:
+      "율현중학교 2학년 역사는 11월 2주 정기시험 50%와 수행평가 세 영역 50%입니다. 원나라 교역을 다루는 여행자 편지와 산업혁명 뉴스 대본이 논술형 20%씩이고, 10월 3주 세계사 인물 탐구 보고서가 10%입니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점", course: "역사" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점", course: "역사" },
+      { name: "동방견문록을 읽고 여행자의 편지 작성하기", kind: "task", weight: 20, timing: "8월 3주", method: "논술형", course: "역사" },
+      { name: "산업혁명을 주제로 뉴스 대본 만들기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형", course: "역사" },
+      { name: "세계사 인물 탐구 보고서 작성하기", kind: "task", weight: 10, timing: "10월 3주", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "여행자 편지는 가상 인물 설정부터",
+        body: "8월 3주 과제([9역04-01])는 가상의 인물 설정, 교역로와 교역품 소개, 원나라의 문화와 생활 모습, 여행자의 생각과 감정을 담은 편지 쓰기로 이어집니다.",
+      },
+      {
+        title: "뉴스 대본과 인물 보고서",
+        body: "산업혁명 뉴스 대본([9역05-02])은 주제 선정, 배경 소개, 기술 발전과 사회 변화 소개, 매체 자료를 활용한 대본 구성을 봅니다. 인물 탐구 보고서는 인물 선정, 생애와 업적, 세계사 발전에 기여한 점, 탐구 후 느낀 점을 씁니다.",
+      },
+      {
+        title: "시험 범위는 세계대전까지",
+        body: "정기시험 성취기준은 [9역04-01]~[9역06-03]으로 송과 북방 민족, 명·청, 이슬람 왕조와 오스만 제국, 종교개혁과 신항로 개척, 시민 혁명, 산업혁명과 제국주의, 제1·2차 세계대전까지 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 3,
+    subjectSlug: "social",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["사회", "역사"],
+    summary: "사회는 1960년대 이후 국제 거래를 시기별로 비교하고, 역사는 논술 두 편이 8월에 몰립니다",
+    intro:
+      "율현중학교 3학년은 사회와 역사가 각각 11월 2주 정기시험 50%와 수행평가 50%로 나뉩니다. 사회 시험은 선택형 46%·논술형 4%로 역사(45%·5%)와 칸이 조금 다르고, 두 과목 모두 논술형 과제 두 개와 비논술 과제 하나(10%)를 둡니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 46, timing: "11월 2주", method: "선택형 92점", course: "사회" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 4, timing: "11월 2주", method: "논술형 8점", course: "사회" },
+      { name: "우리나라의 국제 거래 변화 양상 분석하기", kind: "task", weight: 20, timing: "8월 3주", method: "논술형", course: "사회" },
+      { name: "인구문제 해결하기", kind: "task", weight: 20, timing: "9월 3주", method: "논술형", course: "사회" },
+      { name: "문제해결과정 탐구하기", kind: "task", weight: 10, timing: "8월3주~10월1주", method: "포트폴리오", course: "사회" },
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점", course: "역사" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점", course: "역사" },
+      { name: "공민왕의 개혁과 신진사대부의 성장과정 탐구하기", kind: "task", weight: 20, timing: "8월 2주", method: "논술형", course: "역사" },
+      { name: "단종의 정통성과 세조의 왕권강화 평가하기", kind: "task", weight: 20, timing: "8월 5주", method: "논술형", course: "역사" },
+      { name: "조선시대 인물 카드 만들기", kind: "task", weight: 10, timing: "10월 1주", course: "역사" },
+    ],
+    notes: [
+      {
+        title: "사회: 국제 거래는 시기별 비교",
+        body: "8월 3주 국제 거래 과제는 1960년대, 1970~1980년대, 2000년대 이후 국제 거래 특징을 분석하고 변화 양상을 평가합니다. 9월 3주 인구문제 과제는 선진국과 개발도상국의 인구문제를 각각 분석하고 해결방안을 제안합니다.",
+      },
+      {
+        title: "역사: 논술 두 편이 8월에 몰립니다",
+        body: "공민왕 개혁 과제(8월 2주)는 공민왕의 개혁과 신진사대부의 성장과정을 탐구하고, 단종과 세조 과제(8월 5주)는 의정부 서사제와 6조 직계제를 비교해 두 인물을 평가합니다. 10월 1주 인물 카드는 왜란과 호란 시기 인물을 다룹니다.",
+      },
+      {
+        title: "두 과목 시험 범위",
+        body: "사회 시험은 국제 거래와 국제 정치, 인구 변화, 도시화, 글로벌 경제 활동과 지역 변화가 범위입니다. 역사 시험 성취기준은 [9역09-02]~[9역11-04]로 고려의 통치 체제부터 조선의 건국과 통치 규범, 사화와 붕당, 왜란과 호란 이후까지 이어집니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 1,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "온도 변화 그래프를 해석하고, 경사면에서 마찰력을 비교하며 시험은 힘·기체·태양계입니다",
+    intro:
+      "율현중학교 1학년 과학은 11월 2주 정기시험 50%와 수행평가 세 영역 50%입니다. 세 과제가 8월 2주부터 9월 2주 사이 한 달 안에 모두 끝나며, 마찰력 탐구(10%)를 뺀 두 과제가 논술형입니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "상태 변화와 열에너지의 출입 관계 탐구하기", kind: "task", weight: 20, timing: "8월 2주", method: "논술형" },
+      { name: "빗면의 기울기에 따른 마찰력의 크기 탐구하기", kind: "task", weight: 10, timing: "8월 4주" },
+      { name: "기체의 압력과 부피의 관계 탐구하기", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+    ],
+    notes: [
+      {
+        title: "열에너지 과제는 그래프 해석",
+        body: "8월 2주 과제([9과04-04])는 물질의 온도 변화 그래프로 상태 변화와 열에너지 출입 관계 설명, 상태 변화 시 입자의 변화 서술, 생활 속 이용 사례 설명을 봅니다.",
+      },
+      {
+        title: "마찰력과 기체 과제",
+        body: "마찰력 과제는 경사면에서 물체가 미끄러지기 시작하는 각도를 재고 접촉면에 따른 마찰력을 비교합니다. 9월 2주 기체 과제([9과06-02])는 부피에 따른 압력을 측정해 그래프로 나타내고 입자 운동으로 서술합니다.",
+      },
+      {
+        title: "시험은 힘·기체·태양계",
+        body: "정기시험 성취기준은 [9과05-01]~[9과05-04], [9과06-01]~[9과06-03], [9과07-01]~[9과07-04]로 힘의 평형과 여러 가지 힘, 기체의 압력·온도와 부피, 태양계와 달의 위상·일식과 월식까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 2,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "마찰 전기부터 저항까지 분석하고, 화성암·퇴적암·변성암을 구분하며 포트폴리오는 두 영역입니다",
+    intro:
+      "율현중학교 2학년 과학은 11월 2주 정기시험 50%와 수행평가 50%입니다. 논술형 두 과제(전기 분석, 암석의 관찰)가 20%씩이고, 7월 5주~10월 4주에 걸친 포트폴리오 두 영역이 5%씩 붙습니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "전기 분석하기", kind: "task", weight: 20, timing: "8월 5주", method: "논술형" },
+      { name: "암석의 관찰", kind: "task", weight: 20, timing: "9월 2주", method: "논술형" },
+      { name: "전기와 자기, 별과 우주 탐구수행 및 내용정리", kind: "task", weight: 5, timing: "7월 5주 ~10월 4주", method: "포트폴리오" },
+      { name: "지권의 변화, 소화계와 순환계 탐구관찰 및 내용정리", kind: "task", weight: 5, timing: "7월 5주 ~10월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "전기 과제는 마찰 전기부터 저항까지",
+        body: "8월 5주 전기 분석하기([9과14-01]~[9과14-02])는 마찰 전기 분석, 정전기 유도, 전류·전압·저항 이해를 봅니다. 진도표에서는 저항의 직렬·병렬연결 수업 주에 수행평가가 표시되어 있습니다.",
+      },
+      {
+        title: "암석 관찰은 세 가지 암석 구분",
+        body: "9월 2주 암석의 관찰([9과09-03])은 화성암·퇴적암·변성암을 비교하고 각각의 생성 과정과 특징에 따른 종류를 구분하는 과제입니다.",
+      },
+      {
+        title: "포트폴리오 두 영역과 시험 범위",
+        body: "포트폴리오는 전기와 자기·별과 우주 활동 정리 및 탐구 설계, 암석과 영양소 검출 탐구 및 지권·동물과 에너지 내용 정리로 나뉩니다. 시험은 지권의 변화, 소화·순환·호흡·배설, 전기와 자기, 별과 우주를 다룹니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
+  {
+    schoolSlug: "yulhyeon-middle-school",
+    grade: 3,
+    subjectSlug: "science",
+    status: "published",
+    planTerm: "2026-2",
+    courses: ["과학"],
+    summary: "뉴런과 자극 전달 경로를 설명하고, 빗면에서 위치 에너지가 한 일을 구하는 과제가 25%입니다",
+    intro:
+      "율현중학교 3학년 과학은 11월 2주 정기시험 50%와 수행평가 50%입니다. 9월 3주 위치 에너지 과제가 25%로 수행 가운데 가장 크고, 논술형 비율은 시험 5%를 더해 50%입니다.",
+    assessments: [
+      { name: "정기시험(선택형)", kind: "exam", weight: 45, timing: "11월 2주", method: "선택형 90점" },
+      { name: "정기시험(논술형)", kind: "exam", weight: 5, timing: "11월 2주", method: "논술형 10점" },
+      { name: "신경계 설명하기", kind: "task", weight: 20, timing: "8월 3주", method: "논술형" },
+      { name: "위치 에너지가 한 일 구하기", kind: "task", weight: 25, timing: "9월 3주", method: "논술형" },
+      { name: "생식과 발생 내용 정리 포트폴리오", kind: "task", weight: 5, timing: "7월 5주 ~10월 4주", method: "포트폴리오" },
+    ],
+    notes: [
+      {
+        title: "신경계 과제의 평가 요소",
+        body: "8월 3주 신경계 설명하기([9과20-02])는 뉴런과 뉴런의 종류, 신경계의 구성, 자극의 전달 경로 설명을 봅니다.",
+      },
+      {
+        title: "위치 에너지 과제 25%",
+        body: "9월 3주 과제([9과19-03])는 빗면을 내려오는 물체가 한 일의 양, 위치 에너지와 한 일의 관계, 계단을 올라갈 때 위치 에너지 변화량을 다룹니다. 포트폴리오(5%)는 호르몬과 생식·발생 활동 자료 정리와 마인드 맵 꾸미기입니다.",
+      },
+      {
+        title: "시험 범위",
+        body: "정기시험 성취기준은 [9과19-01], [9과19-02], [9과20-03], [9과21-01]~[9과21-05], [9과22-01]~[9과22-03]으로 운동 그래프와 자유낙하, 호르몬과 혈당 조절, 세포 분열과 멘델 유전, 역학적·전기 에너지 전환까지입니다.",
+      },
+    ],
+    sources: [schoolInfoPlanSource("율현중학교")],
+  },
 ];
 
 /** 학년 range allowed for a 학교급. */
