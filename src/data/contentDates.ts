@@ -1498,8 +1498,14 @@ const PATH_UPDATED_BY_DATE: Record<string, string[]> = {
     "/school/yubongyeoja-middle-school/3/science",
     "/school/yubongyeoja-middle-school/3/social",
   ],
-  // Batch 38 전국 확장 10개 동(청주·대전 유성·용인·대구 달서·대구 수성·부산 동래) 신규 sitemap URL
+  // 학습 가이드 10편 추가(사회·과학·논술·코딩·검정고시 각 2): 가이드 hub, 관련 과목·프로그램 hub
   "2026-11-09": [
+    "/guide",
+    "/subject/social",
+    "/subject/science",
+    "/program/nonsul",
+    "/program/coding",
+    "/program/ged",
     "/region/busan/busan-dongnae/myeongryun-dong",
     "/region/busan/busan-dongnae/myeongryun-dong/english",
     "/region/busan/busan-dongnae/myeongryun-dong/korean",
