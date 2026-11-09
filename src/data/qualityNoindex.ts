@@ -50,4 +50,7 @@ export const qualityNoindexPaths = new Set<string>([
   // (학교알리미 평가계획) 요약을 싣고 화면에 없던 학교 목록 노트를 빼서 15개 모두 GREEN(13~28%) → 제외. 현재 해당 항목 없음.
   // 행정동×과목 — 2026-10-16 국어·영어·수학 45개, 2026-10-19 사회·과학 30개를 학교알리미 2026학년도 2학기 평가계획으로
   // 다시 써서(src/data/dongSubjectContent.ts) 75개 모두 GREEN(12~27%)이 되어 이 목록에서 제외했다. 현재 해당 항목 없음.
+  // 2026-11-10 Batch 42: 행정동 hub AMBER noindex 보류 (제주 이도2동은 학교 1곳·entry 1건).
+  "/region/gyeongbuk/yeongju/hyucheon1-dong",
+  "/region/jeju/jeju-si/ido2-dong",
 ]);

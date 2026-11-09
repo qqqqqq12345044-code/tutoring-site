@@ -334,6 +334,12 @@ export const dongs: AdminDong[] = [
   { slug: "bonri-dong", code: "2729059000", name: "본리동", citySlug: "daegu-dalseo", legalDongs: ["본리동"] },
   { slug: "igok1-dong", code: "2729057600", name: "이곡1동", citySlug: "daegu-dalseo", legalDongs: ["갈산동", "이곡동"] },
   { slug: "noeun1-dong", code: "3020054600", name: "노은1동", citySlug: "daejeon-yuseong", legalDongs: ["장대동", "갑동", "노은동", "지족동", "죽동"] },
+  // 2026-11-10 Batch 42 전국 확장 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "hwangseong-dong", code: "4713062100", name: "황성동", citySlug: "gyeongju", legalDongs: ["황성동"] },
+  { slug: "nambu-dong", code: "4729053000", name: "남부동", citySlug: "gyeongsan", legalDongs: ["삼남동","서상동","신교동","상방동","백천동"] },
+  { slug: "jamsil7-dong", code: "1171072000", name: "잠실7동", citySlug: "songpa", legalDongs: ["잠실동"] },
+  { slug: "ido2-dong", code: "5011054000", name: "이도2동", citySlug: "jeju-si", legalDongs: ["이도이동","도남동"] },
+  { slug: "onyang1-dong", code: "4420057000", name: "온양1동", citySlug: "asan", legalDongs: ["온천동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

@@ -135,7 +135,9 @@ export const BASELINE = {
   // 부산 동래 온천제3동, 대전 유성 노은1동; 새 도시 없음): 학교 46곳 등록(전국 학교 route 기존)
   // + 동 hub 18 + 동×과목 89 + 학년 hub 83 + 학년×과목 342 = +532 → 16224 → 16756. sitemap 3257 → 3789(+532), noindex 12965 유지.
   // 2026-11-09 학습 가이드 10편 추가(사회·과학·논술·코딩·검정고시 각 2, 전부 색인) = +10 → (Batch 41 위에 병합: 16756 → 16766, sitemap 3789 → 3799).
-  totalRoutes: 16766,
+  // 2026-11-10 Batch 42 = 전국 확장 5개 동(경주 황성동, 경산 남부동, 송파 잠실7동, 아산 온양1동, 제주 이도2동; 새 도시 경주·경산·아산·제주시) 학교 14곳 등록
+  // + 동 hub 5 + 동×과목 19 + 학년 hub 9 + 학년×과목 33 = +66 → 16766 → 16832. sitemap 3799 → 3865, noindex 12965 유지(AMBER 6건은 noindex 보류 목록).
+  totalRoutes: 16832,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -147,7 +149,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 3799,
+  sitemapCount: 3865,
   noindexCount: 12965,
   brokenLinks: 0,
 };
