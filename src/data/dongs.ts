@@ -293,6 +293,17 @@ export const dongs: AdminDong[] = [
   { slug: "bunpyeong-dong", code: "4311256000", name: "분평동", citySlug: "cheongju", legalDongs: ["미평동", "분평동", "장성동", "장암동"] },
   { slug: "myeongryun-dong", code: "2626054500", name: "명륜동", citySlug: "busan-dongnae", legalDongs: ["명륜동"] },
   { slug: "manchon1-dong", code: "2726055000", name: "만촌1동", citySlug: "daegu-suseong", legalDongs: ["만촌동"] },
+  // 2026-11-09 Batch 39 전국 확장 10개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "jangrim2-dong", code: "2638059000", name: "장림제2동", citySlug: "busan-saha", legalDongs: ["장림동"] },
+  { slug: "myeongjang2-dong", code: "2626076200", name: "명장제2동", citySlug: "busan-dongnae", legalDongs: ["명장동"] },
+  { slug: "yongsan2-dong", code: "2729057200", name: "용산2동", citySlug: "daegu-dalseo", legalDongs: ["장기동", "용산동"] },
+  { slug: "noeun2-dong", code: "3020054700", name: "노은2동", citySlug: "daejeon-yuseong", legalDongs: ["지족동", "죽동", "하기동", "수남동", "안산동", "외삼동", "반석동"] },
+  { slug: "noeun3-dong", code: "3020054800", name: "노은3동", citySlug: "daejeon-yuseong", legalDongs: ["지족동", "반석동"] },
+  { slug: "jung4-dong", code: "4119266000", name: "중4동", citySlug: "bucheon", legalDongs: ["중동"] },
+  { slug: "jungang-dong", code: "4146151000", name: "중앙동", citySlug: "yongin", legalDongs: ["김량장동", "남동"] },
+  { slug: "idong-eup", code: "4146125600", name: "이동읍", citySlug: "yongin", legalDongs: ["이동읍", "송전리", "어비리", "묘봉리", "화산리", "시미리", "덕성리", "묵리", "천리", "서리"] },
+  { slug: "osong-eup", code: "4311325000", name: "오송읍", citySlug: "cheongju", legalDongs: ["오송읍", "호계리", "상정리", "공북리", "쌍청리", "만수리", "연제리", "궁평리", "오송리", "동평리", "서평리", "봉산리", "정중리", "상봉리"] },
+  { slug: "cheongryong-dong", code: "4413158000", name: "청룡동", citySlug: "cheonan", legalDongs: ["구성동", "청수동", "삼룡동", "청당동", "구룡동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
