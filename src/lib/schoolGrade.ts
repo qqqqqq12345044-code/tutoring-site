@@ -1,5 +1,6 @@
 import { schools, getSchoolBySlug, type School } from "@/data/schools";
 import { getSubjectBySlug, subjects, type Subject } from "@/data/subjects";
+import { getRegionBySlug, getRegionTitleName } from "@/data/regions";
 import {
   GRADE_RANGE,
   getSchoolGradeEntries,
@@ -72,6 +73,20 @@ export function schoolGradeSubjectHref(schoolSlug: string, grade: number, subjec
 /** 학년 numbers with a 학년 page for a registered school (empty for every other school). */
 export function schoolGradeNumbers(school: Pick<School, "slug" | "level">): number[] {
   return getSchoolGrades(school.slug).filter((g) => isGradeInRange(school.level, g));
+}
+
+/**
+ * School name for 학년 / 학년×과목 page titles. When an earlier-registered school with the same name already has
+ * 학년 pages (e.g. 경신중학교 대구 수성 vs 서울 종로), the later one gets its region appended — "경신중학교(종로구)" —
+ * so titles stay unique; the earlier school's (already indexed) titles stay unchanged.
+ */
+export function schoolGradeTitleName(school: Pick<School, "slug" | "name" | "cityRegionSlug">): string {
+  const idx = schools.findIndex((s) => s.slug === school.slug);
+  const earlier = schools.slice(0, idx < 0 ? schools.length : idx);
+  const clash = earlier.some((s) => s.name === school.name && schoolGradeNumbers(s).length > 0);
+  if (!clash) return school.name;
+  const region = getRegionTitleName(school.cityRegionSlug) || getRegionBySlug(school.cityRegionSlug)?.name;
+  return region ? `${school.name}(${region})` : school.name;
 }
 
 /** Every 학년 / 학년×과목 route that exists — for generateStaticParams, the route inventory and sitemap.ts. */

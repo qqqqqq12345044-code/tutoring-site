@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/metadata";
 import { motifForSlug } from "@/lib/thumbnails";
 import { getIndexability } from "@/lib/indexability";
-import { allSchoolGradeRoutes, resolveSchoolGradeSubject } from "@/lib/schoolGrade";
+import { allSchoolGradeRoutes, resolveSchoolGradeSubject, schoolGradeTitleName } from "@/lib/schoolGrade";
 import SchoolGradeSubjectPage from "@/components/school/SchoolGradeSubjectPage";
 
 // /school/[schoolSlug]/[grade]/[subject] (2026-11-02 Phase 2). `segment` must be a 학년 digit with a published
@@ -20,7 +20,7 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]/[s
   if (!ctx) return {};
   const { index } = getIndexability("school-grade-subject", { schoolSlug, schoolGrade: segment, subjectSlug: subject });
   return buildMetadata({
-    title: `${ctx.school.name} ${ctx.grade}학년 ${ctx.subject.name}과외 · 시험 대비`,
+    title: `${schoolGradeTitleName(ctx.school)} ${ctx.grade}학년 ${ctx.subject.name}과외 · 시험 대비`,
     description: ctx.content.intro,
     path: `/school/${schoolSlug}/${segment}/${subject}`,
     image: motifForSlug(ctx.subject.slug),
