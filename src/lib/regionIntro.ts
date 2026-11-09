@@ -71,9 +71,10 @@ function schoolFacts(regionSlug: string, relatedSchools: School[]): string[] {
     const d = dongs.find((x) => x.citySlug === regionSlug && x.slug === s.dongSlug);
     if (d && !dongNames.includes(d.name)) dongNames.push(d.name);
   }
+  const nat = relatedSchools.filter((s) => s.official?.foundation === "국립").length;
   const pub = relatedSchools.filter((s) => s.official?.foundation === "공립").length;
   const pri = relatedSchools.filter((s) => s.official?.foundation === "사립").length;
-  const found = [pub ? `공립 ${pub}곳` : "", pri ? `사립 ${pri}곳` : ""].filter(Boolean).join("·");
+  const found = [nat ? `국립 ${nat}곳` : "", pub ? `공립 ${pub}곳` : "", pri ? `사립 ${pri}곳` : ""].filter(Boolean).join("·");
   const dl = dongNames.join("·");
   const variants: string[] = [""];
   if (dl) {

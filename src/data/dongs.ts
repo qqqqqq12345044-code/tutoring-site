@@ -370,6 +370,24 @@ export const dongs: AdminDong[] = [
   { slug: "sugung-dong", code: "1153079000", name: "수궁동", citySlug: "guro", legalDongs: ["궁동", "온수동"] },
   { slug: "doksan1-dong", code: "1154561000", name: "독산제1동", citySlug: "geumcheon", legalDongs: ["독산동"] },
   { slug: "dunnae-myeon", code: "5173033000", name: "둔내면", citySlug: "hoengseong", legalDongs: ["둔내면", "현천리", "둔방내리", "영랑리", "조항리", "우용리", "두원리", "자포곡리", "석문리", "삽교리", "마암리", "화동리", "궁종리", "태기리"] },
+  // 2026-11-09 Batch 44 전국 확장 17개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "jeongja3-dong", code: "4111157300", name: "정자3동", citySlug: "suwon", legalDongs: ["정자동", "천천동"] },
+  { slug: "nammok2-dong", code: "3117059000", name: "남목2동", citySlug: "ulsan-dong", legalDongs: ["서부동"] },
+  { slug: "nongso2-dong", code: "3120052000", name: "농소2동", citySlug: "ulsan-buk", legalDongs: ["매곡동", "신천동", "중산동"] },
+  { slug: "gwangtan-myeon", code: "4148035000", name: "광탄면", citySlug: "paju", legalDongs: ["광탄면", "분수리", "방축리", "마장리", "발랑리", "창만리", "용미리", "신산리", "기산리", "영장리"] },
+  { slug: "guam-dong", code: "2723074500", name: "구암동", citySlug: "daegu-buk", legalDongs: ["구암동"] },
+  { slug: "nonhyeongojan-dong", code: "2820071000", name: "논현고잔동", citySlug: "namdong", legalDongs: ["논현동", "고잔동"] },
+  { slug: "daesong-dong", code: "3117054000", name: "대송동", citySlug: "ulsan-dong", legalDongs: ["화정동"] },
+  { slug: "gungnae-dong", code: "4141060000", name: "궁내동", citySlug: "gunpo", legalDongs: ["산본동"] },
+  { slug: "paju-eup", code: "4148025300", name: "파주읍", citySlug: "paju", legalDongs: ["파주읍", "봉서리", "향양리", "부곡리", "봉암리", "백석리", "파주리", "연풍리"] },
+  { slug: "u1-dong", code: "2635051000", name: "우제1동", citySlug: "busan-haeundae", legalDongs: ["우동"] },
+  { slug: "seodaesin3-dong", code: "2614056000", name: "서대신제3동", citySlug: "busan-seo", legalDongs: ["서대신동3가"] },
+  { slug: "jeonggwan-eup", code: "2671025600", name: "정관읍", citySlug: "busan-gijang", legalDongs: ["정관읍", "방곡리", "매학리", "임곡리", "월평리", "달산리", "병산리", "모전리", "용수리", "두명리", "예림리"] },
+  { slug: "dasa-eup", code: "2771025600", name: "다사읍", citySlug: "daegu-dalseong", legalDongs: ["다사읍", "이천리", "달천리", "박곡리", "방천리", "서재리", "세천리", "죽곡리", "매곡리", "부곡리", "문양리", "문산리"] },
+  { slug: "daun-dong", code: "3111061000", name: "다운동", citySlug: "ulsan-jung", legalDongs: ["태화동", "다운동"] },
+  { slug: "bongdam-eup", code: "4159325000", name: "봉담읍", citySlug: "hwaseong", legalDongs: ["봉담읍", "상리", "내리", "수영리", "동화리", "와우리", "수기리", "분천리", "왕림리", "세곡리", "당하리", "마하리", "유리", "덕리", "덕우리", "하가등리", "상기리"] },
+  { slug: "chwiam-dong", code: "4423051000", name: "취암동", citySlug: "nonsan", legalDongs: ["화지동", "반월동", "취암동", "지산동", "덕지동", "내동", "관촉동"] },
+  { slug: "nongso3-dong", code: "3120053000", name: "농소3동", citySlug: "ulsan-buk", legalDongs: ["가대동", "상안동", "천곡동", "달천동", "시례동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
