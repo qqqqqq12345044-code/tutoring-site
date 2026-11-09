@@ -282,6 +282,17 @@ export const dongs: AdminDong[] = [
   { slug: "usan-dong", code: "5113060000", name: "우산동", citySlug: "wonju", legalDongs: ["우산동", "가현동"] },
   { slug: "hyucheon1-dong", code: "4721059000", name: "휴천1동", citySlug: "yeongju", legalDongs: ["휴천동"] },
   { slug: "gaheung2-dong", code: "4721063000", name: "가흥2동", citySlug: "yeongju", legalDongs: ["가흥동", "고현동", "창진동", "상줄동", "아지동"] },
+  // 2026-11-09 Batch 38 전국 확장 10개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "gagyeong-dong", code: "4311374700", name: "가경동", citySlug: "cheongju", legalDongs: ["가경동"] },
+  { slug: "wonsinheung-dong", code: "3020061000", name: "원신흥동", citySlug: "daejeon-yuseong", legalDongs: ["봉명동", "원신흥동"] },
+  { slug: "yurim2-dong", code: "4146153600", name: "유림2동", citySlug: "yongin", legalDongs: ["유방동", "고림동"] },
+  { slug: "gwanpyeong-dong", code: "3020060000", name: "관평동", citySlug: "daejeon-yuseong", legalDongs: ["탑립동", "용산동", "관평동"] },
+  { slug: "ochang-eup", code: "4311425300", name: "오창읍", citySlug: "cheongju", legalDongs: ["오창읍", "여천리", "화산리(華山)", "유리", "일신리", "모정리", "학소리", "원리", "복현리", "양지리", "장대리", "창리", "주성리", "송대리", "도암리", "괴정리", "가곡리", "석우리", "상평리", "기암리", "탑리", "농소리", "신평리", "중신리", "각리", "양청리", "구룡리", "성산리", "후기리", "용두리", "화산리(花山)", "가좌리", "두릉리", "성재리", "백현리"] },
+  { slug: "yulryangsacheon-dong", code: "4311454000", name: "율량.사천동", citySlug: "cheongju", legalDongs: ["율량동", "사천동"] },
+  { slug: "seongdang-dong", code: "2729051500", name: "성당동", citySlug: "daegu-dalseo", legalDongs: ["성당동"] },
+  { slug: "bunpyeong-dong", code: "4311256000", name: "분평동", citySlug: "cheongju", legalDongs: ["미평동", "분평동", "장성동", "장암동"] },
+  { slug: "myeongryun-dong", code: "2626054500", name: "명륜동", citySlug: "busan-dongnae", legalDongs: ["명륜동"] },
+  { slug: "manchon1-dong", code: "2726055000", name: "만촌1동", citySlug: "daegu-suseong", legalDongs: ["만촌동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
