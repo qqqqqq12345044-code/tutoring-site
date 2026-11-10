@@ -423,6 +423,21 @@ export const dongs: AdminDong[] = [
   { slug: "naechon-myeon", code: "5172033000", name: "내촌면", citySlug: "hongcheon", legalDongs: ["내촌면", "물걸리", "와야리", "서곡리", "도관리", "답풍리", "화상대리", "문현리", "광암리"] },
   { slug: "daeyeon6-dong", code: "2629056000", name: "대연제6동", citySlug: "busan-nam", legalDongs: ["대연동"] },
   { slug: "dongtan7-dong", code: "4159757000", name: "동탄7동", citySlug: "hwaseong", legalDongs: ["산척동", "송동"] },
+  // 2026-11-10 Batch 47 전국 확장 14개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "sujeong5-dong", code: "2617060000", name: "수정제5동", citySlug: "busan-dong", legalDongs: ["수정동"] },
+  { slug: "gajwa4-dong", code: "2827561000", name: "가좌4동", citySlug: "seohae", legalDongs: ["가좌동"] },
+  { slug: "gwangjang-dong", code: "1121581000", name: "광장동", citySlug: "gwangjin", legalDongs: ["광장동"] },
+  { slug: "eumseong-eup", code: "4377025000", name: "음성읍", citySlug: "eumseong", legalDongs: ["음성읍", "읍내리", "평곡리", "석인리", "한벌리", "용산리", "사정리", "감우리", "소여리", "신천리", "초천리", "동음리", "삼생리"] },
+  { slug: "goesan-eup", code: "4376025000", name: "괴산읍", citySlug: "goesan", legalDongs: ["괴산읍", "동부리", "서부리", "정용리", "신기리", "신항리", "사창리", "능촌리", "제월리", "대덕리", "대사리", "검승리"] },
+  { slug: "yeongchun-myeon", code: "4380033000", name: "영춘면", citySlug: "danyang", legalDongs: ["영춘면", "상리", "하리", "남천리", "백자리", "의풍리", "동대리", "용진리", "오사리", "유암리", "사이곡리", "별방리", "만종리", "장발리", "사지원리"] },
+  { slug: "hwanggan-myeon", code: "4374032000", name: "황간면", citySlug: "yeongdong", legalDongs: ["황간면", "남성리", "신흥리", "마산리", "소계리", "난곡리", "우매리", "원촌리", "용암리", "금계리", "회포리", "우천리", "노근리", "서송원리", "광평리"] },
+  { slug: "songjeong-dong", code: "4161052000", name: "송정동", citySlug: "gyeonggi-gwangju", legalDongs: ["송정동"] },
+  { slug: "seojeong-dong", code: "4122052000", name: "서정동", citySlug: "pyeongtaek", legalDongs: ["서정동"] },
+  { slug: "juksan-myeon", code: "4155040000", name: "죽산면", citySlug: "anseong", legalDongs: ["죽산면", "죽산리", "매산리", "장원리", "두현리", "장능리", "장계리", "용설리", "칠장리", "당목리", "두교리"] },
+  { slug: "gusan-dong", code: "1138056000", name: "구산동", citySlug: "eunpyeong", legalDongs: ["구산동"] },
+  { slug: "doksan3-dong", code: "1154563000", name: "독산제3동", citySlug: "geumcheon", legalDongs: ["독산동"] },
+  { slug: "galma1-dong", code: "3017058100", name: "갈마1동", citySlug: "daejeon-seo", legalDongs: ["갈마동"] },
+  { slug: "jungchon-dong", code: "3014056000", name: "중촌동", citySlug: "daejeon-jung", legalDongs: ["중촌동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {

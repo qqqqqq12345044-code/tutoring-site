@@ -72,4 +72,7 @@ export const schoolGradeNoindexPaths = new Set<string>([
   // 2026-11-06 Batch 35: 과목 1개 hub(실질 note 1개, 구조상 AMBER)는 noindex 보류. 신선여고 1학년(통합사회2 1개)은 hub 보류 시 과목 페이지가 orphan이라 항목 자체를 넣지 않음.
   "/school/pyeongchongyeongyeong-high-school/2",
   "/school/hupyeong-middle-school/3",
+  // 2026-11-10 Batch 47 은평 구산동: 구산중 1·2학년 hub(서로 약 42%, 두 학년 모두 수학 문제해결과정평가 2회·영어 과제 시기가 같고 summary 외 공통부가 커서 summary만으로 27% 이하 불가)는 AMBER라 noindex.
+  "/school/gusan-middle-school/1",
+  "/school/gusan-middle-school/2",
 ]);
