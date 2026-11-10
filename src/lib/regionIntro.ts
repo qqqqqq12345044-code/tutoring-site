@@ -134,7 +134,7 @@ function computeAllIntros(): Map<string, string> {
     outer: for (const lead of LEAD_FRAMES) {
       for (const facts of factVariants) {
       for (const mid of [...MID_FRAMES, () => ""]) {
-        for (const tail of TAIL_FRAMES) {
+        for (const tail of [...TAIL_FRAMES, () => ""]) {
           const intro = [lead(r.name, summary), facts, mid(), tail()].filter(Boolean).join(" ");
           const tokens = intro.split(/\s+/).filter(Boolean);
           let maxSim = 0;
