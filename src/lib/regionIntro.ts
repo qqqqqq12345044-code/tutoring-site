@@ -1,5 +1,6 @@
 import { regions } from "@/data/regions";
 import { schools, type School } from "@/data/schools";
+import { dongs } from "@/data/dongs";
 
 const LEVEL_ORDER: School["level"][] = ["초등학교", "중학교", "고등학교"];
 
@@ -59,6 +60,35 @@ function schoolSummary(relatedSchools: School[]): string {
 }
 
 /**
+ * Region-specific facts taken only from the official school records:
+ * which 행정동 the registered schools sit in and the 공립/사립 split.
+ * Returns "" when neither is known, so no filler is ever invented.
+ */
+function schoolFacts(regionSlug: string, relatedSchools: School[]): string[] {
+  const dongNames: string[] = [];
+  for (const s of relatedSchools) {
+    if (!s.dongSlug) continue;
+    const d = dongs.find((x) => x.citySlug === regionSlug && x.slug === s.dongSlug);
+    if (d && !dongNames.includes(d.name)) dongNames.push(d.name);
+  }
+  const nat = relatedSchools.filter((s) => s.official?.foundation === "국립").length;
+  const pub = relatedSchools.filter((s) => s.official?.foundation === "공립").length;
+  const pri = relatedSchools.filter((s) => s.official?.foundation === "사립").length;
+  const found = [nat ? `국립 ${nat}곳` : "", pub ? `공립 ${pub}곳` : "", pri ? `사립 ${pri}곳` : ""].filter(Boolean).join("·");
+  const dl = dongNames.join("·");
+  const variants: string[] = [""];
+  if (dl) {
+    variants.push(`${dl} 일대 학교부터 정리했습니다.`);
+    variants.push(`행정동 기준으로는 ${dl}에 위치합니다.`);
+  }
+  if (found) {
+    variants.push(`설립 구분은 ${found}입니다.`);
+    if (dl) variants.push(`등록 학교는 ${dl}에 있는 ${found}입니다.`);
+  }
+  return variants;
+}
+
+/**
  * Greedily assigns a (lead, mid, tail) frame combo to every city-level
  * region that has at least one registered school, minimizing token
  * similarity against every region assigned before it. Pure function of the
@@ -66,6 +96,9 @@ function schoolSummary(relatedSchools: School[]): string {
  * regions today) and always gives the same result for the same data —
  * there's no per-region state to keep in sync.
  */
+/** Stop searching once an intro is this far from every earlier one (validator limit is 0.6). */
+const TARGET_MAX_SIMILARITY = 0.45;
+
 function computeAllIntros(): Map<string, string> {
   const cityRegionsWithSchools = regions
     .filter((r) => r.level === "city")
@@ -77,20 +110,25 @@ function computeAllIntros(): Map<string, string> {
 
   for (const r of cityRegionsWithSchools) {
     const summary = schoolSummary(r.list);
+    const factVariants = schoolFacts(r.slug, r.list);
     let best: { intro: string; score: number } | null = null;
 
     outer: for (const lead of LEAD_FRAMES) {
-      for (const mid of MID_FRAMES) {
+      for (const facts of factVariants) {
+      for (const mid of [...MID_FRAMES, () => ""]) {
         for (const tail of TAIL_FRAMES) {
-          const intro = `${lead(r.name, summary)} ${mid()} ${tail()}`;
+          const intro = [lead(r.name, summary), facts, mid(), tail()].filter(Boolean).join(" ");
           let maxSim = 0;
           for (const prevIntro of assigned) {
             const sim = tokenSimilarity(intro, prevIntro);
             if (sim > maxSim) maxSim = sim;
+            // Already no better than the best combo so far: skip the remaining comparisons.
+            if (best && maxSim >= best.score) break;
           }
           if (!best || maxSim < best.score) best = { intro, score: maxSim };
-          if (best.score === 0) break outer;
+          if (best.score <= TARGET_MAX_SIMILARITY) break outer;
         }
+      }
       }
     }
 

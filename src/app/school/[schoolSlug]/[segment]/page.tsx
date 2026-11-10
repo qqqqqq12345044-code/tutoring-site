@@ -16,7 +16,7 @@ import PlanBasisNote from "@/components/PlanBasisNote";
 import { isSchoolInfoPlanSource } from "@/data/sources";
 import ChecklistPanel from "@/components/ui/ChecklistPanel";
 import SchoolGradePage from "@/components/school/SchoolGradePage";
-import { allSchoolGradeRoutes, buildSchoolGradeContent, resolveSchoolGrade } from "@/lib/schoolGrade";
+import { allSchoolGradeRoutes, buildSchoolGradeContent, resolveSchoolGrade, schoolGradeTitleName } from "@/lib/schoolGrade";
 
 // /school/[schoolSlug]/[segment] serves two page kinds at the same URL depth (2026-11-02 Phase 2):
 // - a subject slug (korean, math …) → the existing school×과목 page (URLs unchanged);
@@ -45,7 +45,7 @@ export async function generateMetadata(props: PageProps<"/school/[schoolSlug]/[s
   if (gradeCtx) {
     const { index } = getIndexability("school-grade", { schoolSlug, schoolGrade: subjectSlug });
     return buildMetadata({
-      title: `${gradeCtx.school.name} ${gradeCtx.grade}학년 과외 · 내신 학습`,
+      title: `${schoolGradeTitleName(gradeCtx.school)} ${gradeCtx.grade}학년 과외 · 내신 학습`,
       description: buildSchoolGradeContent(gradeCtx).intro,
       path: `/school/${schoolSlug}/${subjectSlug}`,
       image: "school",

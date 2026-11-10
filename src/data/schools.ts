@@ -39,7 +39,7 @@ export interface OfficialSchoolRecord {
   roadAddress: string;
   /** 주소정보누리집이 돌려준 법정동. */
   legalDong: string;
-  foundation: "공립" | "사립";
+  foundation: "국립" | "공립" | "사립";
   coed: "남녀공학" | "남학교" | "여학교";
   /** 고등학교만: NEIS 고등학교구분(특목고는 계열 포함). */
   highSchoolType?: "일반고" | "특성화고" | "자율고" | "특목고" | `특목고(${string})`;

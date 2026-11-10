@@ -79,10 +79,11 @@ export const schoolGradeNoindexPaths = new Set<string>([
   // 2026-11-10 Batch 43: 대광고 2학년 hub(과목 카드 1개, 실질 note 1개)는 AMBER라 noindex.
   "/school/daegwang-high-school/2",
   // 2026-11-10 Batch 44: AMBER 학년×과목·학년 hub noindex 보류.
-  "/school/junghwa-high-school/1/social",
   "/school/seokgwan-high-school/1/english",
   "/school/guil-high-school/1/math",
   "/school/guro-high-school/1/math",
   "/school/boseongyeoja-high-school/1",
   "/school/dongmyeongyeoja-high-school/1",
+  // 2026-11-10 Batch 42~44(노트북 세션) 병합: 형석중 3학년 hub AMBER(새 학교와의 마스킹 유사도) noindex 보류.
+  "/school/hyeongseok-middle-school/3",
 ]);

@@ -1,5 +1,6 @@
 import { schools, getSchoolBySlug, type School } from "@/data/schools";
 import { getSubjectBySlug, subjects, type Subject } from "@/data/subjects";
+import { getRegionBySlug, getRegionTitleName } from "@/data/regions";
 import {
   GRADE_RANGE,
   getSchoolGradeEntries,
@@ -74,6 +75,20 @@ export function schoolGradeNumbers(school: Pick<School, "slug" | "level">): numb
   return getSchoolGrades(school.slug).filter((g) => isGradeInRange(school.level, g));
 }
 
+/**
+ * School name for 학년 / 학년×과목 page titles. When an earlier-registered school with the same name already has
+ * 학년 pages (e.g. 경신중학교 대구 수성 vs 서울 종로), the later one gets its region appended — "경신중학교(종로구)" —
+ * so titles stay unique; the earlier school's (already indexed) titles stay unchanged.
+ */
+export function schoolGradeTitleName(school: Pick<School, "slug" | "name" | "cityRegionSlug">): string {
+  const idx = schools.findIndex((s) => s.slug === school.slug);
+  const earlier = schools.slice(0, idx < 0 ? schools.length : idx);
+  const clash = earlier.some((s) => s.name === school.name && schoolGradeNumbers(s).length > 0);
+  if (!clash) return school.name;
+  const region = getRegionTitleName(school.cityRegionSlug) || getRegionBySlug(school.cityRegionSlug)?.name;
+  return region ? `${school.name}(${region})` : school.name;
+}
+
 /** Every 학년 / 학년×과목 route that exists — for generateStaticParams, the route inventory and sitemap.ts. */
 export function allSchoolGradeRoutes(): { schoolSlug: string; grade: number; subjectSlug?: string }[] {
   const out: { schoolSlug: string; grade: number; subjectSlug?: string }[] = [];
@@ -106,7 +121,9 @@ export function groupAssessmentsByCourse(content: SchoolGradeSubjectContent) {
 
 /** 은/는 · 이/가 for the last Hangul syllable (non-Hangul endings take the vowel form). */
 function hasBatchim(word: string): boolean {
-  const code = word.charCodeAt(word.length - 1) - 0xac00;
+  // "대평중학교(수원시)" takes the particle of the word before the parenthesis.
+  const base = word.replace(/\([^)]*\)$/, "");
+  const code = base.charCodeAt(base.length - 1) - 0xac00;
   return code >= 0 && code <= 11171 && code % 28 !== 0;
 }
 const topic = (w: string) => `${w}${hasBatchim(w) ? "은" : "는"}`;
@@ -124,7 +141,7 @@ export function buildSchoolGradeContent(ctx: SchoolGradeContext) {
     .map((x) => ({ name: x.name, task: x.group[0].task }));
   const sorted = [...singles].sort((a, b) => b.task - a.task);
   const names = entries.map((e) => e.subject.name).join("·");
-  let intro = `${topic(school.name)} ${grade}학년 2학기 ${names} 평가계획을 학교알리미에 공시했습니다.`;
+  let intro = `${topic(schoolGradeTitleName(school))} ${grade}학년 2학기 ${names} 평가계획을 학교알리미에 공시했습니다.`;
   if (sorted.length >= 2 && sorted[0].task !== sorted[sorted.length - 1].task) {
     const hi = sorted[0];
     const lo = sorted[sorted.length - 1];
