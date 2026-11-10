@@ -156,9 +156,21 @@ export const BASELINE = {
   // 학교 85곳 등록(전국 학교 route 기존), 콘텐츠는 39교. 새 도시 city hub 8 색인, 조합 route 8 × 27 = 216개는 새로 생기되 noindex.
   // 동 hub 17 + 동×과목 78 + 학년 hub 71 + 학년×과목 240 + city hub 8 = sitemap +414 → 5262 → 5676.
   // totalRoutes 18931 → 19553(+622 = 406 신규 색인 + 216 조합 noindex), noindex 13667 → 13875(+216 −8).
-  // 2026-11-10 노트북 세션 Batch 42~44를 origin/main(3c89c38) 위에 병합: 동 26곳(겹치는 4곳 제외) 추가, 형석중 3학년 hub noindex 보류.
-  // 19553 → 20081, sitemap 5676 → 5986, noindex 13875 → 14093.
-  totalRoutes: 20081,
+  // 2026-11-10 Batch 45 = 전국 확장 17개 동(가평 설악면, 노원 중계2.3동, 대구 북구 국우동, 홍성 광천읍, 군포 광정동, 시흥 과림동,
+  // 평택 중앙동, 화성 병점2동·동탄9동, 횡성 안흥면, 영도 신선동, 의왕 청계동, 중랑 면목제3.8동, 광명 철산3동, 김포 사우동,
+  // 안산 월피동·호수동; 새 도시 7곳 가평·노원·홍성·의왕·광명·김포·안산): 학교 64곳 등록(전국 학교 route 기존), 콘텐츠는 38교.
+  // 새 도시 city hub 7 색인, 조합 route 7 × 27 = 189개는 새로 생기되 noindex.
+  // 동 hub 17 + 동×과목 82 + 학년 hub 71 + 학년×과목 264 + city hub 7 = sitemap +441 → 5676 → 6117.
+  // totalRoutes 19553 → 20176(+623 = 434 신규 색인 + 189 조합 noindex), noindex 13875 → 14057(+189 −7).
+  // 2026-11-10 Batch 46 = 전국 확장 16개 동(남양주 화도읍, 평택 청북읍, 수원 권선2동·행궁동, 광명 소하2동, 노원 상계9동,
+  // 관악 삼성동, 강동 고덕제2동, 영월 주천면, 은평 진관동, 양구 양구읍, 옥천 옥천읍, 제물포 동인천동, 홍천 내촌면,
+  // 부산 남구 대연제6동, 화성 동탄7동; 새 도시 8곳): 학교 64곳 등록, 콘텐츠 29교.
+  // 동 hub 16 + 동×과목 67 + 학년 hub 53 + 학년×과목 167 + city hub 8 = sitemap +311 → 6117 → 6428.
+  // totalRoutes 20176 → 20668(+492 = 311 색인 + 181 조합 noindex), noindex 14057 → 14238(새 도시 조합 7 × 27 = 189 − city hub 8 색인 전환).
+  // B45 안흥면×수학은 안흥고 2학년 수학 한 항목만 근거라 학년×과목과 pool 유사도 38%(AMBER) → 동×과목 항목 제외(−1, 미배포 route).
+  // 2026-11-10 노트북 세션 Batch 42~44를 origin/main(b4e184a, Batch 46) 위에 병합: 동 25곳 추가(겹친 면목3·8동 제외).
+  // 20667 → 21156, sitemap 6427 → 6724, noindex 14238 → 14430.
+  totalRoutes: 21156,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -170,7 +182,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 5986,
-  noindexCount: 14093,
+  sitemapCount: 6724,
+  noindexCount: 14430,
   brokenLinks: 0,
 };

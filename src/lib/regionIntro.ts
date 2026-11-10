@@ -38,17 +38,24 @@ const TAIL_FRAMES: (() => string)[] = [
 ];
 
 function tokenSimilarity(textA: string, textB: string): number {
-  const a = textA.split(/\s+/).filter(Boolean);
-  const b = textB.split(/\s+/).filter(Boolean);
+  return tokenArraySimilarity(textA.split(/\s+/).filter(Boolean), textB.split(/\s+/).filter(Boolean));
+}
+
+/** Same LCS measure as tokenSimilarity, on pre-split tokens with two rolling rows (no per-call matrix). */
+function tokenArraySimilarity(a: string[], b: string[]): number {
   if (a.length === 0 || b.length === 0) return 0;
-  const dp: number[][] = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+  let prev = new Int32Array(b.length + 1);
+  let cur = new Int32Array(b.length + 1);
   for (let i = 1; i <= a.length; i++) {
+    const ai = a[i - 1];
     for (let j = 1; j <= b.length; j++) {
-      dp[i][j] = a[i - 1] === b[j - 1] ? dp[i - 1][j - 1] + 1 : Math.max(dp[i - 1][j], dp[i][j - 1]);
+      cur[j] = ai === b[j - 1] ? prev[j - 1] + 1 : Math.max(prev[j], cur[j - 1]);
     }
+    const t = prev;
+    prev = cur;
+    cur = t;
   }
-  const lcs = dp[a.length][b.length];
-  return (2 * lcs) / (a.length + b.length);
+  return (2 * prev[b.length]) / (a.length + b.length);
 }
 
 function schoolSummary(relatedSchools: School[]): string {
@@ -76,6 +83,12 @@ function schoolFacts(regionSlug: string, relatedSchools: School[]): string[] {
   const pri = relatedSchools.filter((s) => s.official?.foundation === "사립").length;
   const found = [nat ? `국립 ${nat}곳` : "", pub ? `공립 ${pub}곳` : "", pri ? `사립 ${pri}곳` : ""].filter(Boolean).join("·");
   const dl = dongNames.join("·");
+  const coedCounts = (["남녀공학", "남학교", "여학교"] as const)
+    .map((c) => ({ c, n: relatedSchools.filter((s) => s.official?.coed === c).length }))
+    .filter((x) => x.n > 0);
+  // Only stated when every registered school has an official coed record, so the split is complete.
+  const coedKnown = relatedSchools.every((s) => s.official?.coed);
+  const coed = coedKnown ? coedCounts.map((x) => `${x.c} ${x.n}곳`).join("·") : "";
   const variants: string[] = [""];
   if (dl) {
     variants.push(`${dl} 일대 학교부터 정리했습니다.`);
@@ -84,6 +97,11 @@ function schoolFacts(regionSlug: string, relatedSchools: School[]): string[] {
   if (found) {
     variants.push(`설립 구분은 ${found}입니다.`);
     if (dl) variants.push(`등록 학교는 ${dl}에 있는 ${found}입니다.`);
+  }
+  if (coed) {
+    const base = variants.slice();
+    variants.push(`남녀공학 여부로 나누면 ${coed}입니다.`);
+    for (const v of base.slice(1)) variants.push(`${v} 학생 구성은 ${coed}입니다.`);
   }
   return variants;
 }
@@ -106,7 +124,7 @@ function computeAllIntros(): Map<string, string> {
     .filter((r) => r.list.length > 0);
 
   const result = new Map<string, string>();
-  const assigned: string[] = [];
+  const assigned: string[][] = [];
 
   for (const r of cityRegionsWithSchools) {
     const summary = schoolSummary(r.list);
@@ -116,11 +134,12 @@ function computeAllIntros(): Map<string, string> {
     outer: for (const lead of LEAD_FRAMES) {
       for (const facts of factVariants) {
       for (const mid of [...MID_FRAMES, () => ""]) {
-        for (const tail of TAIL_FRAMES) {
+        for (const tail of [...TAIL_FRAMES, () => ""]) {
           const intro = [lead(r.name, summary), facts, mid(), tail()].filter(Boolean).join(" ");
+          const tokens = intro.split(/\s+/).filter(Boolean);
           let maxSim = 0;
-          for (const prevIntro of assigned) {
-            const sim = tokenSimilarity(intro, prevIntro);
+          for (const prevTokens of assigned) {
+            const sim = tokenArraySimilarity(tokens, prevTokens);
             if (sim > maxSim) maxSim = sim;
             // Already no better than the best combo so far: skip the remaining comparisons.
             if (best && maxSim >= best.score) break;
@@ -133,7 +152,7 @@ function computeAllIntros(): Map<string, string> {
     }
 
     result.set(r.slug, best!.intro);
-    assigned.push(best!.intro);
+    assigned.push(best!.intro.split(/\s+/).filter(Boolean));
   }
 
   return result;

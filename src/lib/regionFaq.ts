@@ -55,18 +55,42 @@ const Q1_TAIL_FRAMES: (() => string)[] = [
   () => "학교 일정에 맞춰 유연하게 상담해드립니다.",
 ];
 
-function tokenSimilarity(textA: string, textB: string): number {
-  const a = textA.split(/\s+/).filter(Boolean);
-  const b = textB.split(/\s+/).filter(Boolean);
+/** Token-level LCS similarity (0~1) on pre-split tokens, two rolling rows. */
+function tokenArraySimilarity(a: string[], b: string[]): number {
   if (a.length === 0 || b.length === 0) return 0;
-  const dp: number[][] = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+  let prev = new Int32Array(b.length + 1);
+  let cur = new Int32Array(b.length + 1);
   for (let i = 1; i <= a.length; i++) {
+    const ai = a[i - 1];
     for (let j = 1; j <= b.length; j++) {
-      dp[i][j] = a[i - 1] === b[j - 1] ? dp[i - 1][j - 1] + 1 : Math.max(dp[i - 1][j], dp[i][j - 1]);
+      cur[j] = ai === b[j - 1] ? prev[j - 1] + 1 : Math.max(prev[j], cur[j - 1]);
     }
+    const t = prev;
+    prev = cur;
+    cur = t;
   }
-  const lcs = dp[a.length][b.length];
-  return (2 * lcs) / (a.length + b.length);
+  return (2 * prev[b.length]) / (a.length + b.length);
+}
+
+/**
+ * Optional sentence built only from the official NEIS records (설립 구분, 남녀공학 구분),
+ * stated only when every registered school in the region has that field. "" is always an option.
+ */
+function officialFactVariants(relatedSchools: School[]): string[] {
+  const variants: string[] = [""];
+  const count = <T extends string>(values: readonly T[], get: (s: School) => T | undefined) =>
+    relatedSchools.every((s) => get(s))
+      ? values
+          .map((v) => ({ v, n: relatedSchools.filter((s) => get(s) === v).length }))
+          .filter((x) => x.n > 0)
+          .map((x) => `${x.v} ${x.n}곳`)
+          .join(", ")
+      : "";
+  const found = count(["국립", "공립", "사립"] as const, (s) => s.official?.foundation);
+  const coed = count(["남녀공학", "남학교", "여학교"] as const, (s) => s.official?.coed);
+  if (found) variants.push(`이 가운데 ${found}입니다.`);
+  if (coed) variants.push(`남녀공학 구분으로는 ${coed}입니다.`);
+  return variants;
 }
 
 function schoolSummary(relatedSchools: School[]): string {
@@ -84,6 +108,9 @@ function schoolSummary(relatedSchools: School[]): string {
  * computeAllIntros(), kept as a separate pass/frame-set so the FAQ answer
  * text never collides with the page's intro paragraph.
  */
+/** Stop searching once an answer is this far from every earlier one (validator limit is 0.6). */
+const TARGET_MAX_SIMILARITY = 0.45;
+
 function computeAllQ1Answers(): Map<string, string> {
   const cityRegionsWithSchools = regions
     .filter((r) => r.level === "city")
@@ -91,29 +118,35 @@ function computeAllQ1Answers(): Map<string, string> {
     .filter((r) => r.list.length > 0);
 
   const result = new Map<string, string>();
-  const assigned: string[] = [];
+  const assigned: string[][] = [];
 
   for (const r of cityRegionsWithSchools) {
     const summary = schoolSummary(r.list);
+    const facts = officialFactVariants(r.list);
     let best: { text: string; score: number } | null = null;
 
     outer: for (const lead of Q1_LEAD_FRAMES) {
-      for (const mid of Q1_MID_FRAMES) {
-        for (const tail of Q1_TAIL_FRAMES) {
-          const text = `${lead(r.name, summary, r.list.length)} ${mid()} ${tail()}`;
-          let maxSim = 0;
-          for (const prev of assigned) {
-            const sim = tokenSimilarity(text, prev);
-            if (sim > maxSim) maxSim = sim;
+      for (const fact of facts) {
+        for (const mid of Q1_MID_FRAMES) {
+          for (const tail of Q1_TAIL_FRAMES) {
+            const text = [lead(r.name, summary, r.list.length), fact, `${mid()} ${tail()}`].filter(Boolean).join(" ");
+            const tokens = text.split(/\s+/).filter(Boolean);
+            let maxSim = 0;
+            for (const prev of assigned) {
+              const sim = tokenArraySimilarity(tokens, prev);
+              if (sim > maxSim) maxSim = sim;
+              // Already no better than the best combo so far: skip the remaining comparisons.
+              if (best && maxSim >= best.score) break;
+            }
+            if (!best || maxSim < best.score) best = { text, score: maxSim };
+            if (best.score <= TARGET_MAX_SIMILARITY) break outer;
           }
-          if (!best || maxSim < best.score) best = { text, score: maxSim };
-          if (best.score === 0) break outer;
         }
       }
     }
 
     result.set(r.slug, best!.text);
-    assigned.push(best!.text);
+    assigned.push(best!.text.split(/\s+/).filter(Boolean));
   }
 
   return result;
