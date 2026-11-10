@@ -4992,7 +4992,6 @@ const PATH_UPDATED_BY_DATE: Record<string, string[]> = {
     "/region/gangwon/hoengseong/anheung-myeon",
     "/region/gangwon/hoengseong/anheung-myeon/english",
     "/region/gangwon/hoengseong/anheung-myeon/korean",
-    "/region/gangwon/hoengseong/anheung-myeon/math",
     "/region/gangwon/hoengseong/anheung-myeon/science",
     "/region/gangwon/hoengseong/anheung-myeon/social",
     "/region/gyeonggi/ansan",

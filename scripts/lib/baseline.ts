@@ -167,7 +167,8 @@ export const BASELINE = {
   // 부산 남구 대연제6동, 화성 동탄7동; 새 도시 8곳): 학교 64곳 등록, 콘텐츠 29교.
   // 동 hub 16 + 동×과목 67 + 학년 hub 53 + 학년×과목 167 + city hub 8 = sitemap +311 → 6117 → 6428.
   // totalRoutes 20176 → 20668(+492 = 311 색인 + 181 조합 noindex), noindex 14057 → 14238(새 도시 조합 7 × 27 = 189 − city hub 8 색인 전환).
-  totalRoutes: 20668,
+  // B45 안흥면×수학은 안흥고 2학년 수학 한 항목만 근거라 학년×과목과 pool 유사도 38%(AMBER) → 동×과목 항목 제외(−1, 미배포 route).
+  totalRoutes: 20667,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -179,7 +180,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 6428,
+  sitemapCount: 6427,
   noindexCount: 14238,
   brokenLinks: 0,
 };
