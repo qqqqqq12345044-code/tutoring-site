@@ -121,7 +121,9 @@ export function groupAssessmentsByCourse(content: SchoolGradeSubjectContent) {
 
 /** 은/는 · 이/가 for the last Hangul syllable (non-Hangul endings take the vowel form). */
 function hasBatchim(word: string): boolean {
-  const code = word.charCodeAt(word.length - 1) - 0xac00;
+  // "대평중학교(수원시)" takes the particle of the word before the parenthesis.
+  const base = word.replace(/\([^)]*\)$/, "");
+  const code = base.charCodeAt(base.length - 1) - 0xac00;
   return code >= 0 && code <= 11171 && code % 28 !== 0;
 }
 const topic = (w: string) => `${w}${hasBatchim(w) ? "은" : "는"}`;
@@ -139,7 +141,7 @@ export function buildSchoolGradeContent(ctx: SchoolGradeContext) {
     .map((x) => ({ name: x.name, task: x.group[0].task }));
   const sorted = [...singles].sort((a, b) => b.task - a.task);
   const names = entries.map((e) => e.subject.name).join("·");
-  let intro = `${topic(school.name)} ${grade}학년 2학기 ${names} 평가계획을 학교알리미에 공시했습니다.`;
+  let intro = `${topic(schoolGradeTitleName(school))} ${grade}학년 2학기 ${names} 평가계획을 학교알리미에 공시했습니다.`;
   if (sorted.length >= 2 && sorted[0].task !== sorted[sorted.length - 1].task) {
     const hi = sorted[0];
     const lo = sorted[sorted.length - 1];
