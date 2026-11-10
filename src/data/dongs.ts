@@ -437,7 +437,6 @@ export const dongs: AdminDong[] = [
   { slug: "gusan-dong", code: "1138056000", name: "구산동", citySlug: "eunpyeong", legalDongs: ["구산동"] },
   { slug: "doksan3-dong", code: "1154563000", name: "독산제3동", citySlug: "geumcheon", legalDongs: ["독산동"] },
   { slug: "galma1-dong", code: "3017058100", name: "갈마1동", citySlug: "daejeon-seo", legalDongs: ["갈마동"] },
-  { slug: "jungchon-dong", code: "3014056000", name: "중촌동", citySlug: "daejeon-jung", legalDongs: ["중촌동"] },
   // 2026-11-10 Batch 48 전국 확장 17개 동 (행정동 코드: data/official/admin-dongs.json)
   { slug: "songcheon-dong", code: "1130555500", name: "송천동", citySlug: "gangbuk", legalDongs: ["미아동"] },
   { slug: "namyang-eup", code: "4159125600", name: "남양읍", citySlug: "hwaseong", legalDongs: ["남양읍", "남양리", "신남리", "장덕리", "안석리", "활초리", "온석리", "무송리", "북양리", "송림리", "수화리", "장전리", "신외리", "문호리", "시리", "원천리"] },

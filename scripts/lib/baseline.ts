@@ -168,18 +168,18 @@ export const BASELINE = {
   // 동 hub 16 + 동×과목 67 + 학년 hub 53 + 학년×과목 167 + city hub 8 = sitemap +311 → 6117 → 6428.
   // totalRoutes 20176 → 20668(+492 = 311 색인 + 181 조합 noindex), noindex 14057 → 14238(새 도시 조합 7 × 27 = 189 − city hub 8 색인 전환).
   // B45 안흥면×수학은 안흥고 2학년 수학 한 항목만 근거라 학년×과목과 pool 유사도 38%(AMBER) → 동×과목 항목 제외(−1, 미배포 route).
-  // 2026-11-10 Batch 47 = 전국 확장 14개 동(부산 동구 수정제5동, 인천 서구 가좌4동, 광진 광장동, 음성 음성읍, 괴산 괴산읍,
-  // 단양 영춘면, 영동 황간면, 광주(경기) 송정동, 평택 서정동, 안성 죽산면, 은평 구산동, 금천 독산제3동, 대전 서구 갈마1동,
-  // 대전 중구 중촌동; 새 도시 8곳): 학교 45곳 등록, 콘텐츠 24교. 별내동·증산동·안양3동은 동×과목 확정 0이라 제외.
+  // 2026-11-10 Batch 47 = 전국 확장 13개 동(부산 동구 수정제5동, 인천 서구 가좌4동, 광진 광장동, 음성 음성읍, 괴산 괴산읍,
+  // 단양 영춘면, 영동 황간면, 광주(경기) 송정동, 평택 서정동, 안성 죽산면, 은평 구산동, 금천 독산제3동, 대전 서구 갈마1동;
+  // 새 도시 8곳): 학교 43곳 등록, 콘텐츠 23교. 별내동·증산동·안양3동은 동×과목 확정 0이라 제외. 대전 중구 중촌동은 동×과목 1개뿐이라 동 hub AMBER(휴천1동과 유사) → 제외(대전중앙중 포함, 미배포).
   // 동 hub 14 + 동×과목 49 + 학년 hub 45 + 학년×과목 145 + city hub 8 = sitemap +261 → 6427 → 6688(−2 보류).
-  // 구산중 1·2학년 hub는 AMBER(약 42%)라 noindex 보류 → sitemap 6686, noindex 14421.
-  // totalRoutes 20667 → 21109(+442 = 259 색인 + 183 noindex), noindex 14238 → 14421.
+  // 구산중 1·2학년 hub는 AMBER(약 42%)라 noindex 보류, 중촌동 제외(−8) → sitemap 6678, noindex 14421.
+  // totalRoutes 20667 → 21101(+434 = 251 색인 + 183 noindex), noindex 14238 → 14421.
   // 2026-11-10 Batch 48 = 전국 확장 17개 동(강북 송천동, 화성 남양읍, 대구 북구 관문동, 대전 서구 만년동·갈마2동, 대덕 송촌동,
   // 안산 안산동, 시흥 장곡동, 수원 원천동·호매실동, 인제 기린면, 홍천 내면, 태백 철암동, 음성 감곡면, 충주 교현.안림동,
   // 성동 사근동, 동대문 전농제2동; 새 도시 6곳): 학교 52곳 등록, 콘텐츠 30교.
-  // 동 hub 17 + 동×과목 70 + 학년 hub 64 + 학년×과목 224 + city hub 6 = sitemap +381 → 6686 → 7067.
-  // totalRoutes 21109 → 21646(+537 = 381 색인 + 156 noindex), noindex 14421 → 14577.
-  totalRoutes: 21646,
+  // 동 hub 17 + 동×과목 70 + 학년 hub 64 + 학년×과목 224 + city hub 6 = sitemap +381 → 6678 → 7059.
+  // totalRoutes 21101 → 21638(+537 = 381 색인 + 156 noindex), noindex 14421 → 14577.
+  totalRoutes: 21638,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -191,7 +191,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 7067,
+  sitemapCount: 7059,
   noindexCount: 14577,
   brokenLinks: 0,
 };
