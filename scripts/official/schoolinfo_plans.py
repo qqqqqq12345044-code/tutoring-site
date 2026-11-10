@@ -195,7 +195,13 @@ def zip_members(path):
     out = []
     with zipfile.ZipFile(path) as z:
         for n, info in enumerate(i for i in z.infolist() if not i.is_dir()):
-            name = info.filename.encode("cp437").decode("cp949", "ignore") if info.flag_bits & 0x800 == 0 else info.filename
+            try:
+
+                name = info.filename.encode("cp437").decode("cp949", "ignore") if info.flag_bits & 0x800 == 0 else info.filename
+
+            except UnicodeEncodeError:
+
+                name = info.filename
             ext = name.rsplit(".", 1)[-1].lower()
             dst = f"{path[:-4]}_z{n}.{ext}"
             if not os.path.exists(dst):

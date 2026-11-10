@@ -168,6 +168,8 @@ export const BASELINE = {
   // 동 hub 16 + 동×과목 67 + 학년 hub 53 + 학년×과목 167 + city hub 8 = sitemap +311 → 6117 → 6428.
   // totalRoutes 20176 → 20668(+492 = 311 색인 + 181 조합 noindex), noindex 14057 → 14238(새 도시 조합 7 × 27 = 189 − city hub 8 색인 전환).
   // B45 안흥면×수학은 안흥고 2학년 수학 한 항목만 근거라 학년×과목과 pool 유사도 38%(AMBER) → 동×과목 항목 제외(−1, 미배포 route).
+  // 2026-11-10 노트북 세션 Batch 42~44를 origin/main(b4e184a, Batch 46) 위에 병합: 동 25곳 추가(겹친 면목3·8동 제외).
+  // 20667 → 21156, sitemap 6427 → 6724, noindex 14238 → 14430.
   // 2026-11-10 Batch 47 = 전국 확장 13개 동(부산 동구 수정제5동, 인천 서구 가좌4동, 광진 광장동, 음성 음성읍, 괴산 괴산읍,
   // 단양 영춘면, 영동 황간면, 광주(경기) 송정동, 평택 서정동, 안성 죽산면, 은평 구산동, 금천 독산제3동, 대전 서구 갈마1동;
   // 새 도시 8곳): 학교 43곳 등록, 콘텐츠 23교. 별내동·증산동·안양3동은 동×과목 확정 0이라 제외. 대전 중구 중촌동은 동×과목 1개뿐이라 동 hub AMBER(휴천1동과 유사) → 제외(대전중앙중 포함, 미배포).
@@ -179,7 +181,9 @@ export const BASELINE = {
   // 성동 사근동, 동대문 전농제2동; 새 도시 6곳): 학교 52곳 등록, 콘텐츠 30교.
   // 동 hub 17 + 동×과목 70 + 학년 hub 64 + 학년×과목 224 + city hub 6 = sitemap +381 → 6678 → 7059.
   // totalRoutes 21101 → 21638(+537 = 381 색인 + 156 noindex), noindex 14421 → 14577.
-  totalRoutes: 21638,
+  // 2026-11-10 B47·B48을 노트북 세션 Batch 42~44(origin/main ba2d91a) 위에 병합: 겹친 광장동·구산동은 배포된 쪽 유지, 우리 쪽 중복(광남고 1학년 4항목, 동×과목 5개) 제외.
+  // 병합 결과 totalRoutes 22034, sitemap 7341(ba2d91a 6724 + 617), noindex 14691. 양쪽 sitemap URL 손실 없음(형석중 3·성사중 2는 노트북 쪽 noindex).
+  totalRoutes: 22034,
   // 2026-10-06: +6 indexed region×grade×subject pages (STEP 8, quality gate GREEN).
   // They were already routes (noindex fallback), so totalRoutes is unchanged.
   // 2026-10-06: −5 school×subject pages held noindex (src/data/schoolSubjectNoindex.ts, editorial AMBER holds).
@@ -191,7 +195,7 @@ export const BASELINE = {
   // → 색인: sitemap 221 → 257, noindex 2011 → 1975. 행정동×과목 사회·과학 30개와 동 허브 15개는 RED·noindex 유지.
   // 2026-10-19 의정부 완성: 행정동×과목 사회·과학 30개를 같은 방식으로 다시 써서 GREEN, 행정동 허브 15개도 동별 과목
   // 평가계획 요약을 실어 GREEN → 색인 45개 추가: sitemap 257 → 302, noindex 1975 → 1930 (route 수 변화 없음).
-  sitemapCount: 7059,
-  noindexCount: 14577,
+  sitemapCount: 7341,
+  noindexCount: 14691,
   brokenLinks: 0,
 };
