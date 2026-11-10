@@ -406,6 +406,23 @@ export const dongs: AdminDong[] = [
   { slug: "sau-dong", code: "4157054000", name: "사우동", citySlug: "gimpo", legalDongs: ["사우동"] },
   { slug: "wolpi-dong", code: "4127158000", name: "월피동", citySlug: "ansan", legalDongs: ["양상동", "부곡동", "월피동"] },
   { slug: "hosu-dong", code: "4127353500", name: "호수동", citySlug: "ansan", legalDongs: ["고잔동"] },
+  // 2026-11-10 Batch 46 전국 확장 16개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "hwado-eup", code: "4136025600", name: "화도읍", citySlug: "namyangju", legalDongs: ["화도읍", "마석우리", "묵현리", "가곡리", "구암리", "금남리", "답내리", "월산리"] },
+  { slug: "cheongbuk-eup", code: "4122025900", name: "청북읍", citySlug: "pyeongtaek", legalDongs: ["청북읍", "현곡리", "삼계리", "고잔리", "옥길리", "후사리", "토진리", "백봉리", "어연리", "율북리", "한산리", "어소리", "고렴리"] },
+  { slug: "gwonseon2-dong", code: "4111368000", name: "권선2동", citySlug: "suwon", legalDongs: ["권선동"] },
+  { slug: "soha2-dong", code: "4121065000", name: "소하2동", citySlug: "gwangmyeong", legalDongs: ["소하동"] },
+  { slug: "sanggye9-dong", code: "1135071000", name: "상계9동", citySlug: "nowon", legalDongs: ["상계동"] },
+  { slug: "samseong-dong", code: "1162074500", name: "삼성동", citySlug: "gwanak", legalDongs: ["신림동"] },
+  { slug: "haenggung-dong", code: "4111574000", name: "행궁동", citySlug: "suwon", legalDongs: ["팔달로1가", "팔달로2가", "팔달로3가", "남창동", "영동", "중동", "구천동", "남수동", "매향동", "북수동", "신풍동", "장안동"] },
+  { slug: "godeok2-dong", code: "1174056000", name: "고덕제2동", citySlug: "gangdong", legalDongs: ["고덕동"] },
+  { slug: "jucheon-myeon", code: "5175036000", name: "주천면", citySlug: "yeongwol", legalDongs: ["주천면", "주천리", "판운리", "도천리", "신일리", "금마리", "용석리"] },
+  { slug: "jingwan-dong", code: "1138069000", name: "진관동", citySlug: "eunpyeong", legalDongs: ["진관동"] },
+  { slug: "yanggu-eup", code: "5180025000", name: "양구읍", citySlug: "yanggu", legalDongs: ["양구읍", "상리", "중리", "하리", "송청리", "수인리", "웅진리", "석현리", "공리", "학조리", "이리", "안대리", "정림리", "동수리", "고대리", "죽곡리", "한전리", "도사리", "공수리", "군량리", "월명리", "상무룡리"] },
+  { slug: "okcheon-eup", code: "4373025000", name: "옥천읍", citySlug: "okcheon", legalDongs: ["옥천읍", "죽향리", "문정리", "상계리", "하계리", "교동리", "동안리", "수북리", "매화리", "구일리", "서대리", "가풍리", "삼청리", "대천리", "마암리", "양수리", "금구리", "장야리", "삼양리", "서정리", "옥각리", "오대리"] },
+  { slug: "dongincheon-dong", code: "2812556000", name: "동인천동", citySlug: "jemulpo", legalDongs: ["내동", "경동", "용동", "인현동", "전동"] },
+  { slug: "naechon-myeon", code: "5172033000", name: "내촌면", citySlug: "hongcheon", legalDongs: ["내촌면", "물걸리", "와야리", "서곡리", "도관리", "답풍리", "화상대리", "문현리", "광암리"] },
+  { slug: "daeyeon6-dong", code: "2629056000", name: "대연제6동", citySlug: "busan-nam", legalDongs: ["대연동"] },
+  { slug: "dongtan7-dong", code: "4159757000", name: "동탄7동", citySlug: "hwaseong", legalDongs: ["산척동", "송동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
