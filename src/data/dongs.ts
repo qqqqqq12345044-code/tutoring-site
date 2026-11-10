@@ -438,6 +438,24 @@ export const dongs: AdminDong[] = [
   { slug: "doksan3-dong", code: "1154563000", name: "독산제3동", citySlug: "geumcheon", legalDongs: ["독산동"] },
   { slug: "galma1-dong", code: "3017058100", name: "갈마1동", citySlug: "daejeon-seo", legalDongs: ["갈마동"] },
   { slug: "jungchon-dong", code: "3014056000", name: "중촌동", citySlug: "daejeon-jung", legalDongs: ["중촌동"] },
+  // 2026-11-10 Batch 48 전국 확장 17개 동 (행정동 코드: data/official/admin-dongs.json)
+  { slug: "songcheon-dong", code: "1130555500", name: "송천동", citySlug: "gangbuk", legalDongs: ["미아동"] },
+  { slug: "namyang-eup", code: "4159125600", name: "남양읍", citySlug: "hwaseong", legalDongs: ["남양읍", "남양리", "신남리", "장덕리", "안석리", "활초리", "온석리", "무송리", "북양리", "송림리", "수화리", "장전리", "신외리", "문호리", "시리", "원천리"] },
+  { slug: "gwanmun-dong", code: "2723071500", name: "관문동", citySlug: "daegu-buk", legalDongs: ["노곡동", "매천동", "팔달동", "금호동", "사수동"] },
+  { slug: "mannyeon-dong", code: "3017065000", name: "만년동", citySlug: "daejeon-seo", legalDongs: ["만년동"] },
+  { slug: "songchon-dong", code: "3023054300", name: "송촌동", citySlug: "daejeon-daedeok", legalDongs: ["송촌동"] },
+  { slug: "galma2-dong", code: "3017058200", name: "갈마2동", citySlug: "daejeon-seo", legalDongs: ["갈마동"] },
+  { slug: "ansan-dong", code: "4127161000", name: "안산동", citySlug: "ansan", legalDongs: ["수암동", "장상동", "장하동"] },
+  { slug: "janggok-dong", code: "4139063100", name: "장곡동", citySlug: "siheung", legalDongs: ["장현동", "장곡동"] },
+  { slug: "woncheon-dong", code: "4111755000", name: "원천동", citySlug: "suwon", legalDongs: ["원천동"] },
+  { slug: "homaesil-dong", code: "4111366400", name: "호매실동", citySlug: "suwon", legalDongs: ["호매실동"] },
+  { slug: "girin-myeon", code: "5181033000", name: "기린면", citySlug: "inje", legalDongs: ["기린면", "현리", "북리", "서리", "방동리", "진동리"] },
+  { slug: "nae-myeon", code: "5172039000", name: "내면", citySlug: "hongcheon", legalDongs: ["내면", "창촌리", "광원리", "명개리", "율전리", "자운리", "방내리"] },
+  { slug: "cheolam-dong", code: "5119061500", name: "철암동", citySlug: "taebaek", legalDongs: ["철암동", "동점동"] },
+  { slug: "gamgok-myeon", code: "4377037000", name: "감곡면", citySlug: "eumseong", legalDongs: ["감곡면", "오향리", "주천리", "원당리", "상평리", "월정리", "영산리", "사곡리", "문촌리", "오궁리", "상우리", "왕장리", "단평리"] },
+  { slug: "gyohyeonanrim-dong", code: "4313053500", name: "교현.안림동", citySlug: "chungju", legalDongs: ["교현동", "종민동", "안림동", "목벌동"] },
+  { slug: "sageun-dong", code: "1120055000", name: "사근동", citySlug: "seongdong", legalDongs: ["사근동", "행당동"] },
+  { slug: "jeonnong2-dong", code: "1123057000", name: "전농제2동", citySlug: "dongdaemun", legalDongs: ["전농동"] },
 ];
 
 export function getDongsByCity(citySlug: string): AdminDong[] {
